@@ -92,10 +92,10 @@ for (i in pairs) {
     group_by(age_rounded) %>%
     summarise(ads = sum(eval(as.symbol(ads)), na.rm = TRUE),
               ids = sum(eval(as.symbol(ids)), na.rm = TRUE)) %>%
-    pivot_longer(c(ids, ads), names_to = "word", values_to = "childes_freq") %>%
-    mutate(form = case_when(
-      word == paste(gsub("_.*", "", i)) ~ "ids", 
-      word == paste(gsub(".*_", "", i)) ~ "ads")) %>%
+    pivot_longer(c(ids, ads), names_to = "form", values_to = "childes_freq") %>%
+    mutate(word = case_when(
+      form == "ids" ~ paste(gsub("_.*", "", i)), 
+      form == "ads" ~ paste(gsub(".*_", "", i)))) %>%
     ggplot(aes(x=age_rounded, y=childes_freq, color=form, fill=form)) + 
     geom_vline(data = filter(aoa, word==paste(gsub("_.*", "", i))), mapping = aes(xintercept=aoa, color=form)) +
     geom_vline(data = filter(aoa, word==paste(gsub(".*_", "", i))), mapping = aes(xintercept=aoa, color=form)) +
