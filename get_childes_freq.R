@@ -5,14 +5,16 @@ library(stringr)
 library(readr)
 
 #get all utterances from providence corpus
-childes_utterances = data.table(get_utterances(collection = "Eng-NA")) %>%
-  filter(target_child_age<60)
+childes_utterances = data.table(get_utterances(collection = "Eng-NA"))
 
 utterances <- childes_utterances %>%
   mutate(gloss = paste0(' ', tolower(gloss), ' '))
 
 items <- read_csv("candidate_items_new.csv") %>%
   pull(word)
+
+pairs <- read_csv("candidate_items_new.csv") %>%
+  pull(pair)
 
 #total number of words 
 sum(utterances$num_tokens)
@@ -31,20 +33,8 @@ for(i in items){
     utterances[str_detect(gloss, regex(paste0(' froggy | froggie '))), paste0(i) := str_count(gloss, regex(paste0(' froggy | froggie ')))]
   }
   
-  else if (i == "baa baa"){
-    utterances[str_detect(gloss, regex(paste0(' baa baa | baa-baa '))), paste0(i) := str_count(gloss, regex(paste0(' baa baa | baa-baa ')))]
-  }
-  
   else if (i == "duckie"){
     utterances[str_detect(gloss, regex(paste0(' duckie | ducky '))), paste0(i) := str_count(gloss, regex(paste0(' duckie | ducky ')))]
-  }
-  
-  else if (i == "boo boo"){
-    utterances[str_detect(gloss, regex(paste0(' boo boo | boo-boo '))), paste0(i) := str_count(gloss, regex(paste0(' boo boo | boo-boo ')))]
-  }
-  
-  else if (i == "vroom vroom"){
-    utterances[str_detect(gloss, regex(paste0(' vroom vroom | vroom-vroom '))), paste0(i) := str_count(gloss, regex(paste0(' vroom vroom | vroom-vroom ')))]
   }
   
   else if (i == "choo choo"){
@@ -71,10 +61,6 @@ for(i in items){
     utterances[str_detect(gloss, regex(paste0(' birdie | birdy '))), paste0(i) := str_count(gloss, regex(paste0(' birdie | birdy ')))]
   }
   
-  else if (i == "din din"){
-    utterances[str_detect(gloss, regex(paste0(' din din | din-din '))), paste0(i) := str_count(gloss, regex(paste0(' din din | din-din ')))]
-  }
-  
   else utterances[str_detect(gloss, regex(paste0(' ',i,' '))), paste0(i) := str_count(gloss, regex(paste0(' ',i,' ')))]
 }
 
@@ -85,6 +71,94 @@ childes_data <- utterances[, 28:ncol(utterances)]
 childes_data[is.na(childes_data)] <- 0
 childes_freq <- data.frame(colSums(childes_data))
 childes_freq <- setNames(cbind(rownames(childes_freq), childes_freq, row.names = NULL), c("word", "childes_freq"))
+
+
+aoa <- read_csv("candidate_items_new.csv") %>%
+  select(word, aoa, pair, form)
+
+colors <- c("ids" = "#C1292E", "ads" = "#235789")
+  
+for (i in pairs) {
+  ids <- paste(gsub("_.*", "", i))
+  ads <- paste(gsub(".*_", "", i))
+  
+  plot <- utterances %>%
+    filter(!is.na(eval(as.symbol(ids)))|!is.na(eval(as.symbol(ads)))) %>%
+    select(gloss, stem, target_child_age, speaker_role, ids, ads) %>%
+    mutate(age_rounded = round(target_child_age, digits=0), 
+           speaker = case_when(
+             speaker_role == "Target_Child" ~ "target_child", 
+             speaker_role != "Target_Child" ~ "other_speaker")) %>%
+    group_by(age_rounded) %>%
+    summarise(ads = sum(eval(as.symbol(ads)), na.rm = TRUE),
+              ids = sum(eval(as.symbol(ids)), na.rm = TRUE)) %>%
+    pivot_longer(c(ids, ads), names_to = "word", values_to = "childes_freq") %>%
+    mutate(form = case_when(
+      word == paste(gsub("_.*", "", i)) ~ "ids", 
+      word == paste(gsub(".*_", "", i)) ~ "ads")) %>%
+    ggplot(aes(x=age_rounded, y=childes_freq, color=form, fill=form)) + 
+    geom_vline(data = filter(aoa, word==paste(gsub("_.*", "", i))), mapping = aes(xintercept=aoa, color=form)) +
+    geom_vline(data = filter(aoa, word==paste(gsub(".*_", "", i))), mapping = aes(xintercept=aoa, color=form)) +
+    geom_point() +
+    geom_smooth() +
+    scale_color_manual(values = colors) +
+    scale_fill_manual(values = colors) +
+    labs(x = "age (months)", y = "frequency") +
+    theme_test() 
+  
+  assign(paste(i), plot)
+}
+
+library(ggpubr)
+
+ggarrange(birdie_bird, blankie_blanket, bunny_rabbit, `choo choo_train`, daddy_dad, doggy_dog,
+          dolly_doll, duckie_duck, froggy_frog, horsey_horse, kitty_cat, mommy_mom,
+          `night night_goodnight`, piggy_pig, potty_bathroom, tummy_stomach, 
+          common.legend = TRUE)
+
+utterances %>%
+  filter(!is.na(doggy)|!is.na(dog)) %>%
+  select(gloss, stem, target_child_age, speaker_role, doggy, dog) %>%
+  mutate(age_rounded = round(target_child_age, digits=0), 
+         speaker = case_when(
+           speaker_role == "Target_Child" ~ "target_child", 
+           speaker_role != "Target_Child" ~ "other_speaker")) %>%
+  group_by(age_rounded) %>%
+  summarise(doggy = sum(doggy, na.rm = TRUE),
+            dog = sum(dog, na.rm = TRUE)) %>%
+  pivot_longer(c(doggy, dog), names_to = "word", values_to = "childes_freq") %>%
+  mutate(form = case_when(
+    word == "doggy" ~ "ids", 
+    word == "dog" ~ "ads")) %>%
+  ggplot(aes(x=age_rounded, y=childes_freq, color=form, fill=form)) + 
+  geom_vline(data = filter(aoa, word=="doggy"), mapping = aes(xintercept=aoa, color=form)) +
+  geom_vline(data = filter(aoa, word=="dog"), mapping = aes(xintercept=aoa, color=form)) +
+  geom_point() +
+  geom_smooth() +
+  scale_color_manual(values = colors) +
+  scale_fill_manual(values = colors) +
+  labs(x = "age (months)", y = "frequency") +
+  theme_test() 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ggarrange(dog, cat, frog, train, blanket, bathroom, 
+          labels = c("dog", "cat", "frog", "train", "blanket", "bathroom"))
+
 
 dog <- utterances %>%
   filter(!is.na(dog)|!is.na(doggy)) %>%
@@ -247,22 +321,17 @@ vroom <- utterances %>%
   labs(x = "age (months)", y = "frequency") +
   theme_test()
 
-
-library(ggpubr)
-ggarrange(dog, cat, frog, train, blanket, bathroom, 
-          labels = c("dog", "cat", "frog", "train", "blanket", "bathroom"))
-
 ######
-items <- read_csv("candidate_items_new.csv") 
+#items <- read_csv("candidate_items_new.csv") 
 
-merge(items, childes_freq, by="word") %>%
+#merge(items, childes_freq, by="word") %>%
   write_csv("merged.csv")
 
-summary <- read_csv("merged.csv") %>%
+#summary <- read_csv("merged.csv") %>%
   mutate(exclude = ifelse(is.na(exclude), "n", "y")) %>%
   filter(exclude == "n") 
 
-summary %>%
+#summary %>%
   group_by(form) %>%
   summarise(mean_aoa = mean(aoa, na.rm = TRUE), 
             mean_bab = mean(babiness, na.rm = TRUE))
