@@ -11,10 +11,10 @@ childes_utterances = data.table(get_utterances(collection = "Eng-NA"))
 utterances <- childes_utterances %>%
   mutate(gloss = paste0(' ', tolower(gloss), ' '))
 
-items <- read_csv("candidate_items_new.csv") %>%
+items <- read_csv("item_info/candidate_items_new.csv") %>%
   pull(word)
 
-pairs <- read_csv("candidate_items_new.csv") %>%
+pairs <- read_csv("item_info/candidate_items_new.csv") %>%
   pull(pair)
 
 #total number of words 
@@ -74,7 +74,7 @@ childes_freq <- data.frame(colSums(childes_data))
 childes_freq <- setNames(cbind(rownames(childes_freq), childes_freq, row.names = NULL), c("word", "childes_freq"))
 
 
-aoa <- read_csv("candidate_items_new.csv") %>%
+aoa <- read_csv("item_info/candidate_items_new.csv") %>%
   select(word, aoa, pair, form)
 
 colors <- c("ids" = "#C1292E", "ads" = "#235789")
@@ -145,13 +145,13 @@ utterances %>%
 #items <- read_csv("candidate_items_new.csv") 
 
 #merge(items, childes_freq, by="word") %>%
-  write_csv("merged.csv")
+  #write_csv("item_info/merged.csv")
 
 #summary <- read_csv("merged.csv") %>%
-  mutate(exclude = ifelse(is.na(exclude), "n", "y")) %>%
-  filter(exclude == "n") 
+  #mutate(exclude = ifelse(is.na(exclude), "n", "y")) %>%
+  #filter(exclude == "n") 
 
 #summary %>%
-  group_by(form) %>%
-  summarise(mean_aoa = mean(aoa, na.rm = TRUE), 
-            mean_bab = mean(babiness, na.rm = TRUE))
+  #group_by(form) %>%
+  #summarise(mean_aoa = mean(aoa, na.rm = TRUE), 
+            #mean_bab = mean(babiness, na.rm = TRUE))
