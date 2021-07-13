@@ -1,0 +1,713 @@
+word,aoa,babiness
+a,27,3.454545455
+a lot,29,NA
+about,NA,2.4
+above,NA,2.416666667
+after,29,2.142857143
+airplane,20,NA
+all,26,2.1875
+all gone,19,NA
+alligator,25,1.307692308
+am,29,1.833333333
+an,NA,2.1
+and,27,1.666666667
+animal,24,4.888888889
+ankle,30,4.454545455
+another,28,2.133333333
+ant,25,1.6
+any,29,2.5
+apple,18,3.5
+applesauce,25,NA
+are,29,2
+arm,22,4.3
+around,30,2.909090909
+asleep,25,7.19047619
+at,28,2
+aunt,26,6.7
+awake,26,6.2
+away,27,1.916666667
+baa,NA,5.6875
+baa baa,16,NA
+baby,16,10
+babysitter,NA,NA
+babysitter's name,25,NA
+back,26,3.5
+backyard,27,NA
+bad,25,3.416666667
+ball,16,6
+balloon,17,6.545454545
+banana,16,3.083333333
+basement,NA,1.363636364
+basket,25,5
+bat,26,1.615384615
+bath,18,7.666666667
+bathroom,24,NA
+bathtub,22,NA
+be,30,2.235294118
+beach,27,3
+beads,29,2.636363636
+beans,25,1.631578947
+bear,19,4.8
+because,30,2
+bed,21,4.2
+bedroom,25,NA
+bee,21,1.8
+before,NA,2.352941176
+behind,29,3.05
+belly button,20,NA
+belt,26,1.285714286
+bench,30,2
+beside,NA,NA
+better,27,2.4
+bib,24,9.75
+bicycle,22,NA
+big,22,2.727272727
+bird,17,2.375
+bite,22,3.615384615
+black,26,2.5
+blanket,21,8.916666667
+block,21,4.473684211
+blow,24,2.5
+blue,23,7.333333333
+boat,21,1.363636364
+book,16,4.7
+boots,23,3
+bottle,19,9.6
+bowl,23,4.4
+box,22,1.941176471
+boy,23,7.923076923
+bread,22,2.1
+break,25,4.7
+breakfast,24,4.7
+bring,27,3.1
+broken,23,2
+broom,24,1.214285714
+brother,27,5.3
+brown,27,4.1
+brush,22,2.3
+bubbles,18,5.928571429
+bucket,26,1.5
+bug,21,3.076923077
+build,27,2.428571429
+bump,26,7.363636364
+bunny,21,2.8
+bus,21,2.285714286
+but,NA,1.2
+butter,24,2.4
+butterfly,23,NA
+buttocks,NA,4.818181818
+buttocks/bottom*,22,NA
+button,22,3.8
+buy,27,4.066666667
+by,29,2.083333333
+bye,16,3.636363636
+cake,22,4.166666667
+call (on phone),24,NA
+camera,25,4.9
+camping,NA,1.6
+can (auxiliary),27,NA
+can (object),27,NA
+candy,23,4.5
+car,17,2.083333333
+careful,26,NA
+carrots,24,6.076923077
+carry,25,5.909090909
+cat,18,2
+catch,25,2.5
+cereal,22,6.315789474
+chair,21,4.533333333
+chalk,27,2.357142857
+chase,28,3.8
+cheek,23,5.842105263
+cheerios,24,6.666666667
+cheese,18,1.916666667
+chicken (animal),23,NA
+chicken (food),23,NA
+child,NA,8.615384615
+child's own name,20,NA
+chin,24,4.923076923
+chocolate,25,2.142857143
+choo choo,19,NA
+choo-choo,NA,8.454545455
+church,NA,2.538461538
+church*,27,NA
+circus,30,4.454545455
+clap,24,6.15
+clean (action),24,NA
+clean (description),24,NA
+climb,26,2.909090909
+clock,23,3.3
+close,24,5.615384615
+closet,26,1.916666667
+cloud,25,2.363636364
+clown,27,2.416666667
+coat,23,2.363636364
+cockadoodledoo,25,2.916666667
+coffee,25,2.285714286
+coke,28,1.5
+cold,21,2.5
+comb,25,3.875
+cook,25,2.083333333
+cookie,18,4.727272727
+corn,24,1.818181818
+couch,24,1.894736842
+could,NA,2.272727273
+country,NA,1.857142857
+cover,28,3.083333333
+cow,20,2.2
+cowboy,30,NA
+cracker,19,4.666666667
+crayon,23,7.5
+crib,26,9.315789474
+cry,23,8
+cup,20,3.363636364
+cut,26,1.9375
+cute,27,8.8
+daddy,NA,9
+daddy*,16,NA
+dance,23,3.545454545
+dark,26,1.363636364
+day,28,3.333333333
+deer,26,2.071428571
+diaper,19,6.916666667
+did,NA,2.733333333
+did/did ya,28,NA
+dinner,24,4.181818182
+dirty,22,6.461538462
+dish,27,3.545454545
+do,25,2.85
+doctor,25,6.7
+does,NA,2.363636364
+dog,16,3.1
+doll,22,7.133333333
+don't,26,NA
+donkey,28,1
+donut,26,2.333333333
+door,20,1.8
+down,20,2
+downtown,NA,NA
+draw,25,3.3
+drawer,27,3.095238095
+dress,NA,2.9
+dress (object),25,NA
+drink (action),21,NA
+drink (beverage),21,NA
+drive,25,2.4
+drop,26,2.538461538
+dry (action),26,NA
+dry (description),26,NA
+dryer,28,2.352941176
+duck,17,4.1
+dump,29,2.363636364
+each,NA,3
+ear,18,3.909090909
+eat,20,6.1
+egg,22,3.636363636
+elephant,23,2.818181818
+empty,26,2.380952381
+every,NA,3.2
+eye,17,4.083333333
+face,24,5.785714286
+fall,23,4.181818182
+farm,28,1.727272727
+fast,26,2
+feed,27,6.2
+feet,NA,6.454545455
+find,26,2.909090909
+fine,30,3
+finger,22,5.166666667
+finish,28,1.090909091
+fireman,28,NA
+firetruck,24,NA
+first,28,3.8
+fish (animal),19,NA
+fish (food),22,NA
+fit,28,1.666666667
+fix,25,2.090909091
+flag,26,1.909090909
+flower,20,2.7
+food,23,5.888888889
+foot,21,NA
+for,28,2.333333333
+fork,22,1.705882353
+french fries,23,NA
+friend,27,3.75
+frog,22,2.909090909
+full,27,3.363636364
+game,26,4.384615385
+garage,26,1.428571429
+garbage,26,1.272727273
+garden,29,3.266666667
+gas station,28,NA
+gentle,28,7.272727273
+get,24,3.625
+giraffe,24,4.5
+girl,24,5.727272727
+give,26,3.5
+give me five!,25,NA
+glass,25,3.083333333
+glasses,23,1.1
+gloves,27,2.846153846
+glue,29,1.636363636
+go,20,2.9
+go potty,23,NA
+gonna,NA,2.75
+gonna get you!,25,NA
+gonna/going to,27,NA
+good,24,4
+goose,27,3.416666667
+gotta,NA,3.2
+gotta/got to,30,NA
+grandma*,18,NA
+grandpa*,19,NA
+grapes,22,3
+grass,23,1.727272727
+green,24,2
+green beans,27,NA
+grr,NA,3.25
+grrr,16,NA
+gum,27,3.714285714
+hafta/have to,29,NA
+hair,20,2.8
+hamburger,25,1.416666667
+hammer,26,4.9
+hand,21,4.9
+happy,24,6.909090909
+hard,28,2.166666667
+hat,19,4.066666667
+hate,NA,2.75
+have,26,3.75
+he,28,6.333333333
+head,22,4.1
+hear,27,4.6
+heavy,25,3.666666667
+helicopter,25,NA
+hello,19,4.5
+help,23,5.833333333
+hen,30,2.076923077
+her,29,5.363636364
+here,25,1.2
+hers,NA,4.454545455
+hi,16,5.181818182
+hide,25,4.75
+high,26,3.083333333
+high chair,26,NA
+him,30,4.333333333
+his,30,4.736842105
+hit,24,2.857142857
+hold,25,6.684210526
+home,22,5.230769231
+horse,20,2
+hose,27,2.307692308
+hot,18,1.9
+house,23,3.166666667
+how,30,3.583333333
+hug,22,7.7
+hungry,24,6.166666667
+hurry,27,2.727272727
+hurt,24,3.3
+I,24,2.235294118
+ice,23,2.25
+ice cream,22,NA
+if,NA,1.357142857
+in,NA,3.083333333
+inside,NA,2.5
+inside/in,24,NA
+into,NA,2.363636364
+is,28,2.666666667
+it,26,2.230769231
+jacket,24,4
+jar,29,4.4
+jeans,28,1.083333333
+jello,28,4.363636364
+jelly,26,2.5
+juice,18,6.75
+jump,23,3.6
+keys,21,3.363636364
+kick,24,5.928571429
+kiss,21,6.466666667
+kitchen,24,4.166666667
+kitty,18,4.1
+kleenex,NA,3.454545455
+knee,23,2.909090909
+knife,25,1.384615385
+knock,26,1.923076923
+ladder,27,1.7
+lady,28,4.076923077
+lamb,27,5
+lamp,28,2.384615385
+last,NA,1.5
+later,28,1.909090909
+lawn mower,27,NA
+leg,23,3.3
+lemme,NA,2.466666667
+lemme/let me,26,NA
+lick,27,3.571428571
+light,20,3.7
+like,26,5.125
+lion,23,2.25
+lips,25,4.2
+listen,28,2.166666667
+little,NA,7.5
+little (description),25,NA
+living room,27,NA
+lollipop,27,5.181818182
+long,29,1.933333333
+look,24,3.25
+loud,26,6.5
+love,23,8.333333333
+lunch,24,4.7
+mad,28,3.3
+mailman,28,NA
+make,26,3.25
+man,25,3
+me,22,2.2
+meat,26,2.416666667
+medicine,24,3.272727273
+melon,28,3.636363636
+meow,16,1.818181818
+milk,18,9.125
+mine,20,3.181818182
+mittens,28,5.285714286
+mommy,NA,8.454545455
+mommy*,16,NA
+money,23,4.8
+monkey,21,2.230769231
+moo,16,4.076923077
+moon,21,2.666666667
+moose,29,2
+mop,29,2.25
+more,20,3.1875
+morning,27,3.583333333
+motorcycle,25,NA
+mouse,23,1.818181818
+mouth,20,4.153846154
+movie,27,2.8
+much,NA,3.363636364
+muffin,26,2.307692308
+my,25,4.5
+myself,30,NA
+nail,28,2.846153846
+nap,23,8.5
+napkin,25,3.357142857
+naughty,NA,5.5
+necklace,26,NA
+need/need to,28,NA
+new,28,7.416666667
+next to,30,NA
+nice,25,5.875
+night,24,3.8
+night night,18,NA
+no,16,5.307692308
+noisy,28,8.363636364
+none,NA,1.285714286
+noodles,24,2.076923077
+nose,17,5.833333333
+not,28,1.916666667
+now,26,2.666666667
+nurse,NA,6.357142857
+nuts,27,1.25
+of,NA,2.636363636
+off,22,1.8
+old,29,1.454545455
+on,22,2
+on top of,29,NA
+open,22,2.789473684
+orange (description),24,NA
+orange (food),23,NA
+other,29,1.923076923
+ouch,17,5.25
+our,NA,5.454545455
+out,22,1.785714286
+outside,20,NA
+oven,27,1.3
+over,27,2.705882353
+owie,NA,7.5
+owie/boo boo,19,NA
+owl,24,2.416666667
+paint,26,3.083333333
+pajamas,23,6.4
+pancake,24,NA
+pants,22,3.428571429
+paper,23,2.833333333
+park,23,5.142857143
+party,26,5.833333333
+pattycake,25,NA
+peanut butter,25,NA
+peas,25,6
+peekaboo,19,8.545454545
+pen,24,2.545454545
+pencil,25,2.363636364
+penguin,27,1.3
+penis,NA,3.285714286
+penis*,27,NA
+penny,27,1
+people,27,3.923076923
+person,NA,6
+pet's name,21,NA
+pick,28,2.263157895
+pickle,26,1.133333333
+picnic,28,2.727272727
+picture,24,5.3
+pig,21,1.416666667
+pillow,22,3.888888889
+pizza,22,1.909090909
+plant,26,2.2
+plate,24,3.1
+play,23,8.909090909
+play dough,27,NA
+play pen,NA,NA
+playground,28,NA
+please,19,3
+police,28,1.9
+pony,28,3
+pool,24,1.666666667
+poor,NA,1.363636364
+popcorn,24,NA
+popsicle,26,3.636363636
+porch,30,1.125
+potato,25,2.833333333
+potato chip,24,NA
+potty,21,6.909090909
+pour,28,2.181818182
+present,25,4.1
+pretend,30,3.8
+pretty,24,5.6875
+pretzel,26,1.545454545
+pudding,29,5.6
+pull,26,3.105263158
+pumpkin,25,1.909090909
+puppy,21,4.25
+purse,25,1.4
+push,25,4.142857143
+put,27,1.3
+puzzle,24,3.307692308
+quack,NA,2.5
+quack quack,17,NA
+quiet,27,3.3
+radio,27,1.8
+rain,22,2.166666667
+raisin,24,2.4
+read,23,4.636363636
+red,24,2
+refrigerator,26,2.352941176
+ride,24,2.7
+rip,30,2.176470588
+rock,22,3.368421053
+rocking chair,26,NA
+roof,29,1.333333333
+room,25,4.6
+rooster,28,1.5
+run,24,2
+sad,26,2.1
+salt,28,1
+same,30,2.25
+sandbox,27,NA
+sandwich,25,2.7
+sauce,28,1.818181818
+say,27,3.9
+scared,26,4.947368421
+scarf,NA,2.6
+school,24,3.785714286
+scissors,26,1.2
+see,23,5.181818182
+shake,27,3.545454545
+share,26,3.857142857
+she,29,4.588235294
+sheep,23,3.4
+shh,NA,7.454545455
+shh/shush/hush,19,NA
+shirt,22,5
+shoe,16,4.153846154
+shopping,26,3.769230769
+shorts,25,3.6
+shoulder,27,2.833333333
+shovel,26,2
+show,27,3.307692308
+shower,24,2.727272727
+sick,26,5.6
+sidewalk,27,NA
+sing,24,6.1875
+sink,25,3.166666667
+sister,27,7.1
+sit,22,5.833333333
+skate,30,2.071428571
+sky,24,2.416666667
+sled,30,1.545454545
+sleep,23,7.727272727
+sleepy,25,6.7
+slide (action),24,NA
+slide (object),23,NA
+slipper,27,2
+slow,28,3.133333333
+smile,27,5.636363636
+snack,24,3.166666667
+sneaker,30,2.2
+snow,25,1.444444444
+snowman,27,NA
+snowsuit,NA,NA
+so,NA,1.8
+so big!,27,NA
+soap,23,4.9
+sock,21,4.6
+soda,NA,1.2
+soda/pop,26,NA
+sofa,30,2.2
+soft,26,7.4375
+some,26,1.6
+soup,25,2.636363636
+spaghetti,24,4
+spill,26,7.0625
+splash,25,3.0625
+spoon,20,6.9
+sprinkler,29,2.727272727
+squirrel,25,1.5
+stairs,25,2.090909091
+stand,26,2.5
+star,22,3.636363636
+stay,26,3.2
+stick,24,1.25
+sticky,26,5.916666667
+stone,30,1.153846154
+stop,23,2.777777778
+store,24,3.75
+story,25,7
+stove,26,1.1
+strawberry,24,2.833333333
+street,25,1.7
+stroller,25,8.538461538
+stuck,26,2.4
+sun,23,2.588235294
+sweater,24,2.909090909
+sweep,26,1.6875
+swim,25,2.5
+swing (action),23,NA
+swing (object),22,NA
+table,24,3.928571429
+take,27,4.3
+talk,26,5.090909091
+tape,26,1.5
+taste,28,4.333333333
+teacher,28,2.9
+tear,29,7.4
+teddybear,23,NA
+telephone,21,NA
+thank you,18,NA
+thanks,NA,2.75
+that,24,1.538461538
+the,27,2
+their,NA,2.7
+them,NA,4.1
+then,NA,2.3
+there,25,2.230769231
+these,29,2.090909091
+they,30,2.909090909
+think,30,2.7
+thirsty,26,4.454545455
+this,25,2.3
+this little piggy,27,NA
+those,30,2.818181818
+throw,24,3.5
+tickle,23,6.842105263
+tiger,24,2
+tights,NA,2.666666667
+time,30,4.3
+tiny,30,8
+tired,26,4.25
+tissue,NA,3
+tissue/kleenex,25,NA
+to,27,2.5
+toast,23,2.533333333
+today,29,2.714285714
+toe,21,4.357142857
+tomorrow,29,2.133333333
+tongue,23,3.8
+tonight,30,2.5
+too,26,2
+tooth,22,7.3
+toothbrush,22,NA
+top,NA,2.636363636
+touch,26,6.4
+towel,23,5.4
+toy,NA,8.266666667
+toy (object),21,NA
+tractor,25,1.294117647
+train,21,3.545454545
+trash,24,1.727272727
+tray,NA,2.3
+tree,20,3.363636364
+tricycle,29,NA
+truck,19,3.181818182
+try,NA,3.8
+try/try to,28,NA
+tummy,22,7.166666667
+tuna,30,2.2
+turkey,27,2.636363636
+turn,NA,3.3
+turn around,26,NA
+turtle,23,2.083333333
+TV,22,2.5
+uh oh,16,7.083333333
+uncle,26,5.222222222
+under,27,2.181818182
+underpants,27,NA
+up,19,3
+us,NA,4.916666667
+vacuum,24,2
+vagina,NA,5.133333333
+vagina*,NA,NA
+vanilla,NA,3.818181818
+vitamins,27,5.3
+vroom,17,5.5
+wait,26,4.3
+wake,27,5.411764706
+walk,23,4.538461538
+walker,NA,7.6
+wanna,NA,4.545454545
+wanna/want to,25,NA
+was,NA,3.181818182
+wash,24,5.454545455
+washing machine,27,NA
+watch (action),26,NA
+watch (object),24,NA
+water (beverage),19,NA
+water (not beverage),20,NA
+we,30,2.461538462
+were,NA,2.470588235
+wet,23,6.588235294
+what,24,4.363636364
+when,NA,2.75
+where,25,2.388888889
+which,NA,1.214285714
+white,27,3.727272727
+who,28,2.7
+why,28,3.4
+will,30,1.818181818
+wind,26,2.545454545
+window,25,3
+windy,27,1.6
+wipe,26,8.266666667
+wish,NA,3.916666667
+with,28,3.818181818
+wolf,28,1.181818182
+woods,NA,1.294117647
+woof,NA,2.7
+woof woof,16,NA
+work (action),25,NA
+work (place),24,NA
+would,NA,1.181818182
+write,27,1.357142857
+yard,27,2.6
+yellow,24,2.538461538
+yes,18,4.25
+yesterday,NA,2.0625
+yogurt,24,3.5
+you,24,2.545454545
+your,29,2.333333333
+yourself,NA,4.235294118
+yucky,22,5.3
+yum,NA,4.333333333
+yum yum,16,NA
+zebra,25,1.727272727
+zipper,25,2.7
+zoo,26,3.727272727

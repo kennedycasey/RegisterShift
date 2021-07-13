@@ -1,0 +1,681 @@
+word,aoa
+baa baa,16
+choo choo,19
+cockadoodledoo,25
+grrr,16
+meow,16
+moo,16
+ouch,17
+quack quack,17
+uh oh,16
+vroom,17
+woof woof,16
+yum yum,16
+alligator,25
+animal,24
+ant,25
+bear,19
+bee,21
+bird,17
+bug,21
+bunny,21
+butterfly,23
+cat,18
+chicken (animal),23
+cow,20
+deer,26
+dog,16
+donkey,28
+duck,17
+elephant,23
+fish (animal),19
+frog,22
+giraffe,24
+goose,27
+hen,30
+horse,20
+kitty,18
+lamb,27
+lion,23
+monkey,21
+moose,29
+mouse,23
+owl,24
+penguin,27
+pig,21
+pony,28
+puppy,21
+rooster,28
+sheep,23
+squirrel,25
+teddybear,23
+tiger,24
+turkey,27
+turtle,23
+wolf,28
+zebra,25
+airplane,20
+bicycle,22
+boat,21
+bus,21
+car,17
+firetruck,24
+helicopter,25
+motorcycle,25
+sled,30
+stroller,25
+tractor,25
+train,21
+tricycle,29
+truck,19
+ball,16
+balloon,17
+bat,26
+block,21
+book,16
+bubbles,18
+chalk,27
+crayon,23
+doll,22
+game,26
+glue,29
+pen,24
+pencil,25
+play dough,27
+present,25
+puzzle,24
+story,25
+toy (object),21
+apple,18
+applesauce,25
+banana,16
+beans,25
+bread,22
+butter,24
+cake,22
+candy,23
+carrots,24
+cereal,22
+cheerios,24
+cheese,18
+chicken (food),23
+chocolate,25
+coffee,25
+coke,28
+cookie,18
+corn,24
+cracker,19
+donut,26
+drink (beverage),21
+egg,22
+fish (food),22
+food,23
+french fries,23
+grapes,22
+green beans,27
+gum,27
+hamburger,25
+ice,23
+ice cream,22
+jello,28
+jelly,26
+juice,18
+lollipop,27
+meat,26
+melon,28
+milk,18
+muffin,26
+noodles,24
+nuts,27
+orange (food),23
+pancake,24
+peas,25
+peanut butter,25
+pickle,26
+pizza,22
+popcorn,24
+popsicle,26
+potato chip,24
+potato,25
+pretzel,26
+pudding,29
+pumpkin,25
+raisin,24
+salt,28
+sandwich,25
+sauce,28
+soda/pop,26
+soup,25
+spaghetti,24
+strawberry,24
+toast,23
+tuna,30
+vanilla,NA
+vitamins,27
+water (beverage),19
+yogurt,24
+beads,29
+belt,26
+bib,24
+boots,23
+button,22
+coat,23
+diaper,19
+dress (object),25
+gloves,27
+hat,19
+jacket,24
+jeans,28
+mittens,28
+necklace,26
+pajamas,23
+pants,22
+scarf,NA
+shirt,22
+shoe,16
+shorts,25
+slipper,27
+sneaker,30
+snowsuit,NA
+sock,21
+sweater,24
+tights,NA
+underpants,27
+zipper,25
+ankle,30
+arm,22
+belly button,20
+buttocks/bottom*,22
+cheek,23
+chin,24
+ear,18
+eye,17
+face,24
+finger,22
+foot,21
+hair,20
+hand,21
+head,22
+knee,23
+leg,23
+lips,25
+mouth,20
+nose,17
+owie/boo boo,19
+penis*,27
+shoulder,27
+toe,21
+tongue,23
+tooth,22
+tummy,22
+vagina*,NA
+basket,25
+blanket,21
+bottle,19
+bowl,23
+box,22
+broom,24
+brush,22
+bucket,26
+camera,25
+can (object),27
+clock,23
+comb,25
+cup,20
+dish,27
+fork,22
+garbage,26
+glass,25
+glasses,23
+hammer,26
+jar,29
+keys,21
+knife,25
+lamp,28
+light,20
+medicine,24
+money,23
+mop,29
+nail,28
+napkin,25
+paper,23
+penny,27
+picture,24
+pillow,22
+plant,26
+plate,24
+purse,25
+radio,27
+scissors,26
+soap,23
+spoon,20
+tape,26
+telephone,21
+tissue/kleenex,25
+toothbrush,22
+towel,23
+trash,24
+tray,NA
+vacuum,24
+walker,NA
+watch (object),24
+basement,NA
+bathroom,24
+bathtub,22
+bed,21
+bedroom,25
+bench,30
+chair,21
+closet,26
+couch,24
+crib,26
+door,20
+drawer,27
+dryer,28
+garage,26
+high chair,26
+kitchen,24
+living room,27
+oven,27
+play pen,NA
+porch,30
+potty,21
+rocking chair,26
+refrigerator,26
+room,25
+shower,24
+sink,25
+sofa,30
+stairs,25
+stove,26
+table,24
+TV,22
+window,25
+washing machine,27
+backyard,27
+cloud,25
+flag,26
+flower,20
+garden,29
+grass,23
+hose,27
+ladder,27
+lawn mower,27
+moon,21
+pool,24
+rain,22
+rock,22
+roof,29
+sandbox,27
+shovel,26
+sidewalk,27
+sky,24
+slide (object),23
+snow,25
+snowman,27
+sprinkler,29
+star,22
+stick,24
+stone,30
+street,25
+sun,23
+swing (object),22
+tree,20
+water (not beverage),20
+wind,26
+beach,27
+camping,NA
+church*,27
+circus,30
+country,NA
+downtown,NA
+farm,28
+gas station,28
+home,22
+house,23
+movie,27
+outside,20
+park,23
+party,26
+picnic,28
+playground,28
+school,24
+store,24
+woods,NA
+work (place),24
+yard,27
+zoo,26
+aunt,26
+baby,16
+babysitter,NA
+babysitter's name,25
+boy,23
+brother,27
+child,NA
+clown,27
+cowboy,30
+daddy*,16
+doctor,25
+fireman,28
+friend,27
+girl,24
+grandma*,18
+grandpa*,19
+lady,28
+mailman,28
+man,25
+mommy*,16
+nurse,NA
+child's own name,20
+people,27
+person,NA
+pet's name,21
+police,28
+sister,27
+teacher,28
+uncle,26
+bath,18
+breakfast,24
+bye,16
+call (on phone),24
+dinner,24
+give me five!,25
+gonna get you!,25
+go potty,23
+hello,19
+hi,16
+lunch,24
+nap,23
+night night,18
+no,16
+pattycake,25
+peekaboo,19
+please,19
+shh/shush/hush,19
+shopping,26
+snack,24
+so big!,27
+thank you,18
+this little piggy,27
+turn around,26
+yes,18
+bite,22
+blow,24
+break,25
+bring,27
+build,27
+bump,26
+buy,27
+carry,25
+catch,25
+chase,28
+clap,24
+clean (action),24
+climb,26
+close,24
+cook,25
+cover,28
+cry,23
+cut,26
+dance,23
+draw,25
+drink (action),21
+drive,25
+drop,26
+dry (action),26
+dump,29
+eat,20
+fall,23
+feed,27
+find,26
+finish,28
+fit,28
+fix,25
+get,24
+give,26
+go,20
+hate,NA
+have,26
+hear,27
+help,23
+hide,25
+hit,24
+hold,25
+hug,22
+hurry,27
+jump,23
+kick,24
+kiss,21
+knock,26
+lick,27
+like,26
+listen,28
+look,24
+love,23
+make,26
+open,22
+paint,26
+pick,28
+play,23
+pour,28
+pretend,30
+pull,26
+push,25
+put,27
+read,23
+ride,24
+rip,30
+run,24
+say,27
+see,23
+shake,27
+share,26
+show,27
+sing,24
+sit,22
+skate,30
+sleep,23
+slide (action),24
+smile,27
+spill,26
+splash,25
+stand,26
+stay,26
+stop,23
+sweep,26
+swim,25
+swing (action),23
+take,27
+talk,26
+taste,28
+tear,29
+think,30
+throw,24
+tickle,23
+touch,26
+wait,26
+wake,27
+walk,23
+wash,24
+watch (action),26
+wipe,26
+wish,NA
+work (action),25
+write,27
+all gone,19
+asleep,25
+awake,26
+bad,25
+better,27
+big,22
+black,26
+blue,23
+broken,23
+brown,27
+careful,26
+clean (description),24
+cold,21
+cute,27
+dark,26
+dirty,22
+dry (description),26
+empty,26
+fast,26
+fine,30
+first,28
+full,27
+gentle,28
+good,24
+green,24
+happy,24
+hard,28
+heavy,25
+high,26
+hot,18
+hungry,24
+hurt,24
+last,NA
+little (description),25
+long,29
+loud,26
+mad,28
+naughty,NA
+new,28
+nice,25
+noisy,28
+old,29
+orange (description),24
+poor,NA
+pretty,24
+quiet,27
+red,24
+sad,26
+scared,26
+sick,26
+sleepy,25
+slow,28
+soft,26
+sticky,26
+stuck,26
+thirsty,26
+tiny,30
+tired,26
+wet,23
+white,27
+windy,27
+yellow,24
+yucky,22
+after,29
+before,NA
+day,28
+later,28
+morning,27
+night,24
+now,26
+time,30
+today,29
+tomorrow,29
+tonight,30
+yesterday,NA
+he,28
+her,29
+hers,NA
+him,30
+his,30
+I,24
+it,26
+me,22
+mine,20
+my,25
+myself,30
+our,NA
+she,29
+that,24
+their,NA
+them,NA
+these,29
+they,30
+this,25
+those,30
+us,NA
+we,30
+you,24
+your,29
+yourself,NA
+how,30
+what,24
+when,NA
+where,25
+which,NA
+who,28
+why,28
+about,NA
+above,NA
+around,30
+at,28
+away,27
+back,26
+behind,29
+beside,NA
+by,29
+down,20
+for,28
+here,25
+inside/in,24
+into,NA
+next to,30
+of,NA
+off,22
+on,22
+on top of,29
+out,22
+over,27
+there,25
+to,27
+under,27
+up,19
+with,28
+a,27
+all,26
+a lot,29
+an,NA
+another,28
+any,29
+each,NA
+every,NA
+more,20
+much,NA
+none,NA
+not,28
+other,29
+same,30
+some,26
+the,27
+too,26
+am,29
+are,29
+be,30
+can (auxiliary),27
+could,NA
+did/did ya,28
+do,25
+does,NA
+don't,26
+gonna/going to,27
+gotta/got to,30
+hafta/have to,29
+is,28
+lemme/let me,26
+need/need to,28
+try/try to,28
+wanna/want to,25
+was,NA
+were,NA
+will,30
+would,NA
+and,27
+because,30
+but,NA
+if,NA
+so,NA
+then,NA

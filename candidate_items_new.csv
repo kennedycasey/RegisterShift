@@ -1,0 +1,33 @@
+word,aoa,babiness,pair,form
+doggy,NA,NA,doggy_dog,ids
+dog,16,3.1,doggy_dog,ads
+kitty,18,4.1,kitty_cat,ids
+cat,18,2,kitty_cat,ads
+tummy,22,7.166666667,tummy_stomach,ids
+stomach,NA,NA,tummy_stomach,ads
+daddy,16,9,daddy_dad,ids
+dad,NA,NA,daddy_dad,ads
+mommy,16,8.454545455,mommy_mom,ids
+mom,NA,NA,mommy_mom,ads
+bunny,21,2.8,bunny_rabbit,ids
+rabbit,NA,NA,bunny_rabbit,ads
+duckie,NA,NA,duckie_duck,ids
+duck,17,4.1,duckie_duck,ads
+blankie,NA,NA,blankie_blanket,ids
+blanket,21,8.916666667,blankie_blanket,ads
+froggy,NA,NA,froggy_frog,ids
+frog,22,2.909090909,froggy_frog,ads
+potty,21,6.909090909,potty_bathroom,ids
+bathroom,24,NA,potty_bathroom,ads
+choo choo,19,8.454545455,choo choo_train,ids
+train,21,3.545454545,choo choo_train,ads
+night night,18,NA,night night_goodnight,ids
+goodnight,NA,NA,night night_goodnight,ads
+dolly,NA,NA,dolly_doll,ids
+doll,22,7.133333333,dolly_doll,ads
+horsey,NA,NA,horsey_horse,ids
+horse,20,2,horsey_horse,ads
+piggy,NA,NA,piggy_pig,ids
+pig,21,1.416666667,piggy_pig,ads
+birdie,NA,NA,birdie_bird,ids
+bird,17,2.375,birdie_bird,ads
