@@ -232,3 +232,220 @@ annotate_figure(per_age_frequency,
                 bottom = text_grob("age (months)", size = 25))
 
 ggsave("plots/per_age_frequency.jpg", height = 15, width = 20, dpi = 300)
+
+
+
+
+### re run on providence subset
+providence_utterances <- childes_utterances %>%
+  filter(target_child_age < 72 & corpus_name == "Providence") %>%
+  mutate(gloss = paste0(' ', tolower(gloss), ' '), 
+         age_rounded = round(target_child_age, digits = 0))
+
+
+for(i in items){
+  if (i == "horsey"){
+    providence_utterances[str_detect(gloss, regex(paste0(' horsey | horsie '))), paste0(i) := str_count(gloss, regex(paste0(' horsey | horsie ')))]
+  }
+  
+  else if (i == "doggy"){
+    providence_utterances[str_detect(gloss, regex(paste0(' doggy | doggie '))), paste0(i) := str_count(gloss, regex(paste0(' doggy | doggie ')))]
+  }
+  
+  else if (i == "froggy"){
+    providence_utterances[str_detect(gloss, regex(paste0(' froggy | froggie '))), paste0(i) := str_count(gloss, regex(paste0(' froggy | froggie ')))]
+  }
+  
+  else if (i == "duckie"){
+    providence_utterances[str_detect(gloss, regex(paste0(' duckie | ducky '))), paste0(i) := str_count(gloss, regex(paste0(' duckie | ducky ')))]
+  }
+  
+  else if (i == "choo choo"){
+    providence_utterances[str_detect(gloss, regex(paste0(' choo choo | choo-choo '))), paste0(i) := str_count(gloss, regex(paste0(' choo choo | choo-choo ')))]
+  }
+  
+  else if (i == "night night"){
+    providence_utterances[str_detect(gloss, regex(paste0(' night night | night-night '))), paste0(i) := str_count(gloss, regex(paste0(' night night | night-night ')))]
+  }
+  
+  else if (i == "goodnight"){
+    providence_utterances[str_detect(gloss, regex(paste0(' goodnight | good night '))), paste0(i) := str_count(gloss, regex(paste0(' goodnight | good night ')))]
+  }
+  
+  else if (i == "dolly"){
+    providence_utterances[str_detect(gloss, regex(paste0(' dolly | dollie '))), paste0(i) := str_count(gloss, regex(paste0(' dolly | dollie ')))]
+  }
+  
+  else if (i == "piggy"){
+    providence_utterances[str_detect(gloss, regex(paste0(' piggy | piggie '))), paste0(i) := str_count(gloss, regex(paste0(' piggy | piggie ')))]
+  }
+  
+  else if (i == "birdie"){
+    providence_utterances[str_detect(gloss, regex(paste0(' birdie | birdy '))), paste0(i) := str_count(gloss, regex(paste0(' birdie | birdy ')))]
+  }
+  
+  else providence_utterances[str_detect(gloss, regex(paste0(' ',i,' '))), paste0(i) := str_count(gloss, regex(paste0(' ',i,' ')))]
+}
+
+
+
+#clean dataframe to get overall frequency by item
+providence_data <- providence_utterances[, 28:ncol(utterances)]
+providence_data[is.na(providence_data)] <- 0
+providence_freq <- data.frame(colSums(providence_data))
+providence_freq <- setNames(cbind(rownames(providence_freq), providence_freq, row.names = NULL), c("word", "providence_freq"))
+
+# generate raw freq plots
+for (i in pairs) {
+  ids <- paste(gsub("_.*", "", i))
+  ads <- paste(gsub(".*_", "", i))
+  
+  plot <- providence_utterances %>%
+    filter(!is.na(eval(as.symbol(ids)))|!is.na(eval(as.symbol(ads)))) %>%
+    select(gloss, stem, age_rounded, speaker_role, ids, ads) %>%
+    group_by(age_rounded) %>%
+    summarise(ads = sum(eval(as.symbol(ads)), na.rm = TRUE),
+              ids = sum(eval(as.symbol(ids)), na.rm = TRUE)) %>%
+    pivot_longer(c(ids, ads), names_to = "form", values_to = "providence_freq") %>%
+    mutate(word = case_when(
+      form == "ids" ~ paste(gsub("_.*", "", i)), 
+      form == "ads" ~ paste(gsub(".*_", "", i)))) %>%
+    ggplot(aes(x=age_rounded, y=providence_freq, color=form, fill=form)) + 
+    geom_vline(data = filter(aoa, word==paste(gsub("_.*", "", i))), mapping = aes(xintercept=aoa, color=form)) +
+    geom_vline(data = filter(aoa, word==paste(gsub(".*_", "", i))), mapping = aes(xintercept=aoa, color=form)) +
+    geom_point() +
+    geom_smooth() +
+    scale_color_manual(values = colors) +
+    scale_fill_manual(values = colors) +
+    labs(title = paste0(i)) +
+    theme_test(base_size = 15) +
+    theme(plot.title = element_text(hjust = 0.5, face = "bold", size = 15), 
+          axis.title.x = element_blank(), 
+          axis.title.y = element_blank())
+  
+  assign(paste(i), plot)
+}
+
+providence_raw_frequency <- ggarrange(birdie_bird, blankie_blanket, bunny_rabbit, `choo choo_train`, daddy_dad, doggy_dog,
+                           dolly_doll, duckie_duck, froggy_frog, horsey_horse, kitty_cat, mommy_mom,
+                           `night night_goodnight`, piggy_pig, potty_bathroom, tummy_stomach, 
+                           common.legend = TRUE, legend = "top", 
+                           ncol = 4, nrow = 4)
+
+annotate_figure(providence_raw_frequency, 
+                left = text_grob("frequency", rot = 90, size = 25), 
+                bottom = text_grob("age (months)", size = 25))
+
+ggsave("plots/providence_raw_frequency.jpg", height = 15, width = 20, dpi = 300)
+
+
+
+# generate relative item-level freq plots 
+# (for each word, how many times was it said in a given month, 
+# relative to the total number of times it was said from 0-72m)
+
+for (i in pairs) {
+  ids <- paste(gsub("_.*", "", i))
+  ads <- paste(gsub(".*_", "", i))
+  
+  plot <- providence_utterances %>%
+    filter(!is.na(eval(as.symbol(ids)))|!is.na(eval(as.symbol(ads)))) %>%
+    select(gloss, stem, age_rounded, speaker_role, ids, ads) %>%
+    group_by(age_rounded) %>%
+    summarise(ads = sum(eval(as.symbol(ads)), na.rm = TRUE),
+              ids = sum(eval(as.symbol(ids)), na.rm = TRUE)) %>%
+    mutate(ids_total = filter(providence_freq, word==paste(gsub("_.*", "", i)))$providence_freq, 
+           ads_total = filter(providence_freq, word==paste(gsub(".*_", "", i)))$providence_freq, 
+           ids = ids/ids_total, 
+           ads = ads/ads_total) %>%
+    pivot_longer(c(ids, ads), names_to = "form", values_to = "providence_freq_relative") %>%
+    mutate(word = case_when(
+      form == "ids" ~ paste(gsub("_.*", "", i)), 
+      form == "ads" ~ paste(gsub(".*_", "", i)))) %>%
+    ggplot(aes(x=age_rounded, y=providence_freq_relative, color=form, fill=form)) + 
+    geom_vline(data = filter(aoa, word==paste(gsub("_.*", "", i))), mapping = aes(xintercept=aoa, color=form)) +
+    geom_vline(data = filter(aoa, word==paste(gsub(".*_", "", i))), mapping = aes(xintercept=aoa, color=form)) +
+    geom_point() +
+    geom_smooth() +
+    scale_color_manual(values = colors) +
+    scale_fill_manual(values = colors) +
+    labs(title = paste0(i)) +
+    theme_test(base_size = 15) +
+    theme(plot.title = element_text(hjust = 0.5, face = "bold", size = 15), 
+          axis.title.x = element_blank(), 
+          axis.title.y = element_blank())
+  
+  assign(paste(i), plot)
+}
+
+
+providence_per_item_frequency <- ggarrange(birdie_bird, blankie_blanket, bunny_rabbit, `choo choo_train`, daddy_dad, doggy_dog,
+                                dolly_doll, duckie_duck, froggy_frog, horsey_horse, kitty_cat, mommy_mom,
+                                `night night_goodnight`, piggy_pig, potty_bathroom, tummy_stomach, 
+                                common.legend = TRUE, legend = "top", 
+                                ncol = 4, nrow = 4)
+
+annotate_figure(providence_per_item_frequency, 
+                left = text_grob("relative item-level frequency", rot = 90, size = 25), 
+                bottom = text_grob("age (months)", size = 25))
+
+ggsave("plots/providence_per_item_frequency.jpg", height = 15, width = 20, dpi = 300)
+
+
+# generate relative age-level freq plots 
+# (for each word, how many times was it said in a given month, 
+# relative to the total number of words heard during that month)
+
+month_totals <- providence_utterances %>%
+  mutate(age_rounded = round(target_child_age, digits=0)) %>%
+  group_by(age_rounded) %>%
+  summarise(month_total = sum(num_tokens, na.rm = TRUE))
+
+providence_totaled_utterances <- merge(providence_utterances, month_totals, by="age_rounded")
+
+for (i in pairs) {
+  ids <- paste(gsub("_.*", "", i))
+  ads <- paste(gsub(".*_", "", i))
+  
+  plot <- providence_totaled_utterances %>%
+    filter(!is.na(eval(as.symbol(ids)))|!is.na(eval(as.symbol(ads)))) %>%
+    select(gloss, stem, age_rounded, speaker_role, ids, ads, month_total) %>%
+    group_by(age_rounded) %>%
+    summarise(ads = sum(eval(as.symbol(ads)), na.rm = TRUE)/month_total*1000000,
+              ids = sum(eval(as.symbol(ids)), na.rm = TRUE)/month_total*1000000) %>%
+    pivot_longer(c(ids, ads), names_to = "form", values_to = "providence_freq_relative") %>%
+    mutate(word = case_when(
+      form == "ids" ~ paste(gsub("_.*", "", i)), 
+      form == "ads" ~ paste(gsub(".*_", "", i)))) %>%
+    ungroup() %>%
+    ggplot(aes(x=age_rounded, y=providence_freq_relative, color=form, fill=form)) + 
+    geom_vline(data = filter(aoa, word==paste(gsub("_.*", "", i))), mapping = aes(xintercept=aoa, color=form)) +
+    geom_vline(data = filter(aoa, word==paste(gsub(".*_", "", i))), mapping = aes(xintercept=aoa, color=form)) +
+    geom_point() +
+    geom_smooth() +
+    scale_color_manual(values = colors) +
+    scale_fill_manual(values = colors) +
+    labs(title = paste0(i)) +
+    theme_test(base_size = 15) +
+    theme(plot.title = element_text(hjust = 0.5, face = "bold", size = 15), 
+          axis.title.x = element_blank(), 
+          axis.title.y = element_blank())
+  
+  assign(paste(i), plot)
+}
+
+
+providence_per_age_frequency <- ggarrange(birdie_bird, blankie_blanket, bunny_rabbit, `choo choo_train`, daddy_dad, doggy_dog,
+                               dolly_doll, duckie_duck, froggy_frog, horsey_horse, kitty_cat, mommy_mom,
+                               `night night_goodnight`, piggy_pig, potty_bathroom, tummy_stomach, 
+                               common.legend = TRUE, legend = "top", 
+                               ncol = 4, nrow = 4)
+
+annotate_figure(providence_per_age_frequency, 
+                left = text_grob("relative frequency per 1 million words", rot = 90, size = 25), 
+                bottom = text_grob("age (months)", size = 25))
+
+ggsave("plots/providence_per_age_frequency.jpg", height = 15, width = 20, dpi = 300)
+
+
+
