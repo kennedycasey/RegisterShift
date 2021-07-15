@@ -123,7 +123,7 @@ annotate_figure(raw_frequency,
                 left = text_grob("frequency", rot = 90, size = 25), 
                 bottom = text_grob("age (months)", size = 25))
 
-ggsave("raw_frequency.jpg", height = 15, width = 20, dpi = 300)
+ggsave("plots/raw_frequency.jpg", height = 15, width = 20, dpi = 300)
 
 
 
@@ -176,7 +176,7 @@ annotate_figure(per_item_frequency,
                 left = text_grob("frequency", rot = 90, size = 25), 
                 bottom = text_grob("age (months)", size = 25))
 
-ggsave("per_item_frequency.jpg", height = 15, width = 20, dpi = 300)
+ggsave("plots/per_item_frequency.jpg", height = 15, width = 20, dpi = 300)
 
 
 
