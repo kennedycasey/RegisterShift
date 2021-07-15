@@ -104,42 +104,26 @@ for (i in pairs) {
     geom_smooth() +
     scale_color_manual(values = colors) +
     scale_fill_manual(values = colors) +
-    labs(x = "age (months)", y = "frequency") +
-    theme_test() 
+    labs(title = paste0(i)) +
+    theme_test(base_size = 15) +
+    theme(plot.title = element_text(hjust = 0.5, face = "bold", size = 15), 
+          axis.title.x = element_blank(), 
+          axis.title.y = element_blank())
   
   assign(paste(i), plot)
 }
 
-library(ggpubr)
-
-ggarrange(birdie_bird, blankie_blanket, bunny_rabbit, `choo choo_train`, daddy_dad, doggy_dog,
+raw_frequency <- ggarrange(birdie_bird, blankie_blanket, bunny_rabbit, `choo choo_train`, daddy_dad, doggy_dog,
           dolly_doll, duckie_duck, froggy_frog, horsey_horse, kitty_cat, mommy_mom,
           `night night_goodnight`, piggy_pig, potty_bathroom, tummy_stomach, 
-          common.legend = TRUE)
+          common.legend = TRUE, legend = "top", 
+          ncol = 4, nrow = 4)
 
-utterances %>%
-  filter(!is.na(doggy)|!is.na(dog)) %>%
-  select(gloss, stem, target_child_age, speaker_role, doggy, dog) %>%
-  mutate(age_rounded = round(target_child_age, digits=0), 
-         speaker = case_when(
-           speaker_role == "Target_Child" ~ "target_child", 
-           speaker_role != "Target_Child" ~ "other_speaker")) %>%
-  group_by(age_rounded) %>%
-  summarise(doggy = sum(doggy, na.rm = TRUE),
-            dog = sum(dog, na.rm = TRUE)) %>%
-  pivot_longer(c(doggy, dog), names_to = "word", values_to = "childes_freq") %>%
-  mutate(form = case_when(
-    word == "doggy" ~ "ids", 
-    word == "dog" ~ "ads")) %>%
-  ggplot(aes(x=age_rounded, y=childes_freq, color=form, fill=form)) + 
-  geom_vline(data = filter(aoa, word=="doggy"), mapping = aes(xintercept=aoa, color=form)) +
-  geom_vline(data = filter(aoa, word=="dog"), mapping = aes(xintercept=aoa, color=form)) +
-  geom_point() +
-  geom_smooth() +
-  scale_color_manual(values = colors) +
-  scale_fill_manual(values = colors) +
-  labs(x = "age (months)", y = "frequency") +
-  theme_test() 
+annotate_figure(raw_frequency, 
+                left = text_grob("frequency", rot = 90, size = 25), 
+                bottom = text_grob("age (months)", size = 25))
+
+ggsave("raw_frequency.jpg", raw_frequency, height = 10, width = 12, dpi = 300)
 
 ######
 #items <- read_csv("candidate_items_new.csv") 
