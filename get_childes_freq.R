@@ -123,7 +123,8 @@ annotate_figure(raw_frequency,
                 left = text_grob("frequency", rot = 90, size = 25), 
                 bottom = text_grob("age (months)", size = 25))
 
-ggsave("raw_frequency.jpg", raw_frequency, height = 10, width = 12, dpi = 300)
+ggsave("raw_frequency.jpg", height = 15, width = 20, dpi = 300)
+
 
 ######
 #items <- read_csv("candidate_items_new.csv") 
