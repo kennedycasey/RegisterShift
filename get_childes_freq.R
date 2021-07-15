@@ -9,6 +9,7 @@ library(ggpubr)
 childes_utterances = data.table(get_utterances(collection = "Eng-NA"))
 
 utterances <- childes_utterances %>%
+  filter(target_child_age < 72) %>%
   mutate(gloss = paste0(' ', tolower(gloss), ' '))
 
 items <- read_csv("item_info/candidate_items_new.csv") %>%
@@ -173,7 +174,7 @@ per_item_frequency <- ggarrange(birdie_bird, blankie_blanket, bunny_rabbit, `cho
                            ncol = 4, nrow = 4)
 
 annotate_figure(per_item_frequency, 
-                left = text_grob("frequency", rot = 90, size = 25), 
+                left = text_grob("relative item-level frequency", rot = 90, size = 25), 
                 bottom = text_grob("age (months)", size = 25))
 
 ggsave("plots/per_item_frequency.jpg", height = 15, width = 20, dpi = 300)
