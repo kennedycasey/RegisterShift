@@ -126,6 +126,60 @@ annotate_figure(raw_frequency,
 ggsave("raw_frequency.jpg", height = 15, width = 20, dpi = 300)
 
 
+
+for (i in pairs) {
+  ids <- paste(gsub("_.*", "", i))
+  ads <- paste(gsub(".*_", "", i))
+  
+  plot <- utterances %>%
+    filter(!is.na(eval(as.symbol(ids)))|!is.na(eval(as.symbol(ads)))) %>%
+    select(gloss, stem, target_child_age, speaker_role, ids, ads) %>%
+    mutate(age_rounded = round(target_child_age, digits=0), 
+           speaker = case_when(
+             speaker_role == "Target_Child" ~ "target_child", 
+             speaker_role != "Target_Child" ~ "other_speaker")) %>%
+    group_by(age_rounded) %>%
+    summarise(ads = sum(eval(as.symbol(ads)), na.rm = TRUE),
+              ids = sum(eval(as.symbol(ids)), na.rm = TRUE)) %>%
+    mutate(ids_total = filter(childes_freq, word==paste(gsub("_.*", "", i)))$childes_freq, 
+           ads_total = filter(childes_freq, word==paste(gsub(".*_", "", i)))$childes_freq, 
+           ids = ids/ids_total, 
+           ads = ads/ads_total) %>%
+    pivot_longer(c(ids, ads), names_to = "form", values_to = "childes_freq_relative") %>%
+    mutate(word = case_when(
+      form == "ids" ~ paste(gsub("_.*", "", i)), 
+      form == "ads" ~ paste(gsub(".*_", "", i)))) %>%
+    ggplot(aes(x=age_rounded, y=childes_freq_relative, color=form, fill=form)) + 
+    geom_vline(data = filter(aoa, word==paste(gsub("_.*", "", i))), mapping = aes(xintercept=aoa, color=form)) +
+    geom_vline(data = filter(aoa, word==paste(gsub(".*_", "", i))), mapping = aes(xintercept=aoa, color=form)) +
+    geom_point() +
+    geom_smooth() +
+    scale_color_manual(values = colors) +
+    scale_fill_manual(values = colors) +
+    labs(title = paste0(i)) +
+    theme_test(base_size = 15) +
+    theme(plot.title = element_text(hjust = 0.5, face = "bold", size = 15), 
+          axis.title.x = element_blank(), 
+          axis.title.y = element_blank())
+  
+  assign(paste(i), plot)
+}
+
+
+per_item_frequency <- ggarrange(birdie_bird, blankie_blanket, bunny_rabbit, `choo choo_train`, daddy_dad, doggy_dog,
+                           dolly_doll, duckie_duck, froggy_frog, horsey_horse, kitty_cat, mommy_mom,
+                           `night night_goodnight`, piggy_pig, potty_bathroom, tummy_stomach, 
+                           common.legend = TRUE, legend = "top", 
+                           ncol = 4, nrow = 4)
+
+annotate_figure(per_item_frequency, 
+                left = text_grob("frequency", rot = 90, size = 25), 
+                bottom = text_grob("age (months)", size = 25))
+
+ggsave("per_item_frequency.jpg", height = 15, width = 20, dpi = 300)
+
+
+
 ######
 #items <- read_csv("candidate_items_new.csv") 
 
