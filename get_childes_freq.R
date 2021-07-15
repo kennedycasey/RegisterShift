@@ -10,7 +10,8 @@ childes_utterances = data.table(get_utterances(collection = "Eng-NA"))
 
 utterances <- childes_utterances %>%
   filter(target_child_age < 72) %>%
-  mutate(gloss = paste0(' ', tolower(gloss), ' '))
+  mutate(gloss = paste0(' ', tolower(gloss), ' '), 
+         age_rounded = round(target_child_age, digits = 0))
 
 items <- read_csv("item_info/candidate_items_new.csv") %>%
   pull(word)
@@ -79,18 +80,16 @@ aoa <- read_csv("item_info/candidate_items_new.csv") %>%
   select(word, aoa, pair, form)
 
 colors <- c("ids" = "#C1292E", "ads" = "#235789")
-  
+
+
+# generate raw freq plots
 for (i in pairs) {
   ids <- paste(gsub("_.*", "", i))
   ads <- paste(gsub(".*_", "", i))
   
   plot <- utterances %>%
     filter(!is.na(eval(as.symbol(ids)))|!is.na(eval(as.symbol(ads)))) %>%
-    select(gloss, stem, target_child_age, speaker_role, ids, ads) %>%
-    mutate(age_rounded = round(target_child_age, digits=0), 
-           speaker = case_when(
-             speaker_role == "Target_Child" ~ "target_child", 
-             speaker_role != "Target_Child" ~ "other_speaker")) %>%
+    select(gloss, stem, age_rounded, speaker_role, ids, ads) %>%
     group_by(age_rounded) %>%
     summarise(ads = sum(eval(as.symbol(ads)), na.rm = TRUE),
               ids = sum(eval(as.symbol(ids)), na.rm = TRUE)) %>%
@@ -127,6 +126,9 @@ annotate_figure(raw_frequency,
 ggsave("plots/raw_frequency.jpg", height = 15, width = 20, dpi = 300)
 
 
+# generate relative item-level freq plots 
+# (for each word, how many times was it said in a given month, 
+# relative to the total number of times it was said from 0-72m)
 
 for (i in pairs) {
   ids <- paste(gsub("_.*", "", i))
@@ -134,11 +136,7 @@ for (i in pairs) {
   
   plot <- utterances %>%
     filter(!is.na(eval(as.symbol(ids)))|!is.na(eval(as.symbol(ads)))) %>%
-    select(gloss, stem, target_child_age, speaker_role, ids, ads) %>%
-    mutate(age_rounded = round(target_child_age, digits=0), 
-           speaker = case_when(
-             speaker_role == "Target_Child" ~ "target_child", 
-             speaker_role != "Target_Child" ~ "other_speaker")) %>%
+    select(gloss, stem, age_rounded, speaker_role, ids, ads) %>%
     group_by(age_rounded) %>%
     summarise(ads = sum(eval(as.symbol(ads)), na.rm = TRUE),
               ids = sum(eval(as.symbol(ids)), na.rm = TRUE)) %>%
@@ -180,18 +178,57 @@ annotate_figure(per_item_frequency,
 ggsave("plots/per_item_frequency.jpg", height = 15, width = 20, dpi = 300)
 
 
+# generate relative age-level freq plots 
+# (for each word, how many times was it said in a given month, 
+# relative to the total number of words heard during that month)
 
-######
-#items <- read_csv("candidate_items_new.csv") 
+month_totals <- utterances %>%
+  mutate(age_rounded = round(target_child_age, digits=0)) %>%
+  group_by(age_rounded) %>%
+  summarise(month_total = sum(num_tokens, na.rm = TRUE))
 
-#merge(items, childes_freq, by="word") %>%
-  #write_csv("item_info/merged.csv")
+totaled_utterances <- merge(utterances, month_totals, by="age_rounded")
 
-#summary <- read_csv("merged.csv") %>%
-  #mutate(exclude = ifelse(is.na(exclude), "n", "y")) %>%
-  #filter(exclude == "n") 
+for (i in pairs) {
+  ids <- paste(gsub("_.*", "", i))
+  ads <- paste(gsub(".*_", "", i))
+  
+  plot <- totaled_utterances %>%
+    filter(!is.na(eval(as.symbol(ids)))|!is.na(eval(as.symbol(ads)))) %>%
+    select(gloss, stem, age_rounded, speaker_role, ids, ads, month_total) %>%
+    group_by(age_rounded) %>%
+    summarise(ads = sum(eval(as.symbol(ads)), na.rm = TRUE)/month_total*1000000,
+              ids = sum(eval(as.symbol(ids)), na.rm = TRUE)/month_total*1000000) %>%
+    pivot_longer(c(ids, ads), names_to = "form", values_to = "childes_freq_relative") %>%
+    mutate(word = case_when(
+      form == "ids" ~ paste(gsub("_.*", "", i)), 
+      form == "ads" ~ paste(gsub(".*_", "", i)))) %>%
+    ungroup() %>%
+    ggplot(aes(x=age_rounded, y=childes_freq_relative, color=form, fill=form)) + 
+    geom_vline(data = filter(aoa, word==paste(gsub("_.*", "", i))), mapping = aes(xintercept=aoa, color=form)) +
+    geom_vline(data = filter(aoa, word==paste(gsub(".*_", "", i))), mapping = aes(xintercept=aoa, color=form)) +
+    geom_point() +
+    geom_smooth() +
+    scale_color_manual(values = colors) +
+    scale_fill_manual(values = colors) +
+    labs(title = paste0(i)) +
+    theme_test(base_size = 15) +
+    theme(plot.title = element_text(hjust = 0.5, face = "bold", size = 15), 
+          axis.title.x = element_blank(), 
+          axis.title.y = element_blank())
+  
+  assign(paste(i), plot)
+}
 
-#summary %>%
-  #group_by(form) %>%
-  #summarise(mean_aoa = mean(aoa, na.rm = TRUE), 
-            #mean_bab = mean(babiness, na.rm = TRUE))
+
+per_age_frequency <- ggarrange(birdie_bird, blankie_blanket, bunny_rabbit, `choo choo_train`, daddy_dad, doggy_dog,
+                                dolly_doll, duckie_duck, froggy_frog, horsey_horse, kitty_cat, mommy_mom,
+                                `night night_goodnight`, piggy_pig, potty_bathroom, tummy_stomach, 
+                                common.legend = TRUE, legend = "top", 
+                                ncol = 4, nrow = 4)
+
+annotate_figure(per_age_frequency, 
+                left = text_grob("relative frequency per 1 million words", rot = 90, size = 25), 
+                bottom = text_grob("age (months)", size = 25))
+
+ggsave("plots/per_age_frequency.jpg", height = 15, width = 20, dpi = 300)
