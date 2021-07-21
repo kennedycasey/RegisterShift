@@ -75,7 +75,6 @@ childes_data[is.na(childes_data)] <- 0
 childes_freq <- data.frame(colSums(childes_data))
 childes_freq <- setNames(cbind(rownames(childes_freq), childes_freq, row.names = NULL), c("word", "childes_freq"))
 
-
 aoa <- read_csv("item_info/candidate_items_new.csv") %>%
   select(word, aoa, pair, form)
 
@@ -165,6 +164,57 @@ for (i in pairs) {
 }
 
 
+# generate odds ratio plots
+# (for each timepoint, what is the likelihood of producing the ids vs. ads form)
+
+test <- utterances %>%
+  select(age_rounded, doggy, dog) %>%
+  group_by(age_rounded) %>%
+  mutate(doggy = sum(doggy, na.rm = TRUE), 
+         dog = sum(dog, na.rm = TRUE)) %>%
+  pivot_longer(c(doggy, dog), names_to = "word", values_to = "count") %>%
+  mutate(form = case_when(
+    word == "doggy" ~ "ids", 
+    word == "dog" ~ "ads")) %>%
+  distinct()
+
+for (i in 1:nrow(test)) {
+  test_long <- test %>%
+    slice(rep(1:n(), each = test_long[i, count]))
+}
+
+test_long <- test[rep(row.names(test), test$count), 1:4] %>%
+  mutate(form_numeric = case_when(
+    form == "ids" ~ 0, 
+    form == "ads" ~ 1))
+
+m <- glm(form_numeric ~ age_rounded, data = test_long, family = binomial) 
+summary(m)
+exp(cbind(OR=coef(m), confint(m)))
+
+summary <- test_long %>%
+  group_by(age_rounded) %>%
+  summarise(ids = length(form[form=="ids"]),
+            ads = length(form[form=="ads"]), 
+            prop = ads/(ids + ads))
+
+ggplot(data=summary, aes(x=age_rounded, y=prop)) + 
+  geom_point(shape=1, size=1, color="#525c63") +
+  geom_hline(yintercept=0.5, linetype="dotted", size=1) +
+  theme_test(base_size=15)
+
+  slice(rep(1:n(), each = test_long$count)
+
+test_long[rep(seq_len(nrow(test_long)), each = test_long$count), ]
+
+for (seq_length(nrow(test))) {
+  test_long <- test %>%
+    rep(each = paste0(count))
+}
+  
+  
+
+
 per_item_frequency <- ggarrange(birdie_bird, blankie_blanket, bunny_rabbit, `choo choo_train`, daddy_dad, doggy_dog,
                            dolly_doll, duckie_duck, froggy_frog, horsey_horse, kitty_cat, mommy_mom,
                            `night night_goodnight`, piggy_pig, potty_bathroom, tummy_stomach, 
@@ -232,6 +282,9 @@ annotate_figure(per_age_frequency,
                 bottom = text_grob("age (months)", size = 25))
 
 ggsave("plots/per_age_frequency.jpg", height = 15, width = 20, dpi = 300)
+
+
+
 
 
 
