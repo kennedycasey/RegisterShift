@@ -167,65 +167,64 @@ for (i in pairs) {
 # generate odds ratio plots
 # (for each timepoint, what is the likelihood of producing the ids vs. ads form)
 
-test <- utterances %>%
-  select(age_rounded, doggy, dog) %>%
-  group_by(age_rounded) %>%
-  mutate(doggy = sum(doggy, na.rm = TRUE), 
-         dog = sum(dog, na.rm = TRUE)) %>%
-  pivot_longer(c(doggy, dog), names_to = "word", values_to = "count") %>%
-  mutate(form = case_when(
-    word == "doggy" ~ "ids", 
-    word == "dog" ~ "ads")) %>%
-  distinct()
-
-for (i in 1:nrow(test)) {
-  test_long <- test %>%
-    slice(rep(1:n(), each = test_long[i, count]))
+for (i in pairs) {
+  ids <- paste(gsub("_.*", "", i))
+  ads <- paste(gsub(".*_", "", i))
+  
+  model_data <- utterances %>%
+    filter(!is.na(eval(as.symbol(ids)))|!is.na(eval(as.symbol(ads)))) %>%
+    select(age_rounded, speaker_role, ids, ads) %>%
+    group_by(age_rounded) %>%
+    summarise(ads = sum(eval(as.symbol(ads)), na.rm = TRUE),
+              ids = sum(eval(as.symbol(ids)), na.rm = TRUE)) %>%
+    pivot_longer(c(ids, ads), names_to = "form", values_to = "count") %>%
+    mutate(word = case_when(
+      form == "ids" ~ paste(gsub("_.*", "", i)), 
+      form == "ads" ~ paste(gsub(".*_", "", i)))) %>%
+    distinct() %>%
+    mutate(form_numeric = case_when(
+      form == "ids" ~ 0, 
+      form == "ads" ~ 1))
+  
+  model_data_long <- model_data[rep(row.names(model_data), model_data$count), 1:5]
+  
+  plot <- model_data_long %>%
+    group_by(age_rounded) %>%
+    summarise(ids = length(form[form=="ids"]),
+              ads = length(form[form=="ads"]), 
+              prop = ads/(ids + ads)) %>%
+    ggplot(aes(x=age_rounded, y=prop)) + 
+    geom_point(color="#235789") +
+    geom_smooth(data=model_data_long, aes(x=age_rounded, y=form_numeric), 
+                method="glm", method.args=list(family = "binomial"), 
+                color="#235789", fill="#235789") +
+    geom_hline(yintercept=0.5, linetype="dotted", size=1) +
+    geom_vline(data = filter(aoa, word==paste(gsub("_.*", "", i))), mapping = aes(xintercept=aoa, color=form)) +
+    geom_vline(data = filter(aoa, word==paste(gsub(".*_", "", i))), mapping = aes(xintercept=aoa, color=form)) +
+    scale_color_manual(values = colors) +
+    scale_fill_manual(values = colors) +
+    labs(title = paste0(i)) +
+    theme_test(base_size = 15) +
+    theme(plot.title = element_text(hjust = 0.5, face = "bold", size = 15), 
+          axis.title.x = element_blank(), 
+          axis.title.y = element_blank(), 
+          legend.position = "none")
+  
+  assign(paste(i), plot)
 }
 
-test_long <- test[rep(row.names(test), test$count), 1:4] %>%
-  mutate(form_numeric = case_when(
-    form == "ids" ~ 0, 
-    form == "ads" ~ 1))
 
-m <- glm(form_numeric ~ age_rounded, data = test_long, family = binomial) 
-summary(m)
-exp(cbind(OR=coef(m), confint(m)))
-
-summary <- test_long %>%
-  group_by(age_rounded) %>%
-  summarise(ids = length(form[form=="ids"]),
-            ads = length(form[form=="ads"]), 
-            prop = ads/(ids + ads))
-
-ggplot(data=summary, aes(x=age_rounded, y=prop)) + 
-  geom_point(shape=1, size=1, color="#525c63") +
-  geom_hline(yintercept=0.5, linetype="dotted", size=1) +
-  theme_test(base_size=15)
-
-  slice(rep(1:n(), each = test_long$count)
-
-test_long[rep(seq_len(nrow(test_long)), each = test_long$count), ]
-
-for (seq_length(nrow(test))) {
-  test_long <- test %>%
-    rep(each = paste0(count))
-}
-  
-  
-
-
-per_item_frequency <- ggarrange(birdie_bird, blankie_blanket, bunny_rabbit, `choo choo_train`, daddy_dad, doggy_dog,
+ads_prop <- ggarrange(birdie_bird, blankie_blanket, bunny_rabbit, `choo choo_train`, daddy_dad, doggy_dog,
                            dolly_doll, duckie_duck, froggy_frog, horsey_horse, kitty_cat, mommy_mom,
                            `night night_goodnight`, piggy_pig, potty_bathroom, tummy_stomach, 
                            common.legend = TRUE, legend = "top", 
                            ncol = 4, nrow = 4)
 
-annotate_figure(per_item_frequency, 
-                left = text_grob("relative item-level frequency", rot = 90, size = 25), 
+annotate_figure(ads_prop, 
+                left = text_grob("proportion of ads forms", rot = 90, size = 25), 
                 bottom = text_grob("age (months)", size = 25))
 
-ggsave("plots/per_item_frequency.jpg", height = 15, width = 20, dpi = 300)
+ggsave("plots/ads_prop.jpg", height = 15, width = 20, dpi = 300)
 
 
 # generate relative age-level freq plots 
