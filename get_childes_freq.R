@@ -233,6 +233,65 @@ annotate_figure(prop,
 ggsave("plots/props.jpg", height = 15, width = 20, dpi = 300)
 
 
+# generate odds ratio plots
+# (for each timepoint, what are the odds of producing ids vs. ads form)
+
+for (i in pairs) {
+  ids <- paste(gsub("_.*", "", i))
+  ads <- paste(gsub(".*_", "", i))
+  
+  model_data <- utterances %>%
+    filter(!is.na(eval(as.symbol(ids)))|!is.na(eval(as.symbol(ads)))) %>%
+    select(age_rounded, speaker_role, ids, ads) %>%
+    group_by(age_rounded) %>%
+    summarise(ads = sum(eval(as.symbol(ads)), na.rm = TRUE),
+              ids = sum(eval(as.symbol(ids)), na.rm = TRUE)) %>%
+    pivot_longer(c(ids, ads), names_to = "form", values_to = "count") %>%
+    mutate(word = case_when(
+      form == "ids" ~ paste(gsub("_.*", "", i)), 
+      form == "ads" ~ paste(gsub(".*_", "", i)))) %>%
+    distinct() %>%
+    mutate(form_numeric = case_when(
+      form == "ids" ~ 0, 
+      form == "ads" ~ 1))
+  
+  model_data_long <- model_data[rep(row.names(model_data), model_data$count), 1:5]
+
+  plot <- model_data_long %>%
+    group_by(age_rounded) %>%
+    summarise(ids_count = length(form[form=="ids"]),
+              ads_count = length(form[form=="ads"]), 
+              ids_odds = ids_count/(ids_count + ads_count),
+              ads_odds = ads_count/(ids_count + ads_count), 
+              or = ifelse(ads_odds == 0 | ids_odds == 0, NA, ads_odds/ids_odds)) %>%
+    ggplot(aes(x=age_rounded, y=or)) + 
+    geom_point() +
+    geom_smooth(method="glm", color="#235789", fill="#235789") +
+    geom_hline(yintercept=1, linetype="dotted", size=1) +
+    labs(title = paste0(i)) +
+    theme_test(base_size = 15) +
+    theme(plot.title = element_text(hjust = 0.5, face = "bold", size = 15), 
+          axis.title.x = element_blank(), 
+          axis.title.y = element_blank(), 
+          legend.position = "none") +
+    coord_cartesian(ylim=c(0, 20))
+  
+  assign(paste(i), plot)
+}
+
+
+odds <- ggarrange(birdie_bird, blankie_blanket, bunny_rabbit, `choo choo_train`, daddy_dad, doggy_dog,
+                  dolly_doll, duckie_duck, froggy_frog, horsey_horse, kitty_cat, mommy_mom,
+                  `night night_goodnight`, piggy_pig, potty_bathroom, tummy_stomach, 
+                  common.legend = TRUE, legend = "top", 
+                  ncol = 4, nrow = 4)
+
+annotate_figure(odds, 
+                left = text_grob("odds ratio", rot = 90, size = 25), 
+                bottom = text_grob("age (months)", size = 25))
+
+ggsave("plots/odds.jpg", height = 15, width = 20, dpi = 300)
+
 
 # generate prop plots - compare children vs. adults
 # (for each timepoint, what is the proportion of ids vs. ads forms)
@@ -303,8 +362,6 @@ annotate_figure(prop_by_speaker,
                 bottom = text_grob("age (months)", size = 25))
 
 ggsave("plots/props_by_speaker.jpg", height = 15, width = 20, dpi = 300)
-
-
 
 # generate relative age-level freq plots 
 # (for each word, how many times was it said in a given month, 
