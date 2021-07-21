@@ -164,8 +164,8 @@ for (i in pairs) {
 }
 
 
-# generate odds ratio plots
-# (for each timepoint, what is the likelihood of producing the ids vs. ads form)
+# generate prop plots
+# (for each timepoint, what is the proportion of ids vs. ads forms)
 
 for (i in pairs) {
   ids <- paste(gsub("_.*", "", i))
@@ -227,10 +227,83 @@ prop <- ggarrange(birdie_bird, blankie_blanket, bunny_rabbit, `choo choo_train`,
                            ncol = 4, nrow = 4)
 
 annotate_figure(prop, 
-                left = text_grob("proportion of ads forms", rot = 90, size = 25), 
+                left = text_grob("proportion of tokens per form", rot = 90, size = 25), 
                 bottom = text_grob("age (months)", size = 25))
 
 ggsave("plots/props.jpg", height = 15, width = 20, dpi = 300)
+
+
+
+# generate prop plots - compare children vs. adults
+# (for each timepoint, what is the proportion of ids vs. ads forms)
+
+for (i in pairs) {
+  ids <- paste(gsub("_.*", "", i))
+  ads <- paste(gsub(".*_", "", i))
+  
+  model_data <- utterances %>%
+    filter(!is.na(eval(as.symbol(ids)))|!is.na(eval(as.symbol(ads)))) %>%
+    select(age_rounded, speaker_role, ids, ads) %>% 
+    mutate(speaker = ifelse(speaker_role == "Target_Child", "target child", "other speaker")) %>%
+    group_by(age_rounded, speaker) %>%
+    summarise(ads = sum(eval(as.symbol(ads)), na.rm = TRUE),
+              ids = sum(eval(as.symbol(ids)), na.rm = TRUE)) %>%
+    pivot_longer(c(ids, ads), names_to = "form", values_to = "count") %>%
+    mutate(word = case_when(
+      form == "ids" ~ paste(gsub("_.*", "", i)), 
+      form == "ads" ~ paste(gsub(".*_", "", i)))) %>%
+    distinct() %>%
+    mutate(form_numeric = case_when(
+      form == "ids" ~ 0, 
+      form == "ads" ~ 1))
+  
+  model_data_long <- model_data[rep(row.names(model_data), model_data$count), 1:6]
+  
+  plot <- model_data_long %>%
+    group_by(age_rounded, speaker) %>%
+    summarise(ids_count = length(form[form=="ids"]),
+              ads_count = length(form[form=="ads"]), 
+              ids = ids_count/(ids_count + ads_count),
+              ads = ads_count/(ids_count + ads_count)) %>%
+    pivot_longer(c(ids, ads), names_to = "form", values_to = "prop") %>%
+    ggplot(aes(x=age_rounded, y=prop, color=form, fill=form)) + 
+    facet_grid(.~speaker) +
+    geom_point() +
+    geom_smooth(data=model_data_long, aes(x=age_rounded, y=form_numeric), 
+                method="glm", method.args=list(family = "binomial"), 
+                color="#235789", fill="#235789") +
+    geom_smooth(data=model_data_long %>% mutate(form_numeric = case_when(form_numeric==1 ~ 0, form_numeric==0 ~ 1)), 
+                aes(x=age_rounded, y=form_numeric), 
+                method="glm", method.args=list(family = "binomial"), 
+                color="#C1292E", fill="#C1292E") +
+    geom_hline(yintercept=0.5, linetype="dotted", size=1) +
+    geom_vline(data = filter(aoa, word==paste(gsub("_.*", "", i))), mapping = aes(xintercept=aoa, color=form)) +
+    geom_vline(data = filter(aoa, word==paste(gsub(".*_", "", i))), mapping = aes(xintercept=aoa, color=form)) +
+    scale_color_manual(values = colors) +
+    scale_fill_manual(values = colors) +
+    labs(title = paste0(i)) +
+    theme_test(base_size = 15) +
+    theme(plot.title = element_text(hjust = 0.5, face = "bold", size = 15), 
+          axis.title.x = element_blank(), 
+          axis.title.y = element_blank(), 
+          legend.position = "none")
+  
+  assign(paste(i), plot)
+}
+
+
+prop_by_speaker <- ggarrange(birdie_bird, blankie_blanket, bunny_rabbit, `choo choo_train`, daddy_dad, doggy_dog,
+                  dolly_doll, duckie_duck, froggy_frog, horsey_horse, kitty_cat, mommy_mom,
+                  `night night_goodnight`, piggy_pig, potty_bathroom, tummy_stomach, 
+                  common.legend = TRUE, legend = "top", 
+                  ncol = 4, nrow = 4)
+
+annotate_figure(prop_by_speaker, 
+                left = text_grob("proportion of tokens per form", rot = 90, size = 25), 
+                bottom = text_grob("age (months)", size = 25))
+
+ggsave("plots/props_by_speaker.jpg", height = 15, width = 20, dpi = 300)
+
 
 
 # generate relative age-level freq plots 
