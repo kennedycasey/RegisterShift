@@ -17,6 +17,7 @@ items <- read_csv("item_info/candidate_items_new.csv") %>%
   pull(word)
 
 pairs <- read_csv("item_info/candidate_items_new.csv") %>%
+  filter(pair != "choo choo_train") %>%
   pull(pair)
 
 #total number of words 
