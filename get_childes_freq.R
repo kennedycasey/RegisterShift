@@ -190,14 +190,20 @@ for (i in pairs) {
   
   plot <- model_data_long %>%
     group_by(age_rounded) %>%
-    summarise(ids = length(form[form=="ids"]),
-              ads = length(form[form=="ads"]), 
-              prop = ads/(ids + ads)) %>%
-    ggplot(aes(x=age_rounded, y=prop)) + 
-    geom_point(color="#235789") +
+    summarise(ids_count = length(form[form=="ids"]),
+              ads_count = length(form[form=="ads"]), 
+              ids = ids_count/(ids_count + ads_count),
+              ads = ads_count/(ids_count + ads_count)) %>%
+    pivot_longer(c(ids, ads), names_to = "form", values_to = "prop") %>%
+    ggplot(aes(x=age_rounded, y=prop, color=form, fill=form)) + 
+    geom_point() +
     geom_smooth(data=model_data_long, aes(x=age_rounded, y=form_numeric), 
                 method="glm", method.args=list(family = "binomial"), 
                 color="#235789", fill="#235789") +
+    geom_smooth(data=model_data_long %>% mutate(form_numeric = case_when(form_numeric==1 ~ 0, form_numeric==0 ~ 1)), 
+                aes(x=age_rounded, y=form_numeric), 
+                method="glm", method.args=list(family = "binomial"), 
+                color="#C1292E", fill="#C1292E") +
     geom_hline(yintercept=0.5, linetype="dotted", size=1) +
     geom_vline(data = filter(aoa, word==paste(gsub("_.*", "", i))), mapping = aes(xintercept=aoa, color=form)) +
     geom_vline(data = filter(aoa, word==paste(gsub(".*_", "", i))), mapping = aes(xintercept=aoa, color=form)) +
@@ -214,17 +220,17 @@ for (i in pairs) {
 }
 
 
-ads_prop <- ggarrange(birdie_bird, blankie_blanket, bunny_rabbit, `choo choo_train`, daddy_dad, doggy_dog,
+prop <- ggarrange(birdie_bird, blankie_blanket, bunny_rabbit, `choo choo_train`, daddy_dad, doggy_dog,
                            dolly_doll, duckie_duck, froggy_frog, horsey_horse, kitty_cat, mommy_mom,
                            `night night_goodnight`, piggy_pig, potty_bathroom, tummy_stomach, 
                            common.legend = TRUE, legend = "top", 
                            ncol = 4, nrow = 4)
 
-annotate_figure(ads_prop, 
+annotate_figure(prop, 
                 left = text_grob("proportion of ads forms", rot = 90, size = 25), 
                 bottom = text_grob("age (months)", size = 25))
 
-ggsave("plots/ads_prop.jpg", height = 15, width = 20, dpi = 300)
+ggsave("plots/props.jpg", height = 15, width = 20, dpi = 300)
 
 
 # generate relative age-level freq plots 
