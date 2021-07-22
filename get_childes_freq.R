@@ -165,6 +165,21 @@ for (i in pairs) {
 }
 
 
+per_item_freq <- ggarrange(birdie_bird, doggy_dog, bunny_rabbit, 
+                  blankie_blanket, horsey_horse, daddy_dad, 
+                  dolly_doll, kitty_cat, mommy_mom, 
+                  duckie_duck, `night night_goodnight`, potty_bathroom, 
+                  froggy_frog, piggy_pig, tummy_stomach, 
+                  common.legend = TRUE, legend = "bottom", 
+                  ncol = 3, nrow = 5)
+
+annotate_figure(per_item_freq, 
+                top = text_grob("ads always dominates      ads takes over early        ads takes over late", size = 25, face = "bold"),
+                left = text_grob("relative item-level frequency", rot = 90, size = 25, face = "bold"), 
+                bottom = text_grob("age (months)", size = 25, face = "bold"))
+
+ggsave("plots/per_item_frequency.jpg", height = 15, width = 12, dpi = 300)
+
 # generate prop plots
 # (for each timepoint, what is the proportion of ids vs. ads forms)
 
@@ -230,9 +245,9 @@ prop <- ggarrange(birdie_bird, doggy_dog, bunny_rabbit,
                   ncol = 3, nrow = 5)
 
 annotate_figure(prop, 
-                top = text_grob("ads always dominates        ads takes over early      ads takes over late", size = 25, color = "#235789"),
-                left = text_grob("proportion of tokens per form", rot = 90, size = 25), 
-                bottom = text_grob("age (months)", size = 25))
+                top = text_grob("ads always dominates      ads takes over early        ads takes over late", size = 25, face = "bold"),
+                left = text_grob("proportion of tokens per form", rot = 90, size = 25, face = "bold"), 
+                bottom = text_grob("age (months)", size = 25, face = "bold"))
 
 ggsave("plots/props.jpg", height = 15, width = 12, dpi = 300)
 
@@ -267,34 +282,35 @@ for (i in pairs) {
               ads_count = length(form[form=="ads"]), 
               ids_odds = ids_count/(ids_count + ads_count),
               ads_odds = ads_count/(ids_count + ads_count), 
-              or = ifelse(ads_odds == 0 | ids_odds == 0, NA, ads_odds/ids_odds)) %>%
-    ggplot(aes(x=age_rounded, y=or)) + 
+              or = ifelse(ads_odds == 0 | ids_odds == 0, NA, ads_odds/ids_odds), 
+              log_odds = log(or)) %>%
+    ggplot(aes(x=age_rounded, y=log_odds)) + 
     geom_point() +
     geom_smooth(method="glm", color="#235789", fill="#235789") +
-    geom_hline(yintercept=1, linetype="dotted", size=1) +
+    geom_hline(yintercept=0, linetype="dotted", size=1) +
     labs(title = paste0(i)) +
+    scale_y_continuous(limits=c(-4, 4), breaks=c(-4, -2, 0, 2, 4)) +
     theme_test(base_size = 15) +
     theme(plot.title = element_text(hjust = 0.5, face = "bold", size = 15), 
           axis.title.x = element_blank(), 
           axis.title.y = element_blank(), 
-          legend.position = "none") +
-    coord_cartesian(ylim=c(0, 20))
+          legend.position = "none")
   
   assign(paste(i), plot)
 }
 
 
-odds <- ggarrange(birdie_bird, blankie_blanket, bunny_rabbit, `choo choo_train`, daddy_dad, doggy_dog,
+odds <- ggarrange(birdie_bird, blankie_blanket, bunny_rabbit, NA, daddy_dad, doggy_dog,
                   dolly_doll, duckie_duck, froggy_frog, horsey_horse, kitty_cat, mommy_mom,
                   `night night_goodnight`, piggy_pig, potty_bathroom, tummy_stomach, 
                   common.legend = TRUE, legend = "top", 
                   ncol = 4, nrow = 4)
 
 annotate_figure(odds, 
-                left = text_grob("odds ratio", rot = 90, size = 25), 
+                left = text_grob("log odds", rot = 90, size = 25), 
                 bottom = text_grob("age (months)", size = 25))
 
-ggsave("plots/odds.jpg", height = 15, width = 20, dpi = 300)
+ggsave("plots/log_odds.jpg", height = 15, width = 20, dpi = 300)
 
 
 # generate prop plots - compare children vs. adults
@@ -354,18 +370,20 @@ for (i in pairs) {
   assign(paste(i), plot)
 }
 
+prop_by_speaker <- ggarrange(birdie_bird, doggy_dog, bunny_rabbit, 
+                  blankie_blanket, horsey_horse, daddy_dad, 
+                  dolly_doll, kitty_cat, mommy_mom, 
+                  duckie_duck, `night night_goodnight`, potty_bathroom, 
+                  froggy_frog, piggy_pig, tummy_stomach, 
+                  common.legend = TRUE, legend = "bottom", 
+                  ncol = 3, nrow = 5)
 
-prop_by_speaker <- ggarrange(birdie_bird, blankie_blanket, bunny_rabbit, `choo choo_train`, daddy_dad, doggy_dog,
-                  dolly_doll, duckie_duck, froggy_frog, horsey_horse, kitty_cat, mommy_mom,
-                  `night night_goodnight`, piggy_pig, potty_bathroom, tummy_stomach, 
-                  common.legend = TRUE, legend = "top", 
-                  ncol = 4, nrow = 4)
+annotate_figure(prop_by_speaker,
+                left = text_grob("proportion of tokens per form", rot = 90, size = 25, face = "bold"), 
+                bottom = text_grob("age (months)", size = 25, face = "bold"))
 
-annotate_figure(prop_by_speaker, 
-                left = text_grob("proportion of tokens per form", rot = 90, size = 25), 
-                bottom = text_grob("age (months)", size = 25))
+ggsave("plots/props_by_speaker.jpg", height = 15, width = 15, dpi = 300)
 
-ggsave("plots/props_by_speaker.jpg", height = 15, width = 20, dpi = 300)
 
 # generate relative age-level freq plots 
 # (for each word, how many times was it said in a given month, 
