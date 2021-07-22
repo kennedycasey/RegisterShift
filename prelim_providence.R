@@ -5,7 +5,7 @@ library(stringr)
 library(readr)
 library(ggpubr)
 
-#get all utterances from providence corpus
+# get all utterances from providence corpus
 childes_utterances = data.table(get_utterances(collection = "Eng-NA"))
 
 aoa <- read_csv("item_info/candidate_items_new.csv") %>%
@@ -13,7 +13,7 @@ aoa <- read_csv("item_info/candidate_items_new.csv") %>%
 
 colors <- c("ids" = "#C1292E", "ads" = "#235789")
 
-### re run on providence subset
+### rerun on providence subset
 providence_utterances <- childes_utterances %>%
   filter(target_child_age < 72 & corpus_name == "Providence") %>%
   mutate(gloss = paste0(' ', tolower(gloss), ' '), 
@@ -66,7 +66,7 @@ for(i in items){
 
 
 
-#clean dataframe to get overall frequency by item
+# clean dataframe to get overall frequency by item
 providence_data <- providence_utterances[, 28:ncol(utterances)]
 providence_data[is.na(providence_data)] <- 0
 providence_freq <- data.frame(colSums(providence_data))

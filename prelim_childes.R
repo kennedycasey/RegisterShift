@@ -5,7 +5,7 @@ library(stringr)
 library(readr)
 library(ggpubr)
 
-#get all utterances from providence corpus
+# get all utterances from providence corpus
 childes_utterances = data.table(get_utterances(collection = "Eng-NA"))
 
 utterances <- childes_utterances %>%
@@ -20,10 +20,10 @@ pairs <- read_csv("item_info/candidate_items_new.csv") %>%
   filter(pair != "choo choo_train") %>%
   pull(pair)
 
-#total number of words 
+# total number of words 
 sum(utterances$num_tokens)
 
-#loop over all cdi words for each utterance to get counts
+# loop over all cdi words for each utterance to get counts
 for(i in items){
   if (i == "horsey"){
     utterances[str_detect(gloss, regex(paste0(' horsey | horsie '))), paste0(i) := str_count(gloss, regex(paste0(' horsey | horsie ')))]
@@ -70,7 +70,7 @@ for(i in items){
 
 
 
-#clean dataframe to get overall frequency by item
+# clean dataframe to get overall frequency by item
 childes_data <- utterances[, 28:ncol(utterances)]
 childes_data[is.na(childes_data)] <- 0
 childes_freq <- data.frame(colSums(childes_data))
