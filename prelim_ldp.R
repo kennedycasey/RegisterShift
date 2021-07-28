@@ -127,7 +127,7 @@ annotate_figure(raw_frequency,
                 left = text_grob("frequency", rot = 90, size = 25), 
                 bottom = text_grob("age (months)", size = 25))
 
-ggsave("plots/ldp_raw_frequency.jpg", height = 15, width = 20, dpi = 300)
+ggsave("plots/ldp/ldp_raw_frequency.jpg", height = 15, width = 20, dpi = 300)
 
 
 # generate relative item-level freq plots 
@@ -182,7 +182,7 @@ annotate_figure(per_item_freq,
                 left = text_grob("relative item-level frequency", rot = 90, size = 25, face = "bold"), 
                 bottom = text_grob("age (months)", size = 25, face = "bold"))
 
-ggsave("plots/ldp_per_item_frequency.jpg", height = 15, width = 12, dpi = 300)
+ggsave("plots/ldp/ldp_per_item_frequency.jpg", height = 15, width = 12, dpi = 300)
 
 # generate prop plots
 # (for each timepoint, what is the proportion of ids vs. ads forms)
@@ -253,7 +253,7 @@ annotate_figure(prop,
                 left = text_grob("proportion of tokens per form", rot = 90, size = 25, face = "bold"), 
                 bottom = text_grob("age (months)", size = 25, face = "bold"))
 
-ggsave("plots/ldp_props.jpg", height = 15, width = 12, dpi = 300)
+ggsave("plots/ldp/ldp_props.jpg", height = 15, width = 12, dpi = 300)
 
 
 # generate odds ratio plots
@@ -314,7 +314,7 @@ annotate_figure(odds,
                 left = text_grob("log odds", rot = 90, size = 25), 
                 bottom = text_grob("age (months)", size = 25))
 
-ggsave("plots/ldp_log_odds.jpg", height = 15, width = 20, dpi = 300)
+ggsave("plots/ldp/ldp_log_odds.jpg", height = 15, width = 20, dpi = 300)
 
 
 # generate prop plots - compare children vs. adults
@@ -385,4 +385,4 @@ annotate_figure(prop_by_speaker,
                 left = text_grob("proportion of tokens per form", rot = 90, size = 25, face = "bold"), 
                 bottom = text_grob("age (months)", size = 25, face = "bold"))
 
-ggsave("plots/ldp_props_by_speaker.jpg", height = 15, width = 15, dpi = 300)
+ggsave("plots/ldp/ldp_props_by_speaker.jpg", height = 15, width = 15, dpi = 300)

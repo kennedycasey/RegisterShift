@@ -123,7 +123,7 @@ annotate_figure(raw_frequency,
                 left = text_grob("frequency", rot = 90, size = 25), 
                 bottom = text_grob("age (months)", size = 25))
 
-ggsave("plots/raw_frequency.jpg", height = 15, width = 20, dpi = 300)
+ggsave("plots/childes/raw_frequency.jpg", height = 15, width = 20, dpi = 300)
 
 
 # generate relative item-level freq plots 
@@ -178,7 +178,7 @@ annotate_figure(per_item_freq,
                 left = text_grob("relative item-level frequency", rot = 90, size = 25, face = "bold"), 
                 bottom = text_grob("age (months)", size = 25, face = "bold"))
 
-ggsave("plots/per_item_frequency.jpg", height = 15, width = 12, dpi = 300)
+ggsave("plots/childes/per_item_frequency.jpg", height = 15, width = 12, dpi = 300)
 
 # generate prop plots
 # (for each timepoint, what is the proportion of ids vs. ads forms)
@@ -249,7 +249,7 @@ annotate_figure(prop,
                 left = text_grob("proportion of tokens per form", rot = 90, size = 25, face = "bold"), 
                 bottom = text_grob("age (months)", size = 25, face = "bold"))
 
-ggsave("plots/props.jpg", height = 15, width = 12, dpi = 300)
+ggsave("plots/childes/props.jpg", height = 15, width = 12, dpi = 300)
 
 
 # generate odds ratio plots
@@ -310,7 +310,7 @@ annotate_figure(odds,
                 left = text_grob("log odds", rot = 90, size = 25), 
                 bottom = text_grob("age (months)", size = 25))
 
-ggsave("plots/log_odds.jpg", height = 15, width = 20, dpi = 300)
+ggsave("plots/childes/log_odds.jpg", height = 15, width = 20, dpi = 300)
 
 
 # generate prop plots - compare children vs. adults
@@ -382,7 +382,7 @@ annotate_figure(prop_by_speaker,
                 left = text_grob("proportion of tokens per form", rot = 90, size = 25, face = "bold"), 
                 bottom = text_grob("age (months)", size = 25, face = "bold"))
 
-ggsave("plots/props_by_speaker.jpg", height = 15, width = 15, dpi = 300)
+ggsave("plots/childes/props_by_speaker.jpg", height = 15, width = 15, dpi = 300)
 
 
 # generate relative age-level freq plots 
@@ -438,4 +438,4 @@ annotate_figure(per_age_frequency,
                 left = text_grob("relative frequency per 1 million words", rot = 90, size = 25), 
                 bottom = text_grob("age (months)", size = 25))
 
-ggsave("plots/per_age_frequency.jpg", height = 15, width = 20, dpi = 300)
+ggsave("plots/childes/per_age_frequency.jpg", height = 15, width = 20, dpi = 300)
