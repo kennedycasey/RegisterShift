@@ -37,10 +37,6 @@ for(i in items){
     providence_utterances[str_detect(gloss, regex(paste0(' duckie | ducky '))), paste0(i) := str_count(gloss, regex(paste0(' duckie | ducky ')))]
   }
   
-  else if (i == "choo choo"){
-    providence_utterances[str_detect(gloss, regex(paste0(' choo choo | choo-choo '))), paste0(i) := str_count(gloss, regex(paste0(' choo choo | choo-choo ')))]
-  }
-  
   else if (i == "night night"){
     providence_utterances[str_detect(gloss, regex(paste0(' night night | night-night '))), paste0(i) := str_count(gloss, regex(paste0(' night night | night-night ')))]
   }
@@ -103,11 +99,11 @@ for (i in pairs) {
   assign(paste(i), plot)
 }
 
-raw_frequency <- ggarrange(birdie_bird, blankie_blanket, bunny_rabbit, `choo choo_train`, daddy_dad, doggy_dog,
+raw_frequency <- ggarrange(birdie_bird, blankie_blanket, bunny_rabbit, daddy_dad, doggy_dog,
                            dolly_doll, duckie_duck, froggy_frog, horsey_horse, kitty_cat, mommy_mom,
                            `night night_goodnight`, piggy_pig, potty_bathroom, tummy_stomach, 
                            common.legend = TRUE, legend = "top", 
-                           ncol = 4, nrow = 4)
+                           ncol = 3, nrow = 5)
 
 annotate_figure(raw_frequency, 
                 left = text_grob("frequency", rot = 90, size = 25), 
@@ -289,11 +285,11 @@ for (i in pairs) {
 }
 
 
-odds <- ggarrange(birdie_bird, blankie_blanket, bunny_rabbit, `choo choo_train`, daddy_dad, doggy_dog,
+odds <- ggarrange(birdie_bird, blankie_blanket, bunny_rabbit, daddy_dad, doggy_dog,
                   dolly_doll, duckie_duck, froggy_frog, horsey_horse, kitty_cat, mommy_mom,
                   `night night_goodnight`, piggy_pig, potty_bathroom, tummy_stomach, 
                   common.legend = TRUE, legend = "top", 
-                  ncol = 4, nrow = 4)
+                  ncol = 3, nrow = 5)
 
 annotate_figure(odds, 
                 left = text_grob("odds ratio", rot = 90, size = 25), 
@@ -417,11 +413,11 @@ for (i in pairs) {
 }
 
 
-per_age_frequency <- ggarrange(birdie_bird, blankie_blanket, bunny_rabbit, `choo choo_train`, daddy_dad, doggy_dog,
+per_age_frequency <- ggarrange(birdie_bird, blankie_blanket, bunny_rabbit, daddy_dad, doggy_dog,
                                dolly_doll, duckie_duck, froggy_frog, horsey_horse, kitty_cat, mommy_mom,
                                `night night_goodnight`, piggy_pig, potty_bathroom, tummy_stomach, 
                                common.legend = TRUE, legend = "top", 
-                               ncol = 4, nrow = 4)
+                               ncol = 3, nrow = 5)
 
 annotate_figure(per_age_frequency, 
                 left = text_grob("relative frequency per 1 million words", rot = 90, size = 25), 
