@@ -9,7 +9,7 @@ library(ggpubr)
 childes_utterances = data.table(get_utterances(collection = "Eng-NA"))
 
 utterances <- childes_utterances %>%
-  filter(target_child_age < 72) %>%
+  filter(target_child_age < 60) %>%
   mutate(gloss = paste0(' ', tolower(gloss), ' '), 
          age_rounded = round(target_child_age, digits = 0))
 
@@ -23,45 +23,54 @@ pairs <- read_csv("item_info/candidate_items_new.csv") %>%
 # total number of words 
 sum(utterances$num_tokens)
 
-# loop over all cdi words for each utterance to get counts
+sum(str_count(utterances$gloss, "horsies"))
+
+# loop over all items to get counts for each utterance
+# catch spelling variation and plural/possessive forms
 for(i in items){
-  if (i == "horsey"){
-    utterances[str_detect(gloss, regex(paste0(' horsey | horsie '))), paste0(i) := str_count(gloss, regex(paste0(' horsey | horsie ')))]
+  
+  if (str_detect(i, "ey")) {
+    root <- paste(gsub("ey", "", i))
+    utterances[str_detect(gloss, regex(paste0(" ", root, "ey | ", root, "ie | ",
+                                              root, "eys | ", root, "ies | ",
+                                              root, "ey's | ", root, "ie's "))), 
+               paste0(i) := str_count(gloss, regex(paste0(" ", root, "ey | ", root, "ie | ",
+                                                          root, "eys | ", root, "ies | ",
+                                                          root, "ey's | ", root, "ie's ")))]
   }
   
-  else if (i == "doggy"){
-    utterances[str_detect(gloss, regex(paste0(' doggy | doggie '))), paste0(i) := str_count(gloss, regex(paste0(' doggy | doggie ')))]
+  else if (str_detect(i, "y") & !str_detect(i, "ey")) {
+    root <- paste(gsub("y", "", i))
+    utterances[str_detect(gloss, regex(paste0(" ", root, "y | ", root, "ie | ",
+                                              root, "ys | ", root, "ies | ",
+                                              root, "y's | ", root, "ie's "))), 
+               paste0(i) := str_count(gloss, regex(paste0(" ", root, "y | ", root, "ie | ",
+                                                          root, "ys | ", root, "ies | ",
+                                                          root, "y's | ", root, "ie's ")))]
   }
   
-  else if (i == "froggy"){
-    utterances[str_detect(gloss, regex(paste0(' froggy | froggie '))), paste0(i) := str_count(gloss, regex(paste0(' froggy | froggie ')))]
-  }
-  
-  else if (i == "duckie"){
-    utterances[str_detect(gloss, regex(paste0(' duckie | ducky '))), paste0(i) := str_count(gloss, regex(paste0(' duckie | ducky ')))]
+  else if (str_detect(i, "ie")) {
+    root <- paste(gsub("ie", "", i))
+    utterances[str_detect(gloss, regex(paste0(" ", root, "y | ", root, "ie | ",
+                                              root, "ys | ", root, "ies | ",
+                                              root, "y's | ", root, "ie's "))), 
+               paste0(i) := str_count(gloss, regex(paste0(" ", root, "y | ", root, "ie | ",
+                                                          root, "ys | ", root, "ies | ",
+                                                          root, "y's | ", root, "ie's ")))]
   }
   
   else if (i == "night night"){
-    utterances[str_detect(gloss, regex(paste0(' night night | night-night '))), paste0(i) := str_count(gloss, regex(paste0(' night night | night-night ')))]
+    utterances[str_detect(gloss, regex(paste0(" night night | night-night | night nights | night-nights "))), 
+               paste0(i) := str_count(gloss, regex(paste0(" night night | night-night | night nights | night-nights ")))]
   }
   
   else if (i == "goodnight"){
-    utterances[str_detect(gloss, regex(paste0(' goodnight | good night '))), paste0(i) := str_count(gloss, regex(paste0(' goodnight | good night ')))]
+    utterances[str_detect(gloss, regex(paste0(" goodnight | good night | good-night "))), 
+               paste0(i) := str_count(gloss, regex(paste0(" goodnight | good night | good-night ")))]
   }
   
-  else if (i == "dolly"){
-    utterances[str_detect(gloss, regex(paste0(' dolly | dollie '))), paste0(i) := str_count(gloss, regex(paste0(' dolly | dollie ')))]
-  }
-  
-  else if (i == "piggy"){
-    utterances[str_detect(gloss, regex(paste0(' piggy | piggie '))), paste0(i) := str_count(gloss, regex(paste0(' piggy | piggie ')))]
-  }
-  
-  else if (i == "birdie"){
-    utterances[str_detect(gloss, regex(paste0(' birdie | birdy '))), paste0(i) := str_count(gloss, regex(paste0(' birdie | birdy ')))]
-  }
-  
-  else utterances[str_detect(gloss, regex(paste0(' ',i,' '))), paste0(i) := str_count(gloss, regex(paste0(' ',i,' ')))]
+  else utterances[str_detect(gloss, regex(paste0(" ", i, " | ", i, "s | ", i, "'s "))), 
+                  paste0(i) := str_count(gloss, regex(paste0(" ", i, " | ", i, "s | ", i, "'s ")))]
 }
 
 
@@ -296,11 +305,11 @@ for (i in pairs) {
 }
 
 
-odds <- ggarrange(birdie_bird, blankie_blanket, bunny_rabbit, NA, daddy_dad, doggy_dog,
+odds <- ggarrange(birdie_bird, blankie_blanket, bunny_rabbit, daddy_dad, doggy_dog,
                   dolly_doll, duckie_duck, froggy_frog, horsey_horse, kitty_cat, mommy_mom,
                   `night night_goodnight`, piggy_pig, potty_bathroom, tummy_stomach, 
                   common.legend = TRUE, legend = "top", 
-                  ncol = 4, nrow = 4)
+                  ncol = 3, nrow = 5)
 
 annotate_figure(odds, 
                 left = text_grob("log odds", rot = 90, size = 25), 
