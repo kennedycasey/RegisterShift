@@ -15,50 +15,57 @@ colors <- c("ids" = "#C1292E", "ads" = "#235789")
 
 ### rerun on providence subset
 providence_utterances <- childes_utterances %>%
-  filter(target_child_age < 72 & corpus_name == "Providence") %>%
+  filter(target_child_age < 60 & corpus_name == "Providence") %>%
   mutate(gloss = paste0(' ', tolower(gloss), ' '), 
          age_rounded = round(target_child_age, digits = 0))
 
 
 for(i in items){
-  if (i == "horsey"){
-    providence_utterances[str_detect(gloss, regex(paste0(' horsey | horsie '))), paste0(i) := str_count(gloss, regex(paste0(' horsey | horsie ')))]
+  
+  if (str_detect(i, "ey")) {
+    root <- paste(gsub("ey", "", i))
+    providence_utterances[str_detect(gloss, regex(paste0(" ", root, "ey | ", root, "ie | ",
+                                              root, "eys | ", root, "ies | ",
+                                              root, "ey's | ", root, "ie's "))), 
+               paste0(i) := str_count(gloss, regex(paste0(" ", root, "ey | ", root, "ie | ",
+                                                          root, "eys | ", root, "ies | ",
+                                                          root, "ey's | ", root, "ie's ")))]
   }
   
-  else if (i == "doggy"){
-    providence_utterances[str_detect(gloss, regex(paste0(' doggy | doggie '))), paste0(i) := str_count(gloss, regex(paste0(' doggy | doggie ')))]
+  else if (str_detect(i, "y") & !str_detect(i, "ey")) {
+    root <- paste(gsub("y", "", i))
+    providence_utterances[str_detect(gloss, regex(paste0(" ", root, "y | ", root, "ie | ",
+                                              root, "ys | ", root, "ies | ",
+                                              root, "y's | ", root, "ie's "))), 
+               paste0(i) := str_count(gloss, regex(paste0(" ", root, "y | ", root, "ie | ",
+                                                          root, "ys | ", root, "ies | ",
+                                                          root, "y's | ", root, "ie's ")))]
   }
   
-  else if (i == "froggy"){
-    providence_utterances[str_detect(gloss, regex(paste0(' froggy | froggie '))), paste0(i) := str_count(gloss, regex(paste0(' froggy | froggie ')))]
-  }
-  
-  else if (i == "duckie"){
-    providence_utterances[str_detect(gloss, regex(paste0(' duckie | ducky '))), paste0(i) := str_count(gloss, regex(paste0(' duckie | ducky ')))]
+  else if (str_detect(i, "ie")) {
+    root <- paste(gsub("ie", "", i))
+    providence_utterances[str_detect(gloss, regex(paste0(" ", root, "y | ", root, "ie | ",
+                                              root, "ys | ", root, "ies | ",
+                                              root, "y's | ", root, "ie's "))), 
+               paste0(i) := str_count(gloss, regex(paste0(" ", root, "y | ", root, "ie | ",
+                                                          root, "ys | ", root, "ies | ",
+                                                          root, "y's | ", root, "ie's ")))]
   }
   
   else if (i == "night night"){
-    providence_utterances[str_detect(gloss, regex(paste0(' night night | night-night '))), paste0(i) := str_count(gloss, regex(paste0(' night night | night-night ')))]
+    providence_utterances[str_detect(gloss, regex(paste0(" night night | night-night | night nights | night-nights "))), 
+               paste0(i) := str_count(gloss, regex(paste0(" night night | night-night | night nights | night-nights ")))]
   }
   
   else if (i == "goodnight"){
-    providence_utterances[str_detect(gloss, regex(paste0(' goodnight | good night '))), paste0(i) := str_count(gloss, regex(paste0(' goodnight | good night ')))]
+    providence_utterances[str_detect(gloss, regex(paste0(" goodnight | good night | good-night "))), 
+               paste0(i) := str_count(gloss, regex(paste0(" goodnight | good night | good-night ")))]
   }
   
-  else if (i == "dolly"){
-    providence_utterances[str_detect(gloss, regex(paste0(' dolly | dollie '))), paste0(i) := str_count(gloss, regex(paste0(' dolly | dollie ')))]
-  }
-  
-  else if (i == "piggy"){
-    providence_utterances[str_detect(gloss, regex(paste0(' piggy | piggie '))), paste0(i) := str_count(gloss, regex(paste0(' piggy | piggie ')))]
-  }
-  
-  else if (i == "birdie"){
-    providence_utterances[str_detect(gloss, regex(paste0(' birdie | birdy '))), paste0(i) := str_count(gloss, regex(paste0(' birdie | birdy ')))]
-  }
-  
-  else providence_utterances[str_detect(gloss, regex(paste0(' ',i,' '))), paste0(i) := str_count(gloss, regex(paste0(' ',i,' ')))]
+  else providence_utterances[str_detect(gloss, regex(paste0(" ", i, " | ", i, "s | ", i, "'s "))), 
+                  paste0(i) := str_count(gloss, regex(paste0(" ", i, " | ", i, "s | ", i, "'s ")))]
 }
+
 
 
 
