@@ -5,20 +5,9 @@ library(readr)
 library(ggpubr)
 
 # read in ldp data from hard-coded local path
-ldp_utterances <- read.csv("~/Desktop/secure/ldp_data.csv") 
+ldp_utterances <- read.csv("~/Desktop/secure/ldp_data_prepped.csv") 
 
-utterances <- ldp_utterances %>%
-  select(subject, session, line, p_chat, c_chat) %>%
-  filter(session <= 12) %>%
-  mutate(age = session*4 + 10,
-         other_speaker = str_remove(p_chat, regex("[^'[:lower:] ]")), 
-         target_child = str_remove(c_chat, regex("[^'[:lower:] ]"))) %>%
-  pivot_longer(c("other_speaker", "target_child"), names_to = "speaker", values_to = "transcription") %>%
-  select(-c_chat, -p_chat) %>%
-  filter(transcription != "") %>%
-  mutate(gloss = paste0(' ', tolower(transcription), ' '))
-
-utterances <- data.table(utterances)
+utterances <- data.table(ldp_utterances)
 
 items <- read_csv("item_info/candidate_items_new.csv") %>%
   pull(word)
@@ -27,47 +16,56 @@ pairs <- read_csv("item_info/candidate_items_new.csv") %>%
   filter(pair != "choo choo_train") %>%
   pull(pair)
 
+aoa <- read_csv("item_info/candidate_items_new.csv") %>%
+  select(word, aoa, pair, form)
+
+colors <- c("ids" = "#C1292E", "ads" = "#235789")
+
 # loop over all items for each utterance to get counts
 for(i in items){
-  if (i == "horsey"){
-    utterances[str_detect(gloss, regex(paste0(' horsey | horsie '))), paste0(i) := str_count(gloss, regex(paste0(' horsey | horsie ')))]
+  if (str_detect(i, "ey")) {
+    root <- paste(gsub("ey", "", i))
+    utterances[str_detect(gloss, regex(paste0(" ", root, "ey | ", root, "ie | ",
+                                                         root, "eys | ", root, "ies | ",
+                                                         root, "ey's | ", root, "ie's "))), 
+                          paste0(i) := str_count(gloss, regex(paste0(" ", root, "ey | ", root, "ie | ",
+                                                                     root, "eys | ", root, "ies | ",
+                                                                     root, "ey's | ", root, "ie's ")))]
   }
   
-  else if (i == "doggy"){
-    utterances[str_detect(gloss, regex(paste0(' doggy | doggie '))), paste0(i) := str_count(gloss, regex(paste0(' doggy | doggie ')))]
+  else if (str_detect(i, "y") & !str_detect(i, "ey")) {
+    root <- paste(gsub("y", "", i))
+    utterances[str_detect(gloss, regex(paste0(" ", root, "y | ", root, "ie | ",
+                                                         root, "ys | ", root, "ies | ",
+                                                         root, "y's | ", root, "ie's "))), 
+                          paste0(i) := str_count(gloss, regex(paste0(" ", root, "y | ", root, "ie | ",
+                                                                     root, "ys | ", root, "ies | ",
+                                                                     root, "y's | ", root, "ie's ")))]
   }
   
-  else if (i == "froggy"){
-    utterances[str_detect(gloss, regex(paste0(' froggy | froggie '))), paste0(i) := str_count(gloss, regex(paste0(' froggy | froggie ')))]
-  }
-  
-  else if (i == "duckie"){
-    utterances[str_detect(gloss, regex(paste0(' duckie | ducky '))), paste0(i) := str_count(gloss, regex(paste0(' duckie | ducky ')))]
+  else if (str_detect(i, "ie")) {
+    root <- paste(gsub("ie", "", i))
+    utterances[str_detect(gloss, regex(paste0(" ", root, "y | ", root, "ie | ",
+                                                         root, "ys | ", root, "ies | ",
+                                                         root, "y's | ", root, "ie's "))), 
+                          paste0(i) := str_count(gloss, regex(paste0(" ", root, "y | ", root, "ie | ",
+                                                                     root, "ys | ", root, "ies | ",
+                                                                     root, "y's | ", root, "ie's ")))]
   }
   
   else if (i == "night night"){
-    utterances[str_detect(gloss, regex(paste0(' night night | night-night '))), paste0(i) := str_count(gloss, regex(paste0(' night night | night-night ')))]
+    utterances[str_detect(gloss, regex(paste0(" night night | night-night | night nights | night-nights "))), 
+                          paste0(i) := str_count(gloss, regex(paste0(" night night | night-night | night nights | night-nights ")))]
   }
   
   else if (i == "goodnight"){
-    utterances[str_detect(gloss, regex(paste0(' goodnight | good night '))), paste0(i) := str_count(gloss, regex(paste0(' goodnight | good night ')))]
+    utterances[str_detect(gloss, regex(paste0(" goodnight | good night | good-night "))), 
+                          paste0(i) := str_count(gloss, regex(paste0(" goodnight | good night | good-night ")))]
   }
   
-  else if (i == "dolly"){
-    utterances[str_detect(gloss, regex(paste0(' dolly | dollie '))), paste0(i) := str_count(gloss, regex(paste0(' dolly | dollie ')))]
-  }
-  
-  else if (i == "piggy"){
-    utterances[str_detect(gloss, regex(paste0(' piggy | piggie '))), paste0(i) := str_count(gloss, regex(paste0(' piggy | piggie ')))]
-  }
-  
-  else if (i == "birdie"){
-    utterances[str_detect(gloss, regex(paste0(' birdie | birdy '))), paste0(i) := str_count(gloss, regex(paste0(' birdie | birdy ')))]
-  }
-  
-  else utterances[str_detect(gloss, regex(paste0(' ',i,' '))), paste0(i) := str_count(gloss, regex(paste0(' ',i,' ')))]
+  else utterances[str_detect(gloss, regex(paste0(" ", i, " | ", i, "s | ", i, "'s "))), 
+                             paste0(i) := str_count(gloss, regex(paste0(" ", i, " | ", i, "s | ", i, "'s ")))]
 }
-
 
 
 # clean dataframe to get overall frequency by item
@@ -75,12 +73,6 @@ ldp_data <- utterances[, 8:ncol(utterances)]
 ldp_data[is.na(ldp_data)] <- 0
 ldp_freq <- data.frame(colSums(ldp_data))
 ldp_freq <- setNames(cbind(rownames(ldp_freq), ldp_freq, row.names = NULL), c("word", "ldp_freq"))
-
-aoa <- read_csv("item_info/candidate_items_new.csv") %>%
-  select(word, aoa, pair, form)
-
-colors <- c("ids" = "#C1292E", "ads" = "#235789")
-
 
 # generate raw freq plots
 for (i in pairs) {
