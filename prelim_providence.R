@@ -8,20 +8,23 @@ library(ggpubr)
 # get all utterances from providence corpus
 childes_utterances = data.table(get_utterances(collection = "Eng-NA"))
 
+providence_utterances <- childes_utterances %>%
+  filter(target_child_age < 60 & corpus_name == "Providence") %>%
+  mutate(gloss = paste0(' ', tolower(gloss), ' '), 
+         age = round(target_child_age, digits = 0))
+
+items <- read_csv("item_info/candidate_items_new.csv") %>%
+  pull(word)
+
+pairs <- read_csv("item_info/candidate_items_new.csv") %>%
+  pull(pair)
+
 aoa <- read_csv("item_info/candidate_items_new.csv") %>%
   select(word, aoa, pair, form)
 
 colors <- c("ids" = "#C1292E", "ads" = "#235789")
 
-### rerun on providence subset
-providence_utterances <- childes_utterances %>%
-  filter(target_child_age < 60 & corpus_name == "Providence") %>%
-  mutate(gloss = paste0(' ', tolower(gloss), ' '), 
-         age_rounded = round(target_child_age, digits = 0))
-
-
 for(i in items){
-  
   if (str_detect(i, "ey")) {
     root <- paste(gsub("ey", "", i))
     providence_utterances[str_detect(gloss, regex(paste0(" ", root, "ey | ", root, "ie | ",
@@ -66,9 +69,6 @@ for(i in items){
                   paste0(i) := str_count(gloss, regex(paste0(" ", i, " | ", i, "s | ", i, "'s ")))]
 }
 
-
-
-
 # clean dataframe to get overall frequency by item
 providence_data <- providence_utterances[, 28:ncol(utterances)]
 providence_data[is.na(providence_data)] <- 0
@@ -82,15 +82,15 @@ for (i in pairs) {
   
   plot <- providence_utterances %>%
     filter(!is.na(eval(as.symbol(ids)))|!is.na(eval(as.symbol(ads)))) %>%
-    select(gloss, stem, age_rounded, speaker_role, ids, ads) %>%
-    group_by(age_rounded) %>%
+    select(gloss, stem, age, speaker_role, ids, ads) %>%
+    group_by(age) %>%
     summarise(ads = sum(eval(as.symbol(ads)), na.rm = TRUE),
               ids = sum(eval(as.symbol(ids)), na.rm = TRUE)) %>%
     pivot_longer(c(ids, ads), names_to = "form", values_to = "childes_freq") %>%
     mutate(word = case_when(
       form == "ids" ~ paste(gsub("_.*", "", i)), 
       form == "ads" ~ paste(gsub(".*_", "", i)))) %>%
-    ggplot(aes(x=age_rounded, y=providence_freq, color=form, fill=form)) + 
+    ggplot(aes(x=age, y=providence_freq, color=form, fill=form)) + 
     geom_vline(data = filter(aoa, word==paste(gsub("_.*", "", i))), mapping = aes(xintercept=aoa, color=form)) +
     geom_vline(data = filter(aoa, word==paste(gsub(".*_", "", i))), mapping = aes(xintercept=aoa, color=form)) +
     geom_point() +
@@ -129,8 +129,8 @@ for (i in pairs) {
   
   plot <- providence_utterances %>%
     filter(!is.na(eval(as.symbol(ids)))|!is.na(eval(as.symbol(ads)))) %>%
-    select(gloss, stem, age_rounded, speaker_role, ids, ads) %>%
-    group_by(age_rounded) %>%
+    select(gloss, stem, age, speaker_role, ids, ads) %>%
+    group_by(age) %>%
     summarise(ads = sum(eval(as.symbol(ads)), na.rm = TRUE),
               ids = sum(eval(as.symbol(ids)), na.rm = TRUE)) %>%
     mutate(ids_total = filter(providence_freq, word==paste(gsub("_.*", "", i)))$providence_freq, 
@@ -141,7 +141,7 @@ for (i in pairs) {
     mutate(word = case_when(
       form == "ids" ~ paste(gsub("_.*", "", i)), 
       form == "ads" ~ paste(gsub(".*_", "", i)))) %>%
-    ggplot(aes(x=age_rounded, y=providence_freq_relative, color=form, fill=form)) + 
+    ggplot(aes(x=age, y=providence_freq_relative, color=form, fill=form)) + 
     geom_vline(data = filter(aoa, word==paste(gsub("_.*", "", i))), mapping = aes(xintercept=aoa, color=form)) +
     geom_vline(data = filter(aoa, word==paste(gsub(".*_", "", i))), mapping = aes(xintercept=aoa, color=form)) +
     geom_point() +
@@ -182,8 +182,8 @@ for (i in pairs) {
   
   model_data <- providence_utterances %>%
     filter(!is.na(eval(as.symbol(ids)))|!is.na(eval(as.symbol(ads)))) %>%
-    select(age_rounded, speaker_role, ids, ads) %>%
-    group_by(age_rounded) %>%
+    select(age, speaker_role, ids, ads) %>%
+    group_by(age) %>%
     summarise(ads = sum(eval(as.symbol(ads)), na.rm = TRUE),
               ids = sum(eval(as.symbol(ids)), na.rm = TRUE)) %>%
     pivot_longer(c(ids, ads), names_to = "form", values_to = "count") %>%
@@ -198,19 +198,19 @@ for (i in pairs) {
   model_data_long <- model_data[rep(row.names(model_data), model_data$count), 1:5]
   
   plot <- model_data_long %>%
-    group_by(age_rounded) %>%
+    group_by(age) %>%
     summarise(ids_count = length(form[form=="ids"]),
               ads_count = length(form[form=="ads"]), 
               ids = ids_count/(ids_count + ads_count),
               ads = ads_count/(ids_count + ads_count)) %>%
     pivot_longer(c(ids, ads), names_to = "form", values_to = "prop") %>%
-    ggplot(aes(x=age_rounded, y=prop, color=form, fill=form)) + 
+    ggplot(aes(x=age, y=prop, color=form, fill=form)) + 
     geom_point() +
-    geom_smooth(data=model_data_long, aes(x=age_rounded, y=form_numeric), 
+    geom_smooth(data=model_data_long, aes(x=age, y=form_numeric), 
                 method="glm", method.args=list(family = "binomial"), 
                 color="#235789", fill="#235789") +
     geom_smooth(data=model_data_long %>% mutate(form_numeric = case_when(form_numeric==1 ~ 0, form_numeric==0 ~ 1)), 
-                aes(x=age_rounded, y=form_numeric), 
+                aes(x=age, y=form_numeric), 
                 method="glm", method.args=list(family = "binomial"), 
                 color="#C1292E", fill="#C1292E") +
     geom_hline(yintercept=0.5, linetype="dotted", size=1) +
@@ -254,8 +254,8 @@ for (i in pairs) {
   
   model_data <- providence_utterances %>%
     filter(!is.na(eval(as.symbol(ids)))|!is.na(eval(as.symbol(ads)))) %>%
-    select(age_rounded, speaker_role, ids, ads) %>%
-    group_by(age_rounded) %>%
+    select(age, speaker_role, ids, ads) %>%
+    group_by(age) %>%
     summarise(ads = sum(eval(as.symbol(ads)), na.rm = TRUE),
               ids = sum(eval(as.symbol(ids)), na.rm = TRUE)) %>%
     pivot_longer(c(ids, ads), names_to = "form", values_to = "count") %>%
@@ -270,13 +270,13 @@ for (i in pairs) {
   model_data_long <- model_data[rep(row.names(model_data), model_data$count), 1:5]
   
   plot <- model_data_long %>%
-    group_by(age_rounded) %>%
+    group_by(age) %>%
     summarise(ids_count = length(form[form=="ids"]),
               ads_count = length(form[form=="ads"]), 
               ids_odds = ids_count/(ids_count + ads_count),
               ads_odds = ads_count/(ids_count + ads_count), 
               or = ifelse(ads_odds == 0 | ids_odds == 0, NA, ads_odds/ids_odds)) %>%
-    ggplot(aes(x=age_rounded, y=or)) + 
+    ggplot(aes(x=age, y=or)) + 
     geom_point() +
     geom_smooth(method="glm", color="#235789", fill="#235789") +
     geom_hline(yintercept=1, linetype="dotted", size=1) +
@@ -314,9 +314,9 @@ for (i in pairs) {
   
   model_data <- providence_utterances %>%
     filter(!is.na(eval(as.symbol(ids)))|!is.na(eval(as.symbol(ads)))) %>%
-    select(age_rounded, speaker_role, ids, ads) %>% 
+    select(age, speaker_role, ids, ads) %>% 
     mutate(speaker = ifelse(speaker_role == "Target_Child", "target child", "other speaker")) %>%
-    group_by(age_rounded, speaker) %>%
+    group_by(age, speaker) %>%
     summarise(ads = sum(eval(as.symbol(ads)), na.rm = TRUE),
               ids = sum(eval(as.symbol(ids)), na.rm = TRUE)) %>%
     pivot_longer(c(ids, ads), names_to = "form", values_to = "count") %>%
@@ -331,20 +331,20 @@ for (i in pairs) {
   model_data_long <- model_data[rep(row.names(model_data), model_data$count), 1:6]
   
   plot <- model_data_long %>%
-    group_by(age_rounded, speaker) %>%
+    group_by(age, speaker) %>%
     summarise(ids_count = length(form[form=="ids"]),
               ads_count = length(form[form=="ads"]), 
               ids = ids_count/(ids_count + ads_count),
               ads = ads_count/(ids_count + ads_count)) %>%
     pivot_longer(c(ids, ads), names_to = "form", values_to = "prop") %>%
-    ggplot(aes(x=age_rounded, y=prop, color=form, fill=form)) + 
+    ggplot(aes(x=age, y=prop, color=form, fill=form)) + 
     facet_grid(.~speaker) +
     geom_point() +
-    geom_smooth(data=model_data_long, aes(x=age_rounded, y=form_numeric), 
+    geom_smooth(data=model_data_long, aes(x=age, y=form_numeric), 
                 method="glm", method.args=list(family = "binomial"), 
                 color="#235789", fill="#235789") +
     geom_smooth(data=model_data_long %>% mutate(form_numeric = case_when(form_numeric==1 ~ 0, form_numeric==0 ~ 1)), 
-                aes(x=age_rounded, y=form_numeric), 
+                aes(x=age, y=form_numeric), 
                 method="glm", method.args=list(family = "binomial"), 
                 color="#C1292E", fill="#C1292E") +
     geom_hline(yintercept=0.5, linetype="dotted", size=1) +
@@ -382,11 +382,11 @@ ggsave("plots/childes/providence/providence_props_by_speaker.jpg", height = 15, 
 # relative to the total number of words heard during that month)
 
 month_totals <- providence_utterances %>%
-  mutate(age_rounded = round(target_child_age, digits=0)) %>%
-  group_by(age_rounded) %>%
+  mutate(age = round(target_child_age, digits=0)) %>%
+  group_by(age) %>%
   summarise(month_total = sum(num_tokens, na.rm = TRUE))
 
-totaled_utterances <- merge(providence_utterances, month_totals, by="age_rounded")
+totaled_utterances <- merge(providence_utterances, month_totals, by="age")
 
 for (i in pairs) {
   ids <- paste(gsub("_.*", "", i))
@@ -394,8 +394,8 @@ for (i in pairs) {
   
   plot <- totaled_utterances %>%
     filter(!is.na(eval(as.symbol(ids)))|!is.na(eval(as.symbol(ads)))) %>%
-    select(gloss, stem, age_rounded, speaker_role, ids, ads, month_total) %>%
-    group_by(age_rounded) %>%
+    select(gloss, stem, age, speaker_role, ids, ads, month_total) %>%
+    group_by(age) %>%
     summarise(ads = sum(eval(as.symbol(ads)), na.rm = TRUE)/month_total*1000000,
               ids = sum(eval(as.symbol(ids)), na.rm = TRUE)/month_total*1000000) %>%
     pivot_longer(c(ids, ads), names_to = "form", values_to = "providence_freq_relative") %>%
@@ -403,7 +403,7 @@ for (i in pairs) {
       form == "ids" ~ paste(gsub("_.*", "", i)), 
       form == "ads" ~ paste(gsub(".*_", "", i)))) %>%
     ungroup() %>%
-    ggplot(aes(x=age_rounded, y=providence_freq_relative, color=form, fill=form)) + 
+    ggplot(aes(x=age, y=providence_freq_relative, color=form, fill=form)) + 
     geom_vline(data = filter(aoa, word==paste(gsub("_.*", "", i))), mapping = aes(xintercept=aoa, color=form)) +
     geom_vline(data = filter(aoa, word==paste(gsub(".*_", "", i))), mapping = aes(xintercept=aoa, color=form)) +
     geom_point() +
