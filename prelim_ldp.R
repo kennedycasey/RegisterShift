@@ -10,7 +10,7 @@ ldp_utterances <- read.csv("~/Desktop/secure/ldp_data.csv")
 utterances <- ldp_utterances %>%
   select(subject, session, line, p_chat, c_chat) %>%
   filter(session <= 12) %>%
-  mutate(age = session*4 + 10, 
+  mutate(age = session*4 + 10,
          other_speaker = str_remove(p_chat, regex("[^'[:lower:] ]")), 
          target_child = str_remove(c_chat, regex("[^'[:lower:] ]"))) %>%
   pivot_longer(c("other_speaker", "target_child"), names_to = "speaker", values_to = "transcription") %>%
