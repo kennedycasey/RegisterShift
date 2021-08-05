@@ -134,12 +134,53 @@ ggsave("plots/ldp/mlu/mlu_over_time.jpg", height = 15, width = 12, dpi = 300)
 m <- lmer(num_tokens ~ form*age + (1|item) + (1|subject), data = mlu)
 summary(m)
 
-mlu_summary <- mlu %>%
+mlu_byword <- mlu %>%
   group_by(item) %>%
   summarize(mlu = mean(num_tokens), 
             pair = pair, 
             form = form) %>%
   distinct()
+
+mlu_byword_summary <- mlu_byword %>%
+  group_by(form) %>%
+  summarize(mean = mean(mlu), 
+            se = sd(mlu)/sqrt(length(mlu)), 
+            ymin = mean - se, 
+            ymax = mean + se)
+
+ggplot() +
+  geom_bar(data = mlu_byword_summary, aes(x = form, y = mean, color = form, fill = form), 
+           stat = "identity", width = 0.7, alpha = 0.5, size = 1.5) +
+  geom_line(data = mlu_byword, aes(x = form, y = mlu, group = pair)) +
+  geom_point(data = mlu_byword, aes(x = form, y = mlu, color = form, fill = form)) +
+  geom_errorbar(data = mlu_byword_summary, aes(x = form, ymin = mean-se, ymax = mean+se), 
+                stat = "identity", width = 0.15, size = 0.75, position = position_dodge(0.9)) +
+  scale_fill_manual(values = colors) +
+  scale_color_manual(values = colors) +
+  labs(x = "form", y = "MLUw") +
+  theme_test(base_size = 20) +
+  theme(legend.position = "none")
+
+ggplot() +
+  geom_line(data = mlu_byword, aes(x = form, y = mlu, group = pair), 
+            color = "#D3D3D3", size = 1) +
+  geom_point(data = mlu_byword, aes(x = form, y = mlu), 
+             color = "#D3D3D3", size = 2) +
+  geom_pointrange(data = mlu_byword_summary, aes(x = form, y = mean, ymin = mean-se, ymax = mean+se, color = form, fill = form), 
+                  stat = "identity", size = 1.5) +
+  scale_fill_manual(values = colors) +
+  scale_color_manual(values = colors) +
+  ylim(3, 8) +
+  labs(x = "form", y = "MLUw") +
+  theme_test(base_size = 20) +
+  theme(legend.position = "none")
+ggsave("plots/ldp/mlu/mlu_overall.jpg", height = 5, width = 4, dpi = 300)
+
+# marginal difference between ids and ads mlu
+t.test(mlu ~ form, data = mlu_byword, paired = TRUE)
+shapiro.test(filter(mlu_byword, form == "ids")$mlu) #check for normality
+shapiro.test(filter(mlu_byword, form == "ads")$mlu) 
+
 
 mlu %>%
   group_by(item, age) %>%
