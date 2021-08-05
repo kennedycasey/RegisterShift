@@ -158,7 +158,7 @@ ggplot() +
   scale_fill_manual(values = colors) +
   scale_color_manual(values = colors) +
   labs(x = "form", y = "MLUw") +
-  theme_test(base_size = 20) +
+  theme_test(base_size = 15) +
   theme(legend.position = "none")
 
 ggplot() +
@@ -170,10 +170,10 @@ ggplot() +
                   stat = "identity", size = 1.5) +
   scale_fill_manual(values = colors) +
   scale_color_manual(values = colors) +
-  ylim(3, 8) +
-  labs(x = "form", y = "MLUw") +
-  theme_test(base_size = 20) +
-  theme(legend.position = "none")
+  ylim(3, 9) +
+  labs(x = "form", y = "MLUw", title = "LDP") +
+  theme_test(base_size = 15) +
+  theme(legend.position = "none", plot.title = element_text(hjust = 0.5))
 ggsave("plots/ldp/mlu/mlu_overall.jpg", height = 5, width = 4, dpi = 300)
 
 # marginal difference between ids and ads mlu
