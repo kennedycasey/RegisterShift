@@ -1,4 +1,3 @@
-library(childesr)
 library(tidyverse)
 library(data.table)
 library(stringr)
@@ -7,27 +6,24 @@ library(ggpubr)
 library(lme4)
 library(lmerTest)
 
-# get all utterances from providence corpus
-childes_utterances = data.table(get_utterances(collection = "Eng-NA"))
+# read in ldp data from hard-coded local path
+ldp_utterances <- read.csv("~/Desktop/secure/ldp_data_prepped.csv") 
 
-utterances <- childes_utterances %>%
-  filter(target_child_age < 60) %>%
-  mutate(gloss = paste0(' ', tolower(gloss), ' '), 
-         age = round(target_child_age, digits = 0))
+utterances <- data.table(ldp_utterances)
 
-items <- read_csv("item_info/candidate_items_new.csv") %>%
+items <- read_csv("data_prep/item_info/candidate_items_new.csv") %>%
   pull(word)
 
-ids_forms <- read_csv("item_info/candidate_items_new.csv") %>%
+ids_forms <- read_csv("data_prep/item_info/candidate_items_new.csv") %>%
   filter(form == "ids") %>%
   pull(word)
 
-ads_forms <- read_csv("item_info/candidate_items_new.csv") %>%
+ads_forms <- read_csv("data_prep/item_info/candidate_items_new.csv") %>%
   filter(form == "ads") %>%
   pull(word)
 
 
-pairs <- read_csv("item_info/candidate_items_new.csv") %>%
+pairs <- read_csv("data_prep/item_info/candidate_items_new.csv") %>%
   select(word, pair)
 
 colors <- c("ids" = "#C1292E", "ads" = "#235789")
@@ -44,7 +40,7 @@ for(i in items){
       filter(str_detect(gloss, regex(paste0(" ", root, "ey | ", root, "ie | ",
                                                          root, "eys | ", root, "ies | ",
                                                          root, "ey's | ", root, "ie's ")))) %>%
-      select(target_child_id, transcript_id, id, age, speaker_role, num_tokens) %>%
+      select(subject, session, line, age, speaker, num_tokens) %>%
       mutate(item = paste0(i), 
              form = case_when(
                i %in% ids_forms ~ "ids", 
@@ -58,7 +54,7 @@ for(i in items){
       filter(str_detect(gloss, regex(paste0(" ", root, "y | ", root, "ie | ",
                                                          root, "ys | ", root, "ies | ",
                                                          root, "y's | ", root, "ie's ")))) %>%
-      select(target_child_id, transcript_id, id, age, speaker_role, num_tokens) %>%
+      select(subject, session, line, age, speaker, num_tokens) %>%
       mutate(item = paste0(i), 
              form = case_when(
                i %in% ids_forms ~ "ids", 
@@ -72,7 +68,7 @@ for(i in items){
       filter(str_detect(gloss, regex(paste0(" ", root, "y | ", root, "ie | ",
                                                          root, "ys | ", root, "ies | ",
                                                          root, "y's | ", root, "ie's ")))) %>%
-      select(target_child_id, transcript_id, id, age, speaker_role, num_tokens) %>%
+      select(subject, session, line, age, speaker, num_tokens) %>%
       mutate(item = paste0(i), 
              form = case_when(
                i %in% ids_forms ~ "ids", 
@@ -83,7 +79,7 @@ for(i in items){
   else if (i == "night night"){
     utts_w_target <- utterances %>%
       filter(str_detect(gloss, regex(paste0(" night night | night-night | night nights | night-nights ")))) %>%
-      select(target_child_id, transcript_id, id, age, speaker_role, num_tokens) %>%
+      select(subject, session, line, age, speaker, num_tokens) %>%
       mutate(item = paste0(i), 
              form = case_when(
                i %in% ids_forms ~ "ids", 
@@ -94,7 +90,7 @@ for(i in items){
   else if (i == "goodnight"){
     utts_w_target <- utterances %>%
       filter(str_detect(gloss, regex(paste0(" goodnight | good night | good-night ")))) %>%
-      select(target_child_id, transcript_id, id, age, speaker_role, num_tokens) %>%
+      select(subject, session, line, age, speaker, num_tokens) %>%
       mutate(item = paste0(i), 
              form = case_when(
                i %in% ids_forms ~ "ids", 
@@ -104,7 +100,7 @@ for(i in items){
   
   else utts_w_target <- utterances %>%
       filter(str_detect(gloss, regex(paste0(" ", i, " | ", i, "s | ", i, "'s ")))) %>%
-      select(target_child_id, transcript_id, id, age, speaker_role, num_tokens) %>%
+      select(subject, session, line, age, speaker, num_tokens)  %>%
       mutate(item = paste0(i), 
              form = case_when(
                i %in% ids_forms ~ "ids", 
@@ -132,10 +128,10 @@ mlu %>%
   scale_fill_manual(values = colors) +
   labs(x = "age (months)", y = "MLUw") +
   theme_test(base_size = 15)
-ggsave("plots/childes/mlu/mlu_over_time.jpg", height = 15, width = 12, dpi = 300)
+ggsave("plots/mlu/mlu_over_time.jpg", height = 15, width = 12, dpi = 300)
 
 
-m <- lmer(num_tokens ~ form*age + (1|item) + (1|target_child_id), data = mlu)
+m <- lmer(num_tokens ~ form*age + (1|item) + (1|subject), data = mlu)
 summary(m)
 
 mlu_byword <- mlu %>%
@@ -174,13 +170,13 @@ ggplot() +
                   stat = "identity", size = 1.5) +
   scale_fill_manual(values = colors) +
   scale_color_manual(values = colors) +
-  labs(x = "form", y = "MLUw", title = "CHILDES (<60m)") +
   ylim(3, 9) +
+  labs(x = "form", y = "MLUw", title = "LDP") +
   theme_test(base_size = 15) +
   theme(legend.position = "none", plot.title = element_text(hjust = 0.5))
-ggsave("plots/childes/mlu/mlu_overall.jpg", height = 5, width = 4, dpi = 300)
+ggsave("plots/mlu/ldp_mlu_overall.jpg", height = 5, width = 4, dpi = 300)
 
-# higher mlu for ads
+# marginal difference between ids and ads mlu
 t.test(mlu ~ form, data = mlu_byword, paired = TRUE)
 shapiro.test(filter(mlu_byword, form == "ids")$mlu) #check for normality
 shapiro.test(filter(mlu_byword, form == "ads")$mlu) 

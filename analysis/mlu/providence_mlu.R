@@ -15,19 +15,19 @@ utterances <- childes_utterances %>%
   mutate(gloss = paste0(' ', tolower(gloss), ' '), 
          age = round(target_child_age, digits = 0))
 
-items <- read_csv("item_info/candidate_items_new.csv") %>%
+items <- read_csv("data_prep/item_info/candidate_items_new.csv") %>%
   pull(word)
 
-ids_forms <- read_csv("item_info/candidate_items_new.csv") %>%
+ids_forms <- read_csv("data_prep/item_info/candidate_items_new.csv") %>%
   filter(form == "ids") %>%
   pull(word)
 
-ads_forms <- read_csv("item_info/candidate_items_new.csv") %>%
+ads_forms <- read_csv("data_prep/item_info/candidate_items_new.csv") %>%
   filter(form == "ads") %>%
   pull(word)
 
 
-pairs <- read_csv("item_info/candidate_items_new.csv") %>%
+pairs <- read_csv("data_prep/item_info/candidate_items_new.csv") %>%
   select(word, pair)
 
 colors <- c("ids" = "#C1292E", "ads" = "#235789")
@@ -132,7 +132,7 @@ mlu %>%
   scale_fill_manual(values = colors) +
   labs(x = "age (months)", y = "MLUw") +
   theme_test(base_size = 15)
-ggsave("plots/childes/providence/mlu/mlu_over_time.jpg", height = 15, width = 12, dpi = 300)
+ggsave("plots/mlu/mlu_over_time.jpg", height = 15, width = 12, dpi = 300)
 
 
 m <- lmer(num_tokens ~ form*age + (1|item) + (1|target_child_id), data = mlu)
@@ -178,7 +178,7 @@ ggplot() +
   ylim(3, 9) +
   theme_test(base_size = 15) +
   theme(legend.position = "none", plot.title = element_text(hjust = 0.5))
-ggsave("plots/childes/providence/mlu/mlu_overall.jpg", height = 5, width = 4, dpi = 300)
+ggsave("plots/mlu/providence_mlu_overall.jpg", height = 5, width = 4, dpi = 300)
 
 # higher mlu for ads
 wilcox.test(mlu ~ form, data = mlu_byword, paired = TRUE)

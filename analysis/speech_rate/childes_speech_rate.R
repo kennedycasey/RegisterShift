@@ -15,18 +15,18 @@ utterances <- childes_utterances %>%
   mutate(gloss = paste0(' ', tolower(gloss), ' '), 
          age = round(target_child_age, digits = 0))
 
-items <- read_csv("item_info/candidate_items_new.csv") %>%
+items <- read_csv("~/Desktop/RegisterShift/data_prep//item_info/candidate_items_new.csv") %>%
   pull(word)
 
-ids_forms <- read_csv("item_info/candidate_items_new.csv") %>%
+ids_forms <- read_csv("~/Desktop/RegisterShift/data_prep//item_info/candidate_items_new.csv") %>%
   filter(form == "ids") %>%
   pull(word)
 
-ads_forms <- read_csv("item_info/candidate_items_new.csv") %>%
+ads_forms <- read_csv("~/Desktop/RegisterShift/data_prep//item_info/candidate_items_new.csv") %>%
   filter(form == "ads") %>%
   pull(word)
 
-pairs <- read_csv("item_info/candidate_items_new.csv") %>%
+pairs <- read_csv("~/Desktop/RegisterShift/data_prep//item_info/candidate_items_new.csv") %>%
   select(word, pair)
 
 colors <- c("ids" = "#C1292E", "ads" = "#235789")
@@ -160,7 +160,7 @@ ggplot() +
   labs(x = "form", y = "utterance-level speech rate (tokens/s)", title = "CHILDES (<60m)") +
   theme_test(base_size = 15) +
   theme(legend.position = "none", plot.title = element_text(hjust = 0.5))
-ggsave("plots/childes/speech_rate/speech_rate_overall.jpg", height = 5, width = 4, dpi = 300)
+ggsave("~/Desktop/RegisterShift/plots/speech_rate/speech_rate_overall.jpg", height = 5, width = 4, dpi = 300)
 
 # no difference in speech rate
 wilcox.test(speech_rate ~ form, data = speech_rate_byword, paired = TRUE)
