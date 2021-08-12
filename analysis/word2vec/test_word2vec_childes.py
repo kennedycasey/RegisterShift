@@ -12,7 +12,7 @@ from sklearn.manifold import TSNE
 import numpy as np   
 import csv
 
-model = gensim.models.Word2Vec.load("childes_word2vec.model")
+model = gensim.models.Word2Vec.load("childes_word2vec_older.model")
 
 pairs = [
   ('doggy', 'dog'),
