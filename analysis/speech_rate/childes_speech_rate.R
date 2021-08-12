@@ -15,18 +15,18 @@ utterances <- childes_utterances %>%
   mutate(gloss = paste0(' ', tolower(gloss), ' '), 
          age = round(target_child_age, digits = 0))
 
-items <- read_csv("~/Desktop/RegisterShift/data_prep//item_info/candidate_items_new.csv") %>%
+items <- read_csv("data_prep/item_info/candidate_items_new.csv") %>%
   pull(word)
 
-ids_forms <- read_csv("~/Desktop/RegisterShift/data_prep//item_info/candidate_items_new.csv") %>%
+ids_forms <- read_csv("data_prep/item_info/candidate_items_new.csv") %>%
   filter(form == "ids") %>%
   pull(word)
 
-ads_forms <- read_csv("~/Desktop/RegisterShift/data_prep//item_info/candidate_items_new.csv") %>%
+ads_forms <- read_csv("data_prep/item_info/candidate_items_new.csv") %>%
   filter(form == "ads") %>%
   pull(word)
 
-pairs <- read_csv("~/Desktop/RegisterShift/data_prep//item_info/candidate_items_new.csv") %>%
+pairs <- read_csv("data_prep/item_info/candidate_items_new.csv") %>%
   select(word, pair)
 
 colors <- c("ids" = "#C1292E", "ads" = "#235789")
