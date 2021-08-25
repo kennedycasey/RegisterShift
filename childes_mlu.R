@@ -180,3 +180,306 @@ mlu %>%
   theme_test(base_size = 15) +
   theme(legend.position = "none", plot.title = element_text(hjust = 0.5))
 ggsave("figs/mlu_over_time.jpg", height = 5, width = 6, dpi = 300)
+
+# Providence --------------------------------------------------------------
+utterances <- childes_utterances %>%
+  filter(corpus_name == "Providence" & speaker_role != "Target_Child") %>% 
+  mutate(gloss = paste0(' ', tolower(gloss), ' '), 
+         age = round(target_child_age, digits = 0))
+
+# create empty list to be populated
+get_mlu <- list() 
+# loop over all items to get num_tokens for all utterances containing a target word
+for(i in items){
+  if (str_detect(i, "ey")) {
+    root <- paste(gsub("ey", "", i))
+    
+    utts_w_target <- utterances %>%
+      filter(str_detect(gloss, regex(paste0(" ", root, "ey | ", root, "ie | ",
+                                            root, "eys | ", root, "ies | ",
+                                            root, "ey's | ", root, "ie's ")))) %>%
+      select(target_child_id, transcript_id, id, age, speaker_role, num_tokens) %>%
+      mutate(item = paste0(i), 
+             form = case_when(
+               i %in% CDL_forms ~ "CDL", 
+               i %in% ADL_forms ~ "ADL"), 
+             pair = paste0((filter(pairs, word == i))$pair))
+  }
+  
+  else if (str_detect(i, "y") & !str_detect(i, "ey")) {
+    root <- paste(gsub("y", "", i))
+    utts_w_target <- utterances %>%
+      filter(str_detect(gloss, regex(paste0(" ", root, "y | ", root, "ie | ",
+                                            root, "ys | ", root, "ies | ",
+                                            root, "y's | ", root, "ie's ")))) %>%
+      select(target_child_id, transcript_id, id, age, speaker_role, num_tokens) %>%
+      mutate(item = paste0(i), 
+             form = case_when(
+               i %in% CDL_forms ~ "CDL", 
+               i %in% ADL_forms ~ "ADL"), 
+             pair = paste0((filter(pairs, word == i))$pair))
+  }
+  
+  else if (str_detect(i, "ie")) {
+    root <- paste(gsub("ie", "", i))
+    utts_w_target <- utterances %>%
+      filter(str_detect(gloss, regex(paste0(" ", root, "y | ", root, "ie | ",
+                                            root, "ys | ", root, "ies | ",
+                                            root, "y's | ", root, "ie's ")))) %>%
+      select(target_child_id, transcript_id, id, age, speaker_role, num_tokens) %>%
+      mutate(item = paste0(i), 
+             form = case_when(
+               i %in% CDL_forms ~ "CDL", 
+               i %in% ADL_forms ~ "ADL"), 
+             pair = paste0((filter(pairs, word == i))$pair))
+  }
+  
+  else if (i == "night night"){
+    utts_w_target <- utterances %>%
+      filter(str_detect(gloss, regex(paste0(" night night | night-night | night nights | night-nights ")))) %>%
+      select(target_child_id, transcript_id, id, age, speaker_role, num_tokens) %>%
+      mutate(item = paste0(i), 
+             form = case_when(
+               i %in% CDL_forms ~ "CDL", 
+               i %in% ADL_forms ~ "ADL"), 
+             pair = paste0((filter(pairs, word == i))$pair))
+  }
+  
+  else if (i == "goodnight"){
+    utts_w_target <- utterances %>%
+      filter(str_detect(gloss, regex(paste0(" goodnight | good night | good-night ")))) %>%
+      select(target_child_id, transcript_id, id, age, speaker_role, num_tokens) %>%
+      mutate(item = paste0(i), 
+             form = case_when(
+               i %in% CDL_forms ~ "CDL", 
+               i %in% ADL_forms ~ "ADL"), 
+             pair = paste0((filter(pairs, word == i))$pair))
+  }
+  
+  else utts_w_target <- utterances %>%
+      filter(str_detect(gloss, regex(paste0(" ", i, " | ", i, "s | ", i, "'s ")))) %>%
+      select(target_child_id, transcript_id, id, age, speaker_role, num_tokens) %>%
+      mutate(item = paste0(i), 
+             form = case_when(
+               i %in% CDL_forms ~ "CDL", 
+               i %in% ADL_forms ~ "ADL"), 
+             pair = paste0((filter(pairs, word == i))$pair))
+  
+  get_mlu[[i]] <- utts_w_target
+}
+
+mlu <- do.call(rbind, get_mlu)
+mlu$form <- factor(mlu$form, levels = c("CDL", "ADL"))
+
+# MLUw NOT higher for ADL forms
+# increase in MLUw across time
+# null interaction with time
+m <- lmer(num_tokens ~ form*age + (1|item) + (1|target_child_id), data = mlu)
+summary(m)
+
+mlu_byword <- mlu %>%
+  group_by(item) %>%
+  summarize(mlu = mean(num_tokens), 
+            pair = pair, 
+            form = form) %>%
+  distinct()
+
+mlu_byword_summary <- mlu_byword %>%
+  group_by(form) %>%
+  summarize(mean = mean(mlu), 
+            se = sd(mlu)/sqrt(length(mlu)), 
+            ymin = mean - se, 
+            ymax = mean + se)
+
+ggplot() +
+  geom_line(data = mlu_byword, aes(x = form, y = mlu, group = pair), 
+            color = "#F2F2F2", size = 1) +
+  geom_point(data = mlu_byword, aes(x = form, y = mlu), 
+             color = "#F2F2F2", size = 2) +
+  geom_pointrange(data = mlu_byword_summary, aes(x = form, y = mean, ymin = mean-se, ymax = mean+se, color = form, fill = form), 
+                  stat = "identity", size = 1.25) +
+  scale_fill_manual(values = colors) +
+  scale_color_manual(values = colors) +
+  labs(x = "Form", y = "MLUw", title = "Providence") +
+  scale_y_continuous(limits = c(3, 9), breaks=seq(3, 9, by = 3)) +
+  theme_test(base_size = 15) +
+  theme(legend.position = "none", plot.title = element_text(hjust = 0.5))
+ggsave("figs/Providence/mlu_overall.jpg", height = 5, width = 4, dpi = 300)
+
+# higher MLUw for ADL forms
+t.test(mlu ~ form, data = mlu_byword, paired = TRUE)
+shapiro.test(filter(mlu_byword, form == "CDL")$mlu) #check for normality
+shapiro.test(filter(mlu_byword, form == "ADL")$mlu) 
+
+mlu %>%
+  group_by(item, age) %>%
+  summarize(mlu = mean(num_tokens), 
+            pair = pair, 
+            form = form) %>%
+  distinct() %>%
+  ungroup() %>%
+  group_by(age, form) %>%
+  summarize(mlu = mean(mlu)) %>%
+  ggplot(aes(x = age, y = mlu, color = form, fill = form)) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  scale_color_manual(values = colors) +
+  scale_fill_manual(values = colors) +
+  scale_x_continuous(limits = c(0, 84), breaks=seq(0, 84, by=12)) +
+  scale_y_continuous(limits = c(2, 13), breaks=seq(0, 12, by = 3)) +
+  labs(x = "Age (months)", y = "MLUw", title = "Providence") +
+  theme_test(base_size = 15) +
+  theme(legend.position = "none", plot.title = element_text(hjust = 0.5))
+ggsave("figs/Providence/mlu_over_time.jpg", height = 5, width = 6, dpi = 300)
+
+
+# LDP ---------------------------------------------------------------------
+
+utterances <- data.table(filter(ldp_utterances, speaker != "target_child"))
+
+# create empty list to be populated
+get_mlu <- list() 
+
+# loop over all items to get num_tokens for all utterances containing a target word
+for(i in items){
+  if (str_detect(i, "ey")) {
+    root <- paste(gsub("ey", "", i))
+    
+    utts_w_target <- utterances %>%
+      filter(str_detect(gloss, regex(paste0(" ", root, "ey | ", root, "ie | ",
+                                            root, "eys | ", root, "ies | ",
+                                            root, "ey's | ", root, "ie's ")))) %>%
+      select(subject, session, line, age, speaker, num_tokens) %>%
+      mutate(item = paste0(i), 
+             form = case_when(
+               i %in% CDL_forms ~ "CDL", 
+               i %in% ADL_forms ~ "ADL"), 
+             pair = paste0((filter(pairs, word == i))$pair))
+  }
+  
+  else if (str_detect(i, "y") & !str_detect(i, "ey")) {
+    root <- paste(gsub("y", "", i))
+    utts_w_target <- utterances %>%
+      filter(str_detect(gloss, regex(paste0(" ", root, "y | ", root, "ie | ",
+                                            root, "ys | ", root, "ies | ",
+                                            root, "y's | ", root, "ie's ")))) %>%
+      select(subject, session, line, age, speaker, num_tokens) %>%
+      mutate(item = paste0(i), 
+             form = case_when(
+               i %in% CDL_forms ~ "CDL", 
+               i %in% ADL_forms ~ "ADL"), 
+             pair = paste0((filter(pairs, word == i))$pair))
+  }
+  
+  else if (str_detect(i, "ie")) {
+    root <- paste(gsub("ie", "", i))
+    utts_w_target <- utterances %>%
+      filter(str_detect(gloss, regex(paste0(" ", root, "y | ", root, "ie | ",
+                                            root, "ys | ", root, "ies | ",
+                                            root, "y's | ", root, "ie's ")))) %>%
+      select(subject, session, line, age, speaker, num_tokens) %>%
+      mutate(item = paste0(i), 
+             form = case_when(
+               i %in% CDL_forms ~ "CDL", 
+               i %in% ADL_forms ~ "ADL"), 
+             pair = paste0((filter(pairs, word == i))$pair))
+  }
+  
+  else if (i == "night night"){
+    utts_w_target <- utterances %>%
+      filter(str_detect(gloss, regex(paste0(" night night | night-night | night nights | night-nights ")))) %>%
+      select(subject, session, line, age, speaker, num_tokens) %>%
+      mutate(item = paste0(i), 
+             form = case_when(
+               i %in% CDL_forms ~ "CDL", 
+               i %in% ADL_forms ~ "ADL"), 
+             pair = paste0((filter(pairs, word == i))$pair))
+  }
+  
+  else if (i == "goodnight"){
+    utts_w_target <- utterances %>%
+      filter(str_detect(gloss, regex(paste0(" goodnight | good night | good-night ")))) %>%
+      select(subject, session, line, age, speaker, num_tokens) %>%
+      mutate(item = paste0(i), 
+             form = case_when(
+               i %in% CDL_forms ~ "CDL", 
+               i %in% ADL_forms ~ "ADL"), 
+             pair = paste0((filter(pairs, word == i))$pair))
+  }
+  
+  else utts_w_target <- utterances %>%
+      filter(str_detect(gloss, regex(paste0(" ", i, " | ", i, "s | ", i, "'s ")))) %>%
+      select(subject, session, line, age, speaker, num_tokens)  %>%
+      mutate(item = paste0(i), 
+             form = case_when(
+               i %in% CDL_forms ~ "CDL", 
+               i %in% ADL_forms ~ "ADL"), 
+             pair = paste0((filter(pairs, word == i))$pair))
+  
+  get_mlu[[i]] <- utts_w_target
+  
+}
+
+mlu <- do.call(rbind, get_mlu)
+mlu$form <- factor(mlu$form, levels = c("CDL", "ADL"))
+
+# higher MLUw for ADL forms
+# increase in MLUw across time
+# trending negative interaction with time
+m <- lmer(num_tokens ~ form*age + (1|item) + (1|subject), data = mlu)
+summary(m)
+
+mlu_byword <- mlu %>%
+  group_by(item) %>%
+  summarize(mlu = mean(num_tokens), 
+            pair = pair, 
+            form = form) %>%
+  distinct()
+
+mlu_byword_summary <- mlu_byword %>%
+  group_by(form) %>%
+  summarize(mean = mean(mlu), 
+            se = sd(mlu)/sqrt(length(mlu)), 
+            ymin = mean - se, 
+            ymax = mean + se)
+
+ggplot() +
+  geom_line(data = mlu_byword, aes(x = form, y = mlu, group = pair), 
+            color = "#F2F2F2", size = 1) +
+  geom_point(data = mlu_byword, aes(x = form, y = mlu), 
+             color = "#F2F2F2", size = 2) +
+  geom_pointrange(data = mlu_byword_summary, aes(x = form, y = mean, ymin = mean-se, ymax = mean+se, color = form, fill = form), 
+                  stat = "identity", size = 1.25) +
+  scale_fill_manual(values = colors) +
+  scale_color_manual(values = colors) +
+  labs(x = "Form", y = "MLUw", title = "LDP") +
+  scale_y_continuous(limits = c(3, 9), breaks=seq(3, 9, by = 3)) +
+  theme_test(base_size = 15) +
+  theme(legend.position = "none", plot.title = element_text(hjust = 0.5))
+ggsave("figs/LDP/mlu_overall.jpg", height = 5, width = 4, dpi = 300)
+
+# higher MLUw for ADL forms
+t.test(mlu ~ form, data = mlu_byword, paired = TRUE)
+shapiro.test(filter(mlu_byword, form == "CDL")$mlu) #check for normality
+shapiro.test(filter(mlu_byword, form == "ADL")$mlu) 
+
+mlu %>%
+  group_by(item, age) %>%
+  summarize(mlu = mean(num_tokens), 
+            pair = pair, 
+            form = form) %>%
+  distinct() %>%
+  ungroup() %>%
+  group_by(age, form) %>%
+  summarize(mlu = mean(mlu)) %>%
+  ggplot(aes(x = age, y = mlu, color = form, fill = form)) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  scale_color_manual(values = colors) +
+  scale_fill_manual(values = colors) +
+  scale_x_continuous(limits = c(0, 84), breaks=seq(0, 84, by=12)) +
+  scale_y_continuous(limits = c(2, 13), breaks=seq(0, 12, by = 3)) +
+  labs(x = "Age (months)", y = "MLUw", title = "LDP") +
+  theme_test(base_size = 15) +
+  theme(legend.position = "none", plot.title = element_text(hjust = 0.5))
+ggsave("figs/LDP/mlu_over_time.jpg", height = 5, width = 6, dpi = 300)
