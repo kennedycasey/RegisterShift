@@ -1,0 +1,31 @@
+word,aoa,babiness,pair,form
+doggy,NA,NA,doggy_dog,CDL
+dog,16,3.1,doggy_dog,ADS
+kitty,18,4.1,kitty_cat,CDL
+cat,18,2,kitty_cat,ADS
+tummy,22,7.166666667,tummy_stomach,CDL
+stomach,NA,NA,tummy_stomach,ADS
+daddy,16,9,daddy_dad,CDL
+dad,NA,NA,daddy_dad,ADS
+mommy,16,8.454545455,mommy_mom,CDL
+mom,NA,NA,mommy_mom,ADS
+bunny,21,2.8,bunny_rabbit,CDL
+rabbit,NA,NA,bunny_rabbit,ADS
+duckie,NA,NA,duckie_duck,CDL
+duck,17,4.1,duckie_duck,ADS
+blankie,NA,NA,blankie_blanket,CDL
+blanket,21,8.916666667,blankie_blanket,ADS
+froggy,NA,NA,froggy_frog,CDL
+frog,22,2.909090909,froggy_frog,ADS
+potty,21,6.909090909,potty_bathroom,CDL
+bathroom,24,NA,potty_bathroom,ADS
+night night,18,NA,night night_goodnight,CDL
+goodnight,NA,NA,night night_goodnight,ADS
+dolly,NA,NA,dolly_doll,CDL
+doll,22,7.133333333,dolly_doll,ADS
+horsey,NA,NA,horsey_horse,CDL
+horse,20,2,horsey_horse,ADS
+piggy,NA,NA,piggy_pig,CDL
+pig,21,1.416666667,piggy_pig,ADS
+birdie,NA,NA,birdie_bird,CDL
+bird,17,2.375,birdie_bird,ADS
