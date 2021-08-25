@@ -1,3 +1,5 @@
+library(tidyverse)
+
 # get all utterances from providence corpus
 cos_sim <- read.csv("data_prep/word2vec/cosine_similarity.csv")  %>%
   pivot_longer(c("overall", "younger", "older"), names_to = "age", values_to = "cosine_similarity") %>%
@@ -11,14 +13,14 @@ cos_sim_summary <- cos_sim %>%
 
 ggplot() +
   geom_jitter(data = cos_sim, aes(x = age, y = cosine_similarity), 
-             color = "#F2F2F2", size = 2.5, width = 0.01, alpha = 0.5) +
+             color = "#F2F2F2", size = 2.5, width = 0.01, alpha=0.8) +
   geom_pointrange(data = cos_sim_summary, aes(x = age, y = mean, ymin = mean-se, ymax = mean+se), 
                   size = 1) +
-  geom_hline(yintercept = 0.05, linetype = "dashed") +
-  labs(y = "mean semantic similarity", title = "CHILDES") +
-  ylim(0.05, 0.9) +
-  scale_x_discrete(labels = c("overall", "younger children\n(<24m)", "older children\n(24m+)")) +
+  geom_hline(yintercept = 0.2646741, linetype = "dashed") +
+  labs(y = "Mean semantic similarity\nof CDL and ADL forms", title = "CHILDES") +
+  ylim(0, 1) +
+  scale_x_discrete(labels = c("Overall", "Younger children\n(<24m)", "Older children\n(24m+)")) +
   theme_test(base_size = 15) +
   theme(legend.position = "none", plot.title = element_text(hjust = 0.5), 
         axis.title.x = element_blank())
-ggsave("figs/word2vec/cos_sim.jpg", height = 5, width = 6, dpi = 300)
+ggsave("figs/cos_sim.jpg", height = 5, width = 6, dpi = 300)
