@@ -205,6 +205,8 @@ ttr %>%
   geom_smooth(method = "lm") +
   scale_color_manual(values = colors) +
   scale_fill_manual(values = colors) +
-  labs(x = "Age (months)", y = "Transcript-level type:token ratio") +
+  scale_x_continuous(limits = c(0, 84), breaks=seq(0, 84, by=12)) +
+  labs(x = "Age (months)", y = "Transcript-level type:token ratio", title = "CHILDES") +
   theme_test(base_size = 15) +
-  theme(legend.position = "none")
+  theme(legend.position = "none", plot.title = element_text(hjust = 0.5))
+ggsave("figs/ttr_over_time.jpg", height = 5, width = 6, dpi = 300)
