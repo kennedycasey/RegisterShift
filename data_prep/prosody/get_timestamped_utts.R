@@ -105,7 +105,8 @@ for (i in items){
 timestamped <- do.call(rbind, get_timestamped_utts) %>%
   left_join(transcripts, by = c("transcript_id", "corpus_name", "target_child_name")) %>%
   # test on providence subset for now
-  filter(corpus_name == "Providence" & target_child_name != "Ethan")
+  filter(corpus_name == "Providence" & target_child_name != "Ethan") %>%
+  mutate(token = row_number())
 
-write_csv(timestamped, "data_prep/timestamped_utts.csv")
+write_csv(timestamped, "data_prep/prosody/timestamped_utts.csv")
 
