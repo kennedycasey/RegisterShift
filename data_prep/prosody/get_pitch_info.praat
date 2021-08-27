@@ -1,13 +1,12 @@
-wd$ = ""
-wd_audio$ = wd$ + "Audio/"
+wd_audio$ = "Audio/"
 
-onset_offset$ = wd$ + "timestamped_utts.csv"
+onset_offset$ = "timestamped_utts.csv"
 timestamped_utts = Read Table from comma-separated file: onset_offset$
 
 selectObject: timestamped_utts
 n_tokens = Get number of rows
 
-for t from 1 to n_tokens
+for t from 2 to 20
 # extract utterance based on timing in csv file
 	selectObject: timestamped_utts
 	transcript_id = Get value: t, "transcript_id"
@@ -18,7 +17,7 @@ for t from 1 to n_tokens
 	end_s = Get value: t, "media_end"
 
 # opens the audio file and zooms in to the relevant utterance
-	audio_file$ = wd_audio$ + target_child_name$ + "/" + audio_file$ + ".wav"
+	audio_file$ = wd_audio$ + target_child_name$ + "/0" + audio_file$ + ".wav"
 	sound = Read from file: audio_file$
 	selectObject: sound
 	View & Edit
@@ -29,7 +28,7 @@ for t from 1 to n_tokens
 	Close
 
 # gets pitch info
-	utterance = selectObject: untitled
+	selectObject: untitled
 	To Pitch... 0.0 75 500 
 	pitch_mean = Get mean... start_s end_s Hertz
 	pitch_min = Get minimum... 0 0 Hertz Parabolic
@@ -38,19 +37,22 @@ for t from 1 to n_tokens
 
 	selectObject: timestamped_utts
 
-	Append column: "pitch_mean"
+	#Append column: "pitch_mean"
 	Set numeric value: t, "pitch_mean", pitch_mean
 	
-	Append column: "pitch_min"
+	#Append column: "pitch_min"
 	Set numeric value: t, "pitch_min", pitch_min
 
-	Append column: "pitch_max"
+	#Append column: "pitch_max"
 	Set numeric value: t, "pitch_max", pitch_max
 
-	Append column: "pitch_range"
+	#Append column: "pitch_range"
 	Set numeric value: t, "pitch_range", pitch_range
-
-endfor
 
 selectObject: timestamped_utts
 Save as comma-separated file: "pitch_info.csv"
+
+select all
+minus timestamped_utts
+Remove
+endfor

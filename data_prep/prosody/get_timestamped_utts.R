@@ -1,4 +1,5 @@
 library(childesr)
+library(data.table)
 library(tidyverse)
 
 # get transcript ids and linked audio file names
@@ -103,10 +104,6 @@ for (i in items){
 }
 
 timestamped <- do.call(rbind, get_timestamped_utts) %>%
-  left_join(transcripts, by = c("transcript_id", "corpus_name", "target_child_name")) %>%
-  # test on providence subset for now
-  filter(corpus_name == "Providence" & target_child_name != "Ethan") %>%
-  mutate(token = row_number())
-
+  left_join(transcripts, by = c("transcript_id", "corpus_name", "target_child_name"))
+  
 write_csv(timestamped, "data_prep/prosody/timestamped_utts.csv")
-
