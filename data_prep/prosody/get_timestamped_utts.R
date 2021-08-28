@@ -90,20 +90,25 @@ for (i in items){
     subset <- timestamped %>%
       filter(!is.na(night.night)) %>%
       mutate(item = paste0(i)) %>%
-      select(item, transcript_id, corpus_name, 
-             target_child_name, media_start, media_end)
+      select(item, transcript_id, corpus_name, speaker_id,
+             age, target_child_name, media_start, media_end)
   }
   
   else subset <- timestamped %>%
     filter(!is.na(eval(as.symbol(i)))) %>%
     mutate(item = paste0(i)) %>%
-    select(item, transcript_id, corpus_name, 
-             target_child_name, media_start, media_end)
+    select(item, transcript_id, corpus_name, speaker_id,
+             age, target_child_name, media_start, media_end)
   
   get_timestamped_utts[[i]] <- subset
 }
 
 timestamped <- do.call(rbind, get_timestamped_utts) %>%
-  left_join(transcripts, by = c("transcript_id", "corpus_name", "target_child_name"))
+  left_join(transcripts, by = c("transcript_id", "corpus_name", "target_child_name")) %>%
+  # add empty columns to be populated when running praat script
+  mutate(pitch_mean = "", 
+         pitch_min = "", 
+         pitch_max = "", 
+         pitch_range = "")
   
 write_csv(timestamped, "data_prep/prosody/timestamped_utts.csv")
