@@ -6,7 +6,7 @@ timestamped_utts = Read Table from comma-separated file: onset_offset$
 selectObject: timestamped_utts
 n_tokens = Get number of rows
 
-for t from 1 to 200
+for t from 1450 to 1455
 # extract utterance based on timing in csv file
 	selectObject: timestamped_utts
 	transcript_id = Get value: t, "transcript_id"
@@ -18,36 +18,50 @@ for t from 1 to 200
 	end_s = Get value: t, "media_end"
 
 # opens the audio file and zooms in to the relevant utterance
-	audio_file$ = wd_audio$ + corpus_name$ + "/" + target_child_name$ + "/0" + audio_file$ + ".wav"
+	audio_file$ = wd_audio$ + corpus_name$ + "/" + target_child_name$ + "/" + audio_file$ + ".wav"
 	
 	if fileReadable (audio_file$)
 		sound = Read from file: audio_file$
 		selectObject: sound
-		View & Edit
-		editor: sound
-		Select: start_s, end_s
-		Zoom: start_s, end_s
-		untitled = Extract selected sound (preserve times)
-		Close
+
+		end_time = Get end time
+
+		if end_s < end_time
+			View & Edit
+			editor: sound
+			Select: start_s, end_s
+			Zoom: start_s, end_s
+			untitled = Extract selected sound (preserve times)
+			Close
 
 # gets pitch info
-		selectObject: untitled
-		To Pitch... 0.0 75 500 
-		pitch_mean = Get mean... start_s end_s Hertz
-		pitch_min = Get minimum... 0 0 Hertz Parabolic
-		pitch_max = Get maximum... 0 0 Hertz Parabolic
-		pitch_range = pitch_min - pitch_max
+			selectObject: untitled
+			To Pitch... 0.0 75 500 
+			pitch_mean = Get mean... start_s end_s Hertz
+			pitch_min = Get minimum... 0 0 Hertz Parabolic
+			pitch_max = Get maximum... 0 0 Hertz Parabolic
+			pitch_range = pitch_min - pitch_max
 
-		selectObject: timestamped_utts
+			selectObject: timestamped_utts
 	
-		Set numeric value: t, "pitch_mean", pitch_mean
-		Set numeric value: t, "pitch_min", pitch_min
-		Set numeric value: t, "pitch_max", pitch_max
-		Set numeric value: t, "pitch_range", pitch_range
+			Set numeric value: t, "pitch_mean", pitch_mean
+			Set numeric value: t, "pitch_min", pitch_min
+			Set numeric value: t, "pitch_max", pitch_max
+			Set numeric value: t, "pitch_range", pitch_range
 
-		select all
-		minus timestamped_utts
-		Remove
+			select all
+			minus timestamped_utts
+			Remove
+		
+		else 
+			selectObject: timestamped_utts
+
+			Set string value: t, "pitch_mean", "relevant audio clip missing"
+			Set string value: t, "pitch_min", "relevant audio clip missing"
+			Set string value: t, "pitch_max", "relevant audio clip missing"
+			Set string value: t, "pitch_range", "relevant audio clip missing"
+		
+		endif
 
 	else 
 		Set string value: t, "pitch_mean", "audio file missing"
