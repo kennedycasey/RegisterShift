@@ -15,7 +15,7 @@ for f from 1 to n_files
 	selectObject: timestamped_utts
 	n_tokens = Get number of rows
 
-	for t from 1 to 5
+	for t from 1 to n_tokens
 		# extract utterance based on timing in csv file
 		selectObject: timestamped_utts
 		transcript_id = Get value: t, "transcript_id"
