@@ -103,12 +103,15 @@ for (i in items){
   get_timestamped_utts[[i]] <- subset
 }
 
-timestamped <- do.call(rbind, get_timestamped_utts) %>%
-  left_join(transcripts, by = c("transcript_id", "corpus_name", "target_child_name")) %>%
-  # add empty columns to be populated when running praat script
-  mutate(pitch_mean = "", 
-         pitch_min = "", 
-         pitch_max = "", 
-         pitch_range = "")
+for(i in items) {
+  timestamped <- do.call(rbind, get_timestamped_utts) %>%
+    filter(item == i) %>%
+    left_join(transcripts, by = c("transcript_id", "corpus_name", "target_child_name")) %>%
+    # add empty columns to be populated when running praat script
+    mutate(pitch_mean = "", 
+           pitch_min = "", 
+           pitch_max = "", 
+           pitch_range = "")
   
-write_csv(timestamped, "data_prep/prosody/timestamped_utts.csv")
+  write_csv(timestamped, paste0("data_prep/prosody/timestamped/", i, ".csv"))
+}
