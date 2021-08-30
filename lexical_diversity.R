@@ -139,17 +139,22 @@ merged_utts <- ordered_utts %>%
   select(id, utterance) %>%
   right_join(utts, by = c("id")) %>%
   select(id, gloss, num_tokens, transcript_id, speaker_id, 
-         speaker_role, target_child_id, age, item, pair, form, utterance) 
+         speaker_role, target_child_id, age, item, pair, form, utterance) %>%
+  mutate(iteration = row_number())
 
 for (i in unique(merged_utts$id)) {
   preceding <- (filter(merged_utts, id == i))$utterance - 1
   following <- (filter(merged_utts, id == i))$utterance + 1
-  utts_w_context <- merged_utts %>%
-    mutate(gloss_grouped = paste0((filter(ordered_utts, utterance == preceding & 
-                                           transcript_id == transcript_id & 
-                                           speaker_id == speaker_id))$gloss,
-                                 gloss, 
-                                 (filter(ordered_utts, utterance == following & 
-                                           transcript_id == transcript_id & 
-                                           speaker_id == speaker_id))$gloss))
+  
+    utts_w_context <- merged_utts %>%
+      mutate(gloss_grouped = paste(trimws((filter(ordered_utts, utterance == preceding & 
+                                              transcript_id == transcript_id & 
+                                              speaker_id == speaker_id))$gloss),
+                                    trimws(gloss), 
+                                    trimws((filter(ordered_utts, utterance == following & 
+                                              transcript_id == transcript_id & 
+                                              speaker_id == speaker_id))$gloss)), 
+             gloss_grouped = trimws(str_remove(gloss_grouped, "xxx|yyy")))
+    
+    print(paste("completed", (filter(merged_utts, id == i))$iteration, "of", nrow(merged_utts)))
 }
