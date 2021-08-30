@@ -203,7 +203,7 @@ ggsave("figs/ADL_over_time.jpg")
 
 # Providence --------------------------------------------------------------
 providence_utterances <- childes_utterances %>%
-  filter(corpus_name == "Providence") %>%
+  filter(corpus_name == "Providence" & speaker_role == "Target_Child") %>%
   mutate(gloss = paste0(' ', tolower(gloss), ' '), 
          age = round(target_child_age, digits = 0))
 
