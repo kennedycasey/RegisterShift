@@ -6,7 +6,7 @@ timestamped_utts = Read Table from comma-separated file: onset_offset$
 selectObject: timestamped_utts
 n_tokens = Get number of rows
 
-for t from 1450 to 1455
+for t from 5385 to 5400
 # extract utterance based on timing in csv file
 	selectObject: timestamped_utts
 	transcript_id = Get value: t, "transcript_id"
@@ -26,7 +26,24 @@ for t from 1450 to 1455
 
 		end_time = Get end time
 
-		if end_s < end_time
+		if end_s - start_s < 0.04
+			selectObject: timestamped_utts
+
+			Set string value: t, "pitch_mean", "utterance too short to analyze"
+			Set string value: t, "pitch_min", "utterance too short to analyze"
+			Set string value: t, "pitch_max", "utterance too short to analyze"
+			Set string value: t, "pitch_range", "utterance too short to analyze"
+
+
+		elif end_s > end_time
+			selectObject: timestamped_utts
+
+			Set string value: t, "pitch_mean", "relevant audio clip missing"
+			Set string value: t, "pitch_min", "relevant audio clip missing"
+			Set string value: t, "pitch_max", "relevant audio clip missing"
+			Set string value: t, "pitch_range", "relevant audio clip missing"
+		
+		else 
 			View & Edit
 			editor: sound
 			Select: start_s, end_s
@@ -36,7 +53,7 @@ for t from 1450 to 1455
 
 # gets pitch info
 			selectObject: untitled
-			To Pitch... 0.0 75 500 
+			To Pitch... 0 75 500 
 			pitch_mean = Get mean... start_s end_s Hertz
 			pitch_min = Get minimum... 0 0 Hertz Parabolic
 			pitch_max = Get maximum... 0 0 Hertz Parabolic
@@ -52,14 +69,6 @@ for t from 1450 to 1455
 			select all
 			minus timestamped_utts
 			Remove
-		
-		else 
-			selectObject: timestamped_utts
-
-			Set string value: t, "pitch_mean", "relevant audio clip missing"
-			Set string value: t, "pitch_min", "relevant audio clip missing"
-			Set string value: t, "pitch_max", "relevant audio clip missing"
-			Set string value: t, "pitch_range", "relevant audio clip missing"
 		
 		endif
 
