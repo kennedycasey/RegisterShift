@@ -1,0 +1,930 @@
+item,transcript_id,corpus_name,speaker_id,age,target_child_name,media_start,media_end,audio_file,pitch_mean,pitch_min,pitch_max,pitch_range
+pig,3352,Bernstein,1717,18,Amelia,866.475,867.659,010600,219.2104032530504,194.23015702893989,259.24968380378675,-65.01952677484687
+pig,3352,Bernstein,1717,18,Amelia,868.982,870.259,010600,194.94306081620695,76.72241368839984,271.302417706035,-194.58000401763513
+pig,3352,Bernstein,1717,18,Amelia,1107.635,1108.378,010600,204.94861604202396,180.40029064631602,254.64623031903395,-74.24593967271792
+pig,3350,Bernstein,1715,15,Alice,551.448,563.987,010300,230.9590769132032,75.48440950388012,477.87581052573694,-402.39140102185684
+pig,3804,Peters,2356,16,Seth,499.588,500.436,010410c,247.86555245725486,204.8741701477981,349.4687782441069,-144.59460809630878
+pig,3804,Peters,2356,16,Seth,500.703,502.282,010410c,249.0629743737499,85.36557296461223,298.84024124244803,-213.4746682778358
+pig,3836,Peters,2338,21,Seth,1357.082,1359.85,010822b,147.7669904375287,95.38230513346295,278.18313663515613,-182.80083150169318
+pig,3849,Peters,2338,22,Seth,714.352,714.723,011011a,230.07108228890027,141.54704077572566,414.27895026915377,-272.73190949342813
+pig,3849,Peters,2338,22,Seth,714.723,715.095,011011a,163.68324100334357,148.3977262054997,173.02362021096658,-24.625894005466876
+pig,3852,Peters,2467,23,Seth,956.319,959.291,011026a,325.8950358861256,199.86325535849068,498.2840614395058,-298.42080608101514
+pig,3852,Peters,2467,23,Seth,1036.151,1040.777,011026a,321.84221391292124,114.87258506517232,509.7638595623429,-394.89127449717057
+pig,4173,Rollins,2535,12,NA,121.578,122.936,ck12,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4173,Rollins,2535,12,NA,122.936,124.745,ck12,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4173,Rollins,2535,12,NA,170.595,171.776,ck12,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4154,Rollins,2535,12,NA,368.005,369.088,al12,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4154,Rollins,2535,12,NA,369.088,370.76,al12,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4154,Rollins,2535,12,NA,371.211,374.313,al12,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4154,Rollins,2535,12,NA,374.313,378.376,al12,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4154,Rollins,2535,12,NA,378.376,380.801,al12,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4161,Rollins,2536,12,NA,480.058,483.751,cb12,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4161,Rollins,2536,12,NA,483.751,484.351,cb12,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4154,Rollins,2535,12,NA,399.9,402.551,al12,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4154,Rollins,2535,12,NA,402.551,404.786,al12,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4154,Rollins,2535,12,NA,404.786,406.613,al12,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4161,Rollins,2536,12,NA,494.183,497.746,cb12,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4167,Rollins,2535,12,NA,399.028,401.288,cc12,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4167,Rollins,2535,12,NA,401.288,403.885,cc12,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4182,Rollins,2535,12,NA,247.99,251.348,cm12,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4156,Rollins,2535,9,NA,490.736,492.775,cb09,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4182,Rollins,2535,12,NA,255.503,257.7,cm12,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4194,Rollins,2535,9,NA,322.191,324.591,cy09,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4189,Rollins,2538,12,Christopher,382.98,384.915,cr12,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4189,Rollins,2538,12,Christopher,384.915,387.36,cr12,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4194,Rollins,2535,9,NA,324.591,325.766,cy09,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4194,Rollins,2535,9,NA,326.765,328.701,cy09,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4194,Rollins,2535,9,NA,342.416,345.433,cy09,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4194,Rollins,2535,9,NA,347.323,350.401,cy09,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4167,Rollins,2535,12,NA,833.755,837.698,cc12,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4173,Rollins,2535,12,NA,777.84,779.015,ck12,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4199,Rollins,2540,20,David,916.7,918.405,di06,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4208,Rollins,2535,9,NA,431.851,433.785,ds09,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4208,Rollins,2535,9,NA,436.743,438.938,ds09,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4208,Rollins,2535,9,NA,463.561,464.466,ds09,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4202,Rollins,2535,12,NA,435.88,438.815,di12,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4207,Rollins,2535,12,NA,536.52,538.445,ds12,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4205,Rollins,2535,6,NA,614.013,615.82,ds06,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4205,Rollins,2535,6,NA,615.82,618.951,ds06,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4205,Rollins,2535,6,NA,618.951,621.105,ds06,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4205,Rollins,2535,6,NA,621.105,624.025,ds06,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4205,Rollins,2535,6,NA,624.025,626.825,ds06,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4205,Rollins,2535,6,NA,630.553,634.696,ds06,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4205,Rollins,2535,6,NA,634.696,638.185,ds06,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4205,Rollins,2535,6,NA,645.146,647.368,ds06,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4205,Rollins,2535,6,NA,650.701,654.548,ds06,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4200,Rollins,2535,9,NA,769.951,771.201,di09,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4205,Rollins,2535,6,NA,674.508,678.408,ds06,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4205,Rollins,2535,6,NA,731.113,733.01,ds06,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4205,Rollins,2535,6,NA,733.01,735.283,ds06,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4205,Rollins,2535,6,NA,739.498,741.253,ds06,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4205,Rollins,2535,6,NA,743.336,745.881,ds06,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4205,Rollins,2535,6,NA,764.248,766.731,ds06,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4224,Rollins,2535,6,NA,797.7,798.821,hc06,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4236,Rollins,2535,6,NA,420.725,422.086,im06,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4207,Rollins,2535,12,NA,838.875,839.913,ds12,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4207,Rollins,2535,12,NA,839.913,841.428,ds12,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4236,Rollins,2535,6,NA,443.57,446.4,im06,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4208,Rollins,2535,9,NA,1196.898,1198.985,ds09,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4208,Rollins,2535,9,NA,1206.623,1208.23,ds09,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4217,Rollins,2535,12,NA,690.92,694.161,gb12,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4217,Rollins,2535,12,NA,709.853,711.05,gb12,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4217,Rollins,2535,12,NA,733.753,735.75,gb12,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4217,Rollins,2535,12,NA,846,847.5,gb12,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4232,Rollins,2535,12,NA,189.818,191.263,hp12,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4252,Rollins,2535,3,NA,71.07,74.297,jw03,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4253,Rollins,2535,6,NA,323.551,325.005,jw06,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4239,Rollins,2535,12,NA,619.655,621.793,im12,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4239,Rollins,2535,12,NA,623.373,625.045,im12,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4239,Rollins,2535,12,NA,633.131,634.155,im12,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4239,Rollins,2535,12,NA,634.72,637.406,im12,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4239,Rollins,2535,12,NA,637.406,640.493,im12,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4217,Rollins,2535,12,NA,1188.083,1191.07,gb12,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4270,Rollins,2535,20,NA,159.789,162.291,me03,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4271,Rollins,2535,6,NA,409.525,412.55,me06,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4270,Rollins,2535,20,NA,162.289,163.328,me03,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4271,Rollins,2535,6,NA,412.55,413.401,me06,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4270,Rollins,2535,20,NA,316.716,318.902,me03,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4270,Rollins,2535,20,NA,318.901,321.587,me03,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4270,Rollins,2535,20,NA,321.585,324.157,me03,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4270,Rollins,2535,20,NA,324.156,327.036,me03,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4271,Rollins,2535,6,NA,567.035,568.871,me06,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4271,Rollins,2535,6,NA,568.871,571.718,me06,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4271,Rollins,2535,6,NA,571.718,574.253,me06,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4270,Rollins,2535,20,NA,332.808,334.366,me03,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4271,Rollins,2535,6,NA,574.253,575.835,me06,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4279,Rollins,2535,6,NA,449.698,450.661,nb06,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4270,Rollins,2535,20,NA,339.905,341.105,me03,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4271,Rollins,2535,6,NA,583.128,584.685,me06,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4270,Rollins,2535,20,NA,341.106,342.029,me03,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4270,Rollins,2535,20,NA,343.807,345.643,me03,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4271,Rollins,2535,6,NA,590.236,591.011,me06,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4271,Rollins,2535,6,NA,591.011,592.26,me06,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4267,Rollins,2535,12,NA,864.755,883.328,ma12,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4271,Rollins,2535,6,NA,594.158,595.646,me06,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4270,Rollins,2535,20,NA,375.706,378.598,me03,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4270,Rollins,2535,20,NA,378.599,379.978,me03,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4270,Rollins,2535,20,NA,379.978,382.247,me03,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4271,Rollins,2535,6,NA,625.995,628.223,me06,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4271,Rollins,2535,6,NA,628.223,630.045,me06,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4271,Rollins,2535,6,NA,630.045,632.106,me06,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4273,Rollins,2535,12,NA,197.885,199.901,me12,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4272,Rollins,2535,9,NA,794.788,795.755,me09,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4309,Rollins,2535,6,NA,23.708,25.28,sw06,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4309,Rollins,2535,6,NA,25.281,26.315,sw06,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4309,Rollins,2535,6,NA,30.018,32.296,sw06,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4312,Rollins,2535,6,NA,205.293,206.24,sx06,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4312,Rollins,2535,6,NA,206.24,207.695,sx06,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4312,Rollins,2535,6,NA,211.373,213.575,sx06,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4309,Rollins,2535,6,NA,235.491,239.4,sw06,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4312,Rollins,2535,6,NA,417.198,420.533,sx06,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4254,Rollins,2535,9,NA,703.218,706.455,jw09,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4272,Rollins,2535,9,NA,1083.051,1086.5,me09,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4254,Rollins,2535,9,NA,779.345,783.288,jw09,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4254,Rollins,2535,9,NA,785.186,787.068,jw09,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4254,Rollins,2535,9,NA,788.518,789.566,jw09,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4313,Rollins,2535,9,NA,351.423,353.058,sx09,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4313,Rollins,2535,9,NA,369.011,370.533,sx09,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4319,Rollins,2538,12,Christopher,375.13,376.266,te12,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4319,Rollins,2538,12,Christopher,376.266,377.518,te12,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4319,Rollins,2538,12,Christopher,378.403,379.715,te12,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4319,Rollins,2538,12,Christopher,943.996,947.531,te12,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4313,Rollins,2535,9,NA,537.678,540.831,sx09,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4336,Rollins,2535,12,NA,14.028,17.821,zm12,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4336,Rollins,2535,12,NA,17.821,20.006,zm12,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4314,Rollins,2538,12,Christopher,1229.35,1234.823,sx12,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4314,Rollins,2538,12,Christopher,1234.823,1236.98,sx12,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4306,Rollins,2535,12,NA,772.001,772.606,st12,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4306,Rollins,2535,12,NA,773.073,773.808,st12,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4306,Rollins,2535,12,NA,774.71,775.976,st12,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4306,Rollins,2535,12,NA,777.111,779.598,st12,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4306,Rollins,2535,12,NA,805.05,806.24,st12,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4306,Rollins,2535,12,NA,810.916,812.238,st12,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4306,Rollins,2535,12,NA,817.24,818.19,st12,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4306,Rollins,2535,12,NA,819.725,821.26,st12,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4336,Rollins,2535,12,NA,680.61,685.063,zm12,audio file missing,audio file missing,audio file missing,audio file missing
+pig,4563,Gleason,2608,37,Laurel,221.645,224.826,laurel,161.3093170732789,80.96638038712781,349.82537976603476,-268.85899937890696
+pig,4574,Gleason,2637,28,William,1339.073,1340.512,william,205.8466399442808,75.20243788002112,475.5801502553063,-400.37771237528517
+pig,4574,Gleason,2638,28,William,1343.6,1344.343,william,341.49371891325427,198.58396442500782,496.2176491840569,-297.63368475904906
+pig,4574,Gleason,2638,28,William,1349.773,1352.014,william,194.81766731605634,80.54339140117993,402.55552005494224,-322.0121286537623
+pig,4574,Gleason,2637,28,William,1397.818,1399.838,william,240.21606101445607,82.99262010230328,385.53286743384837,-302.54024733154506
+pig,4574,Gleason,2637,28,William,1405.016,1406.871,william,256.62331389736335,105.412663168099,414.79318334493956,-309.38052017684055
+pig,6603,Bloom,3148,35,Peter,4334.23,4340.586,021019,122.73556774297373,72.76511448645745,246.62560772875565,-173.86049324229822
+pig,6603,Bloom,3148,35,Peter,4346.047,4349.249,021019,164.3829819629861,90.13946761341347,276.1988914865361,-186.05942387312265
+pig,6603,Bloom,3147,35,Peter,4366.413,4369.827,021019,194.11813926261647,91.76518079222846,302.1005171315954,-210.3353363393669
+pig,6603,Bloom,3147,35,Peter,4369.827,4380.408,021019,297.413349953436,82.71425869978374,425.8004516275823,-343.08619292779855
+pig,6603,Bloom,3148,35,Peter,9501.801,9502.586,021019,292.8987723953741,177.07558929017813,389.2049961118695,-212.12940682169136
+pig,6603,Bloom,3148,35,Peter,9508.261,9509.967,021019,265.0486163967919,115.9683394614974,413.7174487515135,-297.74910929001607
+pig,6603,Bloom,3148,35,Peter,9514.238,9516.049,021019,210.21060628475283,95.79017935402197,298.5351912208522,-202.74501186683023
+pig,6603,Bloom,3147,35,Peter,9557.812,9558.627,021019,205.0574479950299,104.15119410820799,304.97857459577625,-200.82738048756826
+pig,6603,Bloom,3147,35,Peter,9573.976,9576.165,021019,247.6178138314989,105.43176049708089,356.86014517569345,-251.42838467861256
+pig,6603,Bloom,3147,35,Peter,11011.205,11013.409,021019,218.04801208978742,97.25734825049119,329.90793046645985,-232.65058221596865
+pig,6603,Bloom,3147,35,Peter,13826.836,13832.07,021019,206.05273672375387,75.63614272111136,315.29220634349025,-239.6560636223789
+pig,6603,Bloom,3147,35,Peter,13833.012,13835.255,021019,215.56400369284535,102.44055558717257,299.79035650978,-197.34980092260741
+pig,6603,Bloom,3147,35,Peter,13839.254,13840.262,021019,254.6072267501822,177.1417127778651,351.21169979189585,-174.06998701403074
+pig,6598,Bloom,3147,31,Peter,10413.428,10415.783,020713,295.33427313378434,75.81749999725159,515.3141429127179,-439.4966429154663
+pig,7203,MacWhinney,3396,40,Ross,498.097,499.129,030327,audio file missing,audio file missing,audio file missing,audio file missing
+pig,7258,MacWhinney,3396,52,Ross,1298.38,1300.135,040404b,audio file missing,audio file missing,audio file missing,audio file missing
+pig,7258,MacWhinney,3396,52,Ross,1301.89,1303.024,040404b,audio file missing,audio file missing,audio file missing,audio file missing
+pig,7512,VanHouten,3527,40,Kim,18.388,20.693,goldf,audio file missing,audio file missing,audio file missing,audio file missing
+pig,7867,Brent,3843,12,Morgan,1948.463,1949.519,001129,audio file missing,audio file missing,audio file missing,audio file missing
+pig,7872,Brent,3843,14,Morgan,3340.415,3341.316,010129,audio file missing,audio file missing,audio file missing,audio file missing
+pig,7872,Brent,3843,14,Morgan,3342.395,3342.867,010129,audio file missing,audio file missing,audio file missing,audio file missing
+pig,7872,Brent,3843,14,Morgan,3344.551,3345.111,010129,audio file missing,audio file missing,audio file missing,audio file missing
+pig,7872,Brent,3843,14,Morgan,3346.667,3347.643,010129,audio file missing,audio file missing,audio file missing,audio file missing
+pig,7872,Brent,3843,14,Morgan,3398.371,3401.769,010129,audio file missing,audio file missing,audio file missing,audio file missing
+pig,7872,Brent,3843,14,Morgan,3408.163,3411.118,010129,audio file missing,audio file missing,audio file missing,audio file missing
+pig,7872,Brent,3843,14,Morgan,3411.813,3412.656,010129,audio file missing,audio file missing,audio file missing,audio file missing
+pig,7872,Brent,3843,14,Morgan,3414.102,3414.745,010129,audio file missing,audio file missing,audio file missing,audio file missing
+pig,7872,Brent,3843,14,Morgan,3415.66,3416.002,010129,audio file missing,audio file missing,audio file missing,audio file missing
+pig,7872,Brent,3843,14,Morgan,3417.52,3417.915,010129,audio file missing,audio file missing,audio file missing,audio file missing
+pig,7872,Brent,3843,14,Morgan,3599.112,3600.017,010129,audio file missing,audio file missing,audio file missing,audio file missing
+pig,7887,Brent,3850,9,Dillon,4172.241,4173.755,000828,audio file missing,audio file missing,audio file missing,audio file missing
+pig,7886,Brent,3847,15,Miranda,1128.272,1130.451,010217,audio file missing,audio file missing,audio file missing,audio file missing
+pig,7886,Brent,3847,15,Miranda,1137.384,1137.963,010217,audio file missing,audio file missing,audio file missing,audio file missing
+pig,7881,Brent,3847,12,Miranda,3901.986,3903.65,001120,audio file missing,audio file missing,audio file missing,audio file missing
+pig,7900,Brent,3850,15,Dillon,4065.823,4067.158,010304,audio file missing,audio file missing,audio file missing,audio file missing
+pig,7900,Brent,3850,15,Dillon,4324.735,4324.997,010304,audio file missing,audio file missing,audio file missing,audio file missing
+pig,7900,Brent,3850,15,Dillon,4327.17,4327.561,010304,audio file missing,audio file missing,audio file missing,audio file missing
+pig,7987,Brent,3867,14,Timothy,802.54,804.377,010206,audio file missing,audio file missing,audio file missing,audio file missing
+pig,7987,Brent,3867,14,Timothy,806.143,807.953,010206,audio file missing,audio file missing,audio file missing,audio file missing
+pig,7935,Brent,3860,12,Jaylen,3230.737,3232.913,010001,audio file missing,audio file missing,audio file missing,audio file missing
+pig,7935,Brent,3860,12,Jaylen,3235.803,3237.95,010001,audio file missing,audio file missing,audio file missing,audio file missing
+pig,7935,Brent,3860,12,Jaylen,3247.1,3249.12,010001,audio file missing,audio file missing,audio file missing,audio file missing
+pig,7935,Brent,3860,12,Jaylen,3249.51,3251.787,010001,audio file missing,audio file missing,audio file missing,audio file missing
+pig,7935,Brent,3860,12,Jaylen,3282.067,3285.317,010001,audio file missing,audio file missing,audio file missing,audio file missing
+pig,7935,Brent,3860,12,Jaylen,3298.61,3300.18,010001,audio file missing,audio file missing,audio file missing,audio file missing
+pig,7935,Brent,3860,12,Jaylen,3314.657,3317.46,010001,audio file missing,audio file missing,audio file missing,audio file missing
+pig,7935,Brent,3860,12,Jaylen,3323.01,3324.667,010001,audio file missing,audio file missing,audio file missing,audio file missing
+pig,7935,Brent,3860,12,Jaylen,3343.54,3348.857,010001,audio file missing,audio file missing,audio file missing,audio file missing
+pig,7935,Brent,3860,12,Jaylen,3354.657,3360.03,010001,audio file missing,audio file missing,audio file missing,audio file missing
+pig,7991,Brent,3870,10,Tabitha,341.704,344.694,000921,audio file missing,audio file missing,audio file missing,audio file missing
+pig,7935,Brent,3860,12,Jaylen,3365.073,3368.197,010001,audio file missing,audio file missing,audio file missing,audio file missing
+pig,7935,Brent,3860,12,Jaylen,3377.07,3379.063,010001,audio file missing,audio file missing,audio file missing,audio file missing
+pig,7935,Brent,3860,12,Jaylen,3384.123,3385.763,010001,audio file missing,audio file missing,audio file missing,audio file missing
+pig,7935,Brent,3860,12,Jaylen,3403.663,3409.117,010001,audio file missing,audio file missing,audio file missing,audio file missing
+pig,7935,Brent,3860,12,Jaylen,3414.837,3418.083,010001,audio file missing,audio file missing,audio file missing,audio file missing
+pig,7935,Brent,3860,12,Jaylen,3429.82,3435.323,010001,audio file missing,audio file missing,audio file missing,audio file missing
+pig,7935,Brent,3860,12,Jaylen,3485.22,3488.76,010001,audio file missing,audio file missing,audio file missing,audio file missing
+pig,7935,Brent,3860,12,Jaylen,3538.603,3541.15,010001,audio file missing,audio file missing,audio file missing,audio file missing
+pig,7935,Brent,3860,12,Jaylen,3545.333,3546.85,010001,audio file missing,audio file missing,audio file missing,audio file missing
+pig,7935,Brent,3860,12,Jaylen,3600.28,3603.507,010001,audio file missing,audio file missing,audio file missing,audio file missing
+pig,7935,Brent,3860,12,Jaylen,3611.483,3617.78,010001,audio file missing,audio file missing,audio file missing,audio file missing
+pig,7935,Brent,3860,12,Jaylen,3621.23,3625.693,010001,audio file missing,audio file missing,audio file missing,audio file missing
+pig,7985,Brent,3867,13,Timothy,2949.745,2951.058,010024,audio file missing,audio file missing,audio file missing,audio file missing
+pig,7985,Brent,3867,13,Timothy,2951.34,2952.269,010024,audio file missing,audio file missing,audio file missing,audio file missing
+pig,7985,Brent,3867,13,Timothy,3136.661,3137.639,010024,audio file missing,audio file missing,audio file missing,audio file missing
+pig,7985,Brent,3867,13,Timothy,3366.741,3369.244,010024,audio file missing,audio file missing,audio file missing,audio file missing
+pig,7994,Brent,3870,11,Tabitha,605.31,608.736,001105,audio file missing,audio file missing,audio file missing,audio file missing
+pig,7981,Brent,3867,11,Timothy,3663.01,3664.752,001029,audio file missing,audio file missing,audio file missing,audio file missing
+pig,8029,Brent,3881,10,Henry,104.972,105.882,001007,audio file missing,audio file missing,audio file missing,audio file missing
+pig,8029,Brent,3881,10,Henry,106.575,107.932,001007,audio file missing,audio file missing,audio file missing,audio file missing
+pig,8000,Brent,3870,13,Tabitha,1590.415,1593.718,010109,audio file missing,audio file missing,audio file missing,audio file missing
+pig,8000,Brent,3870,13,Tabitha,1596.19,1597.286,010109,audio file missing,audio file missing,audio file missing,audio file missing
+pig,8000,Brent,3870,13,Tabitha,1647.704,1648.456,010109,audio file missing,audio file missing,audio file missing,audio file missing
+pig,8000,Brent,3870,13,Tabitha,1649.898,1650.289,010109,audio file missing,audio file missing,audio file missing,audio file missing
+pig,8026,Brent,3881,10,Henry,622.667,623.593,000924,audio file missing,audio file missing,audio file missing,audio file missing
+pig,8026,Brent,3881,10,Henry,624.356,625.298,000924,audio file missing,audio file missing,audio file missing,audio file missing
+pig,8026,Brent,3881,10,Henry,633.734,634.304,000924,audio file missing,audio file missing,audio file missing,audio file missing
+pig,8048,Brent,3884,14,Xavier,1071.42,1073.27,010205,audio file missing,audio file missing,audio file missing,audio file missing
+pig,8048,Brent,3884,14,Xavier,1100.547,1101.157,010205,audio file missing,audio file missing,audio file missing,audio file missing
+pig,8026,Brent,3881,10,Henry,673.297,674.373,000924,audio file missing,audio file missing,audio file missing,audio file missing
+pig,8026,Brent,3881,10,Henry,683.109,685.737,000924,audio file missing,audio file missing,audio file missing,audio file missing
+pig,8033,Brent,3881,13,Henry,3065.544,3068.424,010021,audio file missing,audio file missing,audio file missing,audio file missing
+pig,8026,Brent,3881,10,Henry,703.609,704.685,000924,audio file missing,audio file missing,audio file missing,audio file missing
+pig,8033,Brent,3881,13,Henry,3140.493,3143.075,010021,audio file missing,audio file missing,audio file missing,audio file missing
+pig,8033,Brent,3881,13,Henry,3245.939,3248.041,010021,audio file missing,audio file missing,audio file missing,audio file missing
+pig,8033,Brent,3881,13,Henry,3380.789,3382.231,010021,audio file missing,audio file missing,audio file missing,audio file missing
+pig,8033,Brent,3881,13,Henry,3383.218,3384.629,010021,audio file missing,audio file missing,audio file missing,audio file missing
+pig,8033,Brent,3881,13,Henry,3442.524,3443.944,010021,audio file missing,audio file missing,audio file missing,audio file missing
+pig,8033,Brent,3881,13,Henry,3596.271,3600.437,010021,audio file missing,audio file missing,audio file missing,audio file missing
+pig,8064,Brent,3896,10,Vas,1074.323,1077.457,000923,audio file missing,audio file missing,audio file missing,audio file missing
+pig,8038,Brent,3881,15,Henry,2847.476,2848.066,010306,audio file missing,audio file missing,audio file missing,audio file missing
+pig,8026,Brent,3881,10,Henry,1874.513,1875.503,000924,audio file missing,audio file missing,audio file missing,audio file missing
+pig,8038,Brent,3881,15,Henry,3092.342,3092.999,010306,audio file missing,audio file missing,audio file missing,audio file missing
+pig,8026,Brent,3881,10,Henry,2186.343,2187.646,000924,audio file missing,audio file missing,audio file missing,audio file missing
+pig,8035,Brent,3881,14,Henry,511.844,513.663,010119,audio file missing,audio file missing,audio file missing,audio file missing
+pig,8038,Brent,3881,15,Henry,3585.507,3586.493,010306,audio file missing,audio file missing,audio file missing,audio file missing
+pig,8038,Brent,3881,15,Henry,3589.786,3590.673,010306,audio file missing,audio file missing,audio file missing,audio file missing
+pig,8035,Brent,3881,14,Henry,593.548,594.925,010119,audio file missing,audio file missing,audio file missing,audio file missing
+pig,8035,Brent,3881,14,Henry,597.45,598.707,010119,audio file missing,audio file missing,audio file missing,audio file missing
+pig,8035,Brent,3881,14,Henry,1425.442,1426.912,010119,audio file missing,audio file missing,audio file missing,audio file missing
+pig,8035,Brent,3881,14,Henry,1575.429,1576.98,010119,audio file missing,audio file missing,audio file missing,audio file missing
+pig,8035,Brent,3881,14,Henry,3771.238,3774.136,010119,audio file missing,audio file missing,audio file missing,audio file missing
+pig,8035,Brent,3881,14,Henry,3876.806,3878.156,010119,audio file missing,audio file missing,audio file missing,audio file missing
+pig,8035,Brent,3881,14,Henry,4228.044,4231.13,010119,audio file missing,audio file missing,audio file missing,audio file missing
+pig,8035,Brent,3881,14,Henry,4278.35,4281.35,010119,audio file missing,audio file missing,audio file missing,audio file missing
+pig,8037,Brent,3881,15,Henry,144.544,147.066,010217,audio file missing,audio file missing,audio file missing,audio file missing
+pig,8035,Brent,3881,14,Henry,4394.071,4395.616,010119,audio file missing,audio file missing,audio file missing,audio file missing
+pig,8037,Brent,3881,15,Henry,248.861,250.381,010217,audio file missing,audio file missing,audio file missing,audio file missing
+pig,8071,Brent,3904,15,Vas_Coleman,4401.54,4404.073,010221,audio file missing,audio file missing,audio file missing,audio file missing
+pig,8073,Brent,3893,15,Vas_Coleman,1210.34,1211.473,010229,audio file missing,audio file missing,audio file missing,audio file missing
+pig,8073,Brent,3893,15,Vas_Coleman,1211.793,1212.527,010229,audio file missing,audio file missing,audio file missing,audio file missing
+pig,8073,Brent,3893,15,Vas_Coleman,1214.587,1215.47,010229,audio file missing,audio file missing,audio file missing,audio file missing
+pig,8073,Brent,3893,15,Vas_Coleman,1216.82,1217.307,010229,audio file missing,audio file missing,audio file missing,audio file missing
+pig,8073,Brent,3893,15,Vas_Coleman,1225.897,1226.413,010229,audio file missing,audio file missing,audio file missing,audio file missing
+pig,8073,Brent,3893,15,Vas_Coleman,1230.987,1231.523,010229,audio file missing,audio file missing,audio file missing,audio file missing
+pig,8073,Brent,3893,15,Vas_Coleman,1233.247,1233.91,010229,audio file missing,audio file missing,audio file missing,audio file missing
+pig,8073,Brent,3893,15,Vas_Coleman,1237.393,1237.927,010229,audio file missing,audio file missing,audio file missing,audio file missing
+pig,9085,Soderstrom,3937,9,Theo,215.359,220.495,000818b,159.49207173002696,108.5414306194091,398.3475764450018,-289.8061458255927
+pig,9103,Soderstrom,3934,13,Theo,179.916,181.324,010028a,158.49755634675444,80.0911102529636,227.81542250228125,-147.72431224931765
+pig,9103,Soderstrom,3934,13,Theo,719.602,724.562,010028a,145.4670635866407,96.0173288498299,422.22458960128165,-326.20726075145177
+pig,9100,Soderstrom,3934,13,Theo,844.714,847.466,010017,175.95161461279613,75.0193954575345,460.2977914759904,-385.27839601845585
+pig,9102,Soderstrom,3934,13,Theo,717.624,720.464,010028b,216.59423837882085,122.13005580682146,463.04747582366826,-340.9174200168468
+pig,9102,Soderstrom,3934,13,Theo,721.631,722.728,010028b,259.3594753130793,122.78297449832542,352.0175687026994,-229.234594204374
+pig,9102,Soderstrom,3934,13,Theo,1568.804,1571.828,010028b,130.93941546097096,67.49473387033629,181.22303603986083,-113.72830216952454
+pig,9102,Soderstrom,3934,13,Theo,1615.54,1617.012,010028b,177.52227823183915,137.6439594861623,225.68135771522708,-88.03739822906479
+pig,9124,Sachs,3942,23,Naomi,1391,1392.202,011103,264.23667102836635,114.57846212950328,515.9837564118835,-401.4052942823802
+pig,9124,Sachs,3942,23,Naomi,1401.058,1403.224,011103,174.28137224840674,135.92305387468045,198.4718357006503,-62.548781825969854
+pig,9207,McCune,3948,17,Alice,405.471,410.62,010428,278.22996280130354,75.25815798412577,489.2258402966268,-413.96768231250104
+pig,9207,McCune,3948,17,Alice,410.62,411.706,010428,235.13518108419947,197.85434603265955,277.78683791103106,-79.93249187837151
+pig,9209,McCune,3948,19,Alice,66.151,66.696,010705,202.0425685348227,196.3781751395801,211.72585468724623,-15.347679547666132
+pig,9207,McCune,3948,17,Alice,534.215,535.153,010428,198.6477984002073,88.07804334199265,281.3578706522716,-193.2798273102789
+pig,9207,McCune,3948,17,Alice,535.153,536.005,010428,219.7106784902599,211.21759568151163,243.8632113756772,-32.64561569416557
+pig,9212,McCune,3948,22,Alice,173.978,174.976,011000,271.75991191283066,179.9294049890104,421.74016228129426,-241.81075729228385
+pig,9212,McCune,3948,22,Alice,174.976,176.428,011000,246.77930166928232,73.12304962605117,347.76820890145274,-274.64515927540157
+pig,9212,McCune,3948,22,Alice,183.743,185.21,011000,213.13226818036367,93.1802403051754,275.1357483743291,-181.95550806915372
+pig,9211,McCune,3948,21,Alice,953.441,955.296,010900,audio file missing,audio file missing,audio file missing,audio file missing
+pig,9211,McCune,3948,21,Alice,978.781,979.73,010900,audio file missing,audio file missing,audio file missing,audio file missing
+pig,9211,McCune,3948,21,Alice,1017.261,1021.466,010900,audio file missing,audio file missing,audio file missing,audio file missing
+pig,9214,McCune,3948,23,Alice,26.196,26.95,011100,190.8690434093784,76.38429227934498,239.96691916723623,-163.58262688789125
+pig,9214,McCune,3948,23,Alice,965.978,967.365,011100,257.8219216604084,180.2809877603629,313.2181815074407,-132.9371937470778
+pig,9214,McCune,3948,23,Alice,975.333,976.525,011100,184.83377002282208,164.06979698935575,196.9305594772858,-32.86076248793006
+pig,9214,McCune,3948,23,Alice,983.763,984.95,011100,222.23021035966198,189.6773576186155,278.9977003386307,-89.32034272001519
+pig,9266,McCune,3958,20,Jase,99.535,100.29,010800,192.59922475615028,148.98963600833807,223.16164440905683,-74.17200840071877
+pig,9269,McCune,3958,22,Jase,88.78,89.54,011000,243.93856530018988,142.43194721939523,403.8308089783659,-261.39886175897067
+pig,9266,McCune,3958,20,Jase,487.392,491.093,010800,231.39324791749596,165.86195701108608,455.27172043297395,-289.4097634218879
+pig,9266,McCune,3958,20,Jase,491.093,492.453,010800,235.0771537301738,94.31152612061629,373.5419938078148,-279.2304676871985
+pig,9266,McCune,3958,20,Jase,498.837,501.768,010800,216.9949961987312,81.2584360691281,268.2005039614033,-186.9420678922752
+pig,9265,McCune,3958,19,Jase,823.823,829.82,010700,343.02996531689655,194.51127705011623,482.4331424801198,-287.92186543000355
+pig,9265,McCune,3958,19,Jase,1563.939,1576.056,010700,241.22588460868582,74.49576924652652,491.1002916441587,-416.6045223976322
+pig,9265,McCune,3958,19,Jase,1576.056,1576.713,010700,220.79888243521708,190.1171811371468,288.42825282027695,-98.31107168313017
+pig,9265,McCune,3958,19,Jase,1576.713,1577.876,010700,207.04229756200596,123.36193601312944,255.6699798379012,-132.30804382477174
+pig,9339,McCune,3966,21,Rick,492.853,494.543,010900,181.3896309631787,77.16093197853479,228.06132060652428,-150.90038862798949
+pig,9336,McCune,3966,18,Rick,270.847,272.305,010600,192.44312622743325,103.5859289802598,244.67729795567635,-141.09136897541657
+pig,9270,McCune,3958,24,Jase,43.518,44.87,020000,275.4942518547039,181.66659044933246,351.57232977582925,-169.90573932649679
+pig,9271,McCune,3958,23,Jase,98.712,101.392,011100,319.8631211745281,78.04337659511373,438.1746584351357,-360.131281840022
+pig,9271,McCune,3958,23,Jase,103.315,104.21,011100,200.75553680532823,88.57654855632397,303.61719213750246,-215.04064358117847
+pig,9270,McCune,3958,24,Jase,102.29,102.678,020000,232.50616477304015,195.87537759275287,283.252507617963,-87.3771300252101
+pig,9270,McCune,3958,24,Jase,102.678,103.413,020000,249.3148918987123,185.29742629876995,321.9885848226209,-136.69115852385096
+pig,9268,McCune,3958,21,Jase,95.507,95.88,010900,226.47150568877888,202.11944282064604,279.5669566215186,-77.44751380087257
+pig,9268,McCune,3958,21,Jase,95.88,96.393,010900,266.3150815731422,178.2438913792436,374.70527411975326,-196.46138274050966
+pig,9268,McCune,3958,21,Jase,158.542,158.887,010900,184.3614001394502,162.30182782878617,206.06805594781548,-43.76622811902931
+pig,9268,McCune,3958,21,Jase,158.887,159.518,010900,228.05679577330147,196.28135572577833,264.0999974167499,-67.81864169097156
+pig,9268,McCune,3958,21,Jase,164.087,164.623,010900,267.59265467780455,176.478918324507,443.0922219356399,-266.6133036111329
+pig,9268,McCune,3958,21,Jase,164.623,165.423,010900,262.08829395732783,115.5851607146781,350.28327505441206,-234.69811433973396
+pig,9376,Weist,3976,29,Benjamin,610.288,614.111,020503,audio file missing,audio file missing,audio file missing,audio file missing
+pig,9383,Weist,3974,40,Benjamin,192.089,195.182,030321,audio file missing,audio file missing,audio file missing,audio file missing
+pig,9387,Weist,3980,31,Emily,109.16,110.39,020704,157.5080677397959,78.01078744767021,206.4963294759345,-128.48554202826426
+pig,9378,Weist,3976,33,Benjamin,1417.764,1422.901,020816,audio file missing,audio file missing,audio file missing,audio file missing
+pig,9391,Weist,3980,34,Emily,523.007,525.268,020923,195.01608968774852,102.24209651902049,272.19558364250423,-169.95348712348374
+pig,9377,Weist,3976,29,Benjamin,1044.045,1048.184,020510,audio file missing,audio file missing,audio file missing,audio file missing
+pig,9403,Weist,3980,51,Emily,1307.614,1309.06,040216,232.13780668107765,101.08395123985767,365.3389066086567,-264.2549553687991
+pig,9406,Weist,3980,54,Emily,364.629,366.275,040519,191.21289603197286,76.8183459606698,245.90084805764843,-169.08250209697863
+pig,9392,Weist,3980,34,Emily,953.294,955.571,021007,166.7020750147461,77.45604373456577,280.5354416064361,-203.07939787187036
+pig,9429,Weist,3991,51,Emma,128.778,132.535,040300,333.45638866678803,186.0101538770322,529.514133933189,-343.5039800561568
+pig,9429,Weist,3991,51,Emma,1016.048,1019.559,040300,347.24907011565665,86.03754452399751,498.05297147206505,-412.01542694806756
+pig,9437,Weist,3995,26,Jillian,580.162,582.374,020122,226.51988096089107,155.20910538798142,296.93110665257643,-141.722001264595
+pig,9438,Weist,3995,26,Jillian,1152.288,1156.177,020129,207.47530347763774,166.88178355301085,282.8543298037389,-115.97254625072804
+pig,9443,Weist,3998,28,Jillian,394.447,396.01,020409,254.04546625607932,205.03450502166018,364.42321480635326,-159.38870978469308
+pig,9443,Weist,3998,28,Jillian,402.411,404.438,020409,241.6853773561723,79.49159767853787,410.7135558198058,-331.2219581412679
+pig,9443,Weist,3998,28,Jillian,424.373,432.336,020409,251.6979012971998,75.22544562926907,508.466188573774,-433.2407429445049
+pig,9418,Weist,3987,38,Emma,323.43,325.493,030209,243.2350834154892,89.4136394428103,318.50313198544796,-229.0894925426377
+pig,9418,Weist,3987,38,Emma,360.521,363.197,030209,379.9676764560508,221.54950272006386,521.0590091827484,-299.5095064626845
+pig,9418,Weist,3987,38,Emma,507.558,511.067,030209,318.8371068682941,114.3688705961365,497.66561390293424,-383.29674330679774
+pig,9444,Weist,3994,28,Jillian,1301.996,1304.191,020414,403.40700031509465,142.67319039423518,527.2295248063353,-384.55633441210017
+pig,9444,Weist,3994,28,Jillian,1304.191,1308.347,020414,173.88482812497418,91.12694359603279,232.5485480735973,-141.4216044775645
+pig,9418,Weist,3987,38,Emma,757.26,761.666,030209,230.37054721643386,79.25574170861422,496.72565194296266,-417.46991023434845
+pig,9448,Weist,3999,30,Jillian,745.915,747.212,020521,234.4145779608507,111.99159075754766,263.7171834601962,-151.72559270264856
+pig,9418,Weist,3987,38,Emma,1149.648,1154.371,030209,343.16252755790606,74.8868528670066,528.1894777376195,-453.30262487061293
+pig,9418,Weist,3987,38,Emma,1161.6,1164.394,030209,303.08162561216335,218.38591917856115,491.9883440079098,-273.60242482934865
+pig,9418,Weist,3987,38,Emma,1181.617,1183.229,030209,312.8736083521511,263.7632407981455,439.2685962960769,-175.50535549793142
+pig,9418,Weist,3987,38,Emma,1441.252,1445.541,030209,289.9229235181447,216.36033715579606,499.9943258979832,-283.6339887421871
+pig,9390,Weist,3980,33,Emily,318.861,320.657,020902,236.04342169020157,184.2156321017141,396.0911389356557,-211.87550683394159
+pig,9390,Weist,3980,33,Emily,323.833,325.944,020902,293.13373701797053,90.3595450174954,514.6472556371459,-424.2877106196505
+pig,9451,Weist,3999,31,Jillian,1489.424,1490.155,020616,376.19708603563475,236.81856064419398,497.6253089391839,-260.8067482949899
+pig,9451,Weist,3999,31,Jillian,1492.517,1494.33,020616,277.1835074014047,104.33481817557958,457.89160599464594,-353.55678781906636
+pig,9426,Weist,3987,45,Emma,1209.199,1211.228,030907,291.5794390523025,193.6070251277599,481.79739844453206,-288.19037331677214
+pig,9426,Weist,3989,45,Emma,1263.131,1265.143,030907,157.98435204319395,82.82960245156673,405.41173885526376,-322.58213640369706
+pig,9426,Weist,3989,45,Emma,1275.346,1278.605,030907,228.07060895114807,89.09090611687112,449.3883370689701,-360.297430952099
+pig,9426,Weist,3989,45,Emma,1380.748,1383.442,030907,211.96080967471298,108.69326103112425,378.09138824449735,-269.3981272133731
+pig,9462,Weist,4002,29,Matt,1411.328,1414.653,020504,292.9060967705828,115.62923070835589,512.7838594610995,-397.15462875274363
+pig,9462,Weist,4002,29,Matt,1414.653,1419.391,020504,265.7347031257555,95.56022779497414,487.7612757988553,-392.20104800388117
+pig,9462,Weist,4003,29,Matt,1423.132,1425.659,020504,325.60484875275233,175.9624243249668,430.3220741044654,-254.3596497794986
+pig,9462,Weist,4002,29,Matt,1430.78,1432.891,020504,264.8106190720503,100.6685479941522,497.12508067961386,-396.45653268546164
+pig,9462,Weist,4002,29,Matt,1437.797,1442.733,020504,221.74945617980921,82.22105938493756,469.66959547550465,-387.4485360905671
+pig,9765,NewmanRatner,4270,7,4731SA,506.107,508.972,4731SA,audio file missing,audio file missing,audio file missing,audio file missing
+pig,9780,NewmanRatner,4314,7,5013LA7,505.522,510.578,5013LA,audio file missing,audio file missing,audio file missing,audio file missing
+pig,9780,NewmanRatner,4314,7,5013LA7,510.578,514.04,5013LA,audio file missing,audio file missing,audio file missing,audio file missing
+pig,9797,NewmanRatner,4361,7,5443AO7,536.303,539.358,5443AO,audio file missing,audio file missing,audio file missing,audio file missing
+pig,9797,NewmanRatner,4361,7,5443AO7,539.358,543.073,5443AO,audio file missing,audio file missing,audio file missing,audio file missing
+pig,9786,NewmanRatner,4341,7,5118PM7,889.34,895.368,5118PM,audio file missing,audio file missing,audio file missing,audio file missing
+pig,9813,NewmanRatner,4414,7,5661AP7,214.078,215.936,5661AP,audio file missing,audio file missing,audio file missing,audio file missing
+pig,9813,NewmanRatner,4414,7,5661AP7,215.936,221.137,5661AP,audio file missing,audio file missing,audio file missing,audio file missing
+pig,9771,NewmanRatner,4303,7,4802JP7,803.252,809.092,4802JP,audio file missing,audio file missing,audio file missing,audio file missing
+pig,9771,NewmanRatner,4303,7,4802JP7,809.092,813.572,4802JP,audio file missing,audio file missing,audio file missing,audio file missing
+pig,9819,NewmanRatner,4432,7,5794ES,211.754,216.011,5794ES,audio file missing,audio file missing,audio file missing,audio file missing
+pig,9819,NewmanRatner,4432,7,5794ES,216.011,217.707,5794ES,audio file missing,audio file missing,audio file missing,audio file missing
+pig,9788,NewmanRatner,4344,7,5224EZS7,527.584,531.711,5224EZS,audio file missing,audio file missing,audio file missing,audio file missing
+pig,9832,NewmanRatner,4477,7,6047JC7,287.31,307.289,6047JC,audio file missing,audio file missing,audio file missing,audio file missing
+pig,9832,NewmanRatner,4477,7,6047JC7,315.795,318.806,6047JC,audio file missing,audio file missing,audio file missing,audio file missing
+pig,9832,NewmanRatner,4477,7,6047JC7,318.806,322.871,6047JC,audio file missing,audio file missing,audio file missing,audio file missing
+pig,9823,NewmanRatner,4472,7,5878SC7,464.98,471.008,5878SC,audio file missing,audio file missing,audio file missing,audio file missing
+pig,9846,NewmanRatner,4524,7,6785KS7,463.764,465.81,6785KS,audio file missing,audio file missing,audio file missing,audio file missing
+pig,9845,NewmanRatner,4513,7,6691MW7mos,683.059,689.74,6691MW,audio file missing,audio file missing,audio file missing,audio file missing
+pig,9845,NewmanRatner,4513,7,6691MW7mos,689.74,694.281,6691MW,audio file missing,audio file missing,audio file missing,audio file missing
+pig,9871,NewmanRatner,4582,7,7553JT7mos,418.921,420.307,7553JT,audio file missing,audio file missing,audio file missing,audio file missing
+pig,9864,NewmanRatner,4571,7,7251TR,596.272,598.787,7251TR,audio file missing,audio file missing,audio file missing,audio file missing
+pig,9863,NewmanRatner,4566,7,7236FB7mos,741.652,745.972,7236FB,audio file missing,audio file missing,audio file missing,audio file missing
+pig,9882,NewmanRatner,4254,10,4641CC7,838.926,841.433,4641CC,audio file missing,audio file missing,audio file missing,audio file missing
+pig,9890,NewmanRatner,4279,10,4767JC,447.548,451.442,4767JC,audio file missing,audio file missing,audio file missing,audio file missing
+pig,9890,NewmanRatner,4279,10,4767JC,454.599,456.593,4767JC,audio file missing,audio file missing,audio file missing,audio file missing
+pig,9903,NewmanRatner,4634,10,5013LA10,127.092,129.812,5013LA,audio file missing,audio file missing,audio file missing,audio file missing
+pig,9900,NewmanRatner,4640,10,4929MM10mos,104.972,107.174,4929MM,audio file missing,audio file missing,audio file missing,audio file missing
+pig,9898,NewmanRatner,4625,10,4866AC10,637.926,641.988,4866AC,audio file missing,audio file missing,audio file missing,audio file missing
+pig,9914,NewmanRatner,4653,10,5244RE10mos,326.851,334.297,5244RE,audio file missing,audio file missing,audio file missing,audio file missing
+pig,9913,NewmanRatner,4651,10,5244SE10mos,493.339,496.987,5244SE,audio file missing,audio file missing,audio file missing,audio file missing
+pig,9915,NewmanRatner,4658,10,5266EC10,348.857,349.971,5266EC,audio file missing,audio file missing,audio file missing,audio file missing
+pig,9916,NewmanRatner,4661,10,5346GG10,876.292,881.698,5346GG,audio file missing,audio file missing,audio file missing,audio file missing
+pig,9932,NewmanRatner,4707,10,5593SH10,281.878,284.363,5593SH,audio file missing,audio file missing,audio file missing,audio file missing
+pig,9912,NewmanRatner,4715,10,5224EZS10mos,330.942,332.528,5224EZS,audio file missing,audio file missing,audio file missing,audio file missing
+pig,9912,NewmanRatner,4715,10,5224EZS10mos,366.225,372.452,5224EZS,audio file missing,audio file missing,audio file missing,audio file missing
+pig,9969,NewmanRatner,4728,10,6785KS10mos,331.468,335.014,6785KS,audio file missing,audio file missing,audio file missing,audio file missing
+pig,9953,NewmanRatner,4467,10,5965PC,120.128,121.327,5965PC,audio file missing,audio file missing,audio file missing,audio file missing
+pig,9887,NewmanRatner,4720,10,4724LM10,624.364,628.572,4724LM,audio file missing,audio file missing,audio file missing,audio file missing
+pig,9887,NewmanRatner,4720,10,4724LM10,632.992,643.061,4724LM,audio file missing,audio file missing,audio file missing,audio file missing
+pig,9906,NewmanRatner,4487,10,NA,82.952,93.402,5073AC,audio file missing,audio file missing,audio file missing,audio file missing
+pig,9973,NewmanRatner,4553,10,6825MT,632.409,634.638,6825MT,audio file missing,audio file missing,audio file missing,audio file missing
+pig,9973,NewmanRatner,4553,10,6825MT,634.638,641.985,6825MT,audio file missing,audio file missing,audio file missing,audio file missing
+pig,9976,NewmanRatner,4736,10,6878SK10,563.935,565.55,6878SK,audio file missing,audio file missing,audio file missing,audio file missing
+pig,9992,NewmanRatner,4761,10,7534EM10mos,613.413,616.297,7534EM,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10002,NewmanRatner,4797,11,4629AB11,231.848,233.023,4629AB,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10002,NewmanRatner,4797,11,4629AB11,236.007,238.092,4629AB,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10002,NewmanRatner,4797,11,4629AB11,238.092,239.223,4629AB,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10003,NewmanRatner,4800,11,4641CC11,602.542,606.526,4641CC,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10003,NewmanRatner,4800,11,4641CC11,606.526,608.158,4641CC,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10005,NewmanRatner,4613,11,4664AM,139.938,141.379,4664AM,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10005,NewmanRatner,4613,11,4664AM,401.631,405.06,4664AM,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10031,NewmanRatner,4848,11,5224EZS11,282.67,296.435,5224EZS,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10038,NewmanRatner,4867,11,5346GG11,423.128,425.337,5346GG,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10063,NewmanRatner,4431,11,5820CP,333.805,338.571,5820CP,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10062,NewmanRatner,4432,11,5794ES,284.747,285.857,5794ES,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10062,NewmanRatner,4432,11,5794ES,287.772,291.144,5794ES,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10062,NewmanRatner,4432,11,5794ES,300.62,303.092,5794ES,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10062,NewmanRatner,4432,11,5794ES,303.787,305.075,5794ES,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10074,NewmanRatner,4467,11,5965PC,66.396,69.823,5965PC,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10078,NewmanRatner,4944,11,6047JC11mos,246.392,248.871,6047JC,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10074,NewmanRatner,4467,11,5965PC,253.327,254.83,5965PC,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10074,NewmanRatner,4467,11,5965PC,622.701,625.923,5965PC,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10074,NewmanRatner,4467,11,5965PC,701.629,709.531,5965PC,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10074,NewmanRatner,4467,11,5965PC,749.1,752.815,5965PC,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10084,NewmanRatner,4959,11,6454MB11,918.084,918.94,6454MB,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10084,NewmanRatner,4959,11,6454MB11,958.995,960.098,6454MB,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10084,NewmanRatner,4959,11,6454MB11,964.207,966.829,6454MB,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10109,NewmanRatner,5012,11,7222MD11mos,151.913,153.399,7222MD,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10122,NewmanRatner,5051,18,5244SE18,110.864,111.69,5244SE,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10122,NewmanRatner,5051,18,5244SE18,336.751,338.237,5244SE,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10119,NewmanRatner,5043,18,5013LA,577.413,584.002,5013LA,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10117,NewmanRatner,5037,18,4269LP18,740.233,743.214,4269LP,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10095,NewmanRatner,4553,11,6825MT,299.301,303.973,6825MT,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10125,NewmanRatner,4875,18,5440JJ11mos,423.809,425.009,5440JJ,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10081,NewmanRatner,5028,11,6314AK11,649.909,651.229,6314AK,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10081,NewmanRatner,5028,11,6314AK11,652.515,654.684,6314AK,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10134,NewmanRatner,5077,18,5630WS18mos,637.392,649.121,5630WS,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10127,NewmanRatner,5057,18,5543EF18,885.21,886.873,5543EF,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10127,NewmanRatner,5057,18,5543EF18,886.873,889.114,5543EF,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10102,NewmanRatner,4542,11,7099EH7,797.221,805.294,7099EH,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10147,NewmanRatner,5110,18,5959DL,194.91,196.814,5949DL,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10147,NewmanRatner,5110,18,5959DL,279.678,281.853,5949DL,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10148,NewmanRatner,4467,18,5965PC,187.512,190.401,5965PC,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10142,NewmanRatner,5097,18,5859ME,820.128,823.101,5859ME,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10142,NewmanRatner,5097,18,5859ME,823.101,825.039,5859ME,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10141,NewmanRatner,4431,18,5820CP,429.817,432.506,5820CP,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10165,NewmanRatner,5143,18,7099EH,102.622,104.868,7099EH,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10169,NewmanRatner,5161,18,7534EM18mos,143.005,151.03,7534EM,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10169,NewmanRatner,5161,18,7534EM18mos,151.03,153.021,7534EM,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10170,NewmanRatner,5155,18,7814NB18moschildmos,419.375,424.266,7814NB,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10178,NewmanRatner,5179,24,4641CC24,404.813,406.43,4641CC,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10174,NewmanRatner,5170,24,4452CM24,835.964,838.375,4452CM,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10163,NewmanRatner,4530,18,7018NB,382.943,383.842,7018NB,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10163,NewmanRatner,4530,18,7018NB,383.842,388.971,7018NB,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10189,NewmanRatner,5201,24,4801RB,144.487,146.718,4801RB,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10190,NewmanRatner,5200,24,4802JP,110.073,111.537,4802JP,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10190,NewmanRatner,5200,24,4802JP,113.247,114.678,4802JP,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10188,NewmanRatner,4279,24,4767JC,565.591,570.02,4767JC,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10199,NewmanRatner,5219,24,4997LM24,208.637,211.723,4997LM,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10199,NewmanRatner,5219,24,4997LM24,229.328,231.552,4997LM,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10198,NewmanRatner,5215,24,4929MM24mos,224.659,226.169,4929MM,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10198,NewmanRatner,5215,24,4929MM24mos,226.169,227.177,4929MM,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10204,NewmanRatner,5230,24,5111CG24,171.916,173.5,5111CG,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10204,NewmanRatner,5230,24,5111CG24,179.27,181.73,5111CG,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10204,NewmanRatner,5230,24,5111CG24,181.73,184.459,5111CG,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10204,NewmanRatner,5230,24,5111CG24,184.459,186.231,5111CG,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10204,NewmanRatner,5230,24,5111CG24,186.231,189.527,5111CG,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10204,NewmanRatner,5230,24,5111CG24,189.527,191.259,5111CG,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10204,NewmanRatner,5230,24,5111CG24,194.633,195.703,5111CG,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10204,NewmanRatner,5230,24,5111CG24,195.703,201.84,5111CG,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10204,NewmanRatner,5230,24,5111CG24,333.969,340.367,5111CG,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10204,NewmanRatner,5230,24,5111CG24,340.367,343.173,5111CG,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10204,NewmanRatner,5230,24,5111CG24,343.173,347.273,5111CG,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10204,NewmanRatner,5230,24,5111CG24,347.273,350.853,5111CG,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10204,NewmanRatner,5230,24,5111CG24,350.853,353.6,5111CG,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10204,NewmanRatner,5230,24,5111CG24,353.6,357.263,5111CG,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10204,NewmanRatner,5230,24,5111CG24,364.516,366.568,5111CG,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10200,NewmanRatner,5223,24,5039MB,957.703,959.561,5039MB,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10200,NewmanRatner,5223,24,5039MB,959.561,961.79,5039MB,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10200,NewmanRatner,5223,24,5039MB,961.79,966.62,5039MB,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10188,NewmanRatner,4279,24,4767JC,846.241,847.921,4767JC,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10207,NewmanRatner,4339,24,5193HB,413.79,415.259,5193HB,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10210,NewmanRatner,5245,24,5244RE24,189.565,191.56,5244RE,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10210,NewmanRatner,5245,24,5244RE24,192.856,195.043,5244RE,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10202,NewmanRatner,4321,24,5057MS,783.981,786.517,5057MS,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10212,NewmanRatner,4857,24,5266EC,652.614,657.509,5266EC,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10224,NewmanRatner,5284,24,5561AC,93.533,100.627,5561AC,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10226,NewmanRatner,5290,24,5571FW,47.554,49.495,5571FW,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10226,NewmanRatner,5290,24,5571FW,49.495,52.384,5571FW,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10232,NewmanRatner,5296,24,5630WS,116.664,123.91,5630WS,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10232,NewmanRatner,5296,24,5630WS,131.608,134.113,5630WS,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10216,NewmanRatner,5257,24,5440JJ24mos,539.612,542.501,5440JJ,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10218,NewmanRatner,5266,24,5474ES24,324.024,326.952,5474ES,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10216,NewmanRatner,5257,24,5440JJ24mos,546.299,548.074,5440JJ,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10216,NewmanRatner,5257,24,5440JJ24mos,549.577,550.942,5440JJ,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10216,NewmanRatner,5257,24,5440JJ24mos,550.942,552.615,5440JJ,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10216,NewmanRatner,5257,24,5440JJ24mos,561.82,563.389,5440JJ,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10216,NewmanRatner,5257,24,5440JJ24mos,571.48,574.452,5440JJ,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10216,NewmanRatner,5257,24,5440JJ24mos,732.347,736.434,5440JJ,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10216,NewmanRatner,5257,24,5440JJ24mos,738.952,740.399,5440JJ,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10216,NewmanRatner,5257,24,5440JJ24mos,988.591,1011.897,5440JJ,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10217,NewmanRatner,5263,24,5443AO24mos,1017.224,1023.273,5443AO,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10217,NewmanRatner,5263,24,5443AO24mos,1053.719,1059.734,5443AO,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10237,NewmanRatner,5092,24,5777FC,170.516,177.183,5777FC,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10237,NewmanRatner,5092,24,5777FC,177.183,181.989,5777FC,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10247,NewmanRatner,5310,24,5929LD24,294.77,297.403,5929LD,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10246,NewmanRatner,4934,24,5928RL,286.937,289.691,5928RL,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10271,NewmanRatner,5360,24,6825MT24,289.903,293.338,6825MT,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10272,NewmanRatner,5358,24,6826LD24,932.849,935.14,6826LD,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10274,NewmanRatner,5381,24,7013VD,786.218,790.698,7013VD,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10294,NewmanRatner,5404,24,7814NB24moschild,76.232,81.422,7814NB,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10254,NewmanRatner,5113,24,6047JC,763.722,766.61,6047JC,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10293,NewmanRatner,5399,24,7660HK24mos,291.483,294.333,7660HK,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10288,NewmanRatner,5414,24,7419EB24mos,866.69,869.378,7419EB,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10288,NewmanRatner,5414,24,7419EB24mos,873.654,875.907,7419EB,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10419,NewmanRatner,5430,10,4273WC10,141.929,145.98,4273WC,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10393,NewmanRatner,4526,24,6818AP,516.251,521.74,6818AP,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10512,NewmanRatner,4725,7,6630TM10mos,389.724,392.779,6630TM,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10615,NewmanRatner,4934,11,5928RL,156.288,163.923,5928RL,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10659,NewmanRatner,5037,18,4269LP18,178.405,180.701,4269LP,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10664,NewmanRatner,5051,18,5244SE18,132.966,139.282,5244SE,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10731,NewmanRatner,4279,24,4767JC,123.106,124.612,4767JC,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10740,NewmanRatner,5215,24,4929MM24mos,160.669,161.926,4929MM,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10719,NewmanRatner,5178,24,4619WC,184.556,186.856,4619WZ,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10744,NewmanRatner,5223,24,5039MB,181.85,186.68,5039MB,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10719,NewmanRatner,5178,24,4619WC,265.651,268.205,4619WZ,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10750,NewmanRatner,4339,24,5193HB,47.061,53.582,5193HB,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10755,NewmanRatner,4857,24,5266EC,246.752,250.007,5266EC,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10755,NewmanRatner,4857,24,5266EC,254.065,258.524,5266EC,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10747,NewmanRatner,5231,24,5111CG24,131.413,135.94,5111CG,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10747,NewmanRatner,5230,24,5111CG24,135.94,137.242,5111CG,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10747,NewmanRatner,5230,24,5111CG24,157.824,160.201,5111CG,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10763,NewmanRatner,5266,24,5474ES24,253.459,258.826,5474ES,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10774,NewmanRatner,5296,24,5630WS,83.099,95.359,5630WS,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10774,NewmanRatner,5296,24,5630WS,103.654,111.167,5630WS,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10755,NewmanRatner,4857,24,5266EC,689.02,702.861,5266EC,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10755,NewmanRatner,4857,24,5266EC,704.831,714.749,5266EC,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10775,NewmanRatner,5298,24,5661AP,274.288,281.052,5661AP,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10784,NewmanRatner,5097,24,5859ME,334.261,335.947,5859ME,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10802,NewmanRatner,5332,24,6453HS,342.791,346.422,6453HS,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10898,Snow,5565,30,Nathaniel,507.593,508.993,020518b,286.04119262036346,104.60368829858241,502.3295695010296,-397.72588120244717
+pig,10898,Snow,5565,30,Nathaniel,509.73,511.705,020518b,381.7633637187718,169.2908280185703,495.69886875064753,-326.4080407320772
+pig,10898,Snow,5565,30,Nathaniel,511.705,513.586,020518b,285.0970176524537,129.46368737641146,519.3940396758123,-389.93035229940085
+pig,10898,Snow,5565,30,Nathaniel,513.586,515.528,020518b,283.92345646473615,159.04252334442492,516.5902750174685,-357.54775167304354
+pig,10898,Snow,5565,30,Nathaniel,515.528,517.408,020518b,305.32527233601434,197.83127192867607,399.32187439513444,-201.49060246645837
+pig,10898,Snow,5565,30,Nathaniel,517.408,524.57,020518b,261.2325958442125,129.53232711501562,504.6924355619981,-375.16010844698246
+pig,10898,Snow,5565,30,Nathaniel,2491.998,2493.521,020518b,232.24622572906364,94.98236494574765,407.1797016129152,-312.1973366671676
+pig,10935,Snow,5565,41,Nathaniel,106.976,110.625,030418,176.93762755427264,87.01292430743952,303.8338820065844,-216.8209576991449
+pig,10935,Snow,5565,41,Nathaniel,110.625,112.881,030418,202.4827180878225,85.78748105865036,337.8865144147262,-252.09903335607584
+pig,10935,Snow,5565,41,Nathaniel,216.476,217.866,030418,167.8391913114182,137.61725691258764,278.4363974290442,-140.81914051645654
+pig,10935,Snow,5565,41,Nathaniel,251.233,254.31,030418,184.10261896057557,96.1722935168003,442.2587840050342,-346.08649048823395
+pig,10931,Snow,5565,40,Nathaniel,374.096,376.555,030409b,308.0387888327613,81.96159514941245,450.526382117536,-368.56478696812354
+pig,10923,Snow,5565,39,Nathaniel,903.509,905.654,030227a,248.04858776119664,77.50095163879467,517.7361890176556,-440.235237378861
+pig,10923,Snow,5565,39,Nathaniel,975.171,977.4,030227a,220.23799995199488,80.30551146535292,399.17797168090283,-318.8724602155499
+pig,10935,Snow,5565,41,Nathaniel,533.935,535.558,030418,210.53319820654235,90.05898839154789,342.526382647838,-252.4673942562901
+pig,10923,Snow,5565,39,Nathaniel,1041.187,1042.758,030227a,279.00549759140716,110.94076532967209,525.5110427487103,-414.57027741903823
+pig,10940,Snow,5565,41,Nathaniel,323.603,325.145,030421b,268.23663115434147,184.18064657801568,385.2114604616654,-201.03081388364973
+pig,10940,Snow,5565,41,Nathaniel,328.036,328.958,030421b,223.22659964800658,170.91431996139224,381.5801277706621,-210.66580780926986
+pig,10940,Snow,5565,41,Nathaniel,328.958,332.855,030421b,276.77576448019255,84.9849180053297,461.878009568793,-376.8930915634633
+pig,10940,Snow,5565,41,Nathaniel,332.855,335.23,030421b,234.7807163016452,81.20548562627783,493.3357336359576,-412.13024800967975
+pig,10940,Snow,5565,41,Nathaniel,335.23,339.345,030421b,258.66607957016663,168.51282892237128,498.49820400502506,-329.9853750826538
+pig,10940,Snow,5565,41,Nathaniel,339.345,340.598,030421b,287.4521583354921,173.03799186586687,464.72197704085727,-291.6839851749904
+pig,10931,Snow,5565,40,Nathaniel,641.186,643.926,030409b,170.89641456143312,75.1181745574375,213.7005112512851,-138.5823366938476
+pig,10940,Snow,5565,41,Nathaniel,340.598,341.468,030421b,233.43671255947547,178.3302692094967,327.1965193486134,-148.8662501391167
+pig,10940,Snow,5565,41,Nathaniel,345.846,348.476,030421b,204.0309002053783,78.70116982505463,244.908089356337,-166.20691953128238
+pig,10940,Snow,5565,41,Nathaniel,348.476,352.68,030421b,218.82565935335924,131.278797303138,466.1550133210804,-334.8762160179424
+pig,10940,Snow,5565,41,Nathaniel,352.68,354.473,030421b,289.9065883831713,178.54842049800592,505.91024773053596,-327.36182723253
+pig,10940,Snow,5565,41,Nathaniel,354.473,356.978,030421b,277.5240114446831,124.56210823821174,439.0722282308458,-314.51011999263403
+pig,10940,Snow,5565,41,Nathaniel,356.978,358.115,030421b,391.4226806627877,313.3735562653512,479.8182848104278,-166.4447285450766
+pig,10934,Snow,5565,40,Nathaniel,951.162,953.198,030410a,184.66345791953643,118.18626291203199,491.6263576534089,-373.4400947413769
+pig,10936,Snow,5565,40,Nathaniel,873.015,876.225,030410b,209.77165593044015,145.17940410492608,467.8023786869444,-322.6229745820183
+pig,10934,Snow,5565,40,Nathaniel,1020.82,1022.389,030410a,200.08915246784426,129.96445625761856,400.7049914237933,-270.7405351661747
+pig,10934,Snow,5565,40,Nathaniel,1024.745,1030.354,030410a,194.17421020635064,92.76405888589105,475.90152519286744,-383.1374663069764
+pig,10934,Snow,5565,40,Nathaniel,1030.354,1033.662,030410a,199.7341243638486,118.89309069750452,461.3295068969673,-342.43641619946277
+pig,10935,Snow,5565,41,Nathaniel,773.565,778.548,030418,169.18153905334663,97.13263405409168,306.6307126351656,-209.4980785810739
+pig,10936,Snow,5565,40,Nathaniel,974.231,978.143,030410b,180.31821122264142,74.0860149982249,283.7798401148871,-209.69382511666223
+pig,10923,Snow,5565,39,Nathaniel,1534.429,1535.999,030227a,271.54424111689775,73.08298817112335,486.5953699311838,-413.51238176006046
+pig,10939,Snow,5565,41,Nathaniel,761.205,764.018,030421a,233.96108656266134,174.14877140280555,346.9034037237763,-172.75463232097076
+pig,10923,Snow,5565,39,Nathaniel,1824.527,1825.52,030227a,328.3433765993039,171.23906472851058,463.5134038312676,-292.27433910275704
+pig,10923,Snow,5565,39,Nathaniel,1826.922,1827.953,030227a,232.87486205081643,151.0850202331182,362.31383019662474,-211.22880996350654
+pig,10923,Snow,5565,39,Nathaniel,1844.839,1845.953,030227a,202.75764251502906,146.22371033297387,245.4340659451578,-99.21035561218395
+pig,10935,Snow,5565,41,Nathaniel,1471.568,1475.431,030418,179.97484117047063,73.95534154089462,387.7622944396144,-313.80695289871977
+pig,10935,Snow,5565,41,Nathaniel,1741.185,1744.931,030418,213.172458161277,84.92500186175964,482.96970990585965,-398.0447080441
+pig,10934,Snow,5565,40,Nathaniel,2245.064,2247.236,030410a,215.79648086964525,102.19443593211749,491.0159225193908,-388.82148658727334
+pig,10936,Snow,5565,40,Nathaniel,2048.711,2051.206,030410b,232.0864927425381,129.46979734905847,497.2291881070062,-367.75939075794776
+pig,10936,Snow,5565,40,Nathaniel,2053.011,2054.804,030410b,176.4529991319863,98.82341475666088,266.1557817914485,-167.33236703478758
+pig,10939,Snow,5565,41,Nathaniel,1613.968,1617.381,030421a,253.7067256449433,75.33554715122348,474.1168526515302,-398.78130550030676
+pig,10931,Snow,5565,40,Nathaniel,2283.65,2285.355,030409b,169.1057313592176,73.27099382475286,296.5074473203739,-223.23645349562105
+pig,10931,Snow,5565,40,Nathaniel,2285.355,2287.781,030409b,262.6991872991244,87.1855139380793,334.8829159633011,-247.69740202522183
+pig,10939,Snow,5565,41,Nathaniel,2091.78,2095.576,030421a,237.1706362574645,75.84345368480973,437.1524160940495,-361.30896240923977
+pig,10939,Snow,5565,41,Nathaniel,2112.153,2113.475,030421a,260.75615252199265,190.33847613836232,461.09135932457815,-270.75288318621585
+pig,10939,Snow,5565,41,Nathaniel,2118.68,2121.44,030421a,229.89894061577283,85.75861942778728,518.6667542581401,-432.9081348303529
+pig,10930,Snow,5567,40,Nathaniel,1230.846,1233.818,030409a,audio file missing,audio file missing,audio file missing,audio file missing
+pig,10930,Snow,5567,40,Nathaniel,1235.654,1237.507,030409a,audio file missing,audio file missing,audio file missing,audio file missing
+pig,41456,Menn,22675,13,Jacob,163.8,165.3,010113,audio file missing,audio file missing,audio file missing,audio file missing
+pig,41456,Menn,22675,13,Jacob,165.3,166.5,010113,audio file missing,audio file missing,audio file missing,audio file missing
+pig,42206,Providence,22707,18,Alex,799.396,805.126,010526,301.1681128906851,164.0830687449459,499.9407409176942,-335.85767217274827
+pig,42204,Providence,22707,17,Alex,1050.675,1057.32,010427,189.84366486891224,75.10646449461123,494.03475408777393,-418.92828959316273
+pig,42213,Providence,22707,23,Alex,143.196,147.371,011103,214.58017459949394,85.92512670246829,505.7463991436918,-419.8212724412235
+pig,42207,Providence,22707,18,Alex,994.951,1025.676,010614,286.72099288027437,75.85797569383989,405.4800122257231,-329.6220365318832
+pig,42207,Providence,22707,18,Alex,1165.143,1178.973,010614,235.4705668926146,76.72771577402942,511.0563479902129,-434.32863221618345
+pig,42209,Providence,22707,20,Alex,1080.636,1086.228,010811,228.07636778811693,93.42006067078623,432.8069225723465,-339.3868619015602
+pig,42208,Providence,22707,19,Alex,1458.84,1460.425,010707,--undefined--,--undefined--,--undefined--,--undefined--
+pig,42216,Providence,22707,23,Alex,567.05,572.091,011024,190.52741221776046,137.94488982621235,229.2856299875656,-91.34074016135327
+pig,42212,Providence,22707,21,Alex,1498.015,1500.585,010908,256.10722875803765,150.70532305917516,523.3813534740557,-372.67603041488053
+pig,42212,Providence,22707,21,Alex,2032.023,2034.326,010908,193.21353336506996,144.4359133602567,329.2836540204329,-184.84774066017619
+pig,42220,Providence,22712,26,Alex,2829.385,2834.956,020117,--undefined--,--undefined--,--undefined--,--undefined--
+pig,42215,Providence,22707,22,Alex,2726.275,2733.983,011006,193.48864272279553,74.97107634880211,301.38573071823225,-226.41465436943014
+pig,42242,Providence,22707,35,Alex,711.65,713.035,021108,122.90951112534377,75.12343377877968,286.9331999596704,-211.8097661808907
+pig,42242,Providence,22707,35,Alex,758.08,761.13,021108,305.10266767543544,210.6798821975803,482.8462585587974,-272.1663763612171
+pig,42242,Providence,22707,35,Alex,785.35,786.511,021108,199.45584833155797,78.7146191278184,498.7154127047422,-420.0007935769238
+pig,42242,Providence,22707,35,Alex,991.76,994.015,021108,240.82357938723106,198.40374898826406,329.8357724979672,-131.43202350970313
+pig,42242,Providence,22707,35,Alex,1068.13,1070.355,021108,--undefined--,--undefined--,--undefined--,--undefined--
+pig,42248,Providence,22707,38,Alex,744.426,749.695,030214,208.57464930299315,94.4046831935665,476.9549601740558,-382.55027698048934
+pig,42244,Providence,22707,36,Alex,2987.976,2989.186,030006,321.8428001687345,244.43105381886863,456.9340642350497,-212.50301041618104
+pig,42244,Providence,22707,36,Alex,2993.79,2994.846,030006,450.2872988447626,430.0508858643123,493.08803152848105,-63.03714566416875
+pig,42243,Providence,22707,36,Alex,1871.016,1874.053,021122,169.5095034534877,129.68968587210716,437.87561537128636,-308.1859294991792
+pig,42253,Providence,22707,41,Alex,2531.103,2532.545,030424,357.3915059782114,217.0501225954703,427.3720521858268,-210.32192959035652
+pig,42253,Providence,22707,41,Alex,2532.545,2537.04,030424,190.15914096304087,125.4535647511918,498.27345089081655,-372.8198861396247
+pig,42253,Providence,22707,41,Alex,2554.263,2556.058,030424,220.07041262015068,129.74099114727193,345.1872955403318,-215.44630439305985
+pig,42253,Providence,22707,41,Alex,2582.255,2585.665,030424,205.45805188589858,123.38262537692191,277.86482934437964,-154.48220396745774
+pig,42229,Providence,22707,29,Alex,3223.436,3224.843,020509,194.33721511811282,97.76213769018023,490.19753235026894,-392.4353946600887
+pig,42273,Providence,22721,20,Ethan,470.435,487.92,010726,295.0050236426948,76.33084015370038,506.9527205611624,-430.621880407462
+pig,42273,Providence,22721,20,Ethan,535.966,538.511,010726,287.7938292270595,79.76838544577686,384.3207197693743,-304.55233432359745
+pig,42273,Providence,22721,20,Ethan,555.11,558.758,010726,224.69912771481978,132.93995453416008,468.99033577221286,-336.05038123805275
+pig,42260,Providence,22721,14,Ethan,1297.76,1302.946,010117,234.07533136527036,76.46157253136376,451.0453252655628,-374.58375273419904
+pig,42260,Providence,22721,14,Ethan,1345.22,1346.15,010117,238.1507027845338,166.0402921000931,306.7671804787994,-140.7268883787063
+pig,42267,Providence,22721,17,Ethan,186.1,190.015,010426,279.18886889324324,116.33542637002786,448.0220463595722,-331.68661998954434
+pig,42267,Providence,22721,17,Ethan,196.941,199.555,010426,240.4498463943387,174.46939699390373,346.1951316160362,-171.72573462213245
+pig,42267,Providence,22721,17,Ethan,199.555,202.793,010426,234.351775904169,164.70908629885352,435.20351730799945,-270.49443100914596
+pig,42261,Providence,22721,14,Ethan,2840.488,2845.321,010201,296.6669350145255,224.82352280780844,515.5240616254806,-290.70053881767217
+pig,42267,Providence,22721,17,Ethan,251.078,253.69,010426,215.4324975088579,176.32005902488928,499.54748791066555,-323.22742888577625
+pig,42267,Providence,22721,17,Ethan,255.791,258.69,010426,227.37082732271324,139.1807673514342,330.1550199597175,-190.97425260828328
+pig,42260,Providence,22721,14,Ethan,1673.351,1674.421,010117,229.43250182680987,199.72973100469932,272.58423222175827,-72.85450121705895
+pig,42261,Providence,22721,14,Ethan,2918.513,2920.415,010201,223.10975682535476,100.14754579271553,316.72351838073234,-216.5759725880168
+pig,42261,Providence,22721,14,Ethan,2922.593,2924.515,010201,224.64822381208566,201.32553644511088,253.94885085310491,-52.62331440799403
+pig,42263,Providence,22721,15,Ethan,1039.298,1041.515,010228,293.9520367863771,173.8152821545861,522.6823223754242,-348.8670402208381
+pig,42275,Providence,22721,21,Ethan,1443.5,1448.913,010820,237.7229718669372,118.31935185336705,310.2584543394469,-191.9391024860799
+pig,42272,Providence,22721,19,Ethan,2054.364,2057.963,010714,206.92793381202168,114.59292532443462,481.87766430787303,-367.2847389834384
+pig,42268,Providence,22721,18,Ethan,2864.518,2867.865,010517,215.9232164660238,138.44744068499062,323.1429636253408,-184.6955229403502
+pig,42268,Providence,22721,18,Ethan,2938.17,2941.183,010517,366.63054387937945,225.26245711561424,445.34133190164636,-220.07887478603212
+pig,42268,Providence,22721,18,Ethan,2982.86,2985.773,010517,229.71323510791424,170.6639894391998,466.4812319685477,-295.81724252934794
+pig,42268,Providence,22721,18,Ethan,3009.111,3014.758,010517,261.5091304143211,87.65401671038177,407.1159327804826,-319.4619160701008
+pig,42268,Providence,22721,18,Ethan,3038.9,3040.773,010517,252.83388765729995,161.70383516711505,333.80102078939643,-172.0971856222814
+pig,42269,Providence,22721,18,Ethan,3457.236,3460.646,010602,257.5752471612242,176.88016504338427,466.0897974248343,-289.20963238145
+pig,42268,Providence,22721,18,Ethan,3232.826,3235.965,010517,218.07987844517103,68.02425035078669,518.7616322078778,-450.7373818570911
+pig,42269,Providence,22721,18,Ethan,3558.131,3561.153,010602,304.80684654632967,129.8654896574464,396.1515686234049,-266.2860789659585
+pig,42287,Providence,22721,27,Ethan,248.143,254.143,020222,196.5447646283593,74.53557837777268,341.14420442645763,-266.608626048685
+pig,42287,Providence,22721,27,Ethan,264.8,266.1,020222,213.88368793038535,107.17809320240261,288.02802865751175,-180.84993545510915
+pig,42287,Providence,22721,27,Ethan,266.1,267.615,020222,218.39570210270477,72.95560698222758,461.8027418599648,-388.8471348777372
+pig,42287,Providence,22721,27,Ethan,277.943,280.281,020222,223.72942476109336,88.25888886605772,400.62315638817415,-312.36426752211645
+pig,42287,Providence,22721,27,Ethan,297.9,299.948,020222,275.4209244696402,176.1371901846048,378.46071913454375,-202.32352894993895
+pig,42287,Providence,22721,27,Ethan,301.945,303.681,020222,202.2315957089527,173.33625720667172,221.8615671723003,-48.525309965628594
+pig,42286,Providence,22721,26,Ethan,753.246,761.548,020208,267.9558418503731,75.4961052503862,497.2920744889599,-421.79596923857366
+pig,42286,Providence,22721,26,Ethan,775.681,781.415,020208,293.37589068056616,69.30068454278549,529.4850155133954,-460.18433097060995
+pig,42286,Providence,22721,26,Ethan,787.943,790.7,020208,292.5525809645464,173.56855491426217,453.5509575807531,-279.98240266649094
+pig,42286,Providence,22721,26,Ethan,790.7,791.8,020208,345.1410457507004,207.00631847222365,485.5817053878312,-278.57538691560757
+pig,42286,Providence,22721,26,Ethan,804.411,809.45,020208,285.0051391278072,76.20189883052488,494.1040536502525,-417.9021548197276
+pig,42286,Providence,22721,26,Ethan,811.125,814.815,020208,280.63582383141386,206.57400049709204,451.150124686392,-244.57612418929997
+pig,42286,Providence,22721,26,Ethan,814.815,817.886,020208,235.33720846354433,144.79532747027199,407.6033331842057,-262.80800571393377
+pig,42286,Providence,22721,26,Ethan,829.653,836.72,020208,277.6247419472409,143.88532772105248,499.0958612236212,-355.21053350256875
+pig,42265,Providence,22721,16,Ethan,941.61,943.036,010400,266.4072291885194,146.55759239095156,497.4803921442293,-350.9227997532778
+pig,42265,Providence,22721,16,Ethan,1225.436,1228.716,010400,284.0040283492024,161.36025580650087,498.39893653990146,-337.0386807334006
+pig,42265,Providence,22721,16,Ethan,1236.088,1237.965,010400,235.00419939035925,143.71649043523186,500.6374445529281,-356.9209541176963
+pig,42265,Providence,22721,16,Ethan,1252.185,1255.975,010400,271.3265618122611,81.90235952044749,339.6495246025062,-257.7471650820587
+pig,42265,Providence,22721,16,Ethan,1685.038,1691.495,010400,285.64724659665836,72.7152553126109,519.8443076181092,-447.12905230549825
+pig,42286,Providence,22721,26,Ethan,1673.786,1676.786,020208,308.9649985997745,209.28904698514356,458.33396732413206,-249.0449203389885
+pig,42280,Providence,22721,23,Ethan,3583.96,3589.491,011023,200.06956380415957,81.04088854890784,388.3163937501117,-307.2755052012038
+pig,42292,Providence,22721,29,Ethan,3139.28,3141.038,020515,220.6281650339637,173.62057600300707,311.15204580005144,-137.53146979704437
+pig,42292,Providence,22721,29,Ethan,3142.05,3143.171,020515,341.9269337122667,247.98262169686714,453.20081581684235,-205.2181941199752
+pig,42297,Providence,22721,32,Ethan,1022.96,1024.41,020725,150.54795885138512,85.89189251198866,242.7925680430872,-156.90067553109853
+pig,42305,Providence,22729,13,Lily,906.57,907.34,010102,317.2268429164073,135.25766294833755,463.90195073383194,-328.6442877854944
+pig,42305,Providence,22729,13,Lily,990.768,991.84,010102,295.9869920679717,160.03892851182144,388.8729532057933,-228.83402469397186
+pig,42305,Providence,22729,13,Lily,991.84,993.753,010102,251.4397481852721,76.57840534548329,485.3239131214014,-408.7455077759181
+pig,42305,Providence,22729,13,Lily,1043.095,1045.478,010102,289.0262731261038,81.80463297730553,465.2754700923369,-383.4708371150314
+pig,42296,Providence,22721,31,Ethan,830.593,833.906,020709,208.3294833344291,118.72660167294758,299.94315454166156,-181.21655286871396
+pig,42296,Providence,22721,31,Ethan,836.066,838.16,020709,196.30080442293868,84.222087937333,306.3893977223298,-222.1673097849968
+pig,42296,Providence,22721,31,Ethan,848.018,851.225,020709,209.21043637167963,79.05326064771576,495.78434979034404,-416.73108914262826
+pig,42296,Providence,22721,31,Ethan,975.81,980.398,020709,253.19295285398036,210.77706649654996,415.51003361923216,-204.7329671226822
+pig,42296,Providence,22721,31,Ethan,983.925,985.845,020709,225.01948559778558,119.16848094928757,283.0991652074633,-163.9306842581757
+pig,42296,Providence,22721,31,Ethan,995.34,996.628,020709,225.27098606786296,97.80905021032208,345.9612901484562,-248.15223993813413
+pig,42299,Providence,22721,33,Ethan,2054.436,2059.971,020900,308.02871695648474,212.37392352673837,440.2220466586206,-227.84812313188226
+pig,42299,Providence,22721,33,Ethan,2073.645,2078.766,020900,317.2245595792438,106.29917232082155,433.8848765219483,-327.58570420112676
+pig,42299,Providence,22721,33,Ethan,2082.278,2090.236,020900,256.49623421703785,114.94516472834786,433.7746972636249,-318.82953253527705
+pig,42299,Providence,22721,33,Ethan,2090.238,2097.641,020900,246.00717488772045,95.57478814534068,338.48991014011057,-242.9151219947699
+pig,42299,Providence,22721,33,Ethan,2097.641,2100.501,020900,262.09434873739235,155.15494334584147,441.85253993050105,-286.69759658465955
+pig,42296,Providence,22721,31,Ethan,1239.821,1243.3,020709,141.797630306187,81.48867489364946,245.73361186439976,-164.2449369707503
+pig,42296,Providence,22721,31,Ethan,1271.771,1273.698,020709,302.0390537207544,220.0147576944114,350.27402742469314,-130.25926973028174
+pig,42308,Providence,22729,14,Lily,3018.88,3021.265,010213,239.31413216172163,123.34217184874889,514.1917474068894,-390.8495755581405
+pig,42308,Providence,22729,14,Lily,3021.265,3022.728,010213,293.5124100084187,155.84683684887102,519.8472407342405,-364.00040388536945
+pig,42308,Providence,22729,14,Lily,3125.755,3127.633,010213,420.0257557321019,369.794227421473,499.1010085108224,-129.30678108934939
+pig,42308,Providence,22729,14,Lily,3127.633,3132.696,010213,296.30685035313616,226.0340495548888,499.1370886761593,-273.1030391212705
+pig,42308,Providence,22729,14,Lily,3195.728,3197.983,010213,337.61890258566393,81.76821622916461,471.7922978736168,-390.02408164445217
+pig,42308,Providence,22729,14,Lily,3199.12,3202.091,010213,292.880592708914,141.259990662516,489.94387236378765,-348.6838817012716
+pig,42308,Providence,22729,14,Lily,3263.961,3274.216,010213,329.28122750538347,201.05691740535093,486.478325997061,-285.4214085917101
+pig,42308,Providence,22729,14,Lily,3274.216,3275.145,010213,237.0576320193591,179.7611163625267,523.2891575896876,-343.52804122716094
+pig,42298,Providence,22721,32,Ethan,2150.406,2152.583,020810,174.13104634910255,109.00911036062253,325.81586342538264,-216.80675306476013
+pig,42298,Providence,22721,32,Ethan,2161.393,2164.705,020810,207.0534825901415,82.47166564776145,339.90249505878114,-257.43082941101966
+pig,42298,Providence,22721,32,Ethan,2202.275,2206.396,020810,216.32008311668403,94.59040471584154,399.52987078588524,-304.9394660700437
+pig,42313,Providence,22729,17,Lily,925.896,928.831,010423,--undefined--,--undefined--,--undefined--,--undefined--
+pig,42313,Providence,22729,17,Lily,959.928,965.368,010423,--undefined--,--undefined--,--undefined--,--undefined--
+pig,42315,Providence,22729,18,Lily,1037.232,1038.245,010521,257.7002396506855,128.97647160265748,329.6174428225552,-200.6409712198977
+pig,42315,Providence,22729,18,Lily,1126.162,1129.032,010521,128.8583514035212,75.95077157970448,203.70945071165735,-127.75867913195287
+pig,42318,Providence,22729,19,Lily,977.676,981.85,010701,362.4356077862235,77.77771368554897,504.66828863042645,-426.89057494487747
+pig,42319,Providence,22729,20,Lily,857.542,859.806,010719,210.09987269502395,105.69713749207612,340.21018224959215,-234.513044757516
+pig,42312,Providence,22729,16,Lily,1372.745,1375.711,010326,247.99010803204473,76.15129746334284,495.00391754855127,-418.8526200852084
+pig,42312,Providence,22729,16,Lily,1375.711,1378.928,010326,196.92326318583662,76.58149926473179,398.6119894878071,-322.0304902230753
+pig,42319,Providence,22729,20,Lily,2417.676,2419.475,010719,317.2331195146698,88.98413348295708,463.52741509511753,-374.54328161216046
+pig,42319,Providence,22729,20,Lily,2434.308,2435.988,010719,195.45199739646836,75.5841527240491,256.71325120181064,-181.12909847776154
+pig,42319,Providence,22729,20,Lily,2512.61,2516.301,010719,214.47490990298687,76.93062821429315,394.5624472248483,-317.63181901055515
+pig,42312,Providence,22729,16,Lily,3037.231,3045.56,010326,154.60389164985995,75.942287701355,424.80174607497446,-348.8594583736195
+pig,42316,Providence,22729,18,Lily,689.025,692.727,010611,244.4746845761382,143.50914570439178,459.27314212074765,-315.7639964163559
+pig,42312,Providence,22729,16,Lily,3374.331,3381.02,010326,159.18325543133858,68.29155560017533,291.2728064642749,-222.98125086409954
+pig,42312,Providence,22729,16,Lily,3381.02,3383.62,010326,180.45940384860623,76.53044674850588,495.716920640395,-419.18647389188914
+pig,42322,Providence,22729,21,Lily,1142.851,1144.771,010827,194.39872180410683,75.8540282826436,488.03571716206943,-412.18168887942585
+pig,42322,Providence,22729,21,Lily,1156.5,1158.475,010827,356.5870892276233,202.48107666047042,528.6800071173551,-326.1989304568847
+pig,42332,Providence,22729,25,Lily,321.145,323.415,020101,297.06975459668655,80.16347337098468,468.07960604987966,-387.916132678895
+pig,42332,Providence,22729,25,Lily,962.388,967.165,020101,206.99518036756987,75.89617779815754,439.9900302409837,-364.0938524428261
+pig,42331,Providence,22729,25,Lily,1156.775,1157.841,020023,189.32876016206058,77.03274108085995,507.4481756455963,-430.4154345647363
+pig,42324,Providence,22729,22,Lily,1581.321,1583.168,010925,221.17074691240572,110.56201625867757,268.23219819147647,-157.6701819327989
+pig,42327,Providence,22729,23,Lily,510.027,512.958,011107,307.4740951929796,77.31133330066795,525.7749631561604,-448.46362985549246
+pig,42324,Providence,22729,22,Lily,1936.256,1938.828,010925,237.7487331742247,74.85257180582286,493.32397394917047,-418.47140214334763
+pig,42320,Providence,22735,20,Lily,83.46,86.178,010803,221.11144595942122,102.49403044604747,487.5676746757012,-385.0736442296537
+pig,42323,Providence,22729,21,Lily,2162.366,2168.283,010912,293.8503888507258,71.12632359550477,499.100598734455,-427.97427513895025
+pig,42320,Providence,22729,20,Lily,614.813,616.706,010803,141.9083418166689,80.40902724106938,225.18389747322016,-144.77487023215076
+pig,42336,Providence,22729,26,Lily,388.115,390.046,020201,281.5546565361313,111.77611533330527,444.99705661805655,-333.2209412847513
+pig,42336,Providence,22729,26,Lily,474.596,475.366,020201,337.29569646141607,83.81934798520194,411.9120777917346,-328.09272980653265
+pig,42310,Providence,22729,16,Lily,1627.695,1630.32,010323,239.68184642687567,76.70312268388936,513.2814805394644,-436.578357855575
+pig,42310,Providence,22729,16,Lily,1630.32,1633.431,010323,197.87786201563816,78.37637495828325,376.1659485556944,-297.78957359741116
+pig,42328,Providence,22729,24,Lily,610.787,611.463,011126,213.8398963924439,80.42484587726234,359.13210329880616,-278.70725742154383
+pig,42335,Providence,22731,26,Lily,2438.39,2441.028,020123,190.4225738302063,161.67717940192648,226.11946907933478,-64.4422896774083
+pig,42339,Providence,22729,27,Lily,1636.488,1641.431,020227,257.12500377365654,78.34790568892407,482.778808705342,-404.4309030164179
+pig,42339,Providence,22729,27,Lily,1792.321,1796.97,020227,265.39347756425525,127.35605334618609,464.8673204484723,-337.5112671022862
+pig,42348,Providence,22729,30,Lily,1165.025,1169.035,020526,163.40662356476278,78.16749870394423,201.22845922797825,-123.06096052403402
+pig,42357,Providence,22729,32,Lily,707.61,712.75,020728,204.13965684537524,126.81391062339115,442.4092052230366,-315.59529459964546
+pig,42342,Providence,22729,28,Lily,1872.832,1875.45,020402,153.251325294629,76.11442290510955,279.1617600379094,-203.04733713279984
+pig,42342,Providence,22729,28,Lily,2283.893,2285.228,020402,272.5297293892827,125.03505333898488,385.01664757189735,-259.98159423291247
+pig,42342,Providence,22729,28,Lily,2285.228,2286.15,020402,212.47844232047225,134.9272592242608,356.07789768037463,-221.15063845611382
+pig,42357,Providence,22729,32,Lily,2967.23,2972.415,020728,269.6494091900614,149.32867980239516,444.51317145712153,-295.18449165472634
+pig,42352,Providence,22729,31,Lily,1395.833,1400.423,020623,177.59038348799277,76.66821151516153,332.3353785080594,-255.66716699289788
+pig,42352,Providence,22729,31,Lily,2675.833,2682.316,020623,224.69416872561277,83.75290434359938,459.37530283744695,-375.6223984938476
+pig,42352,Providence,22729,31,Lily,2686.17,2689.851,020623,225.68530537799907,75.30346019626987,359.0557828504818,-283.752322654212
+pig,42352,Providence,22729,31,Lily,2691.235,2693.818,020623,262.74174985474474,137.61976841276828,336.2973003763927,-198.6775319636244
+pig,42352,Providence,22729,31,Lily,2711.313,2717.315,020623,202.56513962432476,78.69614083305268,399.6923200764325,-320.99617924337986
+pig,42352,Providence,22729,31,Lily,2725.163,2728.281,020623,245.7000835883649,104.16766070135462,477.9542120027724,-373.7865513014178
+pig,42352,Providence,22729,31,Lily,2754.395,2760.05,020623,198.9921464194257,77.29605492802568,397.0382600941992,-319.7422051661735
+pig,42352,Providence,22729,31,Lily,2760.05,2765.705,020623,183.8163386696606,78.77095669218451,525.384170001,-446.6132133088155
+pig,42352,Providence,22729,31,Lily,2813.483,2820.658,020623,199.35315089405447,80.80222690923715,394.15113032094143,-313.34890341170427
+pig,42352,Providence,22729,31,Lily,2849.633,2853.726,020623,246.55910901286666,74.61156508620358,522.0357431063652,-447.4241780201616
+pig,42387,Providence,22744,13,Naima,415.943,417.521,010026,273.34006853869664,166.7126698194797,408.37519309392246,-241.66252327444278
+pig,42375,Providence,22731,39,Lily,1720.613,1722.447,030218,316.5507044182844,75.26426481585911,497.85350169003823,-422.5892368741791
+pig,42386,Providence,22744,12,Naima,887.41,890.073,010014,250.05272134632807,204.68298358755212,443.46090775355117,-238.77792416599905
+pig,42390,Providence,22744,14,Naima,1142.63,1146.171,010207,241.695189882008,102.41197556961384,369.1975169565625,-266.78554138694864
+pig,42390,Providence,22744,14,Naima,1162.985,1169.046,010207,219.44557559499583,77.316242374684,474.93548950656196,-397.61924713187796
+pig,42390,Providence,22744,14,Naima,1169.046,1172.635,010207,244.99618444683853,83.39417757467561,453.94258910619203,-370.5484115315164
+pig,42390,Providence,22744,14,Naima,1172.635,1175.168,010207,240.98587352237533,125.26532174380453,419.01853308422994,-293.7532113404254
+pig,42390,Providence,22744,14,Naima,1175.168,1178.358,010207,216.6067106626221,112.64473084798068,323.12880791034297,-210.4840770623623
+pig,42392,Providence,22744,15,Naima,1148.758,1152.795,010307,293.00066529826074,83.39012196787723,484.3016005330359,-400.9114785651587
+pig,42392,Providence,22744,15,Naima,1158.628,1160.096,010307,235.30234315777932,117.33943466486488,302.9136453277599,-185.57421066289504
+pig,42382,Providence,22729,46,Lily,3204.94,3206.941,030927b,--undefined--,--undefined--,--undefined--,--undefined--
+pig,42382,Providence,22729,46,Lily,3238.01,3241.475,030927b,--undefined--,--undefined--,--undefined--,--undefined--
+pig,42397,Providence,22744,17,Naima,503.193,505.953,010416,295.4904164890456,192.22581727588096,488.55516578439375,-296.3293485085128
+pig,42409,Providence,22744,20,Naima,339.26,343.525,010801,320.4324742022646,242.91877138971398,430.8789823168908,-187.96021092717683
+pig,42408,Providence,22744,20,Naima,632.081,634.185,010723,270.222703943644,194.954145976692,422.0549899295597,-227.10084395286773
+pig,42403,Providence,22744,18,Naima,1288.3,1290.118,010604,209.51993126180054,177.42706294963344,253.74500392473774,-76.3179409751043
+pig,42393,Providence,22744,15,Naima,1657.301,1659.366,010312,227.21939259277806,93.1158717423154,452.69095411565525,-359.57508237333985
+pig,42409,Providence,22744,20,Naima,1820.37,1825.525,010801,267.0615463592137,104.91176031199677,348.23403255292135,-243.32227224092458
+pig,42405,Providence,22744,19,Naima,1757.35,1760.39,010700,249.07147218510383,119.88231662412986,367.5358986578477,-247.65358203371787
+pig,42405,Providence,22744,19,Naima,1761.945,1764.475,010700,221.05397152455848,85.16952856989387,300.8321693086893,-215.6626407387954
+pig,42405,Providence,22744,19,Naima,1822.295,1824.33,010700,208.10957586422617,166.36269798553684,250.94158227243312,-84.57888428689628
+pig,42403,Providence,22744,18,Naima,2671.48,2682.321,010604,220.35035164960658,67.02629736113941,446.4977081153923,-379.4714107542529
+pig,42403,Providence,22744,18,Naima,2777.595,2787.876,010604,199.9868920096682,68.02905747455557,513.570725102128,-445.54166762757245
+pig,42403,Providence,22744,18,Naima,2924.425,2926.368,010604,214.63904319824343,91.57352249416317,355.47112559309295,-263.8976030989298
+pig,42403,Providence,22744,18,Naima,2991.958,2994.863,010604,302.3320619234913,191.25003971573682,522.1845455281901,-330.9345058124533
+pig,42403,Providence,22744,18,Naima,3004.15,3005.2,010604,282.5370047767375,197.2953979447687,462.25528213375344,-264.95988418898474
+pig,42415,Providence,22744,21,Naima,62.568,65.326,010915,291.8477955534142,168.54774442935064,468.7283063106115,-300.18056188126087
+pig,42403,Providence,22744,18,Naima,3156.543,3160.383,010604,191.00806115396736,81.86536889834466,374.48752931982096,-292.62216042147634
+pig,42415,Providence,22744,21,Naima,146.771,152.961,010915,219.72439573745453,157.85666082085618,410.49845297650944,-252.64179215565326
+pig,42415,Providence,22744,21,Naima,152.961,155.616,010915,296.6558565256319,78.28821577288893,479.9721401897979,-401.683924416909
+pig,42415,Providence,22744,21,Naima,158.82,160.811,010915,199.83622012184412,175.29590291091407,248.79895426492575,-73.50305135401169
+pig,42415,Providence,22744,21,Naima,164.93,166.363,010915,273.82231260170505,171.3362084303158,421.61506456941515,-250.27885613909936
+pig,42415,Providence,22744,21,Naima,174.821,180.065,010915,207.85193182077055,75.45094748838417,488.22666729575917,-412.775719807375
+pig,42423,Providence,22744,23,Naima,582.57,586.55,011107,267.6922294166974,77.8802908173219,373.4299363311391,-295.5496455138172
+pig,42423,Providence,22744,23,Naima,588.83,592.66,011107,267.59552055609817,88.97341188899286,484.32664998387827,-395.3532380948854
+pig,42423,Providence,22744,23,Naima,592.66,595.66,011107,428.5536725361153,220.486174407408,530.9091032191549,-310.4229288117469
+pig,42423,Providence,22744,23,Naima,615.7,618.39,011107,220.61763957518363,75.0740956197553,257.1013899001587,-182.02729428040342
+pig,42423,Providence,22744,23,Naima,637.92,641.075,011107,193.20742616764565,79.09602992070829,291.8558394085492,-212.75980948784087
+pig,42423,Providence,22744,23,Naima,649.905,662.04,011107,258.89586402602754,88.45260807120525,527.3733994378267,-438.9207913666215
+pig,42423,Providence,22744,23,Naima,680.425,687.08,011107,269.2438355936378,174.7320007433738,506.47436502419373,-331.74236428081997
+pig,42423,Providence,22744,23,Naima,710.21,713.835,011107,249.68218705955266,173.69409455572261,503.81059367271257,-330.11649911699
+pig,42423,Providence,22744,23,Naima,836.49,840.805,011107,308.14176406056083,256.6528007741209,359.2613758952222,-102.6085751211013
+pig,42423,Providence,22744,23,Naima,850.035,853.34,011107,273.1592456486763,189.89569615440078,464.4445952054969,-274.5488990510961
+pig,42423,Providence,22744,23,Naima,875.125,877.83,011107,244.66617156621507,192.3437181987474,352.55779267655356,-160.21407447780615
+pig,42423,Providence,22744,23,Naima,926.58,932.605,011107,203.53113849057695,78.24771163106374,300.53274582566087,-222.28503419459713
+pig,42417,Providence,22744,22,Naima,1285.366,1286.638,010925,204.35844907195323,90.2936000089334,242.93196222525606,-152.63836221632266
+pig,42423,Providence,22744,23,Naima,1004.38,1009.19,011107,258.5567941382267,89.6302320122361,416.70682440973474,-327.07659239749864
+pig,42423,Providence,22744,23,Naima,1084.55,1086.875,011107,212.77190183806945,172.80707484126518,444.5602961836524,-271.7532213423872
+pig,42423,Providence,22744,23,Naima,1088.87,1090.51,011107,203.257514515036,167.45896735712643,280.6541203806459,-113.19515302351948
+pig,42408,Providence,22744,20,Naima,4682.96,4686.145,010723,257.1201232459418,200.11025911032996,423.45923812543197,-223.348979015102
+pig,42423,Providence,22744,23,Naima,1185.165,1187.34,011107,219.09135815953704,75.99639408562403,290.22642049692297,-214.23002641129892
+pig,42423,Providence,22744,23,Naima,1205.18,1213.905,011107,242.70846872866983,83.78988128545257,417.2290302148663,-333.43914892941376
+pig,42423,Providence,22744,23,Naima,1342.67,1347.595,011107,247.90673918382683,150.35589447390058,385.5390828793314,-235.1831884054308
+pig,42423,Providence,22744,23,Naima,1440.215,1443.85,011107,242.79633043978663,83.15072193482258,461.10316352544766,-377.9524415906251
+pig,42423,Providence,22744,23,Naima,1561.545,1563.545,011107,209.00541121034752,81.90705061827259,280.1460485159595,-198.2389978976869
+pig,42423,Providence,22744,23,Naima,1622.13,1623.73,011107,312.0088205087924,213.87003602707225,441.6803920103637,-227.81035598329143
+pig,42423,Providence,22744,23,Naima,1625.445,1627.89,011107,229.17534705023002,100.83442136801743,367.95989653137605,-267.1254751633586
+pig,42394,Providence,22744,16,Naima,4684.423,4688.92,010325,278.1837589889288,199.52971641677135,490.87843970559106,-291.3487232888197
+pig,42423,Providence,22744,23,Naima,2216.59,2218.77,011107,227.14040689675792,122.01594120886483,312.48902690592354,-190.4730856970587
+pig,42418,Providence,22744,22,Naima,1582.7,1586.49,011005,278.4308014680505,102.33265812680331,523.2313247346001,-420.89866660779677
+pig,42420,Providence,22744,23,Naima,2931.62,2936.705,011018,195.014399447083,96.59442386067272,287.0627931613868,-190.4683693007141
+pig,42421,Providence,22744,23,Naima,1706.945,1711.35,011027,222.53596733936993,97.58794129656025,272.9687035657795,-175.38076226921925
+pig,42420,Providence,22744,23,Naima,3687.175,3696.625,011018,195.8772239640478,99.03510663988959,442.93245515964975,-343.89734851976016
+pig,42422,Providence,22744,22,Naima,1856.596,1860.816,011012,271.9335179219838,77.86973953429262,480.18564329514993,-402.3159037608573
+pig,42422,Providence,22744,22,Naima,1876.276,1881.345,011012,205.14597486328222,76.06750507185566,345.86497505924353,-269.7974699873879
+pig,42422,Providence,22744,22,Naima,1903.301,1906.775,011012,250.9532097214383,78.88421875290446,481.2376327113214,-402.3534139584169
+pig,42422,Providence,22744,22,Naima,1941.305,1944.793,011012,208.00915263846898,75.36288030009538,284.7137502543184,-209.35086995422304
+pig,42422,Providence,22744,22,Naima,2087.84,2093.989,011012,208.75987412121967,75.83154400473268,278.1896907357081,-202.35814673097542
+pig,42435,Providence,22744,27,Naima,1541.026,1546.09,020217,119.93695504611264,113.96717336527317,126.90925294710888,-12.942079581835713
+pig,42422,Providence,22744,22,Naima,2111.575,2115.793,011012,197.452004810776,76.99077358158637,328.86322870703947,-251.8724551254531
+pig,42422,Providence,22744,22,Naima,2177.701,2183.37,011012,191.18339584794703,75.11375721778083,327.6804576720963,-252.56670045431545
+pig,42422,Providence,22744,22,Naima,2662.616,2667.018,011012,221.18153279237978,84.61663796303321,490.2322450003732,-405.61560703734
+pig,42422,Providence,22744,22,Naima,2741.44,2746.41,011012,197.8958509364176,88.21170430842815,318.15590579332235,-229.9442014848942
+pig,42435,Providence,22744,27,Naima,2280.286,2287.376,020217,221.26367935702476,87.54453565663391,353.6081394572993,-266.06360380066536
+pig,42432,Providence,22744,26,Naima,1880.635,1883.178,020124,359.4568009421719,295.1348582731469,437.4675418908276,-142.3326836176807
+pig,42453,Providence,22744,31,Naima,434.353,439.515,020713,280.83470684923435,113.43044520562347,420.6330319817687,-307.2025867761452
+pig,42453,Providence,22744,31,Naima,439.515,443.176,020713,188.18733156584173,77.87442859183768,299.2250573001143,-221.35062870827664
+pig,42450,Providence,22744,30,Naima,3422.49,3426.915,020611,199.610716330159,80.43887613423823,353.8674337193955,-273.42855758515725
+pig,42453,Providence,22744,31,Naima,1522.525,1528.035,020713,195.9169466892242,92.95370866713239,420.95376674028677,-328.0000580731544
+pig,42453,Providence,22744,31,Naima,1940.741,1942.186,020713,265.7197358023061,78.4817582684618,324.74872114686127,-246.26696287839945
+pig,42453,Providence,22744,31,Naima,1943.843,1946.146,020713,216.5190578084913,105.27739543506681,291.5854992654011,-186.3081038303343
+pig,42460,Providence,22744,34,Naima,1365.99,1367.891,021001,230.87552644766023,190.6501246164222,420.3877370337532,-229.73761241733098
+pig,42460,Providence,22744,34,Naima,1379.253,1381.708,021001,180.5865808901786,79.13223348262899,264.90697720500816,-185.77474372237918
+pig,42460,Providence,22744,34,Naima,1381.708,1384.463,021001,166.37171193928336,82.26869730191598,426.90794862305614,-344.63925132114014
+pig,42433,Providence,22744,26,Naima,155.876,159.275,020202,222.2862806444401,139.27956630797956,333.48459382541967,-194.2050275174401
+pig,42433,Providence,22744,26,Naima,164.98,172.016,020202,228.5877976444185,79.0587242247596,434.44137592754106,-355.38265170278146
+pig,42433,Providence,22744,26,Naima,188.081,190.233,020202,309.16306109548805,234.50499177107042,386.57283523450025,-152.06784346342982
+pig,42465,Providence,22744,35,Naima,802.21,804.598,021114,208.88620100190175,83.94896335710803,468.01569466810463,-384.0667313109966
+pig,42433,Providence,22745,26,Naima,401.465,405.088,020202,133.54890121609617,77.99501179974733,406.34331973870513,-328.3483079389578
+pig,42433,Providence,22744,26,Naima,745.256,748.415,020202,221.63759276216481,81.44635472842315,321.3863679316461,-239.94001320322292
+pig,42472,Providence,22756,14,Violet,2290.498,2292.368,010200,145.64122034238045,81.07181544021218,238.47474349055074,-157.40292805033857
+pig,42472,Providence,22756,14,Violet,2470.43,2475.838,010200,256.2616268310413,78.72430271421986,495.80523120870674,-417.0809284944869
+pig,42472,Providence,22756,14,Violet,2475.838,2484.308,010200,271.5501795853589,78.97009540165267,510.4261033371025,-431.45600793544986
+pig,42465,Providence,22744,35,Naima,2549.308,2553.058,021114,181.2545388827435,116.10284631218786,248.21787900387554,-132.11503269168767
+pig,42465,Providence,22744,35,Naima,2553.058,2559.221,021114,223.52075202666234,118.20754469210847,367.3694997122984,-249.16195502018996
+pig,42465,Providence,22744,35,Naima,2567.22,2575.955,021114,258.70702804948644,82.55171308741654,523.443785590375,-440.89207250295846
+pig,42465,Providence,22744,35,Naima,2575.955,2580.788,021114,170.29793951098875,75.66872693383449,266.6813977876755,-191.01267085384103
+pig,42465,Providence,22744,35,Naima,2594.401,2596.628,021114,293.0339878144458,170.49587294822692,525.0638642614601,-354.5679913132332
+pig,42465,Providence,22744,35,Naima,2646.058,2649.481,021114,255.01389953084163,83.07009116104591,465.0585382753922,-381.9884471143463
+pig,42465,Providence,22744,35,Naima,2753.781,2755.685,021114,209.42388668520758,89.45219913366964,299.7051360246247,-210.25293689095508
+pig,42465,Providence,22744,35,Naima,2913.495,2916.328,021114,212.84394529549417,166.37776122918737,331.96656331869445,-165.58880208950708
+pig,42465,Providence,22744,35,Naima,2916.328,2920.691,021114,194.56146560881757,150.17224394299964,280.1619411491588,-129.98969720615915
+pig,42465,Providence,22744,35,Naima,2943.515,2945.571,021114,187.91729003829204,86.13507265481871,275.22663421928894,-189.09156156447023
+pig,42465,Providence,22744,35,Naima,2964.705,2966.605,021114,238.06846234290313,176.44872901077574,433.5381267222454,-257.0893977114697
+pig,42479,Providence,22756,18,Violet,91.706,93.32,010603,220.00279271235343,137.47989174925388,288.3501520857313,-150.8702603364774
+pig,42465,Providence,22744,35,Naima,3207.043,3208.688,021114,193.62590487640952,78.54587319902792,390.7766524038999,-312.23077920487196
+pig,42465,Providence,22744,35,Naima,3226.018,3235.248,021114,195.8131553249654,74.94015357427274,498.0192593115604,-423.07910573728765
+pig,42465,Providence,22744,35,Naima,3322.175,3325.635,021114,216.6823410297526,75.60966635896345,312.0689263351862,-236.4592599762227
+pig,42465,Providence,22744,35,Naima,3393.648,3395.575,021114,255.3171531236806,206.0550846559939,300.8718895822699,-94.81680492627598
+pig,42481,Providence,22756,19,Violet,1020.755,1025.568,010618,216.0813261250751,75.99091395047711,465.153289676159,-389.16237572568184
+pig,42465,Providence,22744,35,Naima,3421.526,3426.608,021114,246.87947636419153,108.37445017371158,457.78619460658723,-349.41174443287565
+pig,42479,Providence,22756,18,Violet,356.51,369.55,010603,167.20867018809741,136.6483843723747,213.4068239977279,-76.75843962535322
+pig,42481,Providence,22756,19,Violet,1046.528,1052.465,010618,207.40293119479517,76.81015033913607,465.5790228120888,-388.7688724729527
+pig,42481,Providence,22756,19,Violet,1052.465,1054.81,010618,230.52548156269702,117.50302248947595,272.4912742426884,-154.98825175321247
+pig,42481,Providence,22756,19,Violet,1054.81,1063.598,010618,194.87551405924742,74.68373145521066,382.4608553831825,-307.77712392797184
+pig,42481,Providence,22756,19,Violet,1063.598,1067.478,010618,260.8736772111842,85.30292272895628,327.120213364991,-241.81729063603473
+pig,42481,Providence,22756,19,Violet,1069.81,1073.213,010618,268.8963393999475,131.46171533874053,363.19793593866655,-231.736220599926
+pig,42481,Providence,22756,19,Violet,1073.213,1078.81,010618,213.06816326764962,78.0899716252368,441.0823451353049,-362.9923735100681
+pig,42481,Providence,22756,19,Violet,1078.81,1088.236,010618,248.3931589144699,103.87912320298042,485.54379915387483,-381.66467595089443
+pig,42481,Providence,22756,19,Violet,1088.236,1092.261,010618,225.15331363251082,160.11032036114327,327.06578966887173,-166.95546930772846
+pig,42476,Providence,22756,16,Violet,296.118,301.246,010326,180.42281537108917,76.00970936230682,273.8031947833617,-197.79348542105487
+pig,42476,Providence,22756,16,Violet,301.246,303.176,010326,196.01456013226394,157.38809379137493,219.0901995556378,-61.70210576426288
+pig,42476,Providence,22756,16,Violet,342.448,344.64,010326,175.5675179610321,103.67438703683081,257.7375728592719,-154.06318582244108
+pig,42476,Providence,22756,16,Violet,480.921,484.121,010326,216.43013958997435,99.61715973354859,473.44251708954437,-373.8253573559958
+pig,42476,Providence,22756,16,Violet,484.121,486.451,010326,170.30825273379426,99.69680715967596,320.8350922874029,-221.13828512772696
+pig,42476,Providence,22756,16,Violet,536.328,538.581,010326,150.88600668260855,127.92212578294864,187.69453649931577,-59.77241071636713
+pig,42476,Providence,22756,16,Violet,621.51,627.988,010326,259.6856157880728,90.24591395884568,339.65393659925314,-249.40802264040747
+pig,42478,Providence,22756,17,Violet,1612.75,1616.293,010420,195.23634263475375,83.5713554405855,373.92627003626245,-290.354914595677
+pig,42489,Providence,22756,22,Violet,112.291,113.216,011012,173.0867302440555,78.1243968080318,253.12688317713193,-175.00248636910013
+pig,42470,Providence,22744,40,Naima,2341.438,2345.511,030325,255.04057937414564,178.57474666107706,517.0180876430668,-338.44334098198976
+pig,42490,Providence,22756,23,Violet,1938.406,1940.546,011027,215.95173853917476,86.75160719951465,309.2999599251644,-222.54835272564975
+pig,42490,Providence,22756,23,Violet,2026.77,2029.223,011027,218.3207346961348,110.82183455217759,314.97837761038875,-204.15654305821116
+pig,42467,Providence,22751,36,Naima,3069.555,3071.366,030000,226.54104764814326,202.53217080244877,279.9489870231934,-77.41681622074464
+pig,42489,Providence,22756,22,Violet,2235.646,2237.655,011012,175.60756065141507,109.41570257771876,461.8440606685939,-352.4283580908751
+pig,42489,Providence,22756,22,Violet,2240.583,2242.91,011012,211.8108751367036,135.03216804887916,269.2349694997427,-134.20280145086355
+pig,42469,Providence,22751,37,Naima,1191.415,1192.871,030101,200.8779027381299,108.09180540532626,257.99876419878404,-149.9069587934578
+pig,42468,Providence,22744,39,Naima,3152.833,3154.233,030219,274.8464987820324,159.61262968134346,475.9449664765168,-316.3323367951733
+pig,42501,Providence,22756,29,Violet,529.086,530.44,020501,247.99993457684732,87.19331402353244,450.55498497073853,-363.3616709472061
+pig,42488,Providence,22756,22,Violet,508.571,511.21,010925,207.3390900342726,96.42845277267506,393.2550728173912,-296.82662004471615
+pig,42501,Providence,22756,29,Violet,530.44,533.623,020501,170.11419625225017,99.11195669032494,229.0628867003183,-129.95093000999336
+pig,42488,Providence,22756,22,Violet,511.21,513.765,010925,204.21886333519328,160.76588328709212,297.5126088882408,-136.74672560114865
+pig,42501,Providence,22756,29,Violet,533.623,537.631,020501,310.3103820686683,77.63619436795027,490.75331868588887,-413.1171243179386
+pig,42501,Providence,22756,29,Violet,544.723,547.661,020501,291.9718606960983,98.90562293532024,490.4453118497905,-391.5396889144703
+pig,42488,Providence,22756,22,Violet,851.776,853.213,010925,192.07689117541022,75.42465574018829,246.19507705265409,-170.7704213124658
+pig,42488,Providence,22756,22,Violet,1044.71,1047.575,010925,208.92669907252778,181.11057213727813,243.00649120382684,-61.895919066548714
+pig,42488,Providence,22756,22,Violet,1335.588,1338.055,010925,152.96901705889502,76.64005906295434,304.2599381809957,-227.61987911804135
+pig,42513,Providence,22756,35,Violet,672.935,677.175,021028,201.58346439398736,86.79199527569538,260.2248387446027,-173.43284346890732
+pig,42498,Providence,22756,27,Violet,1847.703,1852.213,020305,252.75610658110443,152.26264673104546,480.8892932732953,-328.6266465422499
+pig,42498,Providence,22756,27,Violet,1862.005,1863.207,020305,210.211143667272,82.17371409227047,473.8464711187772,-391.6727570265067
+pig,42502,Providence,22756,29,Violet,1370.055,1371.735,020515,180.41900461134853,82.2272177479832,330.5646785104114,-248.33746076242818
+pig,42502,Providence,22756,29,Violet,1373.838,1375.588,020515,241.5488003186123,66.38637494303342,386.19570765242753,-319.8093327093941
+pig,42502,Providence,22756,29,Violet,1378.216,1381.293,020515,213.17640273970704,89.15346593628402,334.1470527831835,-244.99358684689946
+pig,42502,Providence,22756,29,Violet,1382.576,1384.578,020515,186.32241766022318,69.38443597179273,329.24689097641635,-259.8624550046236
+pig,42502,Providence,22756,29,Violet,1385.616,1386.506,020515,160.89307588850977,134.58395284163436,191.1093437171409,-56.52539087550653
+pig,42502,Providence,22756,29,Violet,1387.836,1391.35,020515,163.6015584400445,74.22892208189207,284.73882520103245,-210.5099031191404
+pig,42520,Providence,22756,42,Violet,383.33,384.658,030600,164.15039715403063,104.65606820230148,221.23970625469767,-116.58363805239618
+pig,42520,Providence,22756,42,Violet,384.658,387.05,030600,203.89441601379727,83.80669348872931,496.8116919354289,-413.0049984466996
+pig,42520,Providence,22756,42,Violet,388.433,390.225,030600,189.53669639220155,74.82678483589126,471.8732394880487,-397.0464546521574
+pig,42520,Providence,22756,42,Violet,394.29,396.193,030600,197.54485514406574,171.42616962573942,276.1087785564082,-104.68260893066878
+pig,42520,Providence,22756,42,Violet,396.193,397.441,030600,200.01717353786066,158.0811063555736,478.38783413159337,-320.3067277760198
+pig,42520,Providence,22756,42,Violet,397.441,399.361,030600,182.271336965674,132.64905443227815,296.1590551379485,-163.51000070567034
+pig,42520,Providence,22756,42,Violet,401.696,403.401,030600,187.4650447149964,87.8619255477612,314.53232180876876,-226.67039626100757
+pig,42520,Providence,22756,42,Violet,583.391,585.563,030600,179.60787202284018,105.76147804398761,276.27293704341974,-170.51145899943214
+pig,42525,Providence,22766,16,William,3202.638,3205.476,010412,221.92090333114285,92.73804285403848,296.7629868128305,-204.024943958792
+pig,42525,Providence,22766,16,William,3205.476,3208.241,010412,269.82369891538576,223.92654877855406,419.9740225112508,-196.04747373269672
+pig,42527,Providence,22766,18,William,2898.343,2900.945,010605,275.5637010508722,163.0833071815278,366.97981126777654,-203.89650408624874
+pig,42527,Providence,22766,18,William,2900.945,2903.225,010605,232.47601505444155,161.2710338056299,357.70888251027645,-196.43784870464654
+pig,42510,Providence,22756,33,Violet,2313.798,2315.305,020908,193.5243710315282,150.1922897771452,248.14332385920554,-97.95103408206035
+pig,42512,Providence,22756,34,Violet,2868.568,2870.791,021002,175.15608415706035,104.40026769084231,462.4539765738255,-358.0537088829832
+pig,42512,Providence,22756,34,Violet,2873.713,2876.121,021002,211.21302769324947,134.94846753846414,270.07674141035153,-135.1282738718874
+pig,42540,Providence,22768,24,William,1585.426,1588.588,020012,223.2829805737144,177.23546531392327,306.8004084952049,-129.56494318128165
+pig,42535,Providence,22766,22,William,2522.846,2524.858,010927,250.57842097091344,177.846838438377,463.66467187194706,-285.81783343357006
+pig,42518,Providence,22756,41,Violet,1429.055,1430.463,030424,217.5116057299124,86.77955030833033,352.7084675398116,-265.92891723148125
+pig,42532,Providence,22766,20,William,3078.028,3081.718,010814,301.3641841632529,165.87925019773428,487.170799540633,-321.29154934289875
+pig,42546,Providence,22766,28,William,1057.048,1060.571,020319,246.11680999835357,119.58345186515184,484.33770962818465,-364.7542577630328
+pig,42558,Providence,22769,33,William,2003.348,2004.78,020905,168.15632669985644,102.7234473839351,236.3000875455611,-133.57664016162602
+pig,42558,Providence,22769,33,William,2064.83,2066.363,020905,141.53144183530134,117.65787981172116,189.0815767715932,-71.42369695987205
+pig,42558,Providence,22769,33,William,2147.15,2149.166,020905,164.89616628539244,74.71973277022258,497.22025993596355,-422.500527165741
+pig,42558,Providence,22769,33,William,2365.305,2368.073,020905,115.35940545027928,76.74533270864247,174.29583720260968,-97.55050449396721
+pig,42558,Providence,22769,33,William,2441.81,2443.745,020905,157.4364042920823,112.65502399429651,189.555295202375,-76.90027120807848
+pig,42558,Providence,22769,33,William,2451.273,2454.745,020905,143.5056822142535,110.76731812449057,175.14318218501708,-64.37586406052651
+pig,42565,Providence,22766,39,William,194.185,194.855,030305,273.9651910042482,156.81381484025667,493.3913542127341,-336.5775393724774
+pig,42550,Providence,22766,30,William,2260.965,2262.156,020516,174.8862737231349,150.06853116660352,204.82109523292107,-54.75256406631755
+pig,42556,Providence,22766,32,William,2589.221,2592.621,020808,254.64290375010597,184.35426136200667,472.41384831981156,-288.05958695780487
+pig,42552,Providence,22766,30,William,2458.745,2459.56,020612,259.5980698548271,215.0039062606916,298.4398690373635,-83.43596277667191

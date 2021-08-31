@@ -1,0 +1,529 @@
+item,transcript_id,corpus_name,speaker_id,age,target_child_name,media_start,media_end,audio_file,pitch_mean,pitch_min,pitch_max,pitch_range
+horsey,3362,Bernstein,1727,19,Dale,648.608,650.837,010700,273.32522705886987,206.52845080364216,459.14167238264577,-252.6132215790036
+horsey,3362,Bernstein,1727,19,Dale,684.32,690.845,010700,224.3781369943903,92.69769322649859,342.949908638176,-250.2522154116774
+horsey,3366,Bernstein,1730,25,Gail,371.395,372.602,020100,285.0472900508375,182.27423579518717,475.5569849167762,-293.282749121589
+horsey,3366,Bernstein,1730,25,Gail,372.602,374.344,020100,256.3775591488372,189.0444130739192,345.65666060966026,-156.61224753574106
+horsey,3800,Peters,2338,16,Seth,424.997,425.856,010402a,106.95295361956215,84.77873822316076,126.35611602153026,-41.5773777983695
+horsey,3800,Peters,2338,16,Seth,427.191,427.806,010402a,116.06168203765648,104.29623633506583,137.90595970851834,-33.60972337345251
+horsey,3805,Peters,2338,16,Seth,1412.713,1413.288,010412,246.38249468148635,115.85931650631649,323.89733506729436,-208.0380185609779
+horsey,3805,Peters,2338,16,Seth,1428.866,1429.574,010412,112.32631703861269,98.22698486095129,118.35007608219371,-20.12309122124242
+horsey,3806,Peters,2338,17,Seth,1371.602,1372.96,010417,143.04243209332645,86.06098006730895,387.2622824348319,-301.20130236752294
+horsey,3805,Peters,2338,16,Seth,1717.17,1717.832,010412,183.26648801819607,157.56177109294364,204.521359289945,-46.95958819700135
+horsey,3810,Peters,2338,17,Seth,1578.821,1579.877,010502b,140.38432913797365,128.5526542735494,153.63407474296372,-25.081420469414326
+horsey,3810,Peters,2338,17,Seth,1581.21,1581.906,010502b,387.54636088758315,228.84630144525715,498.4157509288567,-269.56944948359956
+horsey,3813,Peters,2338,17,Seth,757.505,758.329,010509a,130.45858709195372,104.8745915721066,409.8444207190604,-304.96982914695377
+horsey,3813,Peters,2338,17,Seth,760.105,760.669,010509a,129.03627266967928,117.97613267525183,138.32732683490363,-20.351194159651797
+horsey,3818,Peters,2338,18,Seth,1558.782,1559.577,010523a,171.29199080941444,121.75853189313281,280.7891106215923,-159.03057872845946
+horsey,3818,Peters,2338,18,Seth,1560.768,1561.459,010523a,191.32338558956417,155.28487357542932,303.21884156665743,-147.93396799122812
+horsey,3821,Peters,2338,18,Seth,533.409,534.309,010528,192.74729229790876,144.4816816797408,469.6651116514002,-325.1834299716594
+horsey,3825,Peters,2338,18,Seth,236.615,237.115,010614a,177.5686226870596,124.7594550273909,472.7047171540258,-347.9452621266349
+horsey,3824,Peters,2338,18,Seth,955.97,958.089,010607b,139.96263317482763,98.93987155704168,291.6785197245728,-192.73864816753115
+horsey,3824,Peters,2338,18,Seth,960.943,962.731,010607b,232.47257352631618,102.78862505719582,479.21371564673177,-376.42509058953596
+horsey,3826,Peters,2338,18,Seth,795.758,796.798,010614b,249.17414324229713,118.50487254113051,300.05718190464796,-181.55230936351745
+horsey,3832,Peters,2460,20,Seth,1635.401,1635.939,010810,158.45563728976052,109.32255709832222,279.1678653612051,-169.84530826288287
+horsey,3832,Peters,2460,20,Seth,1636.598,1638.623,010810,260.48294947278373,109.34575773316601,358.5847473962014,-249.2389896630354
+horsey,3832,Peters,2460,20,Seth,1638.623,1640.891,010810,217.53161378108513,102.76758271894197,355.1352713163514,-252.36768859740943
+horsey,3853,Peters,2338,23,Seth,1371.684,1373.83,011016,292.4427116981807,195.5534478873148,443.834469188997,-248.2810213016822
+horsey,3866,Peters,2357,24,Seth,338.651,340.259,020000b,204.68032479845422,102.2229525158544,453.7580135950791,-351.5350610792247
+horsey,3873,Peters,2338,25,Seth,437.968,439.082,020030a,227.56769685240917,148.1019551336649,333.30063348291867,-185.19867834925378
+horsey,3873,Peters,2338,25,Seth,440.94,446.057,020030a,158.73216172630706,112.33153580246797,445.6159121103089,-333.28437630784094
+horsey,3873,Peters,2338,25,Seth,459.31,464.594,020030a,328.37398299956715,140.61552892999524,472.23638985143106,-331.6208609214358
+horsey,3871,Peters,2338,25,Seth,1347.178,1348.293,020024a,159.13781167639166,107.8554081545143,301.302663323276,-193.44725516876173
+horsey,3871,Peters,2338,25,Seth,1351.47,1352.092,020024a,206.0014124293696,108.11261282844103,350.4557084372046,-242.34309560876355
+horsey,3871,Peters,2338,25,Seth,1358.945,1360.431,020024a,185.92478592545112,103.06946816251521,444.27779564244577,-341.2083274799306
+horsey,3871,Peters,2338,25,Seth,1366.497,1370.024,020024a,184.65892661078334,98.70944342511149,390.63982487323307,-291.9303814481216
+horsey,6583,Bloom,3147,22,Peter,1639.834,1645.427,010925,116.20641399504828,70.80449016370333,282.57965928477944,-211.7751691210761
+horsey,6588,Bloom,3147,24,Peter,1027.981,1029.834,020010,245.62130810208842,214.70930467849186,301.8504052210089,-87.14110054251702
+horsey,6588,Bloom,3147,24,Peter,1041.509,1044.847,020010,215.06357273491426,88.67251727730738,340.89053833362294,-252.21802105631556
+horsey,6589,Bloom,3148,25,Peter,1001.025,1009.774,020100,164.07566951456997,71.07429011888739,370.15954661223657,-299.08525649334916
+horsey,6596,Bloom,3147,31,Peter,232.911,246.48,020616,272.5070575920058,75.19494455130275,455.4493663637907,-380.254421812488
+horsey,6591,Bloom,3147,26,Peter,3570.111,3571.397,020213,243.51438289181536,84.0505638219838,358.8063645449419,-274.7558007229581
+horsey,6591,Bloom,3147,26,Peter,3576.305,3579.377,020213,212.18070066404925,70.94684316821714,460.4256643385316,-389.47882117031446
+horsey,6593,Bloom,3148,28,Peter,262.583,263.05,020324,249.7834263220063,201.22784470107416,280.96224620307396,-79.7344015019998
+horsey,6595,Bloom,3148,29,Peter,1689.348,1693.07,020503,198.95985752659823,126.75205172498995,358.6488895853556,-231.89683786036568
+horsey,6593,Bloom,3147,28,Peter,1887.365,1889.234,020324,244.92518292067695,87.91445843302724,354.5539527205924,-266.6394942875652
+horsey,6599,Bloom,3148,33,Peter,3181.076,3182.831,020915,265.0116801945841,84.76397947130506,398.06550226715103,-313.301522795846
+horsey,6593,Bloom,3148,28,Peter,4209.653,4214.477,020324,221.86796345916633,112.47723834175652,333.4935274656568,-221.01628912390032
+horsey,6593,Bloom,3148,28,Peter,4215.397,4216.297,020324,229.31664412238572,197.26785621638277,279.41251912787754,-82.14466291149478
+horsey,6597,Bloom,3154,30,Peter,5484.206,5485.85,020522,205.83789812841775,84.47482074579614,297.0231406598759,-212.54831991407974
+horsey,6597,Bloom,3154,30,Peter,5485.85,5487.536,020522,252.4821776809151,84.56087937123013,499.5016573352428,-414.9407779640127
+horsey,6597,Bloom,3154,30,Peter,5487.536,5491.34,020522,245.8752083076671,108.34749693493679,371.82196185527374,-263.47446492033697
+horsey,6597,Bloom,3154,30,Peter,5491.34,5495.032,020522,261.105591888277,210.46396782164376,412.33874574812404,-201.87477792648028
+horsey,6597,Bloom,3154,30,Peter,5497.247,5501.802,020522,192.5408650910745,81.06280300526029,294.9666553699116,-213.90385236465133
+horsey,6588,Bloom,3148,24,Peter,12476.953,12480.558,020010,141.41598649590455,66.07565334139274,349.69055667865643,-283.6149033372637
+horsey,6588,Bloom,3148,24,Peter,12540.848,12541.884,020010,250.77772013471622,187.10709249754015,288.31519479027634,-101.20810229273619
+horsey,6588,Bloom,3148,24,Peter,12554.323,12558.864,020010,220.39798869467518,76.23088653980611,332.0219226106237,-255.79103607081757
+horsey,6596,Bloom,3154,31,Peter,8946.357,8965.872,020616,188.67475529994059,75.08030114620452,425.7867257001812,-350.70642455397666
+horsey,6599,Bloom,3148,33,Peter,10186.444,10189.061,020915,156.65122713767255,77.51027708556936,187.26680539674766,-109.7565283111783
+horsey,6599,Bloom,3154,33,Peter,11753.965,11756.551,020915,201.80873161198036,75.4465603689642,315.8453901396845,-240.39882977072034
+horsey,6599,Bloom,3154,33,Peter,11776.153,11778.071,020915,206.72288319790198,167.35095637259985,235.8747367627956,-68.52378039019575
+horsey,6601,Bloom,3147,32,Peter,1938.741,1943.918,020812,183.6961882402,66.39959390823441,274.24505263489124,-207.84545872665683
+horsey,6603,Bloom,3148,35,Peter,9625.307,9626.786,021019,284.7506733388561,128.0167068806017,478.4585346613429,-350.4418277807412
+horsey,6603,Bloom,3148,35,Peter,9711.805,9712.71,021019,194.8895015696367,110.25130855502248,240.1808025129831,-129.92949395796063
+horsey,6603,Bloom,3148,35,Peter,10707.61,10708.803,021019,164.8507755105433,70.83696929765037,287.6157244918795,-216.77875519422915
+horsey,6603,Bloom,3147,35,Peter,13761.836,13763.445,021019,198.28718284386525,98.48855386801355,249.2385371926923,-150.74998332467874
+horsey,6603,Bloom,3148,35,Peter,14780.476,14781.094,021019,164.00393412126897,77.30748234522231,286.0626288568656,-208.75514651164332
+horsey,6601,Bloom,3148,32,Peter,7569.937,7571.703,020812,137.4144865843554,75.15052825939584,239.43680547206566,-164.2862772126698
+horsey,6601,Bloom,3147,32,Peter,7705.985,7708.098,020812,262.8614481125264,187.94118739845962,368.87841895176086,-180.93723155330125
+horsey,6601,Bloom,3147,32,Peter,7714.709,7717.199,020812,210.7887395304185,76.05081198757685,342.27801460350463,-266.2272026159278
+horsey,7168,MacWhinney,3396,34,Ross,1019.919,1023.057,020928,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7168,MacWhinney,3396,34,Ross,1280.709,1281.619,020928,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7168,MacWhinney,3396,34,Ross,1301.21,1302.612,020928,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7142,MacWhinney,3396,31,Ross,1305.363,1305.897,020617d,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7507,VanHouten,3513,42,Danielle,79.203,80.215,cottonf,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7515,VanHouten,3535,41,Kevin,371.531,375.46,johnsonf,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7868,Brent,3843,12,Morgan,1051.46,1053.487,010007,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7868,Brent,3843,12,Morgan,1308.227,1310.363,010007,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7868,Brent,3843,12,Morgan,1310.891,1313.32,010007,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7868,Brent,3843,12,Morgan,1313.962,1315.314,010007,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7868,Brent,3843,12,Morgan,1315.214,1316.523,010007,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7868,Brent,3843,12,Morgan,1318.833,1320.459,010007,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7873,Brent,3843,15,Morgan,979.588,981.071,010304,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7873,Brent,3843,15,Morgan,982.119,983.302,010304,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7873,Brent,3843,15,Morgan,984.452,986.126,010304,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7873,Brent,3843,15,Morgan,1114.109,1115.918,010304,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7868,Brent,3843,12,Morgan,2275.482,2277.888,010007,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7868,Brent,3843,12,Morgan,2312.203,2314.422,010007,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7869,Brent,3843,13,Morgan,2691.633,2692.963,010017,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7869,Brent,3843,13,Morgan,2693.463,2695.728,010017,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7869,Brent,3843,13,Morgan,2723.412,2725.827,010017,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7866,Brent,3843,11,Morgan,3786.173,3787.156,001027,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7868,Brent,3843,12,Morgan,3275.566,3276.888,010007,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7868,Brent,3843,12,Morgan,3277.99,3279.361,010007,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7868,Brent,3843,12,Morgan,3296.81,3298.32,010007,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7868,Brent,3843,12,Morgan,3299.207,3300.475,010007,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7872,Brent,3843,14,Morgan,3466.48,3467.315,010129,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7872,Brent,3843,14,Morgan,3471.459,3472.082,010129,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7872,Brent,3843,14,Morgan,3473.265,3474.014,010129,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7872,Brent,3843,14,Morgan,3480.748,3482.347,010129,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7887,Brent,3850,9,Dillon,1979.405,1980.075,000828,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7887,Brent,3850,9,Dillon,1981.932,1982.62,000828,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7886,Brent,3847,15,Miranda,1115.724,1116.272,010217,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7886,Brent,3847,15,Miranda,1116.799,1117.456,010217,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7893,Brent,3850,11,Dillon,677.799,678.668,001022,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7893,Brent,3850,11,Dillon,682.626,683.605,001022,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7894,Brent,3850,12,Dillon,3917.87,3919.18,001120,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7903,Brent,3854,9,Brooklyn,786.563,787.83,000912,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7881,Brent,3847,12,Miranda,3890.541,3891.418,001120,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7881,Brent,3847,12,Miranda,3891.857,3892.66,001120,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7881,Brent,3847,12,Miranda,3952,3952.847,001120,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7881,Brent,3847,12,Miranda,3966.966,3967.816,001120,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7881,Brent,3847,12,Miranda,4000.068,4001.439,001120,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7881,Brent,3847,12,Miranda,4040.531,4041.252,001120,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7891,Brent,3850,10,Dillon,2413.425,2414.14,001013,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7891,Brent,3850,10,Dillon,2414.255,2415.327,001013,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7925,Brent,3857,15,Alexander,392.772,393.748,010225,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7925,Brent,3857,15,Alexander,1384.187,1384.806,010225,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7925,Brent,3857,15,Alexander,1385.007,1385.711,010225,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7925,Brent,3857,15,Alexander,1431.527,1431.923,010225,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7925,Brent,3857,15,Alexander,1560.269,1560.844,010225,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7925,Brent,3857,15,Alexander,1566.473,1567.378,010225,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7985,Brent,3867,13,Timothy,84.374,84.837,010024,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7985,Brent,3867,13,Timothy,85.364,86.255,010024,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7985,Brent,3867,13,Timothy,89.333,90.65,010024,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7985,Brent,3867,13,Timothy,91.272,92.829,010024,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7888,Brent,3847,15,Miranda,981.313,983.628,010228,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7888,Brent,3847,15,Miranda,984.514,985.483,010228,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7985,Brent,3867,13,Timothy,398.201,398.963,010024,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7985,Brent,3867,13,Timothy,399.905,401.432,010024,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7987,Brent,3867,14,Timothy,334.657,335.397,010206,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7985,Brent,3867,13,Timothy,889.415,890.299,010024,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7985,Brent,3867,13,Timothy,891.867,893.109,010024,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7989,Brent,3867,15,Timothy,1789.959,1791.918,010301,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7989,Brent,3867,15,Timothy,1804.861,1806.412,010301,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7989,Brent,3867,15,Timothy,1855.312,1857.269,010301,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7980,Brent,3867,11,Timothy,4.784,6.207,001113,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7980,Brent,3867,11,Timothy,248.061,248.84,001113,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7980,Brent,3867,11,Timothy,249.042,250.354,001113,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7980,Brent,3867,11,Timothy,290.526,291.76,001113,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7980,Brent,3867,11,Timothy,293.309,294.878,001113,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7980,Brent,3867,11,Timothy,303.235,306.187,001113,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7980,Brent,3867,11,Timothy,308.849,310.643,001113,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7980,Brent,3867,11,Timothy,433.459,434.775,001113,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7980,Brent,3867,11,Timothy,440.016,441.97,001113,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7980,Brent,3867,11,Timothy,488.881,490.547,001113,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7980,Brent,3867,11,Timothy,505.307,507.113,001113,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7888,Brent,3847,15,Miranda,2575.089,2578.217,010228,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7888,Brent,3847,15,Miranda,2580.551,2581.629,010228,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7980,Brent,3867,11,Timothy,546.22,548.544,001113,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7980,Brent,3867,11,Timothy,550.195,551.088,001113,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7980,Brent,3867,11,Timothy,583.619,584.731,001113,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7980,Brent,3867,11,Timothy,585.452,586.854,001113,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7980,Brent,3867,11,Timothy,591.699,592.915,001113,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7980,Brent,3867,11,Timothy,598.55,600.215,001113,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7984,Brent,3867,12,Timothy,2873.493,2874.705,010010,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7984,Brent,3867,12,Timothy,2957.859,2958.432,010010,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7984,Brent,3867,12,Timothy,2959.231,2960.612,010010,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7984,Brent,3867,12,Timothy,2961.99,2963.167,010010,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7984,Brent,3867,12,Timothy,2986.422,2988.126,010010,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7984,Brent,3867,12,Timothy,2988.18,2989.673,010010,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7984,Brent,3867,12,Timothy,2989.707,2991.075,010010,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7989,Brent,3867,15,Timothy,2772.878,2773.884,010301,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7986,Brent,3867,13,Timothy,1083.037,1084.183,010108,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7986,Brent,3867,13,Timothy,1084.547,1085.727,010108,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7989,Brent,3867,15,Timothy,3152.121,3153.883,010301,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7985,Brent,3867,13,Timothy,3599.898,3601.23,010024,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7985,Brent,3867,13,Timothy,3601.969,3603.218,010024,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7985,Brent,3867,13,Timothy,3607.143,3609.143,010024,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7985,Brent,3867,13,Timothy,3612.18,3613.248,010024,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7985,Brent,3867,13,Timothy,3614.211,3615.626,010024,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7985,Brent,3867,13,Timothy,3616.116,3618.003,010024,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7985,Brent,3867,13,Timothy,3618.45,3619.919,010024,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7985,Brent,3867,13,Timothy,3621.286,3622.299,010024,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7983,Brent,3867,14,Timothy,4277.513,4279.507,010122,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7888,Brent,3847,15,Miranda,4298.714,4299.69,010228,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7888,Brent,3847,15,Miranda,4302.982,4303.929,010228,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7888,Brent,3847,15,Miranda,4323.459,4324.395,010228,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7989,Brent,3867,15,Timothy,4117.065,4118.167,010301,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7976,Brent,3867,9,Timothy,3475.619,3476.915,000902,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7976,Brent,3867,9,Timothy,3477.596,3479.082,000902,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7976,Brent,3867,9,Timothy,3690.028,3690.847,000902,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7976,Brent,3867,9,Timothy,3737.15,3738.81,000902,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7976,Brent,3867,9,Timothy,3739.38,3740.235,000902,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7980,Brent,3867,11,Timothy,2833.472,2834.65,001113,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7980,Brent,3867,11,Timothy,2835.585,2837.104,001113,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,7980,Brent,3867,11,Timothy,2854.857,2855.884,001113,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,8002,Brent,3870,15,Tabitha,2639.952,2640.719,010220,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,8002,Brent,3870,15,Tabitha,2640.881,2641.656,010220,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,8002,Brent,3870,15,Tabitha,2643.17,2644.337,010220,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,8002,Brent,3870,15,Tabitha,2649.17,2649.633,010220,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,8002,Brent,3870,15,Tabitha,2670.065,2670.986,010220,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,8002,Brent,3870,15,Tabitha,2703.592,2704.263,010220,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,8032,Brent,3881,12,Henry,800.667,801.296,010007,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,8032,Brent,3881,12,Henry,801.616,802.119,010007,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,8032,Brent,3881,12,Henry,805.109,805.724,010007,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,8032,Brent,3881,12,Henry,1008.48,1009.626,010007,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,8032,Brent,3881,12,Henry,1011.082,1011.728,010007,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,8032,Brent,3881,12,Henry,1013.861,1014.486,010007,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,8035,Brent,3881,14,Henry,54.966,55.711,010119,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,8035,Brent,3881,14,Henry,63.466,64.306,010119,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,8035,Brent,3881,14,Henry,66.367,67.211,010119,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,8035,Brent,3881,14,Henry,67.847,68.728,010119,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,8035,Brent,3881,14,Henry,77.463,78.5,010119,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,8035,Brent,3881,14,Henry,93.752,94.602,010119,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,8035,Brent,3881,14,Henry,177.544,178.466,010119,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,8035,Brent,3881,14,Henry,184.452,185.333,010119,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,8035,Brent,3881,14,Henry,189.711,190.269,010119,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,8035,Brent,3881,14,Henry,206.935,207.609,010119,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,8035,Brent,3881,14,Henry,212.384,213.19,010119,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,8035,Brent,3881,14,Henry,3623.068,3623.796,010119,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,8035,Brent,3881,14,Henry,3680.724,3681.779,010119,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,8037,Brent,3881,15,Henry,165.752,166.799,010217,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,8037,Brent,3881,15,Henry,170.211,171.295,010217,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,8037,Brent,3881,15,Henry,819.565,820.313,010217,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,8037,Brent,3881,15,Henry,1772.347,1773.01,010217,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,8037,Brent,3881,15,Henry,1792.85,1794.694,010217,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,8230,Braunwald,3910,27,Laura,2076.333,2077.83,020221,311.5914733445371,210.07765710169218,455.8036229275164,-245.72596582582423
+horsey,9089,Soderstrom,3934,9,Theo,774.572,776.076,000823d,274.5005138451994,91.33810121164808,498.9279957352472,-407.5898945235991
+horsey,9057,Soderstrom,3929,9,Joseph,2437.161,2438.905,000817,241.69774138281142,161.49322645250243,397.74595089425986,-236.25272444175744
+horsey,9057,Soderstrom,3929,9,Joseph,3732.886,3734.342,000817,168.54602428539852,77.85639302246072,296.09230453961936,-218.23591151715863
+horsey,9057,Soderstrom,3929,9,Joseph,3734.886,3736.278,000817,287.5882206946687,256.79006409632103,412.57635067194917,-155.78628657562814
+horsey,9105,Sachs,3941,19,Naomi,55.012,58.88,010616,323.95311335795134,174.1024117462949,388.7055546624659,-214.60314291617098
+horsey,9105,Sachs,3941,19,Naomi,64.58,66.901,010616,223.36091631521998,75.40845157263455,415.537575018758,-340.12912344612346
+horsey,9105,Sachs,3941,19,Naomi,66.901,68.984,010616,203.11037451951668,73.87598738357664,362.66327838237527,-288.78729099879865
+horsey,9105,Sachs,3941,19,Naomi,68.984,70.536,010616,237.44807110298845,99.98054708165094,389.16712613535526,-289.18657905370435
+horsey,9105,Sachs,3941,19,Naomi,72.619,76.971,010616,280.0618149944496,94.94037786259457,519.1272769276264,-424.18689906503187
+horsey,9105,Sachs,3941,19,Naomi,82.856,84.958,010616,275.52445936639555,176.75030564748693,407.5427785253828,-230.79247287789588
+horsey,9105,Sachs,3941,19,Naomi,150.758,153.11,010616,196.01953289160716,83.38897040221886,359.791348852558,-276.40237845033914
+horsey,9105,Sachs,3941,19,Naomi,359.649,361.532,010616,232.1497588109162,77.36728886853389,342.1720792917175,-264.80479042318365
+horsey,9105,Sachs,3941,19,Naomi,658.101,667.476,010616,273.6989310732626,183.43183247016938,431.6337947463052,-248.20196227613584
+horsey,9105,Sachs,3942,19,Naomi,1762.288,1763.488,010616,180.58405925017433,74.97166984527166,222.15756718547362,-147.18589734020196
+horsey,9103,Soderstrom,3934,13,Theo,830.194,834.386,010028a,182.19629117164044,82.40233159094231,268.112918807698,-185.7105872167557
+horsey,9103,Soderstrom,3934,13,Theo,839.762,841.266,010028a,285.7625546049437,110.98603135323847,417.5998428075255,-306.613811454287
+horsey,9103,Soderstrom,3934,13,Theo,844.13,846.562,010028a,194.62950262457866,76.34316102483281,273.37090012477927,-197.02773909994647
+horsey,9103,Soderstrom,3934,13,Theo,849.394,851.138,010028a,282.1232315671405,79.79839509530302,447.4602320293727,-367.6618369340697
+horsey,9103,Soderstrom,3934,13,Theo,919.538,922.114,010028a,210.69227465643638,142.38523379909387,325.80474052057474,-183.41950672148087
+horsey,9103,Soderstrom,3934,13,Theo,923.89,925.714,010028a,182.8694031392947,87.49000120379706,244.29531692032378,-156.8053157165267
+horsey,9103,Soderstrom,3934,13,Theo,925.922,927.97,010028a,209.97187253856,87.28961502609128,286.0448031151227,-198.75518808903144
+horsey,9117,Sachs,3942,23,Naomi,1312.289,1314.791,011018,149.74226081958847,83.35736185509982,177.9515576394836,-94.59419578438379
+horsey,9117,Sachs,3942,23,Naomi,1314.791,1316.893,011018,155.3890555747988,85.45978056556031,205.12209575574903,-119.66231519018872
+horsey,9117,Sachs,3941,23,Naomi,1833.671,1836.756,011018,271.66715414733744,222.38247414969618,436.8290408283617,-214.44656667866553
+horsey,9131,Sachs,3942,24,Naomi,33.609,34.409,011118,464.0231031064829,459.5146764321883,465.9639798233476,-6.449303391159276
+horsey,9131,Sachs,3942,24,Naomi,241.714,243,011118,148.96107454056508,133.87900463700603,172.61077209367204,-38.731767456666006
+horsey,9103,Soderstrom,3934,13,Theo,1423.2,1424.272,010028a,259.57890821219104,92.13241635686093,370.3739263086908,-278.24150995182987
+horsey,9103,Soderstrom,3934,13,Theo,1425.937,1428.337,010028a,327.1954595552318,138.6714720093945,493.0342559389237,-354.3627839295292
+horsey,9103,Soderstrom,3934,13,Theo,1444.449,1446.913,010028a,158.07917034668392,129.56756727438145,215.73887624189922,-86.17130896751777
+horsey,9102,Soderstrom,3934,13,Theo,1073.585,1076.353,010028b,154.77244973634765,68.12530972294749,221.68088046142122,-153.55557073847373
+horsey,9139,Sachs,3941,24,Naomi,260.783,261.417,020005,370.95381532564824,219.26908469644786,523.9940759438495,-304.7249912474016
+horsey,9063,Soderstrom,3929,10,Joseph,1010.021,1011.365,000925,284.24875539863336,217.12811525496804,403.78857589234576,-186.66046063737772
+horsey,9063,Soderstrom,3929,10,Joseph,1016.581,1017.733,000925,271.08029289582356,209.01753171879105,462.77857441521564,-253.7610426964246
+horsey,9063,Soderstrom,3929,10,Joseph,1019.461,1023.045,000925,308.59879596593976,226.18265272533134,392.1965594275049,-166.01390670217356
+horsey,9063,Soderstrom,3931,10,Joseph,1127.504,1130.112,000925,221.75143874072558,79.50360932761693,361.3203414085185,-281.8167320809016
+horsey,9172,Sachs,3941,32,Naomi,803.624,805.91,020814,269.67154378321965,127.91929582866295,367.87860429076335,-239.9593084621004
+horsey,9172,Sachs,3941,32,Naomi,805.91,809.112,020814,311.49631170138764,118.22993864978461,522.6269613537359,-404.3970227039512
+horsey,9211,McCune,3948,21,Alice,2284.073,2287.316,010900,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9211,McCune,3948,21,Alice,2340.638,2341.81,010900,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9337,McCune,3966,19,Rick,133.103,133.397,010700,340.2147727248977,220.00220528240035,365.58660086207976,-145.5843955796794
+horsey,9270,McCune,3958,24,Jase,30.595,32.312,020000,239.03816721957492,203.89443791119496,268.71362475439776,-64.8191868432028
+horsey,9336,McCune,3966,18,Rick,264.595,269.127,010600,309.83119340195805,83.36996124032642,518.129906433464,-434.75994519313764
+horsey,9270,McCune,3958,24,Jase,35.717,37.277,020000,250.0967094153417,149.28495336574406,377.7095833786684,-228.42463001292435
+horsey,9336,McCune,3966,18,Rick,269.127,270.847,010600,242.2278007370046,207.20581585476097,325.1357353608592,-117.92991950609823
+horsey,9375,Weist,3976,29,Benjamin,95.792,97.255,020427,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9374,Weist,3976,28,Benjamin,237.563,238.544,020413,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9374,Weist,3974,28,Benjamin,241.525,244.617,020413,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9375,Weist,3974,29,Benjamin,447.275,448.655,020427,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9270,McCune,3958,24,Jase,1340.658,1341.274,020000,190.68524964128483,163.2512764827595,213.52428701724844,-50.27301053448895
+horsey,9375,Weist,3974,29,Benjamin,593.258,594.638,020427,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9380,Weist,3976,34,Benjamin,247.498,248.961,021008,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9380,Weist,3976,34,Benjamin,254.247,255.877,021008,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9375,Weist,3974,29,Benjamin,749.186,750.649,020427,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9375,Weist,3974,29,Benjamin,754.649,756.712,020427,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9375,Weist,3974,29,Benjamin,967.371,968.537,020427,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9383,Weist,3974,40,Benjamin,146.322,147.053,030321,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9383,Weist,3974,40,Benjamin,147.951,149.331,030321,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9383,Weist,3974,40,Benjamin,151.127,153.321,030321,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9380,Weist,3976,34,Benjamin,798.719,801.248,021008,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9375,Weist,3976,29,Benjamin,1327.689,1329.966,020427,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9375,Weist,3976,29,Benjamin,1342.269,1343.982,020427,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9377,Weist,3974,29,Benjamin,333.514,335.477,020510,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9374,Weist,3976,28,Benjamin,1576.97,1578.117,020413,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9380,Weist,3976,34,Benjamin,1179.11,1180.473,021008,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9380,Weist,3976,34,Benjamin,1184.48,1187.538,021008,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9374,Weist,3974,28,Benjamin,1603.551,1605.097,020413,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9374,Weist,3976,28,Benjamin,1783.062,1785.357,020413,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9374,Weist,3974,28,Benjamin,1804.985,1806.399,020413,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9374,Weist,3974,28,Benjamin,1813.065,1815.177,020413,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9374,Weist,3976,28,Benjamin,1848.619,1850.897,020413,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9377,Weist,3974,29,Benjamin,961.717,962.782,020510,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9382,Weist,3974,39,Benjamin,1069.745,1071.69,030221,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9386,Weist,3980,32,Emily,1113.488,1115.683,020718,201.06847221148286,72.64780677293348,283.2104564782973,-210.56264970536384
+horsey,9381,Weist,3976,35,Benjamin,1467.999,1471.357,021022,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9382,Weist,3974,39,Benjamin,1404.749,1405.646,030221,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9382,Weist,3974,39,Benjamin,1447.989,1450.052,030221,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9398,Weist,3980,37,Emily,712.994,714.197,030106,304.698418027586,103.88548910461594,425.26065565222393,-321.375166547608
+horsey,9415,Weist,3987,36,Emma,112.119,114.746,030003,252.5253113492552,76.40328793455477,460.7444476252643,-384.3411596907095
+horsey,9415,Weist,3989,36,Emma,114.746,116.924,030003,233.04717215814503,113.4838564389301,333.3766430826701,-219.89278664374
+horsey,9415,Weist,3989,36,Emma,116.923,119.201,030003,138.04934676253256,78.25385216664733,268.3094106309604,-190.05555846431304
+horsey,9415,Weist,3989,36,Emma,121.645,122.294,030003,200.94225523010672,76.8850820597236,353.8892822676672,-277.00420020794365
+horsey,9415,Weist,3989,36,Emma,130.023,131.17,030003,374.6029034983287,144.83542975999967,475.39733331982814,-330.56190355982847
+horsey,9415,Weist,3989,36,Emma,378.127,381.219,030003,125.23966664762504,96.60241650163377,199.74950275612503,-103.14708625449126
+horsey,9415,Weist,3987,36,Emma,425.797,428.157,030003,214.86673408329355,75.67497409290561,353.99435312838085,-278.3193790354752
+horsey,9415,Weist,3989,36,Emma,530.107,531.338,030003,282.8962847546157,161.0070382722874,417.21740636414177,-256.2103680918544
+horsey,9415,Weist,3989,36,Emma,532.901,533.847,030003,234.1030023412427,169.07989393976518,305.02891077428075,-135.94901683451556
+horsey,9415,Weist,3989,36,Emma,582.791,583.855,030003,122.64326335882954,83.75279869991785,168.9826548598549,-85.22985615993706
+horsey,9415,Weist,3989,36,Emma,659.157,660.918,030003,148.557508009528,94.89713279957806,275.50180545978384,-180.60467266020578
+horsey,9413,Weist,3987,35,Emma,246.097,248.457,021026,138.93135859365546,75.50190396237704,213.82085558860737,-138.31895162623033
+horsey,9413,Weist,3989,35,Emma,308.975,310.604,021026,239.80907803121937,111.12036610789518,362.10602414174923,-250.98565803385407
+horsey,9413,Weist,3989,35,Emma,318.336,320.679,021026,127.87350361013324,77.43917916873328,505.6098632768052,-428.1706841080719
+horsey,9413,Weist,3989,35,Emma,352.024,353.57,021026,147.05542933108404,99.28496581572283,218.54604644839367,-119.26108063267084
+horsey,9413,Weist,3987,35,Emma,365.691,367.885,021026,264.70246954638503,182.85971958082743,482.3001646835385,-299.4404451027111
+horsey,9415,Weist,3989,36,Emma,1716.852,1721.973,030003,174.1531372186543,74.90692384393132,400.192637006151,-325.2857131622197
+horsey,9413,Weist,3989,35,Emma,568.192,569.839,021026,144.7938778082484,97.35764882733159,173.55513258844942,-76.19748376111784
+horsey,9413,Weist,3989,35,Emma,569.839,570.82,021026,136.58735472689946,89.9629638949508,173.18798107775453,-83.22501718280373
+horsey,9413,Weist,3989,35,Emma,1385.088,1385.719,021026,325.906238200518,106.26217630921124,487.08257676276264,-380.82040045355143
+horsey,9413,Weist,3989,35,Emma,1664.393,1667.652,021026,188.84253357552265,73.02866057058101,441.22364607704753,-368.19498550646654
+horsey,9424,Weist,3987,44,Emma,385.91,387.973,030807,206.80794782247088,150.63323013424062,272.41503347326636,-121.78180333902574
+horsey,9429,Weist,3991,51,Emma,773.665,776.091,040300,344.30959652918546,195.72385655838744,529.6377401442912,-333.9138835859038
+horsey,9429,Weist,3991,51,Emma,830.496,832.739,040300,273.70903694946395,94.63388021584962,416.90867347156984,-322.2747932557202
+horsey,9424,Weist,3989,44,Emma,622.879,626.619,030807,129.47381367234175,68.34530654978161,356.4788326997887,-288.1335261500071
+horsey,9429,Weist,3991,51,Emma,992.644,993.591,040300,275.75919177770874,188.945810726884,383.7105586892555,-194.7647479623715
+horsey,9424,Weist,3987,44,Emma,1300.415,1302.609,030807,284.489243419696,85.56538315722044,363.85136849751353,-278.2859853402931
+horsey,9424,Weist,3989,44,Emma,1310.007,1314.896,030807,224.28775472156894,75.4645909846067,391.4834224180186,-316.01883143341195
+horsey,9424,Weist,3989,44,Emma,1333.485,1334.382,030807,218.94432005487852,102.04734254503406,482.995610479592,-380.948267934558
+horsey,9424,Weist,3989,44,Emma,1496.974,1498.687,030807,194.65653133354994,106.94226637069079,407.8883643769573,-300.94609800626654
+horsey,9437,Weist,3994,26,Jillian,1185.931,1188.774,020122,281.0343586066654,76.69578287861133,517.8165244581348,-441.1207415795235
+horsey,9437,Weist,3994,26,Jillian,1199.774,1206.245,020122,126.09363126780603,75.32674106259475,212.82476887900233,-137.49802781640759
+horsey,9424,Weist,3987,44,Emma,1798.39,1801.249,030807,329.0974650561305,141.44380257371085,525.0031496213892,-383.55934704767833
+horsey,9424,Weist,3989,44,Emma,1808.548,1809.612,030807,159.38086456562044,75.1028510770561,307.9299687524489,-232.82711767539277
+horsey,9424,Weist,3987,44,Emma,1868.091,1869.088,030807,159.36126918797865,105.56666687016336,276.7123044213146,-171.14563755115125
+horsey,9424,Weist,3987,44,Emma,2075.35,2076.164,030807,259.29787731525624,170.54544390352004,423.1421025310922,-252.59665862757214
+horsey,9424,Weist,3987,44,Emma,2292.528,2294.241,030807,273.5076232268651,131.63374434147534,518.4280037799472,-386.79425943847184
+horsey,9424,Weist,3989,44,Emma,2327.035,2328.831,030807,210.66822597225732,80.03519985418521,414.23391630738115,-334.19871645319597
+horsey,9424,Weist,3987,44,Emma,2465.588,2466.635,030807,317.01769901772434,219.33989324290212,506.09301584810356,-286.75312260520144
+horsey,9424,Weist,3987,44,Emma,2466.635,2468.032,030807,297.62863855985927,75.34349471627806,516.2631101511507,-440.91961543487264
+horsey,9424,Weist,3987,44,Emma,2503.454,2509.537,030807,305.1355603635676,111.37065228876465,519.8553574978944,-408.48470520912974
+horsey,9419,Weist,3987,39,Emma,140.189,141.171,030300,247.80927519360478,77.15244844203404,433.7851717911629,-356.63272334912887
+horsey,9449,Weist,3994,30,Jillian,176.8,184.781,020526,212.94887713928838,87.121498109019,437.6864753332723,-350.5649772242533
+horsey,9449,Weist,3994,30,Jillian,215.136,216.266,020526,258.5428303194988,224.68814956412604,311.96325402534694,-87.2751044612209
+horsey,9449,Weist,3994,30,Jillian,236.791,242.792,020526,312.1398256714953,87.9656015628052,468.9570998056069,-380.9914982428017
+horsey,9449,Weist,3999,30,Jillian,324.787,326.084,020526,188.85026314595973,80.77565481634565,497.9504526149251,-417.17479779857945
+horsey,9449,Weist,3994,30,Jillian,446.353,448.066,020526,183.92810599255566,156.4058642350489,208.38789252255071,-51.982028287501805
+horsey,9449,Weist,3994,30,Jillian,580.536,583.462,020526,169.08284799115972,90.11702464387378,248.48168762966966,-158.3646629857959
+horsey,9436,Weist,3994,26,Jillian,1026.263,1027.345,020117,169.9372937574812,94.36289850510373,217.41673069448706,-123.05383218938333
+horsey,9448,Weist,3994,30,Jillian,1732.766,1733.281,020521,117.36556113590032,96.38047870208496,239.14338897049493,-142.76291026840997
+horsey,9445,Weist,3998,29,Jillian,1444.42,1447.346,020421,224.5589009734355,85.93906480921613,295.25894430685634,-209.31987949764022
+horsey,9447,Weist,3998,29,Jillian,1442.977,1443.958,020507,324.14983591215685,280.63062459752643,472.09638563298057,-191.46576103545414
+horsey,9446,Weist,3998,29,Jillian,312.368,314.23,020428,253.1495737177387,84.43924605002212,524.9560883003151,-440.51684225029294
+horsey,9755,NewmanRatner,4243,7,4592HVG7mos,420.821,426.642,4592HVG,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9753,NewmanRatner,4235,7,4310AM7,695.151,697.791,4310AM,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9753,NewmanRatner,4235,7,4310AM7,697.791,699.998,4310AM,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9753,NewmanRatner,4235,7,4310AM7,954.71,956.423,4310AM,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9753,NewmanRatner,4235,7,4310AM7,958.582,960.247,4310AM,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9753,NewmanRatner,4235,7,4310AM7,964.326,965.447,4310AM,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9768,NewmanRatner,4279,7,4767JC,310.024,312.072,4767JC,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9759,NewmanRatner,4257,7,4650KS,649.764,653.928,4650KS,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9766,NewmanRatner,4273,7,4734ES7,187.714,192.927,4734ES,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9766,NewmanRatner,4273,7,4734ES7,192.927,197.689,4734ES,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9766,NewmanRatner,4273,7,4734ES7,233.4,234.995,4734ES,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9779,NewmanRatner,4312,7,4997LM7,51.534,54.928,4997LM,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9805,NewmanRatner,4383,7,5563DB7mos,393.65,401.119,5563DB,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9805,NewmanRatner,4383,7,5563DB7mos,393.65,401.119,5563DB,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9802,NewmanRatner,4376,7,5543EF7,583.09,585.185,5543EF,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9782,NewmanRatner,4321,7,5057MS,934.018,938.613,5057MS,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9792,NewmanRatner,4349,7,5266EC7,291.975,297.381,5266EC,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9822,NewmanRatner,4451,7,5859ME7,145.767,151.792,5859ME,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9816,NewmanRatner,4421,7,5733LE,771.478,772.745,5733LE,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9816,NewmanRatner,4421,7,5733LE,785.368,788.484,5733LE,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9816,NewmanRatner,4421,7,5733LE,788.484,790.771,5733LE,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9824,NewmanRatner,4454,7,5903AE,261.578,263.884,5903AE,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9824,NewmanRatner,4454,7,5903AE,263.884,265.134,5903AE,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9792,NewmanRatner,4349,7,5266EC7,943.908,947.54,5266EC,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9792,NewmanRatner,4349,7,5266EC7,947.54,949.359,5266EC,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9792,NewmanRatner,4349,7,5266EC7,949.359,951.877,5266EC,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9792,NewmanRatner,4349,7,5266EC7,951.877,954.599,5266EC,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9792,NewmanRatner,4349,7,5266EC7,954.599,957.283,5266EC,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9837,NewmanRatner,4488,7,6314AK7,237.834,239.84,6314AK,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9837,NewmanRatner,4488,7,6314AK7,244.598,247.57,6314AK,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9846,NewmanRatner,4524,7,6785KS7,401.896,402.696,6785KS,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9878,NewmanRatner,4594,10,4592HVG10mos,92.459,99.835,4592HVG,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9859,NewmanRatner,4544,7,7120CB7mos,683.878,686.298,7120CB,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9859,NewmanRatner,4544,7,7120CB7mos,694.181,696.334,7120CB,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9878,NewmanRatner,4594,10,4592HVG10mos,447.384,454.163,4592HVG,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9878,NewmanRatner,4594,10,4592HVG10mos,454.163,455.674,4592HVG,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9876,NewmanRatner,4591,10,427WC10,597.602,602.151,4273WC,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9872,NewmanRatner,4585,7,7658LT7mos,749.86,754.772,7658LT,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9871,NewmanRatner,4582,7,7553JT7mos,799.892,802.948,7553JT,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9886,NewmanRatner,4616,10,4697JK10,649.252,652.385,4697JK,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9890,NewmanRatner,4279,10,4767JC,395.503,399.488,4767JC,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9890,NewmanRatner,4279,10,4767JC,411.018,413.79,4767JC,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9902,NewmanRatner,4487,10,NA,154.401,157.521,4997LM,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9909,NewmanRatner,4670,10,5118PM10,509.724,510.8,5118PM,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9948,NewmanRatner,4701,10,5903AE10,213.572,216.93,5903AE,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9957,NewmanRatner,4695,10,6071WB10,652.671,656.726,6071WB,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9954,NewmanRatner,4482,10,5977QJ7,841.866,843.906,5977QJ,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9969,NewmanRatner,4728,10,6785KS10mos,304.822,307.537,6785KS,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9969,NewmanRatner,4728,10,6785KS10mos,664.241,667.902,6785KS,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9969,NewmanRatner,4728,10,6785KS10mos,681.199,683.951,6785KS,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9887,NewmanRatner,4720,10,4724LM10,586.097,591.049,4724LM,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9956,NewmanRatner,4479,10,6043AM,367.804,369.252,6043AM,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9985,NewmanRatner,4746,10,7162MB10mos,191.97,195.974,7162MB,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9985,NewmanRatner,4746,10,7162MB10mos,195.974,198.02,7162MB,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9976,NewmanRatner,4736,10,6878SK10,535.194,536.635,6878SK,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9976,NewmanRatner,4736,10,6878SK10,536.635,537.716,6878SK,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9945,NewmanRatner,4782,10,5859ME10,690.301,693.21,5859ME,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,9999,NewmanRatner,4779,11,4452CM11,375.087,377.215,4452CM,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,10002,NewmanRatner,4797,11,4629AB11,198.149,200.35,4629AB,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,10002,NewmanRatner,4797,11,4629AB11,507.215,509.361,4629AB,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,10005,NewmanRatner,4613,11,4664AM,127.537,130.228,4664AM,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,10004,NewmanRatner,4803,11,4650KS11,672.935,683.72,4650KS,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,10004,NewmanRatner,4803,11,4650KS11,683.72,687.81,4650KS,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,10004,NewmanRatner,4803,11,4650KS11,696.869,702.82,4650KS,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,10013,NewmanRatner,4818,11,4767JC11,270.739,272.264,4767JC,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,10012,NewmanRatner,4815,11,4743NA11,702.962,706.357,4743NA,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,10012,NewmanRatner,4815,11,4743NA11,706.845,708.521,4743NA,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,10012,NewmanRatner,4815,11,4743NA11,708.484,709.589,4743NA,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,10011,NewmanRatner,4619,11,4734ES,667.814,671.943,4734ES,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,10011,NewmanRatner,4619,11,4734ES,671.943,675.462,4734ES,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,10012,NewmanRatner,4815,11,4743NA11,715.975,717.69,4743NA,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,10022,NewmanRatner,4836,11,4929MM11mos,264.742,270.127,4929MM,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,10035,NewmanRatner,4852,11,5244SE11,522.819,525.988,5244SE,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,10023,NewmanRatner,4312,11,4997LM7,495.564,499.708,4997LM,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,10032,NewmanRatner,4670,11,5118PM10,277.693,281.136,5118PM,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,10030,NewmanRatner,4339,11,5193HB,254.912,256.681,5193HB,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,10058,NewmanRatner,4914,11,5694MC11,312.493,316.102,5694MC,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,10058,NewmanRatner,4914,11,5694MC11,327.042,328.362,5694MC,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,10060,NewmanRatner,4421,11,5733LE,178.525,181.686,5733LE,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,10060,NewmanRatner,4421,11,5733LE,181.686,183.664,5733LE,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,10060,NewmanRatner,4421,11,5733LE,187.555,190.159,5733LE,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,10073,NewmanRatner,4462,11,5936SR7,442.7,446.123,5936SR,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,10084,NewmanRatner,4959,11,6454MB11,898.549,899.519,6454MB,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,10084,NewmanRatner,4959,11,6454MB11,1015.091,1016.906,6454MB,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,10104,NewmanRatner,4998,11,7120CB11mos,571.208,574.563,7120CB,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,10109,NewmanRatner,5012,11,7222MD11mos,139.448,141.322,7222MD,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,10115,NewmanRatner,5032,11,7553JT11,432.512,436.365,7553JT,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,10115,NewmanRatner,5032,11,7553JT11,711.936,713.511,7553JT,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,10115,NewmanRatner,5032,11,7553JT11,729.735,733.102,7553JT,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,10119,NewmanRatner,5043,18,5013LA,369.521,371.987,5013LA,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,10123,NewmanRatner,5058,18,5266EC18,836.428,842.796,5266EC,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,10123,NewmanRatner,5058,18,5266EC18,844.028,846.028,5266EC,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,10130,NewmanRatner,4403,18,5609DW,351.335,354.595,5609DW,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,10137,NewmanRatner,5085,18,5707RT18mos,294.911,299.293,5707RT,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,10137,NewmanRatner,5085,18,5707RT18mos,412.67,414.039,5707RT,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,10132,NewmanRatner,5073,18,5563DB18,714.143,716.661,5563DB,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,10137,NewmanRatner,5085,18,5707RT18mos,732.059,735.662,5707RT,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,10187,NewmanRatner,5197,24,4743NA24,768.119,771.767,4743NA,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,10187,NewmanRatner,5197,24,4743NA24,781.007,785.175,4743NA,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,10202,NewmanRatner,4321,24,5057MS,380.496,383,5057MS,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,10257,NewmanRatner,5322,24,6314AK24,932.123,936.497,6314AK,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,10261,NewmanRatner,5329,24,6493TM24mos,937.592,940.193,6493TM,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,10261,NewmanRatner,5329,24,6493TM24mos,940.193,944.734,6493TM,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,10269,NewmanRatner,5344,24,6815KG24,43.646,46.168,6815KG,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,10273,NewmanRatner,5363,24,6878SK24,67.121,68.175,6878SK,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,10273,NewmanRatner,5363,24,6878SK24,74.781,76.61,6878SK,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,10273,NewmanRatner,5363,24,6878SK24,787.658,788.811,6878SK,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,10286,NewmanRatner,5396,24,7252PD24mos,583.74,586.59,7252PD,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,10286,NewmanRatner,5396,24,7252PD24mos,588.281,591.542,7252PD,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,10519,NewmanRatner,4736,10,6878SK10,315.721,317.642,6878SK,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,10615,NewmanRatner,4934,11,5928RL,938.336,939.367,5928RL,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,10615,NewmanRatner,4934,11,5928RL,939.367,941.308,5928RL,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,10689,NewmanRatner,5107,18,5936SR18,153.977,156.697,5936SR,audio file missing,audio file missing,audio file missing,audio file missing
+horsey,42206,Providence,22707,18,Alex,1196.176,1200.396,010526,150.17837691881445,74.95815794916132,509.3543307696057,-434.3961728204444
+horsey,42206,Providence,22707,18,Alex,3032.09,3040.046,010526,259.4131809408805,107.65042647926023,495.83688211499174,-388.1864556357315
+horsey,42206,Providence,22707,18,Alex,3040.046,3043.443,010526,302.3243487045605,165.74903723082443,524.3495215688,-358.60048433797556
+horsey,42206,Providence,22707,18,Alex,3043.443,3047.181,010526,317.7552762537929,142.02732520057802,479.2515222792235,-337.2241970786455
+horsey,42206,Providence,22707,18,Alex,3047.181,3049.716,010526,261.7018097469867,115.43546859429196,353.62548531655705,-238.19001672226509
+horsey,42206,Providence,22707,18,Alex,3049.716,3052.695,010526,328.05120559727317,110.9658724486484,467.0673984119082,-356.1015259632598
+horsey,42206,Providence,22707,18,Alex,3052.695,3056.796,010526,333.27601066643604,141.9280742642058,527.031390970317,-385.10331670611123
+horsey,42208,Providence,22707,19,Alex,2967.35,2976.161,010707,--undefined--,--undefined--,--undefined--,--undefined--
+horsey,42273,Providence,22721,20,Ethan,424.723,432.711,010726,256.2042517958738,80.32427636696987,510.62666640812654,-430.3023900411567
+horsey,42305,Providence,22729,13,Lily,926.166,927.338,010102,122.68589170443896,72.34081317918239,175.8556809508894,-103.514867771707
+horsey,42312,Providence,22729,16,Lily,2016.096,2017.901,010326,281.49678823385256,148.34977374238426,436.3696845375494,-288.0199107951652
+horsey,42321,Providence,22729,20,Lily,353.198,356.903,010814,254.2889496604447,81.3401181796079,520.8638684093602,-439.5237502297523
+horsey,42322,Providence,22731,21,Lily,358.895,360.545,010827,338.3898250064008,225.85109099090505,441.16227044168386,-215.3111794507788
+horsey,42320,Providence,22735,20,Lily,264.95,266.91,010803,246.12673957843893,83.07939913946787,499.69931594670845,-416.6199168072406
+horsey,42390,Providence,22744,14,Naima,1052.636,1059.253,010207,135.2055972811299,106.67110387096211,352.5424477712045,-245.87134390024238
+horsey,42397,Providence,22744,17,Naima,525.768,530.115,010416,295.1342006413823,117.97999183583508,487.4064091166537,-369.42641728081867
+horsey,42397,Providence,22744,17,Naima,666.85,670.041,010416,237.836520546923,75.12847924492786,331.09970574025533,-255.97122649532747
+horsey,42397,Providence,22744,17,Naima,3027.128,3030.368,010416,234.05559423097503,91.58892673443987,343.1156967388309,-251.526770004391
+horsey,42394,Providence,22744,16,Naima,195.581,199.785,010325,176.7697866673672,79.1350327429924,256.33528356651516,-177.20025082352277
+horsey,42411,Providence,22744,21,Naima,1519.606,1525.02,010818,253.7852697386278,109.90413929889235,452.22834683498496,-342.3242075360926
+horsey,42411,Providence,22744,21,Naima,1525.02,1527.146,010818,208.7212096700446,116.93371965531472,353.43608989946506,-236.50237024415034
+horsey,42411,Providence,22744,21,Naima,1530.768,1532.101,010818,219.53990410164522,107.12692502492429,480.68046428142213,-373.55353925649786
+horsey,42411,Providence,22744,21,Naima,1533.785,1535.51,010818,117.6113321097534,99.71233130653688,156.2877216063706,-56.57539029983373
+horsey,42395,Providence,22744,16,Naima,1934.486,1935.691,010403,225.0863638836702,176.75393518919316,506.470846538783,-329.71691134958985
+horsey,42395,Providence,22744,16,Naima,1935.691,1941.476,010403,260.1592303503785,102.7973754699554,524.3353582431009,-421.53798277314553
+horsey,42395,Providence,22744,16,Naima,1941.476,1948.37,010403,254.76289810738487,76.88862196832038,509.46965326565453,-432.58103129733416
+horsey,42420,Providence,22745,23,Naima,691.76,695.14,011018,175.34865705328468,88.87470481262382,473.4196473352341,-384.5449425226103
+horsey,42395,Providence,22745,16,Naima,3578.865,3582.711,010403,171.42351884830103,77.70587793689357,469.37749220954413,-391.6716142726506
+horsey,42426,Providence,22744,24,Naima,2060.08,2063.776,020004,209.5908887379877,169.22941063781886,498.81709348947123,-329.5876828516524
+horsey,42481,Providence,22756,19,Violet,880.216,886.385,010618,212.89418042552168,90.97341850368542,494.86399743521355,-403.8905789315281
+horsey,42481,Providence,22756,19,Violet,886.385,890.545,010618,240.1907673453567,76.4518109174924,426.6364324562183,-350.1846215387259
+horsey,42481,Providence,22756,19,Violet,890.545,897.408,010618,241.86302739421123,75.04661687731328,499.6791763304468,-424.6325594531335
+horsey,42481,Providence,22756,19,Violet,926.041,930.49,010618,222.2029505787161,78.4227876509808,346.36574747114514,-267.94295982016433
+horsey,42482,Providence,22756,17,Violet,402.125,405.55,010503,238.0353467982271,70.35634725625293,456.1088560955004,-385.75250883924747
+horsey,42482,Providence,22756,17,Violet,409.426,413.01,010503,216.41316720640003,75.86156573907324,252.0052431566093,-176.14367741753608
+horsey,42496,Providence,22756,25,Violet,773.858,776.505,020110,142.2454229391663,77.74883275889478,270.9473773535639,-193.19854459466916
+horsey,42496,Providence,22756,25,Violet,786.68,788.261,020110,135.98493002980968,67.7122303023381,176.2495872786791,-108.53735697634099
+horsey,42496,Providence,22756,25,Violet,788.261,791.11,020110,203.7044926626383,88.87207534414021,307.8952486680897,-219.0231733239495
+horsey,42488,Providence,22756,22,Violet,950.833,954.013,010925,176.39223246259778,102.53453138021763,283.4858639249879,-180.95133254477025
+horsey,42488,Providence,22756,22,Violet,954.013,959.775,010925,192.53338780023748,81.53407774675304,253.68099989478222,-172.14692214802918
+horsey,42491,Providence,22756,23,Violet,1233.641,1235.21,011115,268.9302101588939,76.54562112639375,495.6933304675186,-419.1477093411248
+horsey,42491,Providence,22756,23,Violet,1439.306,1444.13,011115,202.57218736710223,75.21458594760203,492.7724746035585,-417.5578886559565
+horsey,42491,Providence,22756,23,Violet,1497.516,1501.24,011115,233.98273582698707,89.07632318259955,469.9277808526665,-380.85145767006696
+horsey,42488,Providence,22756,22,Violet,1414.141,1415.793,010925,194.21430443511588,91.72341874017745,270.43582766447594,-178.71240892429847
+horsey,42488,Providence,22756,22,Violet,1423.251,1424.835,010925,237.17007928944884,77.45658612802495,329.3864888799328,-251.92990275190786
+horsey,42488,Providence,22756,22,Violet,1493.26,1495.143,010925,136.60136639630386,78.30390033062004,273.0089645832426,-194.70506425262255
+horsey,42488,Providence,22756,22,Violet,1497.145,1499.09,010925,219.13290487252192,96.81450603520999,335.04884803742965,-238.23434200221965
+horsey,42488,Providence,22756,22,Violet,1506.903,1510.055,010925,225.14521881080444,157.78852589541484,502.03451772958806,-344.2459918341732
+horsey,42488,Providence,22756,22,Violet,1511.808,1514.72,010925,215.67014898380992,100.74075413859744,478.6247381853559,-377.8839840467585
+horsey,42488,Providence,22756,22,Violet,1517.418,1520.418,010925,124.04987077412092,70.81862659895629,268.26180617871023,-197.44317957975395
+horsey,42488,Providence,22756,22,Violet,1529.421,1533.478,010925,277.7252847930989,178.85220952214183,339.3356750277733,-160.48346550563144
+horsey,42488,Providence,22756,22,Violet,1536.41,1539.461,010925,177.0324027968209,76.48739119176676,310.668920590115,-234.18152939834826
+horsey,42488,Providence,22756,22,Violet,1539.461,1541.311,010925,172.00634347831095,77.79424398912629,272.8887237767377,-195.09447978761142
+horsey,42529,Providence,22769,19,William,1047.193,1047.863,010708,152.99584358132003,95.99757648063564,243.00637309848804,-147.0087966178524
+horsey,42529,Providence,22769,19,William,1049.446,1050.096,010708,--undefined--,--undefined--,--undefined--,--undefined--
+horsey,42526,Providence,22766,17,William,933.168,934.363,010427,282.2365359705834,217.03501281357606,338.40364972008035,-121.36863690650429
+horsey,42531,Providence,22766,20,William,1086.043,1087.166,010802,273.8633481255837,203.65664485317365,343.1548661840007,-139.49822133082705
+horsey,42531,Providence,22766,20,William,1087.645,1089.451,010802,268.85001236303015,105.10944296302715,344.75558737152534,-239.64614440849817
+horsey,42531,Providence,22766,20,William,1095.248,1097.37,010802,259.2348858157435,190.5546951905215,341.08813822917097,-150.53344303864947
+horsey,42531,Providence,22766,20,William,1099.728,1105.443,010802,227.86129699251913,75.0102450800907,343.99209917051456,-268.9818540904239
+horsey,42531,Providence,22766,20,William,1105.443,1108.065,010802,279.6812035515891,89.83227507881473,346.1436256073113,-256.3113505284966
+horsey,42531,Providence,22766,20,William,1249.846,1251.3,010802,315.7820013391335,257.3599427172996,385.79222809712184,-128.43228537982225
+horsey,42528,Providence,22766,19,William,1796.606,1800.798,010619,281.51308384484287,166.97525587116093,522.874735341431,-355.8994794702701
+horsey,42528,Providence,22766,19,William,1800.798,1803.526,010619,252.76783163283403,201.48834267584186,441.7008648706442,-240.21252219480232
+horsey,42528,Providence,22766,19,William,1822.913,1830.04,010619,306.6073470042702,76.18893286206155,503.01027065519287,-426.8213377931313
+horsey,42528,Providence,22766,19,William,2911.841,2914.05,010619,291.59125817395034,214.81068938263093,503.6941050872256,-288.88341570459465
+horsey,42528,Providence,22766,19,William,2915.481,2917.698,010619,282.65351034461384,184.01675481058882,480.1476203563473,-296.1308655457585
+horsey,42546,Providence,22766,28,William,1057.048,1060.571,020319,246.11680999835357,119.58345186515184,484.33770962818465,-364.7542577630328
+horsey,42536,Providence,22768,22,William,1949.258,1952.426,011012,145.5668029820133,76.19963434505091,254.3720784578467,-178.1724441127958
+horsey,42544,Providence,22766,27,William,2356.255,2358.715,020221,261.96730909406403,238.1695214899423,309.42091378624986,-71.25139229630756

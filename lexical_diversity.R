@@ -252,9 +252,9 @@ ggplot() +
   scale_color_manual(values = colors) +
   ylim(75, 90) +
   labs(x = "Form", y = "TTR for +/- 1 utterance", title = "CHILDES") +
-  theme_test(base_size = 15) +
+  theme_test(base_size = 20) +
   theme(legend.position = "none", plot.title = element_text(hjust = 0.5))
-ggsave("figs/lexical_diversity_overall.jpg", height = 6, width = 4, dpi = 300)
+ggsave("figs/lexical_diversity_overall.jpg", height = 5, width = 4, dpi = 300)
 
 # no difference in TTR
 wilcox.test(ttr ~ form, data = ttr_byword, paired = TRUE)
@@ -277,7 +277,7 @@ ttr %>%
   scale_fill_manual(values = colors) +
   scale_x_continuous(limits = c(0, 84), breaks=seq(0, 84, by=12)) +
   labs(x = "Age (months)", y = "TTR for +/- 1 utterance", title = "CHILDES") +
-  theme_test(base_size = 15) +
+  theme_test(base_size = 20) +
   theme(legend.position = "none", plot.title = element_text(hjust = 0.5))
 ggsave("figs/lexical_diversity_over_time.jpg", height = 5, width = 6, dpi = 300)
 

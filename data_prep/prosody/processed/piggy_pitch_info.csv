@@ -1,0 +1,827 @@
+item,transcript_id,corpus_name,speaker_id,age,target_child_name,media_start,media_end,audio_file,pitch_mean,pitch_min,pitch_max,pitch_range
+piggy,3363,Bernstein,1727,21,Dale,1706.358,1712.698,010900,222.50678393710243,76.70126227179281,489.64057364122317,-412.93931136943036
+piggy,3804,Peters,2356,16,Seth,336.028,338.28,010410c,167.38490182220627,77.50895748466522,273.0407470063087,-195.5317895216435
+piggy,3804,Peters,2356,16,Seth,339.198,342.054,010410c,187.9150009617273,75.13896442388688,281.6680419494205,-206.52907752553364
+piggy,3804,Peters,2356,16,Seth,343.852,346.894,010410c,193.71790424608426,143.41007353987544,323.9001834241734,-180.49010988429796
+piggy,3804,Peters,2356,16,Seth,348.726,351.152,010410c,202.00556481336713,163.63402058068863,270.99077028841634,-107.35674970772772
+piggy,3804,Peters,2356,16,Seth,353.007,359.402,010410c,287.5616974966223,77.66100107135317,525.9624615583855,-448.30146048703233
+piggy,3804,Peters,2356,16,Seth,363.75,365.306,010410c,213.7127787427856,176.62356205711694,252.50780678142107,-75.88424472430412
+piggy,3804,Peters,2356,16,Seth,367.902,370.12,010410c,221.8541601996855,77.26114070097601,377.5979731409377,-300.3368324399617
+piggy,3804,Peters,2356,16,Seth,515.669,517.167,010410c,231.6878702682155,123.89625149313667,329.7532486285612,-205.85699713542454
+piggy,3804,Peters,2356,16,Seth,532.189,533.141,010410c,278.3947641683481,218.90471598161972,448.47451421112805,-229.56979822950834
+piggy,3804,Peters,2356,16,Seth,535.325,536.15,010410c,290.3529266491041,98.45157970151,489.327291330339,-390.875711628829
+piggy,3822,Peters,2338,18,Seth,743.311,744.762,010600,141.92500125412994,114.11000318816423,165.1617928790706,-51.05178969090636
+piggy,3848,Peters,2338,22,Seth,171.549,174.355,011006,175.43059462884113,112.76664757388677,463.074595493076,-350.30794791918925
+piggy,3852,Peters,2338,23,Seth,1033.096,1034.377,011026a,118.42414527439914,82.57350379217716,195.8042076502287,-113.23070385805154
+piggy,3872,Peters,2338,25,Seth,1488.141,1489.998,020024b,251.95142390251723,104.33889715097348,389.47626026899434,-285.13736311802086
+piggy,3872,Peters,2338,25,Seth,1492.97,1494.744,020024b,167.7728931860261,105.66625367582887,309.70877730120907,-204.0425236253802
+piggy,3872,Peters,2338,25,Seth,1496.436,1497.8,020024b,183.78109072172253,101.30411508415105,494.12915818880236,-392.8250431046513
+piggy,3872,Peters,2338,25,Seth,1501.431,1503.017,020024b,153.03813157125043,111.57286416066303,348.8218013325652,-237.24893717190218
+piggy,3872,Peters,2338,25,Seth,1504.792,1506.261,020024b,162.44114040363092,92.94143661790625,432.34133323642385,-339.3998966185176
+piggy,3872,Peters,2338,25,Seth,1507.581,1512.744,020024b,292.5984831040328,105.45525353557487,423.46278966632264,-318.0075361307478
+piggy,3872,Peters,2338,25,Seth,1515.466,1516.498,020024b,179.37204704699792,135.8933189467578,492.5680054446415,-356.6746864978837
+piggy,3872,Peters,2338,25,Seth,1518.605,1521.289,020024b,131.39392227404593,113.5470843128423,145.42030105309098,-31.87321674024868
+piggy,3872,Peters,2338,25,Seth,1525.414,1527.355,020024b,196.2521887304921,103.05142096584085,370.20456677827235,-267.1531458124315
+piggy,3872,Peters,2338,25,Seth,1529.834,1534.042,020024b,146.0965775469569,83.23412578826206,488.4413397889822,-405.2072140007201
+piggy,3872,Peters,2338,25,Seth,1534.042,1536.931,020024b,228.68416672710347,92.11913168116793,403.3687816647014,-311.24964998353346
+piggy,3872,Peters,2338,25,Seth,1545.188,1547.584,020024b,175.74182671743176,95.52457781076205,473.43596119263015,-377.91138338186806
+piggy,3872,Peters,2338,25,Seth,1550.472,1553.073,020024b,180.54407913700013,99.04415836966143,410.5481029631109,-311.5039445934495
+piggy,3872,Peters,2338,25,Seth,1554.104,1555.014,020024b,149.01436076859454,105.63570379568633,487.8437442338272,-382.20804043814087
+piggy,3872,Peters,2338,25,Seth,1556.416,1557.531,020024b,171.80587034647465,103.83730864036706,488.14003240987006,-384.302723769503
+piggy,3872,Peters,2338,25,Seth,1559.472,1560.791,020024b,148.57814453292355,98.65654431149247,362.19534265347676,-263.53879834198426
+piggy,3872,Peters,2338,25,Seth,1563.021,1567.024,020024b,270.9732454285319,100.9856609047123,494.61681846285035,-393.63115755813806
+piggy,3872,Peters,2338,25,Seth,1570.906,1574.083,020024b,281.8669919083646,95.00351656623079,516.868987568327,-421.8654710020962
+piggy,3872,Peters,2338,25,Seth,1576.395,1579.656,020024b,143.00974533085324,107.97924859590694,296.83096311523184,-188.8517145193249
+piggy,3872,Peters,2338,25,Seth,1581.308,1582.218,020024b,104.76471303740847,89.49479112313257,125.95981611814798,-36.46502499501541
+piggy,3872,Peters,2338,25,Seth,1582.711,1583.909,020024b,201.97961286321174,95.6047894006596,475.36003384630817,-379.7552444456486
+piggy,3872,Peters,2338,25,Seth,1586.881,1588.367,020024b,300.1105844855273,104.17695702728135,422.34422166761095,-318.1672646403296
+piggy,3872,Peters,2338,25,Seth,1591.423,1592.454,020024b,144.79680698246258,87.63665488983872,437.108891843359,-349.4722369535203
+piggy,3872,Peters,2338,25,Seth,1592.454,1594.106,020024b,307.82966251159326,111.23822619717079,460.1502643119182,-348.9120381147474
+piggy,3872,Peters,2338,25,Seth,1595.881,1596.541,020024b,278.1671567229131,98.15837798836917,457.4811438761741,-359.3227658878049
+piggy,3872,Peters,2338,25,Seth,1596.541,1597.284,020024b,178.59598246221967,109.91918152836125,420.3258152784919,-310.40663375013065
+piggy,3872,Peters,2338,25,Seth,1597.284,1600.589,020024b,314.30336321779066,99.64304011691611,486.65033357623287,-387.00729345931677
+piggy,4167,Rollins,2535,12,NA,196.103,197.375,cc12,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4167,Rollins,2535,12,NA,203.443,207.403,cc12,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4182,Rollins,2535,12,NA,100.233,101.89,cm12,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4182,Rollins,2535,12,NA,101.89,103.583,cm12,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4182,Rollins,2535,12,NA,103.583,105.315,cm12,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4182,Rollins,2535,12,NA,105.315,106.76,cm12,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4182,Rollins,2535,12,NA,107.443,110.53,cm12,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4182,Rollins,2535,12,NA,113.615,115.633,cm12,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4167,Rollins,2535,12,NA,390.191,392.841,cc12,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4167,Rollins,2535,12,NA,392.841,394.778,cc12,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4167,Rollins,2535,12,NA,394.778,397.598,cc12,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4161,Rollins,2536,12,NA,507.608,508.381,cb12,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4161,Rollins,2536,12,NA,508.381,510.461,cb12,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4167,Rollins,2535,12,NA,458.161,469.423,cc12,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4167,Rollins,2535,12,NA,469.423,471.62,cc12,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4193,Rollins,2535,6,NA,496.763,497.921,cy06,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4193,Rollins,2535,6,NA,497.921,499.553,cy06,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4193,Rollins,2535,6,NA,502.048,502.998,cy06,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4194,Rollins,2535,9,NA,345.433,347.323,cy09,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4167,Rollins,2535,12,NA,1004.976,1010.028,cc12,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4199,Rollins,2540,20,David,765.114,766.918,di06,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4199,Rollins,2540,20,David,768.154,769.595,di06,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4199,Rollins,2540,20,David,937.022,938.163,di06,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4199,Rollins,2540,20,David,938.163,939.998,di06,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4199,Rollins,2540,20,David,939.998,942.867,di06,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4199,Rollins,2540,20,David,942.865,944.163,di06,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4199,Rollins,2540,20,David,1179.138,1184.905,di06,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4199,Rollins,2540,20,David,1203.529,1206.165,di06,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4202,Rollins,2535,12,NA,469.146,470.125,di12,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4202,Rollins,2535,12,NA,479.496,480.858,di12,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4200,Rollins,2535,9,NA,784.156,789.14,di09,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4200,Rollins,2535,9,NA,798.376,800.115,di09,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4200,Rollins,2535,9,NA,800.115,801.175,di09,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4200,Rollins,2535,9,NA,829.555,831.943,di09,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4236,Rollins,2535,6,NA,438.3,442.063,im06,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4239,Rollins,2535,12,NA,616.37,617.671,im12,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4239,Rollins,2535,12,NA,618.333,619.318,im12,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4225,Rollins,2535,9,NA,1168.015,1171.07,hc09,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4225,Rollins,2535,9,NA,1171.07,1172.561,hc09,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4267,Rollins,2535,12,NA,395.581,397.9,ma12,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4267,Rollins,2535,12,NA,397.9,399.495,ma12,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4267,Rollins,2535,12,NA,401.438,404.683,ma12,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4280,Rollins,2535,9,NA,657.671,659.348,nb09,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4280,Rollins,2535,9,NA,661.748,663.693,nb09,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4280,Rollins,2535,9,NA,666.468,667.245,nb09,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4280,Rollins,2535,9,NA,681.263,682.985,nb09,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4280,Rollins,2535,9,NA,689.113,689.941,nb09,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4280,Rollins,2535,9,NA,700.593,702.341,nb09,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4280,Rollins,2535,9,NA,707.901,710.266,nb09,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4280,Rollins,2535,9,NA,710.266,711.79,nb09,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4280,Rollins,2535,9,NA,711.79,713.806,nb09,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4280,Rollins,2535,9,NA,713.831,715.011,nb09,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4270,Rollins,2535,20,NA,348.981,350.568,me03,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4270,Rollins,2535,20,NA,350.568,351.876,me03,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4280,Rollins,2535,9,NA,719.738,721.113,nb09,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4280,Rollins,2535,9,NA,721.113,723.401,nb09,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4281,Rollins,2535,12,NA,204.755,205.528,nb12,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4271,Rollins,2535,6,NA,599.13,600.69,me06,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4271,Rollins,2535,6,NA,600.69,602.255,me06,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4281,Rollins,2535,12,NA,205.528,206.586,nb12,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4280,Rollins,2535,9,NA,727.776,728.605,nb09,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4281,Rollins,2535,12,NA,209.22,210.635,nb12,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4280,Rollins,2535,9,NA,729.175,730.08,nb09,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4280,Rollins,2535,9,NA,730.16,732.735,nb09,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4280,Rollins,2535,9,NA,741.021,742.256,nb09,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4280,Rollins,2535,9,NA,742.256,743.53,nb09,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4280,Rollins,2535,9,NA,772.218,774.921,nb09,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4280,Rollins,2535,9,NA,774.921,776.955,nb09,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4279,Rollins,2535,6,NA,526.14,527.621,nb06,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4279,Rollins,2535,6,NA,527.621,529.488,nb06,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4273,Rollins,2535,12,NA,196.59,197.885,me12,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4273,Rollins,2535,12,NA,199.901,202.405,me12,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4280,Rollins,2535,9,NA,1134.42,1136.92,nb09,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4280,Rollins,2535,9,NA,1136.92,1141.158,nb09,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4280,Rollins,2535,9,NA,1142.186,1143.845,nb09,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4281,Rollins,2535,12,NA,690.46,692.605,nb12,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4248,Rollins,2535,12,NA,545.663,549.186,jp12,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4248,Rollins,2535,12,NA,549.186,551.83,jp12,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4248,Rollins,2535,12,NA,551.83,554.073,jp12,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4248,Rollins,2535,12,NA,554.073,555.503,jp12,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4281,Rollins,2535,12,NA,726.651,727.806,nb12,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4248,Rollins,2535,12,NA,555.503,557.211,jp12,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4281,Rollins,2535,12,NA,733.385,734.746,nb12,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4281,Rollins,2535,12,NA,737.535,739.673,nb12,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4281,Rollins,2535,12,NA,740.35,741.801,nb12,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4281,Rollins,2535,12,NA,744.706,747.04,nb12,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4281,Rollins,2535,12,NA,750.548,752.035,nb12,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4281,Rollins,2535,12,NA,770.476,771.64,nb12,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4281,Rollins,2535,12,NA,782.3,783.563,nb12,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4281,Rollins,2535,12,NA,783.563,784.85,nb12,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4281,Rollins,2535,12,NA,784.85,787.53,nb12,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4281,Rollins,2535,12,NA,787.53,789.435,nb12,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4281,Rollins,2535,12,NA,790.285,791.805,nb12,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4281,Rollins,2535,12,NA,813.566,816.193,nb12,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4281,Rollins,2535,12,NA,819.008,821.768,nb12,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4281,Rollins,2535,12,NA,837.095,839.488,nb12,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4280,Rollins,2535,9,NA,1411.656,1414.326,nb09,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4280,Rollins,2535,9,NA,1414.326,1415.756,nb09,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4280,Rollins,2535,9,NA,1415.756,1416.95,nb09,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4254,Rollins,2535,9,NA,770.85,773.006,jw09,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4319,Rollins,2538,12,Christopher,936.18,937.505,te12,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4319,Rollins,2538,12,Christopher,940.806,942.075,te12,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4329,Rollins,2535,12,NA,707.443,708.366,tt12,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4329,Rollins,2535,12,NA,943.376,945.263,tt12,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4329,Rollins,2535,12,NA,945.681,947.935,tt12,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4329,Rollins,2535,12,NA,950.376,953.33,tt12,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4329,Rollins,2535,12,NA,955.298,959.768,tt12,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4329,Rollins,2535,12,NA,964.491,967.761,tt12,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4329,Rollins,2535,12,NA,967.761,970.265,tt12,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4329,Rollins,2535,12,NA,970.265,972.6,tt12,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4329,Rollins,2535,12,NA,972.6,974.753,tt12,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4329,Rollins,2535,12,NA,974.753,980.626,tt12,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4329,Rollins,2535,12,NA,1106.531,1108.021,tt12,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4329,Rollins,2535,12,NA,1108.871,1110.406,tt12,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4329,Rollins,2535,12,NA,1139.41,1140.595,tt12,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4329,Rollins,2535,12,NA,1153.121,1154.123,tt12,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4329,Rollins,2535,12,NA,1156.593,1157.311,tt12,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4329,Rollins,2535,12,NA,1174.993,1176.21,tt12,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4329,Rollins,2535,12,NA,1182.103,1183.888,tt12,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4329,Rollins,2535,12,NA,1183.888,1185.356,tt12,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4329,Rollins,2535,12,NA,1221.475,1223.411,tt12,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4329,Rollins,2535,12,NA,1233.573,1235.141,tt12,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4329,Rollins,2535,12,NA,1235.843,1237.005,tt12,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4329,Rollins,2535,12,NA,1266.781,1268.083,tt12,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,4574,Gleason,2638,28,William,1360.108,1361.211,william,171.59731342262168,140.8819915008739,218.02835988752938,-77.14636838665547
+piggy,7223,MacWhinney,3396,42,Ross,1402.161,1403.461,030602,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7223,MacWhinney,3396,42,Ross,1404.121,1404.864,030602,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7867,Brent,3843,12,Morgan,828.228,829.82,001129,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7867,Brent,3843,12,Morgan,830.66,832.55,001129,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7867,Brent,3843,12,Morgan,833.096,834.959,001129,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7867,Brent,3843,12,Morgan,836.16,837.885,001129,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7867,Brent,3843,12,Morgan,838.418,840.706,001129,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7867,Brent,3843,12,Morgan,843.284,844.467,001129,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7879,Brent,3847,11,Miranda,659.132,660.472,001026,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7879,Brent,3847,11,Miranda,661.648,662.57,001026,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7879,Brent,3847,11,Miranda,663.062,663.79,001026,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7879,Brent,3847,11,Miranda,669.039,670.913,001026,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7867,Brent,3843,12,Morgan,4210.493,4211.982,001129,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7867,Brent,3843,12,Morgan,4212.734,4214.593,001129,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7867,Brent,3843,12,Morgan,4215.244,4216.632,001129,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7867,Brent,3843,12,Morgan,4217.387,4219.113,001129,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7867,Brent,3843,12,Morgan,4219.654,4221.087,001129,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7886,Brent,3847,15,Miranda,1064.769,1066.578,010217,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7886,Brent,3847,15,Miranda,1069.565,1072.966,010217,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7886,Brent,3847,15,Miranda,1073.701,1075.207,010217,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7886,Brent,3847,15,Miranda,1075.891,1077.007,010217,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7886,Brent,3847,15,Miranda,1140.014,1140.959,010217,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7886,Brent,3847,15,Miranda,1143.765,1144.782,010217,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7898,Brent,3850,13,Dillon,514.067,515.33,010104,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7901,Brent,3850,15,Dillon,2751.065,2753.095,010224,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7901,Brent,3850,15,Dillon,2753.687,2754.844,010224,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7901,Brent,3850,15,Dillon,2755.238,2756.299,010224,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7901,Brent,3850,15,Dillon,2756.524,2757.527,010224,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7901,Brent,3850,15,Dillon,2757.544,2760.703,010224,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7881,Brent,3847,12,Miranda,3875.616,3878.988,001120,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7920,Brent,3857,13,Alexander,1554.963,1555.344,010027,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7920,Brent,3857,13,Alexander,1580.347,1581.014,010027,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7920,Brent,3857,13,Alexander,1584.122,1585.259,010027,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7919,Brent,3857,10,Alexander,1791.694,1793.276,001005,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7919,Brent,3857,10,Alexander,1793.867,1795.169,001005,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7919,Brent,3857,10,Alexander,1795.905,1797.146,001005,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7919,Brent,3857,10,Alexander,1797.575,1798.895,001005,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7919,Brent,3857,10,Alexander,1800.211,1801.524,001005,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7919,Brent,3857,10,Alexander,1801.861,1804.204,001005,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7924,Brent,3857,14,Alexander,2460.133,2460.484,010125,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7924,Brent,3857,14,Alexander,2468.092,2469.184,010125,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7924,Brent,3857,14,Alexander,2469.388,2470.524,010125,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7923,Brent,3857,14,Alexander,4250.187,4251.088,010118,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7923,Brent,3857,14,Alexander,4252.02,4253.299,010118,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7923,Brent,3857,14,Alexander,4255.534,4256.48,010118,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7923,Brent,3857,14,Alexander,4258.164,4259.561,010118,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7923,Brent,3857,14,Alexander,4260.867,4262.027,010118,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7923,Brent,3857,14,Alexander,4263.194,4264.238,010118,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7923,Brent,3857,14,Alexander,4265.051,4268.303,010118,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7923,Brent,3857,14,Alexander,4274.265,4275.633,010118,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7923,Brent,3857,14,Alexander,4277.5,4278.524,010118,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7923,Brent,3857,14,Alexander,4279.071,4280.068,010118,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7923,Brent,3857,14,Alexander,4281.259,4282.361,010118,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7923,Brent,3857,14,Alexander,4284.663,4286.299,010118,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7923,Brent,3857,14,Alexander,4289.874,4293.918,010118,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7900,Brent,3850,15,Dillon,1524.255,1526.435,010304,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7900,Brent,3850,15,Dillon,1535.435,1536.218,010304,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7900,Brent,3850,15,Dillon,1537.283,1537.905,010304,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7900,Brent,3850,15,Dillon,1540.082,1541.468,010304,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7900,Brent,3850,15,Dillon,4346.575,4347.575,010304,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7900,Brent,3850,15,Dillon,4349.609,4350.365,010304,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7925,Brent,3857,15,Alexander,324.527,325.952,010225,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7925,Brent,3857,15,Alexander,329.109,330.466,010225,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7925,Brent,3857,15,Alexander,331.06,332.081,010225,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7925,Brent,3857,15,Alexander,332.833,333.857,010225,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7925,Brent,3857,15,Alexander,334.486,337.492,010225,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7964,Brent,3865,10,Tyrese,820.303,822.003,000928,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7964,Brent,3865,10,Tyrese,822.497,824.067,000928,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7964,Brent,3865,10,Tyrese,824.7,826.527,000928,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7964,Brent,3865,10,Tyrese,827.077,828.817,000928,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7964,Brent,3865,10,Tyrese,829.513,834.48,000928,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7925,Brent,3857,15,Alexander,1400.267,1400.667,010225,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7987,Brent,3867,14,Timothy,140.483,141.117,010206,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7987,Brent,3867,14,Timothy,198.93,199.75,010206,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7983,Brent,3867,14,Timothy,1399.807,1401.007,010122,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7983,Brent,3867,14,Timothy,1406.177,1407.097,010122,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7983,Brent,3867,14,Timothy,1409.457,1411.433,010122,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7989,Brent,3867,15,Timothy,1536.684,1540.592,010301,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7987,Brent,3867,14,Timothy,811.453,813.193,010206,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7989,Brent,3867,15,Timothy,1571.605,1573.454,010301,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7989,Brent,3867,15,Timothy,1574.626,1576.184,010301,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7989,Brent,3867,15,Timothy,1599.293,1601.064,010301,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7985,Brent,3867,13,Timothy,1017,1018.128,010024,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7985,Brent,3867,13,Timothy,1019.123,1021.237,010024,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7985,Brent,3867,13,Timothy,1022.915,1024.939,010024,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7985,Brent,3867,13,Timothy,1026.201,1028.265,010024,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7985,Brent,3867,13,Timothy,1030.948,1033.095,010024,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7985,Brent,3867,13,Timothy,1034.463,1035.963,010024,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7985,Brent,3867,13,Timothy,1040.83,1041.922,010024,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7987,Brent,3867,14,Timothy,1102.647,1104.42,010206,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7987,Brent,3867,14,Timothy,1105.46,1106.163,010206,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7987,Brent,3867,14,Timothy,1113.37,1116.26,010206,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7987,Brent,3867,14,Timothy,1125.84,1128.47,010206,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7987,Brent,3867,14,Timothy,1135.18,1137.127,010206,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7987,Brent,3867,14,Timothy,1137.747,1139.2,010206,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7987,Brent,3867,14,Timothy,1140.883,1142.337,010206,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7987,Brent,3867,14,Timothy,1144.177,1145.727,010206,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7987,Brent,3867,14,Timothy,1148.36,1149.987,010206,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7987,Brent,3867,14,Timothy,1161.29,1162.937,010206,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7987,Brent,3867,14,Timothy,1163.093,1164.737,010206,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7979,Brent,3867,10,Timothy,509.039,510.238,001015,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7979,Brent,3867,10,Timothy,514.5,515.716,001015,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7979,Brent,3867,10,Timothy,516.156,517.276,001015,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7974,Brent,3865,14,Tyrese,2052.553,2054.427,010205,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7974,Brent,3865,14,Tyrese,2055.263,2056.963,010205,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7974,Brent,3865,14,Tyrese,2057.917,2060.05,010205,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7974,Brent,3865,14,Tyrese,2060.66,2062.627,010205,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7974,Brent,3865,14,Tyrese,2063.763,2068.87,010205,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7982,Brent,3867,12,Timothy,1826.833,1828.541,001126,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7982,Brent,3867,12,Timothy,1829.558,1830.568,001126,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7982,Brent,3867,12,Timothy,1830.976,1833.525,001126,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7982,Brent,3867,12,Timothy,1834.527,1837.332,001126,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7982,Brent,3867,12,Timothy,1837.969,1840.58,001126,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7982,Brent,3867,12,Timothy,1841.034,1843.306,001126,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7982,Brent,3867,12,Timothy,1843.993,1850.16,001126,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7984,Brent,3867,12,Timothy,2628.633,2629.818,010010,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7984,Brent,3867,12,Timothy,2630.486,2631.582,010010,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7984,Brent,3867,12,Timothy,2639.078,2640.428,010010,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7982,Brent,3867,12,Timothy,1857.19,1859.854,001126,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7982,Brent,3867,12,Timothy,1863.841,1866.201,001126,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7982,Brent,3867,12,Timothy,1867.197,1869.694,001126,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7982,Brent,3867,12,Timothy,1872.272,1873.531,001126,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7982,Brent,3867,12,Timothy,1876.335,1878.625,001126,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7982,Brent,3867,12,Timothy,1887.357,1888.731,001126,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7983,Brent,3867,14,Timothy,3194.157,3195.76,010122,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7989,Brent,3867,15,Timothy,2703.459,2705.109,010301,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7979,Brent,3867,10,Timothy,830.508,831.729,001015,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7979,Brent,3867,10,Timothy,832.683,834.475,001015,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7979,Brent,3867,10,Timothy,845.775,847.374,001015,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7985,Brent,3867,13,Timothy,2956.255,2957.143,010024,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7989,Brent,3867,15,Timothy,3115.463,3117.044,010301,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7989,Brent,3867,15,Timothy,3118.578,3119.307,010301,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7989,Brent,3867,15,Timothy,3120.415,3122.118,010301,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7989,Brent,3867,15,Timothy,3122.218,3122.908,010301,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7985,Brent,3867,13,Timothy,2999.986,3000.797,010024,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7983,Brent,3867,14,Timothy,3619.82,3621.34,010122,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7983,Brent,3867,14,Timothy,3639.947,3641.68,010122,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7984,Brent,3867,12,Timothy,3464.869,3465.473,010010,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7984,Brent,3867,12,Timothy,3466.901,3467.537,010010,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7983,Brent,3867,14,Timothy,3642.247,3644.183,010122,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7983,Brent,3867,14,Timothy,3645.523,3648.1,010122,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7984,Brent,3867,12,Timothy,3467.546,3468.415,010010,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7984,Brent,3867,12,Timothy,3468.435,3469.825,010010,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7983,Brent,3867,14,Timothy,3648.2,3651.21,010122,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7985,Brent,3867,13,Timothy,3110.772,3111.782,010024,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7985,Brent,3867,13,Timothy,3114.745,3115.899,010024,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7985,Brent,3867,13,Timothy,3137.874,3140.007,010024,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7985,Brent,3867,13,Timothy,3277.675,3278.357,010024,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7985,Brent,3867,13,Timothy,3280.469,3282.267,010024,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7976,Brent,3867,9,Timothy,2202.408,2203.156,000902,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7976,Brent,3867,9,Timothy,2208.682,2209.427,000902,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7985,Brent,3867,13,Timothy,3556.005,3556.952,010024,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7984,Brent,3867,12,Timothy,3996.517,3998.452,010010,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7983,Brent,3867,14,Timothy,4315.493,4316.95,010122,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7985,Brent,3867,13,Timothy,3822.373,3823.37,010024,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7988,Brent,3867,15,Timothy,3734.139,3735.776,010224,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7988,Brent,3867,15,Timothy,3743.129,3746.412,010224,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7986,Brent,3867,13,Timothy,2845.54,2846.8,010108,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7977,Brent,3867,10,Timothy,3638.993,3642.201,000919,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7977,Brent,3867,10,Timothy,3643.079,3645.721,000919,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7977,Brent,3867,10,Timothy,3646.486,3648.847,000919,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7977,Brent,3867,10,Timothy,3649.354,3650.745,000919,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7977,Brent,3867,10,Timothy,3651.204,3656.186,000919,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7977,Brent,3867,10,Timothy,3662.241,3663.524,000919,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7977,Brent,3867,10,Timothy,3674.197,3675.503,000919,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7977,Brent,3867,10,Timothy,3693.429,3695.618,000919,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7977,Brent,3867,10,Timothy,3695.895,3697.98,000919,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7977,Brent,3867,10,Timothy,3699.337,3700.537,000919,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7977,Brent,3867,10,Timothy,3702.786,3704.684,000919,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7977,Brent,3867,10,Timothy,3705.007,3707.857,000919,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7977,Brent,3867,10,Timothy,3786.153,3788.248,000919,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7977,Brent,3867,10,Timothy,3788.861,3791.064,000919,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7979,Brent,3867,10,Timothy,2621.181,2622.104,001015,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7979,Brent,3867,10,Timothy,2622.452,2623.34,001015,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7991,Brent,3870,10,Tabitha,3769.102,3770.502,000921,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7981,Brent,3867,11,Timothy,3169.514,3170.461,001029,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7981,Brent,3867,11,Timothy,3171.071,3172.17,001029,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7981,Brent,3867,11,Timothy,3172.279,3173.959,001029,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7981,Brent,3867,11,Timothy,3175.52,3176.826,001029,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7981,Brent,3867,11,Timothy,3178.403,3179.201,001029,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7981,Brent,3867,11,Timothy,3179.66,3182.062,001029,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7981,Brent,3867,11,Timothy,3182.681,3185.156,001029,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7981,Brent,3867,11,Timothy,3185.391,3187.269,001029,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7981,Brent,3867,11,Timothy,3187.871,3189.463,001029,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7981,Brent,3867,11,Timothy,3189.599,3193.727,001029,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7995,Brent,3870,12,Tabitha,1451.786,1453.425,001124,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7995,Brent,3870,12,Tabitha,1453.639,1455.184,001124,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7995,Brent,3870,12,Tabitha,1455.364,1457.226,001124,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7995,Brent,3870,12,Tabitha,1458.022,1459.371,001124,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7995,Brent,3870,12,Tabitha,1459.514,1461.236,001124,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7995,Brent,3870,12,Tabitha,1467.929,1469.531,001124,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7995,Brent,3870,12,Tabitha,1470.085,1471.466,001124,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7995,Brent,3870,12,Tabitha,1472.109,1473.696,001124,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7995,Brent,3870,12,Tabitha,1473.888,1475.758,001124,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7995,Brent,3870,12,Tabitha,1476.255,1477.709,001124,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7998,Brent,3870,14,Tabitha,1457.206,1459.745,010120,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7998,Brent,3870,14,Tabitha,1460.993,1463.099,010120,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7998,Brent,3870,14,Tabitha,1463.898,1466.854,010120,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7998,Brent,3870,14,Tabitha,1467.037,1468.741,010120,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,7998,Brent,3870,14,Tabitha,1469.112,1475.961,010120,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8032,Brent,3881,12,Henry,271.002,272.082,010007,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8032,Brent,3881,12,Henry,337.126,338.642,010007,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8032,Brent,3881,12,Henry,374.421,375.588,010007,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8032,Brent,3881,12,Henry,416.49,417.095,010007,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8029,Brent,3881,10,Henry,110.595,111.552,001007,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8029,Brent,3881,10,Henry,122.616,125.122,001007,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8033,Brent,3881,13,Henry,1729.728,1730.486,010021,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8033,Brent,3881,13,Henry,1733.439,1736.215,010021,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8032,Brent,3881,12,Henry,1224.656,1225.409,010007,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8033,Brent,3881,13,Henry,1762.296,1764.121,010021,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8032,Brent,3881,12,Henry,1256.85,1257.857,010007,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8000,Brent,3870,13,Tabitha,2540.918,2542.711,010109,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8000,Brent,3870,13,Tabitha,2543.398,2544.912,010109,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8000,Brent,3870,13,Tabitha,2545.442,2547.17,010109,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8000,Brent,3870,13,Tabitha,2547.747,2550.432,010109,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8048,Brent,3884,14,Xavier,1053.897,1054.7,010205,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8048,Brent,3884,14,Xavier,1073.513,1074.157,010205,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8048,Brent,3884,14,Xavier,1101.807,1102.503,010205,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8026,Brent,3881,10,Henry,694.525,695.641,000924,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8026,Brent,3881,10,Henry,695.656,696.645,000924,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8061,Brent,3890,15,Maggie,3468.19,3469.853,010217,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8033,Brent,3881,13,Henry,3068.486,3069.959,010021,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8033,Brent,3881,13,Henry,3070.65,3071.465,010021,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8033,Brent,3881,13,Henry,3143.915,3146.173,010021,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8032,Brent,3881,12,Henry,2470.255,2471.571,010007,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8038,Brent,3881,15,Henry,2769.983,2771.089,010306,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8038,Brent,3881,15,Henry,2772.5,2773.02,010306,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8038,Brent,3881,15,Henry,2777.02,2777.432,010306,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8033,Brent,3881,13,Henry,3596.271,3600.437,010021,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8068,Brent,3895,13,Vas,1285.327,1286.247,010018,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8068,Brent,3895,13,Vas,1286.253,1287.067,010018,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8068,Brent,3895,13,Vas,1287.07,1288.083,010018,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8068,Brent,3895,13,Vas,1288.087,1288.993,010018,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8068,Brent,3895,13,Vas,1417.17,1417.97,010018,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8068,Brent,3895,13,Vas,1417.963,1418.773,010018,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8068,Brent,3895,13,Vas,1418.77,1419.59,010018,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8068,Brent,3895,13,Vas,1419.597,1420.4,010018,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8064,Brent,3896,10,Vas,2909.74,2911.607,000923,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8064,Brent,3896,10,Vas,2912.373,2914.707,000923,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8064,Brent,3896,10,Vas,2928.71,2929.717,000923,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8064,Brent,3896,10,Vas,2931.42,2933.563,000923,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8064,Brent,3896,10,Vas,2934.017,2935.433,000923,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8064,Brent,3896,10,Vas,2936.007,2937.26,000923,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8064,Brent,3896,10,Vas,2937.933,2939.153,000923,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8064,Brent,3896,10,Vas,2939.9,2944.007,000923,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8064,Brent,3896,10,Vas,2966.167,2967.47,000923,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8064,Brent,3896,10,Vas,2967.543,2968.723,000923,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8064,Brent,3896,10,Vas,2969.28,2970.807,000923,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8064,Brent,3896,10,Vas,2971.02,2972.22,000923,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8064,Brent,3896,10,Vas,2973.247,2975.763,000923,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8064,Brent,3896,10,Vas,2989.777,2992.763,000923,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8064,Brent,3896,10,Vas,2993.207,2994.377,000923,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8064,Brent,3896,10,Vas,3022.51,3024.847,000923,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8064,Brent,3896,10,Vas,3024.973,3027.34,000923,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8064,Brent,3896,10,Vas,3027.85,3029.89,000923,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8064,Brent,3896,10,Vas,3029.99,3032.057,000923,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8026,Brent,3881,10,Henry,1942.394,1942.876,000924,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8026,Brent,3881,10,Henry,1949.469,1949.959,000924,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8026,Brent,3881,10,Henry,1957.298,1958.48,000924,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8026,Brent,3881,10,Henry,1963.843,1964.172,000924,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8026,Brent,3881,10,Henry,1965.53,1965.922,000924,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8035,Brent,3881,14,Henry,58.18,59.139,010119,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8035,Brent,3881,14,Henry,72.054,72.571,010119,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8035,Brent,3881,14,Henry,180.491,181.297,010119,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8035,Brent,3881,14,Henry,203.449,204.333,010119,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8032,Brent,3881,12,Henry,3835.633,3836.774,010007,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8035,Brent,3881,14,Henry,456.973,457.891,010119,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8035,Brent,3881,14,Henry,468.633,469.112,010119,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8035,Brent,3881,14,Henry,1427.653,1429.498,010119,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8035,Brent,3881,14,Henry,1577.759,1579.361,010119,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8035,Brent,3881,14,Henry,1581.714,1583.476,010119,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8035,Brent,3881,14,Henry,2726.466,2727.697,010119,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8035,Brent,3881,14,Henry,2731.976,2733.126,010119,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8035,Brent,3881,14,Henry,2734.286,2735.269,010119,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8035,Brent,3881,14,Henry,2735.68,2736.408,010119,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8035,Brent,3881,14,Henry,2740.976,2741.582,010119,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8035,Brent,3881,14,Henry,2744.486,2745.595,010119,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8071,Brent,3904,15,Vas_Coleman,910.103,911.24,010221,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8071,Brent,3904,15,Vas_Coleman,911.253,911.957,010221,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8071,Brent,3904,15,Vas_Coleman,911.96,912.56,010221,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8035,Brent,3881,14,Henry,2801.905,2803.044,010119,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8035,Brent,3881,14,Henry,2805.269,2806.014,010119,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8035,Brent,3881,14,Henry,2807.537,2808.298,010119,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8035,Brent,3881,14,Henry,2809.493,2810.19,010119,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8035,Brent,3881,14,Henry,2810.51,2811.844,010119,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8035,Brent,3881,14,Henry,2812.435,2813.867,010119,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8037,Brent,3881,15,Henry,178.119,178.946,010217,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8147,Braunwald,3907,17,Laura,413.297,415.747,010511,264.94391010364376,209.3790215958737,512.8536999920203,-303.4746783961466
+piggy,8147,Braunwald,3907,17,Laura,423.541,427.453,010511,331.42554920127725,98.7303379948828,525.8748872514617,-427.1445492565789
+piggy,8147,Braunwald,3907,17,Laura,440.405,444.19,010511,342.4532244830974,101.09943555799832,529.4275691175084,-428.32813355951004
+piggy,8147,Braunwald,3907,17,Laura,452.187,455.972,010511,299.6958503484814,88.84550857223184,528.3441971464289,-439.49868857419705
+piggy,8148,Braunwald,3907,17,Laura,555.312,557.564,010513,317.34809770804816,185.57411761948282,526.2744249429632,-340.70030732348033
+piggy,8037,Brent,3881,15,Henry,666.221,668.796,010217,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8037,Brent,3881,15,Henry,791.895,792.609,010217,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8065,Brent,3895,11,Vas,833.083,835.343,001107,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8065,Brent,3895,11,Vas,840.99,843.64,001107,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8065,Brent,3895,11,Vas,844.373,846.62,001107,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8160,Braunwald,3908,18,Laura,792.646,795.989,010607,295.27559372043305,112.42183475818318,389.8017638071535,-277.3799290489703
+piggy,8065,Brent,3895,11,Vas,2767.473,2769.253,001107,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8065,Brent,3895,11,Vas,2770.76,2776.113,001107,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8065,Brent,3895,11,Vas,2861.623,2864.76,001107,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,8065,Brent,3895,11,Vas,2870.117,2873.043,001107,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,9052,Soderstrom,3924,6,Joseph,1199.518,1201.881,000530,209.57754739587264,92.09002580682397,395.8387466923684,-303.7487208855444
+piggy,9079,Soderstrom,3934,8,Theo,323.149,324.269,000805a,381.77501053758346,289.4969047481586,450.71768311065847,-161.22077836249986
+piggy,9105,Sachs,3941,19,Naomi,88.424,93.812,010616,218.2184153517834,83.14307579502392,416.51319712297425,-333.3701213279503
+piggy,9105,Sachs,3941,19,Naomi,95.497,96.913,010616,180.95128300713466,89.97090914019162,213.14377275403461,-123.17286361384299
+piggy,9105,Sachs,3941,19,Naomi,97.463,100.296,010616,308.4224273492514,201.27769822510163,489.5887282888257,-288.31103006372405
+piggy,9105,Sachs,3941,19,Naomi,100.296,102.479,010616,260.27320543362015,170.69874910427683,505.26512032975745,-334.5663712254806
+piggy,9105,Sachs,3941,19,Naomi,103.664,105.43,010616,237.52597459694394,88.85409724775776,354.4382950572805,-265.5841978095228
+piggy,9105,Sachs,3941,19,Naomi,129.696,132.398,010616,184.7153057008426,72.23045420316097,340.629819063429,-268.39936486026807
+piggy,9107,Sachs,3942,20,Naomi,2370.679,2372.281,010806,149.20108911994512,81.05528177088232,222.363613898492,-141.30833212760967
+piggy,9107,Sachs,3942,20,Naomi,2451.747,2453.564,010806,167.71182739920692,76.76028437636052,267.09021779321046,-190.32993341684994
+piggy,9105,Sachs,3942,19,Naomi,1750.33,1752.263,010616,171.50981777612884,71.14581636892218,236.912376987763,-165.7665606188408
+piggy,9105,Sachs,3942,19,Naomi,1752.263,1753.865,010616,173.57731290678552,67.81734455144469,238.9358879636078,-171.1185434121631
+piggy,9105,Sachs,3942,19,Naomi,1753.865,1758.752,010616,172.33185234369842,75.66646692155871,249.92414845593842,-174.2576815343797
+piggy,9113,Sachs,3941,22,Naomi,454.923,456.742,011010b,280.20455019055726,205.4396261024777,484.2225331298427,-278.782907027365
+piggy,9113,Sachs,3941,22,Naomi,456.742,459.86,011010b,292.81308390588975,119.39350847612702,443.1749520020713,-323.78144352594427
+piggy,9113,Sachs,3941,22,Naomi,460.377,462.046,011010b,263.8489328051646,196.551445530125,382.0974582823753,-185.54601275225033
+piggy,9113,Sachs,3941,22,Naomi,462.046,463.079,011010b,259.81208278075184,90.53614666904431,378.928196855178,-288.3920501861337
+piggy,9113,Sachs,3941,22,Naomi,466.264,467.7,011010b,268.8061347462885,194.45460463072106,390.6962367276977,-196.24163209697662
+piggy,9113,Sachs,3941,22,Naomi,475.736,477.638,011010b,255.21351087970882,211.58991034323947,311.1365632374051,-99.54665289416562
+piggy,9113,Sachs,3941,22,Naomi,482.709,484.509,011010b,285.8592255686446,232.19769287056786,470.9043071522292,-238.70661428166133
+piggy,9113,Sachs,3941,22,Naomi,496,498.402,011010b,203.63774788419394,89.5528722657416,300.5352586869572,-210.9823864212156
+piggy,9113,Sachs,3941,22,Naomi,502.737,504.087,011010b,225.5966287996455,75.5840869316881,317.47542882710775,-241.89134189541966
+piggy,9113,Sachs,3941,22,Naomi,508.691,510.041,011010b,282.6568507560965,220.56693532744038,357.406600869811,-136.8396655423706
+piggy,9113,Sachs,3941,22,Naomi,519.397,521.166,011010b,305.8214493168022,226.86112729331214,386.0299573520417,-159.16883005872958
+piggy,9113,Sachs,3941,22,Naomi,522.133,523.618,011010b,314.3785720711818,206.43465875218547,477.69542523396075,-271.26076648177525
+piggy,9113,Sachs,3941,22,Naomi,525.901,527.903,011010b,286.9515966990796,205.63940943794336,396.6598715964681,-191.02046215852477
+piggy,9113,Sachs,3941,22,Naomi,528.487,530.455,011010b,259.61111666478564,78.77029826390091,369.2989117698763,-290.5286135059754
+piggy,9113,Sachs,3941,22,Naomi,539.71,540.827,011010b,263.15110623128226,85.22513510294279,424.12339977544076,-338.898264672498
+piggy,9113,Sachs,3941,22,Naomi,542.079,545.631,011010b,314.148820679601,79.44542802042903,468.10687453445985,-388.6614465140308
+piggy,9113,Sachs,3941,22,Naomi,549.716,553.301,011010b,252.5176870571106,168.03186314478847,476.3675597224435,-308.335696577655
+piggy,9113,Sachs,3941,22,Naomi,554.487,555.703,011010b,219.84810982863465,99.19721252493984,259.0065818094527,-159.80936928451285
+piggy,9113,Sachs,3941,22,Naomi,574.314,577.166,011010b,312.33334018831937,220.09167623567728,453.3809579282011,-233.28928169252382
+piggy,9113,Sachs,3941,22,Naomi,599.832,601.968,011010b,296.404121492783,220.45493502878233,363.5806736164422,-143.12573858765987
+piggy,9113,Sachs,3941,22,Naomi,607.954,609.221,011010b,294.1781829781568,211.728997031249,332.3937600643043,-120.66476303305527
+piggy,9113,Sachs,3941,22,Naomi,618.16,619.426,011010b,257.4390804746987,88.84054413413895,350.0902500929984,-261.24970595885947
+piggy,9113,Sachs,3941,22,Naomi,624.997,625.63,011010b,292.63488811778154,214.47667160668558,368.2516162805375,-153.77494467385193
+piggy,9103,Soderstrom,3934,13,Theo,613.442,615.458,010028a,189.72314324780362,80.64213892810962,283.7522834028277,-203.11014447471808
+piggy,9103,Soderstrom,3934,13,Theo,618.258,619.266,010028a,159.08266255297949,130.55751849501064,217.39045921663944,-86.8329407216288
+piggy,9103,Soderstrom,3934,13,Theo,625.41,628.178,010028a,217.4477970618843,76.28552621922402,337.9805543287274,-261.69502810950337
+piggy,9116,Sachs,3942,23,Naomi,1145.234,1146.734,011017,168.97477169932384,122.01584963271281,296.8594614346674,-174.8436118019546
+piggy,9105,Sachs,3941,19,Naomi,6002.325,6003.358,010616,253.86572328525827,82.31161342128382,495.6831490060946,-413.3715355848108
+piggy,9105,Sachs,3941,19,Naomi,6003.358,6006.544,010616,297.23107211048324,199.83133202637427,495.75453497818523,-295.92320295181094
+piggy,9131,Sachs,3942,24,Naomi,46.111,48.627,011118,144.84683005576866,134.83872550939137,157.01487998020977,-22.176154470818403
+piggy,9102,Soderstrom,3934,13,Theo,1563.748,1566.004,010028b,162.64390752424956,71.9461164804246,227.1648450788542,-155.2187285984296
+piggy,9124,Sachs,3942,23,Naomi,1369.104,1371.456,011103,270.2322938561728,93.06227445943017,466.8971863465582,-373.83491188712804
+piggy,9124,Sachs,3942,23,Naomi,1430.91,1432.193,011103,159.17127369273172,118.11957961353836,298.91137116895584,-180.7917915554175
+piggy,9063,Soderstrom,3929,10,Joseph,579.452,585.436,000925,339.3603368271957,83.08890738580055,476.3615770865981,-393.27266970079756
+piggy,9170,Sachs,3942,32,Naomi,619.207,620.09,020716,413.7237986721518,367.73347072870604,465.03369391174004,-97.300223183034
+piggy,9170,Sachs,3942,32,Naomi,631.215,632.265,020716,123.582892695173,86.21914809003907,195.47663011662843,-109.25748202658936
+piggy,9170,Sachs,3942,32,Naomi,632.265,635.067,020716,369.4888603713166,105.63669086502759,461.6313235516535,-355.9946326866259
+piggy,9170,Sachs,3942,32,Naomi,666.849,672.253,020716,172.71574234791223,91.20738653085218,482.89582472691404,-391.68843819606184
+piggy,9170,Sachs,3942,32,Naomi,806.263,807.748,020716,358.32758980979474,105.13497539595522,407.4560549852483,-302.32107958929305
+piggy,9170,Sachs,3942,32,Naomi,818.037,819.889,020716,167.05963858322983,102.53705352437548,389.8032746403931,-287.2662211160176
+piggy,9207,McCune,3948,17,Alice,400.713,401.443,010428,242.42594197287463,131.64977939980665,328.59595193933114,-196.9461725395245
+piggy,9208,McCune,3948,18,Alice,388.403,389.556,010600,181.96846339034389,82.57882976323187,254.38923636164586,-171.81040659841398
+piggy,9208,McCune,3948,18,Alice,723.895,725.01,010600,270.4998747685227,187.84820198789257,470.62792804155475,-282.7797260536622
+piggy,9208,McCune,3948,18,Alice,858.06,858.798,010600,174.56921146559938,76.18197336156031,273.53467666925656,-197.35270330769623
+piggy,9344,McCune,3966,24,Rick,683.434,687.769,020000,127.02359518683514,101.01945002338546,181.38951408600354,-80.37006406261808
+piggy,9336,McCune,3966,18,Rick,272.305,275.553,010600,212.82613811917827,111.24562693874141,359.4966178804152,-248.25099094167382
+piggy,9374,Weist,3974,28,Benjamin,1384.373,1385.355,020413,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,9374,Weist,3976,28,Benjamin,1387.604,1391.854,020413,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,9389,Weist,3980,32,Emily,190.398,192.111,020813,118.84422449589078,102.0512619262162,143.73229706713127,-41.68103514091507
+piggy,9389,Weist,3980,32,Emily,211.434,213.934,020813,222.13381204424286,110.98950276502457,481.92594095848693,-370.9364381934624
+piggy,9389,Weist,3980,32,Emily,703.918,706.546,020813,226.88453724194406,77.53977006120088,459.10554675283055,-381.56577669162965
+piggy,9389,Weist,3980,32,Emily,710.37,713.527,020813,142.55964839442086,84.43779995696732,276.1552150975438,-191.7174151405765
+piggy,9386,Weist,3980,32,Emily,1835.744,1837.589,020718,218.4745050345193,71.63691909350366,361.2052151993905,-289.5682961058869
+piggy,9386,Weist,3980,32,Emily,1838.736,1841.263,020718,177.65804787456855,77.55169260152172,322.3264582930885,-244.77476569156676
+piggy,9389,Weist,3980,32,Emily,1804.066,1811.297,020813,175.55920492248293,98.51378600485519,323.0813487949972,-224.567562790142
+piggy,9389,Weist,3980,32,Emily,1811.297,1814.307,020813,188.1064538600273,93.8192337191852,309.4011536038394,-215.5819198846542
+piggy,9389,Weist,3980,32,Emily,1815.304,1818.464,020813,159.77278791975826,104.64853982264941,276.9253127260481,-172.2767729033987
+piggy,9389,Weist,3980,32,Emily,1822.464,1823.628,020813,178.34009738515638,115.86704881187514,336.2172599787434,-220.3502111668683
+piggy,9389,Weist,3980,32,Emily,1836.878,1840.22,020813,163.73261008158408,92.40206374787988,288.5986776560518,-196.1966139081719
+piggy,9389,Weist,3980,32,Emily,1847.85,1857.359,020813,150.2421297190806,87.30691316624655,293.9625249233016,-206.65561175705506
+piggy,9389,Weist,3980,32,Emily,1857.359,1865.024,020813,160.08818618027226,89.97619945937625,264.2603587530661,-174.28415929368987
+piggy,9389,Weist,3980,32,Emily,1876.811,1883.56,020813,164.94793945356568,106.17451853714063,363.9478209636869,-257.7733024265463
+piggy,9389,Weist,3980,32,Emily,1883.56,1888.283,020813,186.74731026823758,75.70430034255078,317.8868340086635,-242.18253366611276
+piggy,9389,Weist,3980,32,Emily,1897.449,1908.653,020813,144.11384801667438,82.63967162285525,283.34100005900297,-200.70132843614772
+piggy,9389,Weist,3980,32,Emily,1908.653,1910.365,020813,149.5442080966367,106.66558735242695,247.75106088484392,-141.08547353241698
+piggy,9389,Weist,3980,32,Emily,1930.823,1938.686,020813,121.95117806764144,92.96182715911726,241.08580504158033,-148.12397788246307
+piggy,9389,Weist,3980,32,Emily,1938.686,1947.464,020813,144.7397461613905,83.97515170279577,302.0646572448083,-218.08950554201255
+piggy,9389,Weist,3980,32,Emily,2006.999,2009.759,020813,161.47174871306245,84.14921707498915,269.48986699482464,-185.34064991983547
+piggy,9389,Weist,3980,32,Emily,2014.148,2018.238,020813,143.59145160910674,90.13966108959045,228.386173875253,-138.24651278566256
+piggy,9389,Weist,3980,32,Emily,2018.238,2025.703,020813,142.67537539547047,89.34818198305996,293.7361490015698,-204.38796701850984
+piggy,9389,Weist,3980,32,Emily,2056.083,2059.907,020813,169.85456669966524,83.64908854724465,253.49760298983915,-169.8485144425945
+piggy,9389,Weist,3980,32,Emily,2068.054,2075.435,020813,151.19588649791112,75.15473817308465,269.02570559712507,-193.87096742404043
+piggy,9389,Weist,3980,32,Emily,2081.87,2086.176,020813,157.0096923411741,92.37472160497964,447.1567533136797,-354.78203170870006
+piggy,9389,Weist,3980,32,Emily,2094.089,2097.397,020813,208.10944996778838,107.31965456450921,359.69381863056066,-252.37416406605143
+piggy,9389,Weist,3980,32,Emily,2117.747,2124.461,020813,124.80962837806094,97.98654154232652,237.72961073882047,-139.74306919649393
+piggy,9395,Weist,3980,36,Emily,554.441,556.386,021129,179.68012873771315,77.65005141880947,314.7745951326439,-237.12454371383444
+piggy,9395,Weist,3980,36,Emily,567.293,570.966,021129,183.36412127617973,87.15694744560513,248.32938941908637,-161.17244197348123
+piggy,9395,Weist,3980,36,Emily,581.422,583.051,021129,198.21908473027423,94.58035036724183,240.4568713129352,-145.87652094569336
+piggy,9395,Weist,3980,36,Emily,585.246,590.45,021129,188.61080768697323,83.33242452823316,247.78735787572236,-164.4549333474892
+piggy,9395,Weist,3980,36,Emily,590.45,592.394,021129,212.27764012629177,90.95302044150701,298.467700225049,-207.51467978354196
+piggy,9395,Weist,3980,36,Emily,608.771,610.067,021129,237.6923381815032,197.94359463961425,358.99169498208227,-161.04810034246802
+piggy,9395,Weist,3980,36,Emily,618.53,621.122,021129,152.26070158970617,87.9725194101816,235.2770366581758,-147.3045172479942
+piggy,9392,Weist,3980,34,Emily,578.354,580.298,021007,157.54587756924988,80.01492315481951,229.0260877491905,-149.011164594371
+piggy,9399,Weist,3980,38,Emily,521.094,523.121,030127,264.76382752761623,195.82226357121374,327.01814361846954,-131.1958800472558
+piggy,9399,Weist,3980,38,Emily,528.526,531.368,030127,203.9139012630352,75.31925158803176,274.0664569926542,-198.74720540462243
+piggy,9399,Weist,3980,38,Emily,1358.003,1359.633,030127,189.94987198699533,162.121699355256,247.3298208203182,-85.20812146506219
+piggy,9444,Weist,3994,28,Jillian,1384.87,1387.147,020414,275.70857492020303,200.28849762928476,376.4705078433514,-176.18201021406665
+piggy,9435,Weist,3994,25,Jillian,1569.673,1576.821,020108,254.04520167566082,183.31751504567637,368.4270065668016,-185.10949152112522
+piggy,9435,Weist,3994,25,Jillian,1796.526,1797.674,020108,207.75638638788953,149.6615223344679,263.8783093180701,-114.21678698360219
+piggy,9462,Weist,4002,29,Matt,1317.328,1319.754,020504,306.82912579884345,182.6140506118153,514.4174645791383,-331.80341396732297
+piggy,9462,Weist,4002,29,Matt,1327.151,1330.094,020504,263.71520359424795,77.870683087471,492.50425714218096,-414.63357405471
+piggy,9462,Weist,4002,29,Matt,1334.094,1335.89,020504,321.4327667792605,111.57260013853248,455.52156133274013,-343.94896119420764
+piggy,9462,Weist,4002,29,Matt,1445.825,1447.555,020504,321.9250769720423,208.89975946258232,449.6719974732558,-240.77223801067345
+piggy,9757,NewmanRatner,4251,7,4619WZ7,210.8,212.689,4619WZ,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,9766,NewmanRatner,4273,7,4734ES7,289.862,293.761,4734ES,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,9786,NewmanRatner,4341,7,5118PM7,99.781,101.903,5118PM,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,9802,NewmanRatner,4376,7,5543EF7,602.385,603.649,5543EF,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,9802,NewmanRatner,4376,7,5543EF7,603.649,606.529,5543EF,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,9802,NewmanRatner,4376,7,5543EF7,606.529,608.353,5543EF,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,9807,NewmanRatner,4407,7,5574IH,586.172,592.485,5573IH,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,9807,NewmanRatner,4407,7,5574IH,601.951,604.274,5573IH,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,9807,NewmanRatner,4407,7,5574IH,604.274,606.043,5573IH,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,9807,NewmanRatner,4407,7,5574IH,606.043,608.749,5573IH,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,9807,NewmanRatner,4407,7,5574IH,608.749,610.318,5573IH,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,9824,NewmanRatner,4454,7,5903AE,285.639,290.114,5903AE,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,9792,NewmanRatner,4349,7,5266EC7,964.509,968.595,5266EC,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,9837,NewmanRatner,4488,7,6314AK7,263.127,265.08,6314AK,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,9837,NewmanRatner,4488,7,6314AK7,265.663,267.416,6314AK,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,9837,NewmanRatner,4488,7,6314AK7,267.416,269.538,6314AK,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,9837,NewmanRatner,4488,7,6314AK7,269.538,271.507,6314AK,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,9837,NewmanRatner,4488,7,6314AK7,275.529,276.862,6314AK,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,9837,NewmanRatner,4488,7,6314AK7,276.862,278.012,6314AK,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,9833,NewmanRatner,4479,7,6043AM,460.191,462.791,6043AM,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,9833,NewmanRatner,4479,7,6043AM,462.791,466.135,6043AM,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,9859,NewmanRatner,4544,7,7120CB7mos,726.106,727.725,7120CB,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,9859,NewmanRatner,4544,7,7120CB7mos,727.725,729.494,7120CB,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,9859,NewmanRatner,4544,7,7120CB7mos,733.569,737.944,7120CB,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,9890,NewmanRatner,4279,10,4767JC,207.532,210.69,4767JC,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,9890,NewmanRatner,4279,10,4767JC,210.69,214.913,4767JC,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,9890,NewmanRatner,4279,10,4767JC,215.02,216.902,4767JC,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,9890,NewmanRatner,4279,10,4767JC,216.902,220.29,4767JC,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,9890,NewmanRatner,4279,10,4767JC,220.29,224.513,4767JC,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,9890,NewmanRatner,4279,10,4767JC,224.513,226.437,4767JC,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,9882,NewmanRatner,4254,10,4641CC7,821.659,827.044,4641CC,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,9882,NewmanRatner,4254,10,4641CC7,831.217,834.141,4641CC,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,9890,NewmanRatner,4279,10,4767JC,406.533,408.126,4767JC,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,9890,NewmanRatner,4279,10,4767JC,443.514,444.626,4767JC,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,9928,NewmanRatner,4683,10,5571FW10mos,79.505,80.991,5571FW,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,9928,NewmanRatner,4683,10,5571FW10mos,80.991,82.477,5571FW,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,9940,NewmanRatner,4432,7,5794ES,374.714,376.762,5794ES,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,9940,NewmanRatner,4432,7,5794ES,376.762,378.244,5794ES,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,9969,NewmanRatner,4728,10,6785KS10mos,337.833,340.627,6785KS,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,9969,NewmanRatner,4728,10,6785KS10mos,342.627,344.848,6785KS,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,9969,NewmanRatner,4728,10,6785KS10mos,688.37,694.536,6785KS,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,9969,NewmanRatner,4728,10,6785KS10mos,694.536,697.234,6785KS,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,9969,NewmanRatner,4728,10,6785KS10mos,701.812,704.707,6785KS,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,9956,NewmanRatner,4479,10,6043AM,396.494,399.921,6043AM,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,9976,NewmanRatner,4736,10,6878SK10,562.693,563.935,6878SK,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,9999,NewmanRatner,4779,11,4452CM11,371.997,375.087,4452CM,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,9999,NewmanRatner,4779,11,4452CM11,410.591,411.731,4452CM,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,10002,NewmanRatner,4797,11,4629AB11,240.945,244.675,4629AB,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,9956,NewmanRatner,4479,10,6043AM,882.73,885.702,6043AM,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,10004,NewmanRatner,4803,11,4650KS11,724.799,731.474,4650KS,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,10013,NewmanRatner,4818,11,4767JC11,285.112,286.424,4767JC,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,10013,NewmanRatner,4818,11,4767JC11,286.424,289.723,4767JC,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,10013,NewmanRatner,4818,11,4767JC11,289.723,292.184,4767JC,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,10013,NewmanRatner,4818,11,4767JC11,295.704,297.587,4767JC,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,10013,NewmanRatner,4818,11,4767JC11,297.587,302.886,4767JC,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,10013,NewmanRatner,4818,11,4767JC11,302.886,305.106,4767JC,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,10013,NewmanRatner,4818,11,4767JC11,305.106,307.226,4767JC,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,10013,NewmanRatner,4818,11,4767JC11,307.226,309.456,4767JC,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,10012,NewmanRatner,4815,11,4743NA11,734.653,736.552,4743NA,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,10012,NewmanRatner,4815,11,4743NA11,736.552,738.726,4743NA,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,10012,NewmanRatner,4815,11,4743NA11,739.729,740.926,4743NA,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,10013,NewmanRatner,4818,11,4767JC11,420.34,422.706,4767JC,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,10013,NewmanRatner,4818,11,4767JC11,451.073,454.111,4767JC,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,10013,NewmanRatner,4818,11,4767JC11,591.975,593.946,4767JC,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,10036,NewmanRatner,4857,11,5266EC,273.48,274.582,5266EC,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,10037,NewmanRatner,4861,11,5303CW11,651.978,653.874,5303CW,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,10037,NewmanRatner,4861,11,5303CW11,653.874,658.704,5303CW,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,10074,NewmanRatner,4467,11,5965PC,61.361,65.076,5965PC,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,10073,NewmanRatner,4462,11,5936SR7,508.683,511.307,5936SR,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,10073,NewmanRatner,4462,11,5936SR7,511.307,514.459,5936SR,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,10084,NewmanRatner,4959,11,6454MB11,911.269,912.018,6454MB,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,10115,NewmanRatner,5032,11,7553JT11,744.802,745.833,7553JT,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,10125,NewmanRatner,4875,18,5440JJ11mos,17.318,18.55,5440JJ,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,10081,NewmanRatner,5028,11,6314AK11,654.684,661.062,6314AK,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,10127,NewmanRatner,5057,18,5543EF18,392.706,398.594,5543EF,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,10130,NewmanRatner,4403,18,5609DW,381.966,383.741,5609DW,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,10146,NewmanRatner,5107,18,5936SR18,775.982,779.447,5936SR,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,10138,NewmanRatner,4421,18,5733LE,935.068,944.459,5733LE,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,10138,NewmanRatner,4421,18,5733LE,944.459,945.787,5733LE,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,10138,NewmanRatner,4421,18,5733LE,945.787,947.643,5733LE,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,10138,NewmanRatner,4421,18,5733LE,947.643,948.971,5733LE,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,10138,NewmanRatner,4421,18,5733LE,948.971,953.788,5733LE,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,10138,NewmanRatner,4421,18,5733LE,957.468,959.195,5733LE,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,10138,NewmanRatner,4421,18,5733LE,959.195,960.94,5733LE,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,10138,NewmanRatner,4421,18,5733LE,960.94,962.876,5733LE,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,10138,NewmanRatner,4421,18,5733LE,962.876,964.283,5733LE,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,10138,NewmanRatner,4421,18,5733LE,964.283,969.244,5733LE,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,10171,NewmanRatner,5160,24,4273WC24,10.992,12.011,4273WC,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,10170,NewmanRatner,5155,18,7814NB18moschildmos,347.861,348.783,7814NB,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,10170,NewmanRatner,5155,18,7814NB18moschildmos,348.783,350.798,7814NB,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,10173,NewmanRatner,5167,24,4310AM24,292.383,294.655,4310AM,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,10176,NewmanRatner,5173,24,4629AB24,129.083,130.282,4629AB,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,10176,NewmanRatner,5173,24,4629AB24,130.282,131.768,4629AB,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,10204,NewmanRatner,5230,24,5111CG24,173.5,174.446,5111CG,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,10206,NewmanRatner,5232,24,5118PM24,484.683,485.874,5118PM,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,10206,NewmanRatner,5232,24,5118PM24,553.523,555.848,5118PM,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,10206,NewmanRatner,5232,24,5118PM24,560.248,562.05,5118PM,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,10202,NewmanRatner,4321,24,5057MS,403.12,404.783,5057MS,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,10202,NewmanRatner,4321,24,5057MS,967.466,980.453,5057MS,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,10226,NewmanRatner,5290,24,5571FW,40.457,44.005,5571FW,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,10226,NewmanRatner,5290,24,5571FW,263.119,267.205,5571FW,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,10218,NewmanRatner,5266,24,5474ES24,326.952,330.744,5474ES,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,10238,NewmanRatner,4432,24,5794ES,54.942,56.027,5794ES,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,10259,NewmanRatner,5326,24,6454MB,261.906,263.408,6454MB,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,10259,NewmanRatner,5326,24,6454MB,264.879,267.108,6454MB,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,10257,NewmanRatner,5322,24,6314AK24,995.757,996.89,6314AK,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,10257,NewmanRatner,5322,24,6314AK24,1004.391,1009.315,6314AK,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,10257,NewmanRatner,5322,24,6314AK24,1009.315,1012.654,6314AK,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,10257,NewmanRatner,5322,24,6314AK24,1021.017,1023.139,6314AK,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,10282,NewmanRatner,5378,24,7183TB,487.908,493.577,7183TB,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,10282,NewmanRatner,5378,24,7183TB,501.426,507.762,7183TB,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,10301,NewmanRatner,5416,7,4629AB,110.6,116.901,4629AB,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,10468,NewmanRatner,5443,7,5540LD10,340.324,343.096,5540LD,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,10640,NewmanRatner,4553,11,6825MT,53.569,55.791,6825MT,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,10788,NewmanRatner,5238,7,5196AVI24,607.745,611.541,5928RL,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,10898,Snow,5565,30,Nathaniel,108.053,109.758,020518b,253.2775964977799,83.34980285247428,490.18653901309034,-406.83673616061606
+piggy,10940,Snow,5565,41,Nathaniel,45.868,48.475,030421b,281.49489709046463,159.06722683583195,466.58603059300646,-307.5188037571745
+piggy,42208,Providence,22707,19,Alex,45.861,48.83,010707,202.53237554715957,75.34643761647327,339.9299258118785,-264.5834881954052
+piggy,42204,Providence,22707,17,Alex,582.143,584.968,010427,228.4462562721953,147.56583831011162,493.063795042545,-345.4979567324334
+piggy,42206,Providence,22707,18,Alex,740.765,770.356,010526,218.5363772366028,88.97921084365561,492.27383077999394,-403.29461993633834
+piggy,42206,Providence,22707,18,Alex,773.991,776.016,010526,282.4549813863568,178.38912464329326,490.0281218577604,-311.63899721446717
+piggy,42206,Providence,22707,18,Alex,776.016,778.195,010526,208.21805437574852,160.76171535776584,246.33899718451303,-85.5772818267472
+piggy,42206,Providence,22707,18,Alex,778.195,780.638,010526,261.25847599802375,104.8089721230218,504.0329234322937,-399.2239513092719
+piggy,42206,Providence,22707,18,Alex,780.638,782.778,010526,286.8590389901842,153.11540931534216,498.2753317458968,-345.1599224305546
+piggy,42206,Providence,22707,18,Alex,782.778,785.451,010526,232.08579787530252,77.47120555549311,350.7027294975239,-273.2315239420308
+piggy,42206,Providence,22707,18,Alex,816.823,819.916,010526,266.9885516616274,111.45552951619669,356.3948313545296,-244.93930183833288
+piggy,42206,Providence,22707,18,Alex,819.916,823.315,010526,234.91938746461554,73.27699361521752,341.5927992556994,-268.31580564048187
+piggy,42206,Providence,22707,18,Alex,823.315,828.818,010526,225.35859056389936,83.2044662290753,522.1077937419777,-438.9033275129024
+piggy,42206,Providence,22707,18,Alex,828.818,831.445,010526,242.65596223709431,168.44126258493594,385.66954428365386,-217.22828169871792
+piggy,42206,Providence,22707,18,Alex,831.445,833.943,010526,286.4205867291355,128.50894225893657,433.7939315115808,-305.2849892526442
+piggy,42206,Providence,22707,18,Alex,833.943,842.348,010526,335.4349129467166,82.80304612754728,506.17284769972696,-423.36980157217965
+piggy,42213,Providence,22707,23,Alex,143.196,147.371,011103,214.58017459949394,85.92512670246829,505.7463991436918,-419.8212724412235
+piggy,42213,Providence,22707,23,Alex,147.373,149.02,011103,221.60229019913243,175.3118166440893,294.85453266494443,-119.54271602085512
+piggy,42207,Providence,22707,18,Alex,1025.676,1027.771,010614,333.95450125691826,75.28098745129758,495.849992753561,-420.56900530226346
+piggy,42209,Providence,22707,20,Alex,854.626,857.816,010811,198.09334618888406,140.91246686742141,497.09394603116795,-356.18147916374653
+piggy,42208,Providence,22707,19,Alex,1413.62,1415.156,010707,--undefined--,--undefined--,--undefined--,--undefined--
+piggy,42208,Providence,22707,19,Alex,1613.166,1620.356,010707,--undefined--,--undefined--,--undefined--,--undefined--
+piggy,42204,Providence,22707,17,Alex,2759.208,2761.798,010427,193.24100005796538,70.94792366225045,352.9108034126625,-281.96287975041207
+piggy,42208,Providence,22707,19,Alex,2931.481,2936.573,010707,--undefined--,--undefined--,--undefined--,--undefined--
+piggy,42245,Providence,22707,37,Alex,1543.218,1545.683,030103,170.27428290986543,75.07593986949672,422.93595974583326,-347.86001987633654
+piggy,42266,Providence,22721,16,Ethan,1403.443,1407.185,010411,270.28952827002547,127.33038088222172,425.969511239117,-298.6391303568953
+piggy,42266,Providence,22721,16,Ethan,1407.185,1409.511,010411,244.2336357647409,93.7427427146291,509.9420730627626,-416.19933034813346
+piggy,42266,Providence,22721,16,Ethan,1409.511,1412.715,010411,231.29410534042782,180.01365534888805,469.00788260052377,-288.9942272516357
+piggy,42266,Providence,22721,16,Ethan,1412.715,1415.046,010411,262.67388904837185,93.380006398391,444.3692735528696,-350.98926715447857
+piggy,42266,Providence,22721,16,Ethan,1415.046,1422.521,010411,238.1051530833302,78.0749075828538,497.1618745886448,-419.08696700579105
+piggy,42290,Providence,22721,29,Ethan,1567.821,1569.488,020419,198.02159181736405,98.76378145058958,491.93025685595615,-393.16647540536655
+piggy,42290,Providence,22721,29,Ethan,1569.488,1572.683,020419,257.0212672614178,198.07492418037526,300.4154835516889,-102.34055937131365
+piggy,42265,Providence,22721,16,Ethan,2864.106,2868.515,010400,219.09572190944564,109.88152104274921,368.2237047082895,-258.3421836655403
+piggy,42265,Providence,22721,16,Ethan,2868.515,2876.258,010400,198.70049586393134,91.21423781266627,490.4138683823819,-399.1996305697156
+piggy,42265,Providence,22721,16,Ethan,2876.258,2879.233,010400,205.4847718705933,84.21171028607213,385.1802796368879,-300.96856935081576
+piggy,42265,Providence,22721,16,Ethan,2879.233,2887.566,010400,282.29869398553245,95.54540645708975,527.3278613645545,-431.7824549074647
+piggy,42305,Providence,22729,13,Lily,610.82,619.433,010102,381.55261109856934,84.15374923356859,503.9120200024439,-419.7582707688753
+piggy,42305,Providence,22729,13,Lily,624.585,626.77,010102,194.28744296214273,70.66654373082085,406.5135925882018,-335.84704885738097
+piggy,42305,Providence,22729,13,Lily,677.406,681.683,010102,390.5776531070473,176.27332801202675,503.8111809745727,-327.53785296254597
+piggy,42305,Providence,22729,13,Lily,988.73,989.456,010102,264.3115121373235,237.47131273794668,314.25739553820955,-76.78608280026288
+piggy,42305,Providence,22729,13,Lily,2903.606,2905.496,010102,183.28640760472496,75.04671825649619,371.96260919403966,-296.91589093754345
+piggy,42308,Providence,22729,14,Lily,228.445,233.556,010213,220.36978268673093,67.5366514314317,507.04849209448406,-439.51184066305234
+piggy,42258,Providence,22721,13,Ethan,2736.506,2737.968,010021,273.0275458689416,135.82142738108098,482.7480702990375,-346.92664291795654
+piggy,42258,Providence,22721,13,Ethan,2740.448,2742.415,010021,245.96193421182969,117.41319393659674,526.6995573286448,-409.2863633920481
+piggy,42258,Providence,22721,13,Ethan,2744.328,2745.88,010021,205.90360133427419,105.6628635570393,505.24154571974435,-399.57868216270504
+piggy,42258,Providence,22721,13,Ethan,2748.103,2749.688,010021,270.31171251760424,211.28563700942598,429.5587855508753,-218.27314854144933
+piggy,42322,Providence,22729,21,Lily,8.6,9.9,010827,265.7890853977937,158.94069629641757,409.84735703132156,-250.906660734904
+piggy,42322,Providence,22729,21,Lily,1216.573,1221.436,010827,289.507402108044,71.1857043878937,526.9749119503477,-455.78920756245407
+piggy,42324,Providence,22729,22,Lily,1485.588,1487.411,010925,187.32455548832817,82.58608050325242,434.41508318983955,-351.82900268658716
+piggy,42324,Providence,22729,22,Lily,1689.078,1692.331,010925,220.74367763842722,77.32357426877509,462.81733262595384,-385.49375835717876
+piggy,42317,Providence,22729,19,Lily,958.013,964.081,010618,272.109518860367,75.81082949431722,528.5139358633885,-452.7031063690713
+piggy,42310,Providence,22729,16,Lily,852.763,861.02,010323,326.76459288291295,69.93680287065973,524.8900185767052,-454.95321570604546
+piggy,42310,Providence,22729,16,Lily,861.02,864.768,010323,310.57750760385994,100.67465396312248,495.9177221079751,-395.24306814485266
+piggy,42310,Providence,22729,16,Lily,864.768,867.995,010323,260.1717787522815,90.27267645390488,419.49657360370276,-329.2238971497979
+piggy,42310,Providence,22729,16,Lily,867.996,871.785,010323,347.5229720682747,94.35505816159396,516.4832269045104,-422.12816874291644
+piggy,42336,Providence,22729,26,Lily,471.036,472.196,020201,176.68208236102646,74.0110651281044,271.37827915488253,-197.36721402677813
+piggy,42336,Providence,22729,26,Lily,473.921,474.596,020201,290.8734098036522,220.63680777300934,393.60614055306047,-172.96933278005113
+piggy,42306,Providence,22729,14,Lily,3169.238,3171.996,010117,256.2765559083718,68.95112601121586,402.1246101820027,-333.1734841707868
+piggy,42306,Providence,22729,14,Lily,3171.996,3174.358,010117,335.9851832614886,122.7037002618108,527.6691553259498,-404.96545506413895
+piggy,42306,Providence,22729,14,Lily,3174.358,3176.823,010117,302.81218095690497,86.12278203527372,441.022825748605,-354.9000437133313
+piggy,42306,Providence,22729,14,Lily,3176.823,3179.013,010117,327.49745352475287,82.30821590609831,507.65131361201526,-425.34309770591693
+piggy,42306,Providence,22729,14,Lily,3179.013,3184.79,010117,337.1401182522674,75.37474134928516,513.4778482230736,-438.1031068737884
+piggy,42306,Providence,22729,14,Lily,3522.978,3528.031,010117,249.59023803310575,78.64057936597361,524.8718231102604,-446.23124374428676
+piggy,42328,Providence,22729,24,Lily,602.912,606.632,011126,216.97860089921008,78.78756897684084,295.18516446392266,-216.39759548708182
+piggy,42345,Providence,22729,29,Lily,1980.275,1983.371,020428,336.49693335863833,145.3676536635335,483.6749276515095,-338.30727398797603
+piggy,42345,Providence,22729,29,Lily,1985.931,1988.708,020428,296.8299887395435,148.14126351191018,494.11273121651686,-345.97146770460665
+piggy,42345,Providence,22729,29,Lily,1998.748,2002.608,020428,380.8311623327999,234.24432119440223,475.7603879441805,-241.51606674977825
+piggy,42355,Providence,22729,32,Lily,1430.45,1431.858,020716,198.08407732478355,124.43544701248693,409.95170897110836,-285.51626195862144
+piggy,42355,Providence,22729,32,Lily,1433.835,1435.621,020716,377.1838227056456,286.2481493164212,436.66910557355686,-150.42095625713569
+piggy,42359,Providence,22729,32,Lily,1288.375,1291.245,020813,190.35990366774448,67.94668544520792,366.2883947776855,-298.34170933247754
+piggy,42355,Providence,22729,32,Lily,1837.71,1839.275,020716,192.4009834664058,105.75781655984864,247.0963673115837,-141.33855075173506
+piggy,42355,Providence,22729,32,Lily,1844.696,1848.445,020716,243.26714444562634,141.37202282769056,391.1857015014688,-249.81367867377827
+piggy,42355,Providence,22729,32,Lily,1856.076,1858.025,020716,276.1803768381347,178.66174267700256,415.2879138776674,-236.62617120066483
+piggy,42371,Providence,22729,36,Lily,2201.095,2204.438,030010,166.26316901187585,75.59973787550467,484.8046479336298,-409.2049100581251
+piggy,42371,Providence,22729,36,Lily,2320.752,2323.295,030010,342.6866395210647,192.212555161446,499.16973979444674,-306.95718463300074
+piggy,42367,Providence,22729,35,Lily,2299.31,2300.743,021028,211.48456968642327,95.63818277505843,285.0666897015531,-189.4285069264947
+piggy,42369,Providence,22729,36,Lily,1702.888,1706.395,021125,348.8565011506723,99.2780114148812,490.5211138133669,-391.2431023984857
+piggy,42369,Providence,22729,36,Lily,1709.61,1711.56,021125,440.5202740255278,219.2951323699347,529.1470677778964,-309.8519354079617
+piggy,42378,Providence,22729,42,Lily,1120.035,1124.005,030528,189.4386110043132,78.96838306151118,479.2432171839769,-400.27483412246573
+piggy,42382,Providence,22729,46,Lily,3236.755,3238.01,030927b,--undefined--,--undefined--,--undefined--,--undefined--
+piggy,42423,Providence,22744,23,Naima,853.34,855.66,011107,322.5448591951814,248.02501437397484,469.0513710385224,-221.02635666454756
+piggy,42472,Providence,22756,14,Violet,2286.461,2290.498,010200,157.7530805622601,75.41231244421775,486.0378106998192,-410.6254982556014
+piggy,42472,Providence,22756,14,Violet,2295.488,2298.481,010200,253.12391213642667,164.0592474471259,360.4596698433251,-196.40042239619922
+piggy,42472,Providence,22756,14,Violet,2298.481,2301.895,010200,299.8482187114187,155.35404594119217,491.6743356138254,-336.32028967263324
+piggy,42472,Providence,22756,14,Violet,2301.895,2315.97,010200,269.55916575773716,149.44317382832966,474.00058518032523,-324.5574113519956
+piggy,42476,Providence,22756,16,Violet,70.013,74.88,010326,349.9262629749455,119.51997615308498,487.6403962850519,-368.1204201319669
+piggy,42476,Providence,22756,16,Violet,74.881,77.858,010326,320.459150250073,158.58831866798442,516.1830981306576,-357.5947794626732
+piggy,42476,Providence,22756,16,Violet,79.321,82.151,010326,333.62607183164675,85.88753189929743,495.0578430514819,-409.17031115218447
+piggy,42476,Providence,22756,16,Violet,95.096,103.178,010326,318.8572016350377,118.41831654878045,518.2832239976498,-399.8649074488693
+piggy,42479,Providence,22756,18,Violet,373.463,377.55,010603,157.34081227282118,65.86284092435062,230.38009110578247,-164.51725018143185
+piggy,42476,Providence,22756,16,Violet,145.38,147.846,010326,223.7739601671951,84.44920891475563,339.45691411824646,-255.00770520349084
+piggy,42476,Providence,22756,16,Violet,147.846,152.378,010326,279.3953482110506,75.89384865401311,499.743298157841,-423.84944950382794
+piggy,42476,Providence,22756,16,Violet,156.778,163.576,010326,191.81188987305734,76.63510256391432,424.7065821421741,-348.0714795782598
+piggy,42476,Providence,22756,16,Violet,170.843,174.378,010326,319.5841742775387,123.37141493238728,532.6737222627655,-409.30230733037826
+piggy,42479,Providence,22756,18,Violet,491.903,496.03,010603,197.48987206325603,94.00981968101465,442.85148980962583,-348.8416701286112
+piggy,42479,Providence,22756,18,Violet,707.343,710.965,010603,160.07875065979405,85.36641293298351,239.5553669696013,-154.1889540366178
+piggy,42480,Providence,22756,18,Violet,423.075,424.293,010520,176.42995318137054,81.41489780465169,431.83754705472745,-350.4226492500758
+piggy,42480,Providence,22756,18,Violet,425.495,427.08,010520,255.68960901079677,173.85366704772923,509.73297533275434,-335.8793082850251
+piggy,42482,Providence,22756,17,Violet,452.893,453.945,010503,177.683908479322,158.53495224543292,234.95860401182858,-76.42365176639566
+piggy,42482,Providence,22756,17,Violet,456.608,458.208,010503,257.31826502203137,227.92033721929894,367.67670135444126,-139.75636413514232
+piggy,42482,Providence,22756,17,Violet,458.208,462.263,010503,274.64397166661524,143.6201102847009,492.350585553669,-348.7304752689681
+piggy,42483,Providence,22756,19,Violet,1015.011,1018.618,010704,223.50730470451387,96.36949009457524,395.7112964452116,-299.3418063506364
+piggy,42482,Providence,22756,17,Violet,1247.076,1250.241,010503,257.63990448027613,222.27601484689202,343.05501398357586,-120.77899913668384
+piggy,42482,Providence,22756,17,Violet,1280.476,1282.625,010503,216.13367927633368,103.31267283188227,320.4189154672181,-217.10624263533583
+piggy,42482,Providence,22756,17,Violet,1291.703,1294.015,010503,351.03931630049664,107.24624042273543,497.6662487561931,-390.4200083334577
+piggy,42483,Providence,22756,19,Violet,1743.7,1744.785,010704,292.75429345554255,239.98833817713714,422.9146519555931,-182.92631377845598
+piggy,42483,Providence,22756,19,Violet,1744.785,1746.265,010704,345.36564455148414,74.97783882796328,487.7135487093862,-412.7357098814229
+piggy,42483,Providence,22756,19,Violet,1750.423,1753.928,010704,356.2197940601368,219.19225865363484,521.3517235779267,-302.15946492429185
+piggy,42483,Providence,22756,19,Violet,1769.465,1771.791,010704,234.60237136610408,179.23911403319283,289.0493968609346,-109.81028282774179
+piggy,42483,Providence,22756,19,Violet,1774.413,1776.496,010704,172.76737416931306,81.18759936637461,343.88418194779837,-262.69658258142374
+piggy,42480,Providence,22756,18,Violet,2687.151,2689.123,010520,169.7250350307389,88.17509479902846,213.2518852075083,-125.07679040847985
+piggy,42480,Providence,22756,18,Violet,2693.05,2695.083,010520,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,42480,Providence,22756,18,Violet,2695.083,2696.21,010520,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,42480,Providence,22756,18,Violet,2696.21,2697.745,010520,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,42480,Providence,22756,18,Violet,2697.745,2704.92,010520,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,42480,Providence,22756,18,Violet,2714.635,2720.446,010520,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,42480,Providence,22756,18,Violet,2722.523,2724.548,010520,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,42483,Providence,22756,19,Violet,1907.511,1909.865,010704,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,42483,Providence,22756,19,Violet,1911.09,1912.32,010704,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,42486,Providence,22756,21,Violet,882.115,885.343,010822,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,42486,Providence,22756,21,Violet,983.853,985.436,010822,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,42482,Providence,22756,17,Violet,2882.851,2885.291,010503,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,42485,Providence,22756,20,Violet,2746.955,2753.185,010805,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,42490,Providence,22756,23,Violet,2012.225,2018.855,011027,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,42495,Providence,22756,26,Violet,1076.98,1078.981,020119,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,42495,Providence,22756,26,Violet,1928.5,1930.023,020119,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,42498,Providence,22756,27,Violet,1896.448,1899.102,020305,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,42498,Providence,22756,27,Violet,1902.677,1905.23,020305,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,42513,Providence,22756,35,Violet,1767.488,1774.826,021028,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,42520,Providence,22756,42,Violet,652.745,655.275,030600,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,42515,Providence,22756,38,Violet,127.97,131.432,030119,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,42515,Providence,22758,38,Violet,144.305,148.368,030119,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,42529,Providence,22769,19,William,2643.3,2644.433,010708,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,42529,Providence,22769,19,William,2651.448,2653.566,010708,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,42529,Providence,22769,19,William,2653.566,2656.233,010708,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,42536,Providence,22768,22,William,1917.716,1919.178,011012,audio file missing,audio file missing,audio file missing,audio file missing
+piggy,42555,Providence,22766,32,William,3370.946,3373.778,020726,audio file missing,audio file missing,audio file missing,audio file missing

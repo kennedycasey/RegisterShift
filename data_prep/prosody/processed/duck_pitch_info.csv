@@ -1,0 +1,1208 @@
+item,transcript_id,corpus_name,speaker_id,age,target_child_name,media_start,media_end,audio_file,pitch_mean,pitch_min,pitch_max,pitch_range
+duck,3352,Bernstein,1717,18,Amelia,597.312,598.148,010600,284.7293042718013,75.86157871493482,335.21795921633753,-259.3563805014027
+duck,3352,Bernstein,1717,18,Amelia,599.472,600.191,010600,278.11999967310163,210.2319542973577,426.0920268951042,-215.8600725977465
+duck,3352,Bernstein,1717,18,Amelia,600.981,602.212,010600,268.9195402060609,201.86109261793368,507.7348907084454,-305.87379809051174
+duck,3352,Bernstein,1717,18,Amelia,657.938,661.862,010600,245.23458519245426,136.851816383776,472.8195173699577,-335.9677009861817
+duck,3352,Bernstein,1717,18,Amelia,697.342,698.689,010600,242.53074728573466,210.52903706081608,283.6918246266623,-73.16278756584623
+duck,3352,Bernstein,1717,18,Amelia,698.689,699.548,010600,244.03975239759677,122.87919171509732,475.6091342317938,-352.7299425166965
+duck,3352,Bernstein,1717,18,Amelia,699.548,700.709,010600,235.39429707239302,207.2698712612574,261.7998759758693,-54.53000471461192
+duck,3350,Bernstein,1715,15,Alice,311.274,311.549,010300,--undefined--,--undefined--,--undefined--,--undefined--
+duck,3350,Bernstein,1715,15,Alice,551.448,563.987,010300,230.9590769132032,75.48440950388012,477.87581052573694,-402.39140102185684
+duck,3353,Bernstein,1717,20,Amelia,803.799,804.658,010800,190.25265746237133,179.1751643149422,230.156984772078,-50.9818204571358
+duck,3353,Bernstein,1717,20,Amelia,806.934,809.232,010800,230.72290100952216,155.5346538447244,387.5167012371664,-231.98204739244198
+duck,3353,Bernstein,1717,20,Amelia,960.952,961.3,010800,380.5978651576268,227.34997667651152,517.4243410265781,-290.07436435006656
+duck,3353,Bernstein,1717,20,Amelia,963.018,964.017,010800,244.61328488152353,200.2019550044882,480.9257173095237,-280.7237623050355
+duck,3353,Bernstein,1717,20,Amelia,965.27,965.572,010800,392.95530177789476,274.673700831625,445.749331062902,-171.075630231277
+duck,3353,Bernstein,1717,20,Amelia,965.572,967.685,010800,258.46176584481117,177.5329639505985,439.82017505879395,-262.28721110819544
+duck,3353,Bernstein,1717,20,Amelia,1017.816,1019.024,010800,214.47647429286027,166.49062615191434,285.9050350223033,-119.41440887038897
+duck,3353,Bernstein,1717,20,Amelia,1022.577,1023.575,010800,222.69221868737898,194.39110825290922,320.0426537146405,-125.65154546173127
+duck,3353,Bernstein,1717,20,Amelia,1076.377,1076.725,010800,208.23398520093474,201.48156488922444,217.03714535143587,-15.555580462211424
+duck,3353,Bernstein,1717,20,Amelia,1078.235,1079.373,010800,206.1579334011076,158.5506666230366,292.353148057465,-133.8024814344284
+duck,3353,Bernstein,1717,20,Amelia,1083.621,1085.874,010800,226.89518632307463,195.45197355905665,492.6894638396337,-297.23749028057705
+duck,3359,Bernstein,1725,22,Cindy,319.4,320.701,011000,193.2172002424504,182.10915433775244,212.1272311606825,-30.018076822930055
+duck,3359,Bernstein,1725,22,Cindy,325.484,326.436,011000,224.08637621158135,174.25029346283898,320.91359816627,-146.663304703431
+duck,3366,Bernstein,1730,25,Gail,278.913,281.212,020100,255.3083791586362,180.25268396231155,417.4612877745207,-237.20860381220916
+duck,3367,Bernstein,1733,13,Kay,297.067,297.671,010100,367.4389244798855,295.9937748561967,464.1866687326956,-168.19289387649889
+duck,3369,Bernstein,1733,18,Kay,187.771,188.491,010600,246.17466940734744,209.5371576254793,290.8408677014026,-81.3037100759233
+duck,3361,Bernstein,1727,17,Dale,624.151,629.19,010500,295.4621887501927,195.9883255210652,486.26505273759426,-290.276727216529
+duck,3369,Bernstein,1733,18,Kay,212.779,213.777,010600,286.8160447597372,204.25808340204188,474.49412383025026,-270.2360404282084
+duck,3367,Bernstein,1733,13,Kay,835.483,840.336,010100,303.99832341506874,111.26168153799303,517.61974543129,-406.35806389329696
+duck,3367,Bernstein,1733,13,Kay,845.745,846.744,010100,336.2162383464198,202.15146745367107,481.7302757713942,-279.5788083177231
+duck,3799,Peters,2338,16,Seth,195.316,196.291,010327a,227.23233787837327,83.1309152739458,491.6057951109713,-408.4748798370255
+duck,3801,Peters,2338,16,Seth,772.483,773.4,010402b,132.9994563251484,105.76757601310813,210.21828576274928,-104.45070974964115
+duck,3801,Peters,2338,16,Seth,778.326,779.429,010402b,109.309811013012,76.02504886702197,126.11837004281846,-50.09332117579649
+duck,3804,Peters,2356,16,Seth,402.727,404.248,010410c,213.3086626858062,155.27112287594693,296.39603409114443,-141.1249112151975
+duck,3804,Peters,2356,16,Seth,406.05,406.839,010410c,206.58920624500965,107.11471964194942,321.5486013117557,-214.43388166980628
+duck,3804,Peters,2356,16,Seth,411.751,412.703,010410c,230.8926415616324,78.72787285942154,355.781028019619,-277.05315516019743
+duck,3804,Peters,2356,16,Seth,415.112,416.041,010410c,209.7582319193211,88.76715135766686,258.30556978815724,-169.53841843049037
+duck,3804,Peters,2356,16,Seth,420.169,420.587,010410c,163.0302277966321,128.9892490379648,232.15418407938645,-103.16493504142164
+duck,3804,Peters,2356,16,Seth,428.734,429.419,010410c,207.6946981206212,178.5752027742766,233.08815100255686,-54.512948228280266
+duck,3804,Peters,2356,16,Seth,432.641,433.407,010410c,134.50434196436748,97.94707646039848,242.96214659998748,-145.015070139589
+duck,3804,Peters,2356,16,Seth,441.836,442.532,010410c,170.9975473830071,113.39770404126524,267.3749144459823,-153.97721040471708
+duck,3805,Peters,2338,16,Seth,382.553,383.319,010412,99.23585319852317,85.02422945668681,108.43942037232084,-23.415190915634028
+duck,3804,Peters,2356,16,Seth,537.81,538.646,010410c,226.51416323007797,88.12928963851483,295.04974169114803,-206.9204520526332
+duck,3804,Peters,2356,16,Seth,541.054,541.937,010410c,253.54567124199497,213.1172574576284,296.13314938243263,-83.01589192480424
+duck,3802,Peters,2338,16,Seth,1115.227,1116.098,010410a,134.1903654241703,81.94793086710136,171.19604461059683,-89.24811374349547
+duck,3808,Peters,2338,17,Seth,973.515,976.092,010424a,91.4155202412547,79.6024703388999,105.13266749470972,-25.530197155809816
+duck,3809,Peters,2338,17,Seth,1829.289,1829.556,010502a,195.66092609372413,148.79578265292918,285.8034266468003,-137.0076439938711
+duck,3809,Peters,2338,17,Seth,1829.568,1830.415,010502a,233.5094993271659,123.90843806269999,508.7161619890342,-384.80772392633423
+duck,3820,Peters,2338,18,Seth,69.52,70.35,010524,222.68731663739803,104.79816288388038,378.80452418187417,-274.0063612979938
+duck,3820,Peters,2338,18,Seth,73.101,74.146,010524,149.78749275666615,107.58524202999065,339.96839507261694,-232.3831530426263
+duck,3820,Peters,2338,18,Seth,189.637,190.455,010524,218.41487532972232,104.2151573279167,457.264418799251,-353.0492614713343
+duck,3827,Peters,2338,19,Seth,687.003,688.072,010621a,184.45051917670722,96.0905136794401,494.8762125303279,-398.7856988508878
+duck,3826,Peters,2338,18,Seth,986.094,987.098,010614b,152.6778275636803,85.69451279649927,371.70656388068966,-286.0120510841904
+duck,3826,Peters,2338,18,Seth,987.092,988.102,010614b,127.8463761802697,101.51632387906837,481.1942795214987,-379.67795564243033
+duck,3816,Peters,2338,18,Seth,1169.212,1170.442,010516a,157.9863501343046,107.8279640766558,469.0567569357037,-361.22879285904787
+duck,3816,Peters,2338,18,Seth,1173.368,1174.39,010516a,205.85977890839686,89.8560032494113,499.7388960184977,-409.8828927690864
+duck,3835,Peters,2338,21,Seth,1168.425,1174.991,010822a,180.8812180331439,102.96689517423208,488.6979630221093,-385.7310678478772
+duck,3837,Peters,2338,21,Seth,98.413,100.642,010901a,232.72709796109834,85.68236503906357,499.92062193467774,-414.2382568956142
+duck,3840,Peters,2338,21,Seth,968.98,970.383,010909b,174.0701192294171,95.25729812379288,497.5111579681374,-402.25385984434456
+duck,3831,Peters,2338,20,Seth,1394.255,1402.262,010802,109.39215540057401,95.05910912807526,131.52061495229887,-36.46150582422361
+duck,3831,Peters,2338,20,Seth,1402.262,1403.914,010802,134.43801904124504,92.93469333787928,432.8012518766065,-339.8665585387272
+duck,3831,Peters,2338,20,Seth,1411.883,1416.463,010802,118.17104049657381,97.67926657199042,161.81594843139905,-64.13668185940863
+duck,3849,Peters,2338,22,Seth,197.661,198.526,011011a,194.6460921702901,113.83913516800979,403.7472112212541,-289.90807605324426
+duck,3849,Peters,2338,22,Seth,198.526,199.435,011011a,180.0003374090391,75.77640321105302,488.1033159724539,-412.3269127614009
+duck,3849,Peters,2466,22,Seth,201.83,209.838,011011a,377.85698540382134,128.1763782695857,511.3111487281213,-383.13477045853557
+duck,3849,Peters,2466,22,Seth,316.192,317.744,011011a,419.4789142321745,279.15149584419316,512.805838706074,-233.65434286188088
+duck,3849,Peters,2338,22,Seth,715.095,718.605,011011a,145.22443616987476,87.29070376371924,190.41757531746845,-103.12687155374921
+duck,3849,Peters,2338,22,Seth,720.008,722.487,011011a,160.30940460541683,75.4374243889895,449.38878463414204,-373.95136024515256
+duck,3852,Peters,2467,23,Seth,929.319,934.316,011026a,361.8291165109438,121.77851781252026,505.9156751715178,-384.13715735899757
+duck,3849,Peters,2338,22,Seth,1529.366,1530.276,011011a,334.6362970728502,86.63590694975811,423.54970160991337,-336.91379466015525
+duck,3849,Peters,2466,22,Seth,1533.248,1538.615,011011a,362.4079060712465,86.53925280961478,515.0612704493112,-428.52201763969646
+duck,3852,Peters,2338,23,Seth,961.809,962.552,011026a,159.80362092751471,81.27583340862213,233.254845718355,-151.97901230973287
+duck,3852,Peters,2467,23,Seth,965.723,970.431,011026a,318.6028078048196,110.843696632738,510.37943512221494,-399.53573848947696
+duck,3852,Peters,2467,23,Seth,1011.214,1013.156,011026a,329.3525468794509,106.40648184754272,508.0743488034458,-401.66786695590304
+duck,3849,Peters,2466,22,Seth,1793.577,1794.199,011011a,344.38781749139946,235.4119821197642,483.8903997419689,-248.47841762220472
+duck,3850,Peters,2338,22,Seth,1836.495,1837.693,011011b,185.21579656368135,118.56932436113539,382.1372546394418,-263.5679302783064
+duck,3850,Peters,2338,22,Seth,1837.693,1838.314,011011b,208.29971069310312,111.26465528565086,390.0522360849988,-278.78758079934795
+duck,3850,Peters,2466,22,Seth,1838.314,1844.424,011011b,313.148328604559,131.00171532659311,506.596627556822,-375.5949122302289
+duck,3850,Peters,2466,22,Seth,1853.629,1857.51,011011b,305.02959692427015,139.3313700187792,500.00932761315084,-360.6779575943716
+duck,3850,Peters,2338,22,Seth,1868.906,1869.565,011011b,221.88800708201913,102.74055628018846,462.6416520288965,-359.90109574870803
+duck,3850,Peters,2466,22,Seth,1872.083,1877.451,011011b,320.74218353408133,138.92959062113007,505.8100688275031,-366.880478206373
+duck,3852,Peters,2467,23,Seth,1544.497,1549.783,011026a,398.33077752781185,241.45521222542908,507.3358338894634,-265.8806216640343
+duck,3853,Peters,2467,23,Seth,1877.467,1880.522,011016,390.9292131481936,137.02607675017165,510.716330396224,-373.6902536460524
+duck,3855,Peters,2467,23,Seth,1618.608,1620.671,011106a,377.83069305528784,248.1262401932624,515.5683115041313,-267.4420713108689
+duck,3873,Peters,2338,25,Seth,477.226,481.108,020030a,187.48057617936294,134.1424993248615,254.68565139385368,-120.54315206899219
+duck,3873,Peters,2338,25,Seth,1748.018,1749.96,020030a,184.0502717264749,116.53030181481273,268.3306251864474,-151.80032337163465
+duck,4154,Rollins,2535,12,NA,541.665,547.246,al12,audio file missing,audio file missing,audio file missing,audio file missing
+duck,4182,Rollins,2535,12,NA,371.303,374.223,cm12,audio file missing,audio file missing,audio file missing,audio file missing
+duck,4182,Rollins,2535,12,NA,381.093,381.485,cm12,audio file missing,audio file missing,audio file missing,audio file missing
+duck,4182,Rollins,2535,12,NA,428.601,431.515,cm12,audio file missing,audio file missing,audio file missing,audio file missing
+duck,4182,Rollins,2535,12,NA,431.515,434.178,cm12,audio file missing,audio file missing,audio file missing,audio file missing
+duck,4182,Rollins,2535,12,NA,495.16,506.658,cm12,audio file missing,audio file missing,audio file missing,audio file missing
+duck,4182,Rollins,2535,12,NA,511.646,512.85,cm12,audio file missing,audio file missing,audio file missing,audio file missing
+duck,4182,Rollins,2535,12,NA,514.034,514.988,cm12,audio file missing,audio file missing,audio file missing,audio file missing
+duck,4182,Rollins,2535,12,NA,514.988,518.37,cm12,audio file missing,audio file missing,audio file missing,audio file missing
+duck,4182,Rollins,2535,12,NA,528.276,530.51,cm12,audio file missing,audio file missing,audio file missing,audio file missing
+duck,4182,Rollins,2535,12,NA,530.51,533.296,cm12,audio file missing,audio file missing,audio file missing,audio file missing
+duck,4182,Rollins,2535,12,NA,542.68,543.766,cm12,audio file missing,audio file missing,audio file missing,audio file missing
+duck,4182,Rollins,2535,12,NA,543.766,545.026,cm12,audio file missing,audio file missing,audio file missing,audio file missing
+duck,4182,Rollins,2535,12,NA,545.026,546.643,cm12,audio file missing,audio file missing,audio file missing,audio file missing
+duck,4199,Rollins,2540,20,David,824.45,827.419,di06,audio file missing,audio file missing,audio file missing,audio file missing
+duck,4200,Rollins,2535,9,NA,668.296,670.413,di09,audio file missing,audio file missing,audio file missing,audio file missing
+duck,4202,Rollins,2535,12,NA,536.708,542.145,di12,audio file missing,audio file missing,audio file missing,audio file missing
+duck,4257,Rollins,2535,12,NA,583.128,586.761,jw12a,audio file missing,audio file missing,audio file missing,audio file missing
+duck,4202,Rollins,2535,12,NA,1074.29,1077.728,di12,audio file missing,audio file missing,audio file missing,audio file missing
+duck,4257,Rollins,2535,12,NA,1068.913,1073.023,jw12a,audio file missing,audio file missing,audio file missing,audio file missing
+duck,4309,Rollins,2535,6,NA,357.048,363.226,sw06,audio file missing,audio file missing,audio file missing,audio file missing
+duck,4309,Rollins,2535,6,NA,433.331,435.896,sw06,audio file missing,audio file missing,audio file missing,audio file missing
+duck,4312,Rollins,2535,6,NA,537.96,544.765,sx06,audio file missing,audio file missing,audio file missing,audio file missing
+duck,4312,Rollins,2535,6,NA,614.446,617.321,sx06,audio file missing,audio file missing,audio file missing,audio file missing
+duck,4273,Rollins,2535,12,NA,907.588,910.283,me12,audio file missing,audio file missing,audio file missing,audio file missing
+duck,4336,Rollins,2535,12,NA,452.075,454.918,zm12,audio file missing,audio file missing,audio file missing,audio file missing
+duck,4336,Rollins,2535,12,NA,454.918,458.855,zm12,audio file missing,audio file missing,audio file missing,audio file missing
+duck,4336,Rollins,2535,12,NA,460.133,462.431,zm12,audio file missing,audio file missing,audio file missing,audio file missing
+duck,4336,Rollins,2535,12,NA,825.945,826.896,zm12,audio file missing,audio file missing,audio file missing,audio file missing
+duck,4336,Rollins,2535,12,NA,828.698,830.035,zm12,audio file missing,audio file missing,audio file missing,audio file missing
+duck,4336,Rollins,2535,12,NA,832.186,833.926,zm12,audio file missing,audio file missing,audio file missing,audio file missing
+duck,4329,Rollins,2535,12,NA,709.853,711.405,tt12,audio file missing,audio file missing,audio file missing,audio file missing
+duck,4555,Gleason,2576,50,David,151.882,154.831,david,188.92786237884124,85.7883092209286,215.2946348757444,-129.5063256548158
+duck,4561,Gleason,2599,51,John,913.189,914.257,john,341.6942789409198,93.1769639046961,480.87935244627,-387.7023885415739
+duck,4561,Gleason,2598,51,John,914.257,915.314,john,234.23359075152754,71.90569613734559,469.1845197173052,-397.27882357995964
+duck,4574,Gleason,2638,28,William,2130.272,2130.9,william,229.97138147019342,85.03205567136756,496.20333699634784,-411.17128132498027
+duck,4574,Gleason,2637,28,William,2132.594,2134.412,william,226.05479121182395,166.51586586501415,514.3218481527983,-347.8059822877842
+duck,4574,Gleason,2638,28,William,2135.678,2139.219,william,170.20522047155237,67.84880655364182,426.03256420785647,-358.1837576542147
+duck,4574,Gleason,2637,28,William,2140.969,2142.54,william,289.4231374897072,95.77949435435116,456.8896500601536,-361.1101557058024
+duck,4577,Gleason,2574,36,Charlie,1542.748,1546.425,charlie,129.2681012165755,75.5804137777303,175.29252480104944,-99.71211102331914
+duck,4577,Gleason,2574,36,Charlie,1549.768,1552.302,charlie,166.32524465711612,70.27428867096235,437.8258398321868,-367.55155116122444
+duck,4577,Gleason,2574,36,Charlie,1554.077,1558.723,charlie,228.2859513000343,85.37990450565745,432.75075919382124,-347.3708546881638
+duck,4590,Gleason,2621,30,Patricia,1601.24,1602.67,patricia,319.77974764595797,89.10074466790424,472.11130273820123,-383.010558070297
+duck,6602,Bloom,3147,38,Peter,393.593,395.993,030120,172.32561492209038,76.70758996462864,248.23348744000873,-171.52589747538008
+duck,6588,Bloom,3148,24,Peter,7643.341,7644.56,020010,197.39186838525953,113.80682930113929,263.2672484671645,-149.46041916602522
+duck,7131,MacWhinney,3396,18,Ross,1087.743,1090.645,010523,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7223,MacWhinney,3396,42,Ross,908.616,910.102,030602,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7223,MacWhinney,3396,42,Ross,914.829,916.603,030602,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7223,MacWhinney,3396,42,Ross,916.603,920.876,030602,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7223,MacWhinney,3396,42,Ross,921.785,924.386,030602,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7223,MacWhinney,3396,42,Ross,940.381,941.596,030602,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7230,MacWhinney,3396,44,Ross,136.431,138.557,030803a,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7230,MacWhinney,3396,44,Ross,1431.013,1432.715,030803a,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7865,Brent,3843,10,Morgan,4265.17,4266.291,001014,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7866,Brent,3843,11,Morgan,3146.289,3149.088,001027,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7866,Brent,3843,11,Morgan,3149.891,3152.86,001027,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7872,Brent,3843,14,Morgan,2448.527,2450.473,010129,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7866,Brent,3843,11,Morgan,3222.355,3223.468,001027,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7866,Brent,3843,11,Morgan,3248.918,3250.257,001027,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7872,Brent,3843,14,Morgan,2603.627,2604.697,010129,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7872,Brent,3843,14,Morgan,2606.959,2607.982,010129,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7870,Brent,3843,13,Morgan,3380.408,3380.84,010109,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7870,Brent,3843,13,Morgan,3380.915,3381.739,010109,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7870,Brent,3843,13,Morgan,3382.599,3384.105,010109,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7870,Brent,3843,13,Morgan,3392.16,3393.544,010109,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7870,Brent,3843,13,Morgan,3394.813,3395.765,010109,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7870,Brent,3843,13,Morgan,3514.541,3515.333,010109,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7870,Brent,3843,13,Morgan,3520.119,3520.923,010109,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7870,Brent,3843,13,Morgan,3550.711,3551.125,010109,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7870,Brent,3843,13,Morgan,3551.619,3552.454,010109,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7870,Brent,3843,13,Morgan,3553.405,3555.245,010109,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7870,Brent,3843,13,Morgan,3556.789,3557.997,010109,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7870,Brent,3843,13,Morgan,3559.565,3560.81,010109,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7870,Brent,3843,13,Morgan,3561.507,3563.088,010109,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7870,Brent,3843,13,Morgan,3579.276,3580.059,010109,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7877,Brent,3847,9,Miranda,1287.952,1291.432,000904,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7877,Brent,3847,9,Miranda,1292.224,1295.87,000904,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7877,Brent,3847,9,Miranda,1389.907,1391.028,000904,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7872,Brent,3843,14,Morgan,3459.956,3461.46,010129,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7872,Brent,3843,14,Morgan,3463.326,3464.242,010129,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7870,Brent,3843,13,Morgan,4289.548,4290.915,010109,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7870,Brent,3843,13,Morgan,4292.912,4294.25,010109,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7870,Brent,3843,13,Morgan,4296.122,4297.242,010109,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7872,Brent,3843,14,Morgan,3626.269,3629.075,010129,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7872,Brent,3843,14,Morgan,3704.02,3705.744,010129,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7872,Brent,3843,14,Morgan,3711.238,3712.432,010129,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7884,Brent,3847,14,Miranda,1545.67,1548.05,010124,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7881,Brent,3847,12,Miranda,405.605,406.211,001120,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7881,Brent,3847,12,Miranda,406.83,407.442,001120,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7899,Brent,3850,14,Dillon,3223.013,3224.993,010202,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7899,Brent,3850,14,Dillon,3226.353,3228.223,010202,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7899,Brent,3850,14,Dillon,3474.04,3474.81,010202,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7923,Brent,3857,14,Alexander,2361.673,2363.356,010118,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7921,Brent,3857,13,Alexander,3577.724,3579.925,010111,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7921,Brent,3857,13,Alexander,3580.058,3581.19,010111,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7921,Brent,3857,13,Alexander,3585.85,3587.91,010111,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7921,Brent,3857,13,Alexander,3593.588,3594.056,010111,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7921,Brent,3857,13,Alexander,3596.476,3597.812,010111,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7921,Brent,3857,13,Alexander,3604.207,3605.124,010111,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7921,Brent,3857,13,Alexander,3606.266,3606.967,010111,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7921,Brent,3857,13,Alexander,3608.895,3610.04,010111,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7921,Brent,3857,13,Alexander,3612.701,3614.546,010111,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7921,Brent,3857,13,Alexander,3619.966,3623.471,010111,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7921,Brent,3857,13,Alexander,3625.702,3626.268,010111,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7921,Brent,3857,13,Alexander,3630.888,3631.408,010111,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7921,Brent,3857,13,Alexander,3631.425,3632.585,010111,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7921,Brent,3857,13,Alexander,3678.503,3680.071,010111,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7921,Brent,3857,13,Alexander,3681.184,3682.541,010111,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7910,Brent,3854,13,Brooklyn,2779.647,2780.15,010018,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7910,Brent,3854,13,Brooklyn,2781.337,2781.753,010018,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7910,Brent,3854,13,Brooklyn,2782.453,2783.153,010018,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7921,Brent,3857,13,Alexander,4012.534,4013.901,010111,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7921,Brent,3857,13,Alexander,4014.139,4015.371,010111,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7891,Brent,3850,10,Dillon,2357.469,2360.194,001013,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7891,Brent,3850,10,Dillon,2364.629,2365.731,001013,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7891,Brent,3850,10,Dillon,2372.282,2374.588,001013,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7891,Brent,3850,10,Dillon,2630.68,2631.418,001013,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7938,Brent,3860,14,Jaylen,2202.62,2205.563,010215,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7926,Brent,3857,15,Alexander,1262.065,1262.733,010308,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7926,Brent,3857,15,Alexander,1337.827,1338.218,010308,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7926,Brent,3857,15,Alexander,2987.411,2988.069,010308,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7926,Brent,3857,15,Alexander,3026.87,3028.391,010308,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7926,Brent,3857,15,Alexander,3049.534,3050.201,010308,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7925,Brent,3857,15,Alexander,1327.095,1327.806,010225,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7925,Brent,3857,15,Alexander,1330.966,1332.014,010225,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7925,Brent,3857,15,Alexander,1332.633,1333.398,010225,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7925,Brent,3857,15,Alexander,1411.483,1412.452,010225,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7925,Brent,3857,15,Alexander,1415.905,1416.759,010225,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7925,Brent,3857,15,Alexander,1470.813,1471.912,010225,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7925,Brent,3857,15,Alexander,1603.412,1605.098,010225,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7925,Brent,3857,15,Alexander,1640.139,1641.596,010225,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7925,Brent,3857,15,Alexander,1643.514,1644.703,010225,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7982,Brent,3867,12,Timothy,337.333,337.81,001126,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7982,Brent,3867,12,Timothy,339.721,340.412,001126,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7982,Brent,3867,12,Timothy,343.973,347.652,001126,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7987,Brent,3867,14,Timothy,508.387,512.073,010206,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7987,Brent,3867,14,Timothy,515.367,519.49,010206,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7982,Brent,3867,12,Timothy,794.316,795.038,001126,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7982,Brent,3867,12,Timothy,795.83,796.534,001126,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7982,Brent,3867,12,Timothy,797.489,797.963,001126,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7982,Brent,3867,12,Timothy,802.078,803.078,001126,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7982,Brent,3867,12,Timothy,803.245,803.703,001126,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7982,Brent,3867,12,Timothy,810.034,810.673,001126,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7982,Brent,3867,12,Timothy,1239.442,1240.154,001126,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7982,Brent,3867,12,Timothy,1240.676,1241.473,001126,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7982,Brent,3867,12,Timothy,1244.354,1245.517,001126,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7982,Brent,3867,12,Timothy,1245.772,1247.286,001126,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7979,Brent,3867,10,Timothy,279.011,280.763,001015,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7982,Brent,3867,12,Timothy,1262.17,1263.626,001126,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7979,Brent,3867,10,Timothy,283.747,285.287,001015,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7983,Brent,3867,14,Timothy,2815.29,2817.75,010122,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7983,Brent,3867,14,Timothy,2817.957,2819.42,010122,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7983,Brent,3867,14,Timothy,2823.047,2827.34,010122,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7986,Brent,3867,13,Timothy,786.933,788.437,010108,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7986,Brent,3867,13,Timothy,795.407,796.53,010108,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7984,Brent,3867,12,Timothy,3388.469,3389.11,010010,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7984,Brent,3867,12,Timothy,3389.952,3390.793,010010,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7984,Brent,3867,12,Timothy,3393.184,3393.531,010010,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7989,Brent,3867,15,Timothy,3174.603,3175.439,010301,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7989,Brent,3867,15,Timothy,3176.444,3177.535,010301,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7989,Brent,3867,15,Timothy,3178.667,3179.857,010301,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7981,Brent,3867,11,Timothy,2721.816,2722.583,001029,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7981,Brent,3867,11,Timothy,2722.654,2723.838,001029,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7981,Brent,3867,11,Timothy,2724.078,2724.82,001029,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7981,Brent,3867,11,Timothy,2729.451,2729.743,001029,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7981,Brent,3867,11,Timothy,2732.063,2732.751,001029,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7981,Brent,3867,11,Timothy,2737.357,2738.027,001029,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7981,Brent,3867,11,Timothy,2746.718,2747.84,001029,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7981,Brent,3867,11,Timothy,2750.204,2751.749,001029,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7981,Brent,3867,11,Timothy,2765.806,2766.231,001029,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7981,Brent,3867,11,Timothy,2767.994,2769.255,001029,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7981,Brent,3867,11,Timothy,2802.005,2802.895,001029,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7981,Brent,3867,11,Timothy,4416.532,4417.232,001029,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7992,Brent,3870,10,Tabitha,3918.949,3919.891,001004,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7992,Brent,3870,10,Tabitha,4156.367,4157,001004,audio file missing,audio file missing,audio file missing,audio file missing
+duck,7992,Brent,3870,10,Tabitha,4179.17,4180.423,001004,audio file missing,audio file missing,audio file missing,audio file missing
+duck,8017,Brent,3879,12,Alexander,2573.79,2574.493,010005,audio file missing,audio file missing,audio file missing,audio file missing
+duck,8017,Brent,3879,12,Alexander,2576.58,2577.01,010005,audio file missing,audio file missing,audio file missing,audio file missing
+duck,8002,Brent,3870,15,Tabitha,2654.912,2655.721,010220,audio file missing,audio file missing,audio file missing,audio file missing
+duck,8002,Brent,3870,15,Tabitha,2658.66,2659.582,010220,audio file missing,audio file missing,audio file missing,audio file missing
+duck,8002,Brent,3870,15,Tabitha,2662.16,2662.629,010220,audio file missing,audio file missing,audio file missing,audio file missing
+duck,8002,Brent,3870,15,Tabitha,2690.979,2691.59,010220,audio file missing,audio file missing,audio file missing,audio file missing
+duck,8002,Brent,3870,15,Tabitha,2692.143,2692.735,010220,audio file missing,audio file missing,audio file missing,audio file missing
+duck,8002,Brent,3870,15,Tabitha,2695.766,2697.616,010220,audio file missing,audio file missing,audio file missing,audio file missing
+duck,8004,Brent,3870,15,Tabitha,3756.779,3757.735,010224,audio file missing,audio file missing,audio file missing,audio file missing
+duck,8029,Brent,3881,10,Henry,545.98,546.812,001007,audio file missing,audio file missing,audio file missing,audio file missing
+duck,8029,Brent,3881,10,Henry,547.452,548.34,001007,audio file missing,audio file missing,audio file missing,audio file missing
+duck,8029,Brent,3881,10,Henry,548.639,549.771,001007,audio file missing,audio file missing,audio file missing,audio file missing
+duck,8029,Brent,3881,10,Henry,549.867,550.971,001007,audio file missing,audio file missing,audio file missing,audio file missing
+duck,8029,Brent,3881,10,Henry,570.211,571.849,001007,audio file missing,audio file missing,audio file missing,audio file missing
+duck,8029,Brent,3881,10,Henry,573.588,574.277,001007,audio file missing,audio file missing,audio file missing,audio file missing
+duck,8029,Brent,3881,10,Henry,576.122,576.81,001007,audio file missing,audio file missing,audio file missing,audio file missing
+duck,8029,Brent,3881,10,Henry,593.441,594.29,001007,audio file missing,audio file missing,audio file missing,audio file missing
+duck,8029,Brent,3881,10,Henry,595.973,596.777,001007,audio file missing,audio file missing,audio file missing,audio file missing
+duck,8029,Brent,3881,10,Henry,597.85,598.491,001007,audio file missing,audio file missing,audio file missing,audio file missing
+duck,8029,Brent,3881,10,Henry,612.18,613.868,001007,audio file missing,audio file missing,audio file missing,audio file missing
+duck,8000,Brent,3870,13,Tabitha,1562.099,1564.122,010109,audio file missing,audio file missing,audio file missing,audio file missing
+duck,8000,Brent,3870,13,Tabitha,1567.371,1568.112,010109,audio file missing,audio file missing,audio file missing,audio file missing
+duck,8000,Brent,3870,13,Tabitha,1569.646,1570.065,010109,audio file missing,audio file missing,audio file missing,audio file missing
+duck,8000,Brent,3870,13,Tabitha,1573.622,1574.024,010109,audio file missing,audio file missing,audio file missing,audio file missing
+duck,8000,Brent,3870,13,Tabitha,1574.129,1575.041,010109,audio file missing,audio file missing,audio file missing,audio file missing
+duck,8000,Brent,3870,13,Tabitha,1635.207,1635.997,010109,audio file missing,audio file missing,audio file missing,audio file missing
+duck,8000,Brent,3870,13,Tabitha,1676.605,1677.519,010109,audio file missing,audio file missing,audio file missing,audio file missing
+duck,8000,Brent,3870,13,Tabitha,1680.364,1681.315,010109,audio file missing,audio file missing,audio file missing,audio file missing
+duck,8060,Brent,3890,13,Maggie,933.187,937.24,010103,audio file missing,audio file missing,audio file missing,audio file missing
+duck,8061,Brent,3890,15,Maggie,2112.942,2113.654,010217,audio file missing,audio file missing,audio file missing,audio file missing
+duck,8033,Brent,3881,13,Henry,3253.381,3255.412,010021,audio file missing,audio file missing,audio file missing,audio file missing
+duck,8032,Brent,3881,12,Henry,3568.119,3570.867,010007,audio file missing,audio file missing,audio file missing,audio file missing
+duck,8032,Brent,3881,12,Henry,3571.602,3573.653,010007,audio file missing,audio file missing,audio file missing,audio file missing
+duck,8035,Brent,3881,14,Henry,52.221,54.106,010119,audio file missing,audio file missing,audio file missing,audio file missing
+duck,8062,Brent,3890,15,Maggie,4430.684,4434.666,010228,audio file missing,audio file missing,audio file missing,audio file missing
+duck,8106,Nelson,3899,26,Emily,72.817,73.726,020127,128.0622673028365,108.85430887155397,180.79984752608664,-71.94553865453267
+duck,8106,Nelson,3899,26,Emily,76.327,79.133,020127,252.48958898837012,78.1360997891727,528.8196772754911,-450.6835774863184
+duck,8106,Nelson,3899,26,Emily,85.449,86.275,020127,113.08116987877172,86.80047702904716,136.4403209117716,-49.63984388272445
+duck,8103,Nelson,3900,26,Emily,1236.533,1237.17,020122,318.47329822019304,224.37531520301687,399.63338805887366,-175.2580728558568
+duck,8106,Nelson,3899,26,Emily,91.765,96.594,020127,181.95172036471294,92.0079554725892,434.423099558431,-342.4151440858418
+duck,8106,Nelson,3899,26,Emily,96.594,100.021,020127,124.89621102437196,74.17616297501544,197.29342042834966,-123.11725745333422
+duck,8074,Brent,3893,15,Vas_Coleman,419.703,420.583,010312,audio file missing,audio file missing,audio file missing,audio file missing
+duck,8072,Brent,3893,14,Vas_Coleman,360.45,361.22,010116,audio file missing,audio file missing,audio file missing,audio file missing
+duck,8072,Brent,3893,14,Vas_Coleman,369.44,369.923,010116,audio file missing,audio file missing,audio file missing,audio file missing
+duck,8072,Brent,3893,14,Vas_Coleman,372.58,373.213,010116,audio file missing,audio file missing,audio file missing,audio file missing
+duck,8072,Brent,3893,14,Vas_Coleman,398.877,399.673,010116,audio file missing,audio file missing,audio file missing,audio file missing
+duck,8072,Brent,3893,14,Vas_Coleman,712.293,712.923,010116,audio file missing,audio file missing,audio file missing,audio file missing
+duck,8072,Brent,3893,14,Vas_Coleman,716.347,716.9,010116,audio file missing,audio file missing,audio file missing,audio file missing
+duck,8035,Brent,3881,14,Henry,4075.786,4076.55,010119,audio file missing,audio file missing,audio file missing,audio file missing
+duck,8070,Brent,3893,14,Vas_Coleman,4205.24,4205.863,010201,audio file missing,audio file missing,audio file missing,audio file missing
+duck,8070,Brent,3893,14,Vas_Coleman,4207.047,4207.51,010201,audio file missing,audio file missing,audio file missing,audio file missing
+duck,8037,Brent,3881,15,Henry,794.731,795.309,010217,audio file missing,audio file missing,audio file missing,audio file missing
+duck,8069,Brent,3893,13,Vas_Coleman,2961.393,2961.973,010101,audio file missing,audio file missing,audio file missing,audio file missing
+duck,8069,Brent,3893,13,Vas_Coleman,2963.547,2964.067,010101,audio file missing,audio file missing,audio file missing,audio file missing
+duck,8069,Brent,3893,13,Vas_Coleman,2965.863,2966.46,010101,audio file missing,audio file missing,audio file missing,audio file missing
+duck,8069,Brent,3893,13,Vas_Coleman,2968.253,2968.67,010101,audio file missing,audio file missing,audio file missing,audio file missing
+duck,8069,Brent,3893,13,Vas_Coleman,3203.047,3203.8,010101,audio file missing,audio file missing,audio file missing,audio file missing
+duck,8069,Brent,3893,13,Vas_Coleman,3212.56,3213.4,010101,audio file missing,audio file missing,audio file missing,audio file missing
+duck,8069,Brent,3893,13,Vas_Coleman,3316.213,3316.79,010101,audio file missing,audio file missing,audio file missing,audio file missing
+duck,8069,Brent,3893,13,Vas_Coleman,3320.647,3321.687,010101,audio file missing,audio file missing,audio file missing,audio file missing
+duck,8053,Brent,3890,10,Maggie,4196.36,4198.043,001011,audio file missing,audio file missing,audio file missing,audio file missing
+duck,8179,Braunwald,3907,20,Laura,615.594,617.498,010725,264.23326860863557,172.34262299511667,362.66614123573856,-190.3235182406219
+duck,8195,Braunwald,3907,23,Laura,41.607,42.965,011027,279.87049568832134,193.86621945182836,367.08281516378804,-173.21659571195968
+duck,8195,Braunwald,3907,23,Laura,45.635,46.808,011027,247.58529751796655,153.85288940105806,451.1577789243724,-297.30488952331433
+duck,8222,Braunwald,3908,26,Laura,82.167,84.686,020200,361.8668224553131,93.91732622859311,527.1769596546868,-433.2596334260937
+duck,8299,Braunwald,3908,43,Laura,289.582,291.846,030617,294.1554628595628,217.92964247852834,388.62667967556354,-170.6970371970352
+duck,8302,Braunwald,3908,43,Laura,2111.729,2111.933,030619,310.7323520196401,297.84652596943477,325.55978575436535,-27.713259784930585
+duck,8344,Braunwald,3907,58,Laura,5567.113,5569.481,041000,349.31261392294186,257.339712340353,495.67193351261295,-238.33222117225995
+duck,9054,Soderstrom,3929,7,Joseph,479.436,480.396,000703,214.6376610174573,97.05111149010541,474.4659547608902,-377.4148432707848
+duck,9054,Soderstrom,3929,7,Joseph,481.692,482.284,000703,295.0852934360341,234.24539934900943,479.1002980410624,-244.85489869205296
+duck,9089,Soderstrom,3934,9,Theo,757.329,760.593,000823d,304.7783007759943,187.74095572798709,526.2784405202792,-338.53748479229216
+duck,9089,Soderstrom,3934,9,Theo,762.833,763.857,000823d,224.43571451309512,187.6255463410229,347.3525113980401,-159.72696505701722
+duck,9089,Soderstrom,3934,9,Theo,764.524,767.804,000823d,207.28474406294487,73.6637861743633,491.2221641686027,-417.55837799423944
+duck,9104,Sachs,3941,20,Naomi,58.235,60.001,010800,235.8912450834133,195.53155189653825,396.34874038498367,-200.81718848844542
+duck,9104,Sachs,3941,20,Naomi,68.288,69.207,010800,133.04272594140963,93.06541668445928,205.10575484496525,-112.04033816050597
+duck,9104,Sachs,3941,20,Naomi,1646.022,1648.791,010800,257.52505835187804,85.59834541317453,415.0300669000834,-329.4317214869089
+duck,9104,Sachs,3941,20,Naomi,1653.678,1654.611,010800,222.46788773032085,211.9006595575159,236.5664032713926,-24.665743713876708
+duck,9105,Sachs,3941,19,Naomi,5744.94,5748.725,010616,280.0023376322461,204.80776328943466,434.17371644511303,-229.36595315567837
+duck,9125,Sachs,3941,23,Naomi,2250.192,2251.794,011106,265.8334387537998,96.92523397946289,395.0548520779754,-298.12961809851254
+duck,9105,Sachs,3941,19,Naomi,7775.038,7777.355,010616,342.7534144109166,224.57715755191452,523.4450396358927,-298.8678820839782
+duck,9105,Sachs,3941,19,Naomi,7777.355,7779.174,010616,258.66072074953104,254.60111788975462,261.834971822864,-7.233853933109401
+duck,9102,Soderstrom,3934,13,Theo,733.584,735.539,010028b,224.18843036811725,139.54253761874156,439.2148131486722,-299.67227552993063
+duck,9102,Soderstrom,3934,13,Theo,1572.276,1575.268,010028b,154.78845459170117,72.4208930008046,275.8181994828448,-203.39730648204022
+duck,9063,Soderstrom,3929,10,Joseph,1027.333,1028.629,000925,202.48756709922355,130.75355779608697,355.6577023097917,-224.90414451370475
+duck,9063,Soderstrom,3931,10,Joseph,1028.629,1029.957,000925,305.234531020113,234.01029625587668,476.20937034923315,-242.19907409335647
+duck,9063,Soderstrom,3929,10,Joseph,1029.861,1031.125,000925,224.61940911185164,163.4514397299834,447.22001366976957,-283.76857393978617
+duck,9063,Soderstrom,3930,10,Joseph,1036.293,1039.077,000925,301.0389349591335,97.99320507117011,445.9867020844655,-347.9934970132954
+duck,9063,Soderstrom,3930,10,Joseph,1041.365,1043.973,000925,241.5535830067822,77.61211621908843,380.05626887334694,-302.4441526542585
+duck,9063,Soderstrom,3929,10,Joseph,1058.405,1060.869,000925,312.10663209413923,161.7477117035223,494.0802462061887,-332.33253450266636
+duck,9063,Soderstrom,3930,10,Joseph,1064.117,1067.877,000925,344.7299293695867,128.6504396873731,514.0134757559575,-385.3630360685844
+duck,9170,Sachs,3942,32,Naomi,1398.466,1399.35,020716,127.3524263329459,104.85155457213718,153.7742528359374,-48.92269826380023
+duck,9140,Sachs,3941,25,Naomi,2356.878,2361.865,020018,371.28778073904925,104.02296948649511,479.52639709597935,-375.5034276094842
+duck,9188,Sachs,3941,41,Naomi,453.765,454.682,030503,392.8652645129963,310.8207781228031,474.3409510174757,-163.52017289467256
+duck,9186,Sachs,3942,40,Naomi,134.713,138.248,030327,113.0525860643764,75.42225378270426,153.48220152381492,-78.05994774111066
+duck,9207,McCune,3948,17,Alice,416.076,417.426,010428,257.09529420762004,103.61094190090796,391.63768974908055,-288.0267478481726
+duck,9209,McCune,3948,19,Alice,60.826,61.223,010705,363.4249012202697,266.6138312901601,427.7645222499926,-161.1506909598325
+duck,9208,McCune,3948,18,Alice,714.575,716.103,010600,204.70063026883886,159.4205330147582,266.5038066253551,-107.08327361059688
+duck,9208,McCune,3948,18,Alice,716.103,717.17,010600,214.42805360991687,175.7992730616789,268.79692614252565,-92.99765308084676
+duck,9208,McCune,3948,18,Alice,717.17,718.966,010600,225.61727884701904,184.0154000872081,267.25020421304055,-83.23480412583245
+duck,9208,McCune,3948,18,Alice,911.285,911.95,010600,211.33515941621326,197.40767826985993,245.29190358057375,-47.884225310713816
+duck,9211,McCune,3948,21,Alice,821.743,822.921,010900,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9184,Sachs,3941,38,Naomi,2157.97,2158.704,030210,316.6499317406067,75.68914059555738,477.024507917392,-401.3353673218346
+duck,9214,McCune,3948,23,Alice,916.285,916.83,011100,256.1777367330573,216.70079689583477,284.41794408797534,-67.71714719214057
+duck,9214,McCune,3948,23,Alice,921.358,923.97,011100,218.40131034088787,102.63352226375746,267.61246893187695,-164.97894666811948
+duck,9265,McCune,3958,19,Jase,0,22.217,010700,284.91370847059477,101.14414585834987,519.0456915555932,-417.9015456972433
+duck,9265,McCune,3958,19,Jase,22.217,24.025,010700,217.80011501347764,171.80035712436126,253.53099608813554,-81.73063896377428
+duck,9266,McCune,3958,20,Jase,72.452,73.61,010800,196.6596988139264,191.06885317744133,207.1787917754449,-16.109938598003566
+duck,9266,McCune,3958,20,Jase,73.61,74.908,010800,256.7506935094137,194.84851282990022,397.5577877397253,-202.7092749098251
+duck,9267,McCune,3960,17,Jas,316.628,323.205,010500,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9267,McCune,3960,17,Jas,346.322,372.238,010500,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9267,McCune,3960,17,Jas,576.41,583.208,010500,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9266,McCune,3958,20,Jase,253.975,259.56,010800,168.21747607204446,109.99500525275316,222.52341738315698,-112.52841213040382
+duck,9266,McCune,3958,20,Jase,264.368,265.068,010800,288.31019697442053,139.39401530814789,437.66693918096536,-298.2729238728175
+duck,9269,McCune,3958,22,Jase,46.085,46.668,011000,--undefined--,--undefined--,--undefined--,--undefined--
+duck,9269,McCune,3958,22,Jase,47.915,48.762,011000,222.76736260218598,214.68095508603122,243.41915316716657,-28.73819808113535
+duck,9269,McCune,3958,22,Jase,48.762,49.408,011000,291.90815441903356,213.55380350694577,410.426730809782,-196.87292730283622
+duck,9269,McCune,3958,22,Jase,49.408,51.573,011000,319.96726057303033,286.4012611117655,359.22088940246914,-72.81962829070363
+duck,9269,McCune,3958,22,Jase,54.295,54.632,011000,200.76695543468148,183.6055278714807,213.32005915174574,-29.71453128026505
+duck,9267,McCune,3960,17,Jas,1489.458,1493.738,010500,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9267,McCune,3960,17,Jas,1518.72,1535.195,010500,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9267,McCune,3960,17,Jas,1535.195,1545.833,010500,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9267,McCune,3960,17,Jas,1545.833,1550.685,010500,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9265,McCune,3958,19,Jase,816.788,820.823,010700,359.86044231108133,161.3101085774039,478.8641357206809,-317.55402714327704
+duck,9267,McCune,3960,17,Jas,1552.3,1560.946,010500,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9265,McCune,3958,19,Jase,823.043,823.823,010700,247.42770312791174,158.73071203058726,352.21613449963667,-193.4854224690494
+duck,9267,McCune,3960,17,Jas,1560.946,1562.51,010500,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9267,McCune,3960,17,Jas,1562.51,1567.17,010500,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9265,McCune,3958,19,Jase,863.156,864.928,010700,256.43556532007534,206.20883009300093,343.52010990748016,-137.31127981447924
+duck,9264,McCune,3958,18,Jase,1627.043,1628.453,010600,188.0654947159366,81.03116721860239,261.8975943142613,-180.86642709565893
+duck,9265,McCune,3958,19,Jase,1298.501,1301.376,010700,208.11402655900474,75.417222310776,293.62025681284257,-218.20303450206657
+duck,9265,McCune,3958,19,Jase,1301.376,1301.948,010700,193.12869827143524,182.06604279544175,227.93666584263374,-45.870623047192
+duck,9265,McCune,3958,19,Jase,1324.376,1325.454,010700,235.19231655528895,183.49065088359112,315.05664744511955,-131.56599656152844
+duck,9265,McCune,3958,19,Jase,1521.746,1523.196,010700,191.75422028942,107.44952553997027,277.7883318571852,-170.33880631721493
+duck,9265,McCune,3958,19,Jase,1529.801,1542.128,010700,230.19590637803287,124.74606383485198,294.05412103615186,-169.30805720129987
+duck,9338,McCune,3966,20,Rick,82.638,86.618,010800,135.1942428468181,75.49326118874757,293.2016329853114,-217.70837179656382
+duck,9339,McCune,3966,21,Rick,512.757,513.863,010900,187.5435439044744,175.83174486545803,216.7144723020815,-40.88272743662347
+duck,9339,McCune,3966,21,Rick,561.392,563.872,010900,190.1530507179343,73.55132387272458,364.26805024162877,-290.7167263689042
+duck,9271,McCune,3958,23,Jase,0,64.428,011100,276.3234139184869,74.94816032288102,500.6441790359229,-425.6960187130419
+duck,9270,McCune,3958,24,Jase,92.277,93.743,020000,261.81032980355195,224.3109070325077,319.3612317079301,-95.05032467542236
+duck,9270,McCune,3958,24,Jase,95.993,96.508,020000,336.56100398830824,333.2084689661809,341.450530116663,-8.24206115048213
+duck,9268,McCune,3958,21,Jase,85.283,86.125,010900,218.10621637930026,186.46998066287395,259.78977305749,-73.31979239461603
+duck,9268,McCune,3958,21,Jase,86.125,86.89,010900,211.47849711247548,160.47864967762152,261.48655839328046,-101.00790871565894
+duck,9268,McCune,3958,21,Jase,214.6,215.863,010900,184.97047829149062,86.96307687716617,235.8174065903666,-148.85432971320043
+duck,9339,McCune,3966,21,Rick,1797.921,1800.518,010900,136.46365183280065,102.50418776650787,241.7007047826505,-139.19651701614262
+duck,9386,Weist,3980,32,Emily,349.231,351.027,020718,221.18563607090724,151.24942194277045,298.40551132512786,-147.1560893823574
+duck,9382,Weist,3974,39,Benjamin,1332.267,1334.527,030221,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9386,Weist,3980,32,Emily,1772.684,1776.341,020718,203.38781931749617,75.10589934576412,473.4564104019995,-398.3505110562354
+duck,9415,Weist,3987,36,Emma,1520.398,1525.618,030003,300.8977538343554,109.25350195728609,499.87555969552045,-390.6220577382344
+duck,9415,Weist,3989,36,Emma,1535.528,1538.121,030003,148.0112961376579,82.54136287615152,209.59290227707086,-127.05153940091934
+duck,9390,Weist,3980,33,Emily,1209.636,1211.051,020902,218.13525587382233,182.07550364419342,272.2930074999153,-90.21750385572187
+duck,9390,Weist,3980,33,Emily,1211.051,1212.812,020902,246.06327444461468,186.18961315811492,491.57288282609966,-305.38326966798473
+duck,9390,Weist,3980,33,Emily,1246.629,1249.622,020902,277.55214041669973,77.46798721723694,376.28526492050986,-298.8172777032729
+duck,9435,Weist,3997,25,Jillian,1057.177,1059.454,020108,179.41609756497311,72.97258092300765,316.1386221172629,-243.16604119425526
+duck,9755,NewmanRatner,4243,7,4592HVG7mos,353.642,362.118,4592HVG,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9757,NewmanRatner,4251,7,4619WZ7,181.003,183.133,4619WZ,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9758,NewmanRatner,4254,7,4641CC7,575.193,578.682,4641CC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9763,NewmanRatner,4286,7,47081B7,452.59,454.083,4708IB,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9784,NewmanRatner,4325,7,5073AC,199.179,201.53,5073AC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9783,NewmanRatner,4322,7,5066WT7,208.275,210.693,5066WT,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9783,NewmanRatner,4322,7,5066WT7,210.693,213.163,5066WT,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9783,NewmanRatner,4322,7,5066WT7,213.163,214.459,5066WT,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9783,NewmanRatner,4322,7,5066WT7,234.838,237.491,5066WT,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9783,NewmanRatner,4322,7,5066WT7,389.481,393.366,5066WT,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9766,NewmanRatner,4273,7,4734ES7,131.476,139.969,4734ES,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9779,NewmanRatner,4312,7,4997LM7,76.704,86.759,4997LM,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9779,NewmanRatner,4312,7,4997LM7,86.759,92.506,4997LM,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9785,NewmanRatner,4328,7,5111CG,833.449,835.833,5111CG,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9796,NewmanRatner,4358,7,5440JJ7mos,34.097,71.748,5440JJ,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9778,NewmanRatner,4353,7,4946RC7mos,226.341,228.408,4946RC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9778,NewmanRatner,4353,7,4946RC7mos,479.84,484.069,4946RC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9778,NewmanRatner,4353,7,4946RC7mos,484.069,491.266,4946RC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9797,NewmanRatner,4361,7,5443AO7,393.544,396.395,5443AO,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9797,NewmanRatner,4361,7,5443AO7,426.821,428.102,5443AO,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9786,NewmanRatner,4341,7,5118PM7,17.294,19.333,5118PM,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9786,NewmanRatner,4341,7,5118PM7,20.583,23.338,5118PM,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9782,NewmanRatner,4321,7,5057MS,363.845,365.619,5057MS,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9805,NewmanRatner,4383,7,5563DB7mos,333.131,339.697,5563DB,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9805,NewmanRatner,4383,7,5563DB7mos,339.697,342.669,5563DB,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9805,NewmanRatner,4383,7,5563DB7mos,350.843,354.679,5563DB,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9774,NewmanRatner,4301,7,4858CM7,111.385,112.63,4858CM,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9774,NewmanRatner,4301,7,4858CM7,114.447,115.491,4858CM,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9795,NewmanRatner,4363,7,5365DL7,436.447,439.399,5365DL,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9809,NewmanRatner,4398,7,5593SH7,212.454,222.653,5593SH,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9794,NewmanRatner,4354,7,5346GG7,184.488,186.374,5346GG,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9800,NewmanRatner,4372,7,5482DF7,501.592,503.203,5482DF,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9807,NewmanRatner,4407,7,5574IH,506.293,510.934,5573IH,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9807,NewmanRatner,4407,7,5574IH,510.934,512.337,5573IH,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9817,NewmanRatner,4429,7,5777FCH7,29.35,36.12,5777FC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9817,NewmanRatner,4429,7,5777FCH7,38.721,42.603,5777FC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9819,NewmanRatner,4432,7,5794ES,144.427,145.947,5794ES,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9819,NewmanRatner,4432,7,5794ES,148.298,156.026,5794ES,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9817,NewmanRatner,4429,7,5777FCH7,142.292,146.75,5777FC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9792,NewmanRatner,4349,7,5266EC7,182.376,184.234,5266EC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9816,NewmanRatner,4421,7,5733LE,734.975,739.521,5733LE,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9816,NewmanRatner,4421,7,5733LE,741.144,742.568,5733LE,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9793,NewmanRatner,4350,7,5303CW7,496.85,503.249,5303CW,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9793,NewmanRatner,4350,7,5303CW7,503.249,511.711,5303CW,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9830,NewmanRatner,4464,7,5954ML7,53.377,60.147,5954ML,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9789,NewmanRatner,4343,7,5196AVH7,544.237,547.393,5196AVI,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9789,NewmanRatner,4343,7,5196AVH7,547.393,549.81,5196AVI,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9789,NewmanRatner,4343,7,5196AVH7,549.81,552.411,5196AVI,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9789,NewmanRatner,4343,7,5196AVH7,571.32,572.267,5196AVI,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9832,NewmanRatner,4477,7,6047JC7,219.49,220.893,6047JC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9832,NewmanRatner,4477,7,6047JC7,222.751,224.98,6047JC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9792,NewmanRatner,4349,7,5266EC7,915.301,918.356,5266EC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9832,NewmanRatner,4477,7,6047JC7,224.98,229.892,6047JC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9792,NewmanRatner,4349,7,5266EC7,919.942,922.527,5266EC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9792,NewmanRatner,4349,7,5266EC7,922.527,925.127,5266EC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9829,NewmanRatner,4466,7,5949DL7mos,254.133,257.034,5949DL,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9823,NewmanRatner,4472,7,5878SC7,372.472,380.561,5878SC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9835,NewmanRatner,4482,7,5977QJ7,375.721,390.787,5977QJ,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9835,NewmanRatner,4482,7,5977QJ7,390.787,392.356,5977QJ,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9835,NewmanRatner,4482,7,5977QJ7,393.721,395.123,5977QJ,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9829,NewmanRatner,4466,7,5949DL7mos,386.761,388.164,5949DL,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9829,NewmanRatner,4466,7,5949DL7mos,388.164,389.947,5949DL,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9835,NewmanRatner,4482,7,5977QJ7,401.108,404.74,5977QJ,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9823,NewmanRatner,4472,7,5878SC7,727.644,735.196,5878SC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9825,NewmanRatner,4487,7,NA,595.586,597.505,5923MW,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9842,NewmanRatner,4500,7,6510LC7,222.342,223.595,6510LC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9852,NewmanRatner,4516,7,7013VD7,101.401,103.245,7013VD,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9845,NewmanRatner,4513,7,6691MW7mos,120.755,124.494,6691MW,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9845,NewmanRatner,4513,7,6691MW7mos,124.494,126.983,6691MW,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9845,NewmanRatner,4513,7,6691MW7mos,183.37,185.04,6691MW,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9848,NewmanRatner,4526,7,6818AP,417.577,419.474,6818AP,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9846,NewmanRatner,4524,7,6785KS7,369.065,375.75,6785KS,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9845,NewmanRatner,4513,7,6691MW7mos,532.482,536.674,6691MW,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9845,NewmanRatner,4513,7,6691MW7mos,536.674,539.393,6691MW,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9839,NewmanRatner,4519,7,6453HS7,650.85,653.096,6453HS,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9853,NewmanRatner,4523,7,6878SK7,935.123,937.159,6878SK,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9858,NewmanRatner,4543,7,7119CM7mos,422.597,425.652,7119CM,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9838,NewmanRatner,4487,7,NA,861.51,868.939,6337NK,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9869,NewmanRatner,4578,7,7444IJ7,113.935,118.226,7444IJ,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9827,NewmanRatner,4567,7,5929LD7,283.801,284.999,5929LD,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9864,NewmanRatner,4571,7,7251TR,518.061,518.921,7251TR,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9873,NewmanRatner,4604,7,7814NB7mos,29.805,34.923,7814NB,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9873,NewmanRatner,4604,7,7814NB7mos,36.492,37.523,7814NB,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9869,NewmanRatner,4578,7,7444IJ7,523.144,525.373,7444IJ,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9872,NewmanRatner,4585,7,7658LT7mos,727.241,730.513,7658LT,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9876,NewmanRatner,4591,10,427WC10,587.462,597.602,4273WC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9876,NewmanRatner,4591,10,427WC10,761.853,764.495,4273WC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9876,NewmanRatner,4591,10,427WC10,764.495,766.667,4273WC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9876,NewmanRatner,4591,10,427WC10,773.415,776.944,4273WC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9876,NewmanRatner,4591,10,427WC10,776.944,780.657,4273WC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9879,NewmanRatner,4607,10,4619WZ10,352.826,355.323,4619WZ,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9879,NewmanRatner,4607,10,4619WZ10,359.4,360.503,4619WZ,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9880,NewmanRatner,4601,10,4629AB10,723.769,725.813,4629AB,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9871,NewmanRatner,4582,7,7553JT7mos,790.157,792.945,7553JT,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9888,NewmanRatner,4270,10,4731SA,93.788,95.032,4731SA,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9881,NewmanRatner,4610,10,4650KS10,684.525,687.327,4650KS,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9881,NewmanRatner,4610,10,4650KS10,688.37,691.487,4650KS,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9881,NewmanRatner,4610,10,4650KS10,697.721,707.035,4650KS,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9886,NewmanRatner,4616,10,4697JK10,636.649,639.333,4697JK,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9891,NewmanRatner,4622,10,4743NA10,455.041,457.356,4743NA,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9891,NewmanRatner,4622,10,4743NA10,457.356,458.601,4743NA,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9891,NewmanRatner,4622,10,4743NA10,458.601,460.637,4743NA,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9891,NewmanRatner,4622,10,4743NA10,460.637,462.153,4743NA,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9882,NewmanRatner,4254,10,4641CC7,780.684,783.543,4641CC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9890,NewmanRatner,4279,10,4767JC,378.519,380.153,4767JC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9882,NewmanRatner,4254,10,4641CC7,903.748,906.855,4641CC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9903,NewmanRatner,4634,10,5013LA10,84.692,91.764,5013LA,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9903,NewmanRatner,4634,10,5013LA10,91.764,95.06,5013LA,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9903,NewmanRatner,4634,10,5013LA10,133.941,142.902,5013LA,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9898,NewmanRatner,4625,10,4866AC10,549.848,551.427,4866AC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9898,NewmanRatner,4625,10,4866AC10,573.165,574.872,4866AC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9903,NewmanRatner,4634,10,5013LA10,746.242,749.522,5013LA,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9903,NewmanRatner,4634,10,5013LA10,751.394,756.386,5013LA,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9914,NewmanRatner,4653,10,5244RE10mos,239.641,241.594,5244RE,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9915,NewmanRatner,4658,10,5266EC10,33.603,34.801,5266EC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9913,NewmanRatner,4651,10,5244SE10mos,320.044,321.159,5244SE,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9915,NewmanRatner,4658,10,5266EC10,126.4,129.743,5266EC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9915,NewmanRatner,4658,10,5266EC10,132.261,133.254,5266EC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9913,NewmanRatner,4651,10,5244SE10mos,512.12,515.026,5244SE,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9915,NewmanRatner,4658,10,5266EC10,340.766,341.305,5266EC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9915,NewmanRatner,4658,10,5266EC10,341.305,342.252,5266EC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9915,NewmanRatner,4658,10,5266EC10,343.284,343.921,5266EC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9915,NewmanRatner,4658,10,5266EC10,345.679,346.256,5266EC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9916,NewmanRatner,4661,10,5346GG10,147.659,150.344,5346GG,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9916,NewmanRatner,4661,10,5346GG10,150.344,153.892,5346GG,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9916,NewmanRatner,4661,10,5346GG10,883.434,891.729,5346GG,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9916,NewmanRatner,4661,10,5346GG10,894.618,898.334,5346GG,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9925,NewmanRatner,4676,10,5550VS10,139.281,141.1,5550VS,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9925,NewmanRatner,4676,10,5550VS10,141.1,146.301,5550VS,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9946,NewmanRatner,4487,10,NA,166.045,167.581,5923MW,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9948,NewmanRatner,4701,10,5903AE10,186.714,189.412,5903AE,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9948,NewmanRatner,4701,10,5903AE10,196.055,198.07,5903AE,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9912,NewmanRatner,4715,10,5224EZS10mos,219.119,223.745,5224EZS,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9912,NewmanRatner,4715,10,5224EZS10mos,254.685,256.738,5224EZS,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9940,NewmanRatner,4432,7,5794ES,607.601,609.44,5794ES,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9940,NewmanRatner,4432,7,5794ES,612.823,615.226,5794ES,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9940,NewmanRatner,4432,7,5794ES,623.532,625.043,5794ES,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9954,NewmanRatner,4482,10,5977QJ7,768.949,772.021,5977QJ,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9967,NewmanRatner,4725,10,6630TM10mos,192.158,194.676,6630TM,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9973,NewmanRatner,4553,10,6825MT,190.839,193.356,6825MT,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9953,NewmanRatner,4467,10,5965PC,90.612,93.463,5965PC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9953,NewmanRatner,4467,10,5965PC,93.463,97.466,5965PC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9887,NewmanRatner,4720,10,4724LM10,557.778,565.414,4724LM,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9887,NewmanRatner,4720,10,4724LM10,575.611,579.864,4724LM,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9974,NewmanRatner,4511,10,6826LD,538.526,540.379,6826LD,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9906,NewmanRatner,4487,10,NA,73.864,82.952,5073AC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9992,NewmanRatner,4761,10,7534EM10mos,20.004,29.221,7534EM,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9985,NewmanRatner,4746,10,7162MB10mos,173.294,175.457,7162MB,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9992,NewmanRatner,4761,10,7534EM10mos,345.816,347.894,7534EM,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9995,NewmanRatner,4766,11,4269LP11,295.729,302.788,4269LP,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9976,NewmanRatner,4736,10,6878SK10,502.032,505.375,6878SK,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9998,NewmanRatner,4776,11,4310AM11,162.888,166.75,4310AM,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9997,NewmanRatner,4770,11,427WC11,423.521,425.586,4273WC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9997,NewmanRatner,4770,11,427WC11,425.586,428.001,4273WC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9997,NewmanRatner,4770,11,427WC11,432.754,436.434,4273WC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9999,NewmanRatner,4779,11,4452CM11,237.06,238.772,4452CM,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9996,NewmanRatner,4767,10,7660HK10mos,215.228,218.553,7660HK,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9996,NewmanRatner,4767,10,7660HK10mos,218.553,220.789,7660HK,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9996,NewmanRatner,4767,10,7660HK10mos,220.789,223.662,7660HK,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9885,NewmanRatner,4787,10,4708IB10mos,363.85,366.759,4708IB,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9885,NewmanRatner,4787,10,4708IB10mos,372.951,373.938,4708IB,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9956,NewmanRatner,4479,10,6043AM,846.404,851.029,6043AM,audio file missing,audio file missing,audio file missing,audio file missing
+duck,9956,NewmanRatner,4479,10,6043AM,851.029,856.063,6043AM,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10003,NewmanRatner,4800,11,4641CC11,462.021,464.068,4641CC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10005,NewmanRatner,4613,11,4664AM,121.546,123.676,4664AM,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10004,NewmanRatner,4803,11,4650KS11,637.563,643.142,4650KS,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10005,NewmanRatner,4613,11,4664AM,415.724,416.932,4664AM,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10019,NewmanRatner,4827,11,4858CM11,43.548,44.343,4858CM,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10019,NewmanRatner,4827,11,4858CM11,64.355,66.056,4858CM,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10019,NewmanRatner,4827,11,4858CM11,68.721,70.387,4858CM,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10008,NewmanRatner,4811,11,4708IB11mos,532.164,534.759,4708IB,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10008,NewmanRatner,4811,11,4708IB11mos,543.284,549.951,4708IB,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10012,NewmanRatner,4815,11,4743NA11,684.296,686.214,4743NA,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10011,NewmanRatner,4619,11,4734ES,616.997,625.525,4734ES,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10005,NewmanRatner,4613,11,4664AM,805.865,806.496,4664AM,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10019,NewmanRatner,4827,11,4858CM11,252.402,254.588,4858CM,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10005,NewmanRatner,4613,11,4664AM,809.056,809.791,4664AM,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10005,NewmanRatner,4613,11,4664AM,814.273,815.105,4664AM,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10008,NewmanRatner,4811,11,4708IB11mos,782.482,788.518,4708IB,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10025,NewmanRatner,4839,11,5039MB11,161.645,168.361,5039MB,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10022,NewmanRatner,4836,11,4929MM11mos,251.429,253.278,4929MM,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10010,NewmanRatner,4270,11,4731SA,498.963,500.781,4731SA,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10018,NewmanRatner,4294,11,4825GG,164.491,169.418,4825GG,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10018,NewmanRatner,4294,11,4825GG,169.418,173.13,4825GG,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10024,NewmanRatner,4862,11,5013LA11,443.493,446.725,5013LA,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10038,NewmanRatner,4867,11,5346GG11,390.392,392.697,5346GG,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10033,NewmanRatner,4870,11,5196AVI11,607.392,610.447,5196AVI,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10033,NewmanRatner,4870,11,5196AVI11,610.447,613.792,5196AVI,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10033,NewmanRatner,4870,11,5196AVI11,613.792,616.252,5196AVI,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10033,NewmanRatner,4870,11,5196AVI11,616.252,618.412,5196AVI,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10041,NewmanRatner,4878,11,5443AO11,192.084,200.117,5443AO,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10027,NewmanRatner,4325,11,5073AC,70.383,73.644,5073AC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10037,NewmanRatner,4861,11,5303CW11,606.569,610.285,5303CW,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10037,NewmanRatner,4861,11,5303CW11,610.285,618.58,5303CW,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10049,NewmanRatner,4899,11,5563DB11mos,184.978,192.242,5563DB,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10048,NewmanRatner,4898,11,5561AC11,805.91,810.285,5561AC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10041,NewmanRatner,4878,11,5443AO11,820.258,821.29,5443AO,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10041,NewmanRatner,4878,11,5443AO11,821.29,828.72,5443AO,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10058,NewmanRatner,4914,11,5694MC11,287.601,292.802,5694MC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10063,NewmanRatner,4431,11,5820CP,43.686,47.025,5820CP,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10063,NewmanRatner,4431,11,5820CP,47.025,49.971,5820CP,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10062,NewmanRatner,4432,11,5794ES,195.733,197.894,5794ES,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10062,NewmanRatner,4432,11,5794ES,197.894,199.67,5794ES,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10062,NewmanRatner,4432,11,5794ES,221.888,223.927,5794ES,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10078,NewmanRatner,4944,11,6047JC11mos,154.907,166.06,6047JC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10078,NewmanRatner,4944,11,6047JC11mos,168.926,171.644,6047JC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10078,NewmanRatner,4944,11,6047JC11mos,171.644,176.277,6047JC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10078,NewmanRatner,4944,11,6047JC11mos,176.277,180.77,6047JC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10063,NewmanRatner,4431,11,5820CP,652.628,654.143,5820CP,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10078,NewmanRatner,4944,11,6047JC11mos,251.027,259.819,6047JC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10077,NewmanRatner,4479,11,6043AM,174.165,176.394,6043AM,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10077,NewmanRatner,4479,11,6043AM,181.345,182.999,6043AM,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10076,NewmanRatner,4947,11,5977QJ11,436.436,446.089,5977QJ,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10085,NewmanRatner,4962,11,6493TM11,107.951,110.522,6493TM,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10085,NewmanRatner,4962,11,6493TM11,113.123,115.419,6493TM,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10074,NewmanRatner,4467,11,5965PC,605.405,606.891,5965PC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10060,NewmanRatner,4421,11,5733LE,942.172,948.517,5733LE,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10088,NewmanRatner,4965,11,6626SW11mos,413.612,415.282,6626SW,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10084,NewmanRatner,4959,11,6454MB11,976.888,977.858,6454MB,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10084,NewmanRatner,4959,11,6454MB11,987.666,988.342,6454MB,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10084,NewmanRatner,4959,11,6454MB11,988.342,989.62,6454MB,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10088,NewmanRatner,4965,11,6626SW11mos,648.846,652.252,6626SW,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10084,NewmanRatner,4959,11,6454MB11,1022.095,1025.552,6454MB,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10084,NewmanRatner,4959,11,6454MB11,1060.058,1061.852,6454MB,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10084,NewmanRatner,4959,11,6454MB11,1062.759,1065.259,6454MB,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10084,NewmanRatner,4959,11,6454MB11,1065.259,1067.718,6454MB,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10084,NewmanRatner,4959,11,6454MB11,1067.718,1069.008,6454MB,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10109,NewmanRatner,5012,11,7222MD11mos,28.94,31.829,7222MD,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10109,NewmanRatner,5012,11,7222MD11mos,31.829,33.603,7222MD,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10109,NewmanRatner,5012,11,7222MD11mos,33.603,34.346,7222MD,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10110,NewmanRatner,5016,11,7300AP11,363.636,371.166,7300AP,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10110,NewmanRatner,5016,11,7300AP11,371.166,373.288,7300AP,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10115,NewmanRatner,5032,11,7553JT11,704.722,707.516,7553JT,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10122,NewmanRatner,5051,18,5244SE18,87.375,88.285,5244SE,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10122,NewmanRatner,5051,18,5244SE18,88.285,89.316,5244SE,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10122,NewmanRatner,5051,18,5244SE18,93.115,94.108,5244SE,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10122,NewmanRatner,5051,18,5244SE18,95.389,96.67,5244SE,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10122,NewmanRatner,5051,18,5244SE18,96.67,99.104,5244SE,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10120,NewmanRatner,5046,18,5244RE18,189.716,192.246,5244RE,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10120,NewmanRatner,5046,18,5244RE18,293.667,295.828,5244RE,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10120,NewmanRatner,5046,18,5244RE18,295.828,297.268,5244RE,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10122,NewmanRatner,5051,18,5244SE18,323.582,325.894,5244SE,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10112,NewmanRatner,5025,7,7444IJ11,550.182,552.244,7444IJ,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10117,NewmanRatner,5037,18,4269LP18,668.025,671.773,4269LP,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10119,NewmanRatner,5043,18,5013LA,721.217,725.629,5013LA,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10117,NewmanRatner,5037,18,4269LP18,861.423,864.646,4269LP,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10125,NewmanRatner,4875,18,5440JJ11mos,367.314,370.689,5440JJ,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10126,NewmanRatner,5054,18,5482DF11,153.036,153.602,5482DF,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10126,NewmanRatner,5054,18,5482DF11,153.602,155.272,5482DF,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10129,NewmanRatner,5068,18,5550VS18,656.461,665.373,5550VS,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10126,NewmanRatner,5054,18,5482DF11,155.272,157.494,5482DF,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10123,NewmanRatner,5058,18,5266EC18,727.5,729.021,5266EC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10134,NewmanRatner,5077,18,5630WS18mos,348.555,352,5630WS,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10134,NewmanRatner,5077,18,5630WS18mos,355.359,358.398,5630WS,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10123,NewmanRatner,5058,18,5266EC18,742.3,744.333,5266EC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10136,NewmanRatner,5084,18,5694MC18,223.283,226.627,5694MC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10132,NewmanRatner,5073,18,5563DB18,664.648,667.043,5563DB,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10132,NewmanRatner,5073,18,5563DB18,671.335,675.96,5563DB,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10132,NewmanRatner,5073,18,5563DB18,675.96,677.53,5563DB,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10102,NewmanRatner,4542,11,7099EH7,738.282,740.923,7099EH,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10142,NewmanRatner,5097,18,5859ME,25.546,28.235,5859ME,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10147,NewmanRatner,5110,18,5959DL,228.605,231.342,5949DL,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10147,NewmanRatner,5110,18,5959DL,231.342,233.149,5949DL,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10147,NewmanRatner,5110,18,5959DL,238.11,239.597,5949DL,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10142,NewmanRatner,5097,18,5859ME,340.507,343.662,5859ME,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10150,NewmanRatner,5113,18,6047JC,182.942,184.451,6047JC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10150,NewmanRatner,5113,18,6047JC,185.906,187.972,6047JC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10150,NewmanRatner,5113,18,6047JC,187.972,191.189,6047JC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10150,NewmanRatner,5113,18,6047JC,191.189,194.018,6047JC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10148,NewmanRatner,4467,18,5965PC,160.579,161.862,5965PC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10148,NewmanRatner,4467,18,5965PC,163.015,164.118,5965PC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10160,NewmanRatner,4504,18,6757JC,65.117,68.726,6757JC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10160,NewmanRatner,4504,18,6757JC,70.879,75.054,6757JC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10142,NewmanRatner,5097,18,5859ME,860.253,863.877,5859ME,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10142,NewmanRatner,5097,18,5859ME,863.877,866.566,5859ME,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10156,NewmanRatner,5125,18,6626SW,371.428,374.456,6626SW,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10156,NewmanRatner,5125,18,6626SW,374.456,377.818,6626SW,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10157,NewmanRatner,5128,18,6630TM,250.654,251.563,6630TM,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10160,NewmanRatner,4504,18,6757JC,204.426,206.848,6757JC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10157,NewmanRatner,5128,18,6630TM,314.516,319.634,6630TM,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10155,NewmanRatner,4714,18,6598JM,220.589,223.662,6598JM,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10152,NewmanRatner,5119,18,6337NK,1401.101,1402.521,6337NK,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10153,NewmanRatner,5134,18,6314AK,517.084,518.121,6314AK,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10153,NewmanRatner,5134,18,6314AK,518.121,520.327,6314AK,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10153,NewmanRatner,5134,18,6314AK,520.327,521.577,6314AK,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10153,NewmanRatner,5134,18,6314AK,527.204,531.179,6314AK,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10162,NewmanRatner,5137,18,6878SK,769.954,771.235,6878SK,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10155,NewmanRatner,4714,18,6598JM,717.689,720.377,6598JM,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10165,NewmanRatner,5143,18,7099EH,165.326,166.691,7099EH,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10165,NewmanRatner,5143,18,7099EH,166.691,168.26,7099EH,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10170,NewmanRatner,5155,18,7814NB18moschildmos,311.279,314.755,7814NB,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10155,NewmanRatner,4714,18,6598JM,720.377,723.533,6598JM,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10155,NewmanRatner,4714,18,6598JM,723.533,725.203,6598JM,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10155,NewmanRatner,4714,18,6598JM,725.203,727.625,6598JM,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10169,NewmanRatner,5161,18,7534EM18mos,295.03,300.719,7534EM,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10169,NewmanRatner,5161,18,7534EM18mos,300.719,311.68,7534EM,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10169,NewmanRatner,5161,18,7534EM18mos,311.68,314.037,7534EM,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10169,NewmanRatner,5161,18,7534EM18mos,314.037,321.615,7534EM,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10177,NewmanRatner,5178,24,4619WC,42.875,43.979,4619WZ,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10171,NewmanRatner,5160,24,4273WC24,592.121,594.309,4273WC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10171,NewmanRatner,5160,24,4273WC24,699.479,701.369,4273WC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10173,NewmanRatner,5167,24,4310AM24,644.802,648.306,4310AM,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10173,NewmanRatner,5167,24,4310AM24,650.002,657.266,4310AM,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10173,NewmanRatner,5167,24,4310AM24,658.226,660.034,4310AM,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10163,NewmanRatner,4530,18,7018NB,304.22,311.131,7018NB,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10163,NewmanRatner,4530,18,7018NB,318.689,321.869,7018NB,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10187,NewmanRatner,5197,24,4743NA24,740.775,743.479,4743NA,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10187,NewmanRatner,5197,24,4743NA24,771.767,773.959,4743NA,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10187,NewmanRatner,5197,24,4743NA24,1024.135,1026.519,4743NA,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10185,NewmanRatner,4270,24,4731SA,518.879,520.961,4731SA,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10205,NewmanRatner,5226,24,5066WT24,301.72,307.048,5066WT,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10200,NewmanRatner,5223,24,5039MB,966.62,973.473,5039MB,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10209,NewmanRatner,5241,24,5224EZS24,413.371,416.978,5224EZ,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10209,NewmanRatner,5241,24,5224EZS24,416.978,419.484,5224EZ,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10209,NewmanRatner,5241,24,5224EZS24,419.484,437.973,5224EZ,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10210,NewmanRatner,5245,24,5244RE24,68.235,70.254,5244RE,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10224,NewmanRatner,5284,24,5561AC,218.423,225.434,5561AC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10216,NewmanRatner,5257,24,5440JJ24mos,516.783,521.242,5440JJ,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10213,NewmanRatner,5260,24,5303CW24,635.289,637.036,5303CW,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10221,NewmanRatner,5275,24,5482DF,1149.31,1153.195,5482DF,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10221,NewmanRatner,5275,24,5482DF,1153.195,1155.474,5482DF,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10221,NewmanRatner,5275,24,5482DF,1155.474,1160.3,5482DF,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10221,NewmanRatner,5275,24,5482DF,1160.3,1166.884,5482DF,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10230,NewmanRatner,4395,24,5585ME,1384.69,1391.958,5585ME,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10251,NewmanRatner,4467,24,5965PC,160.671,161.999,5965PC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10251,NewmanRatner,4467,24,5965PC,161.999,164.527,5965PC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10257,NewmanRatner,5322,24,6314AK24,1038.467,1040.889,6314AK,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10261,NewmanRatner,5329,24,6493TM24mos,928.388,929.769,6493TM,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10269,NewmanRatner,5344,24,6815KG24,75.79,80.631,6815KG,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10267,NewmanRatner,5338,24,6785KS,978.665,984.609,6785KS,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10264,NewmanRatner,5347,24,6626SW24mos,1105.231,1106.756,6626SW,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10281,NewmanRatner,5375,24,7162MB24,472.412,476.871,7162MB,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10281,NewmanRatner,5375,24,7162MB24,482.815,485.044,7162MB,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10286,NewmanRatner,5396,24,7252PD24mos,155.461,157.253,7252PD,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10285,NewmanRatner,5393,24,7236FB24mos,718.684,722.028,7236FB,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10285,NewmanRatner,5393,24,7236FB24mos,723.72,727.989,7236FB,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10285,NewmanRatner,5393,24,7236FB24mos,755.753,759.264,7236FB,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10254,NewmanRatner,5113,24,6047JC,477.402,480.829,6047JC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10254,NewmanRatner,5113,24,6047JC,483.68,487.312,6047JC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10286,NewmanRatner,5396,24,7252PD24mos,385.515,387.473,7252PD,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10268,NewmanRatner,4504,24,6757JC,160.426,161.729,6757JC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10253,NewmanRatner,4479,24,6043AM,825.956,831.491,6043AM,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10290,NewmanRatner,5418,24,7534EM24mos,250.871,265.142,7534EM,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10290,NewmanRatner,5418,24,7534EM24mos,375.871,386.079,7534EM,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10291,NewmanRatner,5421,24,7553JT,429.247,438.17,7553JT,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10249,NewmanRatner,5350,24,NA,982.819,992.562,5954ML,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10249,NewmanRatner,5350,24,NA,1039.378,1040.293,5954ML,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10249,NewmanRatner,5350,24,NA,1043.559,1046.029,5954ML,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10249,NewmanRatner,5350,24,NA,1046.029,1048.297,5954ML,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10323,NewmanRatner,4312,7,4997LM7,128.473,134.361,4997LM,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10310,NewmanRatner,4273,7,4734ES7,164.538,175.464,4734ES,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10349,NewmanRatner,4383,7,5563DB7mos,192.048,194.305,5563DB,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10349,NewmanRatner,4383,7,5563DB7mos,194.305,195.825,5563DB,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10314,NewmanRatner,4302,7,4814BS,146.578,147.522,4814BS,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10314,NewmanRatner,4302,7,4814BS,147.522,149.948,4814BS,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10314,NewmanRatner,4302,7,4814BS,149.948,151.333,4814BS,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10314,NewmanRatner,4302,7,4814BS,151.333,153.8,4814BS,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10376,NewmanRatner,4482,7,5977QJ7,201.692,205.862,5977QJ,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10378,NewmanRatner,4483,7,6043AM,317.815,323.016,6043AM,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10351,NewmanRatner,4407,7,5574IH,268.509,273.534,5573IH,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10431,NewmanRatner,4787,10,4708IB10mos,200.194,204.113,4708IB,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10498,NewmanRatner,4482,10,5977QJ7,110.344,116.658,5977QJ,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10512,NewmanRatner,4725,7,6630TM10mos,385.637,387.578,6630TM,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10447,NewmanRatner,4634,10,5013LA10,94.067,97.544,5013LA,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10447,NewmanRatner,4634,10,5013LA10,97.544,99.37,5013LA,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10447,NewmanRatner,4634,10,5013LA10,99.37,102.318,5013LA,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10549,NewmanRatner,4614,11,4664AM,203.976,205.441,4664AM,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10559,NewmanRatner,4821,11,4802JP11,176.372,182.5,4802JP,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10610,NewmanRatner,4930,11,5878SC11,301.363,315.443,5878SC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10510,NewmanRatner,4714,7,6598JM,167.571,177.423,6598JM,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10615,NewmanRatner,4934,11,5928RL,156.288,163.923,5928RL,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10659,NewmanRatner,5038,18,4269LP18,152.95,155.09,4269LP,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10659,NewmanRatner,5037,18,4269LP18,157.31,159.315,4269LP,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10659,NewmanRatner,5037,18,4269LP18,159.315,162.483,4269LP,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10667,NewmanRatner,4875,18,5440JJ11mos,107.921,110.977,5440JJ,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10669,NewmanRatner,5057,18,5543EF18,122.711,124.408,5543EF,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10642,NewmanRatner,4984,7,7061AS11mos,109.038,111.167,7061AS,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10642,NewmanRatner,4984,7,7061AS11mos,114.594,117.75,7061AS,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10642,NewmanRatner,4984,7,7061AS11mos,136.348,137.462,7061AS,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10642,NewmanRatner,4984,7,7061AS11mos,260.518,262.664,7061AS,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10663,NewmanRatner,5046,18,5244RE18,162.766,168.501,5244RE,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10684,NewmanRatner,5092,18,5777FC,95.759,99.933,5777FC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10684,NewmanRatner,5092,18,5777FC,115.361,119.536,5777FC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10684,NewmanRatner,5092,18,5777FC,119.536,122.791,5777FC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10660,NewmanRatner,5043,24,5013LA,183.241,184.551,5013LA,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10678,NewmanRatner,5077,18,5630WS18mos,124.558,135.063,5630WS,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10689,NewmanRatner,5107,18,5936SR18,136.644,141.452,5936SR,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10728,NewmanRatner,4619,24,4734ES,341.816,352.279,4734ES,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10740,NewmanRatner,5215,24,4929MM24mos,157.215,160.669,4929MM,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10740,NewmanRatner,5215,24,4929MM24mos,160.669,161.926,4929MM,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10719,NewmanRatner,5178,24,4619WC,218.293,222.314,4619WZ,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10686,NewmanRatner,5097,18,5859ME,68.36,69.66,5859ME,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10686,NewmanRatner,5097,18,5859ME,104.491,106.427,5859ME,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10730,NewmanRatner,5198,24,4743NA24,322.87,333.105,4743NA,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10730,NewmanRatner,5197,24,4743NA24,333.105,336.542,4743NA,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10715,NewmanRatner,5160,24,4273WC24,148.844,149.781,4273WC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10715,NewmanRatner,5160,24,4273WC24,149.781,150.545,4273WC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10715,NewmanRatner,5160,24,4273WC24,150.545,151.474,4273WC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10715,NewmanRatner,5160,24,4273WC24,151.474,154.071,4273WC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10715,NewmanRatner,5160,24,4273WC24,157.871,158.843,4273WC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10715,NewmanRatner,5160,24,4273WC24,160.627,162.02,4273WC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10759,NewmanRatner,5263,24,5443AO24mos,451.968,463.803,5443AO,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10746,NewmanRatner,5226,24,5066WT24,189.726,195.692,5066WT,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10765,NewmanRatner,5284,24,5561AC,118.933,128.452,5561AC,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10763,NewmanRatner,5266,24,5474ES24,531.028,533.646,5474ES,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10798,NewmanRatner,5489,7,6071WB24mos,229.022,232.654,6071WB,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10723,NewmanRatner,4613,24,4664AM,94.79,96.998,4664AM,audio file missing,audio file missing,audio file missing,audio file missing
+duck,10926,Snow,5565,40,Nathaniel,27.909,30.221,030408a,120.77498042703948,120.39255393333116,121.15740692074779,-0.7648529874166314
+duck,10923,Snow,5565,39,Nathaniel,752.955,753.986,030227a,257.4305272096779,94.82713263099804,519.7558591036465,-424.9287264726484
+duck,10941,Snow,5565,44,Nathaniel,205.587,206.869,030716,241.91364896985326,116.8550041997727,385.8515139196216,-268.9965097198489
+duck,10941,Snow,5565,44,Nathaniel,206.869,209.841,030716,306.52381018848433,76.52775750091071,495.64405745410335,-419.11629995319265
+duck,10941,Snow,5565,44,Nathaniel,209.841,214.299,030716,178.34127255359658,69.25789351807943,370.42854561015446,-301.17065209207504
+duck,10942,Snow,5565,45,Nathaniel,428.62,429.223,030902,253.60253039496828,208.88425011045584,293.7468744468652,-84.86262433640937
+duck,10942,Snow,5565,45,Nathaniel,429.223,430.06,030902,239.87418061745822,92.33740792803628,302.5134029922568,-210.1759950642205
+duck,10942,Snow,5565,45,Nathaniel,430.06,430.628,030902,128.69517531806653,107.92710947060466,224.76565739041388,-116.83854791980922
+duck,10942,Snow,5565,45,Nathaniel,432.88,433.796,030902,198.46024690809435,90.0498167274978,291.9922818179836,-201.94246509048583
+duck,10942,Snow,5565,45,Nathaniel,603.548,605.651,030902,278.9165967349396,76.939444656872,418.9690785863735,-342.0296339295015
+duck,10917,Snow,5586,37,Nathaniel,5878.267,5880.329,030019b,150.02606844231022,81.1773997885912,218.44496505999507,-137.26756527140387
+duck,10917,Snow,5586,37,Nathaniel,5880.329,5882.065,030019b,202.3490715998429,91.51524227020795,405.0623327885465,-313.54709051833856
+duck,41456,Menn,22675,13,Jacob,159.4,160.4,010113,audio file missing,audio file missing,audio file missing,audio file missing
+duck,41456,Menn,22675,13,Jacob,160.8,162,010113,audio file missing,audio file missing,audio file missing,audio file missing
+duck,41472,Menn,22675,14,Jacob,562,563.2,010207,audio file missing,audio file missing,audio file missing,audio file missing
+duck,41472,Menn,22675,14,Jacob,563.6,564.7,010207,audio file missing,audio file missing,audio file missing,audio file missing
+duck,41472,Menn,22675,14,Jacob,569.4,570.4,010207,audio file missing,audio file missing,audio file missing,audio file missing
+duck,41472,Menn,22675,14,Jacob,571.2,572,010207,audio file missing,audio file missing,audio file missing,audio file missing
+duck,41472,Menn,22675,14,Jacob,574.6,575.2,010207,audio file missing,audio file missing,audio file missing,audio file missing
+duck,41472,Menn,22675,14,Jacob,575.7,576.4,010207,audio file missing,audio file missing,audio file missing,audio file missing
+duck,41472,Menn,22675,14,Jacob,630.2,631.4,010207,audio file missing,audio file missing,audio file missing,audio file missing
+duck,42204,Providence,22707,17,Alex,887.32,892,010427,183.9918567772539,100.48599766580615,480.3937880090453,-379.9077903432391
+duck,42206,Providence,22707,18,Alex,1218.905,1224.981,010526,181.14674005776973,75.45961730778838,352.05827310196764,-276.59865579417925
+duck,42210,Providence,22707,21,Alex,1246.523,1247.481,010825,269.0299835340077,160.3193013342066,370.2368898080785,-209.9175884738719
+duck,42212,Providence,22707,21,Alex,1490.14,1491.515,010908,289.1567814548464,132.5333320938403,449.8807804529714,-317.34744835913114
+duck,42212,Providence,22707,21,Alex,1513.678,1514.973,010908,170.44876943968345,77.32982519764215,362.66858717940505,-285.3387619817629
+duck,42212,Providence,22707,21,Alex,1514.973,1516.38,010908,240.97466351271493,81.19852699705238,309.01409753768866,-227.81557054063626
+duck,42213,Providence,22707,23,Alex,1442.515,1445.915,011103,196.66461753180732,94.94807969866616,308.74428098424033,-213.79620128557417
+duck,42214,Providence,22707,22,Alex,1136.145,1139.788,010922,213.13221836219142,142.85851600768166,462.5798343100558,-319.72131830237413
+duck,42212,Providence,22707,21,Alex,3445.985,3447.045,010908,254.34560345643274,165.68723871934395,357.1002280027137,-191.41298928336977
+duck,42218,Providence,22707,24,Alex,3254.813,3257.303,020012,277.7715693110414,141.08216261742257,444.6716538338172,-303.5894912163946
+duck,42242,Providence,22707,35,Alex,742.69,745.616,021108,337.4491174281719,247.98658848293414,498.1604176288929,-250.17382914595876
+duck,42242,Providence,22707,35,Alex,849.981,860.611,021108,--undefined--,--undefined--,--undefined--,--undefined--
+duck,42221,Providence,22707,25,Alex,730.166,731.563,020102,151.81372737420486,87.0793211239993,213.17901327653405,-126.09969215253474
+duck,42221,Providence,22707,25,Alex,757.523,758.578,020102,186.68389202820865,111.31166381617626,300.3717398308853,-189.06007601470904
+duck,42238,Providence,22707,33,Alex,1771.21,1773.646,020913,--undefined--,--undefined--,--undefined--,--undefined--
+duck,42238,Providence,22707,33,Alex,1931.963,1933.96,020913,290.5313808013155,171.48781330865936,398.0309734023361,-226.54316009367673
+duck,42238,Providence,22707,33,Alex,1933.96,1936.476,020913,229.60645981724073,130.51582617553504,388.88006976458536,-258.3642435890503
+duck,42238,Providence,22707,33,Alex,2301.475,2302.755,020913,183.2574503350811,134.99721570544847,228.17876473270783,-93.18154902725936
+duck,42238,Providence,22707,33,Alex,2335.673,2336.956,020913,194.5377614259248,152.22372059272243,488.1141829801846,-335.89046238746215
+duck,42242,Providence,22707,35,Alex,2312.063,2316.4,021108,192.64826388668504,127.17728331946631,468.4081593466745,-341.2308760272082
+duck,42242,Providence,22707,35,Alex,2319.993,2323.503,021108,175.69875601064837,77.03267552547125,323.78588255108895,-246.7532070256177
+duck,42242,Providence,22707,35,Alex,2666.241,2669.908,021108,173.1429447933449,120.76846827462752,234.6023489220567,-113.83388064742918
+duck,42236,Providence,22707,33,Alex,989.181,990.861,020816,181.64744991466821,124.93955024011282,290.46053913765525,-165.52098889754242
+duck,42236,Providence,22707,33,Alex,990.863,994.553,020816,163.603477302167,137.24664521868368,204.0475761445234,-66.80093092583971
+duck,42243,Providence,22707,36,Alex,962.703,965.56,021122,167.63870047429512,84.9228318696697,462.8695295262361,-377.94669765656636
+duck,42257,Providence,22721,12,Ethan,90.246,91.431,001121,422.07001315947974,358.8762443664107,492.17441720173815,-133.29817283532748
+duck,42257,Providence,22721,12,Ethan,91.431,94.248,001121,239.73948959323522,226.38424919737713,260.89243197658817,-34.50818277921104
+duck,42256,Providence,22721,12,Ethan,814.473,816.186,010006,298.2818963152483,233.2650069461598,351.2567522083075,-117.9917452621477
+duck,42256,Providence,22721,12,Ethan,816.186,818.355,010006,404.820263793428,378.18698395163176,433.7384755437892,-55.55149159215745
+duck,42256,Providence,22721,12,Ethan,827.051,828.62,010006,339.289413467966,156.08667881312667,396.97566405375267,-240.888985240626
+duck,42253,Providence,22707,41,Alex,2733.91,2737.813,030424,182.07941122223792,76.9308991026936,236.15043354889488,-159.2195344462013
+duck,42253,Providence,22707,41,Alex,3045.841,3049.791,030424,179.07406825135618,132.77168880253402,259.33017139113736,-126.55848258860334
+duck,42253,Providence,22707,41,Alex,3053.063,3058.918,030424,211.78865893427408,112.86318922536643,474.65301287852793,-361.78982365316153
+duck,42267,Providence,22721,17,Ethan,174.858,179.245,010426,252.6447668826041,137.6331647617703,470.70470289359776,-333.0715381318274
+duck,42261,Providence,22721,14,Ethan,2799.498,2802.69,010201,296.9033672628141,188.47919975970714,497.8201634871432,-309.340963727436
+duck,42267,Providence,22721,17,Ethan,251.078,253.69,010426,215.4324975088579,176.32005902488928,499.54748791066555,-323.22742888577625
+duck,42275,Providence,22721,21,Ethan,516.431,517.596,010820,379.263853853046,348.7603414392691,495.00121544844006,-146.24087400917097
+duck,42275,Providence,22721,21,Ethan,1007.728,1013.896,010820,248.82163054631204,166.52985343400167,491.4186652896754,-324.88881185567374
+duck,42273,Providence,22721,20,Ethan,2098.13,2102.106,010726,217.92730545967217,111.34437621391041,418.0903366750394,-306.745960461129
+duck,42273,Providence,22721,20,Ethan,2102.106,2104.776,010726,201.6147756848408,173.32356930347817,223.69007712322318,-50.36650781974501
+duck,42273,Providence,22721,20,Ethan,2104.776,2109.591,010726,181.84611863142703,92.11068269115343,284.56366899731995,-192.4529863061665
+duck,42273,Providence,22721,20,Ethan,2113.73,2117.188,010726,239.53625885645508,111.59465946816235,440.0151748393113,-328.420515371149
+duck,42273,Providence,22721,20,Ethan,2122.858,2125.72,010726,261.25335836562635,108.05207560169097,418.9442303825527,-310.8921547808617
+duck,42272,Providence,22721,19,Ethan,1924.048,1925.495,010714,246.01158619512142,196.83215195511133,465.317119343561,-268.48496738844966
+duck,42267,Providence,22721,17,Ethan,1267.116,1271.838,010426,238.8631823240047,82.37853202893132,445.7989802587998,-363.4204482298685
+duck,42250,Providence,22707,39,Alex,3028.618,3030.105,030313,172.71486065453257,133.80494219467167,209.77923406458382,-75.97429186991215
+duck,42250,Providence,22707,39,Alex,3030.105,3031.425,030313,155.82212344874517,84.41231810113021,251.6322217528983,-167.21990365176808
+duck,42250,Providence,22707,39,Alex,3109.851,3110.691,030313,170.052671677618,110.88984647163721,381.9885015995951,-271.0986551279579
+duck,42250,Providence,22707,39,Alex,3525.181,3527.34,030313,367.7499395209128,222.15965021440562,528.8615846387152,-306.70193442430957
+duck,42263,Providence,22721,15,Ethan,3080.573,3083.116,010228,266.0690389216053,88.79025681428031,362.3138521872204,-273.52359537294006
+duck,42265,Providence,22721,16,Ethan,939.681,941.61,010400,152.4121228506773,106.56901908421423,306.1046646224261,-199.5356455382119
+duck,42265,Providence,22721,16,Ethan,945.981,947.51,010400,270.5415372930635,78.92545266666818,460.77397421291244,-381.8485215462442
+duck,42264,Providence,22721,15,Ethan,3699.428,3704.301,010315,226.19314664970267,97.74012170937398,334.98406626118236,-237.2439445518084
+duck,42307,Providence,22729,14,Lily,195.423,197.503,010202,304.3711222782112,248.19458265727766,437.59092310092603,-189.39634044364837
+duck,42305,Providence,22729,13,Lily,567.473,568.431,010102,238.13708306849085,81.68707032148667,477.4296448348742,-395.7425745133875
+duck,42305,Providence,22729,13,Lily,1059.223,1061.991,010102,240.38730115471566,82.99461872183049,492.15218425243154,-409.15756553060106
+duck,42305,Providence,22729,13,Lily,1061.991,1065.443,010102,259.0196521258073,115.04914461926977,462.1449556109869,-347.09581099171714
+duck,42305,Providence,22729,13,Lily,1072.408,1074.355,010102,255.2099943250994,79.22436459541517,505.80990116990176,-426.5855365744866
+duck,42305,Providence,22729,13,Lily,1075.635,1076.763,010102,269.57486453794917,110.72786741957374,441.58353403048284,-330.8556666109091
+duck,42305,Providence,22729,13,Lily,1077.643,1080.753,010102,200.10708557558823,76.47678629944653,471.8847265340325,-395.40794023458596
+duck,42305,Providence,22729,13,Lily,1121.175,1123.15,010102,243.7833494479544,85.62245273201364,452.8475805783116,-367.22512784629794
+duck,42305,Providence,22729,13,Lily,1127.505,1129.313,010102,294.5452377488719,161.15009698983442,521.1155867960028,-359.9654898061684
+duck,42305,Providence,22729,13,Lily,1129.313,1136.968,010102,200.63553138619326,74.63345777723517,481.7095495016225,-407.07609172438737
+duck,42307,Providence,22729,14,Lily,1149.621,1150.676,010202,361.0588829800861,318.6071850431595,390.0939036367448,-71.4867185935853
+duck,42307,Providence,22729,14,Lily,1155.245,1162.756,010202,269.83920088496905,85.00319459334337,452.67619854966995,-367.67300395632657
+duck,42307,Providence,22729,14,Lily,1162.756,1165.123,010202,284.704565977801,86.13013628735972,525.5504308852794,-439.4202945979197
+duck,42307,Providence,22729,14,Lily,1187.15,1192.95,010202,226.47585983099898,67.82770231595232,497.21257772295996,-429.38487540700766
+duck,42307,Providence,22729,14,Lily,1192.95,1195.455,010202,270.1232227516498,79.98770425590034,516.4224938681735,-436.4347896122732
+duck,42307,Providence,22729,14,Lily,2406.3,2410.78,010202,263.102009966019,162.040766305575,503.03917428851224,-340.99840798293724
+duck,42297,Providence,22721,32,Ethan,2472.583,2476.486,020725,261.0745992090521,105.08585638665505,363.0122148034924,-257.92635841683733
+duck,42313,Providence,22729,17,Lily,143.825,147.646,010423,248.56256052338017,97.84844150456328,470.5112376211197,-372.66279611655636
+duck,42318,Providence,22729,19,Lily,0,1.993,010701,335.2084787681348,118.7637465124232,496.26830463760496,-377.50455812518175
+duck,42318,Providence,22729,19,Lily,4.231,13.361,010701,345.340587210966,106.22372913937227,520.6736817371074,-414.4499525977351
+duck,42318,Providence,22729,19,Lily,77.218,79.046,010701,204.95951522552502,99.20470068283244,379.7874645691865,-280.5827638863541
+duck,42313,Providence,22729,17,Lily,920.501,922.591,010423,--undefined--,--undefined--,--undefined--,--undefined--
+duck,42258,Providence,22721,13,Ethan,367.751,370.463,010021,246.49034554338573,183.51788969854286,342.1005032236417,-158.58261352509882
+duck,42258,Providence,22721,13,Ethan,370.463,375.696,010021,255.18926874723428,90.93644346571546,434.06631190167155,-343.1298684359561
+duck,42314,Providence,22729,17,Lily,1125.676,1128.093,010508,255.7088314134541,81.49378967546252,485.419823305231,-403.9260336297684
+duck,42314,Providence,22729,17,Lily,1135.06,1139.075,010508,189.87756182413372,75.92030131018676,459.9470678279182,-384.02676651773146
+duck,42314,Providence,22729,17,Lily,1145.796,1152.485,010508,191.9879072780358,75.44597430503342,415.0303636902577,-339.58438938522426
+duck,42318,Providence,22729,19,Lily,867.636,868.406,010701,408.7150670344222,394.9678950725415,422.7537505998911,-27.785855527349554
+duck,42318,Providence,22729,19,Lily,870.96,873.325,010701,213.80254864865776,77.70536893904612,491.15516440171547,-413.44979546266933
+duck,42318,Providence,22729,19,Lily,988.246,989.478,010701,280.6836837635992,238.1023142585748,474.33902238976253,-236.23670813118773
+duck,42258,Providence,22721,13,Ethan,1033.568,1035.319,010021,358.17557340111324,212.65067956016233,525.7257106092694,-313.0750310491071
+duck,42258,Providence,22721,13,Ethan,1035.319,1039.369,010021,197.84671697201736,89.52818599127778,412.7482016072407,-323.2200156159629
+duck,42319,Providence,22729,20,Lily,803.375,804.105,010719,394.8661448761318,235.88311884542293,505.0621606271125,-269.1790417816896
+duck,42313,Providence,22729,17,Lily,2860.116,2861.416,010423,--undefined--,--undefined--,--undefined--,--undefined--
+duck,42258,Providence,22721,13,Ethan,1219.875,1221.408,010021,301.2228525419411,225.51718103767533,488.9062564492859,-263.3890754116105
+duck,42258,Providence,22721,13,Ethan,1221.408,1225.426,010021,382.178809658334,193.82062134773884,498.6709514188347,-304.85033007109587
+duck,42258,Providence,22721,13,Ethan,1229.073,1234.568,010021,304.9918052175654,77.26307476519315,527.0455263090504,-449.78245154385723
+duck,42258,Providence,22721,13,Ethan,1296.96,1305.551,010021,335.0717010326602,94.23663531727861,521.7296406617666,-427.4930053444879
+duck,42311,Providence,22731,15,Lily,2581.608,2583.618,010313,242.34726510281703,128.23160949432318,290.0152047770917,-161.78359528276852
+duck,42314,Providence,22729,17,Lily,3354.555,3357.836,010508,219.06229953704425,74.8671914787602,475.8517423547166,-400.98455087595636
+duck,42321,Providence,22729,20,Lily,131.28,132.71,010814,319.9430125004349,148.33560693067312,391.60716131802263,-243.2715543873495
+duck,42300,Providence,22721,33,Ethan,3253.702,3255.633,020907,189.24908705265443,76.30001420006117,276.56511956311266,-200.26510536305148
+duck,42322,Providence,22729,21,Lily,10.608,11.253,010827,107.8417391225396,98.89914687137092,114.4882410462128,-15.58909417484189
+duck,42311,Providence,22729,15,Lily,3362.175,3366.248,010313,272.6756411070422,107.15684895309062,499.81945997921076,-392.66261102612015
+duck,42319,Providence,22729,20,Lily,2164.77,2167.305,010719,225.7920810445977,75.31972761217473,522.6234380633397,-447.30371045116493
+duck,42311,Providence,22729,15,Lily,3503.986,3508.835,010313,202.86228595013839,151.45923900689633,433.506289089847,-282.04705008295065
+duck,42319,Providence,22729,20,Lily,2236.658,2237.788,010719,177.05583793173417,80.72625983596755,278.51967134070406,-197.79341150473653
+duck,42323,Providence,22729,21,Lily,0.671,1.636,010912,280.2305792611317,218.72124954323561,494.55199924303093,-275.8307496997953
+duck,42302,Providence,22721,34,Ethan,1782.02,1783.442,021005,137.84448839742342,77.1063054134171,194.4316223901141,-117.32531697669698
+duck,42306,Providence,22729,14,Lily,75.451,76.798,010117,247.64149806230174,141.42764958215633,479.4534102908424,-338.02576070868605
+duck,42312,Providence,22729,16,Lily,3605.565,3609.76,010326,254.48805821595886,87.91492728126053,440.8667227782109,-352.95179549695035
+duck,42332,Providence,22729,25,Lily,325.031,325.945,020101,338.71478765229233,244.78751960365872,447.5444952692222,-202.75697566556346
+duck,42322,Providence,22729,21,Lily,1396.013,1402.208,010827,185.74985213287124,75.79647447949311,425.25668842340843,-349.46021394391533
+duck,42322,Providence,22729,21,Lily,1488,1489.645,010827,170.93182805333424,76.74487687682495,301.6629749144504,-224.91809803762544
+duck,42306,Providence,22729,14,Lily,522.973,523.951,010117,175.58853697593318,149.87939474700042,208.02341660075052,-58.144021853750104
+duck,42322,Providence,22729,21,Lily,1534.411,1536.278,010827,329.7646194116939,85.96591496838248,499.7115467288776,-413.7456317604951
+duck,42322,Providence,22729,21,Lily,1542.303,1544.208,010827,197.2206503135969,176.33933444862342,295.0173051425561,-118.67797069393268
+duck,42322,Providence,22729,21,Lily,1548.411,1551.575,010827,345.4631191935384,115.20229337702739,494.4066508209956,-379.2043574439682
+duck,42319,Providence,22729,20,Lily,3535.406,3540.408,010719,186.35693266630204,74.5061771958626,416.3637494656609,-341.85757226979825
+duck,42323,Providence,22729,21,Lily,1167.681,1170.643,010912,204.75836985924226,70.06604746845136,286.60168639971414,-216.53563893126278
+duck,42317,Providence,22729,19,Lily,387.275,389.083,010618,279.2482544111285,227.8870663234439,448.3825247086324,-220.4954583851885
+duck,42317,Providence,22729,19,Lily,389.083,390.123,010618,277.723370567863,191.7951991045364,365.22034545923196,-173.42514635469556
+duck,42321,Providence,22729,20,Lily,2965.211,2966.771,010814,368.94450158958796,229.09402660628666,422.6095903687181,-193.51556376243144
+duck,42317,Providence,22729,19,Lily,792.186,794.34,010618,345.83352426393463,80.55935565433744,510.7245704871754,-430.165214832838
+duck,42320,Providence,22729,20,Lily,95.973,97.385,010803,276.4017619140443,198.0572894821401,495.70703169754233,-297.6497422154022
+duck,42321,Providence,22729,20,Lily,3272.171,3273.82,010814,267.40533867967207,152.90843914451403,432.7815229895315,-279.87308384501745
+duck,42310,Providence,22729,16,Lily,640.456,641.64,010323,353.6529830148577,163.66827548681638,485.95120077547784,-322.28292528866143
+duck,42323,Providence,22729,21,Lily,2168.283,2175.811,010912,350.6083519552851,68.24846331111976,523.9002165611845,-455.65175325006476
+duck,42327,Providence,22729,23,Lily,1392.427,1394.178,011107,199.3214918862968,75.42362802033358,496.16611409641337,-420.7424860760798
+duck,42306,Providence,22729,14,Lily,2424.086,2427.036,010117,283.6601097275881,82.54156483888164,437.32609611166373,-354.7845312727821
+duck,42306,Providence,22729,14,Lily,2427.036,2430.5,010117,333.678750047558,86.6244334955484,470.99269052229783,-384.36825702674946
+duck,42306,Providence,22729,14,Lily,2433.413,2435.573,010117,313.08447871834755,155.80166723601667,431.6218301152027,-275.82016287918606
+duck,42306,Providence,22729,14,Lily,2452.613,2456.48,010117,156.9410488190456,75.30714085310058,233.12430469326262,-157.81716384016204
+duck,42320,Providence,22729,20,Lily,1201.903,1203.583,010803,211.9480316229121,94.9697347646254,397.7407796023812,-302.7710448377558
+duck,42320,Providence,22729,20,Lily,1206.238,1207.746,010803,210.05952079486582,128.29103293808805,426.51683199277716,-298.2257990546891
+duck,42327,Providence,22729,23,Lily,2564.225,2566.777,011107,211.09597397822836,75.37398944258888,427.9266762650259,-352.552686822437
+duck,42327,Providence,22729,23,Lily,2584.353,2593.918,011107,210.23298479687443,66.44849636358147,472.8420720602803,-406.39357569669886
+duck,42327,Providence,22729,23,Lily,2593.918,2601.76,011107,235.25991230745666,70.87921173031762,523.9936858434921,-453.11447411317454
+duck,42320,Providence,22729,20,Lily,1232.375,1234.646,010803,292.6412662227616,104.91071853170958,517.6282113534965,-412.7174928217869
+duck,42327,Providence,22729,23,Lily,2747.56,2751.16,011107,279.3846195258923,76.27574550129165,496.42795410729053,-420.1522086059989
+duck,42327,Providence,22729,23,Lily,2755.692,2757.368,011107,278.4001194170808,83.9149422961827,517.4591381273041,-433.5441958311214
+duck,42327,Providence,22729,23,Lily,2757.368,2765.558,011107,235.6512914656074,77.05414867271423,519.4204915855637,-442.36634291284946
+duck,42306,Providence,22729,14,Lily,3497.131,3498.606,010117,266.9969209174514,127.33441307537217,504.2602237416142,-376.925810666242
+duck,42328,Providence,22729,24,Lily,1247.973,1249.293,011126,180.17836549264405,136.90417047332295,483.5081439011082,-346.60397342778526
+duck,42330,Providence,22729,24,Lily,548.705,550.52,020011,159.03876106553645,97.098082069109,203.31896929992132,-106.22088723081232
+duck,42339,Providence,22729,27,Lily,2474.626,2475.783,020227,260.62499317350506,188.13110211946426,303.0582747170723,-114.92717259760806
+duck,42350,Providence,22729,30,Lily,584.383,585.708,020604,324.4103964980538,177.43386830345386,466.4902928969489,-289.0564245934951
+duck,42351,Providence,22729,31,Lily,1236.746,1239.743,020618,219.34485669343283,77.94262022555677,443.23552140529756,-365.2929011797408
+duck,42347,Providence,22729,30,Lily,2856.011,2863.173,020518,169.45888827017785,75.24255861502455,451.40586684250735,-376.1633082274828
+duck,42347,Providence,22729,30,Lily,2938.453,2942.616,020518,232.14212594270504,70.83300682570656,516.4246361669768,-445.5916293412703
+duck,42347,Providence,22729,30,Lily,2942.616,2946.313,020518,323.2174658501943,81.7632188646438,445.5880071232268,-363.824788258583
+duck,42342,Providence,22729,28,Lily,1823.423,1833.626,020402,227.57857640049866,89.06791618012097,372.2611028106152,-283.19318663049427
+duck,42342,Providence,22729,28,Lily,1838.833,1840.295,020402,157.92086543483126,89.67792938445032,348.734611356557,-259.05668197210673
+duck,42347,Providence,22729,30,Lily,3459.213,3461.61,020518,204.18831239889386,79.93054507666308,340.01340411317994,-260.0828590365169
+duck,42347,Providence,22729,30,Lily,3526.911,3532.118,020518,172.08826377211153,97.01297083366882,477.69493220715134,-380.6819613734825
+duck,42347,Providence,22729,30,Lily,3576.92,3580.245,020518,331.4991109016385,92.83221374611807,467.67282475714956,-374.84061101103146
+duck,42342,Providence,22729,28,Lily,2571.972,2576.463,020402,414.0055052380615,307.8790171128671,458.54850207334096,-150.66948496047388
+duck,42365,Providence,22729,34,Lily,1525.423,1529.295,021008,215.55418296563613,122.52249674183656,440.94962826688027,-318.4271315250437
+duck,42365,Providence,22729,34,Lily,1537.651,1544.305,021008,197.99728895188161,78.10030504725043,463.32092936299387,-385.2206243157434
+duck,42365,Providence,22729,34,Lily,1557.411,1562.398,021008,215.16911112665892,129.19902732352074,434.7022302556259,-305.5032029321052
+duck,42365,Providence,22729,34,Lily,1564.711,1568.033,021008,214.11124552359664,134.06216431030563,295.3907123621535,-161.3285480518479
+duck,42365,Providence,22729,34,Lily,1577.061,1581.565,021008,174.7137063925284,75.10789843063588,426.49079266916476,-351.3828942385289
+duck,42365,Providence,22729,34,Lily,1584.235,1586.556,021008,232.26137340785596,90.49070635295433,351.6475866309395,-261.1568802779851
+duck,42365,Providence,22729,34,Lily,1594.876,1598.745,021008,205.0952688480758,101.35611032105807,365.5568133430533,-264.20070302199525
+duck,42365,Providence,22729,34,Lily,1600.903,1603.218,021008,280.2089642636363,202.22238185164244,376.9181460255759,-174.69576417393344
+duck,42365,Providence,22729,34,Lily,1612.525,1616.34,021008,188.07401172116735,80.53600046597407,433.23889410715526,-352.70289364118116
+duck,42365,Providence,22729,34,Lily,1618.698,1621.19,021008,203.44648483503704,74.05576409861415,337.11086438642633,-263.0551002878122
+duck,42365,Providence,22729,34,Lily,1628.9,1632.665,021008,195.4791031482522,76.25628226001831,487.1077669684064,-410.85148470838806
+duck,42365,Providence,22729,34,Lily,1634.793,1637.503,021008,225.58590705415142,138.3835165994391,395.33473844154133,-256.9512218421022
+duck,42365,Providence,22729,34,Lily,1652.146,1654.303,021008,309.6482216539409,209.71225765786005,472.4674388593511,-262.75518120149104
+duck,42365,Providence,22729,34,Lily,1661.175,1664.615,021008,213.10881129950926,76.5365270519726,438.8325556168023,-362.2960285648297
+duck,42365,Providence,22729,34,Lily,1666.813,1669.076,021008,274.90001108194025,130.6767162288123,325.2441950603469,-194.5674788315346
+duck,42365,Providence,22729,34,Lily,1681.946,1685.775,021008,182.47726141097684,107.44683486034016,258.91439493364675,-151.46756007330657
+duck,42365,Providence,22729,34,Lily,1688.288,1690.745,021008,205.3180196696199,135.0813586007221,290.4088998342009,-155.3275412334788
+duck,42365,Providence,22729,34,Lily,1699.491,1703.693,021008,160.95589159831894,74.77793938371083,471.2379614971163,-396.4600221134055
+duck,42365,Providence,22729,34,Lily,1706.13,1708.845,021008,177.91247692181724,69.87347875083415,286.13652291219853,-216.26304416136438
+duck,42365,Providence,22729,34,Lily,1743.69,1751.288,021008,203.7662325511241,70.24569129141078,500.7981232662154,-430.5524319748046
+duck,42372,Providence,22729,37,Lily,1304.795,1305.922,030025,352.73531679135306,137.56201562133404,527.6914240547674,-390.12940843343335
+duck,42361,Providence,22729,33,Lily,2735.635,2742.641,020904,214.87479456912797,80.37680869463694,416.9577848376013,-336.58097614296435
+duck,42387,Providence,22744,13,Naima,433.398,435.578,010026,317.4779498974314,102.24882989180563,494.4945050998244,-392.2456752080187
+duck,42387,Providence,22744,13,Naima,1861.691,1863.626,010026,265.15796386733217,200.49457865517292,415.5144420558032,-215.0198634006303
+duck,42386,Providence,22744,12,Naima,943.308,946.893,010014,279.5739015774212,183.99710381634702,485.62673845845586,-301.62963464210884
+duck,42386,Providence,22744,12,Naima,946.893,949.99,010014,206.38917937297984,185.94217551379353,266.9762414178961,-81.03406590410259
+duck,42390,Providence,22744,14,Naima,1287.526,1292.748,010207,221.17970457227938,104.421060188959,520.3174754172888,-415.89641522832983
+duck,42390,Providence,22744,14,Naima,1292.748,1299.998,010207,168.89394135257788,87.80340037574757,374.21309648002944,-286.40969610428186
+duck,42401,Providence,22744,18,Naima,1090.221,1094.51,010524,263.3625459024167,193.2820117267341,350.4865861562171,-157.20457442948296
+duck,42401,Providence,22744,18,Naima,1094.51,1096.61,010524,297.74608195028105,225.31464716378815,325.04790890789457,-99.73326174410641
+duck,42401,Providence,22744,18,Naima,1096.61,1103.045,010524,249.3530702307754,95.09431700935147,482.74550279985516,-387.6511857905037
+duck,42412,Providence,22744,21,Naima,21.191,24.04,010821,318.75379669268597,222.47853737925453,394.92044661588886,-172.44190923663433
+duck,42402,Providence,22744,18,Naima,2836.313,2838.685,010609,303.4328880494492,119.20458179697692,425.0129958383624,-305.80841404138545
+duck,42393,Providence,22744,15,Naima,1736.798,1738.286,010312,179.53882067118633,95.05372130195238,324.74872091441205,-229.69499961245967
+duck,42412,Providence,22744,21,Naima,864.82,870.828,010821,259.93462285182034,73.29736658289089,467.2016145345519,-393.904247951661
+duck,42393,Providence,22744,15,Naima,1783.655,1785.3,010312,141.85796748735692,93.11017377686166,365.7547880610672,-272.64461428420555
+duck,42403,Providence,22744,18,Naima,3029.1,3031.011,010604,213.9310675689616,160.62854134053387,327.55170908505676,-166.92316774452289
+duck,42403,Providence,22744,18,Naima,3103.821,3107.981,010604,216.77009339906516,76.7735124964261,330.21765635396565,-253.44414385753956
+duck,42403,Providence,22744,18,Naima,3116.48,3118.728,010604,286.2657560649653,195.77323233922766,451.3950448091902,-255.62181246996255
+duck,42411,Providence,22744,21,Naima,2874.09,2879.185,010818,169.59970538028364,78.3574132239192,516.5821336701327,-438.22472044621355
+duck,42415,Providence,22744,21,Naima,941.878,944.691,010915,221.45648294129452,98.18877016540006,266.31281966655416,-168.1240495011541
+duck,42415,Providence,22744,21,Naima,949.341,953.21,010915,213.72070064307863,75.63351353479166,436.4637165528306,-360.8302030180389
+duck,42415,Providence,22744,21,Naima,953.21,955.125,010915,194.55351585256102,92.49186968709226,487.84086105134526,-395.348991364253
+duck,42415,Providence,22744,21,Naima,965.093,969.625,010915,198.52537519803263,90.6361138216801,260.3436657622948,-169.70755194061468
+duck,42423,Providence,22744,23,Naima,647.225,649.905,011107,236.51186102782927,159.58484965286476,399.79308938299175,-240.208239730127
+duck,42423,Providence,22744,23,Naima,649.905,662.04,011107,258.89586402602754,88.45260807120525,527.3733994378267,-438.9207913666215
+duck,42423,Providence,22744,23,Naima,662.04,673.605,011107,298.04226630996556,99.41614188446609,451.7352317445576,-352.31908986009154
+duck,42423,Providence,22744,23,Naima,919.92,921.96,011107,194.0981191655263,76.01398106744938,337.1962729119451,-261.1822918444957
+duck,42420,Providence,22745,23,Naima,1220.96,1226.54,011018,155.67101666147713,83.48886938712545,362.98990315636803,-279.50103376924255
+duck,42420,Providence,22745,23,Naima,1370.98,1373.98,011018,135.35268242514076,80.77107560447554,181.2885605192822,-100.51748491480667
+duck,42420,Providence,22745,23,Naima,1877.08,1880.195,011018,111.39678449752428,84.86168974137988,176.91250570533637,-92.0508159639565
+duck,42420,Providence,22745,23,Naima,1896.595,1905.08,011018,142.85527853466593,75.12932921313562,401.8046763671623,-326.67534715402667
+duck,42425,Providence,22744,24,Naima,381.286,384.086,011126,335.94208608254735,258.32657280656855,442.1514037170724,-183.82483091050386
+duck,42425,Providence,22744,24,Naima,402.695,405.421,011126,287.9783093499414,89.70028940701788,446.0834410387439,-356.38315163172604
+duck,42420,Providence,22745,23,Naima,2064.565,2073.025,011018,158.0840014510598,77.46237146144482,475.7508323994672,-398.28846093802235
+duck,42420,Providence,22745,23,Naima,2073.025,2076.855,011018,166.1867044879302,80.23494201969534,436.1383776517816,-355.90343563208626
+duck,42425,Providence,22744,24,Naima,447.2,448.638,011126,216.60231158181108,107.53353908013041,275.0331573850793,-167.49961830494885
+duck,42425,Providence,22744,24,Naima,454.35,457.486,011126,220.79246865324816,186.87474782689776,276.84142163506704,-89.96667380816928
+duck,42425,Providence,22744,24,Naima,490.393,494.655,011126,232.44079749973838,74.43108564453459,460.0897423326533,-385.65865668811875
+duck,42425,Providence,22744,24,Naima,504.481,507.998,011126,248.91480657324647,161.71268059117088,498.9519955816147,-337.23931499044386
+duck,42425,Providence,22744,24,Naima,515.191,519.815,011126,256.20127808669054,183.38326645276985,326.11448526254503,-142.73121880977519
+duck,42425,Providence,22744,24,Naima,519.815,523.355,011126,196.95779604439616,96.5228750573287,259.4062236020593,-162.8833485447306
+duck,42425,Providence,22744,24,Naima,536.501,538.486,011126,218.13068789309617,170.92689105030018,329.3940428234299,-158.46715177312973
+duck,42425,Providence,22744,24,Naima,547.9,549.998,011126,247.30417311070647,186.72664128129912,438.02819934831575,-251.30155806701663
+duck,42425,Providence,22744,24,Naima,570.693,572.88,011126,264.11784523808666,189.0541032833382,402.8582639591794,-213.8041606758412
+duck,42418,Providence,22744,22,Naima,1369.64,1373.585,011005,268.7193535722178,188.2820636808716,480.7612811773881,-292.4792174965165
+duck,42418,Providence,22744,22,Naima,1494.185,1503.71,011005,297.588843241178,156.07041004706343,479.0597418267554,-322.98933177969195
+duck,42418,Providence,22744,22,Naima,1507.45,1509.24,011005,269.70233161636406,242.17573719909183,342.2032697262679,-100.02753252717605
+duck,42418,Providence,22744,22,Naima,1520.765,1532.17,011005,323.0305534150867,101.7409841113902,529.634663585841,-427.89367947445083
+duck,42418,Providence,22744,22,Naima,1657.175,1662.775,011005,226.42392727031518,74.59662682006012,469.0667348937827,-394.4701080737226
+duck,42418,Providence,22744,22,Naima,1667.215,1693.55,011005,197.91552008029154,75.09413102117047,472.9392606865905,-397.84512966542
+duck,42422,Providence,22744,22,Naima,3.175,5.058,011012,348.4266412557531,212.5783849904077,487.2089901873243,-274.6306051969166
+duck,42425,Providence,22744,24,Naima,1150.783,1153.678,011126,304.2533077170673,219.29492861701206,406.3742741272316,-187.07934551021955
+duck,42422,Providence,22744,22,Naima,663.986,667.255,011012,205.85517067712456,81.79456072188168,315.49547194981307,-233.70091122793139
+duck,42435,Providence,22745,27,Naima,404.015,407.82,020217,156.84582649829238,95.80173933262306,239.56605345871398,-143.76431412609094
+duck,42435,Providence,22745,27,Naima,410.285,412.036,020217,195.70556029286465,162.686541441868,484.07688818342416,-321.3903467415562
+duck,42422,Providence,22744,22,Naima,1225.123,1226.255,011012,286.6377752711391,228.1783687506189,471.49777765749286,-243.31940890687397
+duck,42422,Providence,22744,22,Naima,1239.18,1241.721,011012,226.11334061286453,168.90036707312484,282.48205348944293,-113.58168641631809
+duck,42422,Providence,22744,22,Naima,1319.046,1321.786,011012,263.93658325376316,169.82192132209764,389.66177020960833,-219.8398488875107
+duck,42422,Providence,22744,22,Naima,1326.31,1328.838,011012,221.55853554084695,74.4349988633643,309.9333615878598,-235.4983627244955
+duck,42422,Providence,22744,22,Naima,1348.555,1351.12,011012,214.7346688981827,163.05653072853386,259.65745556715524,-96.60092483862138
+duck,42422,Providence,22744,22,Naima,1398.983,1400.978,011012,221.01266914851402,76.17961420310685,369.7621975687002,-293.58258336559334
+duck,42422,Providence,22744,22,Naima,1400.978,1402.663,011012,324.9478714372289,76.15072274083313,527.1862903658315,-451.03556762499835
+duck,42422,Providence,22744,22,Naima,1402.663,1404.448,011012,251.12001738814993,171.72817730637874,431.1946125633156,-259.46643525693685
+duck,42422,Providence,22744,22,Naima,1407.991,1410.505,011012,187.65548627800413,75.53013538871454,251.4867933972085,-175.95665800849395
+duck,42422,Providence,22744,22,Naima,1413.308,1417.24,011012,111.9483874989713,71.19084606818001,401.3009382825128,-330.1100922143328
+duck,42422,Providence,22744,22,Naima,1434.786,1437.691,011012,222.68013570066233,75.66393308063206,503.8545700719621,-428.19063699133005
+duck,42422,Providence,22744,22,Naima,1512.236,1513.415,011012,217.5909467251501,142.51595083618835,377.24536097906014,-234.72941014287179
+duck,42422,Providence,22744,22,Naima,1633.86,1635.045,011012,235.2663794555858,187.95135850450788,312.32672552300573,-124.37536701849785
+duck,42422,Providence,22744,22,Naima,1680.46,1684.635,011012,246.01315239904744,76.12490291482877,481.1311743529943,-405.0062714381655
+duck,42422,Providence,22744,22,Naima,1684.635,1689.083,011012,222.70076908466382,74.94225823246019,493.4903528495289,-418.5480946170687
+duck,42432,Providence,22744,26,Naima,136.991,142.53,020124,360.8493661827126,213.067808098143,499.91520702501674,-286.8473989268738
+duck,42426,Providence,22744,24,Naima,799.323,800.54,020004,246.75705614730597,82.07715298186702,453.26553666098226,-371.18838367911525
+duck,42426,Providence,22744,24,Naima,806.813,808.318,020004,203.85145832827575,79.58115851748431,340.900196690409,-261.3190381729247
+duck,42426,Providence,22744,24,Naima,810.156,811.478,020004,207.02425171153007,170.21717020567533,381.6574247793747,-211.44025457369938
+duck,42426,Providence,22744,24,Naima,814.85,816.965,020004,225.712337613727,180.14028719548992,304.9241578339456,-124.78387063845571
+duck,42426,Providence,22744,24,Naima,818.688,821.091,020004,222.2273359140388,77.96434833137454,361.78535292510065,-283.8210045937261
+duck,42434,Providence,22744,26,Naima,3334.29,3335.5,020211,191.3192209753,86.24552350648844,227.8646847709668,-141.61916126447835
+duck,42437,Providence,22744,28,Naima,1856.21,1861.366,020316,226.92625416151162,91.63936326463866,311.2951848621141,-219.65582159747547
+duck,42441,Providence,22744,29,Naima,1714.72,1717.923,020424,259.49608436909443,90.62929542798805,444.190531907512,-353.561236479524
+duck,42442,Providence,22744,29,Naima,850.11,852.08,020427,232.5432849046912,178.48246139612885,470.35845830872165,-291.87599691259277
+duck,42442,Providence,22744,29,Naima,860.73,868.13,020427,265.5899692925818,74.97548118773555,514.3693427745106,-439.3938615867751
+duck,42442,Providence,22744,29,Naima,938.25,942.01,020427,224.3858816625057,196.89876732103556,321.0038984650346,-124.10513114399902
+duck,42442,Providence,22744,29,Naima,1081.675,1085.355,020427,138.71504695906094,95.60470854229041,291.1705344272287,-195.56582588493828
+duck,42442,Providence,22744,29,Naima,1110.13,1115.03,020427,210.486658020095,89.748826511955,300.015685160562,-210.26685864860698
+duck,42442,Providence,22744,29,Naima,1115.03,1120.09,020427,233.77234825739725,100.1429457420267,352.7282184230241,-252.58527268099738
+duck,42453,Providence,22744,31,Naima,219.528,224.928,020713,244.13230696822913,99.20691570768439,417.42333457373536,-318.21641886605096
+duck,42438,Providence,22744,28,Naima,3418.795,3421.008,020324,267.634725866627,239.9061911768993,492.5328678936646,-252.6266767167653
+duck,42438,Providence,22744,28,Naima,3449.265,3450.388,020324,252.48473789438933,179.71787274485175,294.6252199783532,-114.90734723350144
+duck,42438,Providence,22744,28,Naima,3458.723,3462.215,020324,259.7753087814749,179.0278775464347,462.2008287464669,-283.17295120003223
+duck,42438,Providence,22744,28,Naima,3469.475,3473.93,020324,252.03328044026975,181.01779088720704,499.2932547215279,-318.2754638343208
+duck,42438,Providence,22744,28,Naima,3483.851,3491.618,020324,229.04725142415998,80.73957240085775,469.58486000495924,-388.8452876041015
+duck,42465,Providence,22744,35,Naima,3051.203,3052.265,021114,294.8965734075204,196.70187518837207,379.4880685178673,-182.78619332949523
+duck,42479,Providence,22756,18,Violet,46.231,47.425,010603,220.8522592467516,107.36412387926889,455.70152555305515,-348.33740167378625
+duck,42479,Providence,22756,18,Violet,47.425,52.92,010603,309.69436321998785,208.09654646178038,481.13176354768353,-273.0352170859031
+duck,42465,Providence,22744,35,Naima,3180.525,3181.768,021114,300.3659802573549,224.4162548397998,399.092479338603,-174.67622449880324
+duck,42465,Providence,22744,35,Naima,3189.176,3193.905,021114,223.72090254882332,79.47905684907565,349.65259365406894,-270.1735368049933
+duck,42465,Providence,22744,35,Naima,3194.675,3197.39,021114,229.50255706499237,165.59826561997443,438.79154276976436,-273.19327714978994
+duck,42465,Providence,22744,35,Naima,3200.255,3202.85,021114,189.13212916276782,77.08777634184284,309.70293026827403,-232.6151539264312
+duck,42465,Providence,22744,35,Naima,3207.043,3208.688,021114,193.62590487640952,78.54587319902792,390.7766524038999,-312.23077920487196
+duck,42465,Providence,22744,35,Naima,3302.848,3307.153,021114,203.1526395855792,96.76688517516877,320.7221717330725,-223.95528655790375
+duck,42478,Providence,22756,17,Violet,1648.301,1649.458,010420,251.1997475468496,187.59802168404948,343.9087333415236,-156.31071165747412
+duck,42478,Providence,22756,17,Violet,1686.5,1689.411,010420,281.79353902583256,183.81761805980582,406.36173068058,-222.5441126207742
+duck,42471,Providence,22749,43,Naima,232.488,235.245,030623,285.17484027953043,83.72253396222926,473.9805705739755,-390.25803661174626
+duck,42489,Providence,22756,22,Violet,707.643,709.231,011012,189.0894245275064,147.64356311012526,460.2212573585806,-312.5776942484554
+duck,42490,Providence,22756,23,Violet,1242.444,1243.31,011027,166.9071101119805,84.1374823223291,463.9821476459903,-379.8446653236612
+duck,42468,Providence,22744,39,Naima,23.383,25.081,030219,273.1778167277037,113.6719922387866,523.658139231022,-409.9861469922354
+duck,42471,Providence,22744,43,Naima,3512.44,3516.64,030623,325.79450248557697,91.40034618424716,500.92362618447487,-409.5232800002277
+duck,42471,Providence,22744,43,Naima,3540.881,3545.018,030623,233.15479831718145,76.04604101529567,367.2108395175148,-291.1647985022191
+duck,42501,Providence,22756,29,Violet,402.09,407.086,020501,175.09072824352626,69.53456761153835,496.79164435421484,-427.2570767426765
+duck,42501,Providence,22756,29,Violet,612.805,615.16,020501,205.33373584625642,81.0727791233757,316.40942252194174,-235.33664339856603
+duck,42501,Providence,22756,29,Violet,615.161,618.463,020501,213.9054614823653,94.13878054031952,273.85144806611186,-179.71266752579234
+duck,42501,Providence,22756,29,Violet,618.463,620.441,020501,226.5662399885223,192.2043157644621,307.2068333819844,-115.00251761752227
+duck,42501,Providence,22756,29,Violet,621.861,627.865,020501,212.13090934249863,71.70629968976804,316.04251212539265,-244.3362124356246
+duck,42488,Providence,22756,22,Violet,863.215,865.286,010925,192.1660474470602,93.306654660441,258.79131322719934,-165.48465856675836
+duck,42488,Providence,22756,22,Violet,870.9,872.023,010925,175.5909729936393,75.09370613719257,255.4344125159896,-180.34070637879705
+duck,42488,Providence,22756,22,Violet,1038.095,1044.71,010925,122.82549133524405,80.64044332442238,218.34092006668612,-137.70047674226373
+duck,42513,Providence,22756,35,Violet,651.883,652.771,021028,293.90918148002424,93.83836281985933,411.48353506039825,-317.64517224053895
+duck,42498,Providence,22756,27,Violet,1633.508,1635.023,020305,280.6899675262604,159.570843322475,475.7853546064458,-316.2145112839708
+duck,42508,Providence,22756,32,Violet,416.578,419.393,020807,181.4974639567264,90.79394018356773,240.88820318427847,-150.09426300071073
+duck,42525,Providence,22766,16,William,899.165,902.038,010412,251.27019934762126,140.82049270393446,378.56552617666847,-237.745033472734
+duck,42525,Providence,22766,16,William,982.49,983.365,010412,245.9530425229077,200.73571259831323,311.4045808555811,-110.66886825726789
+duck,42525,Providence,22766,16,William,1568.156,1571.223,010412,195.03968943903033,67.26365670110808,266.35921078123283,-199.09555408012477
+duck,42527,Providence,22766,18,William,556.973,560.496,010605,235.58249689908104,200.31409112257327,259.861119009086,-59.54702788651272
+duck,42527,Providence,22766,18,William,572.161,575.235,010605,220.6426651084179,160.48261731025664,307.1614160274451,-146.67879871718847
+duck,42527,Providence,22766,18,William,575.235,580.781,010605,256.1462590061407,181.205104481319,364.25419414509287,-183.04908966377386
+duck,42527,Providence,22766,18,William,580.781,583.618,010605,268.8269828281948,203.30806146312608,336.2851286989735,-132.97706723584741
+duck,42527,Providence,22766,18,William,585.786,589.761,010605,294.19571365967204,158.4903446638351,496.8027479140936,-338.3124032502585
+duck,42530,Providence,22766,20,William,3218.908,3220.523,010718,180.2042864968156,152.56739010998905,226.33832335118805,-73.770933241199
+duck,42530,Providence,22766,20,William,3222.328,3223.858,010718,194.6474899044248,150.4974817767024,247.68759731953608,-97.1901155428337
+duck,42530,Providence,22766,20,William,3230.85,3233.441,010718,312.11296469731354,198.19044873125188,486.2682948965172,-288.0778461652653
+duck,42532,Providence,22766,20,William,526.946,532.53,010814,188.85741754626227,142.02194519720229,239.2567958253202,-97.23485062811793
+duck,42526,Providence,22766,17,William,1027.308,1030.228,010427,247.92782096364942,82.50940047604665,495.8029339289529,-413.2935334529062
+duck,42526,Providence,22766,17,William,1030.228,1031.903,010427,234.55367088538932,142.20914879837292,290.0889754104447,-147.87982661207175
+duck,42526,Providence,22766,17,William,1039.095,1041.393,010427,266.3723537346141,170.49858478796986,366.76171499712177,-196.2631302091519
+duck,42526,Providence,22766,17,William,1045.958,1050.636,010427,331.3743625444523,77.31578045363696,494.20935546546224,-416.8935750118253
+duck,42526,Providence,22766,17,William,1050.636,1056.176,010427,306.06360583954404,149.310635925585,478.24480047316877,-328.9341645475838
+duck,42526,Providence,22766,17,William,1056.176,1058.581,010427,284.8659630384827,223.53370039089148,348.64958806982077,-125.11588767892928
+duck,42526,Providence,22766,17,William,1063.506,1068.986,010427,326.2049879848006,195.85532613080986,438.8072183510369,-242.95189222022705
+duck,42526,Providence,22766,17,William,1141.578,1146.171,010427,295.35147812670834,210.82643215933402,407.72348062336755,-196.89704846403353
+duck,42526,Providence,22766,17,William,1345.563,1356.29,010427,276.2933418540668,105.27075485179213,509.14044643348745,-403.8696915816953
+duck,42526,Providence,22766,17,William,1398.065,1400.991,010427,236.2147679171981,79.3776437420513,361.6183028883552,-282.24065914630387
+duck,42531,Providence,22766,20,William,1912.123,1914.098,010802,256.08195652772747,149.04661685165314,401.22523530901475,-252.1786184573616
+duck,42528,Providence,22766,19,William,2830.358,2833.223,010619,165.4278459102421,73.22559823019508,228.76009044034487,-155.53449221014978
+duck,42507,Providence,22756,32,Violet,289.765,294.133,020724,170.74435735478215,128.55705698543872,213.19278125142955,-84.63572426599083
+duck,42544,Providence,22766,27,William,913.975,915.598,020221,285.17221180489395,211.03605253916768,454.1233528214539,-243.08730028228624
+duck,42536,Providence,22766,22,William,1244.551,1249.211,011012,234.85493600956795,162.89065391713206,515.987682315264,-353.09702839813195
+duck,42507,Providence,22756,32,Violet,478.82,480.926,020724,159.39518981745803,67.9611454788597,196.04072540813686,-128.07957992927714
+duck,42518,Providence,22756,41,Violet,940.815,942.62,030424,165.9422510282545,80.45568856426222,230.82428218435723,-150.368593620095
+duck,42534,Providence,22766,21,William,3349.906,3351.781,010912,229.04110406805543,84.83975568752889,308.799769703499,-223.9600140159701
+duck,42532,Providence,22766,20,William,2966.845,2968.83,010814,251.491974083378,169.6705451067647,367.84660784224235,-198.17606273547764
+duck,42536,Providence,22766,22,William,2053.453,2054.235,011012,253.504764931078,218.67227407959447,289.4061932546868,-70.73391917509232
+duck,42536,Providence,22766,22,William,2055.248,2056.915,011012,283.0060081237233,91.38827613769777,496.6753635264346,-405.28708738873684
+duck,42536,Providence,22766,22,William,2056.915,2060.061,011012,235.2570864065787,162.61311554348333,425.61757807274137,-263.00446252925803
+duck,42536,Providence,22766,22,William,2062.183,2066.056,011012,244.13246731915973,101.23754120162778,410.8435668281274,-309.6060256264996
+duck,42536,Providence,22766,22,William,2066.056,2069.391,011012,247.0293692677573,166.98213459274845,378.60804862598917,-211.62591403324072
+duck,42536,Providence,22766,22,William,2069.391,2072.443,011012,309.87953916303553,75.25922312594174,455.36599271259246,-380.1067695866507
+duck,42536,Providence,22766,22,William,2075.261,2078.776,011012,261.5915171058355,94.60409509612361,512.5245182668004,-417.9204231706768
+duck,42536,Providence,22766,22,William,2079.976,2082.433,011012,231.86356793301974,159.73967722732067,481.75085979090056,-322.0111825635799
+duck,42536,Providence,22766,22,William,2082.433,2086.04,011012,248.55123287992728,149.29796302250088,496.4258877861534,-347.1279247636525
+duck,42536,Providence,22766,22,William,2088.58,2091.92,011012,254.2378089358975,179.21338918920503,360.2197210898745,-181.00633190066947
+duck,42536,Providence,22766,22,William,2092.771,2095.436,011012,202.81737201226957,79.94508472376276,467.0536604885745,-387.10857576481175
+duck,42536,Providence,22766,22,William,2095.436,2098.196,011012,210.30234768960185,164.6944549826319,267.26803693603046,-102.57358195339856
+duck,42536,Providence,22766,22,William,2100.101,2102.778,011012,215.70636700623805,177.99929905006402,265.0777364842594,-87.07843743419537
+duck,42536,Providence,22766,22,William,2103.793,2105.968,011012,197.48863889401622,78.70693973889671,249.9999986078768,-171.2930588689801
+duck,42536,Providence,22766,22,William,2105.968,2108.773,011012,226.83558568634342,110.99865923911138,259.8625400090487,-148.86388076993734
+duck,42536,Providence,22766,22,William,2111.1,2113.368,011012,210.11542490765063,153.0588225313377,280.79381969184374,-127.73499716050603
+duck,42536,Providence,22766,22,William,2116.188,2119.365,011012,252.7275959367353,197.47391815715855,333.7884255103097,-136.31450735315116
+duck,42536,Providence,22766,22,William,2119.365,2122.255,011012,232.23717317620105,165.79028355673753,334.8478427489018,-169.0575591921643
+duck,42536,Providence,22766,22,William,2135.396,2137.596,011012,292.4211872447645,166.76903635295503,494.90735375371486,-328.13831740075983
+duck,42536,Providence,22766,22,William,2140.246,2143.715,011012,246.5893367017571,172.38118416665995,356.94672869640334,-184.5655445297434
+duck,42536,Providence,22766,22,William,2143.715,2148.778,011012,283.8108481389337,164.70214339470522,495.75299336091507,-331.05084996620985
+duck,42550,Providence,22766,30,William,1778.633,1783.981,020516,243.74366741720323,119.88571256391756,499.5942801872527,-379.70856762333517
+duck,42550,Providence,22766,30,William,1785,1792.465,020516,248.35176746639675,163.24822889188286,494.4573890532231,-331.20916016134026
+duck,42550,Providence,22766,30,William,1792.465,1796.065,020516,239.0497655170549,92.18643996690109,446.2455839610598,-354.0591439941587
+duck,42550,Providence,22766,30,William,1798.223,1802.37,020516,278.41562219536064,149.9130580615881,473.88072857716094,-323.9676705155729
+duck,42550,Providence,22766,30,William,1804.61,1812.588,020516,247.19233906545287,75.74490024506187,497.0202265980348,-421.2753263529729
+duck,42550,Providence,22766,30,William,1812.588,1816.06,020516,261.4410358294541,151.2492406661224,494.86813327205346,-343.618892605931
+duck,42550,Providence,22766,30,William,1816.06,1819.513,020516,237.96696325372864,79.83902146245991,439.37379630391194,-359.534774841452
+duck,42550,Providence,22766,30,William,1820.621,1825.708,020516,245.77405779754056,76.41962553550101,499.3669198937805,-422.94729435827946
+duck,42550,Providence,22766,30,William,1825.708,1829.628,020516,256.3799842304745,153.46752676162308,376.1852630424984,-222.7177362808753
+duck,42550,Providence,22766,30,William,1829.628,1833.908,020516,333.90081496745626,121.69235713341007,485.2122849634396,-363.5199278300295
+duck,42550,Providence,22766,30,William,1834.765,1840.981,020516,241.06350289892734,74.95130605580353,483.6819961221813,-408.7306900663778
+duck,42550,Providence,22766,30,William,1840.981,1844.025,020516,242.02986149567505,159.68038346676772,484.10029443037195,-324.41991096360425
+duck,42550,Providence,22766,30,William,1844.025,1847.038,020516,237.02880465280313,75.17698546287139,304.8739310029002,-229.6969455400288
+duck,42550,Providence,22766,30,William,1847.038,1848.726,020516,229.92294318876114,126.832213351094,478.45015505311204,-351.617941702018
+duck,42550,Providence,22766,30,William,1850.26,1856.118,020516,242.45393961591148,165.574615549682,378.9576271603767,-213.38301161069472
+duck,42550,Providence,22766,30,William,1856.118,1858.848,020516,229.5920580826889,82.11181883819788,480.5028790248313,-398.39106018663347
+duck,42550,Providence,22766,30,William,1859.531,1862.995,020516,275.3666163592245,75.13220396558818,499.5321642799398,-424.39996031435163
+duck,42550,Providence,22766,30,William,1868.95,1873.678,020516,248.91386156312305,163.78671759276688,495.5728415724541,-331.7861239796872
+duck,42550,Providence,22766,30,William,1873.678,1877.661,020516,248.08401460272523,168.0979304190188,486.7627321677893,-318.6648017487705
+duck,42550,Providence,22766,30,William,1877.661,1882.013,020516,320.29213808690486,152.79543703153558,487.1796389767889,-334.3842019452533
+duck,42550,Providence,22766,30,William,2594.58,2596.015,020516,158.52010617063735,96.76293323599971,246.2117429000846,-149.44880966408488
+duck,42550,Providence,22766,30,William,2596.015,2597.353,020516,173.78846639692765,94.21691879672014,257.8245480318122,-163.60762923509205
+duck,42550,Providence,22766,30,William,2675.178,2677.291,020516,233.3823150052929,166.9095822636932,322.10991497615476,-155.20033271246155

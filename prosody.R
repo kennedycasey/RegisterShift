@@ -38,6 +38,8 @@ pitch_info <- do.call(rbind, pitch_files) %>%
                   . != "--undefined--")) %>%
   mutate(across(starts_with("pitch"), ~ as.numeric(as.character(.))))
 
+pitch_info$form <- factor(pitch_info$form, levels = c("CDL", "ADL"))
+
 m <- lmer(pitch_mean ~ form*age + (1|item) + (1|speaker_id), data = pitch_info)
 summary(m)
 
@@ -120,7 +122,7 @@ ggplot() +
   scale_color_manual(values = colors) +
   labs(x = "Form", y = "Pitch range (Hz)", title = "CHILDES") +
   #scale_y_continuous(limits = c(3, 9), breaks=seq(3, 9, by = 3)) +
-  theme_test(base_size = 15) +
+  theme_test(base_size = 20) +
   theme(legend.position = "none", plot.title = element_text(hjust = 0.5))
 ggsave("figs/pitch_variability_overall.jpg", height = 5, width = 4, dpi = 300)
 

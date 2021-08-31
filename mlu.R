@@ -151,7 +151,7 @@ ggplot() +
   scale_color_manual(values = colors) +
   labs(x = "Form", y = "MLUw", title = "CHILDES") +
   scale_y_continuous(limits = c(3, 9), breaks=seq(3, 9, by = 3)) +
-  theme_test(base_size = 15) +
+  theme_test(base_size = 20) +
   theme(legend.position = "none", plot.title = element_text(hjust = 0.5))
 ggsave("figs/mlu_overall.jpg", height = 5, width = 4, dpi = 300)
 
@@ -177,7 +177,7 @@ mlu %>%
   scale_x_continuous(limits = c(0, 84), breaks=seq(0, 84, by=12)) +
   scale_y_continuous(limits = c(2, 13), breaks=seq(0, 12, by = 3)) +
   labs(x = "Age (months)", y = "MLUw", title = "CHILDES") +
-  theme_test(base_size = 15) +
+  theme_test(base_size = 20) +
   theme(legend.position = "none", plot.title = element_text(hjust = 0.5))
 ggsave("figs/mlu_over_time.jpg", height = 5, width = 6, dpi = 300)
 
@@ -302,7 +302,7 @@ ggplot() +
   scale_color_manual(values = colors) +
   labs(x = "Form", y = "MLUw", title = "Providence") +
   scale_y_continuous(limits = c(3, 9), breaks=seq(3, 9, by = 3)) +
-  theme_test(base_size = 15) +
+  theme_test(base_size = 20) +
   theme(legend.position = "none", plot.title = element_text(hjust = 0.5))
 ggsave("figs/Providence/mlu_overall.jpg", height = 5, width = 4, dpi = 300)
 
@@ -328,7 +328,7 @@ mlu %>%
   scale_x_continuous(limits = c(0, 84), breaks=seq(0, 84, by=12)) +
   scale_y_continuous(limits = c(2, 13), breaks=seq(0, 12, by = 3)) +
   labs(x = "Age (months)", y = "MLUw", title = "Providence") +
-  theme_test(base_size = 15) +
+  theme_test(base_size = 20) +
   theme(legend.position = "none", plot.title = element_text(hjust = 0.5))
 ggsave("figs/Providence/mlu_over_time.jpg", height = 5, width = 6, dpi = 300)
 
@@ -454,7 +454,7 @@ ggplot() +
   scale_color_manual(values = colors) +
   labs(x = "Form", y = "MLUw", title = "LDP") +
   scale_y_continuous(limits = c(3, 9), breaks=seq(3, 9, by = 3)) +
-  theme_test(base_size = 15) +
+  theme_test(base_size = 20) +
   theme(legend.position = "none", plot.title = element_text(hjust = 0.5))
 ggsave("figs/LDP/mlu_overall.jpg", height = 5, width = 4, dpi = 300)
 
@@ -480,6 +480,6 @@ mlu %>%
   scale_x_continuous(limits = c(0, 84), breaks=seq(0, 84, by=12)) +
   scale_y_continuous(limits = c(2, 13), breaks=seq(0, 12, by = 3)) +
   labs(x = "Age (months)", y = "MLUw", title = "LDP") +
-  theme_test(base_size = 15) +
+  theme_test(base_size = 20) +
   theme(legend.position = "none", plot.title = element_text(hjust = 0.5))
 ggsave("figs/LDP/mlu_over_time.jpg", height = 5, width = 6, dpi = 300)

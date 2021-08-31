@@ -1,0 +1,244 @@
+item,transcript_id,corpus_name,speaker_id,age,target_child_name,media_start,media_end,audio_file,pitch_mean,pitch_min,pitch_max,pitch_range
+goodnight,3360,Bernstein,1725,24,Cindy,717.572,718.826,020000,209.12323720051975,89.79203627802686,292.07143470970743,-202.2793984316806
+goodnight,3363,Bernstein,1727,21,Dale,1078.85,1079.477,010900,274.99564485942363,215.05845118442272,517.3923032588544,-302.3338520744317
+goodnight,3872,Peters,2338,25,Seth,1814.754,1815.376,020024b,--undefined--,--undefined--,--undefined--,--undefined--
+goodnight,4248,Rollins,2535,12,NA,1153.723,1156.568,jp12,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,4558,Gleason,2589,36,Guy,731.898,734.476,guy,175.31679059851118,71.43120352326926,252.511581111915,-181.08037758864575
+goodnight,4569,Gleason,2624,51,Theresa,1095.026,1096.756,theresa,128.41229177703875,118.74634193175869,144.52132676828623,-25.774984836527537
+goodnight,6587,Bloom,3148,24,Peter,2648.532,2649.481,011117,239.49409685798128,87.38046745669367,325.96301981042046,-238.58255235372678
+goodnight,7257,MacWhinney,3397,52,Ross,1333.775,1334.704,040316d,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,7257,MacWhinney,3396,52,Ross,1335.364,1335.901,040316d,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,7867,Brent,3843,12,Morgan,1518.904,1520.934,001129,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,7877,Brent,3847,9,Miranda,837.118,838.395,000904,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,7867,Brent,3843,12,Morgan,3047.504,3049.76,001129,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,7877,Brent,3847,9,Miranda,1212.612,1213.579,000904,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,7877,Brent,3847,9,Miranda,1696.758,1697.968,000904,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,7877,Brent,3847,9,Miranda,1838.949,1840.776,000904,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,7877,Brent,3847,9,Miranda,1990.905,1994.06,000904,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,7905,Brent,3854,10,Brooklyn,2502.543,2504.033,001010,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,7993,Brent,3870,11,Tabitha,21.218,21.696,001018,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,7993,Brent,3870,11,Tabitha,22.33,22.731,001018,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,8004,Brent,3870,15,Tabitha,3471.52,3472.299,010224,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,7998,Brent,3870,14,Tabitha,3783.082,3783.932,010120,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,7998,Brent,3870,14,Tabitha,3794.129,3795.582,010120,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,8052,Brent,3891,10,Maggie,4173.026,4173.432,001005,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,8075,Nelson,3899,20,Emily,1651.627,1655.365,010719,144.3123403610391,75.06857074247397,218.28055026491768,-143.2119795224437
+goodnight,8076,Nelson,3900,21,Emily,30.425,32.902,010820,282.5733425475663,121.66050780348365,317.6000161055185,-195.93950830203482
+goodnight,8060,Brent,3890,13,Maggie,4190.861,4191.871,010103,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,8083,Nelson,3901,22,Emily,28.55,30.687,011011,264.3469860674522,197.84340317692642,484.3791635851108,-286.5357604081844
+goodnight,8081,Nelson,3900,22,Emily,494.013,497.566,011005,211.38607839098185,78.36910015741637,269.6689763980247,-191.29987624060834
+goodnight,8081,Nelson,3899,22,Emily,523.237,524.348,011005,154.93709267668535,78.6363292495118,206.45975234801278,-127.82342309850098
+goodnight,8084,Nelson,3900,22,Emily,13.4,14.34,011012,232.43577494205405,78.54313405049162,307.561170226441,-229.01803617594936
+goodnight,8084,Nelson,3899,22,Emily,150.248,152.756,011012,173.23309877160926,90.62902412376238,512.0291759878039,-421.4001518640415
+goodnight,8088,Nelson,3899,23,Emily,19.657,27.864,011019,274.00054536887103,61.7822079929483,528.528854680737,-466.7466466877887
+goodnight,8026,Brent,3881,10,Henry,2090.517,2092.41,000924,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,8026,Brent,3881,10,Henry,2096.383,2097.24,000924,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,8086,Nelson,3900,23,Emily,990.474,991.473,011016,219.49538531195756,65.52976514041708,335.80207780861923,-270.2723126682022
+goodnight,8097,Nelson,3899,24,Emily,43.366,46.266,011128,194.22819899538757,126.61104364763106,282.41716451689285,-155.8061208692618
+goodnight,8097,Nelson,3899,24,Emily,51.871,55.412,011128,192.39750850942957,73.41475194345853,360.2842119884208,-286.86946004496224
+goodnight,8097,Nelson,3899,24,Emily,93.725,95.373,011128,158.34154588933887,92.30268564738714,233.82340647246178,-141.52072082507465
+goodnight,8026,Brent,3881,10,Henry,2911.044,2912.307,000924,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,8098,Nelson,3900,24,Emily,619.571,622.011,020003,252.25713399274994,110.47611853774438,317.4971133444267,-207.0209948066823
+goodnight,8100,Nelson,3900,24,Emily,0,4.624,020013,242.6336410918787,118.13912189595793,279.04547450354744,-160.9063526075895
+goodnight,8094,Nelson,3900,23,Emily,910.304,911.523,011115,296.8923249015999,268.8946159932262,349.51129962989233,-80.61668363666615
+goodnight,8094,Nelson,3900,23,Emily,911.523,912.452,011115,308.2992282448291,123.35656199408879,461.747073353441,-338.3905113593522
+goodnight,8094,Nelson,3899,23,Emily,1023.386,1024.118,011115,152.806403398126,105.84252122049712,280.8448617514902,-175.00234053099308
+goodnight,8101,Nelson,3900,24,Emily,62.669,64.875,020015,282.5725414307246,239.1210267059825,492.5821997605733,-253.4611730545908
+goodnight,8101,Nelson,3899,24,Emily,74.116,75.765,020015,174.58861542014475,131.83831112986843,255.9629767566659,-124.12466562679748
+goodnight,8099,Nelson,3900,24,Emily,882.543,884.533,020007,289.1786905769933,79.17894541646515,516.1299697637669,-436.95102434730177
+goodnight,8101,Nelson,3899,24,Emily,348.589,351.713,020015,187.32599628998503,70.42072707635411,423.47268996177564,-353.0519628854215
+goodnight,8101,Nelson,3899,24,Emily,375.652,379.565,020015,181.59920003946954,101.74777209072649,283.5217654364509,-181.77399334572442
+goodnight,8102,Nelson,3899,25,Emily,755.298,756.215,020023,121.25679430560062,84.04496033873298,145.04169512104536,-60.99673478231239
+goodnight,8104,Nelson,3900,25,Emily,11.447,13.084,020102,298.7177885720692,275.35746858916525,331.1850390911324,-55.82757050196716
+goodnight,8104,Nelson,3899,25,Emily,45.8,59.429,020102,159.3738043529806,80.46431694246553,410.08352391386,-329.6192069713945
+goodnight,8106,Nelson,3900,26,Emily,34.713,35.828,020127,210.3452473160902,75.01441332187426,275.25519529086375,-200.2407819689895
+goodnight,8104,Nelson,3900,25,Emily,453.564,455.977,020102,233.00731641575462,106.38359077218975,311.6802215623449,-205.29663079015518
+goodnight,8106,Nelson,3900,26,Emily,794.842,796.328,020127,251.20994235898536,79.4061703712256,467.2326295047422,-387.8264591335166
+goodnight,8104,Nelson,3900,25,Emily,1017.762,1018.991,020102,233.8550585644803,110.17101924991677,282.9473540664813,-172.77633481656454
+goodnight,8106,Nelson,3900,26,Emily,1226.134,1227.083,020127,356.9721110350449,272.70481172274157,458.97920162117674,-186.27438989843517
+goodnight,8106,Nelson,3899,26,Emily,1544.071,1548.158,020127,279.71212379949515,76.35576439146271,456.5587773545034,-380.2030129630407
+goodnight,8107,Nelson,3900,26,Emily,851.61,852.225,020205,287.0576064579217,110.85642456821714,357.39769358905136,-246.54126902083422
+goodnight,8107,Nelson,3900,26,Emily,920.198,921.521,020205,225.87348470076913,207.14229056073506,247.2722772132902,-40.12998665255515
+goodnight,8108,Nelson,3899,27,Emily,806.123,809.922,020218,191.3359254308271,101.06915550474963,343.39958543972443,-242.3304299349748
+goodnight,9102,Soderstrom,3934,13,Theo,1060.065,1064.001,010028b,278.17877587364666,203.18059253084672,354.61436686220446,-151.43377433135774
+goodnight,9175,Sachs,3941,35,Naomi,766.765,767.215,021108,156.31525735281028,147.30602209906738,161.12835885618432,-13.822336757116943
+goodnight,9063,Soderstrom,3929,10,Joseph,3225.267,3226.291,000925,375.03574550329193,224.72216973843945,523.394454307786,-298.6722845693465
+goodnight,9437,Weist,3994,26,Jillian,1694.154,1695.384,020122,368.0549726732866,304.55298970364663,461.2589133834071,-156.70592367976047
+goodnight,9434,Weist,3994,25,Jillian,1601.466,1606.438,020101,277.83718141486764,101.69913473904359,522.2740703949577,-420.5749356559141
+goodnight,9447,Weist,3998,29,Jillian,291.38,292.593,020507,383.48597796683595,229.23801062358248,497.53080006169614,-268.2927894381137
+goodnight,9449,Weist,3994,30,Jillian,1852.071,1853.551,020526,194.29584027211047,156.13290677989875,270.4685101739908,-114.33560339409206
+goodnight,9454,Weist,4000,31,Jillian,1252.123,1253.586,020707,335.6722481840247,205.32084979797153,487.5675309448803,-282.2466811469087
+goodnight,9768,NewmanRatner,4279,7,4767JC,339.656,345.928,4767JC,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,9768,NewmanRatner,4279,7,4767JC,435.569,443.185,4767JC,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,9763,NewmanRatner,4286,7,47081B7,510.987,513.937,4708IB,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,9763,NewmanRatner,4286,7,47081B7,517.143,520.06,4708IB,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,9763,NewmanRatner,4286,7,47081B7,526.45,529.563,4708IB,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,9783,NewmanRatner,4322,7,5066WT7,190.728,196.03,5066WT,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,9784,NewmanRatner,4325,7,5073AC,708.736,710.883,5073AC,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,9840,NewmanRatner,4491,7,6454MB7,366.853,376.81,6454MB,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,9840,NewmanRatner,4491,7,6454MB7,692.483,695.955,6454MB,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,9852,NewmanRatner,4516,7,7013VD7,414.967,432.688,7013VD,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,9857,NewmanRatner,4542,7,7099EH7,355.795,368.335,7099EH,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,9857,NewmanRatner,4542,7,7099EH7,368.335,372.883,7099EH,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,9827,NewmanRatner,4567,7,5929LD7,74.015,79.134,5929LD,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,9891,NewmanRatner,4622,10,4743NA10,200.302,202.018,4743NA,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,9891,NewmanRatner,4622,10,4743NA10,278.106,283.13,4743NA,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,9891,NewmanRatner,4622,10,4743NA10,283.13,284.283,4743NA,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,9891,NewmanRatner,4622,10,4743NA10,284.283,287.036,4743NA,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,9902,NewmanRatner,4487,10,NA,692.026,697.438,4997LM,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,9902,NewmanRatner,4487,10,NA,697.438,699.961,4997LM,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,9887,NewmanRatner,4720,10,4724LM10,689.38,696.354,4724LM,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10000,NewmanRatner,4791,11,4592HVG11mos,308.334,309.878,4592HVG,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10000,NewmanRatner,4791,11,4592HVG11mos,309.878,313.477,4592HVG,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10027,NewmanRatner,4325,11,5073AC,110.796,118.886,5073AC,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10067,NewmanRatner,4930,11,5878SC11,163.19,165.399,5878SC,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10067,NewmanRatner,4930,11,5878SC11,165.399,167.736,5878SC,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10121,NewmanRatner,5050,24,5196AV18,486.485,489.352,5196AV,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10121,NewmanRatner,5050,24,5196AV18,567.56,569.168,5196AV,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10146,NewmanRatner,5107,18,5936SR18,101.962,105.39,5936SR,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10146,NewmanRatner,5107,18,5936SR18,105.39,107.824,5936SR,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10146,NewmanRatner,5107,18,5936SR18,443.222,448.302,5936SR,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10146,NewmanRatner,5107,18,5936SR18,924.506,928.76,5936SR,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10146,NewmanRatner,5107,18,5936SR18,928.76,930.45,5936SR,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10146,NewmanRatner,5107,18,5936SR18,930.45,931.77,5936SR,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10170,NewmanRatner,5155,18,7814NB18moschildmos,144.082,146.091,7814NB,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10170,NewmanRatner,5155,18,7814NB18moschildmos,146.091,149.313,7814NB,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10174,NewmanRatner,5170,24,4452CM24,28.283,29.295,4452CM,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10174,NewmanRatner,5170,24,4452CM24,36.477,39.513,4452CM,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10174,NewmanRatner,5170,24,4452CM24,51.244,53.099,4452CM,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10174,NewmanRatner,5170,24,4452CM24,62.188,63.736,4452CM,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10174,NewmanRatner,5170,24,4452CM24,117.765,121.172,4452CM,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10174,NewmanRatner,5170,24,4452CM24,138.887,140.35,4452CM,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10174,NewmanRatner,5170,24,4452CM24,389.624,393.674,4452CM,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10174,NewmanRatner,5170,24,4452CM24,426.594,428.454,4452CM,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10174,NewmanRatner,5170,24,4452CM24,471.554,474.964,4452CM,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10174,NewmanRatner,5170,24,4452CM24,561.414,564.054,4452CM,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10174,NewmanRatner,5170,24,4452CM24,566.594,568.544,4452CM,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10174,NewmanRatner,5170,24,4452CM24,579.784,581.944,4452CM,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10174,NewmanRatner,5170,24,4452CM24,583.294,584.674,4452CM,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10174,NewmanRatner,5170,24,4452CM24,584.674,585.674,4452CM,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10174,NewmanRatner,5170,24,4452CM24,593.834,594.454,4452CM,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10174,NewmanRatner,5170,24,4452CM24,598.924,601.114,4452CM,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10174,NewmanRatner,5170,24,4452CM24,601.114,602.534,4452CM,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10174,NewmanRatner,5170,24,4452CM24,606.664,608.374,4452CM,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10174,NewmanRatner,5170,24,4452CM24,613.174,614.594,4452CM,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10183,NewmanRatner,5188,24,4708IB24,631.853,637.196,4708IB,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10190,NewmanRatner,5200,24,4802JP,216.264,220.465,4802JP,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10203,NewmanRatner,4325,24,5073AC,237.61,243.115,5073AC,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10203,NewmanRatner,4325,24,5073AC,243.115,248.104,5073AC,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10203,NewmanRatner,4325,24,5073AC,248.104,255.605,5073AC,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10203,NewmanRatner,4325,24,5073AC,255.605,260.567,5073AC,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10203,NewmanRatner,4325,24,5073AC,262.393,265.016,5073AC,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10203,NewmanRatner,4325,24,5073AC,265.016,267.054,5073AC,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10203,NewmanRatner,4325,24,5073AC,267.054,271.513,5073AC,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10203,NewmanRatner,4325,24,5073AC,271.513,273.944,5073AC,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10203,NewmanRatner,4325,24,5073AC,273.944,281.351,5073AC,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10203,NewmanRatner,4325,24,5073AC,281.35,283.687,5073AC,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10203,NewmanRatner,4325,24,5073AC,288.175,292.091,5073AC,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10203,NewmanRatner,4325,24,5073AC,292.091,294.236,5073AC,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10203,NewmanRatner,4325,24,5073AC,294.236,300.625,5073AC,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10203,NewmanRatner,4325,24,5073AC,300.625,306.253,5073AC,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10203,NewmanRatner,4325,24,5073AC,306.253,308.989,5073AC,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10203,NewmanRatner,4325,24,5073AC,320.051,324.72,5073AC,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10203,NewmanRatner,4325,24,5073AC,324.72,330.678,5073AC,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10203,NewmanRatner,4325,24,5073AC,330.678,336.362,5073AC,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10239,NewmanRatner,4431,24,5820CP,1266.156,1268.218,5820CP,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10239,NewmanRatner,4431,24,5820CP,1313.422,1318.456,5820CP,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10239,NewmanRatner,4431,24,5820CP,1325.06,1329.686,5820CP,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10239,NewmanRatner,4431,24,5820CP,1329.686,1335.751,5820CP,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10239,NewmanRatner,4431,24,5820CP,1335.751,1338.89,5820CP,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10239,NewmanRatner,4431,24,5820CP,1338.89,1343.348,5820CP,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10239,NewmanRatner,4431,24,5820CP,1343.348,1348.345,5820CP,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10239,NewmanRatner,4431,24,5820CP,1348.345,1354.122,5820CP,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10239,NewmanRatner,4431,24,5820CP,1354.122,1360.272,5820CP,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10239,NewmanRatner,4431,24,5820CP,1360.272,1370.264,5820CP,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10239,NewmanRatner,4431,24,5820CP,1370.264,1377.323,5820CP,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10239,NewmanRatner,4431,24,5820CP,1377.323,1389.129,5820CP,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10239,NewmanRatner,4431,24,5820CP,1389.129,1393.874,5820CP,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10249,NewmanRatner,5350,24,NA,29.081,37.439,5954ML,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10249,NewmanRatner,5350,24,NA,37.439,48.903,5954ML,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10249,NewmanRatner,5350,24,NA,48.903,55.498,5954ML,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10249,NewmanRatner,5350,24,NA,60.757,64.47,5954ML,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10249,NewmanRatner,5350,24,NA,64.47,67.463,5954ML,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10249,NewmanRatner,5350,24,NA,67.463,70.898,5954ML,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10249,NewmanRatner,5350,24,NA,73.377,78.576,5954ML,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10249,NewmanRatner,5350,24,NA,78.576,82.691,5954ML,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10294,NewmanRatner,5404,24,7814NB24moschild,226.269,228.306,7814NB,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10294,NewmanRatner,5404,24,7814NB24moschild,268.195,269.374,7814NB,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10300,NewmanRatner,4251,7,4619WZ7,158.518,160.028,4619WZ,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10300,NewmanRatner,4251,7,4619WZ7,160.028,161.618,4619WZ,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10308,NewmanRatner,5424,7,4724LM7,44.461,47.183,4724LM,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10307,NewmanRatner,4289,7,47081B7,87.764,90.638,4708IB,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10307,NewmanRatner,4286,7,47081B7,92.788,95.652,4708IB,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10336,NewmanRatner,4349,7,5266EC7,188.239,189.186,5266EC,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10397,NewmanRatner,4516,7,7013VD7,52.801,55.484,7013VD,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10397,NewmanRatner,4516,7,7013VD7,58.002,62.293,7013VD,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10434,NewmanRatner,4622,10,4743NA10,184.725,188.112,4743NA,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10431,NewmanRatner,4787,10,4708IB10mos,236.902,240.118,4708IB,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10424,NewmanRatner,4601,10,4629AB10,127.259,131.841,4629AB,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10568,NewmanRatner,4839,11,5039MB11,83.566,85.82,5039MB,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10615,NewmanRatner,4934,11,5928RL,297.958,306.669,5928RL,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10731,NewmanRatner,4279,24,4767JC,188.53,192.758,4767JC,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10760,NewmanRatner,5478,24,4866AC,263.1,266.829,5449NG,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10777,NewmanRatner,5305,24,5707RT,150.163,155.699,5707RT,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10781,NewmanRatner,4431,24,5820CP,124.253,132.427,5820CP,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10793,NewmanRatner,5492,24,5954ML24mos,32.419,43.771,5954ML,audio file missing,audio file missing,audio file missing,audio file missing
+goodnight,10906,Snow,5565,31,Nathaniel,1587.841,1590.888,020622b,197.6302309243049,83.8987504444252,356.1838619467722,-272.285111502347
+goodnight,10906,Snow,5565,31,Nathaniel,2289.176,2290.548,020622b,176.15090930713913,111.0060666847364,221.0663069399196,-110.0602402551832
+goodnight,10909,Snow,5565,31,Nathaniel,3372.184,3378.046,020701b,178.69921799687705,93.40429971288634,414.3895266010996,-320.9852268882132
+goodnight,10909,Snow,5565,31,Nathaniel,3378.046,3379.532,020701b,163.11663720994483,133.65834078396125,211.84910224107887,-78.19076145711762
+goodnight,10909,Snow,5567,31,Nathaniel,3387.046,3388.41,020701b,223.70896554416058,68.43231980661248,441.7515161238748,-373.3191963172623
+goodnight,10909,Snow,5565,31,Nathaniel,3448.725,3451.624,020701b,198.49224625739228,116.64525613990337,295.1006791353644,-178.455422995461
+goodnight,42204,Providence,22707,17,Alex,899.51,906.091,010427,198.33723071393186,66.64046947113411,378.58774448433803,-311.9472750132039
+goodnight,42295,Providence,22721,31,Ethan,1877.5,1879.348,020624,282.8628940392567,155.00223866477765,491.91375474026495,-336.91151607548727
+goodnight,42305,Providence,22729,13,Lily,703.055,704.556,010102,219.77247361994054,94.10641792764302,516.6518226485448,-422.5454047209018
+goodnight,42305,Providence,22729,13,Lily,704.556,707.073,010102,299.489803743641,117.06529189444008,495.3718518104415,-378.30655991600145
+goodnight,42318,Providence,22729,19,Lily,1093.721,1097.791,010701,270.0888989988323,75.76755473358699,408.9860944691443,-333.21853973555733
+goodnight,42318,Providence,22729,19,Lily,1525.038,1526.183,010701,211.70757326736455,86.82692813410985,342.17054259855155,-255.3436144644417
+goodnight,42318,Providence,22729,19,Lily,1526.183,1527.165,010701,322.7849834532345,142.85869810281775,496.1251864986582,-353.26648839584044
+goodnight,42328,Providence,22729,24,Lily,707.178,710.638,011126,217.3651344279697,82.18806878451467,383.7664005183836,-301.57833173386894
+goodnight,42339,Providence,22729,27,Lily,1064.636,1067.626,020227,216.6098995238402,77.55779891378148,478.06024567690525,-400.50244676312377
+goodnight,42339,Providence,22729,27,Lily,1079.281,1081.575,020227,241.01014657310898,66.13413947215209,349.9634977050564,-283.8293582329043
+goodnight,42339,Providence,22729,27,Lily,1103.896,1105.525,020227,320.9765207413627,146.29218194588802,442.2049268147445,-295.9127448688565
+goodnight,42339,Providence,22729,27,Lily,1107.46,1110.621,020227,313.3026244230842,96.50933070809874,524.3009116358844,-427.7915809277857
+goodnight,42339,Providence,22729,27,Lily,1110.621,1112.286,020227,333.7436292150948,103.03909830440226,452.49108113770575,-349.4519828333035
+goodnight,42339,Providence,22729,27,Lily,1115.553,1118.485,020227,289.02217494514946,81.59168798635145,411.13483249611323,-329.54314450976176
+goodnight,42339,Providence,22729,27,Lily,1129.705,1131.64,020227,242.3080199526819,88.73196781377655,500.2190686368078,-411.48710082303126
+goodnight,42339,Providence,22729,27,Lily,1156.52,1160.57,020227,180.73724490424624,124.77460836306231,508.25920460146796,-383.48459623840563
+goodnight,42339,Providence,22729,27,Lily,1160.57,1167.39,020227,301.2467232428334,76.17871680540252,530.0943351656556,-453.91561836025306
+goodnight,42339,Providence,22729,27,Lily,1167.39,1168.906,020227,144.3781590905827,128.56593727520521,167.288365481745,-38.722428206539774
+goodnight,42339,Providence,22729,27,Lily,1168.906,1170.306,020227,338.1536273015149,154.72414201880522,411.37073250016977,-256.64659048136457
+goodnight,42339,Providence,22729,27,Lily,1170.306,1171.441,020227,355.5059931799181,316.78982203501806,508.12914359546437,-191.3393215604463
+goodnight,42339,Providence,22729,27,Lily,1171.441,1172.373,020227,355.16343494098487,322.08928707883194,424.2873427807351,-102.19805570190317
+goodnight,42339,Providence,22729,27,Lily,1172.373,1173.508,020227,152.84836060926213,79.70105123260325,174.12132241789146,-94.42027118528821
+goodnight,42339,Providence,22729,27,Lily,1173.508,1174.486,020227,364.48479203850246,118.148826035291,431.4576430213689,-313.3088169860779
+goodnight,42339,Providence,22729,27,Lily,1174.486,1175.42,020227,404.897999224474,380.65701023533285,431.7100249583746,-51.05301472304177
+goodnight,42339,Providence,22729,27,Lily,1191.168,1194.498,020227,212.86775305963883,160.62451139936718,433.49726012220424,-272.87274872283706
+goodnight,42339,Providence,22729,27,Lily,1213.648,1219.31,020227,197.9458134700312,78.99314075987367,498.13994039207756,-419.1467996322039
+goodnight,42339,Providence,22729,27,Lily,1221.1,1222.986,020227,214.33942732761892,76.68680672842456,429.5812365811458,-352.89442985272126
+goodnight,42339,Providence,22729,27,Lily,1222.986,1224.66,020227,231.39837553534164,69.7886039178599,429.9164744186042,-360.1278705007443
+goodnight,42339,Providence,22729,27,Lily,1226.373,1227.653,020227,308.31468755001407,82.12018727993757,468.8609765165555,-386.74078923661796
+goodnight,42339,Providence,22729,27,Lily,1230.305,1232.25,020227,386.13523079532746,337.76207418379795,448.2673875249579,-110.50531334115993
+goodnight,42353,Providence,22729,31,Lily,3283.527,3286.592,020700,136.23935742525336,76.42818191920868,185.80957725337547,-109.38139533416678
+goodnight,42362,Providence,22729,33,Lily,1574.243,1577.105,020909,271.36784466948353,76.92838533189577,380.4377914858298,-303.50940615393404
+goodnight,42362,Providence,22729,33,Lily,1677.995,1684.863,020909,204.74272301076155,65.77458210543864,499.09825353287994,-433.3236714274413
+goodnight,42371,Providence,22729,36,Lily,2290.533,2292.263,030010,273.849772485646,77.27570995812327,483.7258681482904,-406.4501581901671
+goodnight,42371,Providence,22729,36,Lily,2292.263,2294.157,030010,258.3928625808263,131.44432990548808,435.5588767279942,-304.1145468225061
+goodnight,42371,Providence,22729,36,Lily,2296.32,2298.588,030010,370.86697210677994,220.57183012207918,528.540282324064,-307.96845220198486
+goodnight,42371,Providence,22729,36,Lily,2444.435,2448.977,030010,321.25429928319966,87.7880458270754,528.4508662065039,-440.66282037942847
+goodnight,42371,Providence,22729,36,Lily,2448.977,2450.442,030010,364.3114833785008,79.05980352716318,523.577265845182,-444.5174623180188
+goodnight,42387,Providence,22744,13,Naima,710.075,713.966,010026,290.6062401762325,89.56460597485223,489.5674901252612,-400.002884150409
+goodnight,42387,Providence,22744,13,Naima,717.72,719.241,010026,273.486035277018,222.634614672684,400.51979846461205,-177.88518379192806
+goodnight,42387,Providence,22744,13,Naima,1168.49,1172.823,010026,260.65598169292025,206.2900539528889,480.82930200056273,-274.5392480476738
+goodnight,42387,Providence,22744,13,Naima,1172.823,1176.34,010026,233.48082638794264,95.16099116992453,480.0853536059367,-384.9243624360122
+goodnight,42387,Providence,22744,13,Naima,1176.34,1180.01,010026,272.3900213589833,210.5801196480067,492.15613118910994,-281.57601154110324
+goodnight,42421,Providence,22744,23,Naima,1193.3,1198.363,011027,319.7513002512418,248.77175025000562,499.3624861144449,-250.59073586443927
+goodnight,42440,Providence,22744,29,Naima,676.665,679.875,020416,286.26453763279966,112.49466733730345,483.78696599764817,-371.2922986603447
+goodnight,42461,Providence,22744,34,Naima,358.106,383.961,021008a,337.3036873573441,72.1449729108643,498.62923234202435,-426.48425943116007
+goodnight,42461,Providence,22744,34,Naima,536.315,541.565,021008a,283.10205337705014,88.86649955069173,525.1414382325723,-436.2749386818806
+goodnight,42461,Providence,22744,34,Naima,541.565,542.666,021008a,209.51302032821008,90.37461420141075,298.0207771116655,-207.64616291025476
+goodnight,42461,Providence,22744,34,Naima,608.491,610.715,021008a,230.1682600791711,118.43516819399443,410.543871598485,-292.1087034044906
+goodnight,42475,Providence,22756,15,Violet,609.358,613.96,010309,235.23515993828033,162.0439348478659,500.81654507186835,-338.77261022400245
+goodnight,42531,Providence,22766,20,William,2045.618,2046.633,010802,204.61056265612072,143.77758408332267,242.62625314137463,-98.84866905805197
+goodnight,42536,Providence,22768,22,William,1129.505,1131.195,011012,279.5779791796374,185.27679807278435,497.403207342342,-312.12640926955766
+goodnight,42536,Providence,22766,22,William,2282.38,2285.448,011012,393.2531150336834,81.3440693518663,498.26140497084833,-416.91733561898207
