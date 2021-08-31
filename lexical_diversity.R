@@ -135,14 +135,167 @@ for(i in unique(iterations$index)) {
   
   get_order_info[[i]] <- transcript_by_speaker
 }
-ordered_utts <- do.call(rbind, get_order_info)
+
+ordered_utts <- do.call(rbind, get_order_info) 
+
+preceding_utts <- ordered_utts %>%
+  mutate(utterance = utterance+1, 
+        preceding_gloss = case_when(
+           utterance == 0 ~ "<>", 
+           utterance >= 1 ~ paste(trimws(gloss))), 
+        preceding_gloss = trimws(gloss)) %>%
+  select(preceding_gloss, transcript_id, speaker_id, utterance)
+
+following_utts <- ordered_utts %>%
+  mutate(utterance = utterance-1, 
+         following_gloss = case_when(
+           utterance == 0 ~ "<>", 
+           utterance >= 1 ~ paste(trimws(gloss))), 
+         following_gloss = trimws(gloss)) %>%
+  select(following_gloss, transcript_id, speaker_id, utterance)
+
+ordered_utts_w_context <- ordered_utts %>%
+  left_join(preceding_utts, by = c("transcript_id", "speaker_id", "utterance")) %>%
+  left_join(following_utts, by = c("transcript_id", "speaker_id", "utterance")) %>%
+  mutate(preceding_gloss = replace_na(preceding_gloss, "<>"), 
+         following_gloss = replace_na(following_gloss, "<>"), 
+         gloss = trimws(gloss),
+         gloss_grouped = str_remove(paste(preceding_gloss, gloss, following_gloss), " xxx|xxx |xxx| yyy|yyy |yyy")) %>%
+  filter()
+
+
+
 
 merged_utts <- ordered_utts %>%
   select(id, utterance, speaker_id) %>%
   right_join(utts, by = c("id")) %>%
   select(id, gloss, num_tokens, transcript_id, speaker_id, 
          speaker_role, target_child_id, age, item, pair, form, utterance) %>%
-  mutate(gloss_grouped = paste(trimws((filter(ordered_utts, utterance == preceding & transcript_id == transcript_id & speaker_id == speaker_id))$gloss),
+  mutate(gloss_grouped = paste((filter(preceding_utts, utterance == utterance & transcript_id == transcript_id & speaker_id == speaker_id))$gloss,
+                      trimws(gloss), 
+                      (filter(following_utts, utterance == utterance & transcript_id == transcript_id & speaker_id == speaker_id))$gloss), 
+         gloss_grouped = trimws(str_remove_all(gloss_grouped, " xxx|xxx |xxx| yyy|yyy |yyy")),
+         iteration = row_number()) 
+
+# OLD
+merged_utts <- ordered_utts %>%
+  select(id, utterance, speaker_id) %>%
+  right_join(utts, by = c("id")) %>%
+  select(id, gloss, num_tokens, transcript_id, speaker_id, 
+         speaker_role, target_child_id, age, item, pair, form, utterance) %>%
+  mutate(preceding_gloss = paste((filter(ordered_utts, utterance == utterance-1 & transcript_id == transcript_id & speaker_id == speaker_id))$gloss))
+         gloss_grouped = paste(trimws((filter(ordered_utts, utterance == utterance-1 & transcript_id == transcript_id & speaker_id == speaker_id))$gloss),
                                trimws(gloss), 
-                               trimws((filter(ordered_utts, utterance == following & transcript_id == transcript_id & speaker_id == speaker_id))$gloss)), 
-         gloss_grouped = trimws(str_remove(gloss_grouped, "xxx|yyy")))
+                               trimws((filter(ordered_utts, utterance == utterance+1 & transcript_id == transcript_id & speaker_id == speaker_id))$gloss)), 
+         gloss_grouped = trimws(str_remove_all(gloss_grouped, " xxx|xxx |xxx| yyy|yyy |yyy")), 
+         iteration = row_number()) 
+
+merged_utts <- ordered_utts %>%
+  select(id, utterance, speaker_id) %>%
+  right_join(utts, by = c("id")) %>%
+  select(id, gloss, num_tokens, transcript_id, speaker_id, 
+         speaker_role, target_child_id, age, item, pair, form, utterance) %>%
+  mutate(value = utterance, 
+         preceding_gloss = paste((filter(ordered_utts, utterance == value-1 & 
+                                           transcript_id == transcript_id &
+                                           speaker_id == speaker_id))$gloss))
+           
+           utterance-1, 
+         following = utterance+1, 
+         gloss_grouped = paste(trimws((filter(ordered_utts, utterance == preceding & 
+                                                transcript_id == transcript_id & 
+                                                speaker_id == speaker_id & 
+                                                target_child_id == target_child_id))$gloss),
+                               trimws(gloss), 
+                               trimws((filter(ordered_utts, utterance == following & 
+                                                transcript_id == transcript_id & 
+                                                speaker_id == speaker_id &
+                                                target_child_id == target_child_id))$gloss)), 
+         gloss_grouped = trimws(str_remove_all(gloss_grouped, " xxx|xxx |xxx| yyy|yyy |yyy")), 
+         token_count = str_count(gloss_grouped, " "))
+
+# TO DO: speed this up
+get_ttr <- list()
+for (i in unique(merged_utts$iteration)) {
+  tokens <- merged_utts %>%
+    filter(iteration == i) %>%
+    mutate(gloss_grouped = strsplit(tolower(gloss_grouped), " ")) %>% 
+    unnest(gloss_grouped) %>%
+    select(gloss_grouped) %>%
+    summarize(token_count = n())
+  
+  types <- merged_utts %>%
+    filter(iteration == i) %>%
+    mutate(gloss_grouped = strsplit(tolower(gloss_grouped), " ")) %>% 
+    unnest(gloss_grouped) %>%
+    select(gloss_grouped) %>%
+    distinct() %>%
+    summarize(type_count = n())
+  
+  ttr <- cbind(tokens, types) %>%
+    mutate(ttr = type_count/token_count*100, 
+           iteration = i)
+  
+  get_ttr[[i]] <- ttr
+}
+
+ttr <- do.call(rbind, get_ttr) %>%
+  right_join(merged_utts, by = "iteration")
+
+ttr$form <- factor(ttr$form, levels = c("CDL", "ADL"))
+
+m <- lmer(ttr ~ form*age + (1|item) + (1|target_child_id), data = ttr)
+summary(m)
+
+ttr_byword <- ttr %>%
+  group_by(item) %>%
+  summarize(ttr = mean(ttr, na.rm = TRUE), 
+            pair = pair, 
+            form = form) %>%
+  distinct()
+
+ttr_byword_summary <- ttr_byword %>%
+  group_by(form) %>%
+  summarize(mean = mean(ttr, na.rm = TRUE), 
+            se = sd(ttr, na.rm = TRUE)/sqrt(length(ttr)), 
+            ymin = mean - se, 
+            ymax = mean + se)
+
+ggplot() +
+  geom_line(data = ttr_byword, aes(x = form, y = ttr, group = pair), 
+            color = "#F2F2F2", size = 1) +
+  geom_point(data = ttr_byword, aes(x = form, y = ttr), 
+             color = "#F2F2F2", size = 2) +
+  geom_pointrange(data = ttr_byword_summary, aes(x = form, y = mean, ymin = mean-se, ymax = mean+se, color = form, fill = form), 
+                  stat = "identity", size = 1.5) +
+  scale_fill_manual(values = colors) +
+  scale_color_manual(values = colors) +
+  labs(x = "Form", y = "Type:token ratio\n(+/- 1 utterance by the same speaker)", title = "CHILDES") +
+  theme_test(base_size = 15) +
+  theme(legend.position = "none", plot.title = element_text(hjust = 0.5))
+ggsave("figs/lexical_diversity_overall.jpg", height = 5, width = 4, dpi = 300)
+
+# no difference in TTR
+wilcox.test(ttr ~ form, data = ttr_byword, paired = TRUE)
+shapiro.test(filter(ttr_byword, form == "CDL")$ttr) #check for normality
+shapiro.test(filter(ttr_byword, form == "ADL")$ttr) 
+
+ttr %>%
+  group_by(item, age) %>%
+  summarize(ttr = mean(ttr, na.rm = TRUE), 
+            pair = pair, 
+            form = form) %>%
+  distinct() %>%
+  ungroup() %>%
+  group_by(age, form) %>%
+  summarize(ttr = mean(ttr, na.rm = TRUE)) %>%
+  ggplot(aes(x = age, y = ttr, color = form, fill = form)) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  scale_color_manual(values = colors) +
+  scale_fill_manual(values = colors) +
+  scale_x_continuous(limits = c(0, 84), breaks=seq(0, 84, by=12)) +
+  labs(x = "Age (months)", y = "Type:token ratio\n(+/- 1 utterance by the same speaker)", title = "CHILDES") +
+  theme_test(base_size = 15) +
+  theme(legend.position = "none", plot.title = element_text(hjust = 0.5))
+ggsave("figs/lexical_diversity_over_time.jpg", height = 5, width = 6, dpi = 300)
