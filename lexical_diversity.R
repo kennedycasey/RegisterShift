@@ -143,16 +143,48 @@ preceding_utts <- ordered_utts %>%
         preceding_gloss = case_when(
            utterance == 0 ~ "<>", 
            utterance >= 1 ~ paste(trimws(gloss))), 
-        preceding_gloss = trimws(gloss)) %>%
+        preceding_gloss = trimws(preceding_gloss)) %>%
   select(preceding_gloss, transcript_id, speaker_id, utterance)
+
+preceding_utts2 <- ordered_utts %>%
+  mutate(utterance = utterance+2, 
+         preceding_gloss2 = case_when(
+           utterance <= 1 ~ "<>", 
+           utterance >= 2 ~ paste(trimws(gloss))), 
+         preceding_gloss2 = trimws(preceding_gloss2)) %>%
+  select(preceding_gloss2, transcript_id, speaker_id, utterance)
+
+preceding_utts3 <- ordered_utts %>%
+  mutate(utterance = utterance+3, 
+         preceding_gloss3 = case_when(
+           utterance <= 2 ~ "<>", 
+           utterance >= 3 ~ paste(trimws(gloss))), 
+         preceding_gloss3 = trimws(preceding_gloss3)) %>%
+  select(preceding_gloss3, transcript_id, speaker_id, utterance)
 
 following_utts <- ordered_utts %>%
   mutate(utterance = utterance-1, 
          following_gloss = case_when(
            utterance == 0 ~ "<>", 
            utterance >= 1 ~ paste(trimws(gloss))), 
-         following_gloss = trimws(gloss)) %>%
+         following_gloss = trimws(following_gloss)) %>%
   select(following_gloss, transcript_id, speaker_id, utterance)
+
+following_utts2 <- ordered_utts %>%
+  mutate(utterance = utterance-2, 
+         following_gloss2 = case_when(
+           utterance <= 1 ~ "<>", 
+           utterance >= 2 ~ paste(trimws(gloss))), 
+         following_gloss2 = trimws(following_gloss2)) %>%
+  select(following_gloss2, transcript_id, speaker_id, utterance)
+
+following_utts3 <- ordered_utts %>%
+  mutate(utterance = utterance-3, 
+         following_gloss3 = case_when(
+           utterance <= 2 ~ "<>", 
+           utterance >= 3 ~ paste(trimws(gloss))), 
+         following_gloss3 = trimws(following_gloss3)) %>%
+  select(following_gloss3, transcript_id, speaker_id, utterance)
 
 ordered_utts_w_context <- ordered_utts %>%
   left_join(preceding_utts, by = c("transcript_id", "speaker_id", "utterance")) %>%
@@ -160,87 +192,35 @@ ordered_utts_w_context <- ordered_utts %>%
   mutate(preceding_gloss = replace_na(preceding_gloss, "<>"), 
          following_gloss = replace_na(following_gloss, "<>"), 
          gloss = trimws(gloss),
-         gloss_grouped = str_remove(paste(preceding_gloss, gloss, following_gloss), " xxx|xxx |xxx| yyy|yyy |yyy")) %>%
-  filter()
+         gloss_grouped = str_remove_all(paste(preceding_gloss, gloss, following_gloss), " xxx|xxx |xxx| yyy|yyy |yyy")) %>%
+  filter(str_detect(gloss_grouped, "<>", negate = TRUE))
 
+merged_utts <- ordered_utts_w_context %>%
+  select(id, speaker_id, utterance, gloss_grouped) %>%
+  right_join(utts, by = c("id", "speaker_id")) %>%
+  select(id, transcript_id, speaker_id, speaker_role, target_child_id, 
+         age, item, pair, form, utterance, gloss_grouped) %>%
+  filter(!is.na(gloss_grouped)) %>% # rm first/last utterances in transcript
+  mutate(token_count = str_count(gloss_grouped, " ") + 1, 
+         iteration = row_number())
 
-
-
-merged_utts <- ordered_utts %>%
-  select(id, utterance, speaker_id) %>%
-  right_join(utts, by = c("id")) %>%
-  select(id, gloss, num_tokens, transcript_id, speaker_id, 
-         speaker_role, target_child_id, age, item, pair, form, utterance) %>%
-  mutate(gloss_grouped = paste((filter(preceding_utts, utterance == utterance & transcript_id == transcript_id & speaker_id == speaker_id))$gloss,
-                      trimws(gloss), 
-                      (filter(following_utts, utterance == utterance & transcript_id == transcript_id & speaker_id == speaker_id))$gloss), 
-         gloss_grouped = trimws(str_remove_all(gloss_grouped, " xxx|xxx |xxx| yyy|yyy |yyy")),
-         iteration = row_number()) 
-
-# OLD
-merged_utts <- ordered_utts %>%
-  select(id, utterance, speaker_id) %>%
-  right_join(utts, by = c("id")) %>%
-  select(id, gloss, num_tokens, transcript_id, speaker_id, 
-         speaker_role, target_child_id, age, item, pair, form, utterance) %>%
-  mutate(preceding_gloss = paste((filter(ordered_utts, utterance == utterance-1 & transcript_id == transcript_id & speaker_id == speaker_id))$gloss))
-         gloss_grouped = paste(trimws((filter(ordered_utts, utterance == utterance-1 & transcript_id == transcript_id & speaker_id == speaker_id))$gloss),
-                               trimws(gloss), 
-                               trimws((filter(ordered_utts, utterance == utterance+1 & transcript_id == transcript_id & speaker_id == speaker_id))$gloss)), 
-         gloss_grouped = trimws(str_remove_all(gloss_grouped, " xxx|xxx |xxx| yyy|yyy |yyy")), 
-         iteration = row_number()) 
-
-merged_utts <- ordered_utts %>%
-  select(id, utterance, speaker_id) %>%
-  right_join(utts, by = c("id")) %>%
-  select(id, gloss, num_tokens, transcript_id, speaker_id, 
-         speaker_role, target_child_id, age, item, pair, form, utterance) %>%
-  mutate(value = utterance, 
-         preceding_gloss = paste((filter(ordered_utts, utterance == value-1 & 
-                                           transcript_id == transcript_id &
-                                           speaker_id == speaker_id))$gloss))
-           
-           utterance-1, 
-         following = utterance+1, 
-         gloss_grouped = paste(trimws((filter(ordered_utts, utterance == preceding & 
-                                                transcript_id == transcript_id & 
-                                                speaker_id == speaker_id & 
-                                                target_child_id == target_child_id))$gloss),
-                               trimws(gloss), 
-                               trimws((filter(ordered_utts, utterance == following & 
-                                                transcript_id == transcript_id & 
-                                                speaker_id == speaker_id &
-                                                target_child_id == target_child_id))$gloss)), 
-         gloss_grouped = trimws(str_remove_all(gloss_grouped, " xxx|xxx |xxx| yyy|yyy |yyy")), 
-         token_count = str_count(gloss_grouped, " "))
-
-# TO DO: speed this up
-get_ttr <- list()
+get_types <- list()
 for (i in unique(merged_utts$iteration)) {
-  tokens <- merged_utts %>%
-    filter(iteration == i) %>%
-    mutate(gloss_grouped = strsplit(tolower(gloss_grouped), " ")) %>% 
-    unnest(gloss_grouped) %>%
-    select(gloss_grouped) %>%
-    summarize(token_count = n())
-  
   types <- merged_utts %>%
     filter(iteration == i) %>%
-    mutate(gloss_grouped = strsplit(tolower(gloss_grouped), " ")) %>% 
+    mutate(gloss_grouped = strsplit(gloss_grouped, " ")) %>% 
     unnest(gloss_grouped) %>%
     select(gloss_grouped) %>%
     distinct() %>%
-    summarize(type_count = n())
+    summarize(type_count = n()) %>%
+    mutate(iteration = i)
   
-  ttr <- cbind(tokens, types) %>%
-    mutate(ttr = type_count/token_count*100, 
-           iteration = i)
-  
-  get_ttr[[i]] <- ttr
+  get_types[[i]] <- types
 }
 
-ttr <- do.call(rbind, get_ttr) %>%
-  right_join(merged_utts, by = "iteration")
+ttr <- do.call(rbind, get_types) %>%
+  right_join(merged_utts, by = "iteration") %>%
+  mutate(ttr = type_count/token_count*100)
 
 ttr$form <- factor(ttr$form, levels = c("CDL", "ADL"))
 
@@ -270,7 +250,8 @@ ggplot() +
                   stat = "identity", size = 1.5) +
   scale_fill_manual(values = colors) +
   scale_color_manual(values = colors) +
-  labs(x = "Form", y = "Type:token ratio\n(+/- 1 utterance by the same speaker)", title = "CHILDES") +
+  ylim(75, 90) +
+  labs(x = "Form", y = "TTR for +/- 1 utterance", title = "CHILDES") +
   theme_test(base_size = 15) +
   theme(legend.position = "none", plot.title = element_text(hjust = 0.5))
 ggsave("figs/lexical_diversity_overall.jpg", height = 5, width = 4, dpi = 300)
@@ -295,7 +276,26 @@ ttr %>%
   scale_color_manual(values = colors) +
   scale_fill_manual(values = colors) +
   scale_x_continuous(limits = c(0, 84), breaks=seq(0, 84, by=12)) +
-  labs(x = "Age (months)", y = "Type:token ratio\n(+/- 1 utterance by the same speaker)", title = "CHILDES") +
+  labs(x = "Age (months)", y = "TTR for +/- 1 utterance", title = "CHILDES") +
   theme_test(base_size = 15) +
   theme(legend.position = "none", plot.title = element_text(hjust = 0.5))
 ggsave("figs/lexical_diversity_over_time.jpg", height = 5, width = 6, dpi = 300)
+
+# TO DO: test expanded context window
+ordered_utts_w_context_wider <- ordered_utts %>%
+  left_join(preceding_utts, by = c("transcript_id", "speaker_id", "utterance")) %>%
+  left_join(preceding_utts2, by = c("transcript_id", "speaker_id", "utterance")) %>%
+  left_join(preceding_utts3, by = c("transcript_id", "speaker_id", "utterance")) %>%
+  left_join(following_utts, by = c("transcript_id", "speaker_id", "utterance")) %>%
+  left_join(following_utts2, by = c("transcript_id", "speaker_id", "utterance")) %>%
+  left_join(following_utts3, by = c("transcript_id", "speaker_id", "utterance")) %>%
+  mutate(preceding_gloss = replace_na(preceding_gloss, "<>"), 
+         preceding_gloss2 = replace_na(preceding_gloss2, "<>"),
+         preceding_gloss3 = replace_na(preceding_gloss3, "<>"), 
+         following_gloss = replace_na(following_gloss, "<>"), 
+         following_gloss2 = replace_na(following_gloss2, "<>"), 
+         following_gloss3 = replace_na(following_gloss3, "<>"), 
+         gloss = trimws(gloss),
+         gloss_grouped = str_remove_all(paste(preceding_gloss3, preceding_gloss2, preceding_gloss, gloss, following_gloss, following_gloss2, following_gloss3), " xxx|xxx |xxx| yyy|yyy |yyy")) %>%
+  filter(str_detect(gloss_grouped, "<>", negate = TRUE))
+

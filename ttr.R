@@ -33,7 +33,7 @@ ADL_forms <- read_csv("data_prep/item_info.csv") %>%
 
 # CHILDES -----------------------------------------------------------------
 utterances <- childes_utterances %>%
-  filter(target_child_age < 84, speaker_role != "Target_Child") %>%
+  filter(target_child_age < 84 & speaker_role != "Target_Child") %>%
   mutate(gloss = paste0(' ', tolower(gloss), ' '), 
          age = round(target_child_age, digits = 0))
 
