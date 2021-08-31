@@ -254,7 +254,7 @@ ggplot() +
   labs(x = "Form", y = "TTR for +/- 1 utterance", title = "CHILDES") +
   theme_test(base_size = 15) +
   theme(legend.position = "none", plot.title = element_text(hjust = 0.5))
-ggsave("figs/lexical_diversity_overall.jpg", height = 5, width = 4, dpi = 300)
+ggsave("figs/lexical_diversity_overall.jpg", height = 6, width = 4, dpi = 300)
 
 # no difference in TTR
 wilcox.test(ttr ~ form, data = ttr_byword, paired = TRUE)
