@@ -68,7 +68,7 @@ ggplot() +
   scale_color_manual(values = colors) +
   labs(x = "Form", y = "Mean pitch (Hz)", title = "CHILDES") +
   #scale_y_continuous(limits = c(3, 9), breaks=seq(3, 9, by = 3)) +
-  theme_test(base_size = 15) +
+  theme_test(base_size = 20) +
   theme(legend.position = "none", plot.title = element_text(hjust = 0.5))
 ggsave("figs/pitch_overall.jpg", height = 5, width = 4, dpi = 300)
 
@@ -89,7 +89,7 @@ pitch_info %>%
   scale_x_continuous(limits = c(0, 84), breaks=seq(0, 84, by=12)) +
   #scale_y_continuous(limits = c(2, 13), breaks=seq(0, 12, by = 3)) +
   labs(x = "Age (months)", y = "Mean pitch (Hz)", title = "CHILDES") +
-  theme_test(base_size = 15) +
+  theme_test(base_size = 20) +
   theme(legend.position = "none", plot.title = element_text(hjust = 0.5))
 ggsave("figs/pitch_over_time.jpg", height = 5, width = 6, dpi = 300)
 
@@ -143,6 +143,6 @@ pitch_info %>%
   scale_x_continuous(limits = c(0, 84), breaks=seq(0, 84, by=12)) +
   #scale_y_continuous(limits = c(2, 13), breaks=seq(0, 12, by = 3)) +
   labs(x = "Age (months)", y = "Mean pitch (Hz)", title = "CHILDES") +
-  theme_test(base_size = 15) +
+  theme_test(base_size = 20) +
   theme(legend.position = "none", plot.title = element_text(hjust = 0.5))
 ggsave("figs/pitch_variability_over_time.jpg", height = 5, width = 6, dpi = 300)

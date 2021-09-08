@@ -6,7 +6,7 @@ file_list = Create Strings as file list: "file_list", wd_timestamped$
 selectObject: file_list
 n_files = Get number of strings
 
-for f from 24 to n_files
+for f from 27 to n_files
 	
 	selectObject: file_list
 	onset_offset$ = Get string: f

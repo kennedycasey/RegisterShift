@@ -6,6 +6,7 @@ library(readr)
 library(ggpubr)
 library(lme4)
 library(lmerTest)
+library(ggeffects)
 
 childes_utterances = data.table(get_utterances(collection = "Eng-NA"))
 ldp_utterances <- read.csv("~/Desktop/secure/ldp_data_prepped.csv") 
@@ -117,8 +118,76 @@ for(i in items){
   get_mlu[[i]] <- utts_w_target
 }
 
-mlu <- do.call(rbind, get_mlu)
-mlu$form <- factor(mlu$form, levels = c("CDL", "ADL"))
+mlu <- do.call(rbind, get_mlu) %>%
+  mutate(form = factor(form, levels = c("CDL", "ADL")), 
+         form_numeric = case_when(
+           form == "CDL" ~ 0, 
+           form == "ADL" ~ 1), 
+         age_scaled = scale(age), 
+         mlu_scaled = scale(num_tokens))
+
+
+# flip analysis structure
+m <- glmer(form_numeric ~ mlu_scaled * age_scaled + (1|pair) + (1|target_child_id), 
+           data = mlu, 
+           family = binomial("logit"), 
+           control = glmerControl(optimizer = "bobyqa"))
+summary(m)
+
+tidy(
+  m,
+  effects = c("ran_pars", "fixed"),
+  scales = NULL,
+  exponentiate = FALSE,
+  ran_prefix = NULL,
+  conf.int = FALSE,
+  conf.level = 0.95,
+  conf.method = "Wald",
+  ddf.method = NULL,
+  profile = NULL,
+  debug = FALSE,
+)
+
+
+
+fe <- broom::augment(m)
+plot_model(m, pred.type = "fe")
+sjp.glmer(m, type = "re.qq")
+sjp.glmer(m, type = "fe.pc")
+
+effects <- effects::effect(term = "mlu_scaled", mod = m)
+
+
+overall_trend <- ggpredict(m, c("(Itercept)", 
+                                "mlu_scaled [all]", 
+                                "age_scaled [all]", 
+                                "mlu_scld:g_s"), 
+                           type = "re")
+
+ggplot() + 
+  #geom_smooth(data=model_data_long, aes(x=age, y=form_numeric, group=pair), method="glm", method.args=list(family = "binomial"), 
+  #color="#F5F5F5", se=FALSE) +
+  geom_line(data=overall_trend, aes(x=x, y=predicted), color="#235789", size = 2) +
+  geom_ribbon(data=overall_trend, aes(x=x, ymin=predicted-conf.low, ymax=predicted+conf.low), 
+              fill="#235789", alpha=0.25) +
+  #scale_x_continuous(limits = c(0, 84), breaks=seq(0, 84, by=12)) +
+  labs(x = "Age (months)", y = "Probability of producing ADL form", 
+       title = "CHILDES") +
+  geom_hline(yintercept=0.5, linetype="dotted", size=1) +
+  theme_test(base_size = 15) +
+  theme(plot.title = element_text(hjust = 0.5)) +
+  coord_cartesian(ylim=c(0, 1))
+ggsave("figs/ADL_over_time_no_items.jpg")
+
+
+
+m <- glmer(form_numeric ~ mlu_scaled * age_scaled + (1|target_child_id), 
+           data = filter(mlu, pair == "tummy_stomach"), 
+           family = binomial, 
+           control=glmerControl(optimizer="bobyqa"))
+summary(m)
+
+
 
 # higher MLUw for ADL forms
 # increase in MLUw across time

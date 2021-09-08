@@ -119,8 +119,8 @@ for (i in pairs) {
                 method="glm", method.args=list(family = "binomial"), 
                 color="#C1292E", fill="#C1292E") +
     geom_hline(yintercept=0.5, linetype="dotted", size=1) +
-    geom_vline(data = filter(aoa, word==paste(gsub("_.*", "", i))), mapping = aes(xintercept=aoa, color=form)) +
-    geom_vline(data = filter(aoa, word==paste(gsub(".*_", "", i))), mapping = aes(xintercept=aoa, color=form)) +
+    #geom_vline(data = filter(aoa, word==paste(gsub("_.*", "", i))), mapping = aes(xintercept=aoa, color=form)) +
+    #geom_vline(data = filter(aoa, word==paste(gsub(".*_", "", i))), mapping = aes(xintercept=aoa, color=form)) +
     scale_color_manual(values = colors) +
     scale_fill_manual(values = colors) +
     labs(title = paste0(i), color = "Form", fill = "Form") +
@@ -187,8 +187,8 @@ summary(m)
 overall_trend <- ggpredict(m, c("age [all]"), type = "re")
 
 ggplot() + 
-  geom_smooth(data=model_data_long, aes(x=age, y=form_numeric, group=pair), method="glm", method.args=list(family = "binomial"), 
-              color="#F5F5F5", se=FALSE) +
+  #geom_smooth(data=model_data_long, aes(x=age, y=form_numeric, group=pair), method="glm", method.args=list(family = "binomial"), 
+              #color="#F5F5F5", se=FALSE) +
   geom_line(data=overall_trend, aes(x=x, y=predicted), color="#235789", size = 2) +
   geom_ribbon(data=overall_trend, aes(x=x, ymin=predicted-conf.low, ymax=predicted+conf.low), 
               fill="#235789", alpha=0.25) +
@@ -199,7 +199,7 @@ ggplot() +
   theme_test(base_size = 15) +
   theme(plot.title = element_text(hjust = 0.5)) +
   coord_cartesian(ylim=c(0, 1))
-ggsave("figs/ADL_over_time.jpg")
+ggsave("figs/ADL_over_time_no_items.jpg")
 
 # Providence --------------------------------------------------------------
 providence_utterances <- childes_utterances %>%
@@ -292,8 +292,8 @@ for (i in pairs) {
                 method="glm", method.args=list(family = "binomial"), 
                 color="#C1292E", fill="#C1292E") +
     geom_hline(yintercept=0.5, linetype="dotted", size=1) +
-    geom_vline(data = filter(aoa, word==paste(gsub("_.*", "", i))), mapping = aes(xintercept=aoa, color=form)) +
-    geom_vline(data = filter(aoa, word==paste(gsub(".*_", "", i))), mapping = aes(xintercept=aoa, color=form)) +
+    #geom_vline(data = filter(aoa, word==paste(gsub("_.*", "", i))), mapping = aes(xintercept=aoa, color=form)) +
+    #geom_vline(data = filter(aoa, word==paste(gsub(".*_", "", i))), mapping = aes(xintercept=aoa, color=form)) +
     scale_color_manual(values = colors) +
     scale_fill_manual(values = colors) +
     labs(title = paste0(i), color = "Form", fill = "Form") +
@@ -466,8 +466,8 @@ for (i in pairs) {
                 method="glm", method.args=list(family = "binomial"), 
                 color="#C1292E", fill="#C1292E") +
     geom_hline(yintercept=0.5, linetype="dotted", size=1) +
-    geom_vline(data = filter(aoa, word==paste(gsub("_.*", "", i))), mapping = aes(xintercept=aoa, color=form)) +
-    geom_vline(data = filter(aoa, word==paste(gsub(".*_", "", i))), mapping = aes(xintercept=aoa, color=form)) +
+    #geom_vline(data = filter(aoa, word==paste(gsub("_.*", "", i))), mapping = aes(xintercept=aoa, color=form)) +
+    #geom_vline(data = filter(aoa, word==paste(gsub(".*_", "", i))), mapping = aes(xintercept=aoa, color=form)) +
     scale_color_manual(values = colors) +
     scale_fill_manual(values = colors) +
     labs(title = paste0(i), color = "Form", fill = "Form") +
