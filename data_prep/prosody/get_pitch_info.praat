@@ -15,7 +15,7 @@ for f from 27 to n_files
 	selectObject: timestamped_utts
 	n_tokens = Get number of rows
 
-	for t from 1 to n_tokens
+	for t from 1 to 5
 		# extract utterance based on timing in csv file
 		selectObject: timestamped_utts
 		transcript_id = Get value: t, "transcript_id"
@@ -35,7 +35,7 @@ for f from 27 to n_files
 
 			end_time = Get end time
 
-			if end_s - start_s < 0.04
+			if end_s - start_s < 0.5
 				selectObject: timestamped_utts
 
 				Set string value: t, "pitch_mean", "utterance too short to analyze"
