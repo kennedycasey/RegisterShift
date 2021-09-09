@@ -1,60 +1,60 @@
 item,transcript_id,corpus_name,speaker_id,age,target_child_name,media_start,media_end,audio_file,pitch_mean,pitch_min,pitch_max,pitch_range
-rabbit,3352,Bernstein,1717,18,Amelia,10.936,12.979,010600,audio file missing,audio file missing,audio file missing,audio file missing
-rabbit,3352,Bernstein,1717,18,Amelia,45.139,49.295,010600,audio file missing,audio file missing,audio file missing,audio file missing
-rabbit,3352,Bernstein,1717,18,Amelia,52.778,55.634,010600,audio file missing,audio file missing,audio file missing,audio file missing
-rabbit,3352,Bernstein,1717,18,Amelia,55.634,60.116,010600,audio file missing,audio file missing,audio file missing,audio file missing
-rabbit,3352,Bernstein,1717,18,Amelia,95.41,97.778,010600,audio file missing,audio file missing,audio file missing,audio file missing
-rabbit,3352,Bernstein,1717,18,Amelia,118.838,122.762,010600,audio file missing,audio file missing,audio file missing,audio file missing
-rabbit,3352,Bernstein,1717,18,Amelia,135.208,138.854,010600,audio file missing,audio file missing,audio file missing,audio file missing
-rabbit,3352,Bernstein,1717,18,Amelia,144.845,149.651,010600,audio file missing,audio file missing,audio file missing,audio file missing
-rabbit,3352,Bernstein,1717,18,Amelia,162.514,163.442,010600,audio file missing,audio file missing,audio file missing,audio file missing
-rabbit,3352,Bernstein,1717,18,Amelia,184.083,189.865,010600,audio file missing,audio file missing,audio file missing,audio file missing
-rabbit,3352,Bernstein,1717,18,Amelia,193.675,197.391,010600,audio file missing,audio file missing,audio file missing,audio file missing
-rabbit,3352,Bernstein,1717,18,Amelia,261.431,267.747,010600,audio file missing,audio file missing,audio file missing,audio file missing
-rabbit,3352,Bernstein,1717,18,Amelia,534.138,537.565,010600,audio file missing,audio file missing,audio file missing,audio file missing
-rabbit,3353,Bernstein,1717,20,Amelia,148.467,149.93,010800,audio file missing,audio file missing,audio file missing,audio file missing
-rabbit,3353,Bernstein,1717,20,Amelia,1227.895,1228.383,010800,audio file missing,audio file missing,audio file missing,audio file missing
-rabbit,3353,Bernstein,1717,20,Amelia,1412.024,1423.797,010800,audio file missing,audio file missing,audio file missing,audio file missing
-rabbit,3359,Bernstein,1725,22,Cindy,1208.836,1212.156,011000,audio file missing,audio file missing,audio file missing,audio file missing
-rabbit,3364,Bernstein,1730,21,Gail,1542.195,1543.1,010900,audio file missing,audio file missing,audio file missing,audio file missing
-rabbit,3364,Bernstein,1730,21,Gail,1727.25,1730.385,010900,audio file missing,audio file missing,audio file missing,audio file missing
-rabbit,3834,Peters,2338,21,Seth,740.164,742.644,010816,audio file missing,audio file missing,audio file missing,audio file missing
-rabbit,3834,Peters,2338,21,Seth,763.076,765.222,010816,audio file missing,audio file missing,audio file missing,audio file missing
-rabbit,3834,Peters,2338,21,Seth,786.194,786.937,010816,audio file missing,audio file missing,audio file missing,audio file missing
-rabbit,3834,Peters,2338,21,Seth,838.745,839.692,010816,audio file missing,audio file missing,audio file missing,audio file missing
-rabbit,3834,Peters,2338,21,Seth,841.263,843.408,010816,audio file missing,audio file missing,audio file missing,audio file missing
-rabbit,3835,Peters,2338,21,Seth,1180.397,1182.05,010822a,audio file missing,audio file missing,audio file missing,audio file missing
-rabbit,3835,Peters,2338,21,Seth,1257.549,1260.604,010822a,audio file missing,audio file missing,audio file missing,audio file missing
-rabbit,3837,Peters,2338,21,Seth,79.837,81.612,010901a,audio file missing,audio file missing,audio file missing,audio file missing
-rabbit,3831,Peters,2338,20,Seth,1430.664,1431.324,010802,audio file missing,audio file missing,audio file missing,audio file missing
-rabbit,3831,Peters,2338,20,Seth,1431.862,1434.341,010802,audio file missing,audio file missing,audio file missing,audio file missing
-rabbit,3831,Peters,2338,20,Seth,1447.837,1452.933,010802,audio file missing,audio file missing,audio file missing,audio file missing
-rabbit,3855,Peters,2338,23,Seth,77.153,78.518,011106a,audio file missing,audio file missing,audio file missing,audio file missing
-rabbit,3855,Peters,2338,23,Seth,79.344,80.747,011106a,audio file missing,audio file missing,audio file missing,audio file missing
-rabbit,3855,Peters,2338,23,Seth,80.747,82.233,011106a,audio file missing,audio file missing,audio file missing,audio file missing
-rabbit,3855,Peters,2338,23,Seth,84.173,85.714,011106a,audio file missing,audio file missing,audio file missing,audio file missing
-rabbit,3855,Peters,2338,23,Seth,86.236,89.496,011106a,audio file missing,audio file missing,audio file missing,audio file missing
-rabbit,3855,Peters,2338,23,Seth,91.149,92.18,011106a,audio file missing,audio file missing,audio file missing,audio file missing
-rabbit,3855,Peters,2338,23,Seth,107.884,108.527,011106a,audio file missing,audio file missing,audio file missing,audio file missing
-rabbit,3855,Peters,2338,23,Seth,118.103,119.672,011106a,audio file missing,audio file missing,audio file missing,audio file missing
-rabbit,3855,Peters,2338,23,Seth,126.194,127.763,011106a,audio file missing,audio file missing,audio file missing,audio file missing
-rabbit,3855,Peters,2338,23,Seth,128.877,129.62,011106a,audio file missing,audio file missing,audio file missing,audio file missing
-rabbit,3855,Peters,2338,23,Seth,131.273,132.964,011106a,audio file missing,audio file missing,audio file missing,audio file missing
-rabbit,3855,Peters,2338,23,Seth,133.624,135.276,011106a,audio file missing,audio file missing,audio file missing,audio file missing
-rabbit,3855,Peters,2338,23,Seth,135.815,136.575,011106a,audio file missing,audio file missing,audio file missing,audio file missing
-rabbit,3855,Peters,2338,23,Seth,139.568,140.023,011106a,audio file missing,audio file missing,audio file missing,audio file missing
-rabbit,3855,Peters,2338,23,Seth,151.085,151.707,011106a,audio file missing,audio file missing,audio file missing,audio file missing
-rabbit,3855,Peters,2338,23,Seth,161.654,163.883,011106a,audio file missing,audio file missing,audio file missing,audio file missing
-rabbit,3855,Peters,2338,23,Seth,173.171,174.863,011106a,audio file missing,audio file missing,audio file missing,audio file missing
-rabbit,3863,Peters,2338,24,Seth,736.107,737.388,011125a,audio file missing,audio file missing,audio file missing,audio file missing
-rabbit,3863,Peters,2338,24,Seth,737.388,739.162,011125a,audio file missing,audio file missing,audio file missing,audio file missing
-rabbit,3863,Peters,2338,24,Seth,739.162,741.391,011125a,audio file missing,audio file missing,audio file missing,audio file missing
-rabbit,3863,Peters,2338,24,Seth,742.423,744.447,011125a,audio file missing,audio file missing,audio file missing,audio file missing
-rabbit,3863,Peters,2338,24,Seth,749.815,751.422,011125a,audio file missing,audio file missing,audio file missing,audio file missing
-rabbit,3863,Peters,2338,24,Seth,776.11,779.165,011125a,audio file missing,audio file missing,audio file missing,audio file missing
-rabbit,3863,Peters,2338,24,Seth,780.112,781.97,011125a,audio file missing,audio file missing,audio file missing,audio file missing
-rabbit,3871,Peters,2338,25,Seth,257.514,259.576,020024a,audio file missing,audio file missing,audio file missing,audio file missing
-rabbit,3873,Peters,2338,25,Seth,1748.018,1749.96,020030a,audio file missing,audio file missing,audio file missing,audio file missing
+rabbit,3352,Bernstein,1717,18,Amelia,10.936,12.979,010600,261.81832945447843,206.74732899812344,333.0335367934552,-126.28620779533176
+rabbit,3352,Bernstein,1717,18,Amelia,45.139,49.295,010600,232.1563094896002,123.48197409974803,371.96079394174205,-248.47881984199404
+rabbit,3352,Bernstein,1717,18,Amelia,52.778,55.634,010600,242.6801340470044,195.78334117595512,308.3526502226414,-112.56930904668627
+rabbit,3352,Bernstein,1717,18,Amelia,55.634,60.116,010600,229.79293553455634,194.7971441617244,425.3169001283724,-230.51975596664803
+rabbit,3352,Bernstein,1717,18,Amelia,95.41,97.778,010600,209.3181032531219,189.71534191839982,250.7588137789549,-61.04347186055509
+rabbit,3352,Bernstein,1717,18,Amelia,118.838,122.762,010600,222.26367464267858,204.1648966583237,352.87201472818776,-148.70711806986407
+rabbit,3352,Bernstein,1717,18,Amelia,135.208,138.854,010600,198.88111336581053,174.7064360793714,234.36049062961285,-59.654054550241455
+rabbit,3352,Bernstein,1717,18,Amelia,144.845,149.651,010600,197.3083992547809,182.57088503028646,226.02607091257963,-43.455185882293165
+rabbit,3352,Bernstein,1717,18,Amelia,162.514,163.442,010600,257.7524875681727,224.36679620162815,309.1647290127551,-84.79793281112697
+rabbit,3352,Bernstein,1717,18,Amelia,184.083,189.865,010600,218.4029487265714,194.44182225817312,275.31431873928335,-80.87249648111023
+rabbit,3352,Bernstein,1717,18,Amelia,193.675,197.391,010600,237.53328635842212,168.5146592201667,411.06505568256716,-242.55039646240047
+rabbit,3352,Bernstein,1717,18,Amelia,261.431,267.747,010600,204.01248530332398,81.0293906845237,403.38845529843974,-322.359064613916
+rabbit,3352,Bernstein,1717,18,Amelia,534.138,537.565,010600,279.3265744273579,186.82919039826447,445.6749297515108,-258.8457393532463
+rabbit,3353,Bernstein,1717,20,Amelia,148.467,149.93,010800,195.5516718432582,74.35959696460463,246.1157003939239,-171.75610342931927
+rabbit,3353,Bernstein,1717,20,Amelia,1227.895,1228.383,010800,utterance too short to analyze,utterance too short to analyze,utterance too short to analyze,utterance too short to analyze
+rabbit,3353,Bernstein,1717,20,Amelia,1412.024,1423.797,010800,228.14390522518482,75.83647584959414,499.9656669165767,-424.12919106698257
+rabbit,3359,Bernstein,1725,22,Cindy,1208.836,1212.156,011000,201.4432454321178,85.11550561904744,255.25915173878647,-170.14364611973903
+rabbit,3364,Bernstein,1730,21,Gail,1542.195,1543.1,010900,205.20620670525142,181.93993045313223,309.28081783676225,-127.34088738363002
+rabbit,3364,Bernstein,1730,21,Gail,1727.25,1730.385,010900,258.75972241554575,204.50155842417755,455.9806080104166,-251.47904958623903
+rabbit,3834,Peters,2338,21,Seth,740.164,742.644,010816,170.4774376028561,103.15919135161893,496.1696694269979,-393.010478075379
+rabbit,3834,Peters,2338,21,Seth,763.076,765.222,010816,267.09072896757044,113.07786979666923,481.6117528641155,-368.53388306744625
+rabbit,3834,Peters,2338,21,Seth,786.194,786.937,010816,154.30064001893896,113.55626459399852,179.20835921031943,-65.65209461632091
+rabbit,3834,Peters,2338,21,Seth,838.745,839.692,010816,201.09485980248755,124.09882059787125,326.0441606201307,-201.94534002225944
+rabbit,3834,Peters,2338,21,Seth,841.263,843.408,010816,167.1408997632322,97.51956249525512,499.13733421166796,-401.61777171641285
+rabbit,3835,Peters,2338,21,Seth,1180.397,1182.05,010822a,229.55155172461676,109.89800393488453,478.85237831112596,-368.95437437624145
+rabbit,3835,Peters,2338,21,Seth,1257.549,1260.604,010822a,166.387212059464,96.2167267112309,494.61903185856875,-398.40230514733787
+rabbit,3837,Peters,2338,21,Seth,79.837,81.612,010901a,203.84367390960847,99.15353179868538,460.5139244475444,-361.36039264885903
+rabbit,3831,Peters,2338,20,Seth,1430.664,1431.324,010802,102.05173027983415,81.42683264016995,116.32374963973803,-34.89691699956808
+rabbit,3831,Peters,2338,20,Seth,1431.862,1434.341,010802,237.8707891349999,181.31317620552645,444.8556498313411,-263.54247362581464
+rabbit,3831,Peters,2338,20,Seth,1447.837,1452.933,010802,225.17994251931418,79.07932263069301,480.10305957065293,-401.0237369399599
+rabbit,3855,Peters,2338,23,Seth,77.153,78.518,011106a,221.5792867165483,98.47431603260101,496.7584356243646,-398.2841195917636
+rabbit,3855,Peters,2338,23,Seth,79.344,80.747,011106a,134.7894626064625,92.94549310667357,492.86245925112627,-399.9169661444527
+rabbit,3855,Peters,2338,23,Seth,80.747,82.233,011106a,193.93747357709998,100.76945810336446,467.59174658274304,-366.8222884793786
+rabbit,3855,Peters,2338,23,Seth,84.173,85.714,011106a,197.73111236814196,88.42070159292054,481.9430262010305,-393.52232460810995
+rabbit,3855,Peters,2338,23,Seth,86.236,89.496,011106a,138.96818439969002,92.7838076598544,469.4762996915366,-376.6924920316822
+rabbit,3855,Peters,2338,23,Seth,91.149,92.18,011106a,167.84010296521353,95.52215519609703,488.8592605625816,-393.3371053664846
+rabbit,3855,Peters,2338,23,Seth,107.884,108.527,011106a,160.2686449873018,103.44432638231876,390.8160873062849,-287.3717609239661
+rabbit,3855,Peters,2338,23,Seth,118.103,119.672,011106a,153.86155590688853,85.11574559662932,488.07933735365896,-402.96359175702963
+rabbit,3855,Peters,2338,23,Seth,126.194,127.763,011106a,173.72717564804833,95.21322669349362,467.0535161198269,-371.84028942633324
+rabbit,3855,Peters,2338,23,Seth,128.877,129.62,011106a,256.398337681939,127.69542084853752,400.37926915169953,-272.683848303162
+rabbit,3855,Peters,2338,23,Seth,131.273,132.964,011106a,174.84818323807778,104.97626718539065,496.29432078416056,-391.3180535987699
+rabbit,3855,Peters,2338,23,Seth,133.624,135.276,011106a,168.47591860138394,98.0292156239669,341.2405963916185,-243.2113807676516
+rabbit,3855,Peters,2338,23,Seth,135.815,136.575,011106a,181.99743942930888,98.73017974662628,439.44242470714914,-340.71224496052287
+rabbit,3855,Peters,2338,23,Seth,139.568,140.023,011106a,utterance too short to analyze,utterance too short to analyze,utterance too short to analyze,utterance too short to analyze
+rabbit,3855,Peters,2338,23,Seth,151.085,151.707,011106a,229.09208406381399,90.29661994103559,471.2458839087102,-380.9492639676746
+rabbit,3855,Peters,2338,23,Seth,161.654,163.883,011106a,190.75625138054298,85.35394168357591,458.9902966335572,-373.6363549499813
+rabbit,3855,Peters,2338,23,Seth,173.171,174.863,011106a,141.0628592091971,82.37924285511035,477.99575154396956,-395.6165086888592
+rabbit,3863,Peters,2338,24,Seth,736.107,737.388,011125a,249.773176928387,90.59051044601205,499.295481046767,-408.70497060075496
+rabbit,3863,Peters,2338,24,Seth,737.388,739.162,011125a,171.96010135461668,84.31113237210292,481.11958308972083,-396.8084507176179
+rabbit,3863,Peters,2338,24,Seth,739.162,741.391,011125a,244.55494415053798,80.19808908728808,461.1149439471655,-380.9168548598774
+rabbit,3863,Peters,2338,24,Seth,742.423,744.447,011125a,163.4303671342645,76.96483696326237,386.25514000672456,-309.2903030434622
+rabbit,3863,Peters,2338,24,Seth,749.815,751.422,011125a,268.2553145635998,81.26385994334638,467.24825306147795,-385.9843931181316
+rabbit,3863,Peters,2338,24,Seth,776.11,779.165,011125a,142.13122221040547,87.45454323647532,479.5697494870831,-392.11520625060774
+rabbit,3863,Peters,2338,24,Seth,780.112,781.97,011125a,173.09635689287504,98.89622562364791,499.1477127717406,-400.2514871480927
+rabbit,3871,Peters,2338,25,Seth,257.514,259.576,020024a,119.39556830535842,91.43499646740189,289.36866720789925,-197.93367074049735
+rabbit,3873,Peters,2338,25,Seth,1748.018,1749.96,020030a,184.0502717264749,116.53030181481273,268.3306251864474,-151.80032337163465
 rabbit,4189,Rollins,2538,12,Christopher,903.84,905.465,cr12,audio file missing,audio file missing,audio file missing,audio file missing
 rabbit,4208,Rollins,2535,9,NA,493.048,494.538,ds09,audio file missing,audio file missing,audio file missing,audio file missing
 rabbit,4205,Rollins,2535,6,NA,440.183,442.311,ds06,audio file missing,audio file missing,audio file missing,audio file missing
@@ -85,10 +85,10 @@ rabbit,4306,Rollins,2535,12,NA,1142.606,1143.693,st12,audio file missing,audio f
 rabbit,4306,Rollins,2535,12,NA,1147.998,1149.583,st12,audio file missing,audio file missing,audio file missing,audio file missing
 rabbit,4306,Rollins,2535,12,NA,1202.816,1203.701,st12,audio file missing,audio file missing,audio file missing,audio file missing
 rabbit,4306,Rollins,2535,12,NA,1203.701,1205.238,st12,audio file missing,audio file missing,audio file missing,audio file missing
-rabbit,4575,Gleason,2566,49,Andy,1878.809,1879.739,andy,audio file missing,audio file missing,audio file missing,audio file missing
-rabbit,4577,Gleason,2574,36,Charlie,166.604,167.719,charlie,audio file missing,audio file missing,audio file missing,audio file missing
-rabbit,4577,Gleason,2574,36,Charlie,171.268,173.58,charlie,audio file missing,audio file missing,audio file missing,audio file missing
-rabbit,4592,Gleason,2642,38,Susan,2252.976,2254.357,susan,audio file missing,audio file missing,audio file missing,audio file missing
+rabbit,4575,Gleason,2566,49,Andy,1878.809,1879.739,andy,relevant audio clip missing,relevant audio clip missing,relevant audio clip missing,relevant audio clip missing
+rabbit,4577,Gleason,2574,36,Charlie,166.604,167.719,charlie,205.58776874576932,78.51667958389734,375.35926176864217,-296.84258218474486
+rabbit,4577,Gleason,2574,36,Charlie,171.268,173.58,charlie,172.94541940703587,126.93485639973382,190.17360660817127,-63.23875020843745
+rabbit,4592,Gleason,2642,38,Susan,2252.976,2254.357,susan,--undefined--,--undefined--,--undefined--,--undefined--
 rabbit,4592,Gleason,2642,38,Susan,2255.845,2257.87,susan,audio file missing,audio file missing,audio file missing,audio file missing
 rabbit,4599,Gleason,2565,49,Andy,1669.45,1672.933,andy,audio file missing,audio file missing,audio file missing,audio file missing
 rabbit,6588,Bloom,3148,24,Peter,7636.414,7636.697,020010,audio file missing,audio file missing,audio file missing,audio file missing

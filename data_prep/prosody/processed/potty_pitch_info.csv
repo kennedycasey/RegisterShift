@@ -1,6 +1,6 @@
 item,transcript_id,corpus_name,speaker_id,age,target_child_name,media_start,media_end,audio_file,pitch_mean,pitch_min,pitch_max,pitch_range
 potty,3808,Peters,2338,17,Seth,31.379,32.18,010424a,135.24741901635684,75.04293764236843,144.92927469224858,-69.88633704988015
-potty,3808,Peters,2338,17,Seth,32.18,33.365,010424a,audio file missing,audio file missing,audio file missing,audio file missing
+potty,3808,Peters,2338,17,Seth,32.18,33.365,010424a,146.62362918897762,111.4310011520736,274.1253639794323,-162.69436282735867
 potty,3808,Peters,2338,17,Seth,46.318,47.34,010424a,audio file missing,audio file missing,audio file missing,audio file missing
 potty,3808,Peters,2338,17,Seth,80.646,82.712,010424a,audio file missing,audio file missing,audio file missing,audio file missing
 potty,3802,Peters,2338,16,Seth,1666.128,1668.601,010410a,audio file missing,audio file missing,audio file missing,audio file missing
