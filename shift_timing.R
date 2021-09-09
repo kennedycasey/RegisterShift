@@ -206,7 +206,6 @@ ggplot() +
   coord_cartesian(ylim=c(0, 1))
 ggsave("figs/ADL_over_time_with_adults.jpg")
 
-
 # Providence --------------------------------------------------------------
 providence_utterances <- childes_utterances %>%
   filter(corpus_name == "Providence" & speaker_role == "Target_Child") %>%
