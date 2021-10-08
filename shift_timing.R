@@ -81,6 +81,8 @@ childes_freq <- setNames(cbind(rownames(childes_freq), childes_freq, row.names =
 
 # generate prop plots
 # (for each time pt, what is the probability of producing CDL vs. ADL variant?)
+
+get_model_data <- list() 
 for (i in pairs) {
   CDL <- paste(gsub("_.*", "", i))
   ADL <- paste(gsub(".*_", "", i))
@@ -98,9 +100,15 @@ for (i in pairs) {
     distinct() %>%
     mutate(variant_numeric = case_when(
       variant == "CDL" ~ 0, 
-      variant == "ADL" ~ 1))
+      variant == "ADL" ~ 1), 
+      pair = i) 
   
   model_data_long <- model_data[rep(row.names(model_data), model_data$count), 1:5]
+  
+  get_model_data[[i]] <- model_data_long
+  
+  m <- glm(variant_numeric ~ age, data = model_data_long, family = binomial)
+  summary(m)
   
   plot <- model_data_long %>%
     group_by(age) %>%
@@ -133,6 +141,12 @@ for (i in pairs) {
   
   assign(paste(i), plot)
 }
+
+model_data <- do.call(rbind, get_model_data)
+
+m <- glmer(variant_numeric ~ age + (1|pair), data = model_data, 
+           family = binomial)
+summary(m)
 
 prop <- ggarrange(birdie_bird, blankie_blanket, bunny_rabbit, 
                   daddy_dad, doggy_dog, dolly_doll, duckie_duck, 
