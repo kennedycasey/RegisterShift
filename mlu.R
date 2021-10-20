@@ -23,14 +23,14 @@ pairs <- read_csv("data_prep/item_info.csv") %>%
 aoa <- read_csv("data_prep/item_info.csv") %>%
   select(word, aoa, pair, variant)
 
-colors <- c("CDL" = "#C1292E", "ADL" = "#235789")
+colors <- c("CDS" = "#C1292E", "ADS" = "#235789")
 
-CDL_variants <- read_csv("data_prep/item_info.csv") %>%
-  filter(variant=="CDL") %>%
+CDS_variants <- read_csv("data_prep/item_info.csv") %>%
+  filter(variant=="CDS") %>%
   pull(word)
 
-ADL_variants <- read_csv("data_prep/item_info.csv") %>%
-  filter(variant=="ADL") %>%
+ADS_variants <- read_csv("data_prep/item_info.csv") %>%
+  filter(variant=="ADS") %>%
   pull(word)
 
 # CHILDES -----------------------------------------------------------------
@@ -53,8 +53,8 @@ for(i in items){
       select(target_child_id, transcript_id, id, age, speaker_role, num_tokens) %>%
       mutate(item = paste0(i), 
              variant = case_when(
-               i %in% CDL_variants ~ "CDL", 
-               i %in% ADL_variants ~ "ADL"), 
+               i %in% CDS_variants ~ "CDS", 
+               i %in% ADS_variants ~ "ADS"), 
              pair = paste0((filter(pairs, word == i))$pair))
   }
   
@@ -67,8 +67,8 @@ for(i in items){
       select(target_child_id, transcript_id, id, age, speaker_role, num_tokens) %>%
       mutate(item = paste0(i), 
              variant = case_when(
-               i %in% CDL_variants ~ "CDL", 
-               i %in% ADL_variants ~ "ADL"), 
+               i %in% CDS_variants ~ "CDS", 
+               i %in% ADS_variants ~ "ADS"), 
              pair = paste0((filter(pairs, word == i))$pair))
   }
   
@@ -81,8 +81,8 @@ for(i in items){
       select(target_child_id, transcript_id, id, age, speaker_role, num_tokens) %>%
       mutate(item = paste0(i), 
              variant = case_when(
-               i %in% CDL_variants ~ "CDL", 
-               i %in% ADL_variants ~ "ADL"), 
+               i %in% CDS_variants ~ "CDS", 
+               i %in% ADS_variants ~ "ADS"), 
              pair = paste0((filter(pairs, word == i))$pair))
   }
   
@@ -92,8 +92,8 @@ for(i in items){
       select(target_child_id, transcript_id, id, age, speaker_role, num_tokens) %>%
       mutate(item = paste0(i), 
              variant = case_when(
-               i %in% CDL_variants ~ "CDL", 
-               i %in% ADL_variants ~ "ADL"), 
+               i %in% CDS_variants ~ "CDS", 
+               i %in% ADS_variants ~ "ADS"), 
              pair = paste0((filter(pairs, word == i))$pair))
   }
   
@@ -103,8 +103,8 @@ for(i in items){
       select(target_child_id, transcript_id, id, age, speaker_role, num_tokens) %>%
       mutate(item = paste0(i), 
              variant = case_when(
-               i %in% CDL_variants ~ "CDL", 
-               i %in% ADL_variants ~ "ADL"), 
+               i %in% CDS_variants ~ "CDS", 
+               i %in% ADS_variants ~ "ADS"), 
              pair = paste0((filter(pairs, word == i))$pair))
   }
   
@@ -113,23 +113,21 @@ for(i in items){
       select(target_child_id, transcript_id, id, age, speaker_role, num_tokens) %>%
       mutate(item = paste0(i), 
              variant = case_when(
-               i %in% CDL_variants ~ "CDL", 
-               i %in% ADL_variants ~ "ADL"), 
+               i %in% CDS_variants ~ "CDS", 
+               i %in% ADS_variants ~ "ADS"), 
              pair = paste0((filter(pairs, word == i))$pair))
   
   get_mlu[[i]] <- utts_w_target
 }
 
 mlu <- do.call(rbind, get_mlu) %>%
-  mutate(variant = factor(variant, levels = c("CDL", "ADL")), 
+  mutate(variant = factor(variant, levels = c("CDS", "ADS")), 
          variant_numeric = case_when(
-           variant == "CDL" ~ 0, 
-           variant == "ADL" ~ 1), 
+           variant == "CDS" ~ 0, 
+           variant == "ADS" ~ 1), 
          age_scaled = scale(age), 
          mlu_scaled = scale(num_tokens))
 
-
-# flip analysis structure
 m <- glmer(variant_numeric ~ mlu_scaled * age_scaled + (1|pair) + (1|target_child_id), 
            data = mlu, 
            family = binomial, 
@@ -147,7 +145,7 @@ ggplot() +
   #geom_ribbon(data=overall_trend, aes(x=x, ymin=predicted-conf.low, ymax=predicted+conf.low), 
               #fill="#235789", alpha=0.25) +
   #geom_line(data=overall_trend, aes(x=x, y=predicted), color="#235789", size = 2) +
-  labs(x = "Number of words in utterance (scaled)", y = "Probability of utterance containing ADL variant") +
+  labs(x = "Number of words in utterance (scaled)", y = "Probability of utterance containing ADS variant") +
   geom_hline(yintercept=0.5, linetype="dotted", size=1) +
   theme_test(base_size = 15) +
   theme(plot.title = element_text(hjust = 0.5)) +
@@ -191,13 +189,13 @@ ggplot() +
   geom_ribbon(data=overall_trend, aes(x=x, ymin=predicted-conf.low, ymax=predicted+conf.low), 
               fill="#235789", alpha=0.25) +
   #scale_x_continuous(limits = c(0, 84), breaks=seq(0, 84, by=12)) +
-  labs(x = "Age (months)", y = "Probability of producing ADL variant", 
+  labs(x = "Age (months)", y = "Probability of producing ADS variant", 
        title = "CHILDES") +
   geom_hline(yintercept=0.5, linetype="dotted", size=1) +
   theme_test(base_size = 15) +
   theme(plot.title = element_text(hjust = 0.5)) +
   coord_cartesian(ylim=c(0, 1))
-ggsave("figs/ADL_over_time_no_items.jpg")
+ggsave("figs/ADS_over_time_no_items.jpg")
 
 
 
@@ -210,9 +208,9 @@ summary(m)
 
 ggplot(mlu, aes(x = pair, y = num_tokens, color = variant, fill = variant)) +
   geom_jitter(alpha = 0.1) +
-  geom_half_violin(data = (filter(mlu, variant == "ADL")), aes(x = pair, y = num_tokens, color = variant, fill = variant), 
+  geom_half_violin(data = (filter(mlu, variant == "ADS")), aes(x = pair, y = num_tokens, color = variant, fill = variant), 
                    stat = "half_ydensity", side = "r", alpha = 0.5) +
-  geom_half_violin(data = (filter(mlu, variant == "CDL")), aes(x = pair, y = num_tokens, color = variant, fill = variant), 
+  geom_half_violin(data = (filter(mlu, variant == "CDS")), aes(x = pair, y = num_tokens, color = variant, fill = variant), 
                    stat = "half_ydensity", side = "l", alpha = 0.5) +
   scale_fill_manual(values = colors) +
   scale_color_manual(values = colors) +
@@ -250,7 +248,7 @@ ggplot(filter(mlu_by_session, mlu < 30), aes(x = age, y = mlu, color = variant, 
   theme(legend.position = "none", plot.title = element_text(hjust = 0.5))
 
 
-# higher MLUw for ADL variants
+# higher MLUw for ADS variants
 # increase in MLUw across time
 # negative interaction with time
 m <- lmer(num_tokens ~ variant*age + (1|item) + (1|target_child_id), data = mlu)
@@ -285,10 +283,10 @@ ggplot() +
   theme(legend.position = "none", plot.title = element_text(hjust = 0.5))
 ggsave("figs/mlu_overall.jpg", height = 5, width = 4, dpi = 300)
 
-# higher MLUw for ADL variants
+# higher MLUw for ADS variants
 t.test(mlu ~ variant, data = mlu_byword, paired = TRUE)
-shapiro.test(filter(mlu_byword, variant == "CDL")$mlu) #check for normality
-shapiro.test(filter(mlu_byword, variant == "ADL")$mlu) 
+shapiro.test(filter(mlu_byword, variant == "CDS")$mlu) #check for normality
+shapiro.test(filter(mlu_byword, variant == "ADS")$mlu) 
 
 mlu %>%
   group_by(item, age) %>%
@@ -311,6 +309,40 @@ mlu %>%
   theme(legend.position = "none", plot.title = element_text(hjust = 0.5))
 ggsave("figs/mlu_over_time.jpg", height = 5, width = 6, dpi = 300)
 
+
+early_pairs <- read_csv("data_prep/item_info.csv") %>%
+  filter(shift_type == "early") %>%
+  pull(pair)
+
+early_model <- glmer(variant_numeric ~ mlu_scaled * age_scaled + (1|target_child_id) + (1|pair),
+                     family = "binomial",
+                     control = glmerControl(optimizer="bobyqa"),
+                     data = filter(mlu, pair %in% early_pairs))
+summary(early_model)
+
+
+late_pairs <- read_csv("data_prep/item_info.csv") %>%
+  filter(shift_type == "late") %>%
+  pull(pair)
+
+late_model <- glmer(variant_numeric ~ mlu_scaled * age_scaled + (1|target_child_id) + (1|pair),
+                    family = "binomial",
+                    control = glmerControl(optimizer="bobyqa"),
+                    data = filter(mlu, pair %in% late_pairs))
+summary(late_model)
+
+
+never_pairs <- read_csv("data_prep/item_info.csv") %>%
+  filter(shift_type == "never") %>%
+  pull(pair)
+
+never_model <- glmer(variant_numeric ~ mlu_scaled * age_scaled + (1|target_child_id) + (1|pair),
+                     family = "binomial",
+                     control = glmerControl(optimizer="bobyqa"),
+                     data = filter(mlu, pair %in% never_pairs))
+summary(never_model)
+
+
 # Providence --------------------------------------------------------------
 utterances <- childes_utterances %>%
   filter(corpus_name == "Providence" & speaker_role != "Target_Child") %>% 
@@ -331,8 +363,8 @@ for(i in items){
       select(target_child_id, transcript_id, id, age, speaker_role, num_tokens) %>%
       mutate(item = paste0(i), 
              variant = case_when(
-               i %in% CDL_variants ~ "CDL", 
-               i %in% ADL_variants ~ "ADL"), 
+               i %in% CDS_variants ~ "CDS", 
+               i %in% ADS_variants ~ "ADS"), 
              pair = paste0((filter(pairs, word == i))$pair))
   }
   
@@ -345,8 +377,8 @@ for(i in items){
       select(target_child_id, transcript_id, id, age, speaker_role, num_tokens) %>%
       mutate(item = paste0(i), 
              variant = case_when(
-               i %in% CDL_variants ~ "CDL", 
-               i %in% ADL_variants ~ "ADL"), 
+               i %in% CDS_variants ~ "CDS", 
+               i %in% ADS_variants ~ "ADS"), 
              pair = paste0((filter(pairs, word == i))$pair))
   }
   
@@ -359,8 +391,8 @@ for(i in items){
       select(target_child_id, transcript_id, id, age, speaker_role, num_tokens) %>%
       mutate(item = paste0(i), 
              variant = case_when(
-               i %in% CDL_variants ~ "CDL", 
-               i %in% ADL_variants ~ "ADL"), 
+               i %in% CDS_variants ~ "CDS", 
+               i %in% ADS_variants ~ "ADS"), 
              pair = paste0((filter(pairs, word == i))$pair))
   }
   
@@ -370,8 +402,8 @@ for(i in items){
       select(target_child_id, transcript_id, id, age, speaker_role, num_tokens) %>%
       mutate(item = paste0(i), 
              variant = case_when(
-               i %in% CDL_variants ~ "CDL", 
-               i %in% ADL_variants ~ "ADL"), 
+               i %in% CDS_variants ~ "CDS", 
+               i %in% ADS_variants ~ "ADS"), 
              pair = paste0((filter(pairs, word == i))$pair))
   }
   
@@ -381,8 +413,8 @@ for(i in items){
       select(target_child_id, transcript_id, id, age, speaker_role, num_tokens) %>%
       mutate(item = paste0(i), 
              variant = case_when(
-               i %in% CDL_variants ~ "CDL", 
-               i %in% ADL_variants ~ "ADL"), 
+               i %in% CDS_variants ~ "CDS", 
+               i %in% ADS_variants ~ "ADS"), 
              pair = paste0((filter(pairs, word == i))$pair))
   }
   
@@ -391,17 +423,17 @@ for(i in items){
       select(target_child_id, transcript_id, id, age, speaker_role, num_tokens) %>%
       mutate(item = paste0(i), 
              variant = case_when(
-               i %in% CDL_variants ~ "CDL", 
-               i %in% ADL_variants ~ "ADL"), 
+               i %in% CDS_variants ~ "CDS", 
+               i %in% ADS_variants ~ "ADS"), 
              pair = paste0((filter(pairs, word == i))$pair))
   
   get_mlu[[i]] <- utts_w_target
 }
 
 mlu <- do.call(rbind, get_mlu)
-mlu$variant <- factor(mlu$variant, levels = c("CDL", "ADL"))
+mlu$variant <- factor(mlu$variant, levels = c("CDS", "ADS"))
 
-# MLUw NOT higher for ADL variants
+# MLUw NOT higher for ADS variants
 # increase in MLUw across time
 # null interaction with time
 m <- lmer(num_tokens ~ variant*age + (1|item) + (1|target_child_id), data = mlu)
@@ -436,10 +468,10 @@ ggplot() +
   theme(legend.position = "none", plot.title = element_text(hjust = 0.5))
 ggsave("figs/Providence/mlu_overall.jpg", height = 5, width = 4, dpi = 300)
 
-# higher MLUw for ADL variants
+# higher MLUw for ADS variants
 t.test(mlu ~ variant, data = mlu_byword, paired = TRUE)
-shapiro.test(filter(mlu_byword, variant == "CDL")$mlu) #check for normality
-shapiro.test(filter(mlu_byword, variant == "ADL")$mlu) 
+shapiro.test(filter(mlu_byword, variant == "CDS")$mlu) #check for normality
+shapiro.test(filter(mlu_byword, variant == "ADS")$mlu) 
 
 mlu %>%
   group_by(item, age) %>%
@@ -482,8 +514,8 @@ for(i in items){
       select(subject, session, line, age, speaker, num_tokens) %>%
       mutate(item = paste0(i), 
              variant = case_when(
-               i %in% CDL_variants ~ "CDL", 
-               i %in% ADL_variants ~ "ADL"), 
+               i %in% CDS_variants ~ "CDS", 
+               i %in% ADS_variants ~ "ADS"), 
              pair = paste0((filter(pairs, word == i))$pair))
   }
   
@@ -496,8 +528,8 @@ for(i in items){
       select(subject, session, line, age, speaker, num_tokens) %>%
       mutate(item = paste0(i), 
              variant = case_when(
-               i %in% CDL_variants ~ "CDL", 
-               i %in% ADL_variants ~ "ADL"), 
+               i %in% CDS_variants ~ "CDS", 
+               i %in% ADS_variants ~ "ADS"), 
              pair = paste0((filter(pairs, word == i))$pair))
   }
   
@@ -510,8 +542,8 @@ for(i in items){
       select(subject, session, line, age, speaker, num_tokens) %>%
       mutate(item = paste0(i), 
              variant = case_when(
-               i %in% CDL_variants ~ "CDL", 
-               i %in% ADL_variants ~ "ADL"), 
+               i %in% CDS_variants ~ "CDS", 
+               i %in% ADS_variants ~ "ADS"), 
              pair = paste0((filter(pairs, word == i))$pair))
   }
   
@@ -521,8 +553,8 @@ for(i in items){
       select(subject, session, line, age, speaker, num_tokens) %>%
       mutate(item = paste0(i), 
              variant = case_when(
-               i %in% CDL_variants ~ "CDL", 
-               i %in% ADL_variants ~ "ADL"), 
+               i %in% CDS_variants ~ "CDS", 
+               i %in% ADS_variants ~ "ADS"), 
              pair = paste0((filter(pairs, word == i))$pair))
   }
   
@@ -532,8 +564,8 @@ for(i in items){
       select(subject, session, line, age, speaker, num_tokens) %>%
       mutate(item = paste0(i), 
              variant = case_when(
-               i %in% CDL_variants ~ "CDL", 
-               i %in% ADL_variants ~ "ADL"), 
+               i %in% CDS_variants ~ "CDS", 
+               i %in% ADS_variants ~ "ADS"), 
              pair = paste0((filter(pairs, word == i))$pair))
   }
   
@@ -542,8 +574,8 @@ for(i in items){
       select(subject, session, line, age, speaker, num_tokens)  %>%
       mutate(item = paste0(i), 
              variant = case_when(
-               i %in% CDL_variants ~ "CDL", 
-               i %in% ADL_variants ~ "ADL"), 
+               i %in% CDS_variants ~ "CDS", 
+               i %in% ADS_variants ~ "ADS"), 
              pair = paste0((filter(pairs, word == i))$pair))
   
   get_mlu[[i]] <- utts_w_target
@@ -551,9 +583,9 @@ for(i in items){
 }
 
 mlu <- do.call(rbind, get_mlu)
-mlu$variant <- factor(mlu$variant, levels = c("CDL", "ADL"))
+mlu$variant <- factor(mlu$variant, levels = c("CDS", "ADS"))
 
-# higher MLUw for ADL variants
+# higher MLUw for ADS variants
 # increase in MLUw across time
 # trending negative interaction with time
 m <- lmer(num_tokens ~ variant*age + (1|item) + (1|subject), data = mlu)
@@ -588,10 +620,10 @@ ggplot() +
   theme(legend.position = "none", plot.title = element_text(hjust = 0.5))
 ggsave("figs/LDP/mlu_overall.jpg", height = 5, width = 4, dpi = 300)
 
-# higher MLUw for ADL variants
+# higher MLUw for ADS variants
 t.test(mlu ~ variant, data = mlu_byword, paired = TRUE)
-shapiro.test(filter(mlu_byword, variant == "CDL")$mlu) #check for normality
-shapiro.test(filter(mlu_byword, variant == "ADL")$mlu) 
+shapiro.test(filter(mlu_byword, variant == "CDS")$mlu) #check for normality
+shapiro.test(filter(mlu_byword, variant == "ADS")$mlu) 
 
 mlu %>%
   group_by(item, age) %>%
