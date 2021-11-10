@@ -1,6 +1,6 @@
 item,transcript_id,corpus_name,speaker_id,age,target_child_name,media_start,media_end,audio_file,pitch_mean,pitch_min,pitch_max,pitch_range
 night night,3363,Bernstein,1727,21,Dale,483.97,501.803,010900,,,,
-night night,4281,Rollins,2535,12,NA,1061.013,1063.353,nb12,,,,
+night night,4281,Rollins,2535,12,NA,1061.013,1063.353,NA,,,,
 night night,7986,Brent,3867,13,Timothy,2554.577,2556.12,010108,,,,
 night night,8030,Brent,3881,11,Henry,3350.276,3351.711,001115,,,,
 night night,8075,Nelson,3899,20,Emily,1273.533,1275.459,010719,,,,

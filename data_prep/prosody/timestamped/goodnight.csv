@@ -2,7 +2,7 @@ item,transcript_id,corpus_name,speaker_id,age,target_child_name,media_start,medi
 goodnight,3360,Bernstein,1725,24,Cindy,717.572,718.826,020000,,,,
 goodnight,3363,Bernstein,1727,21,Dale,1078.85,1079.477,010900,,,,
 goodnight,3872,Peters,2338,25,Seth,1814.754,1815.376,020024b,,,,
-goodnight,4248,Rollins,2535,12,NA,1153.723,1156.568,jp12,,,,
+goodnight,4248,Rollins,2535,12,NA,1153.723,1156.568,NA,,,,
 goodnight,4558,Gleason,2589,36,Guy,731.898,734.476,guy,,,,
 goodnight,4569,Gleason,2624,51,Theresa,1095.026,1096.756,theresa,,,,
 goodnight,6587,Bloom,3148,24,Peter,2648.532,2649.481,011117,,,,

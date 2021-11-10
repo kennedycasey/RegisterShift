@@ -3,10 +3,48 @@ library(data.table)
 library(tidyverse)
 
 # get transcript ids and linked audio file names
-transcripts <- get_transcripts(collection = "Eng-NA") %>%
+raw_transcripts <- get_transcripts(collection = "Eng-NA") %>%
   filter(target_child_age < 84) %>%
-  mutate(audio_file = str_remove(gsub('.*\\/', '', filename), '.xml')) %>%
+  mutate(audio_file = str_remove(gsub('.*\\/', '', filename), '.xml'))
+
+# fix individual corpora from metadata
+## rm target child last names
+brent_transcripts <- raw_transcripts %>%
+  filter(corpus_name == "Brent") %>%
+  select(transcript_id, corpus_name, target_child_name, audio_file) %>%
+  mutate(target_child_name = ifelse(
+    str_detect(target_child_name, "_"), str_remove(target_child_name, regex("_[^_]+$")), 
+    target_child_name))
+
+## replace audio files to avoid double indexing
+gleason <- read_csv("data_prep/prosody/childes-audio-matching/gleason.csv") %>%
+  select(corpus_name, target_child_name, pid, audio_file)
+
+gleason_transcripts <- raw_transcripts %>%
+  filter(corpus_name == "Gleason") %>%
+  select(-audio_file) %>%
+  left_join(gleason, by = c("corpus_name", "target_child_name", "pid")) %>%
   select(transcript_id, corpus_name, target_child_name, audio_file)
+
+## add target child names
+rollins <- read_csv("data_prep/prosody/childes-audio-matching/rollins.csv")
+
+rollins_transcripts <- raw_transcripts %>%
+  filter(corpus_name == "Rollins") %>%
+  select(-target_child_name) %>%
+  left_join(rollins, by = c("corpus_name", "audio_file")) %>%
+  select(transcript_id, corpus_name, target_child_name, audio_file)
+
+## fix target child names
+newmanratner_transcripts <- raw_transcripts %>%
+  filter(corpus_name == "NewmanRatner")
+
+# merge all corpora
+`%notin%` <- Negate(`%in%`)
+transcripts <- raw_transcripts %>%
+  filter(corpus_name %notin% c("Brent", "Gleason", "Rollins")) %>%
+  select(transcript_id, corpus_name, target_child_name, audio_file) %>%
+  bind_rows(brent_transcripts, gleason_transcripts, rollins_transcripts)
 
 # get timestamped utterances containing target word
 childes_utterances = data.table(get_utterances(collection = "Eng-NA"))

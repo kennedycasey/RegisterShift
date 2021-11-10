@@ -1,12 +1,12 @@
 wd_timestamped$ = "timestamped/"
-wd_audio$ = "/Volumes/DRIVE/CHILDES/"
+wd_audio$ = "/Volumes/MEDIA/CHILDES/"
 
 file_list = Create Strings as file list: "file_list", wd_timestamped$
 
 selectObject: file_list
 n_files = Get number of strings
 
-for f from 28 to n_files
+for f from 1 to n_files
 	
 	selectObject: file_list
 	onset_offset$ = Get string: f
