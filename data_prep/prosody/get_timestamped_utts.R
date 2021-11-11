@@ -26,6 +26,19 @@ gleason_transcripts <- raw_transcripts %>%
   left_join(gleason, by = c("corpus_name", "target_child_name", "pid")) %>%
   select(transcript_id, corpus_name, target_child_name, audio_file)
 
+
+## fix target child names and audio file names
+newmanratner_transcripts <- raw_transcripts %>%
+  filter(corpus_name == "NewmanRatner") %>%
+  mutate(target_child_name = audio_file,
+         audio_file = paste0(audio_file, "-", 
+                             str_remove_all(
+                               str_extract(filename, '/([0-9][0-9])/'), '/'))) %>%
+  mutate(target_child_name = ifelse(target_child_name == "5224EZ", "5224EZS", 
+                                    ifelse(target_child_name == "577LBE", "577LE", 
+                                           target_child_name))) %>%
+  select(transcript_id, corpus_name, target_child_name, audio_file) 
+
 ## add target child names
 rollins <- read_csv("data_prep/prosody/childes-audio-matching/rollins.csv")
 
@@ -35,16 +48,13 @@ rollins_transcripts <- raw_transcripts %>%
   left_join(rollins, by = c("corpus_name", "audio_file")) %>%
   select(transcript_id, corpus_name, target_child_name, audio_file)
 
-## fix target child names
-newmanratner_transcripts <- raw_transcripts %>%
-  filter(corpus_name == "NewmanRatner")
 
 # merge all corpora
 `%notin%` <- Negate(`%in%`)
 transcripts <- raw_transcripts %>%
-  filter(corpus_name %notin% c("Brent", "Gleason", "Rollins")) %>%
+  filter(corpus_name %notin% c("Brent", "Gleason", "NewmanRatner", "Rollins")) %>%
   select(transcript_id, corpus_name, target_child_name, audio_file) %>%
-  bind_rows(brent_transcripts, gleason_transcripts, rollins_transcripts)
+  bind_rows(brent_transcripts, gleason_transcripts, newmanratner_transcripts, rollins_transcripts)
 
 # get timestamped utterances containing target word
 childes_utterances = data.table(get_utterances(collection = "Eng-NA"))
@@ -56,19 +66,6 @@ utterances <- childes_utterances %>%
 
 items <- read_csv("data_prep/item_info.csv") %>%
   pull(word)
-
-CDL_forms <- read_csv("data_prep/item_info.csv") %>%
-  filter(form == "CDL") %>%
-  pull(word)
-
-ads_forms <- read_csv("data_prep/item_info.csv") %>%
-  filter(form == "ADL") %>%
-  pull(word)
-
-pairs <- read_csv("data_prep/item_info.csv") %>%
-  select(word, pair)
-
-colors <- c("ids" = "#C1292E", "ads" = "#235789")
 
 for(i in items){
   
@@ -129,14 +126,16 @@ for (i in items){
       filter(!is.na(night.night)) %>%
       mutate(item = paste0(i)) %>%
       select(item, transcript_id, corpus_name, speaker_id,
-             age, target_child_name, media_start, media_end)
+             age, target_child_name, target_child_id, 
+             media_start, media_end)
   }
   
   else subset <- timestamped %>%
     filter(!is.na(eval(as.symbol(i)))) %>%
     mutate(item = paste0(i)) %>%
-    select(item, transcript_id, corpus_name, speaker_id,
-             age, target_child_name, media_start, media_end)
+      select(item, transcript_id, corpus_name, speaker_id,
+             age, target_child_name, target_child_id, 
+             media_start, media_end)
   
   get_timestamped_utts[[i]] <- subset
 }
@@ -144,7 +143,8 @@ for (i in items){
 for(i in items) {
   timestamped <- do.call(rbind, get_timestamped_utts) %>%
     filter(item == i) %>%
-    left_join(transcripts, by = c("transcript_id", "corpus_name", "target_child_name")) %>%
+    select(-target_child_name) %>%
+    left_join(transcripts, by = c("transcript_id", "corpus_name")) %>%
     # add empty columns to be populated when running praat script
     mutate(pitch_mean = "", 
            pitch_min = "", 
