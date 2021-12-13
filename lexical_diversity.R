@@ -20,20 +20,20 @@ pairs <- read_csv("data_prep/item_info.csv") %>%
 aoa <- read_csv("data_prep/item_info.csv") %>%
   select(word, aoa, pair, variant)
 
-colors <- c("CDL" = "#C1292E", "ADL" = "#235789")
+colors <- c("CDS" = "#C1292E", "ADS" = "#235789")
 
-CDL_variants <- read_csv("data_prep/item_info.csv") %>%
-  filter(variant=="CDL") %>%
+CDS_variants <- read_csv("data_prep/item_info.csv") %>%
+  filter(variant=="CDS") %>%
   pull(word)
 
-ADL_variants <- read_csv("data_prep/item_info.csv") %>%
-  filter(variant=="ADL") %>%
+ADS_variants <- read_csv("data_prep/item_info.csv") %>%
+  filter(variant=="ADS") %>%
   pull(word)
 
 
 # CHILDES -----------------------------------------------------------------
 utterances <- childes_utterances %>%
-  filter(target_child_age < 84 & speaker_role != "Target_Child") %>%
+  filter(target_child_age < 84 & speaker_role == "Target_Child") %>%
   mutate(gloss = paste0(' ', tolower(gloss), ' '), 
          age = round(target_child_age, digits = 0))
 
@@ -51,8 +51,8 @@ for(i in items){
       select(target_child_id, transcript_id, id, age, speaker_id, speaker_role, num_tokens, gloss) %>%
       mutate(item = paste0(i), 
              variant = case_when(
-               i %in% CDL_variants ~ "CDL", 
-               i %in% ADL_variants ~ "ADL"), 
+               i %in% CDS_variants ~ "CDS", 
+               i %in% ADS_variants ~ "ADS"), 
              pair = paste0((filter(pairs, word == i))$pair))
   }
   
@@ -65,8 +65,8 @@ for(i in items){
       select(target_child_id, transcript_id, id, age, speaker_id, speaker_role, num_tokens, gloss) %>%
       mutate(item = paste0(i), 
              variant = case_when(
-               i %in% CDL_variants ~ "CDL", 
-               i %in% ADL_variants ~ "ADL"), 
+               i %in% CDS_variants ~ "CDS", 
+               i %in% ADS_variants ~ "ADS"), 
              pair = paste0((filter(pairs, word == i))$pair))
   }
   
@@ -79,8 +79,8 @@ for(i in items){
       select(target_child_id, transcript_id, id, age, speaker_id, speaker_role, num_tokens, gloss) %>%
       mutate(item = paste0(i), 
              variant = case_when(
-               i %in% CDL_variants ~ "CDL", 
-               i %in% ADL_variants ~ "ADL"), 
+               i %in% CDS_variants ~ "CDS", 
+               i %in% ADS_variants ~ "ADS"), 
              pair = paste0((filter(pairs, word == i))$pair))
   }
   
@@ -90,8 +90,8 @@ for(i in items){
       select(target_child_id, transcript_id, id, age, speaker_id, speaker_role, num_tokens, gloss) %>%
       mutate(item = paste0(i), 
              variant = case_when(
-               i %in% CDL_variants ~ "CDL", 
-               i %in% ADL_variants ~ "ADL"), 
+               i %in% CDS_variants ~ "CDS", 
+               i %in% ADS_variants ~ "ADS"), 
              pair = paste0((filter(pairs, word == i))$pair))
   }
   
@@ -101,8 +101,8 @@ for(i in items){
       select(target_child_id, transcript_id, id, age, speaker_id, speaker_role, num_tokens, gloss) %>%
       mutate(item = paste0(i), 
              variant = case_when(
-               i %in% CDL_variants ~ "CDL", 
-               i %in% ADL_variants ~ "ADL"), 
+               i %in% CDS_variants ~ "CDS", 
+               i %in% ADS_variants ~ "ADS"), 
              pair = paste0((filter(pairs, word == i))$pair))
   }
   
@@ -111,8 +111,8 @@ for(i in items){
       select(target_child_id, transcript_id, id, age, speaker_id, speaker_role, num_tokens, gloss) %>%
       mutate(item = paste0(i), 
              variant = case_when(
-               i %in% CDL_variants ~ "CDL", 
-               i %in% ADL_variants ~ "ADL"), 
+               i %in% CDS_variants ~ "CDS", 
+               i %in% ADS_variants ~ "ADS"), 
              pair = paste0((filter(pairs, word == i))$pair))
   
   get_utts[[i]] <- utts_w_target
@@ -195,6 +195,9 @@ ordered_utts_w_context <- ordered_utts %>%
          gloss_grouped = str_remove_all(paste(preceding_gloss, gloss, following_gloss), " xxx|xxx |xxx| yyy|yyy |yyy")) %>%
   filter(str_detect(gloss_grouped, "<>", negate = TRUE))
 
+ordered_utts_w_context <- ordered_utts %>%
+  mutate(gloss_grouped = str_remove_all(paste0(" ", trimws(gloss), " "), " xxx | yyy "))
+
 merged_utts <- ordered_utts_w_context %>%
   select(id, speaker_id, utterance, gloss_grouped) %>%
   right_join(utts, by = c("id", "speaker_id")) %>%
@@ -221,18 +224,18 @@ for (i in unique(merged_utts$iteration)) {
 ttr <- do.call(rbind, get_types) %>%
   right_join(merged_utts, by = "iteration") %>%
   mutate(ttr = type_count/token_count*100, 
-         variant = factor(variant, levels = c("CDL", "ADL")), 
+         variant = factor(variant, levels = c("CDS", "ADS")), 
          variant_numeric = case_when(
-           variant == "CDL" ~ 0, 
-           variant == "ADL" ~ 1), 
+           variant == "CDS" ~ 0, 
+           variant == "ADS" ~ 1), 
          ttr_scaled = scale(ttr), 
          age_scaled = scale(age))
 
-#ttr$variant <- factor(ttr$variant, levels = c("CDL", "ADL"))
+#ttr$variant <- factor(ttr$variant, levels = c("CDS", "ADS"))
 
 
 # flip analysis structure
-m <- glmer(variant_numeric ~ ttr_scaled * age_scaled + (1|pair) + (1|target_child_id), 
+m <- glmer(variant_numeric ~ ttr_scaled * age_scaled + (1 + ttr_scaled * age_scaled|pair) + (1 + ttr_scaled * age_scaled|speaker_id), 
            data = ttr, 
            family = binomial, 
            control = glmerControl(optimizer = "bobyqa"))
@@ -246,7 +249,7 @@ ggplot() +
   #geom_ribbon(data=overall_trend, aes(x=x, ymin=predicted-conf.low, ymax=predicted+conf.low), 
               #fill="#235789", alpha=0.25) +
   #geom_line(data=overall_trend, aes(x=x, y=predicted), color="#235789", size = 2) +
-  labs(x = "TTR for +/- 1 utterance (scaled)", y = "Probability of utterance containing ADL variant") +
+  labs(x = "TTR for +/- 1 utterance (scaled)", y = "Probability of utterance containing ADS variant") +
   geom_hline(yintercept=0.5, linetype="dotted", size=1) +
   theme_test(base_size = 15) +
   theme(plot.title = element_text(hjust = 0.5)) +
@@ -291,8 +294,8 @@ ggsave("figs/lexical_diversity_overall.jpg", height = 5, width = 4, dpi = 300)
 
 # no difference in TTR
 wilcox.test(ttr ~ variant, data = ttr_byword, paired = TRUE)
-shapiro.test(filter(ttr_byword, variant == "CDL")$ttr) #check for normality
-shapiro.test(filter(ttr_byword, variant == "ADL")$ttr) 
+shapiro.test(filter(ttr_byword, variant == "CDS")$ttr) #check for normality
+shapiro.test(filter(ttr_byword, variant == "ADS")$ttr) 
 
 ttr %>%
   group_by(item, age) %>%

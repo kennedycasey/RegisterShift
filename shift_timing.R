@@ -8,7 +8,7 @@ library(ggeffects)
 
 # read in childes and ldp data
 childes_utterances = data.table(get_utterances(collection = "Eng-NA"))
-ldp_utterances <- read.csv("~/Desktop/secure/ldp_data_prepped.csv") 
+#ldp_utterances <- read.csv("~/Desktop/secure/ldp_data_prepped.csv") 
 
 # set overall parameters
 items <- read_csv("data_prep/item_info.csv") %>%
@@ -104,7 +104,7 @@ for (i in pairs) {
       variant == "ADS" ~ 1), 
       pair = paste0(i)) 
   
-  model_data_long <- model_data[rep(row.names(model_data), model_data$count), 1:5]
+  model_data_long <- model_data[rep(row.names(model_data), model_data$count)]
   
   get_model_data[[i]] <- model_data_long
   
@@ -145,9 +145,14 @@ for (i in pairs) {
 
 model_data <- do.call(rbind, get_model_data)
 
-m <- glmer(variant_numeric ~ age + (1|pair), data = model_data, 
+m <- glmer(variant_numeric ~ age + (1 + age|pair), data = model_data, 
            family = binomial)
 summary(m)
+
+for (i in unique(pairs)) {
+  model_data_pair <- model_data %>%
+    filter(pair == i)
+}
 
 prop <- ggarrange(birdie_bird, blankie_blanket, bunny_rabbit, 
                   daddy_dad, doggy_dog, dolly_doll, duckie_duck, 
@@ -161,7 +166,7 @@ annotate_figure(prop,
                 left = text_grob("Proportion of tokens per variant", rot = 90, size = 25, face = "bold"), 
                 bottom = text_grob("Age (months)", size = 25, face = "bold"))
 
-ggsave("figs/byItem_variants_over_time.jpg", height = 10, width = 20, dpi = 300)
+#ggsave("figs/byItem_variants_over_time.jpg", height = 10, width = 20, dpi = 300)
 
 # generate summary prop plot
 model_data_list = list()
@@ -214,7 +219,9 @@ ggplot() +
   theme_test(base_size = 15) +
   theme(plot.title = element_text(hjust = 0.5)) +
   coord_cartesian(ylim=c(0, 1))
-ggsave("figs/ADS_over_time.jpg")
+#ggsave("figs/ADS_over_time.jpg")
+
+
 
 
 
@@ -235,15 +242,21 @@ early_trend <- ggpredict(early_model, c("age [all]"), type = "random")
 early <- ggplot() + 
   geom_smooth((data=filter(model_data_long, pair %in% early_pairs)), mapping = aes(x=age, y=variant_numeric, group=pair), 
               method="glm", method.args=list(family = "binomial"), 
-              color="#F5F5F5", se=FALSE) +
+              color="#EDEDED", se=FALSE) +
   geom_ribbon(data=early_trend, aes(x=x, ymin=predicted-conf.low, ymax=predicted+conf.low), 
               fill="#235789", alpha=0.25) +
   geom_line(data=early_trend, aes(x=x, y=predicted), color="#235789", size = 2) +
+  geom_text_repel(data=filter(intercepts, pair %in% early_pairs), aes(x=x, y=predicted, label=pair), 
+                  color="#808080", 
+                  nudge_x = -0.5, 
+                  nudge_y = 0.01, 
+                  segment.color = "transparent", 
+                  size = 5) +
   scale_x_continuous(limits = c(0, 84), breaks=seq(0, 84, by=12)) +
   labs(x = "Age (months)", y = "Probability of producing ADS variant", 
        title = "Early shift to ADS") +
   geom_hline(yintercept=0.5, linetype="dotted", size=1) +
-  theme_test(base_size = 15) +
+  theme_test(base_size = 25) +
   theme(plot.title = element_text(hjust = 0.5), 
         axis.title = element_blank()) +
   coord_cartesian(ylim=c(0, 1))
@@ -255,7 +268,7 @@ late_pairs <- read_csv("data_prep/item_info.csv") %>%
 late_model <- glmer(variant_numeric ~ scale(age) + (1|pair) + (1|total_tokens),
                      family = "binomial",
                      control = glmerControl(optimizer="bobyqa"),
-                     data = filter(model_data_long, pair %in% late_pairs))
+                     data = (model_data_long %>% filter(pair %in% late_pairs)))
 summary(late_model)
 
 late_trend <- ggpredict(late_model, c("age [all]"), type = "random")
@@ -264,15 +277,21 @@ late_trend <- ggpredict(late_model, c("age [all]"), type = "random")
 late <- ggplot() + 
   geom_smooth((data=filter(model_data_long, pair %in% late_pairs)), mapping = aes(x=age, y=variant_numeric, group=pair), 
               method="glm", method.args=list(family = "binomial"), 
-              color="#F5F5F5", se=FALSE) +
+              color="#EDEDED", se=FALSE) +
   geom_ribbon(data=late_trend, aes(x=x, ymin=predicted-conf.low, ymax=predicted+conf.low), 
               fill="#235789", alpha=0.25) +
   geom_line(data=late_trend, aes(x=x, y=predicted), color="#235789", size = 2) +
+  geom_text_repel(data=filter(intercepts, pair %in% late_pairs), aes(x=x, y=predicted, label=pair), 
+                  color="#808080", 
+                  nudge_x = -0.5, 
+                  nudge_y = 0.01, 
+                  segment.color = "transparent", 
+                  size = 5) +
   scale_x_continuous(limits = c(0, 84), breaks=seq(0, 84, by=12)) +
   labs(x = "Age (months)", y = "Probability of producing ADS variant", 
        title = "Late shift to ADS") +
   geom_hline(yintercept=0.5, linetype="dotted", size=1) +
-  theme_test(base_size = 15) +
+  theme_test(base_size = 25) +
   theme(plot.title = element_text(hjust = 0.5), 
         axis.title = element_blank()) +
   coord_cartesian(ylim=c(0, 1))
@@ -291,27 +310,59 @@ summary(never_model)
 never_trend <- ggpredict(never_model, c("age [all]"), type = "random")
 
 
+labels <- model_data_long %>%
+  group_by(pair) %>%
+  mutate(min_age = min(age)) %>%
+  ungroup() %>%
+  select(pair, min_age) %>%
+  distinct()
+
+get_intercepts_list <- list()
+for (i in unique(pairs)) {
+  m <- glm(variant_numeric ~ age, 
+           data = filter(model_data_long, pair == i), 
+           family = "binomial")
+  
+  get_intercepts <- ggpredict(m, c("age [all]"), type = "re") %>%
+    mutate(pair = paste0(i))
+  
+  get_intercepts_list[[i]] <- get_intercepts
+}
+
+intercepts <- do.call(rbind, get_intercepts_list) %>%
+  left_join(labels, by = "pair") %>% 
+  filter(x == min_age)
+
+m <- glm(variant_numeric ~ age, data = model_data_long, family = "binomial")
+summary(m)
+
 never <- ggplot() + 
   geom_smooth((data=filter(model_data_long, pair %in% never_pairs)), mapping = aes(x=age, y=variant_numeric, group=pair), 
               method="glm", method.args=list(family = "binomial"), 
-              color="#F5F5F5", se=FALSE) +
+              color="#EDEDED", se=FALSE) +
   geom_ribbon(data=never_trend, aes(x=x, ymin=predicted-conf.low, ymax=predicted+conf.low), 
               fill="#235789", alpha=0.25) +
   geom_line(data=never_trend, aes(x=x, y=predicted), color="#235789", size = 2) +
+  geom_text_repel(data=filter(intercepts, pair %in% never_pairs), aes(x=x, y=predicted, label=pair), 
+                  color="#808080", 
+                  nudge_x = -0.5, 
+                  nudge_y = 0.01, 
+                  segment.color = "transparent",
+                  size = 5) +
   scale_x_continuous(limits = c(0, 84), breaks=seq(0, 84, by=12)) +
-  labs(x = "Age (months)", y = "Probability of producing ADS variant", 
-       title = "ADS always dominates") +
+  labs(x = "Age (months)", y = "Probability of producing ADS form", 
+       title = "ADS dominates from the start") +
   geom_hline(yintercept=0.5, linetype="dotted", size=1) +
-  theme_test(base_size = 15) +
+  theme_test(base_size = 25) +
   theme(plot.title = element_text(hjust = 0.5), 
         axis.title = element_blank()) +
   coord_cartesian(ylim=c(0, 1))
 
 shift_types <- ggarrange(early, late, never, nrow = 1)
 
-annotate_figure(shift_types, left = textGrob("Probability of producing ADS variant", rot = 90, vjust = 1, gp = gpar(cex = 1.7)),
-                bottom = textGrob("Age (months)", gp = gpar(cex = 1.7)))
-ggsave("figs/shift_types.jpg", width = 15.76, height = 8.42)
+annotate_figure(shift_types, left = textGrob("Probability of producing ADS form", rot = 90, vjust = 1, gp = gpar(cex = 2.5)),
+                bottom = textGrob("Age (months)", gp = gpar(cex = 2.5)))
+ggsave("figs/shift_types.jpg", width = 20, height = 9)
 
 
 

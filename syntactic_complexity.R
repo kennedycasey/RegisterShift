@@ -38,8 +38,8 @@ utterances <- childes_utterances %>%
          age = round(target_child_age, digits = 0))
 
 # create empty list to be populated
-get_mlu <- list() 
-# loop over all items to get num_tokens for all utterances containing a target word
+get_verbs <- list() 
+# loop over all items to get part of speech for all utterances containing a target word
 for (i in items) {
   if (str_detect(i, "ey")) {
     root <- paste(gsub("ey", "", i))
@@ -48,7 +48,7 @@ for (i in items) {
       filter(str_detect(gloss, regex(paste0(" ", root, "ey | ", root, "ie | ",
                                                          root, "eys | ", root, "ies | ",
                                                          root, "ey's | ", root, "ie's ")))) %>%
-      select(target_child_id, transcript_id, id, age, speaker_role, speaker_id, num_tokens) %>%
+      select(target_child_id, transcript_id, id, age, speaker_role, speaker_id, num_tokens, part_of_speech) %>%
       mutate(item = paste0(i), 
              form = case_when(
                i %in% CDS_forms ~ "CDS", 
@@ -62,7 +62,7 @@ for (i in items) {
       filter(str_detect(gloss, regex(paste0(" ", root, "y | ", root, "ie | ",
                                                          root, "ys | ", root, "ies | ",
                                                          root, "y's | ", root, "ie's ")))) %>%
-      select(target_child_id, transcript_id, id, age, speaker_role, speaker_id, num_tokens) %>%
+      select(target_child_id, transcript_id, id, age, speaker_role, speaker_id, num_tokens, part_of_speech) %>%
       mutate(item = paste0(i), 
              form = case_when(
                i %in% CDS_forms ~ "CDS", 
@@ -76,7 +76,7 @@ for (i in items) {
       filter(str_detect(gloss, regex(paste0(" ", root, "y | ", root, "ie | ",
                                                          root, "ys | ", root, "ies | ",
                                                          root, "y's | ", root, "ie's ")))) %>%
-      select(target_child_id, transcript_id, id, age, speaker_role, speaker_id, num_tokens) %>%
+      select(target_child_id, transcript_id, id, age, speaker_role, speaker_id, num_tokens, part_of_speech) %>%
       mutate(item = paste0(i), 
              form = case_when(
                i %in% CDS_forms ~ "CDS", 
@@ -87,7 +87,7 @@ for (i in items) {
   else if (i == "night night") {
     utts_w_target <- utterances %>%
       filter(str_detect(gloss, regex(paste0(" night night | night-night | night nights | night-nights ")))) %>%
-      select(target_child_id, transcript_id, id, age, speaker_role, speaker_id, num_tokens) %>%
+      select(target_child_id, transcript_id, id, age, speaker_role, speaker_id, num_tokens, part_of_speech) %>%
       mutate(item = paste0(i), 
              form = case_when(
                i %in% CDS_forms ~ "CDS", 
@@ -98,7 +98,7 @@ for (i in items) {
   else if (i == "goodnight") {
     utts_w_target <- utterances %>%
       filter(str_detect(gloss, regex(paste0(" goodnight | good night | good-night ")))) %>%
-      select(target_child_id, transcript_id, id, age, speaker_role, speaker_id, num_tokens) %>%
+      select(target_child_id, transcript_id, id, age, speaker_role, speaker_id, num_tokens, part_of_speech) %>%
       mutate(item = paste0(i), 
              form = case_when(
                i %in% CDS_forms ~ "CDS", 
@@ -108,29 +108,31 @@ for (i in items) {
   
   else utts_w_target <- utterances %>%
       filter(str_detect(gloss, regex(paste0(" ", i, " | ", i, "s | ", i, "'s ")))) %>%
-      select(target_child_id, transcript_id, id, age, speaker_role, speaker_id, num_tokens) %>%
+      select(target_child_id, transcript_id, id, age, speaker_role, speaker_id, num_tokens, part_of_speech) %>%
       mutate(item = paste0(i), 
              form = case_when(
                i %in% CDS_forms ~ "CDS", 
                i %in% ADS_forms ~ "ADS"), 
              pair = paste0((filter(pairs, word == i))$pair))
   
-  get_mlu[[i]] <- utts_w_target
+  get_verbs[[i]] <- utts_w_target
 }
 
-mlu <- do.call(rbind, get_mlu) %>%
+verbs <- do.call(rbind, get_verbs) %>%
   mutate(form = factor(form, levels = c("CDS", "ADS")), 
          form_numeric = case_when(
            form == "CDS" ~ 0, 
            form == "ADS" ~ 1), 
+         part_of_speech = paste0(" ", trimws(part_of_speech), " "), 
+         n_verbs = str_count(part_of_speech, " v "),
          age_scaled = scale(age), 
-         mlu_scaled = scale(num_tokens))
+         n_verbs_scaled = scale(n_verbs))
 
-write.csv(data.frame(mlu), "mlu.csv", row.names = FALSE)
+write.csv(data.frame(verbs), "syntactic_complexity.csv", row.names = FALSE)
 
 # does mlu predict CDS vs. ADS form? ----
-m <- glmer(form_numeric ~ mlu_scaled * age_scaled + (1 + mlu_scaled * age_scaled|pair) + (1 + mlu_scaled * age_scaled|speaker_id), 
-           data = mlu, 
+m <- glmer(form_numeric ~ n_verbs_scaled * age_scaled + (1 + n_verbs_scaled *age_scaled|pair) + (1 + n_verbs_scaled * age_scaled|speaker_id), 
+           data = verbs, 
            family = binomial, 
            control = glmerControl(optimizer = "bobyqa"))
 summary(m)
