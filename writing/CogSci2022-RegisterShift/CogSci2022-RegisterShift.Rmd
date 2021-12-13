@@ -12,7 +12,7 @@ abstract: >
     250-word abstract here
     
 keywords: >
-    child-directed speech; word production; linguistic input; social register
+    child-directed speech; word production; linguistic input; social register; corpus analysis
     
 output: cogsci2016::cogsci_paper
 final-submission: \cogscifinalcopy
@@ -28,20 +28,65 @@ knitr::opts_chunk$set(fig.width = 3, fig.height = 3, fig.crop = F,
 ```{r, libraries}
 library(png)
 library(grid)
-library(ggplot2)
 library(xtable)
+library(kableExtra)
+library(tidyverse)
 ```
 
 # Introduction
 
 # Methods
 
+## Corpus and item selection
+We analyzed 8251 transcripts in the North American English collection of the Child Language Data Exchange System (CHILDES) database [@macwhinney2000childes]. The included transcripts were drawn from 52 individual corpora and featured 980 children up to 7 years of age (range = 1--84 months, _M_ = 33.5 months).
+
+15 CDS/ADS word pairs were selected as test items based on their appearance on the MacArthur-Bates Communicative Development Inventory [@fenson1994variability] and their frequency of occurrence in CHILDES (criterion: at least 100 child-produced tokens and 100 other-produced tokens; see Table 1). 
+
+- Cases where the same object, animal, or routine could be reasonably labeled with either form in typical communicative interactions with young children.
+
+```{r freq_table, results = "asis"}
+# source(get_freq.R)
+
+freq <- read_csv("freq.csv")
+cds_forms <- read_csv("../../data_prep/item_info.csv") %>%
+    filter(form == "CDS") %>%
+    pull(word)
+
+ads_forms <- read_csv("../../data_prep/item_info.csv") %>%
+    filter(form == "ADS") %>%
+    pull(word)
+
+cds_freq <- freq %>%
+    filter(word %in% cds_forms)
+
+ads_freq <- freq %>%
+    filter(word %in% ads_forms)
+
+freq <- bind_cols(cds_freq, ads_freq) %>%
+    mutate(pair = paste0(word...1, '/', word...4)) %>%
+    select(pair, child...2, other...3, child...5, other...6) 
+colnames(freq) <- c("CDS/ADS word pair", "Child", "Other", "Child", "Other")
+
+freq_table <- xtable::xtable(freq, digits = 0,
+                             include.rownames = FALSE, 
+                             caption = "CHILDES frequency for 15 CDS/ADS word pairs. Child-produced counts 
+                             include tokens produced only by the target child. All other 
+                             speakers' productions are included in the other-produced counts.") %>%
+    xtable2kable(booktabs = TRUE, escape = FALSE) %>%
+    kable_styling(font_size = 8) %>%
+    add_header_above(c(" " = 2, "CDS tokens" = 2, "ADS tokens" = 2), bold = TRUE) %>%
+    row_spec(0, bold = TRUE) %>%
+    column_spec(2, italic = TRUE)
+
+print(freq_table, include.rownames = FALSE,
+      type = "latex", comment = FALSE, table.placement = "H")
+```
+
 # Results
 
 # Discussion
 
 # Acknowledgements
-
 We are grateful to the members of the University of Chicago Chatter Lab and Northwestern University Child Language Lab for valuable discussion and feedback on this work.
 
 # References
