@@ -15,6 +15,53 @@ ads_forms <- read_csv("../../data_prep/item_info.csv") %>%
 
 childes_utterances = data.table(get_utterances(collection = "Eng-NA"))
 
+# metadata ----------------------------------------------------------------
+kids <- childes_utterances %>%
+  filter(target_child_age < 84) %>%
+  select(target_child_id) %>%
+  distinct() %>%
+  summarize(n_kids = n())
+
+ages <- childes_utterances %>%
+  filter(target_child_age < 84) %>%
+  summarize(min_age = round(min(target_child_age)), 
+            max_age = round(max(target_child_age)), 
+            mean_age = round(mean(target_child_age), digits = 1))
+
+transcripts <- childes_utterances %>%
+  filter(target_child_age < 84) %>%
+  select(transcript_id) %>%
+  distinct() %>%
+  summarize(n_transcripts = n())
+
+corpora <- childes_utterances %>%
+  filter(target_child_age < 84) %>%
+  select(corpus_name) %>%
+  distinct() %>%
+  summarize(n_corpora = n())
+
+timestamped <- childes_utterances %>%
+  filter(target_child_age < 84) %>%
+  select(media_start, media_end, speaker_role) %>%
+  mutate(timestamped = case_when(
+    is.na(media_start) | is.na(media_end) ~ "n", 
+    !is.na(media_start) & !is.na(media_end) ~ "y"), 
+    speaker = case_when(
+      speaker_role == "Target_Child" ~ "child", 
+      speaker_role != "Target_Child" ~ "other")) %>%
+  group_by(timestamped, speaker) %>%
+  summarize(n_timestamped = n()) %>%
+  pivot_wider(names_from = "timestamped", values_from = "n_timestamped") %>%
+  group_by(speaker) %>%
+  summarize(prop = round(y / (n + y) * 100, digits = 1)) %>%
+  pivot_wider(names_from = "speaker", values_from = "prop") %>%
+  rename(child_timestamped = child, 
+         other_timestamped = other)
+
+metadata <- bind_cols(kids, ages, transcripts, corpora, timestamped)
+write_csv(metadata, "metadata.csv")
+
+# token counts ------------------------------------------------------------
 child_utterances <- childes_utterances %>%
   filter(target_child_age < 84 & speaker_role == "Target_Child") %>% 
   mutate(gloss = paste0(' ', tolower(gloss), ' '), 
