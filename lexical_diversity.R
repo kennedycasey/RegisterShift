@@ -18,22 +18,22 @@ pairs <- read_csv("data_prep/item_info.csv") %>%
   select(word, pair)
 
 aoa <- read_csv("data_prep/item_info.csv") %>%
-  select(word, aoa, pair, variant)
+  select(word, aoa, pair, form)
 
 colors <- c("CDS" = "#C1292E", "ADS" = "#235789")
 
-CDS_variants <- read_csv("data_prep/item_info.csv") %>%
-  filter(variant=="CDS") %>%
+CDS_forms <- read_csv("data_prep/item_info.csv") %>%
+  filter(form=="CDS") %>%
   pull(word)
 
-ADS_variants <- read_csv("data_prep/item_info.csv") %>%
-  filter(variant=="ADS") %>%
+ADS_forms <- read_csv("data_prep/item_info.csv") %>%
+  filter(form=="ADS") %>%
   pull(word)
 
 
 # CHILDES -----------------------------------------------------------------
 utterances <- childes_utterances %>%
-  filter(target_child_age < 84 & speaker_role == "Target_Child") %>%
+  filter(target_child_age < 84 & speaker_role != "Target_Child") %>%
   mutate(gloss = paste0(' ', tolower(gloss), ' '), 
          age = round(target_child_age, digits = 0))
 
@@ -48,11 +48,11 @@ for(i in items){
       filter(str_detect(gloss, regex(paste0(" ", root, "ey | ", root, "ie | ",
                                                          root, "eys | ", root, "ies | ",
                                                          root, "ey's | ", root, "ie's ")))) %>%
-      select(target_child_id, transcript_id, id, age, speaker_id, speaker_role, num_tokens, gloss) %>%
+      select(target_child_id, transcript_id, id, age, speaker_id, speaker_role, num_tokens, gloss, stem) %>%
       mutate(item = paste0(i), 
-             variant = case_when(
-               i %in% CDS_variants ~ "CDS", 
-               i %in% ADS_variants ~ "ADS"), 
+             form = case_when(
+               i %in% CDS_forms ~ "CDS", 
+               i %in% ADS_forms ~ "ADS"), 
              pair = paste0((filter(pairs, word == i))$pair))
   }
   
@@ -62,11 +62,11 @@ for(i in items){
       filter(str_detect(gloss, regex(paste0(" ", root, "y | ", root, "ie | ",
                                                          root, "ys | ", root, "ies | ",
                                                          root, "y's | ", root, "ie's ")))) %>%
-      select(target_child_id, transcript_id, id, age, speaker_id, speaker_role, num_tokens, gloss) %>%
+      select(target_child_id, transcript_id, id, age, speaker_id, speaker_role, num_tokens, gloss, stem) %>%
       mutate(item = paste0(i), 
-             variant = case_when(
-               i %in% CDS_variants ~ "CDS", 
-               i %in% ADS_variants ~ "ADS"), 
+             form = case_when(
+               i %in% CDS_forms ~ "CDS", 
+               i %in% ADS_forms ~ "ADS"), 
              pair = paste0((filter(pairs, word == i))$pair))
   }
   
@@ -76,43 +76,43 @@ for(i in items){
       filter(str_detect(gloss, regex(paste0(" ", root, "y | ", root, "ie | ",
                                                          root, "ys | ", root, "ies | ",
                                                          root, "y's | ", root, "ie's ")))) %>%
-      select(target_child_id, transcript_id, id, age, speaker_id, speaker_role, num_tokens, gloss) %>%
+      select(target_child_id, transcript_id, id, age, speaker_id, speaker_role, num_tokens, gloss, stem) %>%
       mutate(item = paste0(i), 
-             variant = case_when(
-               i %in% CDS_variants ~ "CDS", 
-               i %in% ADS_variants ~ "ADS"), 
+             form = case_when(
+               i %in% CDS_forms ~ "CDS", 
+               i %in% ADS_forms ~ "ADS"), 
              pair = paste0((filter(pairs, word == i))$pair))
   }
   
   else if (i == "night night"){
     utts_w_target <- utterances %>%
       filter(str_detect(gloss, regex(paste0(" night night | night-night | night nights | night-nights ")))) %>%
-      select(target_child_id, transcript_id, id, age, speaker_id, speaker_role, num_tokens, gloss) %>%
+      select(target_child_id, transcript_id, id, age, speaker_id, speaker_role, num_tokens, gloss, stem) %>%
       mutate(item = paste0(i), 
-             variant = case_when(
-               i %in% CDS_variants ~ "CDS", 
-               i %in% ADS_variants ~ "ADS"), 
+             form = case_when(
+               i %in% CDS_forms ~ "CDS", 
+               i %in% ADS_forms ~ "ADS"), 
              pair = paste0((filter(pairs, word == i))$pair))
   }
   
   else if (i == "goodnight"){
     utts_w_target <- utterances %>%
       filter(str_detect(gloss, regex(paste0(" goodnight | good night | good-night ")))) %>%
-      select(target_child_id, transcript_id, id, age, speaker_id, speaker_role, num_tokens, gloss) %>%
+      select(target_child_id, transcript_id, id, age, speaker_id, speaker_role, num_tokens, gloss, stem) %>%
       mutate(item = paste0(i), 
-             variant = case_when(
-               i %in% CDS_variants ~ "CDS", 
-               i %in% ADS_variants ~ "ADS"), 
+             form = case_when(
+               i %in% CDS_forms ~ "CDS", 
+               i %in% ADS_forms ~ "ADS"), 
              pair = paste0((filter(pairs, word == i))$pair))
   }
   
   else utts_w_target <- utterances %>%
       filter(str_detect(gloss, regex(paste0(" ", i, " | ", i, "s | ", i, "'s ")))) %>%
-      select(target_child_id, transcript_id, id, age, speaker_id, speaker_role, num_tokens, gloss) %>%
+      select(target_child_id, transcript_id, id, age, speaker_id, speaker_role, num_tokens, gloss, stem) %>%
       mutate(item = paste0(i), 
-             variant = case_when(
-               i %in% CDS_variants ~ "CDS", 
-               i %in% ADS_variants ~ "ADS"), 
+             form = case_when(
+               i %in% CDS_forms ~ "CDS", 
+               i %in% ADS_forms ~ "ADS"), 
              pair = paste0((filter(pairs, word == i))$pair))
   
   get_utts[[i]] <- utts_w_target
@@ -120,13 +120,45 @@ for(i in items){
 
 utts <- do.call(rbind, get_utts)
 
+aoa <- read_csv("data_prep/aoa.csv")
+
+known_words <- utts %>%
+  mutate(word = tolower(stem)) %>%
+  separate_rows(word, sep = " ") %>%
+  filter(!str_detect(word, " |dog|cat|pig|stomach|mommy|daddy|mom|dad|frog|blanket|duck|rabbit|bunny|potty|bathroom|doll|horse|bird")) %>%
+  left_join(aoa, by = "word") %>%
+  mutate(known = case_when(
+    !is.na(aoa) & aoa <= age ~ "known",
+    !is.na(aoa) & aoa > age ~ "not_known")) %>%
+  filter(!is.na(known)) %>%
+  group_by(id, known) %>%
+  summarize(n = n()) %>%
+  ungroup() %>%
+  pivot_wider(names_from = "known", values_from = "n") %>%
+  group_by(id) %>%
+  summarize(known_prop = known/(known + not_known))
+
+known_props <- utts %>%
+  left_join(known_words, by = c("id")) %>%
+  mutate(complexity = -log(known_prop), 
+         age_scaled = scale(age), 
+         form_numeric = case_when(
+           form == "CDS" ~ 0, 
+           form == "ADS" ~ 1))
+
+m <- glmer(form_numeric ~ complexity * age_scaled + (1 + complexity * age_scaled|pair) + (1 + complexity * age_scaled|speaker_id), 
+           data = known_props, 
+           family = binomial, 
+           control = glmerControl(optimizer = "bobyqa"))
+summary(m)
+
 iterations <- utterances %>%
   select(transcript_id, speaker_id) %>%
   distinct() %>%
   mutate(index = row_number())
 
 get_order_info <- list()
-for(i in unique(iterations$index)) {
+for (i in unique(iterations$index)) {
   transcript_id_value <- (filter(iterations, index == i))$transcript_id
   speaker_id_value <- (filter(iterations, index == i))$speaker_id
   
@@ -202,7 +234,7 @@ merged_utts <- ordered_utts_w_context %>%
   select(id, speaker_id, utterance, gloss_grouped) %>%
   right_join(utts, by = c("id", "speaker_id")) %>%
   select(id, transcript_id, speaker_id, speaker_role, target_child_id, 
-         age, item, pair, variant, utterance, gloss_grouped) %>%
+         age, item, pair, form, utterance, gloss_grouped) %>%
   filter(!is.na(gloss_grouped)) %>% # rm first/last utterances in transcript
   mutate(token_count = str_count(gloss_grouped, " ") + 1, 
          iteration = row_number())
@@ -224,18 +256,18 @@ for (i in unique(merged_utts$iteration)) {
 ttr <- do.call(rbind, get_types) %>%
   right_join(merged_utts, by = "iteration") %>%
   mutate(ttr = type_count/token_count*100, 
-         variant = factor(variant, levels = c("CDS", "ADS")), 
-         variant_numeric = case_when(
-           variant == "CDS" ~ 0, 
-           variant == "ADS" ~ 1), 
+         form = factor(form, levels = c("CDS", "ADS")), 
+         form_numeric = case_when(
+           form == "CDS" ~ 0, 
+           form == "ADS" ~ 1), 
          ttr_scaled = scale(ttr), 
          age_scaled = scale(age))
 
-#ttr$variant <- factor(ttr$variant, levels = c("CDS", "ADS"))
+#ttr$form <- factor(ttr$form, levels = c("CDS", "ADS"))
 
 
 # flip analysis structure
-m <- glmer(variant_numeric ~ ttr_scaled * age_scaled + (1 + ttr_scaled * age_scaled|pair) + (1 + ttr_scaled * age_scaled|speaker_id), 
+m <- glmer(form_numeric ~ ttr_scaled * age_scaled + (1 + ttr_scaled * age_scaled|pair) + (1 + ttr_scaled * age_scaled|speaker_id), 
            data = ttr, 
            family = binomial, 
            control = glmerControl(optimizer = "bobyqa"))
@@ -244,12 +276,12 @@ summary(m)
 overall_trend <- ggpredict(m, c("ttr_scaled [all]"), type = "random")
 
 ggplot() + 
-  geom_smooth(data=ttr, aes(x=ttr_scaled, y=variant_numeric, group=pair), method="glm", method.args=list(family = "binomial"),
+  geom_smooth(data=ttr, aes(x=ttr_scaled, y=form_numeric, group=pair), method="glm", method.args=list(family = "binomial"),
               color="white", se=FALSE) +
   #geom_ribbon(data=overall_trend, aes(x=x, ymin=predicted-conf.low, ymax=predicted+conf.low), 
               #fill="#235789", alpha=0.25) +
   #geom_line(data=overall_trend, aes(x=x, y=predicted), color="#235789", size = 2) +
-  labs(x = "TTR for +/- 1 utterance (scaled)", y = "Probability of utterance containing ADS variant") +
+  labs(x = "TTR for +/- 1 utterance (scaled)", y = "Probability of utterance containing ADS form") +
   geom_hline(yintercept=0.5, linetype="dotted", size=1) +
   theme_test(base_size = 15) +
   theme(plot.title = element_text(hjust = 0.5)) +
@@ -260,53 +292,53 @@ ggsave("figs/lexical_diversity_blank.jpg")
 
 
 
-m <- lmer(ttr ~ variant*age + (1|item) + (1|target_child_id), data = ttr)
+m <- lmer(ttr ~ form*age + (1|item) + (1|target_child_id), data = ttr)
 summary(m)
 
 ttr_byword <- ttr %>%
   group_by(item) %>%
   summarize(ttr = mean(ttr, na.rm = TRUE), 
             pair = pair, 
-            variant = variant) %>%
+            form = form) %>%
   distinct()
 
 ttr_byword_summary <- ttr_byword %>%
-  group_by(variant) %>%
+  group_by(form) %>%
   summarize(mean = mean(ttr, na.rm = TRUE), 
             se = sd(ttr, na.rm = TRUE)/sqrt(length(ttr)), 
             ymin = mean - se, 
             ymax = mean + se)
 
 ggplot() +
-  geom_line(data = ttr_byword, aes(x = variant, y = ttr, group = pair), 
+  geom_line(data = ttr_byword, aes(x = form, y = ttr, group = pair), 
             color = "#F2F2F2", size = 1) +
-  geom_point(data = ttr_byword, aes(x = variant, y = ttr), 
+  geom_point(data = ttr_byword, aes(x = form, y = ttr), 
              color = "#F2F2F2", size = 2) +
-  geom_pointrange(data = ttr_byword_summary, aes(x = variant, y = mean, ymin = mean-se, ymax = mean+se, color = variant, fill = variant), 
+  geom_pointrange(data = ttr_byword_summary, aes(x = form, y = mean, ymin = mean-se, ymax = mean+se, color = form, fill = form), 
                   stat = "identity", size = 1.5) +
   scale_fill_manual(values = colors) +
   scale_color_manual(values = colors) +
   ylim(75, 90) +
-  labs(x = "variant", y = "TTR for +/- 1 utterance", title = "CHILDES") +
+  labs(x = "form", y = "TTR for +/- 1 utterance", title = "CHILDES") +
   theme_test(base_size = 20) +
   theme(legend.position = "none", plot.title = element_text(hjust = 0.5))
 ggsave("figs/lexical_diversity_overall.jpg", height = 5, width = 4, dpi = 300)
 
 # no difference in TTR
-wilcox.test(ttr ~ variant, data = ttr_byword, paired = TRUE)
-shapiro.test(filter(ttr_byword, variant == "CDS")$ttr) #check for normality
-shapiro.test(filter(ttr_byword, variant == "ADS")$ttr) 
+wilcox.test(ttr ~ form, data = ttr_byword, paired = TRUE)
+shapiro.test(filter(ttr_byword, form == "CDS")$ttr) #check for normality
+shapiro.test(filter(ttr_byword, form == "ADS")$ttr) 
 
 ttr %>%
   group_by(item, age) %>%
   summarize(ttr = mean(ttr, na.rm = TRUE), 
             pair = pair, 
-            variant = variant) %>%
+            form = form) %>%
   distinct() %>%
   ungroup() %>%
-  group_by(age, variant) %>%
+  group_by(age, form) %>%
   summarize(ttr = mean(ttr, na.rm = TRUE)) %>%
-  ggplot(aes(x = age, y = ttr, color = variant, fill = variant)) +
+  ggplot(aes(x = age, y = ttr, color = form, fill = form)) +
   geom_point() +
   geom_smooth(method = "lm") +
   scale_color_manual(values = colors) +
