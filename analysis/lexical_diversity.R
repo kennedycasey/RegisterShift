@@ -9,121 +9,12 @@ library(lmerTest)
 library(performance)
 
 childes_utterances = data.table(get_utterances(collection = "Eng-NA"))
-ldp_utterances <- read.csv("~/Desktop/secure/ldp_data_prepped.csv") 
+source("data-prep/overall/functions.R")
+get_utts_w_target(childes_utterances, items)
+aoa <- read_csv("data-prep/aoa/aoa.csv")
 
-# set overall parameters
-items <- read_csv("data_prep/item_info.csv") %>%
-  pull(word)
-
-pairs <- read_csv("data_prep/item_info.csv") %>%
-  select(word, pair)
-
-aoa <- read_csv("data_prep/item_info.csv") %>%
-  select(word, aoa, pair, form)
-
-colors <- c("CDS" = "#C1292E", "ADS" = "#235789")
-
-CDS_forms <- read_csv("data_prep/item_info.csv") %>%
-  filter(form == "CDS") %>%
-  pull(word)
-
-ADS_forms <- read_csv("data_prep/item_info.csv") %>%
-  filter(form == "ADS") %>%
-  pull(word)
-
-
-# CHILDES -----------------------------------------------------------------
-utterances <- childes_utterances %>%
-  filter(target_child_age < 84 & speaker_role != "Target_Child") %>%
-  mutate(gloss = paste0(' ', tolower(gloss), ' '), 
-         age = round(target_child_age, digits = 0))
-
-# create empty list to be populated
-get_utts <- list() 
-# loop over all items to get num_tokens for all utterances containing a target word
-for (i in items){
-  if (str_detect(i, "ey")) {
-    root <- paste(gsub("ey", "", i))
-    
-    utts_w_target <- utterances %>%
-      filter(str_detect(gloss, regex(paste0(" ", root, "ey | ", root, "ie | ",
-                                                         root, "eys | ", root, "ies | ",
-                                                         root, "ey's | ", root, "ie's ")))) %>%
-      select(target_child_id, transcript_id, id, age, speaker_id, speaker_role, num_tokens, gloss, stem) %>%
-      mutate(item = paste0(i), 
-             form = case_when(
-               i %in% CDS_forms ~ "CDS", 
-               i %in% ADS_forms ~ "ADS"), 
-             pair = paste0((filter(pairs, word == i))$pair))
-  }
-  
-  else if (str_detect(i, "y") & !str_detect(i, "ey")) {
-    root <- paste(gsub("y", "", i))
-    utts_w_target <- utterances %>%
-      filter(str_detect(gloss, regex(paste0(" ", root, "y | ", root, "ie | ",
-                                                         root, "ys | ", root, "ies | ",
-                                                         root, "y's | ", root, "ie's ")))) %>%
-      select(target_child_id, transcript_id, id, age, speaker_id, speaker_role, num_tokens, gloss, stem) %>%
-      mutate(item = paste0(i), 
-             form = case_when(
-               i %in% CDS_forms ~ "CDS", 
-               i %in% ADS_forms ~ "ADS"), 
-             pair = paste0((filter(pairs, word == i))$pair))
-  }
-  
-  else if (str_detect(i, "ie")) {
-    root <- paste(gsub("ie", "", i))
-    utts_w_target <- utterances %>%
-      filter(str_detect(gloss, regex(paste0(" ", root, "y | ", root, "ie | ",
-                                                         root, "ys | ", root, "ies | ",
-                                                         root, "y's | ", root, "ie's ")))) %>%
-      select(target_child_id, transcript_id, id, age, speaker_id, speaker_role, num_tokens, gloss, stem) %>%
-      mutate(item = paste0(i), 
-             form = case_when(
-               i %in% CDS_forms ~ "CDS", 
-               i %in% ADS_forms ~ "ADS"), 
-             pair = paste0((filter(pairs, word == i))$pair))
-  }
-  
-  else if (i == "night night") {
-    utts_w_target <- utterances %>%
-      filter(str_detect(gloss, regex(paste0(" night night | night-night | night nights | night-nights ")))) %>%
-      select(target_child_id, transcript_id, id, age, speaker_id, speaker_role, num_tokens, gloss, stem) %>%
-      mutate(item = paste0(i), 
-             form = case_when(
-               i %in% CDS_forms ~ "CDS", 
-               i %in% ADS_forms ~ "ADS"), 
-             pair = paste0((filter(pairs, word == i))$pair))
-  }
-  
-  else if (i == "goodnight") {
-    utts_w_target <- utterances %>%
-      filter(str_detect(gloss, regex(paste0(" goodnight | good night | good-night ")))) %>%
-      select(target_child_id, transcript_id, id, age, speaker_id, speaker_role, num_tokens, gloss, stem) %>%
-      mutate(item = paste0(i), 
-             form = case_when(
-               i %in% CDS_forms ~ "CDS", 
-               i %in% ADS_forms ~ "ADS"), 
-             pair = paste0((filter(pairs, word == i))$pair))
-  }
-  
-  else utts_w_target <- utterances %>%
-      filter(str_detect(gloss, regex(paste0(" ", i, " | ", i, "s | ", i, "'s ")))) %>%
-      select(target_child_id, transcript_id, id, age, speaker_id, speaker_role, num_tokens, gloss, stem) %>%
-      mutate(item = paste0(i), 
-             form = case_when(
-               i %in% CDS_forms ~ "CDS", 
-               i %in% ADS_forms ~ "ADS"), 
-             pair = paste0((filter(pairs, word == i))$pair))
-  
-  get_utts[[i]] <- utts_w_target
-}
-
-utts <- do.call(rbind, get_utts)
-
-aoa <- read_csv("data_prep/aoa.csv")
-
-known_words <- utts %>%
+known_words <- utterances %>%
+  filter(speaker_type == "other") %>%
   mutate(word = tolower(stem)) %>%
   separate_rows(word, sep = " ") %>%
   filter(!str_detect(word, " |dog|cat|pig|stomach|mommy|daddy|mom|dad|frog|blanket|duck|rabbit|bunny|potty|bathroom|doll|horse|bird")) %>%
@@ -139,7 +30,8 @@ known_words <- utts %>%
   group_by(id) %>%
   summarize(known_prop = known/(known + not_known))
 
-known_props <- utts %>%
+known_props <- utterances %>%
+  filter(speaker_type == "other") %>%
   left_join(known_words, by = c("id")) %>%
   mutate(complexity = -log(known_prop), 
          age_scaled = scale(age), 
@@ -147,13 +39,21 @@ known_props <- utts %>%
            form == "CDS" ~ 0, 
            form == "ADS" ~ 1))
 
-m <- glmer(form_numeric ~ complexity * age_scaled + (1 + complexity * age_scaled|pair) + (1 + complexity * age_scaled|speaker_id), 
+m <- glmer(form_numeric ~ complexity * age_scaled + 
+             (1|pair) + 
+             (1|speaker_id), 
            data = known_props, 
            family = binomial, 
            control = glmerControl(optimizer = "bobyqa"))
 summary(m)
+save_model_output(m, "analysis/model-outputs/other-utts/lexical-complexity.csv")
 
 
+
+
+
+
+# TO DO: clean from here
 complexity_byword <- known_props %>%
   group_by(item) %>%
   summarize(complexity = mean(complexity, na.rm = TRUE), 
