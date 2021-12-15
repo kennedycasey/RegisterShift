@@ -225,8 +225,19 @@ We used mixed-effects binomial logistic regression models to predict the
 appearance of CDS vs.~ADS forms in given utterance on the basis of
 target child's age, several linguistic properties of the utterance, and
 interactions between each property and age. Models included random
-slopes and intercepts for individual word pairs and speakers and were
-fitted to all utterance data from speakers other than the target child.
+intercepts for individual word pairs and speakers and were fitted to all
+utterance data from speakers other than the target child.
+
+\begin{CodeChunk}
+\begin{figure}[H]
+
+{\centering \includegraphics{figs/model-plot-1} 
+
+}
+
+\caption[Coefficient estimates for linguistic predictors of form]{Coefficient estimates for linguistic predictors of form. Positive main effects indicate that utterances with higher levels of the predictor are more likely to contain ADS forms, relative to CDS forms. Positive age interactions indicate an increasing effect of the predictor with age. Error bars depict standard errors of the coefficient estimates, and filled circles represent significant effects (\textit{p} $<$ 0.05).}\label{fig:model-plot}
+\end{figure}
+\end{CodeChunk}
 
 \hypertarget{modeling-learning-what-linguistic-information-can-be-used-to-distinguish-cds-vs.-ads-contexts}{%
 \subsection{Modeling learning: What linguistic information can be used

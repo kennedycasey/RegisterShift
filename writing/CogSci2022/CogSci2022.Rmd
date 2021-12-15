@@ -38,6 +38,8 @@ library(grid)
 library(xtable)
 library(kableExtra)
 library(tidyverse)
+library(ggpubr)
+library(DescTools)
 
 # source(data-prep/overall/get_freq.R)
 metadata <- read_csv("../../data-prep/overall/metadata.csv")
@@ -118,7 +120,61 @@ Syntactic measures included both the number of verb phrases and length (in words
 
 ## Characterizing the input: In what linguistic contexts do children hear CDS vs. ADS forms?
 
-We used mixed-effects binomial logistic regression models to predict the appearance of CDS vs. ADS forms in given utterance on the basis of target child's age, several linguistic properties of the utterance, and interactions between each property and age. Models included random slopes and intercepts for individual word pairs and speakers and were fitted to all utterance data from speakers other than the target child.
+We used mixed-effects binomial logistic regression models to predict the appearance of CDS vs. ADS forms in given utterance on the basis of target child's age, several linguistic properties of the utterance, and interactions between each property and age. Models included random intercepts for individual word pairs and speakers and were fitted to all utterance data from speakers other than the target child.
+
+
+
+```{r model-plot, fig.env = "figure", fig.pos = "H", fig.align = "center", fig.width = 3, fig.height = 2, fig.cap = "Coefficient estimates for linguistic predictors of form. Positive main effects indicate that utterances with higher levels of the predictor are more likely to contain ADS forms, relative to CDS forms. Positive age interactions indicate an increasing effect of the predictor with age. Error bars depict standard errors of the coefficient estimates, and filled circles represent significant effects (\\textit{p} $<$ 0.05)."}
+
+path_to_models <- "../../analysis/model-outputs/other-utts/"
+model_filenames <- list.files(path = path_to_models, pattern = "*.csv")
+model_files <- lapply(paste0(path_to_models, model_filenames), read_csv)
+model_info <- bind_rows(model_files, .id = "source") %>%
+  group_by(source) %>%
+  mutate(order = row_number(), 
+         type = case_when(
+           order == 1 ~ "intercept", 
+           order == 2 ~ "main_effect", 
+           order == 3 ~ "age", 
+           order == 4 ~ "interaction"), 
+         Sig = ifelse(p < .05, "sig", "not_sig"), 
+         Predictor = StrCap(str_replace(str_remove(Predictor, "_scaled"), "_", " "), "first"))
+
+main_effects <- ggplot(filter(model_info, type == "main_effect"), 
+       aes(x = Estimate, y = Predictor, color = Predictor)) +
+  geom_vline(xintercept = 0, size = 0.2, linetype = "dotted", 
+             color = "gray", alpha = 0.5) +
+  geom_errorbar(aes(xmin = Estimate - SE, xmax = Estimate + SE), 
+                width = 0, size = 0.2) + 
+  geom_point(aes(shape = Sig), size = 0.6) +
+  scale_shape_manual(values = c(21, 19)) +
+  scale_x_continuous(limits = c(-0.4, 0.4)) +
+  labs(title = "Main Effect", x = "Coefficient Estimate") +
+  theme_test(base_size = 5) +
+  theme(legend.position = "None", plot.title = element_text(hjust = 0.5))
+  
+interactions <- ggplot(filter(model_info, type == "interaction"), 
+       aes(x = Estimate, y = Predictor, color = Predictor)) +
+  geom_vline(xintercept = 0, size = 0.2, linetype = "dotted", 
+             color = "gray", alpha = 0.5) +
+  geom_errorbar(aes(xmin = Estimate - SE, xmax = Estimate + SE), 
+                width = 0, size = 0.2) + 
+  geom_point(aes(shape = Sig), size = 0.6) +
+  scale_shape_manual(values = c(21, 19)) +
+  scale_x_continuous(limits = c(-0.4, 0.4)) +
+  labs(title = "Interaction with Age", x = "Coefficient Estimate") +
+  theme_test(base_size = 5) +
+  theme(legend.position = "None", plot.title = element_text(hjust = 0.5), 
+        axis.text.y = element_blank(), axis.title.y = element_blank(), 
+        axis.ticks.y = element_blank())
+
+model_fig <- ggarrange(main_effects, interactions, widths = c(2, 1.5))
+ggsave("../figs/model-outputs.png", model_fig, height = 2, width = 3, dpi = 300)
+
+img <- png::readPNG("../figs/model-outputs.png")
+grid::grid.raster(img)
+```
+
 
 ## Modeling learning: What linguistic information can be used to distinguish CDS vs. ADS contexts?
 
