@@ -34,12 +34,13 @@ known_props <- utterances %>%
   filter(speaker_type == "other") %>%
   left_join(known_words, by = c("id")) %>%
   mutate(complexity = -log(known_prop), 
+         complexity_scaled = scale(complexity),
          age_scaled = scale(age), 
          form_numeric = case_when(
            form == "CDS" ~ 0, 
            form == "ADS" ~ 1))
 
-m <- glmer(form_numeric ~ complexity * age_scaled + 
+m <- glmer(form_numeric ~ complexity_scaled * age_scaled + 
              (1|pair) + 
              (1|speaker_id), 
            data = known_props, 
