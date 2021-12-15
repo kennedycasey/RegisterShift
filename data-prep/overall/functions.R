@@ -1,20 +1,18 @@
-set_overall_parameters <- function() {
-  items <- read_csv("data-prep/overall/item-info.csv") %>%
-    pull(word)
-  
-  pairs <- read_csv("data-prep/overall/item-info.csv") %>%
-    select(word, pair)
-  
-  colors <- c("CDS" = "#C1292E", "ADS" = "#235789")
-  
-  CDS_forms <- read_csv("data-prep/overall/item-info.csv") %>%
-    filter(form == "CDS") %>%
-    pull(word)
-  
-  ADS_forms <- read_csv("data-prep/overall/item-info.csv") %>%
-    filter(form == "ADS") %>%
-    pull(word)
-}
+items <- read_csv("data-prep/overall/item-info.csv") %>%
+  pull(word)
+
+pairs <- read_csv("data-prep/overall/item-info.csv") %>%
+  select(word, pair)
+
+colors <- c("CDS" = "#C1292E", "ADS" = "#235789")
+
+CDS_forms <- read_csv("data-prep/overall/item-info.csv") %>%
+  filter(form == "CDS") %>%
+  pull(word)
+
+ADS_forms <- read_csv("data-prep/overall/item-info.csv") %>%
+  filter(form == "ADS") %>%
+  pull(word)
 
 get_utts_w_target <- function(raw_utts, targets) {
   utts_list <- list()
