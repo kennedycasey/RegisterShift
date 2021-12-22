@@ -10,16 +10,16 @@ if spacy.__version__.startswith('2'):
 else:
     nlp.add_pipe("benepar", config={"model": "benepar_en3"})
 
-utts_df = pd.read_csv("test.csv", low_memory = False)
+utts_df = pd.read_csv("other-utterances.csv", low_memory = False)
 
 pos_tags = []
 
 for i in range(len(utts_df)):
-    gloss = utts_df.values[i][2]
+    gloss = str(utts_df.values[i][2])
     doc = nlp(gloss)
     sent = list(doc.sents)[0]
     pos = sent._.parse_string
     pos_tags.append(pos)
     
 utts_df["parsed_gloss"] = pos_tags
-utts_df.to_csv('output.csv')  
+utts_df.to_csv("other-utterances-parsed.csv")
