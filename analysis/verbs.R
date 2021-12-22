@@ -9,23 +9,25 @@ childes_utterances = data.table(get_utterances(collection = "Eng-NA"))
 source("data-prep/overall/functions.R")
 get_utts_w_target(childes_utterances, items)
 
-verbs <- read_csv("data-prep/parser/other-utterances-parsed.csv") %>%
-  bind_rows("data-prep/parser/child-utterances-parsed.csv") %>%
-  mutate(age = round(target_child_age, digits = 0),
-         n_verbs = str_count(parsed_gloss, fixed("(VP ")) +
+path_to_verb_info = "data-prep/parser/"
+parsed_filenames <- list.files(path = path_to_verb_info, pattern = "*.csv")
+verb_files <- lapply(paste0(path_to_verb_info, parsed_filenames), read_csv)
+verb_info <- do.call(rbind, verb_files) %>%
+  mutate(n_verbs = str_count(parsed_gloss, fixed("(VP ")) +
            str_count(parsed_gloss, fixed("(VBP ")) -
            str_count(parsed_gloss, fixed("(VP (VBP "))) %>%
-  select(id, n_verbs)
+  select(id, n_verbs) %>%
+  distinct()
 
 verbs_other <- utterances %>%
   filter(speaker_type == "other") %>%
-  left_join(verbs, by = "id") %>%
-  mutate(age_scaled = scale(age),
+  left_join(verb_info, by = "id") %>%
+  mutate(age_scaled = scale(age), 
          verbs_scaled = scale(n_verbs))
 
 verbs_child <- utterances %>%
   filter(speaker_type == "child") %>%
-  left_join(verbs, by = "id") %>%
+  left_join(verb_info, by = "id") %>%
   mutate(age_scaled = scale(age),
          verbs_scaled = scale(n_verbs))
 
@@ -41,7 +43,7 @@ save_model_output(m, "analysis/model-outputs/other-utts/verbs.csv")
 
 verbs_byword <- verbs_other %>%
   group_by(item) %>%
-  summarize(verbs = mean(n_verbs), 
+  summarize(verbs = mean(n_verbs, na.rm = TRUE), 
             pair = pair, 
             form = form) %>%
   distinct()
@@ -66,7 +68,7 @@ ggplot() +
   scale_fill_manual(values = colors) +
   scale_color_manual(values = colors) +
   labs(x = "Form", y = "Number of Verb Phrases") +
-  scale_y_continuous(limits = c(3, 9), breaks = seq(3, 9, by = 3)) +
+  scale_y_continuous(limits = c(0, 3), breaks = seq(0, 3, by = 1)) +
   theme_test(base_size = 20) +
   theme(legend.position = "none", plot.title = element_text(hjust = 0.5))
 ggsave("writing/figs/input/verbs.jpg", height = 5, width = 4, dpi = 300)
