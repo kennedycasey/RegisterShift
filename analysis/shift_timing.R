@@ -5,19 +5,19 @@ library(ggpubr)
 library(grid)
 library(lme4)
 library(ggeffects)
+library(ggrepel)
+library(geomtextpath)
 
-# read in childes and ldp data
 childes_utterances = data.table(get_utterances(collection = "Eng-NA"))
-#ldp_utterances <- read.csv("~/Desktop/secure/ldp_data_prepped.csv") 
 
 # set overall parameters
-items <- read_csv("data_prep/item_info.csv") %>%
+items <- read_csv("data-prep/overall/item-info.csv") %>%
   pull(word)
 
-pairs <- read_csv("data_prep/item_info.csv") %>%
+pairs <- read_csv("data-prep/overall/item-info.csv") %>%
   pull(pair)
 
-aoa <- read_csv("data_prep/item_info.csv") %>%
+aoa <- read_csv("data-prep/overall/item-info.csv") %>%
   select(word, aoa, pair, form)
 
 colors <- c("CDS" = "#C1292E", "ADS" = "#235789")
@@ -29,7 +29,7 @@ utterances <- childes_utterances %>%
          age = round(target_child_age, digits = 0))
 
 # get overall token counts
-for(i in items){
+for (i in items) {
 
   if (str_detect(i, "ey")) {
     root <- paste(gsub("ey", "", i))
@@ -61,12 +61,12 @@ for(i in items){
                                                           root, "y's | ", root, "ie's ")))]
   }
   
-  else if (i == "night night"){
+  else if (i == "night night") {
     utterances[str_detect(gloss, regex(paste0(" night night | night-night | night nights | night-nights "))), 
                paste0(i) := str_count(gloss, regex(paste0(" night night | night-night | night nights | night-nights ")))]
   }
   
-  else if (i == "goodnight"){
+  else if (i == "goodnight") {
     utterances[str_detect(gloss, regex(paste0(" goodnight | good night | good-night "))), 
                paste0(i) := str_count(gloss, regex(paste0(" goodnight | good night | good-night ")))]
   }
@@ -89,7 +89,7 @@ for (i in pairs) {
   ADS <- paste(gsub(".*_", "", i))
   
   model_data <- utterances %>%
-    filter(!is.na(eval(as.symbol(CDS)))|!is.na(eval(as.symbol(ADS)))) %>%
+    filter(!is.na(eval(as.symbol(CDS))) | !is.na(eval(as.symbol(ADS)))) %>%
     select(age, speaker_role, CDS, ADS) %>%
     group_by(age) %>%
     summarize(CDS = sum(eval(as.symbol(CDS)), na.rm = TRUE),
@@ -104,7 +104,7 @@ for (i in pairs) {
       form == "ADS" ~ 1), 
       pair = paste0(i)) 
   
-  model_data_long <- model_data[rep(row.names(model_data), model_data$count)]
+  model_data_long <- model_data[rep(seq(nrow(model_data)), model_data$count), ]
   
   get_model_data[[i]] <- model_data_long
   
@@ -196,7 +196,7 @@ for (i in pairs) {
 model_data_merged <- do.call(rbind, model_data_list)
 rownames(model_data_merged) <- 1:nrow(model_data_merged)
 
-model_data_long <- model_data_merged[rep(row.names(model_data_merged), model_data_merged$count), 1:7]
+model_data_long <- model_data_merged[rep(seq(nrow(model_data_merged)), model_data_merged$count), 1:7]
 
 m <- glmer(form_numeric ~ scale(age) + (1|pair) + (1|total_tokens), #singular model fit if random slope for pair included
          family = "binomial",
@@ -226,13 +226,13 @@ ggplot() +
 
 
 # shift type analyses
-early_pairs <- read_csv("data_prep/item_info.csv") %>%
+early_pairs <- read_csv("data-prep/overall/item-info.csv") %>%
   filter(shift_type == "early") %>%
   pull(pair)
 
 early_model <- glmer(form_numeric ~ scale(age) + (1|pair) + (1|total_tokens),
            family = "binomial",
-           control = glmerControl(optimizer="bobyqa"),
+           control = glmerControl(optimizer = "bobyqa"),
            data = filter(model_data_long, pair %in% early_pairs))
 summary(early_model)
 
@@ -254,14 +254,14 @@ early <- ggplot() +
                   size = 5) +
   scale_x_continuous(limits = c(0, 84), breaks=seq(0, 84, by=12)) +
   labs(x = "Age (months)", y = "Probability of producing ADS form", 
-       title = "Early shift to ADS") +
+       title = "Late shift to ADS") +
   geom_hline(yintercept=0.5, linetype="dotted", size=1) +
   theme_test(base_size = 25) +
   theme(plot.title = element_text(hjust = 0.5), 
         axis.title = element_blank()) +
   coord_cartesian(ylim=c(0, 1))
 
-late_pairs <- read_csv("data_prep/item_info.csv") %>%
+late_pairs <- read_csv("data-prep/overall/item-info.csv") %>%
   filter(shift_type == "late") %>%
   pull(pair)
 
@@ -297,7 +297,7 @@ late <- ggplot() +
   coord_cartesian(ylim=c(0, 1))
 
 
-never_pairs <- read_csv("data_prep/item_info.csv") %>%
+never_pairs <- read_csv("data-prep/overall/item-info.csv") %>%
   filter(shift_type == "never") %>%
   pull(pair)
 
@@ -362,7 +362,7 @@ shift_types <- ggarrange(early, late, never, nrow = 1)
 
 annotate_figure(shift_types, left = textGrob("Probability of producing ADS form", rot = 90, vjust = 1, gp = gpar(cex = 2.5)),
                 bottom = textGrob("Age (months)", gp = gpar(cex = 2.5)))
-ggsave("figs/shift_types.jpg", width = 20, height = 9)
+#ggsave("figs/shift_types.jpg", width = 20, height = 9)
 
 
 
