@@ -1,0 +1,201 @@
+---
+title: "Children's shift from CDS to ADS vocabulary across early childhood"
+bibliography: CogSci2022-register.bib
+csl: apa6.csl
+document-params: "10pt, letterpaper"
+
+author-information: > 
+  \author{Kennedy Casey \\
+          University of Chicago \\
+          \texttt{\small{kbcasey@uchicago.edu}}
+  \And \textbf{Marisa Casillas} \\
+               University of Chicago \\
+               \texttt{\small{mcasillas@uchicago.edu}}}
+
+abstract: >
+  Child-directed speech (CDS) features words such as *doggy*, *night-night*, and *tummy* that are rarely used in adult-directed speech (ADS). Characterisitcs of CDS word forms, such as reduplication and diminutivization, explain why they may be learned and produced earlier by children. However, it is not yet clear how or when children switch to using ADS equivalents—*dog*, *goodnight*, *stomach*. Through analysis of transcripts from CHILDES and the Language Development Project corpus, we show that children significantly increase their production of ADS word forms across age, with the average CDS-to-ADS transition point at 2.5 years. Many of the linguistic features that distinguish CDS vs. ADS registers (e.g., speech rate, lexical complexity, etc.) similarly differentiate the local speech contexts surrounding CDS vs. ADS word forms. To test whether these patterns in children's input...classifier details...Learners may therefore be able to capitalize on these cues to support their discovery of context-appropriate CDS/ADS pair use.
+  
+keywords: >
+    child-directed speech; word production; linguistic input; social register; corpus analysis; developmental change
+    
+output: cogsci2016::cogsci_paper
+#final-submission: \cogscifinalcopy
+---
+
+```{r global_options, include=FALSE}
+knitr::opts_chunk$set(fig.width = 3, fig.height = 3, fig.crop = F, 
+                      fig.pos = "tb", fig.path = 'figs/',
+                      echo = F, warning = F, cache = F, 
+                      message = F, sanitize = T)
+```
+
+```{r, libraries}
+library(png)
+library(grid)
+library(xtable)
+library(kableExtra)
+library(tidyverse)
+library(ggpubr)
+library(DescTools)
+
+# source(data-prep/overall/get_freq.R)
+metadata <- read_csv("../../data-prep/overall/metadata.csv")
+freq <- read_csv("../../data-prep/overall/freq.csv")
+
+cds_forms <- read_csv("../../data-prep/overall/item-info.csv") %>%
+    filter(form == "CDS") %>%
+    pull(word)
+
+ads_forms <- read_csv("../../data-prep/overall/item-info.csv") %>%
+    filter(form == "ADS") %>%
+    pull(word)
+```
+
+# Introduction
+(1) CDS overview - beneficial for learning and x, y, z features
+
+(2) Then register-specific words
+One characteristic feature of CDS is the presence of register-specific words, such as *doggy*, *night-night*, and *tummy*.
+
+(3) Then relationship to social/contextual information 
+Infants as young as 12 months show an emerging understanding of the relationship between registers and addressees [@soley2020infants]. That is, infants hear CDS and adults hear ADS.
+
+
+Word learners are not just determining what any given word means but also when it's 
+
+After establishing that a shift in children's productions occurs in early childhood, we next explored what information in their linguistic input could support this shift.
+
+# Methods
+
+## Corpora
+
+We analyzed `r metadata$n_transcripts` transcripts in the North American English collection of the Child Language Data Exchange System (CHILDES) database [@macwhinney2000childes]. The included transcripts were drawn from `r metadata$n_corpora` individual corpora and featured `r metadata$n_kids` children up to 7 years of age (range = `r metadata$min_age`--`r metadata$max_age` months, *M* = `r metadata$mean_age` months). 
+
+Additional transcripts from the Language Development Project (LDP) longitudinal corpus were also analyzed. These included XX transcripts from XX children recorded every X months for approximately one hour from age X to XX months.
+
+## Target words
+Fifteen CDS/ADS word pairs (30 total target words) were selected based on their appearance on the MacArthur-Bates Communicative Development Inventory [@fenson1994variability] and their frequency of occurrence in CHILDES (at least 100 child-produced tokens and 100 other-produced tokens; see Table \ref{tab:tab1}). Test items were chosen such that the same object, animal, or routine could be reasonably labeled with either word in a given pair in typical communicative interactions with young children (e.g., *doggy* or *dog*).
+
+```{r freq_table, results = "asis"}
+cds_freq <- freq %>%
+    filter(word %in% cds_forms)
+
+ads_freq <- freq %>%
+    filter(word %in% ads_forms)
+
+freq <- bind_cols(cds_freq, ads_freq) %>%
+    mutate(pair = paste0(word...1, '/', word...4)) %>%
+    select(pair, child...2, other...3, child...5, other...6) 
+colnames(freq) <- c("Pair", "Child", "Other", "Child", "Other")
+
+freq_table <- xtable::xtable(freq, digits = 0,
+                             include.rownames = FALSE, 
+                             label = "tab:tab1",
+                             caption = "CHILDES frequency for 15 CDS/ADS word pairs. Child-produced
+                             counts include tokens produced only by the target child. All other 
+                             speakers' productions are included in the other-produced counts.") %>%
+    xtable2kable(booktabs = TRUE, escape = FALSE) %>%
+    kable_styling(font_size = 6) %>%
+    add_header_above(c(" " = 2, "CDS tokens by speaker" = 2, "ADS tokens by speaker" = 2), bold = TRUE) %>%
+    row_spec(0, bold = TRUE) %>%
+    column_spec(2, italic = TRUE)
+
+print(freq_table, include.rownames = FALSE,
+      type = "latex", comment = FALSE, table.placement = "h!")
+```
+
+## Linguistic predictors
+
+All analyses were conducted over individual utterances. We quantified prosodic, lexical and syntactic information to describe each utterance containing one of the 30 target words.
+
+### Prosodic level
+We measured three types of prosodic information: mean pitch (Hz), pitch range (Hz), and speaking rate (words per second). These measures were calculated over all timestamped utterances in CHILDES (`r metadata$child_timestamped`% of child-produced and `r metadata$other_timestamped`% of other-produced utterances). Utterances shorter than 58 ms were excluded from analysis. This lower bound was set by identifying the the shortest possible duration of an utterance containing at least one word in four manually annotated North American English corpora in HomeBank [@homebank; @bergelsoncorpus; @soderstromcorpus; @vandamcorpus; @warlaumontcorpus]. Pitch information was extracted using Praat software [@boersma2016praat].
+
+### Lexical level
+We measured two types of lexical information: complexity and rarity. Lexical complexity was defined as the negative log proportion of known words in each utterance [consistent with @foushee2016lexical; @kidd2012goldilocks]. A word was considered 'known' if the age of acquisition (AoA) estimate [@fenson1994variability; @frank2017wordbank] was less than or equal to the age of the target child when they heard or produced the utterance. Utterances with proportionally fewer known words are more lexically complex. Rare words were determined based on overall CHILDES frequency. The rarest words have the lowest frequency. We calculated the average frequency for the words in each utterance that appeared at least one other time in the full corpus. 
+
+### Syntactic level
+Syntactic measures included both the length of the utterance (in words) and the number of verb phrases. The number of words per utterance was automatically extracted using the `childesr` package [@braginsky2021childesr]. The number of verb phrases per utterance was determined using `spaCy3`, an automatic syntactic parser [@honnibal2020spacy].
+
+# Results
+
+## Measuring production: When do children produce CDS vs. ADS forms?
+
+We first asked when CDS forms are replaced by ADS forms in children's own speech. We fit mixed effects binomial logistic regression model predicting children's production of CDS vs. ADS forms with target child age (in months) as a single fixed effect. Random slopes and intercepts for individual word pairs and children were included.
+
+## Characterizing the input: In what linguistic contexts do children hear CDS vs. ADS forms?
+
+We used mixed-effects binomial logistic regression models to predict the appearance of CDS vs. ADS forms in given utterance on the basis of target child's age, several linguistic properties of the utterance, and interactions between each property and age. Models included random intercepts for individual word pairs and speakers and were fitted to all utterance data from speakers other than the target child.
+
+Main effects and interactions with age are shown in Figure 
+
+```{r model-plot, fig.env = "figure", fig.pos = "H", fig.align = "center", fig.width = 3, fig.height = 2, fig.cap = "Coefficient estimates for linguistic predictors of form. Positive main effects indicate that utterances are more likely to contain ADS forms when they have higher values for the predictor (e.g., faster speech rates). Positive age interactions indicate an increasing effect of the predictor with age. Error bars depict standard errors of the coefficient estimates, and filled circles represent significant effects (\\textit{p} $<$ 0.05)."}
+
+path_to_models <- "../../analysis/model-outputs/other-utts/"
+model_filenames <- list.files(path = path_to_models, pattern = "*.csv")
+model_files <- lapply(paste0(path_to_models, model_filenames), read_csv)
+model_info <- bind_rows(model_files, .id = "source") %>%
+  group_by(source) %>%
+  mutate(order = row_number(), 
+         type = case_when(
+           order == 1 ~ "intercept", 
+           order == 2 ~ "main_effect", 
+           order == 3 ~ "age", 
+           order == 4 ~ "interaction"), 
+         Sig = ifelse(p < .05, "sig", "not_sig"), 
+         Predictor = StrCap(str_replace(str_remove(Predictor, "_scaled"), "_", " "), "first"))
+
+main_effects <- ggplot(filter(model_info, type == "main_effect"), 
+       aes(x = Estimate, y = Predictor, color = Predictor)) +
+  geom_vline(xintercept = 0, size = 0.2, linetype = "dotted", 
+             color = "gray", alpha = 0.5) +
+  geom_errorbar(aes(xmin = Estimate - SE, xmax = Estimate + SE), 
+                width = 0, size = 0.2) + 
+  geom_point(aes(shape = Sig), size = 0.6) +
+  scale_shape_manual(values = c(21, 19)) +
+  scale_x_continuous(limits = c(-0.4, 0.4)) +
+  labs(title = "Main Effect", x = "Coefficient Estimate") +
+  theme_test(base_size = 5) +
+  theme(legend.position = "None", plot.title = element_text(hjust = 0.5))
+  
+interactions <- ggplot(filter(model_info, type == "interaction"), 
+       aes(x = Estimate, y = Predictor, color = Predictor)) +
+  geom_vline(xintercept = 0, size = 0.2, linetype = "dotted", 
+             color = "gray", alpha = 0.5) +
+  geom_errorbar(aes(xmin = Estimate - SE, xmax = Estimate + SE), 
+                width = 0, size = 0.2) + 
+  geom_point(aes(shape = Sig), size = 0.6) +
+  scale_shape_manual(values = c(21, 19)) +
+  scale_x_continuous(limits = c(-0.4, 0.4)) +
+  labs(title = "Interaction with Age", x = "Coefficient Estimate") +
+  theme_test(base_size = 5) +
+  theme(legend.position = "None", plot.title = element_text(hjust = 0.5), 
+        axis.text.y = element_blank(), axis.title.y = element_blank(), 
+        axis.ticks.y = element_blank())
+
+model_fig <- ggarrange(main_effects, interactions, widths = c(2, 1.5))
+ggsave("../figs/model-outputs.png", model_fig, height = 2, width = 3, dpi = 300)
+
+img <- png::readPNG("../figs/model-outputs.png")
+grid::grid.raster(img)
+```
+
+## Modeling learning: What linguistic information is most useful for distinguishing CDS vs. ADS contexts?
+
+# Discussion
+
+<!--
+# Acknowledgements
+Research reported in this publication was supported by the Eunice Kennedy Shriver National Institute of Child Health & Human Development of the National Institutes of Health under Award Number P01HD040605; by a grant from the Successful Pathways from School to Work initiative of the University of Chicago, funded by the Hymen Milgrom Supporting Organization; by a grant from the Institute of Education Sciences, U.S. Department of Education, through grant R305A190467 to the University of Chicago; and by a grant from the Spencer Foundation. The content is solely the responsibility of the authors and does not necessarily represent the official views of the National Institutes of Health, the Institute of Education Sciences, or the U.S. Department of Education.
+-->
+
+# References
+
+```{r}
+# References will be generated automatically by Pandoc and included here.
+# The following code is some latex to format the bibliography. Do not remove it.
+```
+
+\setlength{\parindent}{-0.1in} 
+\setlength{\leftskip}{0.125in}
+\noindent

@@ -70,7 +70,12 @@ childhood}
 \usepackage{makecell}
 \usepackage{xcolor}
 
-\author{{\large \bf Kennedy Casey (kbcasey@uchicago.edu)}  \\{\large \bf Marisa Casillas (mcasillas@uchicago.edu)} \\Comparative Human Development, University of Chicago \\ Chicago, IL 60637 USA}
+\author{Kennedy Casey \\
+        University of Chicago \\
+        \texttt{\small{kbcasey@uchicago.edu}}
+\And \textbf{Marisa Casillas} \\
+             University of Chicago \\
+             \texttt{\small{mcasillas@uchicago.edu}}}
 
 \newlength{\cslhangindent}
 \setlength{\cslhangindent}{1.5em}
@@ -83,20 +88,22 @@ childhood}
 \maketitle
 
 \begin{abstract}
-abstract text here. abstract text here. abstract text here. abstract
-text here. abstract text here. abstract text here. abstract text here.
-abstract text here. abstract text here. abstract text here. abstract
-text here. abstract text here. abstract text here. abstract text here.
-abstract text here. abstract text here. abstract text here. abstract
-text here. abstract text here. abstract text here. abstract text here.
-abstract text here. abstract text here. abstract text here. abstract
-text here. abstract text here. abstract text here. abstract text here.
-abstract text here. abstract text here. abstract text here. abstract
-text here. abstract text here. abstract text here. abstract text here.
-abstract text here. abstract text here. abstract text here. abstract
-text here. abstract text here. abstract text here. abstract text here.
-abstract text here. abstract text here. abstract text here. abstract
-text here. abstract text here. abstract text here.
+Child-directed speech (CDS) features words such as \emph{doggy},
+\emph{night-night}, and \emph{tummy} that are rarely used in
+adult-directed speech (ADS). Characterisitcs of CDS word forms, such as
+reduplication and diminutivization, explain why they may be learned and
+produced earlier by children. However, it is not yet clear how or when
+children switch to using ADS equivalents---\emph{dog}, \emph{goodnight},
+\emph{stomach}. Through analysis of transcripts from CHILDES and the
+Language Development Project corpus, we show that children significantly
+increase their production of ADS word forms across age, with the average
+CDS-to-ADS transition point at 2.5 years. Many of the linguistic
+features that distinguish CDS vs.~ADS registers (e.g., speech rate,
+lexical complexity, etc.) similarly differentiate the local speech
+contexts surrounding CDS vs.~ADS word forms. To test whether these
+patterns in children's input\ldots classifier details\ldots Learners may
+therefore be able to capitalize on these cues to support their discovery
+of context-appropriate CDS/ADS pair use.
 
 \textbf{Keywords:}
 child-directed speech; word production; linguistic input; social
@@ -106,11 +113,33 @@ register; corpus analysis; developmental change
 \hypertarget{introduction}{%
 \section{Introduction}\label{introduction}}
 
+\begin{enumerate}
+\def\labelenumi{(\arabic{enumi})}
+\item
+  CDS overview - beneficial for learning and x, y, z features
+\item
+  Then register-specific words One characteristic feature of CDS is the
+  presence of register-specific words, such as \emph{doggy},
+  \emph{night-night}, and \emph{tummy}.
+\item
+  Then relationship to social/contextual information Infants as young as
+  12 months show an emerging understanding of the relationship between
+  registers and addressees (\textbf{soley2020infants?}). That is,
+  infants hear CDS and adults hear ADS.
+\end{enumerate}
+
+Word learners are not just determining what any given word means but
+also when it's
+
+After establishing that a shift in children's productions occurs in
+early childhood, we next explored what information in their linguistic
+input could support this shift.
+
 \hypertarget{methods}{%
 \section{Methods}\label{methods}}
 
-\hypertarget{corpus-and-item-selection}{%
-\subsection{Corpus and item selection}\label{corpus-and-item-selection}}
+\hypertarget{corpora}{%
+\subsection{Corpora}\label{corpora}}
 
 We analyzed 8251 transcripts in the North American English collection of
 the Child Language Data Exchange System (CHILDES) database (MacWhinney,
@@ -118,15 +147,22 @@ the Child Language Data Exchange System (CHILDES) database (MacWhinney,
 and featured 980 children up to 7 years of age (range = 1--84 months,
 \emph{M} = 33.5 months).
 
-15 CDS/ADS word pairs were selected as test items based on their
-appearance on the MacArthur-Bates Communicative Development Inventory
-(Fenson et al., 1994) and their frequency of occurrence in CHILDES (at
-least 100 child-produced tokens and 100 other-produced tokens; see Table
-\ref{tab:tab1}).
+Additional transcripts from the Language Development Project (LDP)
+longitudinal corpus were also analyzed. These included XX transcripts
+from XX children recorded every X months for approximately one hour from
+age X to XX months.
 
-Cases where the same object, animal, or routine could be reasonably
-labeled with either form in typical communicative interactions with
-young children.
+\hypertarget{target-words}{%
+\subsection{Target words}\label{target-words}}
+
+Fifteen CDS/ADS word pairs (30 total target words) were selected based
+on their appearance on the MacArthur-Bates Communicative Development
+Inventory (Fenson et al., 1994) and their frequency of occurrence in
+CHILDES (at least 100 child-produced tokens and 100 other-produced
+tokens; see Table \ref{tab:tab1}). Test items were chosen such that the
+same object, animal, or routine could be reasonably labeled with either
+word in a given pair in typical communicative interactions with young
+children (e.g., \emph{doggy} or \emph{dog}).
 
 \begin{table}[ht]
 \centering
@@ -154,8 +190,8 @@ young children.
   15 & \em{birdie/bird} & 399 & 588 & 1879 & 3358 \\ 
    \bottomrule
 \end{tabular}
-\caption{CHILDES frequency for 15 CDS/ADS word pairs. Child-produced counts 
-                             include tokens produced only by the target child. All other 
+\caption{CHILDES frequency for 15 CDS/ADS word pairs. Child-produced
+                             counts include tokens produced only by the target child. All other 
                              speakers' productions are included in the other-produced counts.} 
 \label{tab:tab1}
 \end{table}
@@ -170,44 +206,43 @@ containing one of the 30 target words.
 \hypertarget{prosodic-level}{%
 \subsubsection{Prosodic level}\label{prosodic-level}}
 
-For all timestamped utterances (41.4\% of child-produced and 42.3\% of
-other-produced utterances), mean pitch and pitch range were extracted
-using Praat software (Boersma \& Weenink, 2016). Speech rate was
-calculated as the number of words produced per second. Utterances
+We measured three types of prosodic information: mean pitch (Hz), pitch
+range (Hz), and speaking rate (words per second). These measures were
+calculated over all timestamped utterances in CHILDES (41.4\% of
+child-produced and 42.3\% of other-produced utterances). Utterances
 shorter than 58 ms were excluded from analysis. This lower bound was set
 by identifying the the shortest possible duration of an utterance
 containing at least one word in four manually annotated North American
 English corpora in HomeBank (Bergelson, 2016; McDivitt \& Soderstrom,
-2016; VanDam et al., 2016; VanDam, 2016; Warlaumont \& Pretzer, 2016;
-see also Bergelson et al., 2019).
+2016; VanDam et al., 2016; VanDam, 2016; Warlaumont \& Pretzer, 2016).
+Pitch information was extracted using Praat software (Boersma \&
+Weenink, 2016).
 
 \hypertarget{lexical-level}{%
 \subsubsection{Lexical level}\label{lexical-level}}
 
-Typically, measures of lexical complexity are calculated over at least
-minutes or hours of transcribed speech rather than individual
-utterances. Here, we aimed to estimate local lexical complexity in two
-ways.
-
-First, we calculated the negative log proportion of known words in each
-utterance (consistent with Foushee, Griffiths, \& Srinivasan, 2016;
-Kidd, Piantadosi, \& Aslin, 2012). A word was considered `known' if the
-age of acquisition estimate (AoA) Frank, Braginsky, Yurovsky, \&
-Marchman (2017) was less than or equal to the age of the target child
-when they heard or produced the utterance. Utterances with
-proportionally fewer known words are \emph{more} lexically complex.
-
-To account for more individual variation in word production, we included
-a measure
+We measured two types of lexical information: complexity and rarity.
+Lexical complexity was defined as the negative log proportion of known
+words in each utterance (consistent with Foushee, Griffiths, \&
+Srinivasan, 2016; Kidd, Piantadosi, \& Aslin, 2012). A word was
+considered `known' if the age of acquisition (AoA) estimate (Fenson et
+al., 1994; Frank, Braginsky, Yurovsky, \& Marchman, 2017) was less than
+or equal to the age of the target child when they heard or produced the
+utterance. Utterances with proportionally fewer known words are more
+lexically complex. Rare words were determined based on overall CHILDES
+frequency. The rarest words have the lowest frequency. We calculated the
+average frequency for the words in each utterance that appeared at least
+one other time in the full corpus.
 
 \hypertarget{syntactic-level}{%
 \subsubsection{Syntactic level}\label{syntactic-level}}
 
-Syntactic measures included both the number of verb phrases and length
-(in words) of each utterance. Words were chosen over morphemes in the
-length analysis because we identified systematic errors in automatic
-morpheme counts. Manual checking of 5\% of target utterances (i.e., XXXX
-utterances) revealed an error rate of XX\%.
+Syntactic measures included both the length of the utterance (in words)
+and the number of verb phrases. The number of words per utterance was
+automatically extracted using the \texttt{childesr} package (Braginsky,
+Sanchez, \& Yurovsky, 2021). The number of verb phrases per utterance
+was determined using \texttt{spaCy3}, an automatic syntactic parser
+(Honnibal, Montani, Van Landeghem, \& Boyd, 2020).
 
 \hypertarget{results}{%
 \section{Results}\label{results}}
@@ -215,6 +250,12 @@ utterances) revealed an error rate of XX\%.
 \hypertarget{measuring-production-when-do-children-produce-cds-vs.-ads-forms}{%
 \subsection{Measuring production: When do children produce CDS vs.~ADS
 forms?}\label{measuring-production-when-do-children-produce-cds-vs.-ads-forms}}
+
+We first asked when CDS forms are replaced by ADS forms in children's
+own speech. We fit mixed effects binomial logistic regression model
+predicting children's production of CDS vs.~ADS forms with target child
+age (in months) as a single fixed effect. Random slopes and intercepts
+for individual word pairs and children were included.
 
 \hypertarget{characterizing-the-input-in-what-linguistic-contexts-do-children-hear-cds-vs.-ads-forms}{%
 \subsection{Characterizing the input: In what linguistic contexts do
@@ -228,6 +269,8 @@ interactions between each property and age. Models included random
 intercepts for individual word pairs and speakers and were fitted to all
 utterance data from speakers other than the target child.
 
+Main effects and interactions with age are shown in Figure
+
 \begin{CodeChunk}
 \begin{figure}[H]
 
@@ -235,25 +278,17 @@ utterance data from speakers other than the target child.
 
 }
 
-\caption[Coefficient estimates for linguistic predictors of form]{Coefficient estimates for linguistic predictors of form. Positive main effects indicate that utterances with higher levels of the predictor are more likely to contain ADS forms, relative to CDS forms. Positive age interactions indicate an increasing effect of the predictor with age. Error bars depict standard errors of the coefficient estimates, and filled circles represent significant effects (\textit{p} $<$ 0.05).}\label{fig:model-plot}
+\caption[Coefficient estimates for linguistic predictors of form]{Coefficient estimates for linguistic predictors of form. Positive main effects indicate that utterances are more likely to contain ADS forms when they have higher values for the predictor (e.g., faster speech rates). Positive age interactions indicate an increasing effect of the predictor with age. Error bars depict standard errors of the coefficient estimates, and filled circles represent significant effects (\textit{p} $<$ 0.05).}\label{fig:model-plot}
 \end{figure}
 \end{CodeChunk}
 
-\hypertarget{modeling-learning-what-linguistic-information-can-be-used-to-distinguish-cds-vs.-ads-contexts}{%
-\subsection{Modeling learning: What linguistic information can be used
-to distinguish CDS vs.~ADS
-contexts?}\label{modeling-learning-what-linguistic-information-can-be-used-to-distinguish-cds-vs.-ads-contexts}}
+\hypertarget{modeling-learning-what-linguistic-information-is-most-useful-for-distinguishing-cds-vs.-ads-contexts}{%
+\subsection{Modeling learning: What linguistic information is most
+useful for distinguishing CDS vs.~ADS
+contexts?}\label{modeling-learning-what-linguistic-information-is-most-useful-for-distinguishing-cds-vs.-ads-contexts}}
 
 \hypertarget{discussion}{%
 \section{Discussion}\label{discussion}}
-
-\hypertarget{acknowledgements}{%
-\section{Acknowledgements}\label{acknowledgements}}
-
-We are grateful to Claire Bergey, Ruthe Foushee, Ben Morris, and the
-members of the University of Chicago Chatter Lab and Northwestern
-University Child Language Lab for valuable discussion and feedback on
-this work.
 
 \hypertarget{references}{%
 \section{References}\label{references}}
@@ -269,15 +304,14 @@ this work.
 Bergelson, E. (2016). Bergelson HomeBank corpus.
 \url{https://doi.org/10.21415/T5PK6D}.
 
-\leavevmode\hypertarget{ref-bergelson2019north}{}%
-Bergelson, E., Casillas, M., Soderstrom, M., Seidl, A., Warlaumont, A.
-S., \& Amatuni, A. (2019). What do north american babies hear? A
-large-scale cross-corpus analysis. \emph{Developmental Science},
-\emph{22}(1), e12724.
-
 \leavevmode\hypertarget{ref-boersma2016praat}{}%
 Boersma, P., \& Weenink, D. (2016). Praat software. \emph{Amsterdam:
 University of Amsterdam}.
+
+\leavevmode\hypertarget{ref-braginsky2021childesr}{}%
+Braginsky, M., Sanchez, A., \& Yurovsky, D. (2021). \emph{Childesr:
+Accessing the 'CHILDES' database}. Retrieved from
+\url{https://CRAN.R-project.org/package=childesr}
 
 \leavevmode\hypertarget{ref-fenson1994variability}{}%
 Fenson, L., Dale, P. S., Reznick, J. S., Bates, E., Thal, D. J.,
@@ -295,6 +329,11 @@ society} (pp. 1697--1702).
 Frank, M. C., Braginsky, M., Yurovsky, D., \& Marchman, V. A. (2017).
 Wordbank: An open repository for developmental vocabulary data.
 \emph{Journal of Child Language}, \emph{44}(3), 677--694.
+
+\leavevmode\hypertarget{ref-honnibal2020spacy}{}%
+Honnibal, M., Montani, I., Van Landeghem, S., \& Boyd, A. (2020).
+{spaCy: Industrial-strength Natural Language Processing in Python}.
+http://doi.org/\href{https://doi.org/10.5281/zenodo.1212303}{10.5281/zenodo.1212303}
 
 \leavevmode\hypertarget{ref-kidd2012goldilocks}{}%
 Kidd, C., Piantadosi, S. T., \& Aslin, R. N. (2012). The goldilocks
