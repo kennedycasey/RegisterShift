@@ -1,25 +1,21 @@
 ---
-title: "Children's shift from CDS to ADS vocabulary across early childhood"
+title: "Title TBD"
 bibliography: CogSci2022-register.bib
 csl: apa6.csl
 document-params: "10pt, letterpaper"
 
 author-information: > 
-  \author{Kennedy Casey \\
-          University of Chicago \\
-          \texttt{\small{kbcasey@uchicago.edu}}
-  \And \textbf{Marisa Casillas} \\
-               University of Chicago \\
-               \texttt{\small{mcasillas@uchicago.edu}}}
+    \author{{\large \bf Kennedy Casey} \\ \texttt{\small{kbcasey@uchicago.edu}} 
+    \\{\large \bf Marisa Casillas} \\ \texttt{\small{mcasillas@uchicago.edu}} \\Comparative Human Development, University of Chicago \\ Chicago, IL 60637 USA}
 
 abstract: >
-  Child-directed speech (CDS) features words such as *doggy*, *night-night*, and *tummy* that are rarely used in adult-directed speech (ADS). Characterisitcs of CDS word forms, such as reduplication and diminutivization, explain why they may be learned and produced earlier by children. However, it is not yet clear how or when children switch to using ADS equivalents—*dog*, *goodnight*, *stomach*. Through analysis of transcripts from CHILDES and the Language Development Project corpus, we show that children significantly increase their production of ADS word forms across age, with the average CDS-to-ADS transition point at 2.5 years. Many of the linguistic features that distinguish CDS vs. ADS registers (e.g., speech rate, lexical complexity, etc.) similarly differentiate the local speech contexts surrounding CDS vs. ADS word forms. To test whether these patterns in children's input...classifier details...Learners may therefore be able to capitalize on these cues to support their discovery of context-appropriate CDS/ADS pair use.
+  Child-directed speech (CDS) features words such as _doggy_, *night-night*, and _tummy_ that are rarely used in adult-directed speech (ADS). Characterisitcs of CDS word forms, such as reduplication and diminutivization, explain why they may be learned and produced earlier by children. However, it is not yet clear how or when children switch to using ADS equivalents—*dog*, *goodnight*, *stomach*. Through analysis of transcripts from CHILDES and the Language Development Project corpus, we show that children significantly increase their production of ADS word forms across age, with the average CDS-to-ADS transition point at 2.5 years. Many of the linguistic features that distinguish CDS vs. ADS registers (e.g., speech rate, lexical complexity, etc.) similarly differentiate the local speech contexts surrounding CDS vs. ADS word forms. To test whether these patterns in children's input...classifier details...Learners may therefore be able to capitalize on these cues to support their discovery of context-appropriate CDS/ADS pair use.
   
 keywords: >
     child-directed speech; word production; linguistic input; social register; corpus analysis; developmental change
     
 output: cogsci2016::cogsci_paper
-#final-submission: \cogscifinalcopy
+final-submission: \cogscifinalcopy
 ---
 
 ```{r global_options, include=FALSE}
@@ -52,29 +48,70 @@ ads_forms <- read_csv("../../data-prep/overall/item-info.csv") %>%
 ```
 
 # Introduction
-(1) CDS overview - beneficial for learning and x, y, z features
+1. quick CDS overview, contrasting features with ADS
+when communicating with young children, adults make modifications to their speaking style at multiple linguistic levels
+acoustic/prosodic level: higher pitch as well as greater variability of pitch [@fernald1989intonation]
+lexical level: lower type/token ratio [@henning2005maternal], less lexically complex [@foushee2016lexical]
+syntactic level
 
-(2) Then register-specific words
-One characteristic feature of CDS is the presence of register-specific words, such as *doggy*, *night-night*, and *tummy*.
+2. kids differentiate CDS vs. ADS registers
+early preference [@cooper1990preference; @manybabies2020quantifying]
 
-(3) Then relationship to social/contextual information 
-Infants as young as 12 months show an emerging understanding of the relationship between registers and addressees [@soley2020infants]. That is, infants hear CDS and adults hear ADS.
+3. kids also show some understanding of other associations
+registers and addressees
+Infants as young as 12 to 20 months show an emerging understanding of the relationship between registers and addressees [@soley2020infants; @ikeda2018sensitivity]. That is, speech to young children should be in the CDS register, speech to adults should be in the ADS register.
 
+4. Here, we ask whether children might be able to learn associations between words and registers
+need to be careful here because we don't have data to fully speak to kids' understanding
 
-Word learners are not just determining what any given word means but also when it's 
+5. Para on register-specific words
+one characteristic feature of CDS is the presence of register-specific words, such as _doggy_, *night-night*, and _tummy_
+overview of previous work, which has largely focused on the learnability question or why these words appear in the first place
+seemingly a challenge for word learners that now have to make 2 form mappings to the same meaning but diminutive suffix as a decently reliable cue to word ending [@kempe2005diminutives]
+diminutivization and reduplication predictive of learning [@ota2018choo]
+existing research does well to account for why CDS forms make up a large proportion of the input and why they are learned and produced earlier by children
+however, 'conventional'  (definitely need a better word here) word usage requires them to eventually transition to using ADS forms-- a problem that has not yet been addressed
 
-After establishing that a shift in children's productions occurs in early childhood, we next explored what information in their linguistic input could support this shift.
+6. More description of the current study
+we analyze children's productions to determine when they shift to producing ADS forms
+after establishing that a shift in children's productions occurs in early childhood, we next explored what information in their linguistic input could support this shift
+we investigate whether the linguistic features that distinguish CDS vs. ADS at the register level also differentiate CDS vs. ADS words at the utterance level
+from there, we sought to determine which regularities might be sufficient to allow children to learn the appropriate distinctions between usage contexts for CDS vs. ADS forms
 
-# Methods
+Ideas that don't really have a place yet:
+mutual exclusivity--seems more tangential right now but could serve as motivation for wanting to study these words, in particular
+dev changes in other input measures (e.g., overall rates of CDS, other word usage, etc.)--could motivate the longitudinal look we take here
+fine-tuned input--probably not relevant unless we look at adult shifts from CDS to ADS too, later on can look at changes in the input near the transition point
+
+CDS feature refs:
+[@soderstrom2007beyond]
+[@spinelli2017prosody]
+
+Multiple label refs:
+[@clark1987principle]
+
+Social refs:
+[@kinzler2009accent]
+[@weatherhead2021toddlers]
+[@weatherhead2021putting]: ME is about social inference
+[@ramirez-esparza2014look]: CDS helps word learning but it's also about the social context (dyadic interaction)
+
+Dev change/fine tuning refs:
+[@ramirez-esparza2017look]: similar ideas but longitudinal
+[@bergelson2019north]: increase in prop CDS over the first 20 months, driven by a decrease in other-directed speech
+[@jiangURexploring]: distributional semantics
+[@odijk2020fine]: MLU decreasing before child word production
+
+# Method
 
 ## Corpora
 
-We analyzed `r metadata$n_transcripts` transcripts in the North American English collection of the Child Language Data Exchange System (CHILDES) database [@macwhinney2000childes]. The included transcripts were drawn from `r metadata$n_corpora` individual corpora and featured `r metadata$n_kids` children up to 7 years of age (range = `r metadata$min_age`--`r metadata$max_age` months, *M* = `r metadata$mean_age` months). 
+We analyzed `r metadata$n_transcripts` transcripts in the North American English collection of the Child Language Data Exchange System (CHILDES) database [@macwhinney2000childes]. The included transcripts were drawn from `r metadata$n_corpora` individual corpora and featured `r metadata$n_kids` children up to 7 years of age (range = `r metadata$min_age`--`r metadata$max_age` months, _M_ = `r metadata$mean_age` months). 
 
-Additional transcripts from the Language Development Project (LDP) longitudinal corpus were also analyzed. These included XX transcripts from XX children recorded every X months for approximately one hour from age X to XX months.
+Additional data from the Language Development Project (LDP) longitudinal corpus were also analyzed <!--kc: figure out how to properly cite-->. These included XX transcripts from XX children recorded every 4 months for approximately one hour from age 14 to 58 months.
 
 ## Target words
-Fifteen CDS/ADS word pairs (30 total target words) were selected based on their appearance on the MacArthur-Bates Communicative Development Inventory [@fenson1994variability] and their frequency of occurrence in CHILDES (at least 100 child-produced tokens and 100 other-produced tokens; see Table \ref{tab:tab1}). Test items were chosen such that the same object, animal, or routine could be reasonably labeled with either word in a given pair in typical communicative interactions with young children (e.g., *doggy* or *dog*).
+Fifteen CDS/ADS word pairs (30 total target words) were selected based on the appearance of at least one form on the MacArthur-Bates Communicative Development Inventory [@fenson1994variability] and their frequency of occurrence in CHILDES (at least 100 child-produced tokens and 100 other-produced tokens per form; see Table \ref{tab:tab1}). Test items were chosen such that the same object, animal, or routine could be reasonably labeled with either form in the pair in typical communicative interactions with young children (e.g., _doggy_ or _dog_).
 
 ```{r freq_table, results = "asis"}
 cds_freq <- freq %>%
@@ -101,7 +138,7 @@ freq_table <- xtable::xtable(freq, digits = 0,
     column_spec(2, italic = TRUE)
 
 print(freq_table, include.rownames = FALSE,
-      type = "latex", comment = FALSE, table.placement = "h!")
+      type = "latex", comment = FALSE, table.placement = "!ht")
 ```
 
 ## Linguistic predictors
