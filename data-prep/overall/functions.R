@@ -14,13 +14,17 @@ ADS_forms <- read_csv("data-prep/overall/item-info.csv") %>%
   filter(form == "ADS") %>%
   pull(word)
 
-get_utts_w_target <- function(raw_utts, targets) {
+get_utts_w_target <- function(raw_utts, targets, corpus) {
   utts_list <- list()
-  
-  input <- raw_utts %>%
+  if (corpus == "LDP") {
+    input <- raw_utts
+  }
+  else {
+    input <- raw_utts %>%
     filter(target_child_age < 84) %>% 
     mutate(gloss = paste0(' ', tolower(gloss), ' '), 
            age = round(target_child_age, digits = 0))
+  }
   
   for (i in targets) {
     if (str_detect(i, "ey")) {

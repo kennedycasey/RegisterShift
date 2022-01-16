@@ -1,7 +1,7 @@
 library(phonfieldwork)
 library(tidyverse)
-names <- list.files(path = "../secure/aclew/raw_eafs", pattern = regex("[0-9][0-9][0-9][0-9].eaf$"))
-files <- lapply(paste0("../secure/aclew/raw_eafs/", names), eaf_to_df)
+names <- list.files(path = "~/Desktop/secure/aclew/raw_eafs", pattern = regex("[0-9][0-9][0-9][0-9].eaf$"))
+files <- lapply(paste0("~/Desktop/secure/aclew/raw_eafs/", names), eaf_to_df)
 
 min_dur <- do.call(rbind, files) %>%
   mutate(dur = round((time_end - time_start) * 1000)) %>%

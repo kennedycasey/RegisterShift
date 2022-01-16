@@ -57,10 +57,22 @@ child_utterances <- childes_utterances %>%
   mutate(gloss = paste0(' ', tolower(gloss), ' '), 
          age = round(target_child_age, digits = 0))
 
+other_utterances %>%
+  mutate(gloss = trimws(gloss)) %>%
+  filter(gloss != "") %>%
+  write_csv("data-prep/parser/other-utterances.csv")
+
 other_utterances <- childes_utterances %>%
   filter(target_child_age < 84 & speaker_role != "Target_Child") %>% 
   mutate(gloss = paste0(' ', tolower(gloss), ' '), 
          age = round(target_child_age, digits = 0))
+
+write_csv(other_utterances, "data-prep/parser/other-utterances.csv")
+
+test <- other_utterances %>%
+  mutate(row_number = row_number()) %>%
+  filter(row_number <= 15)
+write_csv(test, "data-prep/parser/test.csv")
 
 # get overall token counts
 get_freq <- list()
