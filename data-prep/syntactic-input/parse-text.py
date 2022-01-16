@@ -1,5 +1,4 @@
 ﻿#!/usr/bin/env python3
-
 import spacy, benepar
 import pandas as pd
 
@@ -26,9 +25,10 @@ if spacy.__version__.startswith('2'):
 else:
     nlp.add_pipe("benepar", config={"model": "benepar_en3"})
 
+
 # CHILDES
 for t in target_words:
-    utts_df = pd.read_csv("../../data/" + t + ".csv", 
+    utts_df = pd.read_csv("../../data/childes-byword/" + t + ".csv", 
     low_memory = False, encoding='latin-1')
     pos_tags = []
 
@@ -44,7 +44,7 @@ for t in target_words:
 
 # LDP
 for t in target_words:
-    utts_df = pd.read_csv("~/Desktop/secure/LDP/" + t + ".csv", 
+    utts_df = pd.read_csv("~/Desktop/secure/ldp-byword/" + t + ".csv", 
     low_memory = False, encoding='latin-1')
     pos_tags = []
 
@@ -56,4 +56,4 @@ for t in target_words:
         pos_tags.append(pos)
     
     utts_df["parsed_gloss"] = pos_tags
-    utts_df.to_csv("~/Desktop/secure/LDP/" + t + "-parsed.csv")
+    utts_df.to_csv("~/Desktop/secure/ldp-parsed/" + t + "-parsed.csv")
