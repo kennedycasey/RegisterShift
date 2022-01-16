@@ -16,7 +16,7 @@ mlu_other <- utterances %>%
            MLUm_scaled = scale(num_morphemes))
 
 mlu_child <- utterances %>%
-  filter(speaker_type == "other") %>%
+  filter(speaker_type == "child") %>%
   mutate(age_scaled = scale(age), 
          MLUw_scaled = scale(num_tokens), 
          MLUm_scaled = scale(num_morphemes))
@@ -91,3 +91,30 @@ m <- glmer(form_numeric ~ MLUm_scaled * age_scaled +
 summary(m)
 save_model_output(m, "analysis/model-outputs/child-utts/MLUm.csv")
 
+
+# test data
+library(ggridges)
+
+early_pairs <- c("doggy_dog", "kitty_cat", 
+                 "night night_goodnight", 
+                 "dolly_doll", "horsey_horse")
+
+late_pairs <- c("mommy_mom", "daddy_dad", 
+                "tummy_stomach", "bunny_rabbit", 
+                "potty_bathroom")
+
+never_pairs <- c("birdie_bird", "piggy_pig", 
+                 "froggy_frog", "blankie_blanket", 
+                 "duckie_duck")
+
+test <- mlu_other %>%
+  mutate(shift_type = case_when(
+    pair %in% early_pairs ~ "early", 
+    pair %in% late_pairs ~ "late", 
+    pair %in% never_pairs ~ "never"))
+  
+
+ggplot(test, aes(x = MLUw_scaled, y = shift_type, fill = form)) +
+  geom_density_ridges(scale = 0.75, alpha = 0.5) +
+  scale_fill_manual(values = colors) +
+  theme_minimal()
