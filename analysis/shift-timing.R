@@ -8,7 +8,10 @@ library(ggeffects)
 library(ggrepel)
 library(geomtextpath)
 
-childes_utterances = data.table(get_utterances(collection = "Eng-NA"))
+path = "data/childes-byword/"
+filenames <- list.files(path, "*.csv")
+files <- lapply(paste0(path, filenames), read_csv)
+utterances <- do.call(rbind, files)
 
 # set overall parameters
 items <- read_csv("data-prep/overall/item-info.csv") %>%
@@ -21,12 +24,6 @@ aoa <- read_csv("data-prep/overall/item-info.csv") %>%
   select(word, aoa, pair, form)
 
 colors <- c("CDS" = "#C1292E", "ADS" = "#235789")
-
-# CHILDES -----------------------------------------------------------------
-utterances <- childes_utterances %>%
-  filter(target_child_age < 84 & speaker_role == "Target_Child") %>% 
-  mutate(gloss = paste0(' ', tolower(gloss), ' '), 
-         age = round(target_child_age, digits = 0))
 
 # get overall token counts
 for (i in items) {
