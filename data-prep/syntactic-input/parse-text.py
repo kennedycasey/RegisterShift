@@ -40,7 +40,7 @@ for t in target_words:
         pos_tags.append(pos)
     
     utts_df["parsed_gloss"] = pos_tags
-    utts_df.to_csv(t + "-parsed.csv")
+    utts_df.to_csv("parsed/" + t + "-parsed.csv")
 
 # LDP
 for t in target_words:
