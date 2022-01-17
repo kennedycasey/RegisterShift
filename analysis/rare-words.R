@@ -28,7 +28,9 @@ words <- childes_utterances %>%
   group_by(word) %>%
   summarize(raw_freq = n()) %>%
   mutate(row_number = row_number()) %>%
-  filter(row_number != 1 & raw_freq > 1)
+  filter(row_number != 1 & raw_freq >= 50)
+
+#write_csv(words, "data-prep/lexical-input/raw-freq.csv")
 
 total <- sum(words$raw_freq)
 
@@ -55,7 +57,7 @@ freq_other <- utterances %>%
   filter(!is.na(freq_scaled))
 
 m <- glmer(form_numeric ~ freq_scaled * age_scaled + 
-              (freq_scaled * age_scaled|pair) + (freq_scaled * age_scaled|speaker_id),
+              (1|pair) + (1|speaker_id),
            data = freq_other,
            family = binomial, 
            control = glmerControl(optimizer = "bobyqa"))
