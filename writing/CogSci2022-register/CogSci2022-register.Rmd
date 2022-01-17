@@ -126,20 +126,20 @@ freq <- bind_cols(cds_freq, ads_freq) %>%
     select(pair, child...2, other...3, child...5, other...6) 
 colnames(freq) <- c("Pair", "Child", "Other", "Child", "Other")
 
-freq_table <- xtable::xtable(freq, digits = 0,
+xtable::xtable(freq, digits = 0,
                              include.rownames = FALSE, 
                              label = "tab:tab1",
                              caption = "CHILDES frequency for 15 CDS/ADS word pairs. Child-produced
                              counts include tokens produced only by the target child. All other 
                              speakers' productions are included in the other-produced counts.") %>%
     xtable2kable(booktabs = TRUE, escape = FALSE) %>%
-    kable_styling(font_size = 6) %>%
+    kable_styling(latex_options = "scale_down") %>%
     add_header_above(c(" " = 2, "CDS tokens by speaker" = 2, "ADS tokens by speaker" = 2), bold = TRUE) %>%
     row_spec(0, bold = TRUE) %>%
     column_spec(2, italic = TRUE)
 
-print(freq_table, include.rownames = FALSE,
-      type = "latex", comment = FALSE, table.placement = "!ht")
+#print(freq_table, include.rownames = FALSE,
+      #type = "latex", comment = FALSE, table.placement = "!hb")
 ```
 
 ## Linguistic predictors
@@ -150,7 +150,7 @@ All analyses were conducted over individual utterances. We quantified prosodic, 
 We measured three types of prosodic information: mean pitch (Hz), pitch range (Hz), and speaking rate (words per second). These measures were calculated over all timestamped utterances in CHILDES (`r metadata$child_timestamped`% of child-produced and `r metadata$other_timestamped`% of other-produced utterances). Utterances shorter than 58 ms were excluded from analysis. This lower bound was set by identifying the the shortest possible duration of an utterance containing at least one word in four manually annotated North American English corpora in HomeBank [@homebank; @bergelsoncorpus; @soderstromcorpus; @vandamcorpus; @warlaumontcorpus]. Pitch information was extracted using Praat software [@boersma2016praat].
 
 ### Lexical level
-We measured two types of lexical information: complexity and rarity. Lexical complexity was defined as the negative log proportion of known words in each utterance [consistent with @foushee2016lexical; @kidd2012goldilocks]. A word was considered 'known' if the age of acquisition (AoA) estimate [@fenson1994variability; @frank2017wordbank] was less than or equal to the age of the target child when they heard or produced the utterance. Utterances with proportionally fewer known words are more lexically complex. Lexical rarity was determined based on overall frequency in CHILDES. For all words with at least XX tokens^[Manual checks revealed that many or XX% of the lowest-frequency words included idiosyncratic or erroneous transcriptions and/or repetitions of children's babbling.], we calculated a rarity score as the negative log proportion of other-produced tokens in CHILDES (i.e., number of tokens for a given word/sum of all tokens in the full corpus), and then averaged for rarity scores for all target utterances. Utterances with more low-frequency words are considered more lexically rare.
+We measured two types of lexical information: complexity and rarity. Lexical complexity was defined as the negative log proportion of known words in each utterance [consistent with @foushee2016lexical; @kidd2012goldilocks]. A word was considered 'known' if the age of acquisition (AoA) estimate [@fenson1994variability; @frank2017wordbank] was less than or equal to the age of the target child when they heard or produced the utterance. Utterances with proportionally fewer known words are more lexically complex. Lexical rarity was determined based on overall frequency in CHILDES. For all words with at least XX tokens^[Manual checks revealed that many or XX% of the lowest-frequency words included idiosyncratic or erroneous transcriptions and/or repetitions of children's babbling.], we calculated a rarity score as the negative log proportion of other-produced tokens in CHILDES (i.e., number of tokens for a given word/sum of all tokens in the full corpus), and then averaged for rarity scores for all target utterances. Utterances with more low-frequency words are considered more lexically rare. \newline
 
 ### Syntactic level
 Syntactic measures included both the length of the utterance (in words) and the number of verb phrases. The number of words per utterance was automatically extracted using the `childesr` package [@braginsky2021childesr]. The number of verb phrases per utterance was determined using `spaCy3`, an automatic syntactic parser [@honnibal2020spacy].
