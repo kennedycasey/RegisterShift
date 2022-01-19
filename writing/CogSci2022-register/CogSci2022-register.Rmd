@@ -94,8 +94,8 @@ Social refs:
 [@ramirez-esparza2014look]: CDS helps word learning but it's also about the social context (dyadic interaction)
 
 Dev change/fine tuning refs:
-[@ramirez-esparza2017look]: similar ideas but longitudinal
-[@bergelson2019north]: increase in prop CDS over the first 20 months, driven by a decrease in other-directed speech
+[@ramirez-esparza2017look]: similar ideas to above but longitudinal
+[@bergelson2019north]: increase in prop CDS over the first 20 months, driven by a decrease in ODS
 [@jiangURexploring]: distributional semantics
 [@odijk2020fine]: MLU decreasing before child word production
 [@tippenhauer2020scope]: less rep reduction of low-frequency words in CDS
@@ -107,7 +107,7 @@ Dev change/fine tuning refs:
 
 We analyzed `r metadata$n_transcripts` transcripts in the North American English collection of the Child Language Data Exchange System (CHILDES) database [@macwhinney2000childes]. The included transcripts were drawn from `r metadata$n_corpora` individual corpora and featured `r metadata$n_kids` children up to 7 years of age (range = `r metadata$min_age`--`r metadata$max_age` months, _M_ = `r metadata$mean_age` months). 
 
-Additional data from the Language Development Project (LDP) longitudinal corpus were also analyzed <!--kc: figure out how to properly cite-->. These included XX transcripts from XX children recorded every 4 months for approximately one hour from age 14 to 58 months.
+Data from the Language Development Project (LDP) longitudinal corpus were also analyzed <!--kc: figure out how to properly cite-->. These included XX transcripts from XX children recorded every 4 months for approximately one hour from age 14 to 58 months.
 
 ## Target words
 Fifteen CDS/ADS word pairs (30 total target words) were selected based on the appearance of at least one form on the MacArthur-Bates Communicative Development Inventory [@fenson1994variability] and their frequency of occurrence in CHILDES (at least 100 child-produced tokens and 100 other-produced tokens per form; see Table \ref{tab:tab1}). Test items were chosen such that the same object, animal, or routine could be reasonably labeled with either form in the pair in typical communicative interactions with young children (e.g., _doggy_ or _dog_).
@@ -156,8 +156,14 @@ Syntactic measures included both the length of the utterance (in words) and the 
 # Results
 
 ## Measuring production: When do children produce CDS vs. ADS forms?
+```{r}
+# read in lmer outputs generated in shift-timing.R 
+overall.shift <- read_csv("../../analysis/model-outputs/shift-timing.csv")
+```
+We first asked if and when CDS forms are replaced by ADS forms in children's own speech. We fit a mixed-effects binomial logistic regression model predicting children's production of CDS vs. ADS forms, with target child age (in months) as a single fixed effect. Random slopes and intercepts for individual word pairs were included. For target word token, the form was coded as 0 (CDS) or 1 (ADS). Thus, all tokens were considered, even if there were multiple repetitions of the same word or variations in form within the same utterance. <!--kc: can drop these details if needed space-wise but i think this question might come up--> 
+Children's production of ADS forms increased across age ($\beta$ = `r format(round(overall.shift$estimate, 2), 2)`, _SE_ = `r format(round(overall.shift$std.error, 2), 2)`, _t_ = `r format(round(overall.shift$statistic, 2), 2)`, _p_ `r ifelse(overall.shift$p.value < .001, paste("< 0.001"), paste("=", format(round(overall.shift$p.value, 3), 3)))`; Figure 1). That is, with increasing age, children increasingly produced ADS forms over CDS forms. The average CDS-to-ADS transition point across all words (i.e., the point after which ADS forms were proportionally more common in children's speech, or produced >50% of the time) was around 2.5 years of age. <!--kc: determine years vs. months and stay consistent in reporting throughout-->
 
-We first asked when CDS forms are replaced by ADS forms in children's own speech. We fit mixed effects binomial logistic regression model predicting children's production of CDS vs. ADS forms with target child age (in months) as a single fixed effect. Random slopes and intercepts for individual word pairs and children were included.
+Analyses of individual word-pair trajectories revealed...[add summary of individual models, i.e., XX of 15 pairs showed significant increase in ADS with age PLUS description of different shift types]
 
 ## Characterizing the input: In what linguistic contexts do children hear CDS vs. ADS forms?
 
