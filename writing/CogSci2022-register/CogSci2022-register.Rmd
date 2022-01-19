@@ -5,11 +5,11 @@ csl: apa6.csl
 document-params: "10pt, letterpaper"
 
 author-information: > 
-    \author{{\large \bf Kennedy Casey} \\ \texttt{\small{kbcasey@uchicago.edu}} 
-    \\{\large \bf Marisa Casillas} \\ \texttt{\small{mcasillas@uchicago.edu}} \\Comparative Human Development, University of Chicago \\ Chicago, IL 60637 USA}
+    \author{{\large \bf Kennedy Casey} \\ University of Chicago \\ \texttt{kbcasey@uchicago.edu}
+    \And {\large \bf Marisa Casillas} \\ University of Chicago \\ \texttt{mcasillas@uchicago.edu}}
 
 abstract: >
-  Child-directed speech (CDS) features words such as _doggy_, *night-night*, and _tummy_ that are rarely used in adult-directed speech (ADS). Characterisitcs of CDS word forms, such as reduplication and diminutivization, explain why they may be learned and produced earlier by children. However, it is not yet clear how or when children switch to using ADS equivalents—*dog*, *goodnight*, *stomach*. Through analysis of transcripts from CHILDES and the Language Development Project corpus, we show that children significantly increase their production of ADS word forms across age, with the average CDS-to-ADS transition point at 2.5 years. Many of the linguistic features that distinguish CDS vs. ADS registers (e.g., speech rate, lexical complexity, etc.) similarly differentiate the local speech contexts surrounding CDS vs. ADS word forms. To test whether these patterns in children's input...classifier details...Learners may therefore be able to capitalize on these cues to support their discovery of context-appropriate CDS/ADS pair use.
+  Child-directed speech (CDS) features words such as _doggy_, *night-night*, and _tummy_ that are rarely used in adult-directed speech (ADS). Characterisitcs of CDS word forms, such as reduplication and diminutivization, explain why they may be learned and produced earlier by children. However, it is not yet clear how or when children switch to using ADS equivalents—--*dog*, _goodnight_, _stomach_. Through analysis of transcripts from CHILDES and the Language Development Project corpus, we show that children significantly increase their production of ADS word forms across age, with the average CDS-to-ADS transition point at 2.5 years. Many of the linguistic features that distinguish CDS vs. ADS registers (e.g., speech rate, lexical complexity, etc.) similarly differentiate the local speech contexts surrounding CDS vs. ADS word forms. To test whether these patterns in children's input...classifier details...Learners may therefore be able to capitalize on these cues to support their discovery of context-appropriate CDS/ADS pair use.
   
 keywords: >
     child-directed speech; word production; linguistic input; social register; corpus analysis; developmental change
