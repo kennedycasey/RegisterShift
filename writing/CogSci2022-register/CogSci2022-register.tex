@@ -301,25 +301,48 @@ was determined using \texttt{spaCy3}, an automatic syntactic parser
 \subsection{Measuring production: When do children produce CDS vs.~ADS
 forms?}\label{measuring-production-when-do-children-produce-cds-vs.-ads-forms}}
 
-We first asked if and when CDS forms are replaced by ADS forms in
-children's own speech. We fit a mixed-effects binomial logistic
-regression model predicting children's production of CDS vs.~ADS forms,
-with target child age (in months) as a single fixed effect. Random
-slopes and intercepts for individual word pairs were included. For
-target word token, the form was coded as 0 (CDS) or 1 (ADS). Thus, all
-tokens were considered, even if there were multiple repetitions of the
-same word or variations in form within the same utterance. Children's
-production of ADS forms increased across age (\(\beta\) = 0.04,
-\emph{SE} = 0.01, \emph{t} = 5.45, \emph{p} \textless{} 0.001; Figure
-1). That is, with increasing age, children increasingly produced ADS
-forms over CDS forms. The average CDS-to-ADS transition point across all
-words (i.e., the point after which ADS forms were proportionally more
-common in children's speech, or produced \textgreater50\% of the time)
-was around 2.5 years of age.
+We first asked when CDS forms are replaced by ADS forms in children's
+own speech. We fit a mixed-effects binomial logistic regression model
+predicting children's production of CDS vs.~ADS forms, with target child
+age (in months, scaled) as a single fixed effect. Random slopes and
+intercepts for word pairs were also included. For target word token, the
+form was coded as 0 (CDS) or 1 (ADS). All tokens were considered, even
+if there were multiple repetitions of the same word or variations in
+form within the same utterance. Thus, the model captures, for each age,
+the relative proportion of CDS vs.~ADS forms in children's own speech.
+
+Children's production of ADS forms increased across age (\(\beta\) =
+0.54, \emph{SE} = 0.11, \emph{t} = 4.92, \emph{p} \textless{} 0.001;
+Figure 1). That is, with increasing age, children increasingly produced
+ADS forms over CDS forms. The average CDS-to-ADS transition point across
+all words (i.e., the point at which ADS forms were produced
+\textgreater50\% of the time) was around 2.5 years of age.
+
+\begin{CodeChunk}
+\begin{figure}[h]
+
+{\centering \includegraphics{figs/shift-timing-fig-1} 
+
+}
+
+\caption[Model-predicted increase in production of ADS forms with age]{Model-predicted increase in production of ADS forms with age. Gray lines depict raw individual word-pair trajectories.}\label{fig:shift-timing-fig}
+\end{figure}
+\end{CodeChunk}
 
 Analyses of individual word-pair trajectories revealed\ldots{[}add
 summary of individual models, i.e., XX of 15 pairs showed significant
 increase in ADS with age PLUS description of different shift types{]}
+
+\begin{CodeChunk}
+\begin{figure}[!ht]
+
+{\centering \includegraphics{figs/shift-timing-bypair-fig-1} 
+
+}
+
+\caption[Inidividual word-pair trajectories for increasing production of ADS forms (blue) and descreasing production of CDS forms (red) with age]{Inidividual word-pair trajectories for increasing production of ADS forms (blue) and descreasing production of CDS forms (red) with age. Columns indicate categorically different shift trajectory types: (1) items for which ADS forms appear to dominate in children's speech from the start, (2) items whose CDS forms are replaced by ADS forms early on, and (3) items whose ADS forms become dominant later in development.}\label{fig:shift-timing-bypair-fig}
+\end{figure}
+\end{CodeChunk}
 
 \hypertarget{characterizing-the-input-in-what-linguistic-contexts-do-children-hear-cds-vs.-ads-forms}{%
 \subsection{Characterizing the input: In what linguistic contexts do
@@ -336,7 +359,7 @@ fitted to all utterance data from speakers other than the target child.
 Main effects and interactions with age are shown in Figure 2.
 
 \begin{CodeChunk}
-\begin{figure}[H]
+\begin{figure}[h]
 
 {\centering \includegraphics{figs/model-plot-1} 
 
