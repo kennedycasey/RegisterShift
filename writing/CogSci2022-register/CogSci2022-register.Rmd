@@ -164,6 +164,12 @@ We first asked when CDS forms are replaced by ADS forms in children's own speech
 
 Children's production of ADS forms increased across age ($\beta$ = `r format(round(overall.shift$estimate, 2), 2)`, _SE_ = `r format(round(overall.shift$std.error, 2), 2)`, _t_ = `r format(round(overall.shift$statistic, 2), 2)`, _p_ `r ifelse(overall.shift$p.value < .001, paste("< 0.001"), paste("=", format(round(overall.shift$p.value, 3), 3)))`; Figure 1). That is, with increasing age, children increasingly produced ADS forms over CDS forms. The average CDS-to-ADS transition point across all words (i.e., the point at which ADS forms were produced >50% of the time) was around 2.5 years of age. <!--kc: determine years vs. months and stay consistent in reporting throughout-->
 
+```{r shift-timing-fig, fig.env = "figure", fig.pos = "!h", fig.align = "center", fig.width = 2.9, fig.height = 2.9, fig.cap = "Model-predicted increase in production of ADS forms with age. Gray lines depict raw individual word-pair trajectories."}
+
+shift.timing <- png::readPNG("../figs/shift-timing.png")
+grid::grid.raster(shift.timing)
+```
+
 Analyses of individual word-pair trajectories revealed...[add summary of individual models, i.e., XX of 15 pairs showed significant increase in ADS with age PLUS description of different shift types]
 
 ## Characterizing the input: In what linguistic contexts do children hear CDS vs. ADS forms?
