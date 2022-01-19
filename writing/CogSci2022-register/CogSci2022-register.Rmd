@@ -172,6 +172,13 @@ grid::grid.raster(shift.timing)
 
 Analyses of individual word-pair trajectories revealed...[add summary of individual models, i.e., XX of 15 pairs showed significant increase in ADS with age PLUS description of different shift types]
 
+```{r shift-timing-bypair-fig, fig.env = "figure", fig.pos = "!h", fig.align = "center", fig.width = 3.4, fig.height = 5, fig.cap = "Inidividual word-pair trajectories for increasing ADS forms (blue) and descreasing CDS forms (red) with age. Columns indicate categorically different shift trajectory types (i.e., items where the ADS form appears dominant from the start, items where CDS forms are replaced by ADS forms early on, and items where ADS forms become dominant later in development."}
+
+bypair.shift.timing <- png::readPNG("../figs/bypair-shift-timing.png")
+grid::grid.raster(bypair.shift.timing)
+```
+
+
 ## Characterizing the input: In what linguistic contexts do children hear CDS vs. ADS forms?
 
 We used mixed-effects binomial logistic regression models to predict the appearance of CDS vs. ADS forms in given utterance on the basis of target child's age, several linguistic properties of the utterance, and interactions between each property and age. Models included random slopes and intercepts for individual word pairs and speakers and were fitted to all utterance data from speakers other than the target child.

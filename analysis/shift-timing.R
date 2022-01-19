@@ -159,19 +159,18 @@ for (i in unique(pairs)) {
     filter(pair == i)
 }
 
-prop <- ggarrange(birdie_bird, blankie_blanket, bunny_rabbit, 
-                  daddy_dad, doggy_dog, dolly_doll, duckie_duck, 
-                  froggy_frog, horsey_horse, kitty_cat,
-                  mommy_mom, `night night_goodnight`, piggy_pig, 
-                  potty_bathroom, tummy_stomach, 
-                  common.legend = TRUE, legend = "bottom", 
-                  ncol = 5, nrow = 3)
+prop <- ggarrange(birdie_bird, doggy_dog, bunny_rabbit,
+                  blankie_blanket, dolly_doll, daddy_dad, 
+                  duckie_duck, horsey_horse, mommy_mom, 
+                  froggy_frog, kitty_cat, potty_bathroom, 
+                  piggy_pig, `night night_goodnight`, tummy_stomach,
+                  ncol = 3, nrow = 5)
 
 annotate_figure(prop,
                 left = text_grob("Proportion of tokens per form", rot = 90, size = 25, face = "bold"), 
                 bottom = text_grob("Age (months)", size = 25, face = "bold"))
 
-#ggsave("figs/byItem_forms_over_time.jpg", height = 10, width = 20, dpi = 300)
+ggsave("writing/figs/bypair-shift-timing.png", height = 10, width = 6, dpi = 300)
 
 # generate summary prop plot
 model_data_list = list()
