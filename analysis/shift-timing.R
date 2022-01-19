@@ -154,10 +154,6 @@ model_data <- do.call(rbind, get_model_data)
 m <- glmer(form_numeric ~ age + (age|pair), data = model_data, 
            family = binomial)
 
-tidy(m) %>%
-  filter(effect == "fixed" & term == "age") %>%
-  write_csv("analysis/model-outputs/shift-timing.csv")
-
 for (i in unique(pairs)) {
   model_data_pair <- model_data %>%
     filter(pair == i)
@@ -207,11 +203,16 @@ rownames(model_data_merged) <- 1:nrow(model_data_merged)
 
 model_data_long <- model_data_merged[rep(seq(nrow(model_data_merged)), model_data_merged$count), 1:7]
 
-m <- glmer(form_numeric ~ scale(age) + (1|pair) + (1|total_tokens), #singular model fit if random slope for pair included
+m <- glmer(form_numeric ~ scale(age) + (scale(age)|pair),
          family = "binomial",
          control = glmerControl(optimizer="bobyqa"),
          data = model_data_long)
 summary(m)
+
+tidy(m) %>%
+  mutate(term = str_remove_all(term, "scale")) %>%
+  filter(effect == "fixed" & term == "(age)") %>%
+  write_csv("analysis/model-outputs/shift-timing.csv")
 
 overall_trend <- ggpredict(m, c("age [all]"), type = "random")
 
@@ -223,12 +224,12 @@ ggplot() +
               fill="#235789", alpha=0.25) +
   geom_line(data=overall_trend, aes(x=x, y=predicted), color="#235789", size = 2) +
   scale_x_continuous(limits = c(0, 84), breaks=seq(0, 84, by=12)) +
-  labs(x = "Age (months)", y = "Probability of producing ADS form") +
+  labs(x = "Age (months)", y = "Proportion of ADS forms") +
   geom_hline(yintercept=0.5, linetype="dotted", size=1) +
   theme_test(base_size = 15) +
   theme(plot.title = element_text(hjust = 0.5)) +
   coord_cartesian(ylim=c(0, 1))
-#ggsave("figs/ADS_over_time.jpg")
+ggsave("writing/figs/shift-timing.png", dpi = 300)
 
 # shift type analyses
 early_pairs <- read_csv("data-prep/overall/item-info.csv") %>%
