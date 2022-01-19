@@ -170,7 +170,7 @@ annotate_figure(prop,
                 left = text_grob("Proportion of tokens per form", rot = 90, size = 25, face = "bold"), 
                 bottom = text_grob("Age (months)", size = 25, face = "bold"))
 
-ggsave("writing/figs/bypair-shift-timing.png", height = 10, width = 6, dpi = 300)
+ggsave("writing/figs/bypair-shift-timing.png", height = 15, width = 10, dpi = 300)
 
 # generate summary prop plot
 model_data_list = list()
@@ -196,7 +196,8 @@ for (i in pairs) {
       form == "ADS" ~ 1))
   
   model_data_list[[i]] <- model_data
-  }
+}
+
 model_data_merged <- do.call(rbind, model_data_list)
 rownames(model_data_merged) <- 1:nrow(model_data_merged)
 
@@ -229,6 +230,29 @@ ggplot() +
   theme(plot.title = element_text(hjust = 0.5)) +
   coord_cartesian(ylim=c(0, 1))
 ggsave("writing/figs/shift-timing.png", dpi = 300)
+
+model_outputs_list = list()
+for (i in pairs) {
+  bypair_model_data <- model_data_long %>% 
+    filter(pair == i)
+  
+  model <- glm(form_numeric ~ scale(age),
+               family = "binomial",
+               data = bypair_model_data)
+  
+  output <- tidy(model) %>%
+    mutate(term = str_remove_all(term, "scale")) %>%
+    filter(term == "(age)")
+  
+  model_outputs_list[[i]] <- output
+}
+
+do.call(rbind, model_outputs_list) %>%
+  rownames_to_column(var = "pair") %>%
+  mutate(p.adjusted = p.adjust(p.value, method = "holm")) %>%
+  write_csv("analysis/model-outputs/bypair-shift-timing.csv")
+
+
 
 # shift type analyses
 early_pairs <- read_csv("data-prep/overall/item-info.csv") %>%
