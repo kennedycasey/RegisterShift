@@ -7,6 +7,7 @@ library(lme4)
 library(ggeffects)
 library(ggrepel)
 library(geomtextpath)
+library(broom.mixed)
 
 childes_utterances = data.table(get_utterances(collection = "Eng-NA"))
 ldp_utterances = data.table(read_csv("~/Desktop/secure/ldp_data_prepped.csv")) %>%
@@ -152,7 +153,10 @@ model_data <- do.call(rbind, get_model_data)
 
 m <- glmer(form_numeric ~ age + (age|pair), data = model_data, 
            family = binomial)
-summary(m)
+
+tidy(m) %>%
+  filter(effect == "fixed" & term == "age") %>%
+  write_csv("analysis/model-outputs/shift-timing.csv")
 
 for (i in unique(pairs)) {
   model_data_pair <- model_data %>%
