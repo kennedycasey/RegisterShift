@@ -10,7 +10,7 @@ library(geomtextpath)
 
 childes_utterances = data.table(get_utterances(collection = "Eng-NA"))
 ldp_utterances = data.table(read_csv("~/Desktop/secure/ldp_data_prepped.csv")) %>%
-  filter(speaker == "other_speaker") %>%
+  filter(speaker == "target_child") %>%
   select(gloss, age)
 
 # set overall parameters
