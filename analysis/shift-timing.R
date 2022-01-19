@@ -8,10 +8,10 @@ library(ggeffects)
 library(ggrepel)
 library(geomtextpath)
 
-path = "data/childes-byword/"
-filenames <- list.files(path, "*.csv")
-files <- lapply(paste0(path, filenames), read_csv)
-utterances <- do.call(rbind, files)
+childes_utterances = data.table(get_utterances(collection = "Eng-NA"))
+ldp_utterances = data.table(read_csv("~/Desktop/secure/ldp_data_prepped.csv")) %>%
+  filter(speaker == "other_speaker") %>%
+  select(gloss, age)
 
 # set overall parameters
 items <- read_csv("data-prep/overall/item-info.csv") %>%
@@ -24,6 +24,14 @@ aoa <- read_csv("data-prep/overall/item-info.csv") %>%
   select(word, aoa, pair, form)
 
 colors <- c("CDS" = "#C1292E", "ADS" = "#235789")
+
+# CHILDES -----------------------------------------------------------------
+utterances <- childes_utterances %>%
+  filter(target_child_age < 84 & speaker_role == "Target_Child") %>% 
+  mutate(gloss = paste0(' ', tolower(gloss), ' '), 
+         age = round(target_child_age, digits = 0)) %>%
+  select(gloss, age) %>%
+  bind_rows(ldp_utterances)
 
 # get overall token counts
 for (i in items) {
@@ -72,7 +80,7 @@ for (i in items) {
                   paste0(i) := str_count(gloss, regex(paste0(" ", i, " | ", i, "s | ", i, "'s ")))]
 }
 
-childes_data <- utterances[, 28:ncol(utterances)]
+childes_data <- utterances[, 3:ncol(utterances)]
 childes_data[is.na(childes_data)] <- 0
 childes_freq <- data.frame(colSums(childes_data))
 childes_freq <- setNames(cbind(rownames(childes_freq), childes_freq, row.names = NULL), c("word", "childes_freq"))
@@ -87,7 +95,7 @@ for (i in pairs) {
   
   model_data <- utterances %>%
     filter(!is.na(eval(as.symbol(CDS))) | !is.na(eval(as.symbol(ADS)))) %>%
-    select(age, speaker_role, CDS, ADS) %>%
+    select(age, CDS, ADS) %>%
     group_by(age) %>%
     summarize(CDS = sum(eval(as.symbol(CDS)), na.rm = TRUE),
               ADS = sum(eval(as.symbol(ADS)), na.rm = TRUE)) %>%
@@ -142,7 +150,7 @@ for (i in pairs) {
 
 model_data <- do.call(rbind, get_model_data)
 
-m <- glmer(form_numeric ~ age + (1 + age|pair), data = model_data, 
+m <- glmer(form_numeric ~ age + (age|pair), data = model_data, 
            family = binomial)
 summary(m)
 
@@ -173,7 +181,7 @@ for (i in pairs) {
   
   model_data <- utterances %>%
     filter(!is.na(eval(as.symbol(CDS)))|!is.na(eval(as.symbol(ADS)))) %>%
-    select(age, speaker_role, CDS, ADS) %>%
+    select(age, CDS, ADS) %>%
     group_by(age) %>%
     summarize(CDS = sum(eval(as.symbol(CDS)), na.rm = TRUE),
               ADS = sum(eval(as.symbol(ADS)), na.rm = TRUE), 
@@ -217,10 +225,6 @@ ggplot() +
   theme(plot.title = element_text(hjust = 0.5)) +
   coord_cartesian(ylim=c(0, 1))
 #ggsave("figs/ADS_over_time.jpg")
-
-
-
-
 
 # shift type analyses
 early_pairs <- read_csv("data-prep/overall/item-info.csv") %>%
