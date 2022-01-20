@@ -92,6 +92,10 @@ utterances <- do.call(rbind, utts_list) %>%
            speaker == "target_child" ~ "child", 
            speaker != "target_child" ~ "other"))
 
+utterances %>%
+  filter(speaker_type == "other") %>%
+  write_csv("~/Desktop/secure/ldp-input.csv")
+
 for (i in items) {
   subset <- utterances %>%
     filter(item == i) %>%
