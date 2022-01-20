@@ -98,6 +98,10 @@ utterances <- do.call(rbind, utts_list) %>%
            speaker_role == "Target_Child" ~ "child", 
            speaker_role != "Target_Child" ~ "other"))
 
+utterances %>%
+  filter(speaker_type == "other") %>%
+  write_csv("data/childes-input.csv")
+
 for (i in items) {
   subset <- utterances %>%
     filter(item == i)
