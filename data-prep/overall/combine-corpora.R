@@ -19,5 +19,12 @@ ldp <- read_csv("~/Desktop/secure/ldp-input.csv") %>%
   select(corpus_name, id, speaker_id, target_child_id, age, 
          pair, item, form, form_numeric, length)
 
-input <- bind_rows(childes, ldp)
+# read in input predictor data
+complexity <- read_csv("data/input/complexity.csv")
+
+input <- bind_rows(childes, ldp) %>%
+  left_join(complexity, by = c("corpus_name", "id",
+                               "speaker_id", "target_child_id", 
+                               "age", "pair", "item", 
+                               "form", "form_numeric"))
 write_csv(input, "data/full-input.csv")
