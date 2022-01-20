@@ -29,6 +29,7 @@ pitch_info <- do.call(rbind, pitch_files) %>%
          pitch_range_scaled = scale(pitch_range),
          age_scaled = scale(age)) %>%
   select(item, pair, form, form_numeric, speaker_id, target_child_id, 
-         age, pitch_mean, pitch_mean_scaled, pitch_range, pitch_range_scaled)
+         age, age_scaled, pitch_mean, pitch_mean_scaled, pitch_range, 
+         pitch_range_scaled)
 
 write_csv(as.data.frame(as.matrix(pitch_info)), "data/input/pitch.csv")
