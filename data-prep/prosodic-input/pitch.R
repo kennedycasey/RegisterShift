@@ -5,7 +5,7 @@ source("data-prep/overall/functions.R")
 
 # read in pitch info from data_prep folder
 # merge into single df
-path_to_pitch_info = "data-prep/prosody/processed/"
+path_to_pitch_info = "data-prep/prosodic-input/processed/"
 pitch_filenames <- list.files(path = path_to_pitch_info, pattern = "*.csv")
 pitch_files <- lapply(paste0(path_to_pitch_info, pitch_filenames), read_csv)
 pitch_info <- do.call(rbind, pitch_files) %>%
@@ -27,20 +27,8 @@ pitch_info <- do.call(rbind, pitch_files) %>%
          pitch_range = abs(pitch_range),
          pitch_mean_scaled = scale(pitch_mean), 
          pitch_range_scaled = scale(pitch_range),
-         age_scaled = scale(age))
+         age_scaled = scale(age)) %>%
+  select(item, pair, form, form_numeric, speaker_id, target_child_id, 
+         age, pitch_mean, pitch_mean_scaled, pitch_range, pitch_range_scaled)
 
-m <- glmer(form_numeric ~ pitch_mean_scaled * age_scaled + 
-             (1|pair) + (1|speaker_id), 
-           data = pitch_info, 
-           family = binomial, 
-           control = glmerControl(optimizer = "bobyqa"))
-summary(m)
-save_model_output(m, "analysis/model-outputs/other-utts/mean-pitch.csv")
-
-m <- glmer(form_numeric ~ pitch_range_scaled * age_scaled + 
-             (1|pair) + (1|speaker_id), 
-           data = pitch_info, 
-           family = binomial, 
-           control = glmerControl(optimizer = "bobyqa"))
-summary(m)
-save_model_output(m, "analysis/model-outputs/other-utts/pitch-range.csv")
+write_csv(as.data.frame(as.matrix(pitch_info)), "data/input/pitch.csv")
