@@ -3,13 +3,12 @@ library(lme4)
 library(broom.mixed)
 
 pitch <- read_csv("data/input/pitch.csv")
-rate <- read_csv("data/input/rate.csv")
-complexity <- read_csv("data/input/complexity.csv")
-rarity <- read_csv("data/input/rarity.csv")
-verbs <- read_csv("data/input/verbs.csv")
-length <- read_csv("data/input/length.csv")
 
-# model effect of mean pitch on form -> sing fit
+input <- read_csv("data/full-input.csv") %>%
+  mutate(age_scaled = scale(age), 
+         length_scaled = scale(length))
+
+# no effect of mean pitch on form
 m.pitch.mean <- glmer(form_numeric ~ pitch_mean_scaled * age_scaled + 
              (pitch_mean_scaled * age_scaled|pair) + 
              (pitch_mean_scaled * age_scaled|speaker_id), 
@@ -22,6 +21,7 @@ tidy(m.pitch.mean) %>%
   filter(effect == "fixed") %>%
   write_csv("analysis/model-outputs/input/mean-pitch.csv")
 
+# marginal effect of pitch range on form
 m.pitch.range <- glmer(form_numeric ~ pitch_range_scaled * age_scaled + 
              (pitch_range_scaled * age_scaled|pair) + 
              (pitch_range_scaled * age_scaled|speaker_id), 
@@ -33,3 +33,16 @@ summary(m.pitch.range)
 tidy(m.pitch.range) %>%
   filter(effect == "fixed") %>%
   write_csv("analysis/model-outputs/input/pitch-range.csv")
+
+# sig effect of utterance length on form
+m.length <- glmer(form_numeric ~ length_scaled * age_scaled + 
+                    (length_scaled * age_scaled|pair) + 
+                    (length_scaled * age_scaled|speaker_id), 
+                  data = input, 
+                  family = binomial, 
+                  control = glmerControl(optimizer = "bobyqa"))
+summary(m.length)
+
+tidy(m.length) %>%
+  filter(effect == "fixed") %>%
+  write_csv("analysis/model-outputs/input/length.csv")
