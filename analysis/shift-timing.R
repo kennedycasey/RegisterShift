@@ -138,7 +138,7 @@ for (i in pairs) {
     #geom_vline(data = filter(aoa, word==paste(gsub(".*_", "", i))), mapping = aes(xintercept=aoa, color=form)) +
     scale_color_manual(values = colors) +
     scale_fill_manual(values = colors) +
-    labs(title = paste0(i), color = "form", fill = "form") +
+    labs(title = paste0(str_replace(i, "_", "/")), color = "form", fill = "form") +
     scale_x_continuous(limits = c(0, 84), breaks=seq(0, 84, by=12)) +
     theme_test(base_size = 15) +
     theme(plot.title = element_text(hjust = 0.5, face = "bold", size = 15), 
@@ -167,6 +167,7 @@ prop <- ggarrange(birdie_bird, doggy_dog, bunny_rabbit,
                   ncol = 3, nrow = 5)
 
 annotate_figure(prop,
+                top = text_grob("    No Shift                Early Shift                 Late Shift", size = 25, face = "bold"),
                 left = text_grob("Proportion of tokens per form", rot = 90, size = 25, face = "bold"), 
                 bottom = text_grob("Age (months)", size = 25, face = "bold"))
 
@@ -218,17 +219,21 @@ overall_trend <- ggpredict(m, c("age [all]"), type = "random")
 
 
 ggplot() + 
-  geom_smooth(data=model_data_long, aes(x=age, y=form_numeric, group=pair), method="glm", method.args=list(family = "binomial"), 
-              color="#F5F5F5", se=FALSE) +
-  geom_ribbon(data=overall_trend, aes(x=x, ymin=predicted-conf.low, ymax=predicted+conf.low), 
-              fill="#235789", alpha=0.25) +
-  geom_line(data=overall_trend, aes(x=x, y=predicted), color="#235789", size = 2) +
-  scale_x_continuous(limits = c(0, 84), breaks=seq(0, 84, by=12)) +
+  geom_smooth(data = model_data_long, 
+              aes(x = age, y = form_numeric, group = pair), 
+              method = "glm", method.args = list(family = "binomial"), 
+              color = "#F5F5F5", se = FALSE) +
+  geom_ribbon(data = overall_trend, 
+              aes(x = x, ymin = predicted - conf.low, ymax = predicted + conf.low), 
+              fill = "#235789", alpha = 0.25) +
+  geom_line(data = overall_trend, 
+            aes(x = x, y = predicted), color = "#235789", size = 2) +
+  scale_x_continuous(limits = c(0, 84), breaks = seq(0, 84, by = 12)) +
   labs(x = "Age (months)", y = "Proportion of ADS forms") +
-  geom_hline(yintercept=0.5, linetype="dotted", size=1) +
+  geom_hline(yintercept = 0.5, linetype = "dotted", size = 1) +
   theme_test(base_size = 20) +
-  theme(plot.title = element_text(hjust = 0.5)) +
-  coord_cartesian(ylim=c(0, 1))
+  theme(axis.title = element_text(face = "bold")) +
+  coord_cartesian(ylim = c(0, 1))
 ggsave("writing/figs/shift-timing.png", dpi = 300)
 
 model_outputs_list = list()
