@@ -18,7 +18,7 @@ utterances <- read_csv("data/childes-input.csv") %>%
 known_words <- utterances %>%
   mutate(word = tolower(stem)) %>%
   separate_rows(word, sep = " ") %>%
-  #filter(!str_detect(word, " |dog|cat|pig|stomach|mommy|daddy|mom|dad|frog|blanket|duck|rabbit|bunny|potty|bathroom|doll|horse|bird")) %>%
+  filter(!str_detect(word, " |dog|cat|pig|stomach|mommy|daddy|mom|dad|frog|blanket|duck|rabbit|bunny|potty|bathroom|doll|horse|bird")) %>%
   left_join(aoa, by = "word") %>%
   mutate(known = case_when(
     !is.na(aoa) & aoa <= age ~ "known",
@@ -43,7 +43,7 @@ write_csv(known_props, "data/input/complexity.csv")
 complexity_nas <- utterances %>%
   mutate(word = tolower(stem)) %>%
   separate_rows(word, sep = " ") %>%
-  #filter(!str_detect(word, " |dog|cat|pig|stomach|mommy|daddy|mom|dad|frog|blanket|duck|rabbit|bunny|potty|bathroom|doll|horse|bird")) %>%
+  filter(!str_detect(word, " |dog|cat|pig|stomach|mommy|daddy|mom|dad|frog|blanket|duck|rabbit|bunny|potty|bathroom|doll|horse|bird")) %>%
   left_join(aoa, by = "word") %>%
   mutate(na = ifelse(is.na(aoa), "na", "not_na")) %>%
   group_by(id, na) %>%
