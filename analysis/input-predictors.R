@@ -3,13 +3,20 @@ library(lme4)
 library(broom.mixed)
 
 pitch <- read_csv("data/input/pitch.csv")
+verbs <- read_csv("data/input/verbs.csv") %>%
+  mutate(age_scaled = scale(age), 
+         verbs_scaled = scale(verbs))
+
+rate <- read_csv("data/input/rate.csv") %>%
+  mutate(age_scaled = scale(age), 
+         rate_scaled = scale(rate))
 
 input <- read_csv("data/full-input.csv") %>%
   mutate(age_scaled = scale(age),  
+         rate_scaled = scale(rate), 
          complexity_scaled = scale(complexity), 
          rarity_scaled = scale(rarity), 
-         length_scaled = scale(length),
-         verbs_scaled = scale(verbs))
+         length_scaled = scale(length))
 
 # no effect of mean pitch on form
 m.pitch.mean <- glmer(form_numeric ~ pitch_mean_scaled * age_scaled + 
@@ -38,9 +45,22 @@ tidy(m.pitch.range) %>%
   write_csv("analysis/model-outputs/input/pitch-range.csv")
 
 # sig effect of lexical complexity on form
+m.rate <- glmer(form_numeric ~ rate_scaled * age_scaled + 
+                        (1|pair) + 
+                        (1|speaker_id), 
+                        data = rate, 
+                      family = binomial, 
+                      control = glmerControl(optimizer = "bobyqa"))
+summary(m.rate)
+
+tidy(m.rate) %>%
+  filter(effect == "fixed") %>%
+  write_csv("analysis/model-outputs/input/rate.csv")
+
+# sig effect of lexical complexity on form
 m.complexity <- glmer(form_numeric ~ complexity_scaled * age_scaled + 
                         (1|pair) + 
-                        (1|speaker_id) + 
+                        (1|speaker_id),
                         data = input, 
                       family = binomial, 
                       control = glmerControl(optimizer = "bobyqa"))
@@ -80,8 +100,8 @@ tidy(m.length) %>%
 # sig effect of verbs on form
 m.verbs <- glmer(form_numeric ~ verbs_scaled * age_scaled + 
                     (1|pair) + 
-                    (1|speaker_id) + 
-                    data = input, 
+                    (1|speaker_id),
+                    data = verbs, 
                   family = binomial, 
                   control = glmerControl(optimizer = "bobyqa"))
 summary(m.verbs)

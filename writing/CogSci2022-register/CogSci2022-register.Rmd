@@ -107,7 +107,7 @@ Dev change/fine tuning refs:
 
 We analyzed `r metadata$n_transcripts` transcripts in the North American English collection of the Child Language Data Exchange System (CHILDES) database [@macwhinney2000childes]. The included transcripts were drawn from `r metadata$n_corpora` individual corpora and featured `r metadata$n_kids` children up to 7 years of age (range = `r metadata$min_age`--`r metadata$max_age` months, _M_ = `r metadata$mean_age` months). 
 
-Data from the Language Development Project (LDP) longitudinal corpus were also analyzed <!--kc: figure out how to properly cite-->. These included XX transcripts from XX children recorded every 4 months for approximately one hour from age 14 to 58 months.
+Child production data from the Language Development Project (LDP) longitudinal corpus were also analyzed <!--figure out how to properly cite-->. These included XX transcripts from XX children recorded every 4 months for approximately one hour from age 14 to 58 months.
 
 ## Target words
 Fifteen CDS/ADS word pairs (30 total target words) were selected based on the appearance of at least one form on the MacArthur-Bates Communicative Development Inventory [@fenson1994variability] and their frequency of occurrence in CHILDES (at least 100 child-produced tokens and 100 other-produced tokens per form; see Table \ref{tab:tab1}). Test items were chosen such that the same object, animal, or routine could be reasonably labeled with either form in the pair in typical communicative interactions with young children (e.g., _doggy_ or _dog_).
@@ -155,7 +155,7 @@ Syntactic measures included both the length of the utterance (in words) and the 
 
 # Results
 
-## Measuring production: When do children produce CDS vs. ADS forms?
+## Measuring production: At what ages do children use CDS vs. ADS forms?
 ```{r}
 # read in lmer outputs generated in shift-timing.R 
 overall.shift <- read_csv("../../analysis/model-outputs/shift-timing.csv")
@@ -183,7 +183,6 @@ bypair.shift.timing <- png::readPNG("../figs/bypair-shift-timing.png")
 grid::grid.raster(bypair.shift.timing)
 ```
 
-
 ## Characterizing the input: In what linguistic contexts do children hear CDS vs. ADS forms?
 
 We used mixed-effects binomial logistic regression models to predict the appearance of CDS vs. ADS forms in given utterance on the basis of target child's age, several linguistic properties of the utterance, and interactions between each property and age. Models included random slopes and intercepts for individual word pairs and speakers and were fitted to all utterance data from speakers other than the target child.
@@ -192,10 +191,13 @@ Main effects and interactions with age are shown in Figure 2.
 
 ```{r model-plot, fig.env = "figure", fig.pos = "h", fig.align = "center", fig.width = 3.4, fig.height = 4.4, fig.cap = "Coefficient estimates for linguistic predictors of form. Positive main effects indicate that utterances are more likely to contain ADS forms when they have higher values for the predictor (e.g., faster speech rates). Positive age interactions indicate an increasing effect of the predictor with age. Error bars depict standard errors of the coefficient estimates, and filled circles represent significant effects (\\textit{p} $<$ 0.05)."}
 
-path_to_models <- "../../analysis/model-outputs/other-utts/"
+path_to_models <- "../../analysis/model-outputs/input/"
 model_filenames <- list.files(path = path_to_models, pattern = "*.csv")
 model_files <- lapply(paste0(path_to_models, model_filenames), read_csv)
 model_info <- bind_rows(model_files, .id = "source") %>%
+  rename(Predictor = term, 
+         Estimate = estimate, 
+         SE = std.error) %>%
   group_by(source) %>%
   mutate(order = row_number(), 
          type = case_when(
@@ -203,7 +205,7 @@ model_info <- bind_rows(model_files, .id = "source") %>%
            order == 2 ~ "main_effect", 
            order == 3 ~ "age", 
            order == 4 ~ "interaction"), 
-         Sig = ifelse(p < .05, "sig", "not_sig"), 
+         Sig = ifelse(p.value < .05, "sig", "not_sig"), 
          Predictor = StrCap(str_replace(str_remove_all(Predictor, "_scaled"), "_", " "), "first"), 
          level = ifelse(str_detect(Predictor, "MLUw|MLUm|Verbs"), "syntactic", 
                         ifelse(str_detect(Predictor, "Complexity|Freq"), "lexical", "prosodic"))) %>%

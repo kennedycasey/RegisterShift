@@ -192,10 +192,10 @@ the Child Language Data Exchange System (CHILDES) database (MacWhinney,
 and featured 980 children up to 7 years of age (range = 1--84 months,
 \emph{M} = 33.5 months).
 
-Data from the Language Development Project (LDP) longitudinal corpus
-were also analyzed . These included XX transcripts from XX children
-recorded every 4 months for approximately one hour from age 14 to 58
-months.
+Child production data from the Language Development Project (LDP)
+longitudinal corpus were also analyzed . These included XX transcripts
+from XX children recorded every 4 months for approximately one hour from
+age 14 to 58 months.
 
 \hypertarget{target-words}{%
 \subsection{Target words}\label{target-words}}
@@ -297,26 +297,26 @@ was determined using \texttt{spaCy3}, an automatic syntactic parser
 \hypertarget{results}{%
 \section{Results}\label{results}}
 
-\hypertarget{measuring-production-when-do-children-produce-cds-vs.-ads-forms}{%
-\subsection{Measuring production: When do children produce CDS vs.~ADS
-forms?}\label{measuring-production-when-do-children-produce-cds-vs.-ads-forms}}
+\hypertarget{measuring-production-at-what-ages-do-children-use-cds-vs.-ads-forms}{%
+\subsection{Measuring production: At what ages do children use CDS
+vs.~ADS
+forms?}\label{measuring-production-at-what-ages-do-children-use-cds-vs.-ads-forms}}
 
 We first asked when CDS forms are replaced by ADS forms in children's
 own speech. We fit a mixed-effects binomial logistic regression model
 predicting children's production of CDS vs.~ADS forms, with target child
 age (in months, scaled) as a single fixed effect. Random slopes and
-intercepts for word pairs were also included. For target word token, the
-form was coded as 0 (CDS) or 1 (ADS). All tokens were considered, even
-if there were multiple repetitions of the same word or variations in
-form within the same utterance. Thus, the model captures, for each age,
-the relative proportion of CDS vs.~ADS forms in children's own speech.
+intercepts for word pairs were also included. For each target word
+token, the form was coded as either 0 (CDS) or 1 (ADS). Thus, the model
+captures, for each age, the relative proportion of CDS vs.~ADS forms in
+children's own speech.
 
 Children's production of ADS forms increased across age (\(\beta\) =
 0.54, \emph{SE} = 0.11, \emph{t} = 4.92, \emph{p} \textless{} 0.001;
 Figure 1). That is, with increasing age, children increasingly produced
 ADS forms over CDS forms. The average CDS-to-ADS transition point across
 all words (i.e., the point at which ADS forms were produced
-\textgreater50\% of the time) was around 2.5 years of age.
+\textgreater50\% of the time) was between 24 and 36 months of age.
 
 \begin{CodeChunk}
 \begin{figure}[h]
@@ -329,9 +329,16 @@ all words (i.e., the point at which ADS forms were produced
 \end{figure}
 \end{CodeChunk}
 
-Analyses of individual word-pair trajectories revealed\ldots{[}add
-summary of individual models, i.e., XX of 15 pairs showed significant
-increase in ADS with age PLUS description of different shift types{]}
+Analyses of individual word-pair trajectories revealed significant
+increases in production of ADS forms with age for 13 of 15 pairs.
+Exploratory analyses of item effects also yielded evidence for three
+distinct shift trajectory types (Figure 2). For some pairs (e.g.,
+\emph{birdie/bird}), ADS forms dominated in children's speech from the
+earliest ages sampled. For other pairs, CDS forms were initially more
+prominent and were then replaced by ADS forms early on (e.g.,
+\emph{doggy/dog} and \emph{night-night/goodnight} by 24 to 36 months) or
+later in development (e.g., \emph{bunny/rabbit} and \emph{tummy/stomach}
+after 48 months).
 
 \begin{CodeChunk}
 \begin{figure}[!ht]

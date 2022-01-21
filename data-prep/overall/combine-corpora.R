@@ -3,8 +3,9 @@ library(tidyverse)
 # read in CHILDES data
 childes <- read_csv("data/childes-input.csv") %>%
   rename(length = num_tokens) %>%
+  mutate(rate = length/(media_end - media_start)) %>%
   select(corpus_name, id, speaker_id, target_child_id, age, 
-         pair, item, form, form_numeric, length)
+         pair, item, form, form_numeric, length, rate)
 
 # read in LDP data and update to match CHILDES cols
 ldp <- read_csv("~/Desktop/secure/ldp-input.csv") %>%
@@ -26,9 +27,5 @@ input <- childes %>%
                                "speaker_id", "target_child_id", 
                                "age", "pair", "item", 
                                "form", "form_numeric")) %>%
-  left_join(rarity, by = "id") %>%
-  left_join(verbs, by = c("corpus_name", "id",
-                          "speaker_id", "target_child_id", 
-                          "age", "pair", "item", 
-                          "form", "form_numeric"))
+  left_join(rarity, by = "id")
 write_csv(input, "data/full-input.csv")

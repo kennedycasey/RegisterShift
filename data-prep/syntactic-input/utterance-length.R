@@ -3,11 +3,7 @@ library(tidyverse)
 library(data.table)
 library(lme4)
 library(lmerTest)
-
-childes_utterances = data.table(get_utterances(collection = "Eng-NA"))
-
 source("data-prep/overall/functions.R")
-get_utts_w_target(childes_utterances, items)
 
 mlu_other <- utterances %>%
   filter(speaker_type == "other") %>%
