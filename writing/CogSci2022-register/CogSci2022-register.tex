@@ -188,26 +188,25 @@ level. {[}classifier details here{]}.
 
 We analyzed 8251 transcripts in the North American English collection of
 the Child Language Data Exchange System (CHILDES) database (MacWhinney,
-2000). The included transcripts were drawn from 52 individual corpora
-and featured 980 children up to 7 years of age (range = 1--84 months,
-\emph{M} = 33.5 months).
-
-Child production data from the Language Development Project (LDP)
-longitudinal corpus were also analyzed . These included XX transcripts
-from XX children recorded every 4 months for approximately one hour from
-age 14 to 58 months.
+2000) for children up to 7 years of age. The included transcripts were
+drawn from 52 individual corpora and featured 980 children (age range =
+1--84 months, \emph{M} = 33.5 months). Child production data from the
+Language Development Project (LDP) longitudinal corpus were also
+analyzed (REF). These included 622 transcripts from 59 children recorded
+every 4 months for approximately one hour from age 14 to 58 months.
 
 \hypertarget{target-words}{%
 \subsection{Target words}\label{target-words}}
 
-Fifteen CDS/ADS word pairs (30 total target words) were selected based
-on the appearance of at least one form on the MacArthur-Bates
-Communicative Development Inventory (Fenson et al., 1994) and their
-frequency of occurrence in CHILDES (at least 100 child-produced tokens
-and 100 other-produced tokens per form; see Table \ref{tab:tab1}). Test
-items were chosen such that the same object, animal, or routine could be
-reasonably labeled with either form in the pair in typical communicative
-interactions with young children (e.g., \emph{doggy} or \emph{dog}).
+Fifteen CDS/ADS word pairs (30 total target words; see Table
+\ref{tab:tab1}) were selected based on (a) the appearance of at least
+one form on the MacArthur-Bates Communicative Development Inventory
+(Fenson et al., 1994) and (b) frequency of occurrence in CHILDES (at
+least 100 child-produced tokens and 100 other-produced tokens per form).
+Pairs were chosen such that the same object, animal, or routine could be
+reasonably labeled with either form (CDS or ADS) in typical
+communicative interactions with young children (e.g., \emph{doggy} or
+\emph{dog}).
 
 \begin{table}[ht]
 \centering
@@ -241,25 +240,27 @@ interactions with young children (e.g., \emph{doggy} or \emph{dog}).
 \label{tab:tab1}
 \end{table}
 
-\hypertarget{linguistic-predictors}{%
-\subsection{Linguistic predictors}\label{linguistic-predictors}}
+\hypertarget{linguistic-input-predictors}{%
+\subsection{Linguistic input
+predictors}\label{linguistic-input-predictors}}
 
-All analyses were conducted over individual utterances. We quantified
-prosodic, lexical, and syntactic information to describe each utterance
-containing one of the 30 target words.
+All input analyses were conducted over individual other-produced
+utterances in CHILDES (i.e., speech not produced by the target child).
+We quantified prosodic, lexical, and syntactic information to describe
+each utterance containing one of the 30 target words.
 
 \hypertarget{prosodic-level}{%
 \subsubsection{Prosodic level}\label{prosodic-level}}
 
-We measured three types of prosodic information: mean pitch (Hz), pitch
-range (Hz), and speaking rate (words per second). These measures were
-calculated over all timestamped utterances in CHILDES (41.4\% of
-child-produced and 42.3\% of other-produced utterances). Utterances
-shorter than 58 ms were excluded from analysis. This lower bound was set
-by identifying the the shortest possible duration of an utterance
+We measured three types of prosodic information: \textbf{mean pitch}
+(Hz), \textbf{pitch range} (Hz), and \textbf{speech rate} (words per
+second). These measures were calculated over all timestamped utterances
+in CHILDES (42.3\% of other-produced utterances). Utterances shorter
+than 58 ms were excluded from analysis. This lower bound was set by
+identifying the the shortest possible duration of an utterance
 containing at least one word in four manually annotated North American
 English corpora in HomeBank (Bergelson, 2016; McDivitt \& Soderstrom,
-2016; VanDam et al., 2016; VanDam, 2016; Warlaumont \& Pretzer, 2016).
+2016; VanDam et al., 2016; VanDam, 2016; Warlaumont \& Pretzer, 2016) .
 Pitch information was extracted using Praat software (Boersma \&
 Weenink, 2016).
 
@@ -267,32 +268,32 @@ Weenink, 2016).
 \subsubsection{Lexical level}\label{lexical-level}}
 
 We measured two types of lexical information: complexity and rarity.
-Lexical complexity was defined as the negative log proportion of known
-words in each utterance (consistent with Foushee, Griffiths, \&
+\textbf{Lexical complexity} was defined as the negative log proportion
+of known words in each utterance (consistent with Foushee, Griffiths, \&
 Srinivasan, 2016; Kidd, Piantadosi, \& Aslin, 2012). A word was
 considered `known' if the age of acquisition (AoA) estimate (Fenson et
 al., 1994; Frank, Braginsky, Yurovsky, \& Marchman, 2017) was less than
-or equal to the age of the target child when they heard or produced the
-utterance. Utterances with proportionally fewer known words are more
-lexically complex. Lexical rarity was determined based on overall
-frequency in CHILDES. For all words with at least XX tokens\footnote{Manual
-  checks revealed that many or XX\% of the lowest-frequency words
-  included idiosyncratic or erroneous transcriptions and/or repetitions
-  of children's babbling.}, we calculated a rarity score as the negative
+or equal to the age of the target child when they heard the utterance.
+Utterances with proportionally fewer known words are more lexically
+complex. \textbf{Lexical rarity} was determined based on overall
+frequency in CHILDES. For all words with at least 10 tokens\footnote{Manual
+  checks revealed that many of the lowest-frequency words included
+  idiosyncratic or erroneous transcriptions and/or repetitions of
+  children's babbling.}, we calculated a rarity score as the negative
 log proportion of other-produced tokens in CHILDES (i.e., number of
 tokens for a given word/sum of all tokens in the full corpus), and then
 averaged for rarity scores for all target utterances. Utterances with
-more low-frequency words are considered more lexically rare. \newline
+more low-frequency words are considered more lexically rare.
 
 \hypertarget{syntactic-level}{%
 \subsubsection{Syntactic level}\label{syntactic-level}}
 
-Syntactic measures included both the length of the utterance (in words)
-and the number of verb phrases. The number of words per utterance was
-automatically extracted using the \texttt{childesr} package (Braginsky,
-Sanchez, \& Yurovsky, 2021). The number of verb phrases per utterance
-was determined using \texttt{spaCy3}, an automatic syntactic parser
-(Honnibal, Montani, Van Landeghem, \& Boyd, 2020).
+Syntactic measures included both the utterance \textbf{length} (in
+words) and \textbf{number of verb phrases}. The number of words per
+utterance was automatically extracted using the \texttt{childesr}
+package (Braginsky, Sanchez, \& Yurovsky, 2021). The number of verb
+phrases per utterance was determined using \texttt{spaCy3}, an automatic
+syntactic parser (Honnibal, Montani, Van Landeghem, \& Boyd, 2020).
 
 \hypertarget{results}{%
 \section{Results}\label{results}}
@@ -311,12 +312,12 @@ token, the form was coded as either 0 (CDS) or 1 (ADS). Thus, the model
 captures, for each age, the relative proportion of CDS vs.~ADS forms in
 children's own speech.
 
-Children's production of ADS forms increased across age (\(\beta\) =
-0.54, \emph{SE} = 0.11, \emph{t} = 4.92, \emph{p} \textless{} 0.001;
-Figure 1). That is, with increasing age, children increasingly produced
-ADS forms over CDS forms. The average CDS-to-ADS transition point across
-all words (i.e., the point at which ADS forms were produced
-\textgreater50\% of the time) was between 24 and 36 months of age.
+Children's production of ADS forms increased with age (\(\beta\) = 0.54,
+\emph{SE} = 0.11, \emph{t} = 4.92, \emph{p} \textless{} 0.001). This
+trend of increasing ADS form production was significant for 13 of 15
+pairs. The average CDS-to-ADS transition point (i.e., the point at which
+ADS forms were produced \textgreater50\% of the time) was between 24 and
+36 months of age (Figure 1).
 
 \begin{CodeChunk}
 \begin{figure}[h]
@@ -325,20 +326,18 @@ all words (i.e., the point at which ADS forms were produced
 
 }
 
-\caption[Model-predicted increase in production of ADS forms with age]{Model-predicted increase in production of ADS forms with age. Gray lines depict raw individual word-pair trajectories.}\label{fig:shift-timing-fig}
+\caption[Model-predicted increase in production of ADS forms with age]{Model-predicted increase in production of ADS forms with age. Gray lines depict individual word-pair trajectories.}\label{fig:shift-timing-fig}
 \end{figure}
 \end{CodeChunk}
 
-Analyses of individual word-pair trajectories revealed significant
-increases in production of ADS forms with age for 13 of 15 pairs.
-Exploratory analyses of item effects also yielded evidence for three
-distinct shift trajectory types (Figure 2). For some pairs (e.g.,
-\emph{birdie/bird}), ADS forms dominated in children's speech from the
-earliest ages sampled. For other pairs, CDS forms were initially more
-prominent and were then replaced by ADS forms early on (e.g.,
-\emph{doggy/dog} and \emph{night-night/goodnight} by 24 to 36 months) or
-later in development (e.g., \emph{bunny/rabbit} and \emph{tummy/stomach}
-after 48 months).
+Exploratory analyses of individual word-pair effects yielded evidence
+for three distinct shift trajectory types (Figure 2). For some pairs,
+such as \emph{birdie/bird} and \emph{blankie/blanket}, ADS forms
+dominated in children's speech from the earliest ages sampled. For other
+pairs, CDS forms were initially more prominent and were then replaced by
+ADS forms early on (e.g., \emph{doggy/dog} and
+\emph{night-night/goodnight} by 24 to 36 months) or later in development
+(e.g., \emph{bunny/rabbit} and \emph{tummy/stomach} after 48 months).
 
 \begin{CodeChunk}
 \begin{figure}[!ht]
@@ -347,7 +346,7 @@ after 48 months).
 
 }
 
-\caption[Inidividual word-pair trajectories for increasing production of ADS forms (blue) and descreasing production of CDS forms (red) with age]{Inidividual word-pair trajectories for increasing production of ADS forms (blue) and descreasing production of CDS forms (red) with age. Columns indicate categorically different shift trajectory types: (1) items for which ADS forms appear to dominate in children's speech from the start, (2) items whose CDS forms are replaced by ADS forms early on, and (3) items whose ADS forms become dominant later in development.}\label{fig:shift-timing-bypair-fig}
+\caption[Inidividual word-pair trajectories for increasing production of ADS forms (blue) and descreasing production of CDS forms (red) with age]{Inidividual word-pair trajectories for increasing production of ADS forms (blue) and descreasing production of CDS forms (red) with age. Columns indicate categorically different shift trajectory types.}\label{fig:shift-timing-bypair-fig}
 \end{figure}
 \end{CodeChunk}
 
@@ -355,15 +354,6 @@ after 48 months).
 \subsection{Characterizing the input: In what linguistic contexts do
 children hear CDS vs.~ADS
 forms?}\label{characterizing-the-input-in-what-linguistic-contexts-do-children-hear-cds-vs.-ads-forms}}
-
-We used mixed-effects binomial logistic regression models to predict the
-appearance of CDS vs.~ADS forms in given utterance on the basis of
-target child's age, several linguistic properties of the utterance, and
-interactions between each property and age. Models included random
-slopes and intercepts for individual word pairs and speakers and were
-fitted to all utterance data from speakers other than the target child.
-
-Main effects and interactions with age are shown in Figure 2.
 
 \begin{CodeChunk}
 \begin{figure*}[h]
@@ -375,6 +365,58 @@ Main effects and interactions with age are shown in Figure 2.
 \caption[Coefficient estimates for linguistic predictors of form]{Coefficient estimates for linguistic predictors of form. Positive main effects indicate that utterances are more likely to contain ADS forms when they have higher values for the predictor (e.g., faster speech rates). Positive age interactions indicate an increasing effect of the predictor with age. Error bars depict standard errors of the coefficient estimates, and filled circles represent significant effects (\textit{p} $<$ 0.05).}\label{fig:model-plot}
 \end{figure*}
 \end{CodeChunk}
+
+We used mixed-effects binomial logistic regression models to predict the
+appearance of CDS vs.~ADS forms in given utterance on the basis of the
+target child's age, several linguistic properties of the utterance, and
+interactions between each property and age. We ran independent models
+for each of 7 linguistic predictors (described in Method), which
+included random intercepts for individual word pairs and speaker and
+were fitted to all utterance data from speakers other than the target
+child. For each target word token, the form was coded as either 0 (CDS)
+or 1 (ADS). Thus, the reported effects indicate the BLABLABLA on ADS
+form. Main effects and interactions with age are shown in Figure 3.
+
+At the prosodic level, we found significant effects for 2 of 3 input
+factors tested. Utterance-level mean pitch was not predictive of form
+(\(\beta\) = -0.005, \emph{SE} = 0.02, \emph{t} = -0.23, \emph{p} =
+0.816) and did not significantly interact with age (\(\beta\) = -0.03,
+\emph{SE} = 0.02, \emph{t} = -1.92, \emph{p} = 0.055). However,
+utterance-level pitch range was a negative predictor of ADS form
+(\(\beta\) = -0.04, \emph{SE} = 0.02, \emph{t} = -2.17, \emph{p} =
+0.03). That is, utterances with greater variability in pitch were more
+likely to contain forms. This pitch range effect increased in strength
+across developmental time, as evidenced by a positive interaction with
+age (\(\beta\) = 0.08, \emph{SE} = 0.02, \emph{t} = 4.18, \emph{p}
+\textless{} 0.001). Speech rate (i.e., words produced per second) was a
+positive predictor of ADS form (\(\beta\) = 0.09, \emph{SE} = 0.02,
+\emph{t} = 4.86, \emph{p} \textless{} 0.001). Utterances spoken more
+quickly were more likely to contain ADS forms. This input predictor also
+negatively interacted with age (\(\beta\) = -0.07, \emph{SE} = 0.02,
+\emph{t} = -3.96, \emph{p} \textless{} 0.001), indicating a decreasing
+strength in predictive power across developmental time.
+
+At the lexical level, we found significant effects for both input
+factors tested. Utterances with higher levels of lexical complexity
+(\(\beta\) = 0.3, \emph{SE} = 0.12, \emph{t} = 2.56, \emph{p} = 0.011)
+and lexical rarity (\(\beta\) = 0.07, \emph{SE} = 0.01, \emph{t} = 5.73,
+\emph{p} \textless{} 0.001) were more likely to contain ADS forms.
+Lexical complexity did not interact with age (\(\beta\) = 0.05,
+\emph{SE} = 0.2, \emph{t} = 0.25, \emph{p} = 0.803); whereas, lexical
+rarity negatively interacted with age such that there was a decreasing
+effect of this predictor with age (\(\beta\) = -0.05, \emph{SE} = 0.01,
+\emph{t} = -3.95, \emph{p} \textless{} 0.001).
+
+At the syntactic level, we found significant effects for both input
+factors tested. Utterances with more words (\(\beta\) = 0.44, \emph{SE}
+= 0.08, \emph{t} = 5.42, \emph{p} \textless{} 0.001) and more verb
+phrases (\(\beta\) = 0.05, \emph{SE} = 0.01, \emph{t} = 4.44, \emph{p}
+\textless{} 0.001) were more likely to contain ADS forms. Moreover, both
+linguistic predictors negatively interacted with age (Length: \(\beta\)
+= -0.11, \emph{SE} = 0.02, \emph{t} = -5.69, \emph{p} \textless{} 0.001;
+Verbs: \(\beta\) = -0.08, \emph{SE} = 0.01, \emph{t} = -7.7, \emph{p}
+\textless{} 0.001), suggesting that the strength of these predictors
+decreases across developmental time.
 
 \hypertarget{modeling-learning-what-linguistic-information-is-most-useful-for-distinguishing-cds-vs.-ads-contexts}{%
 \subsection{Modeling learning: What linguistic information is most
