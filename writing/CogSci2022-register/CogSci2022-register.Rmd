@@ -33,9 +33,8 @@ library(kableExtra)
 library(tidyverse)
 library(ggpubr)
 library(DescTools)
-library(papaja)
 
-# source(data-prep/overall/get_freq.R)
+# read in outputs of "get-freq.R"
 metadata <- read_csv("../../data-prep/overall/metadata.csv")
 freq <- read_csv("../../data-prep/overall/freq.csv")
 
@@ -47,6 +46,7 @@ ads_forms <- read_csv("../../data-prep/overall/item-info.csv") %>%
     filter(form == "ADS") %>%
     pull(word)
 
+# preset colors for linguistic predictors
 input_colors <- c("prosodic" = "#1C9E78", 
                   "lexical" = "#D95F06", 
                   "syntactic" = "#7570B4")
@@ -106,12 +106,10 @@ Dev change/fine tuning refs:
 
 ## Corpora
 
-We analyzed `r metadata$n_transcripts` transcripts in the North American English collection of the Child Language Data Exchange System (CHILDES) database [@macwhinney2000childes]. The included transcripts were drawn from `r metadata$n_corpora` individual corpora and featured `r metadata$n_kids` children up to 7 years of age (range = `r metadata$min_age`--`r metadata$max_age` months, _M_ = `r metadata$mean_age` months). 
-
-Child production data from the Language Development Project (LDP) longitudinal corpus were also analyzed (REF). These included 622 transcripts from 59 children recorded every 4 months for approximately one hour from age 14 to 58 months. <!--kc2mc: I dropped the LDP data from the input predictor analyses since we don't have timestamps or lemmas, so we'd only really have data for the syntactic analyses. Seemed better to not introduce a bunch more NAs, but let me know what you think!-->
+We analyzed `r metadata$n_transcripts` transcripts in the North American English collection of the Child Language Data Exchange System (CHILDES) database [@macwhinney2000childes] for children up to 7 years of age. The included transcripts were drawn from `r metadata$n_corpora` individual corpora and featured `r metadata$n_kids` children (age range = `r metadata$min_age`--`r metadata$max_age` months, _M_ = `r metadata$mean_age` months). Child production data from the Language Development Project (LDP) longitudinal corpus were also analyzed (REF). These included 622 transcripts from 59 children recorded every 4 months for approximately one hour from age 14 to 58 months. <!--kc2mc: I dropped the LDP data from the input predictor analyses since we don't have timestamps or lemmas, so we'd only really have data for the syntactic analyses. Seemed better to not introduce a bunch more NAs, but let me know what you think!-->
 
 ## Target words
-Fifteen CDS/ADS word pairs (30 total target words) were selected based on the appearance of at least one form on the MacArthur-Bates Communicative Development Inventory [@fenson1994variability] and their frequency of occurrence in CHILDES (at least 100 child-produced tokens and 100 other-produced tokens per form; see Table \ref{tab:tab1}). Test items were chosen such that the same object, animal, or routine could be reasonably labeled with either form in the pair in typical communicative interactions with young children (e.g., _doggy_ or _dog_).
+Fifteen CDS/ADS word pairs (30 total target words; see Table \ref{tab:tab1}) were selected based on (a) the appearance of at least one form on the MacArthur-Bates Communicative Development Inventory [@fenson1994variability] and (b) frequency of occurrence in CHILDES (at least 100 child-produced tokens and 100 other-produced tokens per form). Pairs were chosen such that the same object, animal, or routine could be reasonably labeled with either form (CDS or ADS) in typical communicative interactions with young children (e.g., _doggy_ or _dog_).
 
 ```{r freq_table, results = "asis"}
 cds_freq <- freq %>%
@@ -136,23 +134,20 @@ xtable::xtable(freq, digits = 0,
     add_header_above(c(" " = 2, "CDS tokens by speaker" = 2, "ADS tokens by speaker" = 2), bold = TRUE) %>%
     row_spec(0, bold = TRUE) %>%
     column_spec(2, italic = TRUE)
-
-#print(freq_table, include.rownames = FALSE,
-      #type = "latex", comment = FALSE, table.placement = "!hb")
 ```
 
-## Linguistic predictors
+## Linguistic input predictors
 
-All analyses were conducted over individual utterances. We quantified prosodic, lexical, and syntactic information to describe each utterance containing one of the 30 target words.
+All input analyses were conducted over individual other-produced utterances in CHILDES (i.e., speech not produced by the target child). <!--might add percentage of utterances from MOT/FAT just so it's clear that this is primarily adult-produced speech, not speech from other children.--> We quantified prosodic, lexical, and syntactic information to describe each utterance containing one of the 30 target words.
 
 ### Prosodic level
-We measured three types of prosodic information: mean pitch (Hz), pitch range (Hz), and speaking rate (words per second). These measures were calculated over all timestamped utterances in CHILDES (`r metadata$child_timestamped`% of child-produced and `r metadata$other_timestamped`% of other-produced utterances). Utterances shorter than 58 ms were excluded from analysis. This lower bound was set by identifying the the shortest possible duration of an utterance containing at least one word in four manually annotated North American English corpora in HomeBank [@homebank; @bergelsoncorpus; @soderstromcorpus; @vandamcorpus; @warlaumontcorpus] <!--kc2mc: are these the right refs?-->. Pitch information was extracted using Praat software [@boersma2016praat].
+We measured three types of prosodic information: __mean pitch__ (Hz), __pitch range__ (Hz), and __speech rate__ (words per second). These measures were calculated over all timestamped utterances in CHILDES (`r metadata$other_timestamped`% of other-produced utterances). Utterances shorter than 58 ms were excluded from analysis. This lower bound was set by identifying the the shortest possible duration of an utterance containing at least one word in four manually annotated North American English corpora in HomeBank [@homebank; @bergelsoncorpus; @soderstromcorpus; @vandamcorpus; @warlaumontcorpus] <!--kc2mc: are these the right refs?-->. Pitch information was extracted using Praat software [@boersma2016praat].
 
 ### Lexical level
-We measured two types of lexical information: complexity and rarity. Lexical complexity was defined as the negative log proportion of known words in each utterance [consistent with @foushee2016lexical; @kidd2012goldilocks]. A word was considered 'known' if the age of acquisition (AoA) estimate [@fenson1994variability; @frank2017wordbank] was less than or equal to the age of the target child when they heard or produced the utterance. Utterances with proportionally fewer known words are more lexically complex. Lexical rarity was determined based on overall frequency in CHILDES. For all words with at least 10 tokens^[Manual checks revealed that many of the lowest-frequency words included idiosyncratic or erroneous transcriptions and/or repetitions of children's babbling. <!--kc: can do more thorough checks to report % and/or choose a less arbitrary cutoff-->], we calculated a rarity score as the negative log proportion of other-produced tokens in CHILDES (i.e., number of tokens for a given word/sum of all tokens in the full corpus), and then averaged for rarity scores for all target utterances. Utterances with more low-frequency words are considered more lexically rare. \newline
+We measured two types of lexical information: complexity and rarity. __Lexical complexity__ was defined as the negative log proportion of known words in each utterance [consistent with @foushee2016lexical; @kidd2012goldilocks]. A word was considered 'known' if the age of acquisition (AoA) estimate [@fenson1994variability; @frank2017wordbank] was less than or equal to the age of the target child when they heard the utterance. Utterances with proportionally fewer known words are more lexically complex. __Lexical rarity__ was determined based on overall frequency in CHILDES. For all words with at least 10 tokens^[Manual checks revealed that many of the lowest-frequency words included idiosyncratic or erroneous transcriptions and/or repetitions of children's babbling. <!--can do more thorough checks to report % and/or choose a less arbitrary cutoff-->], we calculated a rarity score as the negative log proportion of other-produced tokens in CHILDES (i.e., number of tokens for a given word/sum of all tokens in the full corpus), and then averaged for rarity scores for all target utterances. Utterances with more low-frequency words are considered more lexically rare.
 
 ### Syntactic level
-Syntactic measures included both the length of the utterance (in words) and the number of verb phrases. The number of words per utterance was automatically extracted using the `childesr` package [@braginsky2021childesr]. The number of verb phrases per utterance was determined using `spaCy3`, an automatic syntactic parser [@honnibal2020spacy].
+Syntactic measures included both the utterance __length__ (in words) and __number of verb phrases__. The number of words per utterance was automatically extracted using the `childesr` package [@braginsky2021childesr]. The number of verb phrases per utterance was determined using `spaCy3`, an automatic syntactic parser [@honnibal2020spacy].
 
 # Results
 
