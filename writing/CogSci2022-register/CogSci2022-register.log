@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2022.1.15)  21 JAN 2022 13:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2022.1.15)  21 JAN 2022 14:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -756,13 +756,18 @@ Package pdftex.def Info: figs/model-plot-1.pdf  used on input line 361.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+
+Underfull \hbox (badness 1888) in paragraph at lines 369--374
+\OT1/ptm/m/n/10 We next ex-plored chil-dren's in-put (i.e., other-produced
+ []
+
 [3 <./figs/shift-timing-fig-1.pdf> <./figs/shift-timing-bypair-fig-1.pdf>]
-Underfull \hbox (badness 1946) in paragraph at lines 447--451
+Underfull \hbox (badness 1946) in paragraph at lines 453--457
  [][]\OT1/ptm/m/n/10 Braginsky, M., Sanchez, A., & Yurovsky, D. (2021).
  []
 
 
-Underfull \hbox (badness 1616) in paragraph at lines 447--451
+Underfull \hbox (badness 1616) in paragraph at lines 453--457
  \OT1/ptm/m/it/10 Childesr: Ac-cess-ing the 'CHILDES' database\OT1/ptm/m/n/10 .
  Re-
  []
@@ -780,7 +785,7 @@ Here is how much of TeX's memory you used:
  31449 multiletter control sequences out of 15000+600000
  505978 words of font info for 101 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 60i,12n,63p,662b,372s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,12n,63p,662b,370s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/Users/chatterlabmanager/Library/TinyTeX/texmf-dist/fonts/enc/dvips/base/8r.
 enc}</Users/chatterlabmanager/Library/TinyTeX/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmmi10.pfb></Users/chatterlabmanager/Library/TinyTeX/texmf-dist/fonts/
@@ -789,7 +794,7 @@ st/fonts/type1/urw/symbol/usyr.pfb></Users/chatterlabmanager/Library/TinyTeX/te
 xmf-dist/fonts/type1/urw/times/utmb8a.pfb></Users/chatterlabmanager/Library/Tin
 yTeX/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></Users/chatterlabmanager/Libr
 ary/TinyTeX/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on CogSci2022-register.pdf (5 pages, 1489944 bytes).
+Output written on CogSci2022-register.pdf (5 pages, 1490190 bytes).
 PDF statistics:
  216 PDF objects out of 1000 (max. 8388607)
  181 compressed objects within 2 object streams
