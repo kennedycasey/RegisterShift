@@ -33,6 +33,7 @@ library(kableExtra)
 library(tidyverse)
 library(ggpubr)
 library(DescTools)
+library(papaja)
 
 # source(data-prep/overall/get_freq.R)
 metadata <- read_csv("../../data-prep/overall/metadata.csv")
@@ -107,7 +108,7 @@ Dev change/fine tuning refs:
 
 We analyzed `r metadata$n_transcripts` transcripts in the North American English collection of the Child Language Data Exchange System (CHILDES) database [@macwhinney2000childes]. The included transcripts were drawn from `r metadata$n_corpora` individual corpora and featured `r metadata$n_kids` children up to 7 years of age (range = `r metadata$min_age`--`r metadata$max_age` months, _M_ = `r metadata$mean_age` months). 
 
-Child production data from the Language Development Project (LDP) longitudinal corpus were also analyzed <!--figure out how to properly cite-->. These included XX transcripts from XX children recorded every 4 months for approximately one hour from age 14 to 58 months.
+Child production data from the Language Development Project (LDP) longitudinal corpus were also analyzed (REF). These included 622 transcripts from 59 children recorded every 4 months for approximately one hour from age 14 to 58 months. <!--kc2mc: I dropped the LDP data from the input predictor analyses since we don't have timestamps or lemmas, so we'd only really have data for the syntactic analyses. Seemed better to not introduce a bunch more NAs, but let me know what you think!-->
 
 ## Target words
 Fifteen CDS/ADS word pairs (30 total target words) were selected based on the appearance of at least one form on the MacArthur-Bates Communicative Development Inventory [@fenson1994variability] and their frequency of occurrence in CHILDES (at least 100 child-produced tokens and 100 other-produced tokens per form; see Table \ref{tab:tab1}). Test items were chosen such that the same object, animal, or routine could be reasonably labeled with either form in the pair in typical communicative interactions with young children (e.g., _doggy_ or _dog_).
@@ -145,10 +146,10 @@ xtable::xtable(freq, digits = 0,
 All analyses were conducted over individual utterances. We quantified prosodic, lexical, and syntactic information to describe each utterance containing one of the 30 target words.
 
 ### Prosodic level
-We measured three types of prosodic information: mean pitch (Hz), pitch range (Hz), and speaking rate (words per second). These measures were calculated over all timestamped utterances in CHILDES (`r metadata$child_timestamped`% of child-produced and `r metadata$other_timestamped`% of other-produced utterances). Utterances shorter than 58 ms were excluded from analysis. This lower bound was set by identifying the the shortest possible duration of an utterance containing at least one word in four manually annotated North American English corpora in HomeBank [@homebank; @bergelsoncorpus; @soderstromcorpus; @vandamcorpus; @warlaumontcorpus]. Pitch information was extracted using Praat software [@boersma2016praat].
+We measured three types of prosodic information: mean pitch (Hz), pitch range (Hz), and speaking rate (words per second). These measures were calculated over all timestamped utterances in CHILDES (`r metadata$child_timestamped`% of child-produced and `r metadata$other_timestamped`% of other-produced utterances). Utterances shorter than 58 ms were excluded from analysis. This lower bound was set by identifying the the shortest possible duration of an utterance containing at least one word in four manually annotated North American English corpora in HomeBank [@homebank; @bergelsoncorpus; @soderstromcorpus; @vandamcorpus; @warlaumontcorpus] <!--kc2mc: are these the right refs?-->. Pitch information was extracted using Praat software [@boersma2016praat].
 
 ### Lexical level
-We measured two types of lexical information: complexity and rarity. Lexical complexity was defined as the negative log proportion of known words in each utterance [consistent with @foushee2016lexical; @kidd2012goldilocks]. A word was considered 'known' if the age of acquisition (AoA) estimate [@fenson1994variability; @frank2017wordbank] was less than or equal to the age of the target child when they heard or produced the utterance. Utterances with proportionally fewer known words are more lexically complex. Lexical rarity was determined based on overall frequency in CHILDES. For all words with at least XX tokens^[Manual checks revealed that many or XX% of the lowest-frequency words included idiosyncratic or erroneous transcriptions and/or repetitions of children's babbling.], we calculated a rarity score as the negative log proportion of other-produced tokens in CHILDES (i.e., number of tokens for a given word/sum of all tokens in the full corpus), and then averaged for rarity scores for all target utterances. Utterances with more low-frequency words are considered more lexically rare. \newline
+We measured two types of lexical information: complexity and rarity. Lexical complexity was defined as the negative log proportion of known words in each utterance [consistent with @foushee2016lexical; @kidd2012goldilocks]. A word was considered 'known' if the age of acquisition (AoA) estimate [@fenson1994variability; @frank2017wordbank] was less than or equal to the age of the target child when they heard or produced the utterance. Utterances with proportionally fewer known words are more lexically complex. Lexical rarity was determined based on overall frequency in CHILDES. For all words with at least 10 tokens^[Manual checks revealed that many of the lowest-frequency words included idiosyncratic or erroneous transcriptions and/or repetitions of children's babbling. <!--kc: can do more thorough checks to report % and/or choose a less arbitrary cutoff-->], we calculated a rarity score as the negative log proportion of other-produced tokens in CHILDES (i.e., number of tokens for a given word/sum of all tokens in the full corpus), and then averaged for rarity scores for all target utterances. Utterances with more low-frequency words are considered more lexically rare. \newline
 
 ### Syntactic level
 Syntactic measures included both the length of the utterance (in words) and the number of verb phrases. The number of words per utterance was automatically extracted using the `childesr` package [@braginsky2021childesr]. The number of verb phrases per utterance was determined using `spaCy3`, an automatic syntactic parser [@honnibal2020spacy].
@@ -185,16 +186,12 @@ grid::grid.raster(bypair.shift.timing)
 
 ## Characterizing the input: In what linguistic contexts do children hear CDS vs. ADS forms?
 
-We used mixed-effects binomial logistic regression models to predict the appearance of CDS vs. ADS forms in given utterance on the basis of target child's age, several linguistic properties of the utterance, and interactions between each property and age. Models included random slopes and intercepts for individual word pairs and speakers and were fitted to all utterance data from speakers other than the target child.
-
-Main effects and interactions with age are shown in Figure 2.
-
 ```{r model-plot, fig.env = "figure*", fig.pos = "h", fig.align = "center", fig.width = 12,  set.cap.width = TRUE, num.cols.cap = 2, fig.cap = "Coefficient estimates for linguistic predictors of form. Positive main effects indicate that utterances are more likely to contain ADS forms when they have higher values for the predictor (e.g., faster speech rates). Positive age interactions indicate an increasing effect of the predictor with age. Error bars depict standard errors of the coefficient estimates, and filled circles represent significant effects (\\textit{p} $<$ 0.05)."}
 
-path_to_models <- "../../analysis/model-outputs/input/"
-model_filenames <- list.files(path = path_to_models, pattern = "*.csv")
-model_files <- lapply(paste0(path_to_models, model_filenames), read_csv)
-model_info <- bind_rows(model_files, .id = "source") %>%
+path <- "../../analysis/model-outputs/input/"
+filenames <- list.files(path, "*.csv")
+files <- lapply(paste0(path, filenames), read_csv)
+input.models <- bind_rows(files, .id = "source") %>%
   rename(Predictor = term, 
          Estimate = estimate, 
          SE = std.error) %>%
@@ -211,7 +208,7 @@ model_info <- bind_rows(model_files, .id = "source") %>%
                         ifelse(str_detect(Predictor, "Complexity|Rarity"), "lexical", "prosodic"))) %>%
   mutate(Predictor = factor(Predictor, levels = c("Verbs", "Verbs:age", "Length", "Length:age", "Rarity", "Rarity:age", "Complexity", "Complexity:age", "Rate", "Rate:age", "Pitch range", "Pitch range:age", "Pitch mean", "Pitch mean:age")))
 
-main_effects <- ggplot(filter(model_info, type == "main_effect"), 
+main.effects <- ggplot(filter(input.models, type == "main_effect"), 
        aes(x = Estimate, y = Predictor, color = level)) +
   geom_vline(xintercept = 0, size = 0.75, linetype = "dotted", 
              color = "gray", alpha = 0.5) +
@@ -225,7 +222,7 @@ main_effects <- ggplot(filter(model_info, type == "main_effect"),
   theme_test(base_size = 10) +
   theme(legend.position = "None", plot.title = element_text(hjust = 0.5))
   
-interactions <- ggplot(filter(model_info, type == "interaction"), 
+interactions <- ggplot(filter(input.models, type == "interaction"), 
        aes(x = Estimate, y = Predictor, color = level)) +
   geom_vline(xintercept = 0, size = 0.5, linetype = "dotted", 
              color = "gray", alpha = 0.75) +
@@ -241,12 +238,20 @@ interactions <- ggplot(filter(model_info, type == "interaction"),
         axis.text.y = element_blank(), axis.title.y = element_blank(), 
         axis.ticks.y = element_blank())
 
-model_fig <- ggarrange(main_effects, interactions, widths = c(2, 1.5))
+model_fig <- ggarrange(main.effects, interactions, widths = c(2, 1.5))
 ggsave("../figs/model-outputs.png", model_fig, height = 3, width = 5, dpi = 300)
 
 img <- png::readPNG("../figs/model-outputs.png")
 grid::grid.raster(img)
 ```
+
+We used mixed-effects binomial logistic regression models to predict the appearance of CDS vs. ADS forms in given utterance on the basis of the target child's age, several linguistic properties of the utterance, and interactions between each property and age. We ran independent models for each of 7 linguistic predictors (described in Method), which included random intercepts for individual word pairs and speaker and were fitted to all utterance data from speakers other than the target child. For each target word token, the form was coded as either 0 (CDS) or 1 (ADS). Thus, the reported effects indicate the BLABLABLA on ADS form. Main effects and interactions with age are shown in Figure 3.
+
+At the prosodic level, we found significant effects for 2 of 3 input factors tested. Utterance-level mean pitch was not predictive of form ($\beta$ = `r round(subset(input.models, Predictor == "Pitch mean")$Estimate, 3)`, _SE_ = `r round(subset(input.models, Predictor == "Pitch mean")$SE, 2)`, _t_ = `r round(subset(input.models, Predictor == "Pitch mean")$statistic, 2)`, _p_ `r ifelse(subset(input.models, Predictor == "Pitch mean")$p.value < .001, paste("< 0.001"), paste("=", round(subset(input.models, Predictor == "Pitch mean")$p.value, 3)))`) and did not significantly interact with age ($\beta$ = `r round(subset(input.models, Predictor == "Pitch mean:age")$Estimate, 2)`, _SE_ = `r round(subset(input.models, Predictor == "Pitch mean:age")$SE, 2)`, _t_ = `r round(subset(input.models, Predictor == "Pitch mean:age")$statistic, 2)`, _p_ `r ifelse(subset(input.models, Predictor == "Pitch mean:age")$p.value < .001, paste("< 0.001"), paste("=", round(subset(input.models, Predictor == "Pitch mean:age")$p.value, 3)))`). However, utterance-level pitch range was a negative predictor of ADS form ($\beta$ = `r round(subset(input.models, Predictor == "Pitch range")$Estimate, 3)`, _SE_ = `r round(subset(input.models, Predictor == "Pitch range")$SE, 2)`, _t_ = `r round(subset(input.models, Predictor == "Pitch range")$statistic, 2)`, _p_ `r ifelse(subset(input.models, Predictor == "Pitch range")$p.value < .001, paste("< 0.001"), paste("=", round(subset(input.models, Predictor == "Pitch range")$p.value, 3)))`). That is, utterances with greater variability in pitch were more likely to contain forms. This pitch range effect increased in strength across developmental time, as evidenced by a positive interaction with age ($\beta$ = `r round(subset(input.models, Predictor == "Pitch range:age")$Estimate, 2)`, _SE_ = `r round(subset(input.models, Predictor == "Pitch range:age")$SE, 2)`, _t_ = `r round(subset(input.models, Predictor == "Pitch range:age")$statistic, 2)`, _p_ `r ifelse(subset(input.models, Predictor == "Pitch range:age")$p.value < .001, paste("< 0.001"), paste("=", round(subset(input.models, Predictor == "Pitch range:age")$p.value, 3)))`). Speech rate (i.e., words produced per second) was a positive predictor of ADS form ($\beta$ = `r round(subset(input.models, Predictor == "Rate")$Estimate, 2)`, _SE_ = `r round(subset(input.models, Predictor == "Rate")$SE, 2)`, _t_ = `r round(subset(input.models, Predictor == "Rate")$statistic, 2)`, _p_ `r ifelse(subset(input.models, Predictor == "Rate")$p.value < .001, paste("< 0.001"), paste("=", round(subset(input.models, Predictor == "Rate")$p.value, 3)))`). Utterances spoken more quickly were more likely to contain ADS forms. This input predictor also negatively interacted with age ($\beta$ = `r round(subset(input.models, Predictor == "Rate:age")$Estimate, 2)`, _SE_ = `r round(subset(input.models, Predictor == "Rate:age")$SE, 2)`, _t_ = `r round(subset(input.models, Predictor == "Rate:age")$statistic, 2)`, _p_ `r ifelse(subset(input.models, Predictor == "Rate:age")$p.value < .001, paste("< 0.001"), paste("=", round(subset(input.models, Predictor == "Rate:age")$p.value, 3)))`), indicating a decreasing strength in predictive power across developmental time.
+
+At the lexical level, we found significant effects for both input factors tested. Utterances with higher levels of lexical complexity ($\beta$ = `r round(subset(input.models, Predictor == "Complexity")$Estimate, 2)`, _SE_ = `r round(subset(input.models, Predictor == "Complexity")$SE, 2)`, _t_ = `r round(subset(input.models, Predictor == "Complexity")$statistic, 2)`, _p_ `r ifelse(subset(input.models, Predictor == "Complexity")$p.value < .001, paste("< 0.001"), paste("=", round(subset(input.models, Predictor == "Complexity")$p.value, 3)))`) and lexical rarity ($\beta$ = `r round(subset(input.models, Predictor == "Rarity")$Estimate, 2)`, _SE_ = `r round(subset(input.models, Predictor == "Rarity")$SE, 2)`, _t_ = `r round(subset(input.models, Predictor == "Rarity")$statistic, 2)`, _p_ `r ifelse(subset(input.models, Predictor == "Rarity")$p.value < .001, paste("< 0.001"), paste("=", round(subset(input.models, Predictor == "Rarity")$p.value, 3)))`) were more likely to contain ADS forms. Lexical complexity did not interact with age ($\beta$ = `r round(subset(input.models, Predictor == "Complexity:age")$Estimate, 2)`, _SE_ = `r round(subset(input.models, Predictor == "Complexity:age")$SE, 2)`, _t_ = `r round(subset(input.models, Predictor == "Complexity:age")$statistic, 2)`, _p_ `r ifelse(subset(input.models, Predictor == "Complexity:age")$p.value < .001, paste("< 0.001"), paste("=", round(subset(input.models, Predictor == "Complexity:age")$p.value, 3)))`); whereas, lexical rarity negatively interacted with age such that there was a decreasing effect of this predictor with age ($\beta$ = `r round(subset(input.models, Predictor == "Rarity:age")$Estimate, 3)`, _SE_ = `r round(subset(input.models, Predictor == "Rarity:age")$SE, 2)`, _t_ = `r round(subset(input.models, Predictor == "Rarity:age")$statistic, 2)`, _p_ `r ifelse(subset(input.models, Predictor == "Rarity:age")$p.value < .001, paste("< 0.001"), paste("=", round(subset(input.models, Predictor == "Rarity:age")$p.value, 3)))`).
+
+At the syntactic level, we found significant effects for both input factors tested. Utterances with more words ($\beta$ = `r round(subset(input.models, Predictor == "Length")$Estimate, 2)`, _SE_ = `r round(subset(input.models, Predictor == "Length")$SE, 2)`, _t_ = `r round(subset(input.models, Predictor == "Length")$statistic, 2)`, _p_ `r ifelse(subset(input.models, Predictor == "Length")$p.value < .001, paste("< 0.001"), paste("=", round(subset(input.models, Predictor == "Length")$p.value, 3)))`) and more verb phrases ($\beta$ = `r round(subset(input.models, Predictor == "Verbs")$Estimate, 2)`, _SE_ = `r round(subset(input.models, Predictor == "Verbs")$SE, 2)`, _t_ = `r round(subset(input.models, Predictor == "Verbs")$statistic, 2)`, _p_ `r ifelse(subset(input.models, Predictor == "Verbs")$p.value < .001, paste("< 0.001"), paste("=", round(subset(input.models, Predictor == "Verbs")$p.value, 3)))`) were more likely to contain ADS forms. Moreover, both linguistic predictors negatively interacted with age (Length: $\beta$ = `r round(subset(input.models, Predictor == "Length:age")$Estimate, 2)`, _SE_ = `r round(subset(input.models, Predictor == "Length:age")$SE, 2)`, _t_ = `r round(subset(input.models, Predictor == "Length:age")$statistic, 2)`, _p_ `r ifelse(subset(input.models, Predictor == "Length:age")$p.value < .001, paste("< 0.001"), paste("=", round(subset(input.models, Predictor == "Length:age")$p.value, 3)))`; Verbs: $\beta$ = `r round(subset(input.models, Predictor == "Verbs:age")$Estimate, 2)`, _SE_ = `r round(subset(input.models, Predictor == "Verbs:age")$SE, 2)`, _t_ = `r round(subset(input.models, Predictor == "Verbs:age")$statistic, 2)`, _p_ `r ifelse(subset(input.models, Predictor == "Verbs:age")$p.value < .001, paste("< 0.001"), paste("=", round(subset(input.models, Predictor == "Verbs:age")$p.value, 3)))`), suggesting that the strength of these predictors decreases across developmental time.
 
 ## Modeling learning: What linguistic information is most useful for distinguishing CDS vs. ADS contexts?
 
