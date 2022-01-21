@@ -2,21 +2,28 @@ library(tidyverse)
 library(lme4)
 library(broom.mixed)
 
-pitch <- read_csv("data/input/pitch.csv")
+item.info <- read_csv("data-prep/overall/item-info.csv") %>%
+  select(pair, shift_type)
+
+pitch <- read_csv("data/input/pitch.csv") %>%
+  left_join(item.info, by = "pair")
 verbs <- read_csv("data/input/verbs.csv") %>%
   mutate(age_scaled = scale(age), 
-         verbs_scaled = scale(verbs))
+         verbs_scaled = scale(verbs)) %>%
+  left_join(item.info, by = "pair")
 
 rate <- read_csv("data/input/rate.csv") %>%
   mutate(age_scaled = scale(age), 
-         rate_scaled = scale(rate))
+         rate_scaled = scale(rate)) %>%
+  left_join(item.info, by = "pair")
 
 input <- read_csv("data/full-input.csv") %>%
   mutate(age_scaled = scale(age),  
          rate_scaled = scale(rate), 
          complexity_scaled = scale(complexity), 
          rarity_scaled = scale(rarity), 
-         length_scaled = scale(length))
+         length_scaled = scale(length)) %>%
+  left_join(item.info, by = "pair")
 
 # no effect of mean pitch on form
 m.pitch.mean <- glmer(form_numeric ~ pitch_mean_scaled * age_scaled + 
@@ -123,3 +130,85 @@ summary(m.combined)
 tidy(m.combined) %>%
   filter(effect == "fixed") %>%
   write_csv("analysis/model-outputs/input/all-predictors.csv")
+
+for (i in unique(item.info$shift_type)) {
+  path <- paste0("analysis/model-outputs/input/", i, "-shift/")
+  
+  m.pitch.mean <- glmer(form_numeric ~ pitch_mean_scaled * age_scaled + 
+                          (1|pair) + 
+                          (1|speaker_id), 
+                        data = filter(pitch, shift_type == i), 
+                        family = binomial, 
+                        control = glmerControl(optimizer = "bobyqa"))
+  
+  tidy(m.pitch.mean) %>%
+    filter(effect == "fixed") %>%
+    write_csv(paste0(path, "mean-pitch.csv"))
+  
+  # marginal effect of pitch range on form
+  m.pitch.range <- glmer(form_numeric ~ pitch_range_scaled * age_scaled + 
+                           (1|pair) + 
+                           (1|speaker_id), 
+                         data = filter(pitch, shift_type == i),
+                         family = binomial, 
+                         control = glmerControl(optimizer = "bobyqa"))
+  
+  tidy(m.pitch.range) %>%
+    filter(effect == "fixed") %>%
+    write_csv(paste0(path, "pitch-range.csv"))
+  
+  m.rate <- glmer(form_numeric ~ rate_scaled * age_scaled + 
+                    (1|pair) + 
+                    (1|speaker_id), 
+                  data = filter(rate, shift_type == i),
+                  family = binomial, 
+                  control = glmerControl(optimizer = "bobyqa"))
+  
+  tidy(m.rate) %>%
+    filter(effect == "fixed") %>%
+    write_csv(paste0(path, "rate.csv"))
+  
+  m.complexity <- glmer(form_numeric ~ complexity_scaled * age_scaled + 
+                          (1|pair) + 
+                          (1|speaker_id),
+                        data = filter(input, shift_type == i), 
+                        family = binomial, 
+                        control = glmerControl(optimizer = "bobyqa"))
+  
+  tidy(m.complexity) %>%
+    filter(effect == "fixed") %>%
+    write_csv(paste0(path, "complexity.csv"))
+  
+  m.rarity <- glmer(form_numeric ~ rarity_scaled * age_scaled + 
+                      (1|pair) + 
+                      (1|speaker_id),
+                    data = filter(input, shift_type == i),  
+                    family = binomial, 
+                    control = glmerControl(optimizer = "bobyqa"))
+  
+  tidy(m.rarity) %>%
+    filter(effect == "fixed") %>%
+    write_csv(paste0(path, "rarity.csv"))
+  
+  m.length <- glmer(form_numeric ~ length_scaled * age_scaled + 
+                      (1|pair) + 
+                      (1|speaker_id),
+                      data = filter(input, shift_type == i), 
+                    family = binomial, 
+                    control = glmerControl(optimizer = "bobyqa"))
+  
+  tidy(m.length) %>%
+    filter(effect == "fixed") %>%
+    write_csv(paste0(path, "length.csv"))
+  
+  m.verbs <- glmer(form_numeric ~ verbs_scaled * age_scaled + 
+                     (1|pair) + 
+                     (1|speaker_id),
+                   data = filter(verbs, shift_type == i),
+                   family = binomial, 
+                   control = glmerControl(optimizer = "bobyqa"))
+  
+  tidy(m.verbs) %>%
+    filter(effect == "fixed") %>%
+    write_csv(paste0(path, "verbs.csv"))
+}
