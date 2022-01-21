@@ -19,3 +19,12 @@ clean_data <- raw_data %>%
          gloss = paste0(" ", transcription, " "))
 
 write.csv(clean_data, "~/Desktop/secure/ldp_data_prepped.csv")
+
+# get transcript count
+clean_data %>% 
+  select(subject, session) %>%
+  distinct() %>%
+  nrow()
+
+# get child count
+length(unique(clean_data$subject))
