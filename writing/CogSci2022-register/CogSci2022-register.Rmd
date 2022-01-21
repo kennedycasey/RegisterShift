@@ -108,6 +108,78 @@ Dev change/fine tuning refs:
 
 We analyzed `r metadata$n_transcripts` transcripts in the North American English collection of the Child Language Data Exchange System (CHILDES) database [@macwhinney2000childes] for children up to 7 years of age. The included transcripts were drawn from `r metadata$n_corpora` individual corpora and featured `r metadata$n_kids` children (age range = `r metadata$min_age`--`r metadata$max_age` months, _M_ = `r metadata$mean_age` months). Child production data from the Language Development Project (LDP) longitudinal corpus were also analyzed (REF). These included 622 transcripts from 59 children recorded every 4 months for approximately one hour from age 14 to 58 months. <!--kc2mc: I dropped the LDP data from the input predictor analyses since we don't have timestamps or lemmas, so we'd only really have data for the syntactic analyses. Seemed better to not introduce a bunch more NAs, but let me know what you think!-->
 
+
+<!--
+literally stolen from Natalie's paper for refs and quick background LDP info :)
+so obviously not meant to be used verbatim, but:
+
+[...]
+Subjects were a subset of families participating in an ongoing longitudinal study of language development, which includes 64 typically-developing children and their families. Participants were recruited from the greater Chicago area through mailers to targeted zip codes and advertisements placed in a free, monthly parenting magazine. Responding parents were interviewed for background characteristics and to confirm a monolingual, English-speaking household. The final sample was demographically representative of the greater Chicago area, as reported in the 2000 U.S. Census, in terms of race/ethnicity, household income, and parent education. See @rowe_2008_childdirected for additional information regarding participant recruitment and demographics.
+
+Capitalizing on annotation from prior research, we limit our analysis to a subsample of 18 children (8 girls) originally chosen to maximize range of average mean length of utterance (for more information about participant inclusion see @cartmilletal_2014_pointing). The subsample of families was diverse in terms of household income, parent education, and race.
+
+[...]
+
+Ninety-minute at-home naturalistic caregiver-child interactions were captured every 4 months between 14 and 58 months, with no missed visits. All spontaneous speech by participant children and caregivers was transcribed and all communicative gestures annotated for form and gloss. See @rowe_2008_childdirected for additional details for home visit data collection procedures; see @huttenlocheretal_2010_sources for transcription procedures and reliability and @rowegoldin-meadow_2009_early for first-level gesture annotation methods.
+
+[...]
+
+bib info:
+
+@Article{rowe_2008_childdirected,
+  title = {Child-Directed Speech: Relation to Socioeconomic Status, Knowledge of Child Development and Child Vocabulary Skill},
+  shorttitle = {Child-Directed Speech},
+  author = {Meredith L. Rowe},
+  date = {2008-02},
+  journaltitle = {Journal of Child Language},
+  volume = {35},
+  number = {01},
+  issn = {0305-0009, 1469-7602},
+  doi = {10.1017/S0305000907008343},
+  langid = {english},
+  file = {/Users/Natalie/Box/ZotFile/Rowe/Rowe_2008_Child-directed speech.pdf;/Users/Natalie/Box/ZotFile/Rowe/Rowe_2008_Child-directed speech.pdf},
+}
+
+@article{cartmilletal_2014_pointing,
+  title={Pointing and naming are not redundant: children use gesture to modify nouns before they modify nouns in speech.},
+  author={Cartmill, Erica A and Hunsicker, Dea and Goldin-Meadow, Susan},
+  journal={Developmental Psychology},
+  volume={50},
+  number={6},
+  pages={1660},
+  year={2014},
+  publisher={American Psychological Association}
+}
+
+@article{huttenlocher2010sources,
+  title={Sources of variability in children’s language growth},
+  author={Huttenlocher, Janellen and Waterfall, Heidi and Vasilyeva, Marina and Vevea, Jack and Hedges, Larry V},
+  journal={Cognitive psychology},
+  volume={61},
+  number={4},
+  pages={343--365},
+  year={2010},
+  publisher={Elsevier}
+}
+
+@Article{rowegoldin-meadow_2009_early,
+  title = {Early Gesture Selectively Predicts Later Language Learning},
+  author = {Meredith L. Rowe and Susan GoldinNANAMeado},
+  date = {2009},
+  journaltitle = {Developmental Science},
+  volume = {12},
+  number = {1},
+  pages = {182--187},
+  issn = {1467-7687},
+  doi = {10.1111/j.1467-7687.2008.00764.x},
+  langid = {english},
+  annotation = {\_eprint: https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1467-7687.2008.00764.x},
+  file = {/Users/Natalie/Box/ZotFile/Rowe_Goldin-Meadow/Rowe_Goldin-Meadow_2009_Early gesture iselectively-i predicts later language learning.pdf;/Users/Natalie/Box/ZotFile/Rowe_Goldin‐Meadow/Rowe_Goldin‐Meadow_2009_Early gesture selectively predicts later language learning.pdf;/Users/Natalie/Zotero/storage/HZXWBK9P/j.1467-7687.2008.00764.html},
+}
+
+
+-->
+
 ## Target words
 Fifteen CDS/ADS word pairs (30 total target words; see Table \ref{tab:tab1}) were selected based on (a) the appearance of at least one form on the MacArthur-Bates Communicative Development Inventory [@fenson1994variability] and (b) frequency of occurrence in CHILDES (at least 100 child-produced tokens and 100 other-produced tokens per form). Pairs were chosen such that the same object, animal, or routine could be reasonably labeled with either form (CDS or ADS) in typical communicative interactions with young children (e.g., _doggy_ or _dog_).
 
