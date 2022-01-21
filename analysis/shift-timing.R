@@ -141,7 +141,7 @@ for (i in pairs) {
     labs(title = paste0(str_replace(i, "_", "/")), color = "form", fill = "form") +
     scale_x_continuous(limits = c(0, 84), breaks=seq(0, 84, by=12)) +
     theme_test(base_size = 15) +
-    theme(plot.title = element_text(hjust = 0.5, face = "bold", size = 15), 
+    theme(plot.title = element_text(hjust = 0.5, face = "italic", size = 15), 
           axis.title.x = element_blank(), 
           axis.title.y = element_blank(), 
           legend.position = "none")
@@ -151,7 +151,7 @@ for (i in pairs) {
 
 model_data <- do.call(rbind, get_model_data)
 
-m <- glmer(form_numeric ~ age + (age|pair), data = model_data, 
+m <- glmer(form_numeric ~ age + (1 + age|pair), data = model_data, 
            family = binomial)
 
 for (i in unique(pairs)) {
@@ -167,7 +167,7 @@ prop <- ggarrange(birdie_bird, doggy_dog, bunny_rabbit,
                   ncol = 3, nrow = 5)
 
 annotate_figure(prop,
-                top = text_grob("    No Shift                Early Shift                 Late Shift", size = 25, face = "bold"),
+                top = text_grob("      No Shift                  Early Shift                Late Shift", size = 25, face = "bold"),
                 left = text_grob("Proportion of tokens per form", rot = 90, size = 25, face = "bold"), 
                 bottom = text_grob("Age (months)", size = 25, face = "bold"))
 
