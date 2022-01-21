@@ -18,10 +18,17 @@ ldp <- read_csv("~/Desktop/secure/ldp-input.csv") %>%
 
 # read in input predictor data
 complexity <- read_csv("data/input/complexity.csv")
+rarity <- read_csv("data/input/rarity.csv")
+verbs <- read_csv("data/input/verbs.csv")
 
 input <- childes %>%
   left_join(complexity, by = c("corpus_name", "id",
                                "speaker_id", "target_child_id", 
                                "age", "pair", "item", 
-                               "form", "form_numeric"))
+                               "form", "form_numeric")) %>%
+  left_join(rarity, by = "id") %>%
+  left_join(verbs, by = c("corpus_name", "id",
+                          "speaker_id", "target_child_id", 
+                          "age", "pair", "item", 
+                          "form", "form_numeric"))
 write_csv(input, "data/full-input.csv")

@@ -5,10 +5,11 @@ library(broom.mixed)
 pitch <- read_csv("data/input/pitch.csv")
 
 input <- read_csv("data/full-input.csv") %>%
-  mutate(age_scaled = scale(age), 
-         length_scaled = scale(length), 
+  mutate(age_scaled = scale(age),  
          complexity_scaled = scale(complexity), 
-         rarity_scaled = scale(rarity))
+         rarity_scaled = scale(rarity), 
+         length_scaled = scale(length),
+         verbs_scaled = scale(verbs))
 
 # no effect of mean pitch on form
 m.pitch.mean <- glmer(form_numeric ~ pitch_mean_scaled * age_scaled + 
@@ -74,6 +75,20 @@ summary(m.length)
 tidy(m.length) %>%
   filter(effect == "fixed") %>%
   write_csv("analysis/model-outputs/input/length.csv")
+
+
+# sig effect of verbs on form
+m.verbs <- glmer(form_numeric ~ verbs_scaled * age_scaled + 
+                    (1|pair) + 
+                    (1|speaker_id) + 
+                    data = input, 
+                  family = binomial, 
+                  control = glmerControl(optimizer = "bobyqa"))
+summary(m.verbs)
+
+tidy(m.verbs) %>%
+  filter(effect == "fixed") %>%
+  write_csv("analysis/model-outputs/input/verbs.csv")
 
 m.combined <- glmer(form_numeric ~ complexity_scaled * age_scaled +
                       rarity_scaled * age_scaled + 
