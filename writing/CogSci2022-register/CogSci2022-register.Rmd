@@ -9,7 +9,7 @@ author-information: >
     \And {\large \bf Marisa Casillas} \\ University of Chicago \\ \texttt{mcasillas@uchicago.edu}}
 
 abstract: >
-  Child-directed speech (CDS) features words such as _doggy_, *night-night*, and _tummy_ that are rarely used in adult-directed speech (ADS). Characterisitcs of CDS word forms, such as reduplication and diminutivization, explain why they may be learned and produced earlier by children. However, it is not yet clear how or when children switch to using ADS equivalents—--*dog*, _goodnight_, _stomach_. Through analysis of transcripts from CHILDES and the Language Development Project corpus, we show that children significantly increase their production of ADS word forms across age, with the average CDS-to-ADS transition point at 2.5 years. Many of the linguistic features that distinguish CDS vs. ADS registers (e.g., speech rate, lexical complexity, etc.) similarly differentiate the local speech contexts surrounding CDS vs. ADS word forms. To test whether these patterns in children's input...classifier details...Learners may therefore be able to capitalize on these cues to support their discovery of context-appropriate CDS/ADS pair use.
+  Child-directed speech (CDS) features words such as _doggy_, _night-night_, and _tummy_ that are rarely used in adult-directed speech (ADS). Characterisitcs of CDS word forms, such as reduplication and diminutivization, explain why they may be learned and produced earlier by children. However, it is not yet clear how or when children switch to using ADS equivalents—_dog_, _goodnight_, _stomach_. Through analysis of transcripts from CHILDES and the Language Development Project corpus, we show that children significantly increase their production of ADS word forms across age, with the average CDS-to-ADS transition point at 2.5 years. Many of the linguistic features that distinguish CDS vs. ADS registers (e.g., speech rate, lexical complexity, etc.) similarly differentiated the local speech contexts surrounding CDS vs. ADS word forms. Learners may therefore be able to capitalize on these cues to support their discovery of context-appropriate CDS/ADS pair use.
   
 keywords: >
     child-directed speech; word production; linguistic input; social register; corpus analysis; developmental change
@@ -63,10 +63,12 @@ CDS is associated with higher overall pitch as well as greater variability in pi
 ## Social context of child-directed speech
 <!--kc: maybe a note here about other distinctions (e.g., acoustic and interactional). ep's paper on timbre and more about the social, oftentimes dyadic, context--> Linguistic cues are not the only features that differentiate CDS and ADS. For instance...examples like acoustic, maybe affective (if there's a ref that separates this from prosodic), and, most notably, social [@golinkoff2015baby]. BLABLABLA kids are linking linguistic and social information. Infants as young as 12 to 20 months show an emerging understanding of the relationship between registers and addressees [@soley2020infants; @ikeda2018sensitivity]. Put simply, CDS should be directed to young children, not adults [possibly a few other examples here]
 
-## The current study
+## Current investigation
 Here, we focus on the question of whether children may also be able to learn more subtle associations between words and registers. <!--kc: need to be careful here because we don't have data to fully speak to kids' understanding--> We return to examination of a specific lexical modification of CDS: the inclusion of register-specific words. [add stuff about why 2 labels initally seem counterintuitive but then characteristics of CDS forms that explain away the learnability issue]. Existing research does well to provide evidence for why CDS forms make up a large proportion of directed input and why they may be learned and produced earlier by children. However, conventions of adult speech <!--kc: definitely need a better phrase here--> require children to eventually transition to using ADS forms---a learning problem that has not yet received empirical attention. [connecting sentence here] <!--kc: something about the focus on lots of lang dev research on increasing vocabulary size but not necessarily context-appropriate usage or the 'loss' of words in a way-->
 
-First, we analyze existing speech corpora for children up to age 7 to determine if and when we can detect a shift from CDS to ADS vocabulary [explain what we mean by this]. After establishing that a shift towards production of ADS forms (over CDS forms) occurs in early childhood, we next explore what information in children's linguistic input could support this shift. We investigate whether many of the linguistic features that distinguish _between_ CDS and ADS at the register level also differentiate CDS and ADS words at the utterance level. <!--kc: wording needs work here but the point that we're mostly looking at CDS is crucial--> [classifier details here].
+In Study 1, we analyze existing speech corpora for children up to age 7 to determine when children shift from CDS to ADS vocabulary [explain what we mean by this]. 
+
+After establishing that a shift towards production of ADS forms (over CDS forms) occurs in early childhood, we explore what information in children's linguistic input could support this shift in Study 2. We investigate whether many of the linguistic features that distinguish _between_ CDS and ADS at the register level also differentiate CDS and ADS words at the utterance level. <!--kc: wording needs work here but the point that we're mostly looking at CDS is crucial-->
 
 <!--
 overview of previous work, which has largely focused on the learnability question or why these words appear in the first place
@@ -102,83 +104,14 @@ Dev change/fine tuning refs:
 [@tippenhauer2020scope]: less rep reduction of low-frequency words in CDS
 -->
 
+# Study 1: When do children shift from CDS to ADS vocabulary?
+Mini intro here
+
 # Method
 
 ## Corpora
 
-We analyzed `r metadata$n_transcripts` transcripts in the North American English collection of the Child Language Data Exchange System (CHILDES) database [@macwhinney2000childes] for children up to 7 years of age. The included transcripts were drawn from `r metadata$n_corpora` individual corpora and featured `r metadata$n_kids` children (age range = `r metadata$min_age`--`r metadata$max_age` months, _M_ = `r metadata$mean_age` months). Child production data from the Language Development Project (LDP) longitudinal corpus were also analyzed (REF). These included 622 transcripts from 59 children recorded every 4 months for approximately one hour from age 14 to 58 months. <!--kc2mc: I dropped the LDP data from the input predictor analyses since we don't have timestamps or lemmas, so we'd only really have data for the syntactic analyses. Seemed better to not introduce a bunch more NAs, but let me know what you think!-->
-
-
-<!--
-literally stolen from Natalie's paper for refs and quick background LDP info :)
-so obviously not meant to be used verbatim, but:
-
-[...]
-Subjects were a subset of families participating in an ongoing longitudinal study of language development, which includes 64 typically-developing children and their families. Participants were recruited from the greater Chicago area through mailers to targeted zip codes and advertisements placed in a free, monthly parenting magazine. Responding parents were interviewed for background characteristics and to confirm a monolingual, English-speaking household. The final sample was demographically representative of the greater Chicago area, as reported in the 2000 U.S. Census, in terms of race/ethnicity, household income, and parent education. See @rowe_2008_childdirected for additional information regarding participant recruitment and demographics.
-
-Capitalizing on annotation from prior research, we limit our analysis to a subsample of 18 children (8 girls) originally chosen to maximize range of average mean length of utterance (for more information about participant inclusion see @cartmilletal_2014_pointing). The subsample of families was diverse in terms of household income, parent education, and race.
-
-[...]
-
-Ninety-minute at-home naturalistic caregiver-child interactions were captured every 4 months between 14 and 58 months, with no missed visits. All spontaneous speech by participant children and caregivers was transcribed and all communicative gestures annotated for form and gloss. See @rowe_2008_childdirected for additional details for home visit data collection procedures; see @huttenlocheretal_2010_sources for transcription procedures and reliability and @rowegoldin-meadow_2009_early for first-level gesture annotation methods.
-
-[...]
-
-bib info:
-
-@Article{rowe_2008_childdirected,
-  title = {Child-Directed Speech: Relation to Socioeconomic Status, Knowledge of Child Development and Child Vocabulary Skill},
-  shorttitle = {Child-Directed Speech},
-  author = {Meredith L. Rowe},
-  date = {2008-02},
-  journaltitle = {Journal of Child Language},
-  volume = {35},
-  number = {01},
-  issn = {0305-0009, 1469-7602},
-  doi = {10.1017/S0305000907008343},
-  langid = {english},
-  file = {/Users/Natalie/Box/ZotFile/Rowe/Rowe_2008_Child-directed speech.pdf;/Users/Natalie/Box/ZotFile/Rowe/Rowe_2008_Child-directed speech.pdf},
-}
-
-@article{cartmilletal_2014_pointing,
-  title={Pointing and naming are not redundant: children use gesture to modify nouns before they modify nouns in speech.},
-  author={Cartmill, Erica A and Hunsicker, Dea and Goldin-Meadow, Susan},
-  journal={Developmental Psychology},
-  volume={50},
-  number={6},
-  pages={1660},
-  year={2014},
-  publisher={American Psychological Association}
-}
-
-@article{huttenlocher2010sources,
-  title={Sources of variability in children’s language growth},
-  author={Huttenlocher, Janellen and Waterfall, Heidi and Vasilyeva, Marina and Vevea, Jack and Hedges, Larry V},
-  journal={Cognitive psychology},
-  volume={61},
-  number={4},
-  pages={343--365},
-  year={2010},
-  publisher={Elsevier}
-}
-
-@Article{rowegoldin-meadow_2009_early,
-  title = {Early Gesture Selectively Predicts Later Language Learning},
-  author = {Meredith L. Rowe and Susan GoldinNANAMeado},
-  date = {2009},
-  journaltitle = {Developmental Science},
-  volume = {12},
-  number = {1},
-  pages = {182--187},
-  issn = {1467-7687},
-  doi = {10.1111/j.1467-7687.2008.00764.x},
-  langid = {english},
-  annotation = {\_eprint: https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1467-7687.2008.00764.x},
-  file = {/Users/Natalie/Box/ZotFile/Rowe_Goldin-Meadow/Rowe_Goldin-Meadow_2009_Early gesture iselectively-i predicts later language learning.pdf;/Users/Natalie/Box/ZotFile/Rowe_Goldin‐Meadow/Rowe_Goldin‐Meadow_2009_Early gesture selectively predicts later language learning.pdf;/Users/Natalie/Zotero/storage/HZXWBK9P/j.1467-7687.2008.00764.html},
-}
-
-
--->
+We analyzed `r metadata$n_transcripts` transcripts in the North American English collection of the Child Language Data Exchange System (CHILDES) database [@macwhinney2000childes] for children up to 7 years of age. The included transcripts were drawn from `r metadata$n_corpora` individual corpora and featured `r metadata$n_kids` children (age range = `r metadata$min_age`--`r metadata$max_age` months, _M_ = `r metadata$mean_age` months). Child production data from the Language Development Project (LDP) longitudinal corpus were also analyzed [see @rowe2008child; @huttenlocher2010sources for further details regarding participating families, recording procedures, and transcription]. These included 622 transcripts from 59 English-learning children recorded every 4 months for approximately 90 minutes from age 14 to 58 months.
 
 ## Target words
 Fifteen CDS/ADS word pairs (30 total target words; see Table \ref{tab:tab1}) were selected based on (a) the appearance of at least one form on the MacArthur-Bates Communicative Development Inventory [@fenson1994variability] and (b) frequency of occurrence in CHILDES (at least 100 child-produced tokens and 100 other-produced tokens per form). Pairs were chosen such that the same object, animal, or routine could be reasonably labeled with either form (CDS or ADS) in typical communicative interactions with young children (e.g., _doggy_ or _dog_).
@@ -208,22 +141,7 @@ xtable::xtable(freq, digits = 0,
     column_spec(2, italic = TRUE)
 ```
 
-## Linguistic input predictors
-
-All input analyses were conducted over individual other-produced utterances in CHILDES (i.e., speech not produced by the target child). <!--kc: might add percentage of utterances from MOT/FAT just so it's clear that this is primarily adult-produced speech, not speech from other children.--> We quantified prosodic, lexical, and syntactic information to describe each utterance containing one of the 30 target words.
-
-### Prosodic level
-We measured three types of prosodic information: __mean pitch__ (Hz), __pitch range__ (Hz), and __speech rate__ (words per second). These measures were calculated over all timestamped utterances in CHILDES (`r metadata$other_timestamped`% of other-produced utterances). Utterances shorter than 58 ms were excluded from analysis. This lower bound was set by identifying the the shortest possible duration of an utterance containing at least one word in four manually annotated North American English corpora in HomeBank [@homebank; @bergelsoncorpus; @soderstromcorpus; @vandamcorpus; @warlaumontcorpus] <!--kc2mc: are these the right refs?-->. Pitch information was extracted using Praat software [@boersma2016praat].
-
-### Lexical level
-We measured two types of lexical information: complexity and rarity. __Lexical complexity__ was defined as the negative log proportion of known words in each utterance [consistent with @foushee2016lexical; @kidd2012goldilocks]. A word was considered 'known' if the age of acquisition (AoA) estimate [@fenson1994variability; @frank2017wordbank] was less than or equal to the age of the target child when they heard the utterance. Utterances with proportionally fewer known words are more lexically complex. __Lexical rarity__ was determined based on overall frequency in CHILDES. For all words with at least 10 tokens^[Manual checks revealed that many of the lowest-frequency words included idiosyncratic or erroneous transcriptions and/or repetitions of children's babbling. <!--kc: can do more thorough checks to report % and/or choose a less arbitrary cutoff-->], we calculated a rarity score as the negative log proportion of other-produced tokens in CHILDES (i.e., number of tokens for a given word/sum of all tokens in the full corpus), and then averaged for rarity scores for all target utterances. Utterances with more low-frequency words are considered more lexically rare.
-
-### Syntactic level
-Syntactic measures included both the utterance __length__ (in words) and __number of verb phrases__. The number of words per utterance was automatically extracted using the `childesr` package [@braginsky2021childesr]. The number of verb phrases per utterance was determined using `spaCy3`, an automatic syntactic parser [@honnibal2020spacy].
-
 # Results
-
-## Measuring production: At what ages do children use CDS vs. ADS forms?
 ```{r}
 # read in lmer outputs generated in shift-timing.R 
 overall.shift <- read_csv("../../analysis/model-outputs/shift-timing.csv")
@@ -251,8 +169,7 @@ bypair.shift.timing <- png::readPNG("../figs/bypair-shift-timing.png")
 grid::grid.raster(bypair.shift.timing)
 ```
 
-## Characterizing the input: In what linguistic contexts do children hear CDS vs. ADS forms?
-
+# Study 2: What linguisitc information in children's input supports the shift from CDS to ADS vocabulary?
 ```{r model-plot, fig.env = "figure*", fig.pos = "h", fig.align = "center", fig.width = 7,  set.cap.width = TRUE, num.cols.cap = 2, fig.cap = "Coefficient estimates for linguistic predictors of form. Positive main effects indicate that utterances are more likely to contain ADS forms when they have higher values for the predictor (e.g., faster speech rates). Positive age interactions indicate an increasing effect of the predictor with age. Error bars depict standard errors of the coefficient estimates, and filled circles represent significant effects (\\textit{p} $<$ 0.05)."}
 
 path <- "../../analysis/model-outputs/input/"
@@ -313,7 +230,27 @@ img <- png::readPNG("../figs/model-outputs.png")
 grid::grid.raster(img)
 ```
 
-We next explored children's input (i.e., other-produced speech), asking whether the linguistic features that differentiate CDS vs. ADS at the register level also differentiate the local speech contexts surrounding CDS vs. ADS forms. In other words, can form be predicted on the basis of individual utterance-level prosodic, lexical, or syntactic cues? <!--kc: might need to update framing depending on what makes it into section 3--> 
+We next explored children's input (i.e., other-produced speech), asking whether the linguistic features that differentiate CDS vs. ADS at the register level also differentiate the local speech contexts surrounding CDS vs. ADS forms. In other words, can form be predicted on the basis of individual utterance-level prosodic, lexical, or syntactic cues?
+
+# Method
+
+## Corpora
+Reference above but drop LDP
+
+## Linguistic input predictors
+
+All input analyses were conducted over individual other-produced utterances in CHILDES (i.e., speech not produced by the target child). <!--kc: might add percentage of utterances from MOT/FAT just so it's clear that this is primarily adult-produced speech, not speech from other children.--> We quantified prosodic, lexical, and syntactic information to describe each utterance containing one of the 30 target words.
+
+### Prosodic level
+We measured three types of prosodic information: __mean pitch__ (Hz), __pitch range__ (Hz), and __speech rate__ (words per second). These measures were calculated over all timestamped utterances in CHILDES (`r metadata$other_timestamped`% of other-produced utterances). Utterances shorter than 58 ms were excluded from analysis. This lower bound was set by identifying the the shortest possible duration of an utterance containing at least one word in four manually annotated North American English corpora in HomeBank [@homebank; @bergelsoncorpus; @soderstromcorpus; @vandamcorpus; @warlaumontcorpus] <!--kc2mc: are these the right refs?-->. Pitch information was extracted using Praat software [@boersma2016praat].
+
+### Lexical level
+We measured two types of lexical information: complexity and rarity. __Lexical complexity__ was defined as the negative log proportion of known words in each utterance [consistent with @foushee2016lexical; @kidd2012goldilocks]. A word was considered 'known' if the age of acquisition (AoA) estimate [@fenson1994variability; @frank2017wordbank] was less than or equal to the age of the target child when they heard the utterance. Utterances with proportionally fewer known words are more lexically complex. __Lexical rarity__ was determined based on overall frequency in CHILDES. For all words with at least 10 tokens^[Manual checks revealed that many of the lowest-frequency words included idiosyncratic or erroneous transcriptions and/or repetitions of children's babbling. <!--kc: can do more thorough checks to report % and/or choose a less arbitrary cutoff-->], we calculated a rarity score as the negative log proportion of other-produced tokens in CHILDES (i.e., number of tokens for a given word/sum of all tokens in the full corpus), and then averaged for rarity scores for all target utterances. Utterances with more low-frequency words are considered more lexically rare.
+
+### Syntactic level
+Syntactic measures included both the utterance __length__ (in words) and __number of verb phrases__. The number of words per utterance was automatically extracted using the `childesr` package [@braginsky2021childesr]. The number of verb phrases per utterance was determined using `spaCy3`, an automatic syntactic parser [@honnibal2020spacy].
+
+# Results
 
 We ran individual mixed-effects binomial logistic regression models for each of seven linguisitc input predictors. Models included fixed effects of linguistic predictor, target child age, and their interaction as well as random intercepts for individual word pairs and speakers. For each target word token, form was coded as CDS (0) or ADS (1), so coefficient estimates should be interpreted as an indication of the likelihood that an utterance contains an ADS form. <!--kc: this wording needs work but leaving it for now--> All main effects of linguistic predictors and interactions with age are shown in Figure 3.
 
@@ -322,8 +259,6 @@ At the prosodic level, we found significant effects for two of three input predi
 At the lexical level, we found significant effects for both input predictors tested. Utterances with higher levels of __lexical complexity__ ($\beta$ = `r round(subset(input.models, Predictor == "Complexity")$Estimate, 2)`, _SE_ = `r round(subset(input.models, Predictor == "Complexity")$SE, 2)`, _t_ = `r round(subset(input.models, Predictor == "Complexity")$statistic, 2)`, _p_ `r ifelse(subset(input.models, Predictor == "Complexity")$p.value < .001, paste("< 0.001"), paste("=", round(subset(input.models, Predictor == "Complexity")$p.value, 3)))`) and __lexical rarity__ ($\beta$ = `r round(subset(input.models, Predictor == "Rarity")$Estimate, 2)`, _SE_ = `r round(subset(input.models, Predictor == "Rarity")$SE, 2)`, _t_ = `r round(subset(input.models, Predictor == "Rarity")$statistic, 2)`, _p_ `r ifelse(subset(input.models, Predictor == "Rarity")$p.value < .001, paste("< 0.001"), paste("=", round(subset(input.models, Predictor == "Rarity")$p.value, 3)))`) were more likely to contain ADS forms. Lexical complexity did not interact with age ($\beta$ = `r round(subset(input.models, Predictor == "Complexity:age")$Estimate, 2)`, _SE_ = `r round(subset(input.models, Predictor == "Complexity:age")$SE, 2)`, _t_ = `r round(subset(input.models, Predictor == "Complexity:age")$statistic, 2)`, _p_ `r ifelse(subset(input.models, Predictor == "Complexity:age")$p.value < .001, paste("< 0.001"), paste("=", round(subset(input.models, Predictor == "Complexity:age")$p.value, 3)))`); whereas, lexical rarity negatively interacted with age such that there was a decreasing effect of this predictor with age ($\beta$ = `r round(subset(input.models, Predictor == "Rarity:age")$Estimate, 2)`, _SE_ = `r round(subset(input.models, Predictor == "Rarity:age")$SE, 2)`, _t_ = `r round(subset(input.models, Predictor == "Rarity:age")$statistic, 2)`, _p_ `r ifelse(subset(input.models, Predictor == "Rarity:age")$p.value < .001, paste("< 0.001"), paste("=", round(subset(input.models, Predictor == "Rarity:age")$p.value, 3)))`).
 
 At the syntactic level, we found significant effects of __utterance length__ and __number of verb phrases__. Utterances with more words ($\beta$ = `r round(subset(input.models, Predictor == "Length")$Estimate, 2)`, _SE_ = `r round(subset(input.models, Predictor == "Length")$SE, 2)`, _t_ = `r round(subset(input.models, Predictor == "Length")$statistic, 2)`, _p_ `r ifelse(subset(input.models, Predictor == "Length")$p.value < .001, paste("< 0.001"), paste("=", round(subset(input.models, Predictor == "Length")$p.value, 3)))`) and more verb phrases ($\beta$ = `r round(subset(input.models, Predictor == "Verbs")$Estimate, 2)`, _SE_ = `r round(subset(input.models, Predictor == "Verbs")$SE, 2)`, _t_ = `r round(subset(input.models, Predictor == "Verbs")$statistic, 2)`, _p_ `r ifelse(subset(input.models, Predictor == "Verbs")$p.value < .001, paste("< 0.001"), paste("=", round(subset(input.models, Predictor == "Verbs")$p.value, 3)))`) were more likely to contain ADS forms. Moreover, both linguistic predictors negatively interacted with age (Length: $\beta$ = `r round(subset(input.models, Predictor == "Length:age")$Estimate, 2)`, _SE_ = `r round(subset(input.models, Predictor == "Length:age")$SE, 2)`, _t_ = `r round(subset(input.models, Predictor == "Length:age")$statistic, 2)`, _p_ `r ifelse(subset(input.models, Predictor == "Length:age")$p.value < .001, paste("< 0.001"), paste("=", round(subset(input.models, Predictor == "Length:age")$p.value, 3)))`; Verbs: $\beta$ = `r round(subset(input.models, Predictor == "Verbs:age")$Estimate, 2)`, _SE_ = `r round(subset(input.models, Predictor == "Verbs:age")$SE, 2)`, _t_ = `r round(subset(input.models, Predictor == "Verbs:age")$statistic, 2)`, _p_ `r ifelse(subset(input.models, Predictor == "Verbs:age")$p.value < .001, paste("< 0.001"), paste("=", round(subset(input.models, Predictor == "Verbs:age")$p.value, 3)))`), suggesting that the strength of these predictors decreases across developmental time.
-
-## Modeling learning: What linguistic information is most useful for distinguishing CDS vs. ADS contexts?
 
 # Discussion
 
