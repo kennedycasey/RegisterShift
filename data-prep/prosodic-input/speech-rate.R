@@ -10,6 +10,6 @@ utterances <- read_csv("data/childes-input.csv")
 rate <- utterances %>%
   filter(speaker_type == "other" & !is.na(media_start) & 
            !is.na(media_end) & (media_end - media_start) >= min_dur/1000) %>%
-  mutate(speech_rate = num_tokens/(media_end - media_start))
+  mutate(rate = num_tokens/(media_end - media_start))
 
 write_csv(rate, "data/input/rate.csv")
