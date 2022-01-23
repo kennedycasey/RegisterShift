@@ -56,6 +56,13 @@ tidy(m.pitch.range) %>%
   filter(effect == "fixed") %>%
   write_csv("analysis/model-outputs/input/pitch-range.csv")
 
+ggpredict(m.pitch.range, c("pitch_range_scaled [all]"), 
+          type = "fixed", back.transform = TRUE) %>%
+  rename(age = x) %>%
+  mutate(predictor = "Pitch range", 
+         level = "Prosodic") %>%
+  write_csv("analysis/model-outputs-toplot/pitch-range.csv")
+
 # sig effect of lexical complexity on form
 m.rate <- glmer(form_numeric ~ rate_scaled * age_scaled + 
                         (1|pair) + 
@@ -68,6 +75,13 @@ summary(m.rate)
 tidy(m.rate) %>%
   filter(effect == "fixed") %>%
   write_csv("analysis/model-outputs/input/rate.csv")
+
+ggpredict(m.rate, c("rate_scaled [all]"), 
+          type = "fixed", back.transform = TRUE) %>%
+  rename(age = x) %>%
+  mutate(predictor = "Rate", 
+         level = "Prosodic") %>%
+  write_csv("analysis/model-outputs-toplot/rate.csv")
 
 # sig effect of lexical complexity on form
 m.complexity <- glmer(form_numeric ~ complexity_scaled * age_scaled + 
@@ -82,6 +96,13 @@ tidy(m.complexity) %>%
   filter(effect == "fixed") %>%
   write_csv("analysis/model-outputs/input/complexity.csv")
 
+ggpredict(m.complexity, c("complexity_scaled [all]"), 
+          type = "fixed", back.transform = TRUE) %>%
+  rename(age = x) %>%
+  mutate(predictor = "Complexity", 
+         level = "Lexical") %>%
+  write_csv("analysis/model-outputs-toplot/complexity.csv")
+
 # sig effect of lexical rarity on form
 m.rarity <- glmer(form_numeric ~ rarity_scaled * age_scaled + 
                         (1|pair) + 
@@ -94,6 +115,13 @@ summary(m.rarity)
 tidy(m.rarity) %>%
   filter(effect == "fixed") %>%
   write_csv("analysis/model-outputs/input/rarity.csv")
+
+ggpredict(m.rarity, c("rarity_scaled [all]"), 
+          type = "fixed", back.transform = TRUE) %>%
+  rename(age = x) %>%
+  mutate(predictor = "Rarity", 
+         level = "Lexical") %>%
+  write_csv("analysis/model-outputs-toplot/rarity.csv")
 
 # sig effect of utterance length on form
 m.length <- glmer(form_numeric ~ length_scaled * age_scaled + 
@@ -108,6 +136,12 @@ tidy(m.length) %>%
   filter(effect == "fixed") %>%
   write_csv("analysis/model-outputs/input/length.csv")
 
+ggpredict(m.length, c("length_scaled [all]"), 
+          type = "fixed", back.transform = TRUE) %>%
+  rename(age = x) %>%
+  mutate(predictor = "Length", 
+         level = "Syntactic") %>%
+  write_csv("analysis/model-outputs-toplot/length.csv")
 
 # sig effect of verbs on form
 m.verbs <- glmer(form_numeric ~ verbs_scaled * age_scaled + 
@@ -121,6 +155,13 @@ summary(m.verbs)
 tidy(m.verbs) %>%
   filter(effect == "fixed") %>%
   write_csv("analysis/model-outputs/input/verbs.csv")
+
+ggpredict(m.verbs, c("verbs_scaled [all]"), 
+          type = "fixed", back.transform = TRUE) %>%
+  rename(age = x) %>%
+  mutate(predictor = "Verbs", 
+         level = "Syntactic") %>%
+  write_csv("analysis/model-outputs-toplot/verbs.csv")
 
 m.combined <- glmer(form_numeric ~ complexity_scaled * age_scaled +
                       rarity_scaled * age_scaled + 
