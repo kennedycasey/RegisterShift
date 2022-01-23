@@ -1,29 +1,27 @@
 library(tidyverse)
 library(lme4)
 library(broom.mixed)
-
-item.info <- read_csv("data-prep/overall/item-info.csv") %>%
-  select(pair, shift_type)
+library(ggeffects)
 
 pitch <- read_csv("data/input/pitch.csv") %>%
-  left_join(item.info, by = "pair")
+  mutate(age_scaled = scale(age), 
+         pitch_mean_scaled = scale(pitch_mean), 
+         pitch_range_scaled = scale(pitch_range))
+
 verbs <- read_csv("data/input/verbs.csv") %>%
   mutate(age_scaled = scale(age), 
-         verbs_scaled = scale(verbs)) %>%
-  left_join(item.info, by = "pair")
+         verbs_scaled = scale(verbs))
 
 rate <- read_csv("data/input/rate.csv") %>%
   mutate(age_scaled = scale(age), 
-         rate_scaled = scale(rate)) %>%
-  left_join(item.info, by = "pair")
+         rate_scaled = scale(rate))
 
 input <- read_csv("data/full-input.csv") %>%
   mutate(age_scaled = scale(age),  
          rate_scaled = scale(rate), 
          complexity_scaled = scale(complexity), 
          rarity_scaled = scale(rarity), 
-         length_scaled = scale(length)) %>%
-  left_join(item.info, by = "pair")
+         length_scaled = scale(length))
 
 # no effect of mean pitch on form
 m.pitch.mean <- glmer(form_numeric ~ pitch_mean_scaled * age_scaled + 
@@ -38,11 +36,18 @@ tidy(m.pitch.mean) %>%
   filter(effect == "fixed") %>%
   write_csv("analysis/model-outputs/input/mean-pitch.csv")
 
+ggpredict(m.pitch.mean, c("pitch_mean_scaled [all]"), 
+          type = "fixed", back.transform = TRUE) %>%
+  rename(age = x) %>%
+  mutate(predictor = "Pitch mean", 
+         level = "Prosodic") %>%
+  write_csv("analysis/model-outputs-toplot/mean-pitch.csv")
+  
 # marginal effect of pitch range on form
 m.pitch.range <- glmer(form_numeric ~ pitch_range_scaled * age_scaled + 
                          (1|pair) + 
                          (1|speaker_id), 
-                       data = pitch_info, 
+                       data = pitch, 
                        family = binomial, 
                        control = glmerControl(optimizer = "bobyqa"))
 summary(m.pitch.range)
@@ -93,7 +98,7 @@ tidy(m.rarity) %>%
 # sig effect of utterance length on form
 m.length <- glmer(form_numeric ~ length_scaled * age_scaled + 
                     (1|pair) + 
-                    (1|speaker_id) + 
+                    (1|speaker_id),
                   data = input, 
                   family = binomial, 
                   control = glmerControl(optimizer = "bobyqa"))
@@ -108,9 +113,9 @@ tidy(m.length) %>%
 m.verbs <- glmer(form_numeric ~ verbs_scaled * age_scaled + 
                     (1|pair) + 
                     (1|speaker_id),
-                    data = verbs, 
-                  family = binomial, 
-                  control = glmerControl(optimizer = "bobyqa"))
+                 data = verbs, 
+                 family = binomial, 
+                 control = glmerControl(optimizer = "bobyqa"))
 summary(m.verbs)
 
 tidy(m.verbs) %>%
@@ -129,4 +134,4 @@ summary(m.combined)
 
 tidy(m.combined) %>%
   filter(effect == "fixed") %>%
-  write_csv("analysis/model-outputs/input/all-predictors.csv")
+  write_csv("analysis/model-outputs/all-predictors.csv")

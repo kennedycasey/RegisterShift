@@ -140,7 +140,7 @@ for (i in pairs) {
     labs(title = paste0(str_replace(i, "_", "/")), color = "form", fill = "form") +
     scale_x_continuous(limits = c(0, 84), breaks = seq(0, 84, by = 12)) +
     theme_test(base_size = 15) +
-    theme(plot.title = element_text(hjust = 0.5, face = "italic", size = 15), 
+    theme(plot.title = element_text(hjust = 0.5, size = 15), 
           axis.title.x = element_blank(), 
           axis.title.y = element_blank(), 
           legend.position = "none")
