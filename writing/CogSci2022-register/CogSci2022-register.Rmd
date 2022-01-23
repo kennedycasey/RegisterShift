@@ -107,14 +107,14 @@ Dev change/fine tuning refs:
 # Study 1: When do children shift from CDS to ADS vocabulary?
 Mini intro here
 
-# Method
+## Method
 
-## Corpora
+### Corpora
 
 We analyzed `r metadata$n_transcripts` transcripts in the North American English collection of the Child Language Data Exchange System (CHILDES) database [@macwhinney2000childes] for children up to 7 years of age. The included transcripts were drawn from `r metadata$n_corpora` individual corpora and featured `r metadata$n_kids` children (age range = `r metadata$min_age`--`r metadata$max_age` months, _M_ = `r metadata$mean_age` months). Child production data from the Language Development Project (LDP) longitudinal corpus were also analyzed [see @rowe2008child; @huttenlocher2010sources for further details regarding participating families, recording procedures, and transcription]. These included 622 transcripts from 59 English-learning children recorded every 4 months for approximately 90 minutes from age 14 to 58 months.
 
-## Target words
-Fifteen CDS/ADS word pairs (30 total target words; see Table \ref{tab:tab1}) were selected based on (a) the appearance of at least one form on the MacArthur-Bates Communicative Development Inventory [@fenson1994variability] and (b) frequency of occurrence in CHILDES (at least 100 child-produced tokens and 100 other-produced tokens per form). Pairs were chosen such that the same object, animal, or routine could be reasonably labeled with either form (CDS or ADS) in typical communicative interactions with young children (e.g., _doggy_ or _dog_).
+### Target words
+Fifteen CDS/ADS word pairs (30 total target words; see Table \ref{tab:tab1}) were selected based on two criteria: (a) the appearance of at least one form on the MacArthur-Bates Communicative Development Inventory [@fenson1994variability] and (b) frequency of occurrence in CHILDES (at least 100 child-produced tokens and 100 other-produced tokens per form). Pairs were also selected based on researcher intuition to ensure that that the same object, animal, or routine could be reasonably labeled with either form (CDS or ADS) in typical communicative interactions with young children (e.g., _doggy_ or _dog_).
 
 ```{r freq_table, results = "asis"}
 cds_freq <- freq %>%
@@ -137,11 +137,10 @@ xtable::xtable(freq, digits = 0,
     xtable2kable(booktabs = TRUE, escape = FALSE) %>%
     kable_styling(latex_options = "scale_down") %>%
     add_header_above(c(" " = 2, "CDS tokens by speaker" = 2, "ADS tokens by speaker" = 2), bold = TRUE) %>%
-    row_spec(0, bold = TRUE) %>%
-    column_spec(2, italic = TRUE)
+    row_spec(0, bold = TRUE)
 ```
 
-# Results
+## Results
 ```{r}
 # read in lmer outputs generated in shift-timing.R 
 overall.shift <- read_csv("../../analysis/model-outputs/shift-timing.csv")
@@ -161,13 +160,13 @@ shift.timing <- png::readPNG("../figs/shift-timing.png")
 grid::grid.raster(shift.timing)
 ```
 
-```{r shift-timing-bypair-fig, fig.env = "figure", fig.pos = "!ht", fig.align = "center", fig.width = 3.4, fig.height = 5, fig.cap = "Inidividual word-pair trajectories for increasing production of ADS forms (blue) and descreasing production of CDS forms (red) with age. Columns indicate categorically different shift trajectory types."}
+```{r shift-timing-bypair-fig, fig.env = "figure*", fig.pos = "!ht", fig.align = "center", fig.width = 11, fig.height = 4, fig.cap = "Inidividual word-pair trajectories for increasing production of ADS forms (blue) and descreasing production of CDS forms (red) with age. Columns indicate categorically different shift trajectory types."}
 
 bypair.shift.timing <- png::readPNG("../figs/bypair-shift-timing.png")
 grid::grid.raster(bypair.shift.timing)
 ```
 
-# Study 2: What linguisitc information in children's input supports the shift from CDS to ADS vocabulary?
+# Study 2: What linguisitc information in children's input supports their shift from CDS to ADS vocabulary?
 ```{r model-plot, fig.env = "figure*", fig.pos = "h", fig.align = "center", fig.width = 7,  set.cap.width = TRUE, num.cols.cap = 2, fig.cap = "Coefficient estimates for linguistic predictors of form. Positive main effects indicate that utterances are more likely to contain ADS forms when they have higher values for the predictor (e.g., faster speech rates). Positive age interactions indicate an increasing effect of the predictor with age. Error bars depict standard errors of the coefficient estimates, and filled circles represent significant effects (\\textit{p} $<$ 0.05)."}
 
 path <- "../../analysis/model-outputs/input/"
@@ -230,25 +229,24 @@ grid::grid.raster(img)
 
 We next explored children's input (i.e., other-produced speech), asking whether the linguistic features that differentiate CDS vs. ADS at the register level also differentiate the local speech contexts surrounding CDS vs. ADS forms. In other words, can form be predicted on the basis of individual utterance-level prosodic, lexical, or syntactic cues?
 
-# Method
+## Method
 
-## Corpora
+### Corpora
 Reference above but drop LDP
 
-## Linguistic input predictors
-
+### Linguistic input predictors
 All input analyses were conducted over individual other-produced utterances in CHILDES (i.e., speech not produced by the target child). <!--kc: might add percentage of utterances from MOT/FAT just so it's clear that this is primarily adult-produced speech, not speech from other children.--> We quantified prosodic, lexical, and syntactic information to describe each utterance containing one of the 30 target words.
 
-### Prosodic level
+#### Prosodic level
 We measured three types of prosodic information: __mean pitch__ (Hz), __pitch range__ (Hz), and __speech rate__ (words per second). These measures were calculated over all timestamped utterances in CHILDES (`r metadata$other_timestamped`% of other-produced utterances). Utterances shorter than 58 ms were excluded from analysis. This lower bound was set by identifying the the shortest possible duration of an utterance containing at least one word in four manually annotated North American English corpora in HomeBank [@homebank; @bergelsoncorpus; @soderstromcorpus; @vandamcorpus; @warlaumontcorpus] <!--kc2mc: are these the right refs?-->. Pitch information was extracted using Praat software [@boersma2016praat].
 
-### Lexical level
+#### Lexical level
 We measured two types of lexical information: complexity and rarity. __Lexical complexity__ was defined as the negative log proportion of known words in each utterance [consistent with @foushee2016lexical; @kidd2012goldilocks]. A word was considered 'known' if the age of acquisition (AoA) estimate [@fenson1994variability; @frank2017wordbank] was less than or equal to the age of the target child when they heard the utterance. Utterances with proportionally fewer known words are more lexically complex. __Lexical rarity__ was determined based on overall frequency in CHILDES. For all words with at least 10 tokens^[Manual checks revealed that many of the lowest-frequency words included idiosyncratic or erroneous transcriptions and/or repetitions of children's babbling. <!--kc: can do more thorough checks to report % and/or choose a less arbitrary cutoff-->], we calculated a rarity score as the negative log proportion of other-produced tokens in CHILDES (i.e., number of tokens for a given word/sum of all tokens in the full corpus), and then averaged for rarity scores for all target utterances. Utterances with more low-frequency words are considered more lexically rare.
 
-### Syntactic level
+#### Syntactic level
 Syntactic measures included both the utterance __length__ (in words) and __number of verb phrases__. The number of words per utterance was automatically extracted using the `childesr` package [@braginsky2021childesr]. The number of verb phrases per utterance was determined using `spaCy3`, an automatic syntactic parser [@honnibal2020spacy].
 
-# Results
+## Results
 
 We ran individual mixed-effects binomial logistic regression models for each of seven linguisitc input predictors. Models included fixed effects of linguistic predictor, target child age, and their interaction as well as random intercepts for individual word pairs and speakers. For each target word token, form was coded as CDS (0) or ADS (1), so coefficient estimates should be interpreted as an indication of the likelihood that an utterance contains an ADS form. <!--kc: this wording needs work but leaving it for now--> All main effects of linguistic predictors and interactions with age are shown in Figure 3.
 
@@ -258,11 +256,13 @@ At the lexical level, we found significant effects for both input predictors tes
 
 At the syntactic level, we found significant effects of __utterance length__ and __number of verb phrases__. Utterances with more words ($\beta$ = `r round(subset(input.models, Predictor == "Length")$Estimate, 2)`, _SE_ = `r round(subset(input.models, Predictor == "Length")$SE, 2)`, _t_ = `r round(subset(input.models, Predictor == "Length")$statistic, 2)`, _p_ `r ifelse(subset(input.models, Predictor == "Length")$p.value < .001, paste("< 0.001"), paste("=", round(subset(input.models, Predictor == "Length")$p.value, 3)))`) and more verb phrases ($\beta$ = `r round(subset(input.models, Predictor == "Verbs")$Estimate, 2)`, _SE_ = `r round(subset(input.models, Predictor == "Verbs")$SE, 2)`, _t_ = `r round(subset(input.models, Predictor == "Verbs")$statistic, 2)`, _p_ `r ifelse(subset(input.models, Predictor == "Verbs")$p.value < .001, paste("< 0.001"), paste("=", round(subset(input.models, Predictor == "Verbs")$p.value, 3)))`) were more likely to contain ADS forms. Moreover, both linguistic predictors negatively interacted with age (Length: $\beta$ = `r round(subset(input.models, Predictor == "Length:age")$Estimate, 2)`, _SE_ = `r round(subset(input.models, Predictor == "Length:age")$SE, 2)`, _t_ = `r round(subset(input.models, Predictor == "Length:age")$statistic, 2)`, _p_ `r ifelse(subset(input.models, Predictor == "Length:age")$p.value < .001, paste("< 0.001"), paste("=", round(subset(input.models, Predictor == "Length:age")$p.value, 3)))`; Verbs: $\beta$ = `r round(subset(input.models, Predictor == "Verbs:age")$Estimate, 2)`, _SE_ = `r round(subset(input.models, Predictor == "Verbs:age")$SE, 2)`, _t_ = `r round(subset(input.models, Predictor == "Verbs:age")$statistic, 2)`, _p_ `r ifelse(subset(input.models, Predictor == "Verbs:age")$p.value < .001, paste("< 0.001"), paste("=", round(subset(input.models, Predictor == "Verbs:age")$p.value, 3)))`), suggesting that the strength of these predictors decreases across developmental time.
 
-# Discussion
+## Discussion
+
+# General Discussion
 
 <!--
 # Acknowledgements
-Research reported in this publication was supported by the Eunice Kennedy Shriver National Institute of Child Health & Human Development of the National Institutes of Health under Award Number P01HD040605; by a grant from the Successful Pathways from School to Work initiative of the University of Chicago, funded by the Hymen Milgrom Supporting Organization; by a grant from the Institute of Education Sciences, U.S. Department of Education, through grant R305A190467 to the University of Chicago; and by a grant from the Spencer Foundation. The content is solely the responsibility of the authors and does not necessarily represent the official views of the National Institutes of Health, the Institute of Education Sciences, or the U.S. Department of Education.
+We are grateful to the members of the University of Chicago Chatter Lab and Northwestern University Child Language Lab for valuable discussion and feedback on this work. Research reported in this publication was supported by the Eunice Kennedy Shriver National Institute of Child Health & Human Development of the National Institutes of Health under Award Number P01HD040605; by a grant from the Successful Pathways from School to Work initiative of the University of Chicago, funded by the Hymen Milgrom Supporting Organization; by a grant from the Institute of Education Sciences, U.S. Department of Education, through grant R305A190467 to the University of Chicago; and by a grant from the Spencer Foundation. The content is solely the responsibility of the authors and does not necessarily represent the official views of the National Institutes of Health, the Institute of Education Sciences, or the U.S. Department of Education.
 -->
 
 # References
