@@ -153,15 +153,13 @@ bypair.shift <- read_csv("../../analysis/model-outputs/bypair-shift-timing.csv")
 ```
 We first asked when CDS forms are replaced by ADS forms in children's own speech. We fit a mixed-effects binomial logistic regression model predicting children's production of CDS vs. ADS forms, with target child age (in months, scaled) as a single fixed effect. Random slopes and intercepts for word pairs were also included. For each target word token, the form was coded as either 0 (CDS) or 1 (ADS). Thus, the model captures, for each age, the relative proportion of CDS vs. ADS forms in children's own speech.
 
-Children's production of ADS forms increased with age ($\beta$ = `r format(round(overall.shift$estimate, 2), 2)`, _SE_ = `r format(round(overall.shift$std.error, 2), 2)`, _t_ = `r format(round(overall.shift$statistic, 2), 2)`, _p_ `r ifelse(overall.shift$p.value < .001, paste("< 0.001"), paste("=", format(round(overall.shift$p.value, 3), 3)))`). This trend of increasing ADS form production was significant for `r bypair.shift` of 15 pairs. <!--kc: correct for multiple comparisions?--> The average CDS-to-ADS transition point (i.e., the point at which ADS forms were produced >50% of the time) was between 24 and 36 months of age (Figure 1).
+Children's production of ADS forms increased with age ($\beta$ = `r format(round(overall.shift$estimate, 2), 2)`, _SE_ = `r format(round(overall.shift$std.error, 2), 2)`, _t_ = `r format(round(overall.shift$statistic, 2), 2)`, _p_ `r ifelse(overall.shift$p.value < .001, paste("< 0.001"), paste("=", format(round(overall.shift$p.value, 3), 3)))`). This trend of increasing ADS form production was significant for `r bypair.shift` of 15 pairs. The average CDS-to-ADS transition point (i.e., the point at which ADS forms were produced >50% of the time) was between 24 and 36 months of age (Figure 1).
 
 ```{r shift-timing-fig, fig.env = "figure", fig.pos = "h", fig.align = "center", fig.width = 2.9, fig.height = 3.4, fig.cap = "Model-predicted increase in production of ADS forms with age. Gray lines depict individual word-pair trajectories."}
 
 shift.timing <- png::readPNG("../figs/shift-timing.png")
 grid::grid.raster(shift.timing)
 ```
-
-Exploratory analyses of individual word-pair effects yielded evidence for three distinct shift trajectory types (Figure 2). For some pairs, such as _birdie/bird_ and _blankie/blanket_, ADS forms dominated in children's speech from the earliest ages sampled. For other pairs, CDS forms were initially more prominent and were then replaced by ADS forms early on (e.g., _doggy/dog_ and _night-night/goodnight_ by 24 to 36 months) or later in development (e.g., _bunny/rabbit_ and _tummy/stomach_ after 48 months).
 
 ```{r shift-timing-bypair-fig, fig.env = "figure", fig.pos = "!ht", fig.align = "center", fig.width = 3.4, fig.height = 5, fig.cap = "Inidividual word-pair trajectories for increasing production of ADS forms (blue) and descreasing production of CDS forms (red) with age. Columns indicate categorically different shift trajectory types."}
 

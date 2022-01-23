@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2022.1.15)  21 JAN 2022 15:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2022.1.22)  23 JAN 2022 00:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **CogSci2022-register.tex
 (./CogSci2022-register.tex
 LaTeX2e <2021-11-15> patch level 1
-L3 programming layer <2022-01-12>
+L3 programming layer <2022-01-21>
 (/Users/chatterlabmanager/Library/TinyTeX/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
 (/Users/chatterlabmanager/Library/TinyTeX/texmf-dist/tex/latex/base/size10.clo
@@ -695,73 +695,49 @@ dftex.map}
 
 
 ]
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 282.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 282.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 282.
-LaTeX Font Info:    Trying to load font information for OML+ptm on input line 3
-16.
+LaTeX Font Info:    Trying to load font information for OML+ptm on input line 2
+64.
 
 (/Users/chatterlabmanager/Library/TinyTeX/texmf-dist/tex/latex/psnfss/omlptm.fd
 File: omlptm.fd 
 )
 LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 316.
-[2]
-<figs/shift-timing-fig-1.pdf, id=94, 209.78375pt x 185.69376pt>
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 264.
+<figs/shift-timing-fig-1.pdf, id=83, 209.78375pt x 185.69376pt>
 File: figs/shift-timing-fig-1.pdf Graphic file (type pdf)
 <use figs/shift-timing-fig-1.pdf>
-Package pdftex.def Info: figs/shift-timing-fig-1.pdf  used on input line 325.
+Package pdftex.def Info: figs/shift-timing-fig-1.pdf  used on input line 273.
 (pdftex.def)             Requested size: 209.78322pt x 185.6933pt.
-
-Underfull \hbox (badness 3872) in paragraph at lines 333--341
-[]\OT1/ptm/m/n/10 Exploratory anal-y-ses of in-di-vid-ual word-pair ef-fects
- []
-
-
-Underfull \hbox (badness 1102) in paragraph at lines 333--341
-\OT1/ptm/m/n/10 yielded ev-i-dence for three dis-tinct shift tra-jec-tory types
-
- []
-
-
-Underfull \hbox (badness 2073) in paragraph at lines 333--341
-\OT1/ptm/m/n/10 (Fig-ure 2). For some pairs, such as \OT1/ptm/m/it/10 birdie/bi
-rd \OT1/ptm/m/n/10 and
- []
-
-
-Underfull \hbox (badness 1033) in paragraph at lines 333--341
-\OT1/ptm/m/n/10 from the ear-li-est ages sam-pled. For other pairs, CDS
- []
-
-
-Underfull \hbox (badness 1038) in paragraph at lines 333--341
-\OT1/ptm/m/n/10 forms were ini-tially more promi-nent and were then re-
- []
-
-<figs/shift-timing-bypair-fig-1.pdf, id=95, 241.90375pt x 361.35pt>
+<figs/shift-timing-bypair-fig-1.pdf, id=84, 241.90375pt x 361.35pt>
 File: figs/shift-timing-bypair-fig-1.pdf Graphic file (type pdf)
 <use figs/shift-timing-bypair-fig-1.pdf>
 Package pdftex.def Info: figs/shift-timing-bypair-fig-1.pdf  used on input line
- 345.
+ 284.
 (pdftex.def)             Requested size: 241.90315pt x 361.34912pt.
-<figs/model-plot-1.pdf, id=96, 362.35374pt x 216.81pt>
+<figs/model-plot-1.pdf, id=85, 362.35374pt x 216.81pt>
 File: figs/model-plot-1.pdf Graphic file (type pdf)
 <use figs/model-plot-1.pdf>
-Package pdftex.def Info: figs/model-plot-1.pdf  used on input line 361.
+Package pdftex.def Info: figs/model-plot-1.pdf  used on input line 300.
 (pdftex.def)             Requested size: 362.35286pt x 216.80946pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 1888) in paragraph at lines 369--374
+Underfull \hbox (badness 1888) in paragraph at lines 308--313
 \OT1/ptm/m/n/10 We next ex-plored chil-dren's in-put (i.e., other-produced
  []
 
-[3 <./figs/shift-timing-fig-1.pdf> <./figs/shift-timing-bypair-fig-1.pdf>]
+[2 <./figs/shift-timing-fig-1.pdf>]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 361.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 361.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 361.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[3 <./figs/shift-timing-bypair-fig-1.pdf>]
 Underfull \hbox (badness 1946) in paragraph at lines 453--457
  [][]\OT1/ptm/m/n/10 Braginsky, M., Sanchez, A., & Yurovsky, D. (2021).
  []
@@ -776,13 +752,13 @@ Underfull \hbox (badness 1616) in paragraph at lines 453--457
 
 ] (./CogSci2022-register.aux)
 Package rerunfilecheck Info: File `CogSci2022-register.out' has not changed.
-(rerunfilecheck)             Checksum: 9F449072A78F24B9BF2B1A8A674C9BB5;3125.
+(rerunfilecheck)             Checksum: 9C809E3EF828F3691E3431DE12A6D981;2787.
  ) 
 Here is how much of TeX's memory you used:
- 13809 strings out of 480246
- 224750 string characters out of 5894286
- 524969 words of memory out of 5000000
- 31449 multiletter control sequences out of 15000+600000
+ 13817 strings out of 480247
+ 224668 string characters out of 5894309
+ 524051 words of memory out of 5000000
+ 31452 multiletter control sequences out of 15000+600000
  505978 words of font info for 101 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  60i,12n,63p,662b,370s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -794,10 +770,10 @@ st/fonts/type1/urw/symbol/usyr.pfb></Users/chatterlabmanager/Library/TinyTeX/te
 xmf-dist/fonts/type1/urw/times/utmb8a.pfb></Users/chatterlabmanager/Library/Tin
 yTeX/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></Users/chatterlabmanager/Libr
 ary/TinyTeX/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on CogSci2022-register.pdf (5 pages, 1498059 bytes).
+Output written on CogSci2022-register.pdf (5 pages, 1497632 bytes).
 PDF statistics:
- 216 PDF objects out of 1000 (max. 8388607)
- 181 compressed objects within 2 object streams
- 69 named destinations out of 1000 (max. 500000)
- 128 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 228 PDF objects out of 1000 (max. 8388607)
+ 193 compressed objects within 2 object streams
+ 73 named destinations out of 1000 (max. 500000)
+ 144 words of extra memory for PDF output out of 10000 (max. 10000000)
 
