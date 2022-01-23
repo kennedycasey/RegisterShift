@@ -52,7 +52,8 @@
 % \textwidth 16cm
 % \textheight 21cm
 
-\title{Title TBD}
+\title{When \emph{doggy} becomes \emph{dog}: Developmental shifts the
+use of register-specific words}
 
 \usepackage{booktabs}
 \usepackage{longtable}
@@ -171,13 +172,18 @@ this shift.
 \section{Study 1: When do children shift from CDS to ADS
 forms?}\label{study-1-when-do-children-shift-from-cds-to-ads-forms}}
 
-Mini intro here
+We tracked children's usage of 15 CDS/ADS word pairs (Table
+\ref{tab:tab1}) from infancy up to age seven. Since CDS forms rarely
+appear in ADS, we predicted that children shift away from production of
+these register-specific forms with increasing age. That is, we expected
+to see replacement of CDS forms with ADS forms in children's own speech
+across time.
 
 \hypertarget{method}{%
-\subsection{Method}\label{method}}
+\section{Method}\label{method}}
 
 \hypertarget{corpora}{%
-\subsubsection{Corpora}\label{corpora}}
+\subsection{Corpora}\label{corpora}}
 
 We analyzed 8251 transcripts in the North American English collection of
 the Child Language Data Exchange System (CHILDES) database (MacWhinney,
@@ -192,18 +198,17 @@ children recorded every 4 months for approximately 90 minutes from age
 14 to 58 months.
 
 \hypertarget{target-words}{%
-\subsubsection{Target words}\label{target-words}}
+\subsection{Target words}\label{target-words}}
 
-Fifteen CDS/ADS word pairs (30 total target words; see Table
-\ref{tab:tab1}) were selected based on two criteria: (a) the appearance
-of at least one form on the MacArthur-Bates Communicative Development
-Inventory (Fenson et al., 1994) and (b) frequency of occurrence in
-CHILDES (at least 100 child-produced tokens and 100 other-produced
-tokens per form). Pairs were also selected based on researcher intuition
-to ensure that that the same object, animal, or routine could be
-reasonably labeled with either form (CDS or ADS) in typical
-communicative interactions with young children (e.g., \emph{doggy} or
-\emph{dog}).
+Fifteen CDS/ADS word pairs (30 total target words) were selected based
+on two criteria: (1) the appearance of at least one form on the
+MacArthur-Bates Communicative Development Inventory (Fenson et al.,
+1994) and (2) frequency of occurrence in CHILDES (at least 100
+child-produced tokens and 100 other-produced tokens per form). Pairs
+were also selected based on researcher intuition to ensure that that the
+same object, animal, or routine could be reasonably labeled with either
+form (CDS or ADS) in typical communicative interactions with young
+children (e.g., \emph{doggy} or \emph{dog}).
 
 \begin{table}[ht]
 \centering
@@ -237,7 +242,7 @@ communicative interactions with young children (e.g., \emph{doggy} or
 \end{table}
 
 \hypertarget{results}{%
-\subsection{Results}\label{results}}
+\section{Results}\label{results}}
 
 We first asked when CDS forms are replaced by ADS forms in children's
 own speech. We fit a mixed-effects binomial logistic regression model
@@ -300,15 +305,15 @@ CDS vs.~ADS forms. In other words, can form be predicted on the basis of
 individual utterance-level prosodic, lexical, or syntactic cues?
 
 \hypertarget{method-1}{%
-\subsection{Method}\label{method-1}}
+\section{Method}\label{method-1}}
 
 \hypertarget{corpora-1}{%
-\subsubsection{Corpora}\label{corpora-1}}
+\subsection{Corpora}\label{corpora-1}}
 
 Reference above but drop LDP
 
 \hypertarget{linguistic-input-predictors}{%
-\subsubsection{Linguistic input
+\subsection{Linguistic input
 predictors}\label{linguistic-input-predictors}}
 
 All input analyses were conducted over individual other-produced
@@ -317,7 +322,7 @@ We quantified prosodic, lexical, and syntactic information to describe
 each utterance containing one of the 30 target words.
 
 \hypertarget{prosodic-level}{%
-\paragraph{Prosodic level}\label{prosodic-level}}
+\subsubsection{Prosodic level}\label{prosodic-level}}
 
 We measured three types of prosodic information: \textbf{mean pitch}
 (Hz), \textbf{pitch range} (Hz), and \textbf{speech rate} (words per
@@ -332,7 +337,7 @@ Pitch information was extracted using Praat software (Boersma \&
 Weenink, 2016).
 
 \hypertarget{lexical-level}{%
-\paragraph{Lexical level}\label{lexical-level}}
+\subsubsection{Lexical level}\label{lexical-level}}
 
 We measured two types of lexical information: complexity and rarity.
 \textbf{Lexical complexity} was defined as the negative log proportion
@@ -346,14 +351,15 @@ complex. \textbf{Lexical rarity} was determined based on overall
 frequency in CHILDES. For all words with at least 10 tokens\footnote{Manual
   checks revealed that many of the lowest-frequency words included
   idiosyncratic or erroneous transcriptions and/or repetitions of
-  children's babbling.}, we calculated a rarity score as the negative
-log proportion of other-produced tokens in CHILDES (i.e., number of
-tokens for a given word/sum of all tokens in the full corpus), and then
-averaged for rarity scores for all target utterances. Utterances with
-more low-frequency words are considered more lexically rare.
+  non-words from children's babbling.}, we calculated a rarity score as
+the negative log proportion of other-produced tokens in CHILDES (i.e.,
+number of tokens for a given word/sum of all tokens in the full corpus),
+and then averaged for rarity scores for all target utterances.
+Utterances with more low-frequency words are considered more lexically
+rare.
 
 \hypertarget{syntactic-level}{%
-\paragraph{Syntactic level}\label{syntactic-level}}
+\subsubsection{Syntactic level}\label{syntactic-level}}
 
 Syntactic measures included both the utterance \textbf{length} (in
 words) and \textbf{number of verb phrases}. The number of words per
@@ -363,7 +369,7 @@ phrases per utterance was determined using \texttt{spaCy3}, an automatic
 syntactic parser (Honnibal, Montani, Van Landeghem, \& Boyd, 2020).
 
 \hypertarget{results-1}{%
-\subsection{Results}\label{results-1}}
+\section{Results}\label{results-1}}
 
 We ran individual mixed-effects binomial logistic regression models for
 each of seven linguisitc input predictors. Models included fixed effects
@@ -418,7 +424,7 @@ predictors negatively interacted with age (Length: \(\beta\) = -0.11,
 decreases across developmental time.
 
 \hypertarget{discussion}{%
-\subsection{Discussion}\label{discussion}}
+\section{Discussion}\label{discussion}}
 
 \hypertarget{general-discussion}{%
 \section{General Discussion}\label{general-discussion}}

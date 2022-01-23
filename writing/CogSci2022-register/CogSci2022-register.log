@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2022.1.22)  23 JAN 2022 13:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2022.1.22)  23 JAN 2022 14:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -568,31 +568,31 @@ File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
 ) (./CogSci2022-register.aux)
 \openout1 = `CogSci2022-register.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for OMS/pzccm/m/n on input line 80.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for OMS/pzccm/m/n on input line 81.
 LaTeX Font Info:    Trying to load font information for OMS+pzccm on input line
- 80.
+ 81.
 
 (/Users/chatterlabmanager/Library/TinyTeX/texmf-dist/tex/latex/psnfss/omspzccm.
 fd
 File: omspzccm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/pzccm.
 )
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: longtable package is loaded.
@@ -604,7 +604,7 @@ Package: ltcaption 2020/05/30 v1.4b longtable captions (AR)
 Package caption Info: threeparttable package is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 80.
+Package hyperref Info: Link coloring OFF on input line 81.
 
 (/Users/chatterlabmanager/Library/TinyTeX/texmf-dist/tex/latex/hyperref/nameref
 .sty
@@ -620,9 +620,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count309
 )
-LaTeX Info: Redefining \ref on input line 80.
-LaTeX Info: Redefining \pageref on input line 80.
-LaTeX Info: Redefining \nameref on input line 80.
+LaTeX Info: Redefining \ref on input line 81.
+LaTeX Info: Redefining \pageref on input line 81.
+LaTeX Info: Redefining \nameref on input line 81.
 (./CogSci2022-register.out) (./CogSci2022-register.out)
 \@outlinefile=\write4
 \openout4 = `CogSci2022-register.out'.
@@ -648,45 +648,45 @@ LaTeX Info: Redefining \BPBI on input line 129.
 LaTeX Info: Redefining \BHBI on input line 130.
 )
 LaTeX Font Info:    Trying to load font information for OT1+ptmcm on input line
- 83.
+ 84.
 
 (/Users/chatterlabmanager/Library/TinyTeX/texmf-dist/tex/latex/psnfss/ot1ptmcm.
 fd
 File: ot1ptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ptmcm.
 )
 LaTeX Font Info:    Trying to load font information for OML+ptmcm on input line
- 83.
+ 84.
 
 (/Users/chatterlabmanager/Library/TinyTeX/texmf-dist/tex/latex/psnfss/omlptmcm.
 fd
 File: omlptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ptmcm.
 )
 LaTeX Font Info:    Trying to load font information for OMX+psycm on input line
- 83.
+ 84.
 
 (/Users/chatterlabmanager/Library/TinyTeX/texmf-dist/tex/latex/psnfss/omxpsycm.
 fd
 File: omxpsycm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/psycm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 83.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 84.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 83.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 84.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 83.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 83.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 84.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 84.
 
 
 (/Users/chatterlabmanager/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 83.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 84.
 
 
 (/Users/chatterlabmanager/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \vbox (badness 10000) detected at line 83
+Underfull \vbox (badness 10000) detected at line 84
  []
 
 [1{/Users/chatterlabmanager/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/p
@@ -696,67 +696,54 @@ dftex.map}
 
 ]
 LaTeX Font Info:    Trying to load font information for OML+ptm on input line 2
-52.
+57.
 
 (/Users/chatterlabmanager/Library/TinyTeX/texmf-dist/tex/latex/psnfss/omlptm.fd
 File: omlptm.fd 
 )
 LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 252.
-<figs/shift-timing-fig-1.pdf, id=74, 209.78375pt x 179.67125pt>
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 257.
+<figs/shift-timing-fig-1.pdf, id=91, 209.78375pt x 179.67125pt>
 File: figs/shift-timing-fig-1.pdf Graphic file (type pdf)
 <use figs/shift-timing-fig-1.pdf>
-Package pdftex.def Info: figs/shift-timing-fig-1.pdf  used on input line 261.
+Package pdftex.def Info: figs/shift-timing-fig-1.pdf  used on input line 266.
 (pdftex.def)             Requested size: 209.78322pt x 179.67079pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<figs/shift-timing-bypair-fig-1.pdf, id=75, 434.62375pt x 289.08pt>
+<figs/shift-timing-bypair-fig-1.pdf, id=92, 434.62375pt x 289.08pt>
 File: figs/shift-timing-bypair-fig-1.pdf Graphic file (type pdf)
 <use figs/shift-timing-bypair-fig-1.pdf>
 Package pdftex.def Info: figs/shift-timing-bypair-fig-1.pdf  used on input line
- 272.
+ 277.
 (pdftex.def)             Requested size: 434.62268pt x 289.07928pt.
-<figs/model-plot-1.pdf, id=76, 362.35374pt x 216.81pt>
+<figs/model-plot-1.pdf, id=93, 362.35374pt x 216.81pt>
 File: figs/model-plot-1.pdf Graphic file (type pdf)
 <use figs/model-plot-1.pdf>
-Package pdftex.def Info: figs/model-plot-1.pdf  used on input line 288.
+Package pdftex.def Info: figs/model-plot-1.pdf  used on input line 293.
 (pdftex.def)             Requested size: 362.35286pt x 216.80946pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 1888) in paragraph at lines 296--301
+Underfull \hbox (badness 1888) in paragraph at lines 301--306
 \OT1/ptm/m/n/10 We next ex-plored chil-dren's in-put (i.e., other-produced
  []
 
-
+[2 <./figs/shift-timing-fig-1.pdf>]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 354.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 354.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 354.
+[3 <./figs/shift-timing-bypair-fig-1.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-Underfull \hbox (badness 3919) in paragraph at lines 314--318
- []\OT1/ptm/b/n/10 Linguistic in-put pre-dic-tors[] \OT1/ptm/m/n/10 All in-put 
-anal-y-ses were
- []
-
-
-Underfull \hbox (badness 3000) in paragraph at lines 314--318
-\OT1/ptm/m/n/10 con-ducted over in-di-vid-ual other-produced ut-ter-ances in
- []
-
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 349.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 349.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 349.
-[2 <./figs/shift-timing-fig-1.pdf>] [3 <./figs/shift-timing-bypair-fig-1.pdf>]
-Underfull \hbox (badness 1946) in paragraph at lines 444--448
+Underfull \hbox (badness 1946) in paragraph at lines 450--454
  [][]\OT1/ptm/m/n/10 Braginsky, M., Sanchez, A., & Yurovsky, D. (2021).
  []
 
 
-Underfull \hbox (badness 1616) in paragraph at lines 444--448
+Underfull \hbox (badness 1616) in paragraph at lines 450--454
  \OT1/ptm/m/it/10 Childesr: Ac-cess-ing the 'CHILDES' database\OT1/ptm/m/n/10 .
  Re-
  []
@@ -765,28 +752,29 @@ Underfull \hbox (badness 1616) in paragraph at lines 444--448
 
 ] (./CogSci2022-register.aux)
 Package rerunfilecheck Info: File `CogSci2022-register.out' has not changed.
-(rerunfilecheck)             Checksum: F91514057CC68236E9F82FE6CD9F7049;2474.
+(rerunfilecheck)             Checksum: 5F8067FC0D21E0FE29D067CCD6A577EB;2919.
  ) 
 Here is how much of TeX's memory you used:
- 13811 strings out of 480247
- 224525 string characters out of 5894309
- 524051 words of memory out of 5000000
- 31450 multiletter control sequences out of 15000+600000
- 505978 words of font info for 101 fonts, out of 8000000 for 9000
+ 13818 strings out of 480247
+ 224606 string characters out of 5894309
+ 523127 words of memory out of 5000000
+ 31455 multiletter control sequences out of 15000+600000
+ 507607 words of font info for 103 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 60i,12n,63p,646b,373s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,12n,63p,647b,371s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/Users/chatterlabmanager/Library/TinyTeX/texmf-dist/fonts/enc/dvips/base/8r.
 enc}</Users/chatterlabmanager/Library/TinyTeX/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmmi10.pfb></Users/chatterlabmanager/Library/TinyTeX/texmf-dist/fonts/
 type1/urw/courier/ucrr8a.pfb></Users/chatterlabmanager/Library/TinyTeX/texmf-di
 st/fonts/type1/urw/symbol/usyr.pfb></Users/chatterlabmanager/Library/TinyTeX/te
 xmf-dist/fonts/type1/urw/times/utmb8a.pfb></Users/chatterlabmanager/Library/Tin
-yTeX/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></Users/chatterlabmanager/Libr
-ary/TinyTeX/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on CogSci2022-register.pdf (5 pages, 1493163 bytes).
+yTeX/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></Users/chatterlabmanager/Lib
+rary/TinyTeX/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></Users/chatterlabmana
+ger/Library/TinyTeX/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on CogSci2022-register.pdf (5 pages, 1499731 bytes).
 PDF statistics:
- 213 PDF objects out of 1000 (max. 8388607)
- 178 compressed objects within 2 object streams
+ 230 PDF objects out of 1000 (max. 8388607)
+ 193 compressed objects within 2 object streams
  69 named destinations out of 1000 (max. 500000)
- 120 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 152 words of extra memory for PDF output out of 10000 (max. 10000000)
 
