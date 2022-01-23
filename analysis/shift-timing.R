@@ -5,8 +5,6 @@ library(ggpubr)
 library(grid)
 library(lme4)
 library(ggeffects)
-library(ggrepel)
-library(geomtextpath)
 library(broom.mixed)
 
 childes_utterances = data.table(get_utterances(collection = "Eng-NA"))
@@ -119,27 +117,28 @@ for (i in pairs) {
   
   plot <- model_data_long %>%
     group_by(age) %>%
-    summarize(CDS_count = length(form[form=="CDS"]),
-              ADS_count = length(form[form=="ADS"]), 
+    summarize(CDS_count = length(form[form == "CDS"]),
+              ADS_count = length(form[form == "ADS"]), 
               CDS = CDS_count/(CDS_count + ADS_count),
               ADS = ADS_count/(CDS_count + ADS_count)) %>%
     pivot_longer(c(CDS, ADS), names_to = "form", values_to = "prop") %>%
-    ggplot(aes(x=age, y=prop, color=form, fill=form)) + 
+    ggplot(aes(x = age, y = prop, color = form, fill = form)) + 
     geom_point() +
-    geom_smooth(data=model_data_long, aes(x=age, y=form_numeric), 
-                method="glm", method.args=list(family = "binomial"), 
-                color="#235789", fill="#235789") +
-    geom_smooth(data=model_data_long %>% mutate(form_numeric = case_when(form_numeric==1 ~ 0, form_numeric==0 ~ 1)), 
-                aes(x=age, y=form_numeric), 
-                method="glm", method.args=list(family = "binomial"), 
-                color="#C1292E", fill="#C1292E") +
-    geom_hline(yintercept=0.5, linetype="dotted", size=1) +
-    #geom_vline(data = filter(aoa, word==paste(gsub("_.*", "", i))), mapping = aes(xintercept=aoa, color=form)) +
-    #geom_vline(data = filter(aoa, word==paste(gsub(".*_", "", i))), mapping = aes(xintercept=aoa, color=form)) +
+    geom_smooth(data = model_data_long, 
+                aes(x = age, y = form_numeric), 
+                method = "glm", method.args = list(family = "binomial"), 
+                color = "#235789", fill = "#235789") +
+    geom_smooth(data = model_data_long %>% mutate(form_numeric = 
+                                                  case_when(form_numeric == 1 ~ 0, 
+                                                            form_numeric == 0 ~ 1)), 
+                aes(x = age, y = form_numeric), 
+                method = "glm", method.args = list(family = "binomial"), 
+                color = "#C1292E", fill = "#C1292E") +
+    geom_hline(yintercept = 0.5, linetype = "dotted", size = 1) +
     scale_color_manual(values = colors) +
     scale_fill_manual(values = colors) +
     labs(title = paste0(str_replace(i, "_", "/")), color = "form", fill = "form") +
-    scale_x_continuous(limits = c(0, 84), breaks=seq(0, 84, by=12)) +
+    scale_x_continuous(limits = c(0, 84), breaks = seq(0, 84, by = 12)) +
     theme_test(base_size = 15) +
     theme(plot.title = element_text(hjust = 0.5, face = "italic", size = 15), 
           axis.title.x = element_blank(), 
@@ -159,19 +158,18 @@ for (i in unique(pairs)) {
     filter(pair == i)
 }
 
-prop <- ggarrange(birdie_bird, doggy_dog, bunny_rabbit,
-                  blankie_blanket, dolly_doll, daddy_dad, 
-                  duckie_duck, horsey_horse, mommy_mom, 
-                  froggy_frog, kitty_cat, potty_bathroom, 
-                  piggy_pig, `night night_goodnight`, tummy_stomach,
-                  ncol = 3, nrow = 5)
+prop <- ggarrange(doggy_dog, kitty_cat, tummy_stomach, 
+                  daddy_dad, mommy_mom, bunny_rabbit,
+                  duckie_duck, blankie_blanket, froggy_frog,
+                  potty_bathroom, `night night_goodnight`, dolly_doll,
+                  horsey_horse, piggy_pig, birdie_bird,
+                  ncol = 5, nrow = 3)
 
 annotate_figure(prop,
-                top = text_grob("      No Shift                  Early Shift                Late Shift", size = 25, face = "bold"),
                 left = text_grob("Proportion of tokens per form", rot = 90, size = 25, face = "bold"), 
                 bottom = text_grob("Age (months)", size = 25, face = "bold"))
 
-ggsave("writing/figs/bypair-shift-timing.png", height = 15, width = 10, dpi = 300)
+ggsave("writing/figs/bypair-shift-timing.png", height = 10, width = 15, dpi = 300)
 
 # generate summary prop plot
 model_data_list = list()
@@ -180,7 +178,7 @@ for (i in pairs) {
   ADS <- paste(gsub(".*_", "", i))
   
   model_data <- utterances %>%
-    filter(!is.na(eval(as.symbol(CDS)))|!is.na(eval(as.symbol(ADS)))) %>%
+    filter(!is.na(eval(as.symbol(CDS))) | !is.na(eval(as.symbol(ADS)))) %>%
     select(age, CDS, ADS) %>%
     group_by(age) %>%
     summarize(CDS = sum(eval(as.symbol(CDS)), na.rm = TRUE),
@@ -204,9 +202,9 @@ rownames(model_data_merged) <- 1:nrow(model_data_merged)
 
 model_data_long <- model_data_merged[rep(seq(nrow(model_data_merged)), model_data_merged$count), 1:7]
 
-m <- glmer(form_numeric ~ scale(age) + (scale(age)|pair),
+m <- glmer(form_numeric ~ scale(age) + (1 + scale(age)|pair),
          family = "binomial",
-         control = glmerControl(optimizer="bobyqa"),
+         control = glmerControl(optimizer = "bobyqa"),
          data = model_data_long)
 summary(m)
 
