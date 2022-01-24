@@ -12,11 +12,12 @@ verbs <- read_csv("data/input/verbs.csv") %>%
   mutate(age_scaled = scale(age), 
          verbs_scaled = scale(verbs))
 
-rate <- read_csv("data/input/rate.csv") %>%
-  mutate(age_scaled = scale(age), 
-         rate_scaled = scale(rate))
+rate <- read_csv("data/input.rate.csv") %>%
+  select(id, speaker_id, target_child_id, item, rate)
 
 input <- read_csv("data/full-input.csv") %>%
+  select(-rate) %>%
+  left_join(rate, by = c("id", "speaker_id", "target_child_id", "item")) %>%
   mutate(age_scaled = scale(age),  
          rate_scaled = scale(rate), 
          complexity_scaled = scale(complexity), 
@@ -36,10 +37,11 @@ tidy(m.pitch.mean) %>%
   filter(effect == "fixed") %>%
   write_csv("analysis/model-outputs/input/mean-pitch.csv")
 
-ggpredict(m.pitch.mean, c("pitch_mean_scaled [all]"), 
+ggpredict(m.pitch.mean,
+          c("pitch_mean_scaled [all]"), 
           type = "fixed", back.transform = TRUE) %>%
   rename(age = x) %>%
-  mutate(predictor = "Pitch mean", 
+  mutate(Predictor = "Pitch mean", 
          level = "Prosodic") %>%
   write_csv("analysis/model-outputs-toplot/mean-pitch.csv")
   
@@ -59,7 +61,7 @@ tidy(m.pitch.range) %>%
 ggpredict(m.pitch.range, c("pitch_range_scaled [all]"), 
           type = "fixed", back.transform = TRUE) %>%
   rename(age = x) %>%
-  mutate(predictor = "Pitch range", 
+  mutate(Predictor = "Pitch range", 
          level = "Prosodic") %>%
   write_csv("analysis/model-outputs-toplot/pitch-range.csv")
 
@@ -67,7 +69,7 @@ ggpredict(m.pitch.range, c("pitch_range_scaled [all]"),
 m.rate <- glmer(form_numeric ~ rate_scaled * age_scaled + 
                         (1|pair) + 
                         (1|speaker_id), 
-                        data = rate, 
+                        data = filter(input, !is.na(rate)), 
                       family = binomial, 
                       control = glmerControl(optimizer = "bobyqa"))
 summary(m.rate)
@@ -79,7 +81,7 @@ tidy(m.rate) %>%
 ggpredict(m.rate, c("rate_scaled [all]"), 
           type = "fixed", back.transform = TRUE) %>%
   rename(age = x) %>%
-  mutate(predictor = "Rate", 
+  mutate(Predictor = "Rate", 
          level = "Prosodic") %>%
   write_csv("analysis/model-outputs-toplot/rate.csv")
 
@@ -99,7 +101,7 @@ tidy(m.complexity) %>%
 ggpredict(m.complexity, c("complexity_scaled [all]"), 
           type = "fixed", back.transform = TRUE) %>%
   rename(age = x) %>%
-  mutate(predictor = "Complexity", 
+  mutate(Predictor = "Complexity", 
          level = "Lexical") %>%
   write_csv("analysis/model-outputs-toplot/complexity.csv")
 
@@ -119,7 +121,7 @@ tidy(m.rarity) %>%
 ggpredict(m.rarity, c("rarity_scaled [all]"), 
           type = "fixed", back.transform = TRUE) %>%
   rename(age = x) %>%
-  mutate(predictor = "Rarity", 
+  mutate(Predictor = "Rarity", 
          level = "Lexical") %>%
   write_csv("analysis/model-outputs-toplot/rarity.csv")
 
@@ -139,7 +141,7 @@ tidy(m.length) %>%
 ggpredict(m.length, c("length_scaled [all]"), 
           type = "fixed", back.transform = TRUE) %>%
   rename(age = x) %>%
-  mutate(predictor = "Length", 
+  mutate(Predictor = "Length", 
          level = "Syntactic") %>%
   write_csv("analysis/model-outputs-toplot/length.csv")
 
@@ -159,7 +161,7 @@ tidy(m.verbs) %>%
 ggpredict(m.verbs, c("verbs_scaled [all]"), 
           type = "fixed", back.transform = TRUE) %>%
   rename(age = x) %>%
-  mutate(predictor = "Verbs", 
+  mutate(Predictor = "Verbs", 
          level = "Syntactic") %>%
   write_csv("analysis/model-outputs-toplot/verbs.csv")
 
