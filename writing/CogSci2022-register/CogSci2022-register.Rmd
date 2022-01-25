@@ -226,6 +226,10 @@ At the syntactic level, we found significant effects of __utterance length__ and
 
 # General Discussion
 
+Para about how we don't yet know which (if any of these) linguistic cues are actually exploited by learners [@potter2019infants as a good ref]. However, the current work sets us up to be able to test some of these ideas experimentally. Additional point that CDS and ADS registers are differentiated by more than just linguistic cues, so we can think about whether the same happens for CDS vs. ADS forms.
+
+Para on ties to other sociolinguistic phenomena, like dialects, accents, and other types of register (e.g., pedagogical, narrative, etc.). Learning happening at multiple levels -- not just words but associations between words and surrounding context (linguistic, social, etc.).
+
 <!--
 # Acknowledgements
 We are grateful to the members of the University of Chicago Chatter Lab and Northwestern University Child Language Lab for valuable discussion and feedback on this work. Research reported in this publication was supported by the Eunice Kennedy Shriver National Institute of Child Health & Human Development of the National Institutes of Health under Award Number P01HD040605; by a grant from the Successful Pathways from School to Work initiative of the University of Chicago, funded by the Hymen Milgrom Supporting Organization; by a grant from the Institute of Education Sciences, U.S. Department of Education, through grant R305A190467 to the University of Chicago; and by a grant from the Spencer Foundation. The content is solely the responsibility of the authors and does not necessarily represent the official views of the National Institutes of Health, the Institute of Education Sciences, or the U.S. Department of Education.
