@@ -66,7 +66,7 @@ Review of previous research focusing on the learnability question or why these w
 Existing research does well to account for why CDS forms make up a large proportion of the input and why they are learned and produced earlier by children.
 However, a later step in vocabulary development requires children to shift away from using CDS forms in favor of conventionalized ADS forms. That is, at some point, the animal that was once frequently called _doggy_ becomes almost exclusively referred to as _dog_.
 
-## Current investigation
+## Current investigation: The shift away from register-specific words
 Somewhat oversimplified view of vocabulary development in the field. Focus on binary (often caregiver-reported) measures of when children 'know' a word's meaning. For good reason, vocabulary questionnaires, including the standard MacArthur-Bates Communicative Development Inventory [@fenson1994variability], gloss over variations in form. This helps with generalizing over idiosyncratic words and developing articulation skills but misses the opportunity to investigate meaningful shifts in form across time.
 
 In Study 1, we analyze existing speech corpora for children up to seven years of age to determine if and when we can detect a shift from production of CDS forms to ADS forms. After establishing that a shift toward production of ADS forms occurs in early childhood, we explore, in Study 2, what information in children's linguistic input could support this shift.
@@ -78,7 +78,7 @@ We tracked children's usage of 15 CDS/ADS word pairs (Table \ref{tab:tab1}) from
 
 ## Corpora
 
-We analyzed `r metadata$n_transcripts` transcripts in the North American English collection of the Child Language Data Exchange System (CHILDES) database [@macwhinney2000childes] for children up to 7 years of age. The included transcripts were drawn from `r metadata$n_corpora` individual corpora and featured `r metadata$n_kids` children (age range = `r metadata$min_age`--`r metadata$max_age` months, _M_ = `r metadata$mean_age` months). Child production data from the Language Development Project (LDP) longitudinal corpus were also analyzed [see @rowe2008child; @huttenlocher2010sources for further details regarding participating families, recording procedures, and transcription]. These included 622 transcripts from 59 English-learning children recorded every 4 months for approximately 90 minutes from age 14 to 58 months.
+We analyzed `r metadata$n_transcripts` transcripts in the North American English collection of the Child Language Data Exchange System (CHILDES) database [@macwhinney2000childes] for children up to 7 years of age. The included transcripts were drawn from `r metadata$n_corpora` individual corpora and featured `r metadata$n_kids` children (age range = `r metadata$min_age`--`r metadata$max_age` months, _M_ = `r metadata$mean_age` months). Child production data from the Language Development Project longitudinal corpus were also analyzed [see @rowe2008child; @huttenlocher2010sources, for further details regarding participating families, recording procedures, and transcription]. These included 622 transcripts from 59 English-learning children recorded every 4 months for approximately 90 minutes from age 14 to 58 months.
 
 ## Target words
 Fifteen CDS/ADS word pairs (30 total target words) were selected based on two criteria: the appearance of at least one form on the CDI [@fenson1994variability], and sufficient frequency of occurrence in CHILDES (at least 100 child-produced tokens and 100 other-produced tokens per form). Pairs were also selected based on researcher intuition to ensure that that the same object, animal, or routine could be reasonably labeled with either form (e.g., _doggy_ or _dog_) by children.
@@ -198,10 +198,10 @@ We next explored children's input (i.e., other-produced speech), asking whether 
 # Method
 
 ## Corpora
-Reference above but drop LDP
+We analyzed other-produced utterances (i.e., utterances not produced by the target child) in the same CHILDES transcripts from Study 1. <!--kc: might add percentage of utterances from MOT/FAT just so it's clear that this is primarily adult-produced speech, not speech from other children.-->
 
 ## Linguistic input predictors
-All input analyses were conducted over individual other-produced utterances in CHILDES (i.e., speech not produced by the target child). <!--kc: might add percentage of utterances from MOT/FAT just so it's clear that this is primarily adult-produced speech, not speech from other children.--> We quantified prosodic, lexical, and syntactic information to describe each utterance containing one of the 30 target words.
+All input analyses were conducted over individual utterances containing one of the 30 target words from Study 1. We quantified prosodic, lexical, and syntactic information to describe each utterance.
 
 ### Prosodic level
 We measured three types of prosodic information: __mean pitch__ (Hz), __pitch range__ (Hz), and __speech rate__ (words per second). These measures were calculated over all timestamped utterances in CHILDES (`r metadata$other_timestamped`% of other-produced utterances). Utterances shorter than 58 ms were excluded from analysis. This lower bound was set by identifying the the shortest possible duration of an utterance containing at least one word in four manually annotated North American English corpora in HomeBank [@homebank; @bergelsoncorpus; @soderstromcorpus; @vandamcorpus; @warlaumontcorpus] <!--kc2mc: are these the right refs?-->. Pitch information was extracted using Praat software [@boersma2016praat].
