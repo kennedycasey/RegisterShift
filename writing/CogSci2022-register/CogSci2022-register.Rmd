@@ -52,8 +52,31 @@ input_colors <- c("Prosodic" = "#1C9E78",
                   "Syntactic" = "#7570B4")
 ```
 
+<!--
+Alternate proposed structure
+
 # Introduction
-Across many cultures and languages, speech that is addressed to young children sounds remarkably different from speech that is addressed to adults [@hilton2021acoustic; @loukatou2021child; @wong2018testing]. When communicating with young children, adults often modify their speech in ways that draw children's attention and support their several aspects of their language learning [@nencheva2021moment; @rowe2008child; @shneidman2012language; @weisleder2013talking]. 
+
+- Children typically begin to produce words around their first birthday, with rapid growth in their vocabulary thereafter
+- ..stats/summary on how many words are learned, e.g., by US kids in the early years + "vocab spurt" period + schooling years..
+- Crosslinguistic data (wordbank etc) shows this explosive trajectory isn't particular to English and likely reflects multiple general factors that we would expect over age across all linguistic communities including, cumulative linguistic and world knowledge, changes in input (e.g., from caregivers, from teachers, from books), and changes in language-supporting cognitive systems such as memory and attention
+
+## Sure vocabularies grow! But how?
+- ..wordbank findings suggest that there are both semantic/conceptual and statistical factors that contribute to which words children use first across languages.. (check that the reported bit here is for production and not comprehension or that we delineate which result is which)
+- a few other factors that have been proposed to help word learning (and to itself be overrepresented in children's early vocabularies) are iconicity, diminutivization, and reduplication
+- indeed words with these features are found more often in CDL than ADL. further, [ota findings] and iconic words are overrepresented in early vocabularies [https://onlinelibrary.wiley.com/doi/full/10.1111/desc.12572]
+- in sum, children's productive vocabulary gets off the ground with many words that are affiliated particularly with language directed at children, but this can't last because adults don't use these words.
+- at some point, probably gradually, children shift away from these baby-centric words---this transition is perhaps most marked for common child language word forms that have a direct substitute in adult language (e.g., "dog" instead of "doggy") as opposed to words that become less relevant over the years (e.g., "diaper").
+
+## Comprehending and producing language varieties
+
+
+-->
+
+# Introduction
+
+<!--mc2kc: part of what i'm doing here is checking for a speech-centric view of language (i.e., this text should apply to sign languages too) but that sometimes makes the text a little less pithy so requires a little rewording/restructuring. i admit that i often find myself falling back into speech-centric language but if you're up for it, i'd love your help in explicitly avoiding that in our paper. we can also say, once we identify that we're working on English, that we refer to the register as CDS for the rest of the paper (if needed---we can also just stick with CDL). I won't edit the text you added further after this since I know you are planning to change it, but i wanted to provide one example :)-->
+Across many communities, adults make modifications to their language when addressing young children [@hilton2021acoustic; @loukatou2021child; @wong2018testing]: these modifications for child-directed language (CDL) often serve to draw children's attention to the utterance and support multiple aspects of their language learning relative to compared adult-directed language (ADL) by the same individuals [@nencheva2021moment; @rowe2008child; @shneidman2012language; @weisleder2013talking]. 
 
 ## Child-directed speech as a simplified register
 Child-directed speech (CDS) is often termed a simplified register. Relative to adult-directed speech (ADS), CDS contains shorter utterances [@martin2016utterances], more repetition [@henning2005maternal], more pauses (REF), and more isolated words [@brent2001role]. These modifications seem to be optimized for young learners, lessening the task demands of speech segmentation and word learning, for instance. However, not all modifications of CDS are simplifications. [Add examples here - phonetic variation, maybe prosodic variation, and extra labels]
