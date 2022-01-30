@@ -9,7 +9,7 @@ author-information: >
     \And {\large \bf Marisa Casillas} \\ University of Chicago \\ \texttt{mcasillas@uchicago.edu}}
 
 abstract: >
-  Child-directed language (CDL) features words such as _doggy_, _night-night_, and _tummy_ that are rarely used in adult-directed language (ADL). Characterisitcs of CDL word forms, such as reduplication and diminutivization, explain why they may be learned and produced earlier by children. However, it is not yet clear how or when children switch to using ADL equivalents--_dog_, _goodnight_, _stomach_. Through analysis of speech transcripts from CHILDES and the Language Development Project corpus, we show that children significantly increase their production of ADL word forms across age, with the average CDL-to-ADL transition point at 2.5 years. Many of the linguistic features that distinguish CDL vs. ADL registers (e.g., speech rate, lexical complexity, etc.) similarly differentiated the local speech contexts surrounding CDL vs. ADL word forms. Learners may therefore be able to capitalize on these cues to support their discovery of register and context-appropriate CDL/ADL pair use.
+  Child-directed language (CDL) features words such as _doggy_, _night-night_, and _tummy_ that are rarely used in adult-directed language (ADL). Characterisitcs of CDL word forms, such as diminutivization and reduplication, explain why they may be learned and produced earlier by children. However, it is not yet clear how or when children switch to using ADL equivalents---_dog_, _goodnight_, _stomach_. Through analysis of speech transcripts from CHILDES and the Language Development Project corpus, we show that children significantly increase their production of ADL word forms across age, with the average CDL-to-ADL transition point at 2.5 years. Many of the linguistic features that distinguish CDL vs. ADL registers (e.g., lexical and syntactic complexity) similarly differentiated the local speech contexts surrounding CDL vs. ADL word forms. Learners may therefore be able to capitalize on these cues to support their discovery of register along with context-appropriate CDL/ADL pair use.
   
 keywords: >
     child-directed language; word production; linguistic input; social register; corpus analysis; developmental change
@@ -52,8 +52,41 @@ input_colors <- c("Prosodic" = "#1C9E78",
                   "Syntactic" = "#7570B4")
 ```
 
+# Introduction
+Across their first few years of life, children amass an impressive expressive vocabulary, including hundreds if not thousands of words [@fenson1994variability; @mayor2011statistical]. Word production typically begins around age one, followed by a vocabulary 'explosion' or 'spurt' during toddlerhood [@ganger2004reexamining; see also @mcmurray2007defusing] and continued, measurable growth in vocabulary size thereafter [@rice2015predicting]. <!--kc: this intro para still needs work but trying to keep it pretty short-->
+
+## Predictors of early word comprehension and production
+Which words do children understand and say first? Cross-linguistic evidence points to a variety of statistical and semantic factors that contribute to early learnability. For instance, words that are highly frequent in children's input and words that appear in shorter or isolated utterances are typically learned and produced earlier [@braginsky2019consistency]. Concreteness predicts earlier age of acquisition [@braginsky2019consistency], but routine-based, social words also consistently appear among infants' first words [@tardif2008baby]. [i think babiness fits in here somewhere but only found to be a predictor of comprehension, not production] 
+
+Other features of word forms, such as iconicity [@perry2018iconicity; @laing2017salient], diminutivization [@kempe2005diminutives], and reduplication [@ota2018choo; @gervain2008neonate], are additionally supportive of early learning. The appearance of words with these features, such as _doggy_ or _choo-choo_, is a hallmark of child-directed language (CDL). [sentence or two about modification and/or already start calling these register-specific words and referencing ferguson/others here] Indeed, words with these features are typically overrepresented in children's early productive vocabularies [@perry2018iconicity].
+
+In sum, children's productive vocabulary gets off the ground with many words that are specifically tailored to them (i.e., affiliated particularly with CDL). However, at some point, likely gradually, children shift away from these baby-centric words. This transition is perhaps most marked for common child language word forms that have a direct substitute in adult language (e.g., _dog_ instead of _doggy_, or _stomach_ instead of _tummy_) as opposed to words that become less relevant over the years (e.g., _diaper_ or _pacifier_). Note, though, that these words do not fully disappear---children themselves come to use these CDL-specific words (along with other CDL features) when talking to infants and younger children (REFS). <!--kc: need a clearer transition here-->
+
+## Comprehension and production of language varieties
+Classically, we might think that hearing multiple labels for the same referent (e.g., _doggy_ and _dog_) as a problem for word learning---particularly for variants with little to no overlap in phonological form (e.g., _tummy_ and _stomach_, or _bunny_ and _rabbit_). Sentence about the mutual exclusivity heuristic as a way of constraining the hypothesis space for new word meanings [@markman1998children] and the general idea that features of language should not be redundant [@clark1987principle].
+
+Despite the theoretical problem that CDL-specific words may pose from a conventional lens, children seem to make sense of multiple variants without issue. One possible way to explain this is to think about the social context of language use. <!--kc: @weatherhead2021putting - this ref (and others that are similar) could definitely somewhere if there's space-->. In fact, learners encounter many forms of socially meaningful variation in their linguistic input -- different speakers [@bulgarelli2021talker; @rost2009speaker], accents [@buckler2017input; @potter2017exposure], dialects [@durrant2015monodialectal; @edwards2014dialect], languages [@kremin2020code], and registers [e.g., CDL vs. ADL, @bunceURcross, @loukatou2021child] -- all of which shape their ability to detect and learn from such variation [see @johnson2020developmental for a recent review]. Over time, children become increasingly aware that language style is modulated by a variety of social factors, including the identities of speakers [@liberman2017preverbal] along with their addressees [e.g., young children vs. adults: @soley2020infants]. 
+<!--
+Children's word knowledge builds around and together with their social knowledge. Recognizable varieties within a language community are likely to contain lexical variants (e.g., regional-level variation: _soda_ vs. _pop_ vs. _coke_; register-level variation: _doggy_ vs. _dog_).
+-->
+[Need a transition here] We hypothesize that one way that children may be able to make sense of this otherwise redundant appearance of CDL-specific words with straightforward ADL equivalents is to already begin associating them with different modes of use (i.e., incipient representations of register). [Also missing a transition here]. In this way, we should view children’s vocabulary development not as a simple accumulation of words but rather a deepening and restructuring of the lexicon with growing linguistic and social knowledge. The word _dog_ does not entirely replace _doggy_---rather, the two forms become reserved for use with different addressees. <!--kc: maybe this is actually the last sentence of the intro-->
+
+## Current investigation
+To test this idea, we first need to establish (a) when children begin to shift away from producing CDL-specific words, and (b) how children may be able to use bottom-up linguistic input cues to associate lexical variants with their appropriate registers (i.e., CDL vs. ADL).
+
+In the present work, we examine a core subset of CDL-specific words in English (e.g., _doggy_, _night-night_, _tummy_) that are prevalent in children’s early vocabularies but are eventually ‘replaced’ by ADL words---_dog_, _goodnight_, _stomach_. In Study 1, we analyze over XXXX utterances of spontaneous speech from children up to 7 years of age to establish when ADL forms become more dominant in children’s own productions. That is, when do children 'switch' from using CDL-associated to ADL-associated forms? 
+
+After establishing that the average age of ‘switchover’ occurs around 2.5 years, we next explored children's input. We investigated the extent to which CDL and ADL words are used in distinct linguistic contexts. Further processing of XXXX adult utterances reveal that CDL and ADL variants co-occur with reliably different patterns of prosodic, lexical, and syntactic information---cues that likely help learners associate them with different modes of use, or emerging representations of register.
+
+<!--
+removed some of this detail for now
+We that find that the typical age of ‘switchover’ occurs around 2.5 years but that the trajectory of this CDL-to-ADL shift varies significantly across pairs. 
+
+also i wonder if it’s better to not make the 50/50 point so marked and instead focus on the more gradual learning story
+--> 
+
 # Study 1: When do children shift from CDL to ADL forms?
-We tracked children's usage of 15 CDL/ADL word pairs (Table \ref{tab:tab1}) from infancy up to age seven. Since CDL forms rarely appear in ADL, we predicted that children shift away from production of these register-specific forms with increasing age. That is, we expected to see replacement of CDL forms with ADL forms in children's own speech across time.
+We tracked children's use of 15 CDL/ADL word pairs (Table \ref{tab:tab1}) from early infancy up to age seven. Since CDL forms rarely appear in ADL, we predicted that children would shift away from production of these register-specific forms with increasing age. That is, we expected to see 'replacement' of CDL forms with ADL forms in children's own speech across time. 
 
 # Method
 
@@ -62,7 +95,7 @@ We tracked children's usage of 15 CDL/ADL word pairs (Table \ref{tab:tab1}) from
 We analyzed `r metadata$n_transcripts` transcripts in the North American English collection of the Child Language Data Exchange System (CHILDES) database [@macwhinney2000childes] for children up to 7 years of age. The included transcripts were drawn from `r metadata$n_corpora` individual corpora and featured `r metadata$n_kids` children (age range = `r metadata$min_age`--`r metadata$max_age` months, _M_ = `r metadata$mean_age` months). Child production data from the Language Development Project longitudinal corpus were also analyzed [see @rowe2008child; @huttenlocher2010sources, for further details regarding participating families, recording procedures, and transcription]. These included 622 transcripts from 59 English-learning children recorded every 4 months for approximately 90 minutes from age 14 to 58 months.
 
 ## Target words
-Fifteen CDL/ADL word pairs (30 total target words) were selected based on two criteria: the appearance of at least one form on the CDI [@fenson1994variability], and sufficient frequency of occurrence in CHILDES (at least 100 child-produced tokens and 100 other-produced tokens per form). Pairs were also selected based on researcher intuition to ensure that that the same object, animal, or routine could be reasonably labeled with either form (e.g., _doggy_ or _dog_) by children.
+Fifteen CDL/ADL word pairs (30 total target words) were selected based on two criteria: the appearance of at least one form on the CDI [@fenson1994variability], and sufficient frequency of occurrence in CHILDES (at least 100 child-produced tokens and 100 other-produced tokens per form). Pairs were also selected based on researcher intuition to ensure that that referents of these words could be reasonably labeled with either form by young children.
 
 ```{r freq_table, results = "asis"}
 cdl_freq <- freq %>%
@@ -97,9 +130,9 @@ bypair.shift <- read_csv("../../analysis/model-outputs/bypair-shift-timing.csv")
   filter(p.value < 0.05) %>%
   nrow()
 ```
-We first asked when CDL forms are replaced by ADL forms in children's own speech. We fit a mixed-effects binomial logistic regression model predicting children's production of CDL vs. ADL forms, with target child age (in months, scaled) as a single fixed effect. Random slopes and intercepts for word pairs were also included. For each target word token, the form was coded as either 0 (CDL) or 1 (ADL). Thus, the model captures, for each age, the relative proportion of CDL vs. ADL forms in children's own speech.
+We first asked when CDL forms are 'replaced' by ADL forms in children's own speech. We fit a mixed-effects binomial logistic regression model predicting children's production of CDL vs. ADL forms, with target child age (in months, scaled) as a single fixed effect. Random slopes and intercepts for word pairs were also included. For each target word token, the form was coded as either 0 (CDL) or 1 (ADL). Thus, the model captures, for each age, the relative proportion of CDL vs. ADL forms in children's own speech.
 
-Children's production of ADL forms increased with age ($\beta$ = `r format(round(overall.shift$estimate, 2), 2)`, _SE_ = `r format(round(overall.shift$std.error, 2), 2)`, _t_ = `r format(round(overall.shift$statistic, 2), 2)`, _p_ `r ifelse(overall.shift$p.value < .001, paste("< 0.001"), paste("=", format(round(overall.shift$p.value, 3), 3)))`). This trend of increasing ADL form production was significant for `r bypair.shift` of 15 pairs. The average CDL-to-ADL transition point (i.e., the point at which ADL forms were produced >50% of the time) was between 24 and 36 months of age (Figure 1).
+Children's production of ADL forms increased with age ($\beta$ = `r format(round(overall.shift$estimate, 2), nsmall = 2)`, _SE_ = `r format(round(overall.shift$std.error, 2), nsmall = 2)`, _t_ = `r format(round(overall.shift$statistic, 2), nsmall = 2)`, _p_ `r ifelse(overall.shift$p.value < .001, paste("< 0.001"), paste("=", format(round(overall.shift$p.value, 3), 3)))`). This trend of increasing ADL form production was significant for `r bypair.shift` of 15 pairs. The average CDL-to-ADL transition point (i.e., the point at which ADL forms were produced >50% of the time) was between 24 and 36 months of age (Figure 1).
 
 ```{r shift-timing-fig, fig.env = "figure", fig.pos = "h", fig.align = "center", fig.width = 2.9, fig.height = 3.4, fig.cap = "Model-predicted increase in production of ADL forms with age. Gray lines depict individual word-pair trajectories."}
 
@@ -113,7 +146,12 @@ bypair.shift.timing <- png::readPNG("../figs/bypair-shift-timing.png")
 grid::grid.raster(bypair.shift.timing)
 ```
 
+# Discussion
+
+
 # Study 2: What linguisitc information in children's input supports their shift from CDL to ADL forms?
+We next explored children's input (i.e., other-produced speech), asking whether the linguistic features that differentiate CDL vs. ADL at the register level also differentiate the local speech contexts surrounding CDL vs. ADL forms. In other words, can form be predicted on the basis of individual utterance-level prosodic, lexical, or syntactic cues?
+
 ```{r ling-predictors-fig, fig.env = "figure*", fig.pos = "h", fig.align = "center", fig.width = 7,  set.cap.width = TRUE, num.cols.cap = 2, fig.cap = "Coefficient estimates for linguistic predictors of form. Positive main effects indicate that utterances are more likely to contain ADL forms when they have higher values for the predictor (e.g., faster speech rates). Positive age interactions indicate an increasing effect of the predictor with age. Error bars depict standard errors of the coefficient estimates, and filled circles represent significant effects (\\textit{p} $<$ 0.05)."}
 
 path <- "../../analysis/model-outputs/input/"
@@ -174,8 +212,6 @@ img <- png::readPNG("../figs/model-outputs.png")
 grid::grid.raster(img)
 ```
 
-We next explored children's input (i.e., other-produced speech), asking whether the linguistic features that differentiate CDL vs. ADL at the register level also differentiate the local speech contexts surrounding CDL vs. ADL forms. In other words, can form be predicted on the basis of individual utterance-level prosodic, lexical, or syntactic cues?
-
 # Method
 
 ## Corpora
@@ -210,6 +246,8 @@ At the syntactic level, we found significant effects of __utterance length__ and
 Para about how we don't yet know which (if any of these) linguistic cues are actually exploited by learners [@potter2019infants as a good ref]. However, the current work sets us up to be able to test some of these ideas experimentally. Additional point that CDL and ADL registers are differentiated by more than just linguistic cues, so we can think about whether the same happens for CDL vs. ADL forms.
 
 Para on ties to other sociolinguistic phenomena, like dialects, accents, and other types of register (e.g., pedagogical, narrative, etc.). Learning happening at multiple levels -- not just words but associations between words and surrounding context (linguistic, social, etc.).
+
+Maybe some critique of typical caregiver-report measures, like CDIs, that gloss over lexical variation. Standardization makes sense for some things, but we lose the opportunity to capture deepening linguistic knowledge 
 
 <!--
 # Acknowledgements
