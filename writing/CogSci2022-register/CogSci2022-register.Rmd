@@ -102,7 +102,7 @@ We tracked children's use of 15 CDL/ADL word pairs (Table 1) from early infancy 
 
 ## Corpora
 
-We analyzed `r metadata$n_transcripts` transcripts in the North American English collection of the Child Language Data Exchange System (CHILDES) database [@macwhinney2000childes] for children up to 7 years of age. The included transcripts were drawn from `r metadata$n_corpora` individual corpora and featured `r metadata$n_kids` children (age range = `r metadata$min_age`--`r metadata$max_age` months, _M_ = `r metadata$mean_age` months). Child production data from the Language Development Project longitudinal corpus were also analyzed [see @huttenlocher2010sources; @rowe2008child, for further details regarding participating families, recording procedures, and transcription]. These included 622 transcripts from 59 English-learning children recorded every 4 months for approximately 90 minutes from age 14 to 58 months. Across all transcripts, `r format(child.utts, big.mark = ",", trim = TRUE)` child-produced utterances contained one or more target words and were included in our analysis.
+We analyzed `r metadata$n_transcripts` transcripts in the North American English collection of the Child Language Data Exchange System (CHILDES) database [@macwhinney2000childes] for children up to 7 years of age. The included transcripts were drawn from `r metadata$n_corpora` individual corpora and featured `r metadata$n_kids` children (age range = `r metadata$min_age`--`r metadata$max_age` months, _M_ = `r metadata$mean_age` months). Child production data from the Language Development Project longitudinal corpus were also analyzed [see @huttenlocher2010sources; @rowe2008child, for further details regarding participating families, recording procedures, and transcription]. These included 622 transcripts from 59 English-learning children recorded every 4 months for approximately 90 minutes from age 14 to 58 months.
 
 ```{r freq_table, results = "asis"}
 cdl_freq <- freq %>%
@@ -129,7 +129,7 @@ kable(freq, format = "latex",
 ```
 
 ## Target words
-Fifteen CDL/ADL word pairs (30 total target words) were selected based on two criteria: the appearance of at least one form on the MacArthur-Bates Communicative Development Inventory [CDI, @fenson1994variability], and sufficient frequency of occurrence in CHILDES (at least 100 child-produced tokens and 100 other-produced tokens per form). Pairs were also selected based on researcher intuition to ensure that the same object, animal, routine, or body part could be reasonably labeled with either form by young children^[Footnote explaining why we don't have examples of onomatopoeia].
+Fifteen CDL/ADL word pairs (30 total target words) were selected based on two criteria: the appearance of at least one form on the MacArthur-Bates Communicative Development Inventory [CDI, @fenson1994variability], and sufficient frequency of occurrence in CHILDES (at least 100 child-produced tokens and 100 other-produced tokens per form). Pairs were also selected based on researcher intuition to ensure that the same object, animal, routine, or body part could be reasonably labeled with either form by young children^[Footnote explaining why we don't have examples of onomatopoeia]. Across all transcripts, `r format(child.utts, big.mark = ",", trim = TRUE)` child-produced utterances contained at least one target word and were included in our analysis.
 
 # Results
 ```{r}
