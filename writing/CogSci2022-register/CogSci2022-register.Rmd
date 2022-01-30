@@ -9,7 +9,7 @@ author-information: >
     \And {\large \bf Marisa Casillas} \\ University of Chicago \\ \texttt{mcasillas@uchicago.edu}}
 
 abstract: >
-  Child-directed language (CDL) features words such as _doggy_, _night-night_, and _tummy_ that are rarely used in adult-directed language (ADS). Characterisitcs of CDL word forms, such as reduplication and diminutivization, explain why they may be learned and produced earlier by children. However, it is not yet clear how or when children switch to using ADL equivalents--_dog_, _goodnight_, _stomach_. Through analysis of speech transcripts from CHILDES and the Language Development Project corpus, we show that children significantly increase their production of ADL word forms across age, with the average CDL-to-ADL transition point at 2.5 years. Many of the linguistic features that distinguish CDL vs. ADL registers (e.g., speech rate, lexical complexity, etc.) similarly differentiated the local speech contexts surrounding CDL vs. ADL word forms. Learners may therefore be able to capitalize on these cues to support their discovery of register and context-appropriate CDL/ADL pair use.
+  Child-directed language (CDL) features words such as _doggy_, _night-night_, and _tummy_ that are rarely used in adult-directed language (ADL). Characterisitcs of CDL word forms, such as reduplication and diminutivization, explain why they may be learned and produced earlier by children. However, it is not yet clear how or when children switch to using ADL equivalents--_dog_, _goodnight_, _stomach_. Through analysis of speech transcripts from CHILDES and the Language Development Project corpus, we show that children significantly increase their production of ADL word forms across age, with the average CDL-to-ADL transition point at 2.5 years. Many of the linguistic features that distinguish CDL vs. ADL registers (e.g., speech rate, lexical complexity, etc.) similarly differentiated the local speech contexts surrounding CDL vs. ADL word forms. Learners may therefore be able to capitalize on these cues to support their discovery of register and context-appropriate CDL/ADL pair use.
   
 keywords: >
     child-directed language; word production; linguistic input; social register; corpus analysis; developmental change
@@ -34,16 +34,16 @@ library(tidyverse)
 library(ggpubr)
 library(DescTools)
 
-# read in outputs of "get-freq.R"
+# read in outputs from "get-freq.R"
 metadata <- read_csv("../../data-prep/overall/metadata.csv")
 freq <- read_csv("../../data-prep/overall/freq.csv")
 
-cds_forms <- read_csv("../../data-prep/overall/item-info.csv") %>%
-    filter(form == "CDS") %>%
+cdl_forms <- read_csv("../../data-prep/overall/item-info.csv") %>%
+    filter(form == "CDL") %>%
     pull(word)
 
-ads_forms <- read_csv("../../data-prep/overall/item-info.csv") %>%
-    filter(form == "ADS") %>%
+adl_forms <- read_csv("../../data-prep/overall/item-info.csv") %>%
+    filter(form == "ADL") %>%
     pull(word)
 
 # preset colors for linguistic predictors
@@ -52,68 +52,8 @@ input_colors <- c("Prosodic" = "#1C9E78",
                   "Syntactic" = "#7570B4")
 ```
 
-<!--
-Alternate proposed structure -- this is surely too much! but just an idea and you could pick and choose/reuse some for later paper, etc. whatever you want
-
-# Introduction
-
-- Children typically begin to produce words around their first birthday, with rapid growth in their vocabulary thereafter
-- ..stats/summary on how many words are learned, e.g., by US kids in the early years + "vocab spurt" period + schooling years..
-- Crosslinguistic data (wordbank etc) shows this explosive trajectory isn't particular to English and likely reflects multiple general factors that we would expect over age across all linguistic communities including, cumulative linguistic and world knowledge, changes in input (e.g., from caregivers, from teachers, from books), and changes in language-supporting cognitive systems such as memory and attention
-
-## Sure vocabularies grow! But how?
-- ..wordbank findings suggest that there are both semantic/conceptual and statistical factors that contribute to which words children use first across languages.. (check that the reported bit here is for production and not comprehension or that we delineate which result is which)
-- a few other factors that have been proposed to help word learning (and to itself be overrepresented in children's early vocabularies) are iconicity, diminutivization, and reduplication
-- indeed words with these features are found more often in CDL than ADL. further, [ota findings] and iconic words are overrepresented in early vocabularies [https://onlinelibrary.wiley.com/doi/full/10.1111/desc.12572]
-- in sum, children's productive vocabulary gets off the ground with many words that are affiliated particularly with language directed at children, but this can't last because adults don't use these words.
-- at some point, probably gradually, children seem to shift away from these baby-centric words---this transition is perhaps most marked for common child language word forms that have a direct substitute in adult language (e.g., "dog" instead of "doggy") as opposed to words that become less relevant over the years (e.g., "diaper").
-- but the words don't go away! at some point children themselves come to use these same words (along with other CDL features) in talking to infants and younger children...examples of kids using CDS to other kids..
-- in other words, we should see children's growing vocabulary as not just adding words, but continuing to deepen and restructure with growing linguistic maturity; "dog" does not replace "doggy" but rather the two forms are reserved for use with different addressees.
-
-## Comprehending and producing language varieties
-- Children's linguistic knowledge builds around and together with their social knowledge. They most often use language in order to do things with others, whether that is asking and answering questions, telling jokes, or engaging in pretend play.
-- increasingly, children come to recognize that language style is modulated by a variety of factors including, e.g., who is being addressed (e.g., CDL vs. ADL), social group (e.g., African American Language vs. Chicano English), regional variations (e.g., coke vs. pop vs. soda), familiarity between interactants (e.g., more vs. less formal), and much more.
-- recognizable varieties within a language community are likely to contain lexical variants (e.g., coke vs. pop vs. soda; doggy vs. dog) the upshot being that children must begin organizing otherwise-equivalent lexical variants by social information soon after being exposed to more than one variant
-- classically, we might think this is a problem for word learning (mutual exclusivity, principle of contrast BLABLABLA) but children seem to achieve it without issue and we think that's because they can recognize the social partioning of use for many of these cases from an early age (<- no worries if you think this is a bonkers thing to say! we don't need to go there)
-- To test this idea we first need to establish when and how children begin transition in their own use of register-specific language and, further, to identify how the assignment of lexical variants to incipient register representations is supported by other linguistic cues in the environment (helluva sentence, sorry)
-
-- In the present paper we examine a small but core subset of CDL-specific words in English that are seen to both (a) dominate in children's early vocabulary and (b) be "replaced" by adult forms at some point. In Study 1 we analyze XX utterances from the CHILDES database, produced by children between ages X and X to establish when children switch from using the CDL-associated form "doggy" to the ADL-associated form "dog" in their spontaneous speech as indirect evidence of their early formation of CDL and ADL as distinct registers. We find that the typical age of "switchover" is around 2.5 years, but that the trajectory of this switch differs greatly depending on the word pair. In Study 2 we then examine the extent to which these words are used in distinct linguistic contexts by examining how they co-occur with pitch variability, lexical rarity, and syntactic complexity. Based on further processing of XX--XX adult utterances in these same corpora, we find that the CDL and ADL variants co-occur with distinct variation in phonetic and lexicosyntactic cues that likely help children associate them with different modes of use (i.e., incipient representations of "register").
-
-# Study 1
-
-- This is a super mini intro about these words in kids' production
-- This is a transition that mirrors the argument structure we use above
-
-# Study 2
-
-- This is a super mini intro about these words in adults' CDL
-
-etc.
--->
-
-# Introduction
-
-<!--mc2kc: part of what i'm doing here is checking for a speech-centric view of language (i.e., this text should apply to sign languages too) but that sometimes makes the text a little less pithy so requires a little rewording/restructuring. i admit that i often find myself falling back into speech-centric language but if you're up for it, i'd love your help in explicitly avoiding that in our paper. we can also say, once we identify that we're working on English, that we refer to the register as CDS for the rest of the paper (if needed---we can also just stick with CDL). I won't edit the text you added further after this since I know you are planning to change it, but i wanted to provide one example :)-->
-Across many communities, adults make modifications to their language when addressing young children [@hilton2021acoustic; @loukatou2021child; @wong2018testing]: these modifications for child-directed language (CDL) often serve to draw children's attention to the utterance and support multiple aspects of their language learning relative to compared adult-directed language (ADL) by the same individuals [@nencheva2021moment; @rowe2008child; @shneidman2012language; @weisleder2013talking]. 
-
-## Child-directed speech as a simplified register
-Child-directed speech (CDS) is often termed a simplified register. Relative to adult-directed speech (ADS), CDS contains shorter utterances [@martin2016utterances], more repetition [@henning2005maternal], more pauses (REF), and more isolated words [@brent2001role]. These modifications seem to be optimized for young learners, lessening the task demands of speech segmentation and word learning, for instance. However, not all modifications of CDS are simplifications. [Add examples here - phonetic variation, maybe prosodic variation, and extra labels]
-
-## Register-specific words in children's early vocabularies
-In the current work, we focus on a specific modification of CDS: the inclusion of register-specific words, such as _doggy_, _night-night_, and _tummy_, that have straightforward ADS equivalents (hereafter, 'CDS forms' vs. 'ADS forms'). Why have two labels when one is sufficient for communication? Add ref to EC principle of contrast [@clark1987principle]. Add some refs to ME work, establishing the idea that kids generally expect one-to-one form-meaning mappings.
-
-Review of previous research focusing on the learnability question or why these words appear in the first place. Diminutive suffix as a decently reliable cue to word ending [@kempe2005diminutives]. Diminutivization and reduplication predictive of vocabulary growth [@ota2018choo].
-
-Existing research does well to account for why CDS forms make up a large proportion of the input and why they are learned and produced earlier by children.
-However, a later step in vocabulary development requires children to shift away from using CDS forms in favor of conventionalized ADS forms. That is, at some point, the animal that was once frequently called _doggy_ becomes almost exclusively referred to as _dog_.
-
-## Current investigation: The shift away from register-specific words
-Somewhat oversimplified view of vocabulary development in the field. Focus on binary (often caregiver-reported) measures of when children 'know' a word's meaning. For good reason, vocabulary questionnaires, including the standard MacArthur-Bates Communicative Development Inventory [@fenson1994variability], gloss over variations in form. This helps with generalizing over idiosyncratic words and developing articulation skills but misses the opportunity to investigate meaningful shifts in form across time.
-
-In Study 1, we analyze existing speech corpora for children up to seven years of age to determine if and when we can detect a shift from production of CDS forms to ADS forms. After establishing that a shift toward production of ADS forms occurs in early childhood, we explore, in Study 2, what information in children's linguistic input could support this shift.
-
-# Study 1: When do children shift from CDS to ADS forms?
-We tracked children's usage of 15 CDS/ADS word pairs (Table \ref{tab:tab1}) from infancy up to age seven. Since CDS forms rarely appear in ADS, we predicted that children shift away from production of these register-specific forms with increasing age. That is, we expected to see replacement of CDS forms with ADS forms in children's own speech across time.
+# Study 1: When do children shift from CDL to ADL forms?
+We tracked children's usage of 15 CDL/ADL word pairs (Table \ref{tab:tab1}) from infancy up to age seven. Since CDL forms rarely appear in ADL, we predicted that children shift away from production of these register-specific forms with increasing age. That is, we expected to see replacement of CDL forms with ADL forms in children's own speech across time.
 
 # Method
 
@@ -122,16 +62,16 @@ We tracked children's usage of 15 CDS/ADS word pairs (Table \ref{tab:tab1}) from
 We analyzed `r metadata$n_transcripts` transcripts in the North American English collection of the Child Language Data Exchange System (CHILDES) database [@macwhinney2000childes] for children up to 7 years of age. The included transcripts were drawn from `r metadata$n_corpora` individual corpora and featured `r metadata$n_kids` children (age range = `r metadata$min_age`--`r metadata$max_age` months, _M_ = `r metadata$mean_age` months). Child production data from the Language Development Project longitudinal corpus were also analyzed [see @rowe2008child; @huttenlocher2010sources, for further details regarding participating families, recording procedures, and transcription]. These included 622 transcripts from 59 English-learning children recorded every 4 months for approximately 90 minutes from age 14 to 58 months.
 
 ## Target words
-Fifteen CDS/ADS word pairs (30 total target words) were selected based on two criteria: the appearance of at least one form on the CDI [@fenson1994variability], and sufficient frequency of occurrence in CHILDES (at least 100 child-produced tokens and 100 other-produced tokens per form). Pairs were also selected based on researcher intuition to ensure that that the same object, animal, or routine could be reasonably labeled with either form (e.g., _doggy_ or _dog_) by children.
+Fifteen CDL/ADL word pairs (30 total target words) were selected based on two criteria: the appearance of at least one form on the CDI [@fenson1994variability], and sufficient frequency of occurrence in CHILDES (at least 100 child-produced tokens and 100 other-produced tokens per form). Pairs were also selected based on researcher intuition to ensure that that the same object, animal, or routine could be reasonably labeled with either form (e.g., _doggy_ or _dog_) by children.
 
 ```{r freq_table, results = "asis"}
-cds_freq <- freq %>%
-    filter(word %in% cds_forms)
+cdl_freq <- freq %>%
+    filter(word %in% cdl_forms)
 
-ads_freq <- freq %>%
-    filter(word %in% ads_forms)
+adl_freq <- freq %>%
+    filter(word %in% adl_forms)
 
-freq <- bind_cols(cds_freq, ads_freq) %>%
+freq <- bind_cols(cdl_freq, adl_freq) %>%
     mutate(pair = paste0(word...1, '/', word...4)) %>%
     select(pair, child...2, other...3, child...5, other...6) 
 colnames(freq) <- c("Pair", "Child", "Other", "Child", "Other")
@@ -139,11 +79,11 @@ colnames(freq) <- c("Pair", "Child", "Other", "Child", "Other")
 xtable::xtable(freq, digits = 0,
                              include.rownames = FALSE, 
                              label = "tab:tab1",
-                             caption = "CHILDES frequency for 15 CDS/ADS word pairs. Child-produced
+                             caption = "CHILDES frequency for 15 CDL/ADL word pairs. Child-produced
                              counts include tokens produced only by the target child.") %>%
     xtable2kable(booktabs = TRUE, escape = FALSE) %>%
     kable_styling(latex_options = "scale_down") %>%
-    add_header_above(c(" " = 2, "CDS tokens by speaker" = 2, "ADS tokens by speaker" = 2), bold = TRUE) %>%
+    add_header_above(c(" " = 2, "CDL tokens by speaker" = 2, "ADL tokens by speaker" = 2), bold = TRUE) %>%
     row_spec(0, bold = TRUE)
 ```
 
@@ -152,29 +92,29 @@ xtable::xtable(freq, digits = 0,
 # read in lmer outputs generated in shift-timing.R 
 overall.shift <- read_csv("../../analysis/model-outputs/shift-timing.csv")
 
-# get count of items with sig increase in ADS with age
+# get count of items with sig increase in ADL with age
 bypair.shift <- read_csv("../../analysis/model-outputs/bypair-shift-timing.csv") %>%
   filter(p.value < 0.05) %>%
   nrow()
 ```
-We first asked when CDS forms are replaced by ADS forms in children's own speech. We fit a mixed-effects binomial logistic regression model predicting children's production of CDS vs. ADS forms, with target child age (in months, scaled) as a single fixed effect. Random slopes and intercepts for word pairs were also included. For each target word token, the form was coded as either 0 (CDS) or 1 (ADS). Thus, the model captures, for each age, the relative proportion of CDS vs. ADS forms in children's own speech.
+We first asked when CDL forms are replaced by ADL forms in children's own speech. We fit a mixed-effects binomial logistic regression model predicting children's production of CDL vs. ADL forms, with target child age (in months, scaled) as a single fixed effect. Random slopes and intercepts for word pairs were also included. For each target word token, the form was coded as either 0 (CDL) or 1 (ADL). Thus, the model captures, for each age, the relative proportion of CDL vs. ADL forms in children's own speech.
 
-Children's production of ADS forms increased with age ($\beta$ = `r format(round(overall.shift$estimate, 2), 2)`, _SE_ = `r format(round(overall.shift$std.error, 2), 2)`, _t_ = `r format(round(overall.shift$statistic, 2), 2)`, _p_ `r ifelse(overall.shift$p.value < .001, paste("< 0.001"), paste("=", format(round(overall.shift$p.value, 3), 3)))`). This trend of increasing ADS form production was significant for `r bypair.shift` of 15 pairs. The average CDS-to-ADS transition point (i.e., the point at which ADS forms were produced >50% of the time) was between 24 and 36 months of age (Figure 1).
+Children's production of ADL forms increased with age ($\beta$ = `r format(round(overall.shift$estimate, 2), 2)`, _SE_ = `r format(round(overall.shift$std.error, 2), 2)`, _t_ = `r format(round(overall.shift$statistic, 2), 2)`, _p_ `r ifelse(overall.shift$p.value < .001, paste("< 0.001"), paste("=", format(round(overall.shift$p.value, 3), 3)))`). This trend of increasing ADL form production was significant for `r bypair.shift` of 15 pairs. The average CDL-to-ADL transition point (i.e., the point at which ADL forms were produced >50% of the time) was between 24 and 36 months of age (Figure 1).
 
-```{r shift-timing-fig, fig.env = "figure", fig.pos = "h", fig.align = "center", fig.width = 2.9, fig.height = 3.4, fig.cap = "Model-predicted increase in production of ADS forms with age. Gray lines depict individual word-pair trajectories."}
+```{r shift-timing-fig, fig.env = "figure", fig.pos = "h", fig.align = "center", fig.width = 2.9, fig.height = 3.4, fig.cap = "Model-predicted increase in production of ADL forms with age. Gray lines depict individual word-pair trajectories."}
 
 shift.timing <- png::readPNG("../figs/shift-timing.png")
 grid::grid.raster(shift.timing)
 ```
 
-```{r shift-timing-bypair-fig, fig.env = "figure*", fig.pos = "!ht", fig.align = "center", fig.width = 11, fig.height = 4, fig.cap = "Inidividual word-pair trajectories for increasing production of ADS forms (blue) and descreasing production of CDS forms (red) with age. Points indicate proportions for each 1-month age bin."}
+```{r shift-timing-bypair-fig, fig.env = "figure*", fig.pos = "!ht", fig.align = "center", fig.width = 11, fig.height = 4, fig.cap = "Inidividual word-pair trajectories for increasing production of ADL forms (blue) and descreasing production of CDL forms (red) with age. Points indicate proportions for each 1-month age bin."}
 
 bypair.shift.timing <- png::readPNG("../figs/bypair-shift-timing.png")
 grid::grid.raster(bypair.shift.timing)
 ```
 
-# Study 2: What linguisitc information in children's input supports their shift from CDS to ADS forms?
-```{r ling-predictors-fig, fig.env = "figure*", fig.pos = "h", fig.align = "center", fig.width = 7,  set.cap.width = TRUE, num.cols.cap = 2, fig.cap = "Coefficient estimates for linguistic predictors of form. Positive main effects indicate that utterances are more likely to contain ADS forms when they have higher values for the predictor (e.g., faster speech rates). Positive age interactions indicate an increasing effect of the predictor with age. Error bars depict standard errors of the coefficient estimates, and filled circles represent significant effects (\\textit{p} $<$ 0.05)."}
+# Study 2: What linguisitc information in children's input supports their shift from CDL to ADL forms?
+```{r ling-predictors-fig, fig.env = "figure*", fig.pos = "h", fig.align = "center", fig.width = 7,  set.cap.width = TRUE, num.cols.cap = 2, fig.cap = "Coefficient estimates for linguistic predictors of form. Positive main effects indicate that utterances are more likely to contain ADL forms when they have higher values for the predictor (e.g., faster speech rates). Positive age interactions indicate an increasing effect of the predictor with age. Error bars depict standard errors of the coefficient estimates, and filled circles represent significant effects (\\textit{p} $<$ 0.05)."}
 
 path <- "../../analysis/model-outputs/input/"
 filenames <- list.files(path, "*.csv")
@@ -234,7 +174,7 @@ img <- png::readPNG("../figs/model-outputs.png")
 grid::grid.raster(img)
 ```
 
-We next explored children's input (i.e., other-produced speech), asking whether the linguistic features that differentiate CDS vs. ADS at the register level also differentiate the local speech contexts surrounding CDS vs. ADS forms. In other words, can form be predicted on the basis of individual utterance-level prosodic, lexical, or syntactic cues?
+We next explored children's input (i.e., other-produced speech), asking whether the linguistic features that differentiate CDL vs. ADL at the register level also differentiate the local speech contexts surrounding CDL vs. ADL forms. In other words, can form be predicted on the basis of individual utterance-level prosodic, lexical, or syntactic cues?
 
 # Method
 
@@ -255,19 +195,19 @@ Syntactic measures included both the utterance __length__ (in words) and __numbe
 
 # Results
 
-We ran individual mixed-effects binomial logistic regression models for each of seven linguisitc input predictors. Models included fixed effects of linguistic predictor, target child age, and their interaction as well as random intercepts for individual word pairs and speakers. For each target word token, form was coded as CDS (0) or ADS (1), so coefficient estimates should be interpreted as an indication of the likelihood that an utterance contains an ADS form. <!--kc: this wording needs work but leaving it for now--> All main effects of linguistic predictors and interactions with age are shown in Figure 3.
+We ran individual mixed-effects binomial logistic regression models for each of seven linguisitc input predictors. Models included fixed effects of linguistic predictor, target child age, and their interaction as well as random intercepts for individual word pairs and speakers. For each target word token, form was coded as CDL (0) or ADL (1), so coefficient estimates should be interpreted as an indication of the likelihood that an utterance contains an ADL form. <!--kc: this wording needs work but leaving it for now--> All main effects of linguistic predictors and interactions with age are shown in Figure 3.
 
-At the prosodic level, we found significant effects for two of three input predictors tested. Utterance-level __pitch range__ was not predictive of form ($\beta$ = `r round(subset(input.models, Predictor == "Pitch range")$Estimate, 3)`, _SE_ = `r round(subset(input.models, Predictor == "Pitch range")$SE, 2)`, _t_ = `r round(subset(input.models, Predictor == "Pitch range")$statistic, 2)`, _p_ `r ifelse(subset(input.models, Predictor == "Pitch range")$p.value < .001, paste("< 0.001"), paste("=", round(subset(input.models, Predictor == "Pitch range")$p.value, 3)))`) and did not significantly interact with age ($\beta$ = `r round(subset(input.models, Predictor == "Pitch range:age")$Estimate, 2)`, _SE_ = `r round(subset(input.models, Predictor == "Pitch range:age")$SE, 2)`, _t_ = `r round(subset(input.models, Predictor == "Pitch range:age")$statistic, 2)`, _p_ `r ifelse(subset(input.models, Predictor == "Pitch range:age")$p.value < .001, paste("< 0.001"), paste("=", round(subset(input.models, Predictor == "Pitch range:age")$p.value, 3)))`). However, utterance-level __mean pitch__ was a negative predictor of ADS form ($\beta$ = `r round(subset(input.models, Predictor == "Pitch mean")$Estimate, 3)`, _SE_ = `r round(subset(input.models, Predictor == "Pitch mean")$SE, 2)`, _t_ = `r round(subset(input.models, Predictor == "Pitch mean")$statistic, 2)`, _p_ `r ifelse(subset(input.models, Predictor == "Pitch mean")$p.value < .001, paste("< 0.001"), paste("=", round(subset(input.models, Predictor == "Pitch mean")$p.value, 3)))`). That is, utterances with higher overall mean pitch were more likely to contain CDS forms, with no significant interaction with age ($\beta$ = `r round(subset(input.models, Predictor == "Pitch mean:age")$Estimate, 2)`, _SE_ = `r round(subset(input.models, Predictor == "Pitch mean:age")$SE, 2)`, _t_ = `r round(subset(input.models, Predictor == "Pitch mean:age")$statistic, 2)`, _p_ `r ifelse(subset(input.models, Predictor == "Pitch mean:age")$p.value < .001, paste("< 0.001"), paste("=", round(subset(input.models, Predictor == "Pitch mean:age")$p.value, 3)))`). __Speech rate__ (i.e., words produced per second) was a positive predictor of ADS form ($\beta$ = `r round(subset(input.models, Predictor == "Rate")$Estimate, 2)`, _SE_ = `r round(subset(input.models, Predictor == "Rate")$SE, 2)`, _t_ = `r round(subset(input.models, Predictor == "Rate")$statistic, 2)`, _p_ `r ifelse(subset(input.models, Predictor == "Rate")$p.value < .001, paste("< 0.001"), paste("=", round(subset(input.models, Predictor == "Rate")$p.value, 3)))`). Utterances spoken more quickly were more likely to contain ADS forms. This input predictor also negatively interacted with age ($\beta$ = `r round(subset(input.models, Predictor == "Rate:age")$Estimate, 2)`, _SE_ = `r round(subset(input.models, Predictor == "Rate:age")$SE, 2)`, _t_ = `r round(subset(input.models, Predictor == "Rate:age")$statistic, 2)`, _p_ `r ifelse(subset(input.models, Predictor == "Rate:age")$p.value < .001, paste("< 0.001"), paste("=", round(subset(input.models, Predictor == "Rate:age")$p.value, 3)))`), indicating a decreasing strength in predictive power across developmental time.
+At the prosodic level, we found significant effects for two of three input predictors tested. Utterance-level __pitch range__ was not predictive of form ($\beta$ = `r round(subset(input.models, Predictor == "Pitch range")$Estimate, 3)`, _SE_ = `r round(subset(input.models, Predictor == "Pitch range")$SE, 2)`, _t_ = `r round(subset(input.models, Predictor == "Pitch range")$statistic, 2)`, _p_ `r ifelse(subset(input.models, Predictor == "Pitch range")$p.value < .001, paste("< 0.001"), paste("=", round(subset(input.models, Predictor == "Pitch range")$p.value, 3)))`) and did not significantly interact with age ($\beta$ = `r round(subset(input.models, Predictor == "Pitch range:age")$Estimate, 2)`, _SE_ = `r round(subset(input.models, Predictor == "Pitch range:age")$SE, 2)`, _t_ = `r round(subset(input.models, Predictor == "Pitch range:age")$statistic, 2)`, _p_ `r ifelse(subset(input.models, Predictor == "Pitch range:age")$p.value < .001, paste("< 0.001"), paste("=", round(subset(input.models, Predictor == "Pitch range:age")$p.value, 3)))`). However, utterance-level __mean pitch__ was a negative predictor of ADL form ($\beta$ = `r round(subset(input.models, Predictor == "Pitch mean")$Estimate, 3)`, _SE_ = `r round(subset(input.models, Predictor == "Pitch mean")$SE, 2)`, _t_ = `r round(subset(input.models, Predictor == "Pitch mean")$statistic, 2)`, _p_ `r ifelse(subset(input.models, Predictor == "Pitch mean")$p.value < .001, paste("< 0.001"), paste("=", round(subset(input.models, Predictor == "Pitch mean")$p.value, 3)))`). That is, utterances with higher overall mean pitch were more likely to contain CDL forms, with no significant interaction with age ($\beta$ = `r round(subset(input.models, Predictor == "Pitch mean:age")$Estimate, 2)`, _SE_ = `r round(subset(input.models, Predictor == "Pitch mean:age")$SE, 2)`, _t_ = `r round(subset(input.models, Predictor == "Pitch mean:age")$statistic, 2)`, _p_ `r ifelse(subset(input.models, Predictor == "Pitch mean:age")$p.value < .001, paste("< 0.001"), paste("=", round(subset(input.models, Predictor == "Pitch mean:age")$p.value, 3)))`). __Speech rate__ (i.e., words produced per second) was a positive predictor of ADL form ($\beta$ = `r round(subset(input.models, Predictor == "Rate")$Estimate, 2)`, _SE_ = `r round(subset(input.models, Predictor == "Rate")$SE, 2)`, _t_ = `r round(subset(input.models, Predictor == "Rate")$statistic, 2)`, _p_ `r ifelse(subset(input.models, Predictor == "Rate")$p.value < .001, paste("< 0.001"), paste("=", round(subset(input.models, Predictor == "Rate")$p.value, 3)))`). Utterances spoken more quickly were more likely to contain ADL forms. This input predictor also negatively interacted with age ($\beta$ = `r round(subset(input.models, Predictor == "Rate:age")$Estimate, 2)`, _SE_ = `r round(subset(input.models, Predictor == "Rate:age")$SE, 2)`, _t_ = `r round(subset(input.models, Predictor == "Rate:age")$statistic, 2)`, _p_ `r ifelse(subset(input.models, Predictor == "Rate:age")$p.value < .001, paste("< 0.001"), paste("=", round(subset(input.models, Predictor == "Rate:age")$p.value, 3)))`), indicating a decreasing strength in predictive power across developmental time.
 
-At the lexical level, we found significant effects for both input predictors tested. Utterances with higher levels of __lexical complexity__ ($\beta$ = `r round(subset(input.models, Predictor == "Complexity")$Estimate, 2)`, _SE_ = `r round(subset(input.models, Predictor == "Complexity")$SE, 2)`, _t_ = `r round(subset(input.models, Predictor == "Complexity")$statistic, 2)`, _p_ `r ifelse(subset(input.models, Predictor == "Complexity")$p.value < .001, paste("< 0.001"), paste("=", round(subset(input.models, Predictor == "Complexity")$p.value, 3)))`) and __lexical rarity__ ($\beta$ = `r round(subset(input.models, Predictor == "Rarity")$Estimate, 2)`, _SE_ = `r round(subset(input.models, Predictor == "Rarity")$SE, 2)`, _t_ = `r round(subset(input.models, Predictor == "Rarity")$statistic, 2)`, _p_ `r ifelse(subset(input.models, Predictor == "Rarity")$p.value < .001, paste("< 0.001"), paste("=", round(subset(input.models, Predictor == "Rarity")$p.value, 3)))`) were more likely to contain ADS forms. Lexical complexity did not interact with age ($\beta$ = `r round(subset(input.models, Predictor == "Complexity:age")$Estimate, 2)`, _SE_ = `r round(subset(input.models, Predictor == "Complexity:age")$SE, 2)`, _t_ = `r round(subset(input.models, Predictor == "Complexity:age")$statistic, 2)`, _p_ `r ifelse(subset(input.models, Predictor == "Complexity:age")$p.value < .001, paste("< 0.001"), paste("=", round(subset(input.models, Predictor == "Complexity:age")$p.value, 3)))`); whereas, lexical rarity negatively interacted with age such that there was a decreasing effect of this predictor with age ($\beta$ = `r round(subset(input.models, Predictor == "Rarity:age")$Estimate, 2)`, _SE_ = `r round(subset(input.models, Predictor == "Rarity:age")$SE, 2)`, _t_ = `r round(subset(input.models, Predictor == "Rarity:age")$statistic, 2)`, _p_ `r ifelse(subset(input.models, Predictor == "Rarity:age")$p.value < .001, paste("< 0.001"), paste("=", round(subset(input.models, Predictor == "Rarity:age")$p.value, 3)))`).
+At the lexical level, we found significant effects for both input predictors tested. Utterances with higher levels of __lexical complexity__ ($\beta$ = `r round(subset(input.models, Predictor == "Complexity")$Estimate, 2)`, _SE_ = `r round(subset(input.models, Predictor == "Complexity")$SE, 2)`, _t_ = `r round(subset(input.models, Predictor == "Complexity")$statistic, 2)`, _p_ `r ifelse(subset(input.models, Predictor == "Complexity")$p.value < .001, paste("< 0.001"), paste("=", round(subset(input.models, Predictor == "Complexity")$p.value, 3)))`) and __lexical rarity__ ($\beta$ = `r round(subset(input.models, Predictor == "Rarity")$Estimate, 2)`, _SE_ = `r round(subset(input.models, Predictor == "Rarity")$SE, 2)`, _t_ = `r round(subset(input.models, Predictor == "Rarity")$statistic, 2)`, _p_ `r ifelse(subset(input.models, Predictor == "Rarity")$p.value < .001, paste("< 0.001"), paste("=", round(subset(input.models, Predictor == "Rarity")$p.value, 3)))`) were more likely to contain ADL forms. Lexical complexity did not interact with age ($\beta$ = `r round(subset(input.models, Predictor == "Complexity:age")$Estimate, 2)`, _SE_ = `r round(subset(input.models, Predictor == "Complexity:age")$SE, 2)`, _t_ = `r round(subset(input.models, Predictor == "Complexity:age")$statistic, 2)`, _p_ `r ifelse(subset(input.models, Predictor == "Complexity:age")$p.value < .001, paste("< 0.001"), paste("=", round(subset(input.models, Predictor == "Complexity:age")$p.value, 3)))`); whereas, lexical rarity negatively interacted with age such that there was a decreasing effect of this predictor with age ($\beta$ = `r round(subset(input.models, Predictor == "Rarity:age")$Estimate, 2)`, _SE_ = `r round(subset(input.models, Predictor == "Rarity:age")$SE, 2)`, _t_ = `r round(subset(input.models, Predictor == "Rarity:age")$statistic, 2)`, _p_ `r ifelse(subset(input.models, Predictor == "Rarity:age")$p.value < .001, paste("< 0.001"), paste("=", round(subset(input.models, Predictor == "Rarity:age")$p.value, 3)))`).
 
-At the syntactic level, we found significant effects of __utterance length__ and __number of verb phrases__. Utterances with more words ($\beta$ = `r round(subset(input.models, Predictor == "Length")$Estimate, 2)`, _SE_ = `r round(subset(input.models, Predictor == "Length")$SE, 2)`, _t_ = `r round(subset(input.models, Predictor == "Length")$statistic, 2)`, _p_ `r ifelse(subset(input.models, Predictor == "Length")$p.value < .001, paste("< 0.001"), paste("=", round(subset(input.models, Predictor == "Length")$p.value, 3)))`) and more verb phrases ($\beta$ = `r round(subset(input.models, Predictor == "Verbs")$Estimate, 2)`, _SE_ = `r round(subset(input.models, Predictor == "Verbs")$SE, 2)`, _t_ = `r round(subset(input.models, Predictor == "Verbs")$statistic, 2)`, _p_ `r ifelse(subset(input.models, Predictor == "Verbs")$p.value < .001, paste("< 0.001"), paste("=", round(subset(input.models, Predictor == "Verbs")$p.value, 3)))`) were more likely to contain ADS forms. Moreover, both linguistic predictors negatively interacted with age (Length: $\beta$ = `r round(subset(input.models, Predictor == "Length:age")$Estimate, 2)`, _SE_ = `r round(subset(input.models, Predictor == "Length:age")$SE, 2)`, _t_ = `r round(subset(input.models, Predictor == "Length:age")$statistic, 2)`, _p_ `r ifelse(subset(input.models, Predictor == "Length:age")$p.value < .001, paste("< 0.001"), paste("=", round(subset(input.models, Predictor == "Length:age")$p.value, 3)))`; Verbs: $\beta$ = `r round(subset(input.models, Predictor == "Verbs:age")$Estimate, 2)`, _SE_ = `r round(subset(input.models, Predictor == "Verbs:age")$SE, 2)`, _t_ = `r round(subset(input.models, Predictor == "Verbs:age")$statistic, 2)`, _p_ `r ifelse(subset(input.models, Predictor == "Verbs:age")$p.value < .001, paste("< 0.001"), paste("=", round(subset(input.models, Predictor == "Verbs:age")$p.value, 3)))`), suggesting that the strength of these predictors decreases across developmental time.
+At the syntactic level, we found significant effects of __utterance length__ and __number of verb phrases__. Utterances with more words ($\beta$ = `r round(subset(input.models, Predictor == "Length")$Estimate, 2)`, _SE_ = `r round(subset(input.models, Predictor == "Length")$SE, 2)`, _t_ = `r round(subset(input.models, Predictor == "Length")$statistic, 2)`, _p_ `r ifelse(subset(input.models, Predictor == "Length")$p.value < .001, paste("< 0.001"), paste("=", round(subset(input.models, Predictor == "Length")$p.value, 3)))`) and more verb phrases ($\beta$ = `r round(subset(input.models, Predictor == "Verbs")$Estimate, 2)`, _SE_ = `r round(subset(input.models, Predictor == "Verbs")$SE, 2)`, _t_ = `r round(subset(input.models, Predictor == "Verbs")$statistic, 2)`, _p_ `r ifelse(subset(input.models, Predictor == "Verbs")$p.value < .001, paste("< 0.001"), paste("=", round(subset(input.models, Predictor == "Verbs")$p.value, 3)))`) were more likely to contain ADL forms. Moreover, both linguistic predictors negatively interacted with age (Length: $\beta$ = `r round(subset(input.models, Predictor == "Length:age")$Estimate, 2)`, _SE_ = `r round(subset(input.models, Predictor == "Length:age")$SE, 2)`, _t_ = `r round(subset(input.models, Predictor == "Length:age")$statistic, 2)`, _p_ `r ifelse(subset(input.models, Predictor == "Length:age")$p.value < .001, paste("< 0.001"), paste("=", round(subset(input.models, Predictor == "Length:age")$p.value, 3)))`; Verbs: $\beta$ = `r round(subset(input.models, Predictor == "Verbs:age")$Estimate, 2)`, _SE_ = `r round(subset(input.models, Predictor == "Verbs:age")$SE, 2)`, _t_ = `r round(subset(input.models, Predictor == "Verbs:age")$statistic, 2)`, _p_ `r ifelse(subset(input.models, Predictor == "Verbs:age")$p.value < .001, paste("< 0.001"), paste("=", round(subset(input.models, Predictor == "Verbs:age")$p.value, 3)))`), suggesting that the strength of these predictors decreases across developmental time.
 
 # Discussion
 
 # General Discussion
 
-Para about how we don't yet know which (if any of these) linguistic cues are actually exploited by learners [@potter2019infants as a good ref]. However, the current work sets us up to be able to test some of these ideas experimentally. Additional point that CDS and ADS registers are differentiated by more than just linguistic cues, so we can think about whether the same happens for CDS vs. ADS forms.
+Para about how we don't yet know which (if any of these) linguistic cues are actually exploited by learners [@potter2019infants as a good ref]. However, the current work sets us up to be able to test some of these ideas experimentally. Additional point that CDL and ADL registers are differentiated by more than just linguistic cues, so we can think about whether the same happens for CDL vs. ADL forms.
 
 Para on ties to other sociolinguistic phenomena, like dialects, accents, and other types of register (e.g., pedagogical, narrative, etc.). Learning happening at multiple levels -- not just words but associations between words and surrounding context (linguistic, social, etc.).
 
