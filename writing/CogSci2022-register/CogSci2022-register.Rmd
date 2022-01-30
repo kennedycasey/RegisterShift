@@ -107,15 +107,16 @@ freq <- bind_cols(cdl_freq, adl_freq) %>%
     select(pair, child...2, other...3, child...5, other...6) 
 colnames(freq) <- c("Pair", "Child", "Other", "Child", "Other")
 
-xtable::xtable(freq, digits = 0,
-                             include.rownames = FALSE, 
-                             label = "tab:tab1",
-                             caption = "CHILDES frequency for 15 CDL/ADL word pairs. Child-produced
-                             counts include tokens produced only by the target child.") %>%
-    xtable2kable(booktabs = TRUE, escape = FALSE) %>%
-    kable_styling(latex_options = "scale_down") %>%
-    add_header_above(c(" " = 2, "CDL tokens by speaker" = 2, "ADL tokens by speaker" = 2), bold = TRUE) %>%
-    row_spec(0, bold = TRUE)
+kable(freq, format = "latex", 
+      table.envir = "table", 
+      row.names = FALSE, 
+      label = "tab:tab1",
+      booktabs = TRUE,
+      position = "h",
+      caption = "CHILDES frequency for 15 CDL/ADL word pairs. Child-produced counts include tokens produced only by the target child.") %>%
+  kable_styling(latex_options = "scale_down") %>%
+  add_header_above(c(" " = 1, "CDL tokens by speaker" = 2, "ADL tokens by speaker" = 2), bold = TRUE) %>%
+  row_spec(0, bold = TRUE)
 ```
 
 # Results
