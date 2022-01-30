@@ -84,6 +84,15 @@ childes_data[is.na(childes_data)] <- 0
 childes_freq <- data.frame(colSums(childes_data))
 childes_freq <- setNames(cbind(rownames(childes_freq), childes_freq, row.names = NULL), c("word", "childes_freq"))
 
+# get count of child utterances with at least 1 target word
+child.utts <- utterances
+child.utts[is.na(child.utts)] <- 0
+
+child.utts <- child.utts %>%
+  mutate(sum = rowSums(across(doggy:bird))) %>%
+  filter(sum >= 1) %>%
+  nrow()
+
 # generate prop plots
 # (for each time pt, what is the probability of producing CDS vs. ADS form?)
 

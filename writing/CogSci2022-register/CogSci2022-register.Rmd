@@ -33,6 +33,9 @@ library(kableExtra)
 library(tidyverse)
 library(ggpubr)
 library(DescTools)
+```
+
+```{r, data prep}
 
 # read in outputs from "get-freq.R"
 metadata <- read_csv("../../data-prep/overall/metadata.csv")
@@ -50,6 +53,14 @@ adl_forms <- read_csv("../../data-prep/overall/item-info.csv") %>%
 input_colors <- c("Prosodic" = "#1C9E78", 
                   "Lexical" = "#D95F06", 
                   "Syntactic" = "#7570B4")
+
+# get counts of child-produced and other-produced utterances
+child.utts <- 64852 #calculated in "shift-timing.R"
+
+other.utts <- read_csv("../../data/full-input.csv") %>%
+  select(id) %>%
+  distinct() %>%
+  nrow()
 ```
 
 # Introduction
@@ -72,9 +83,9 @@ This account seems theoretically plausible given evidence that children become i
 Returning to the 'issue' of multiple CDL/ADL variants, we hypothesize that children may be able to make sense of this lexical variation by beginning to associate different forms with different modes of use (i.e., incipient representations of register). To test this idea, we first need to establish (a) when children begin to shift away from producing CDL-specific words, and (b) how children may be able to use bottom-up linguistic input cues to associate lexical variants with their appropriate registers (i.e., CDL vs. ADL).
 
 ## Current investigation
-We examine a core subset of 15 CDL-specific words in English (e.g., _doggy_, _night-night_, _tummy_) that are prevalent in children’s early vocabularies but are eventually ‘replaced’ by ADL words---_dog_, _goodnight_, _stomach_. In Study 1, we analyze over XXXX utterances of spontaneous speech from children up to 7 years of age to establish when ADL forms become more dominant in children’s own productions. That is, when do children 'switch' from using CDL to ADL forms? 
+We examine a core subset of 15 CDL-specific words in English (e.g., _doggy_, _night-night_, _tummy_) that are prevalent in children’s early vocabularies but are eventually ‘replaced’ by ADL words---_dog_, _goodnight_, _stomach_. In Study 1, we analyze `r format(child.utts, big.mark = ",", trim = TRUE)` utterances of spontaneous speech from children up to 7 years of age to establish when ADL forms become more dominant in children’s own productions. That is, when do children 'switch' from using CDL to ADL forms? 
 
-After establishing that the average age of ‘switchover’ occurs around 2.5 years <!--kc: i wonder if we shouldn't make the 50/50 point so marked-->, we next explored the features children's input that could support this developmental shift. We investigated the extent to which CDL and ADL words are used in distinct linguistic contexts. Further processing of XXXX adult utterances revealed that CDL and ADL variants co-occur with reliably different patterns of prosodic, lexical, and syntactic information---cues that likely help learners associate them with different modes of use, or emerging representations of register.
+After establishing that the average age of ‘switchover’ occurs around 2.5 years<!--kc: i wonder if we shouldn't make the 50/50 point so marked-->, we next explored the features children's input that could support this developmental shift. We investigated the extent to which CDL and ADL words are used in distinct linguistic contexts. Further processing of `r format(other.utts, big.mark = ",", trim = TRUE)` adult utterances revealed that CDL and ADL variants co-occur with reliably different patterns of prosodic, lexical, and syntactic information---cues that likely help learners associate them with different modes of use, or emerging representations of register.
 
 Together, these studies push us to consider children’s vocabulary development not as a simple accumulation of words or numeric increase in vocabulary size but rather a deepening and restructuring of the lexicon with growing linguistic and social maturity. The word _dog_ does not entirely replace _doggy_---rather, the two forms become reserved for use with different addressees.
 
