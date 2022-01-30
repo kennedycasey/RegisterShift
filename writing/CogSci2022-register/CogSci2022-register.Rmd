@@ -18,7 +18,7 @@ output: cogsci2016::cogsci_paper
 final-submission: \cogscifinalcopy
 ---
 
-```{r global_options, include=FALSE}
+```{r global_options, include = FALSE}
 knitr::opts_chunk$set(fig.width = 3, fig.height = 3, fig.crop = F, 
                       fig.pos = "tb", fig.path = 'figs/',
                       echo = F, warning = F, cache = F, 
@@ -39,11 +39,11 @@ metadata <- read_csv("../../data-prep/overall/metadata.csv")
 freq <- read_csv("../../data-prep/overall/freq.csv")
 
 cdl_forms <- read_csv("../../data-prep/overall/item-info.csv") %>%
-    filter(form == "CDL") %>%
+    filter(form == "CDS") %>%
     pull(word)
 
 adl_forms <- read_csv("../../data-prep/overall/item-info.csv") %>%
-    filter(form == "ADL") %>%
+    filter(form == "ADS") %>%
     pull(word)
 
 # preset colors for linguistic predictors
@@ -95,7 +95,7 @@ We tracked children's use of 15 CDL/ADL word pairs (Table \ref{tab:tab1}) from e
 We analyzed `r metadata$n_transcripts` transcripts in the North American English collection of the Child Language Data Exchange System (CHILDES) database [@macwhinney2000childes] for children up to 7 years of age. The included transcripts were drawn from `r metadata$n_corpora` individual corpora and featured `r metadata$n_kids` children (age range = `r metadata$min_age`--`r metadata$max_age` months, _M_ = `r metadata$mean_age` months). Child production data from the Language Development Project longitudinal corpus were also analyzed [see @rowe2008child; @huttenlocher2010sources, for further details regarding participating families, recording procedures, and transcription]. These included 622 transcripts from 59 English-learning children recorded every 4 months for approximately 90 minutes from age 14 to 58 months.
 
 ## Target words
-Fifteen CDL/ADL word pairs (30 total target words) were selected based on two criteria: the appearance of at least one form on the CDI [@fenson1994variability], and sufficient frequency of occurrence in CHILDES (at least 100 child-produced tokens and 100 other-produced tokens per form). Pairs were also selected based on researcher intuition to ensure that that referents of these words could be reasonably labeled with either form by young children.
+Fifteen CDL/ADL word pairs (30 total target words) were selected based on two criteria: the appearance of at least one form on the MacArthur-Bates Communicative Development Inventory [CDI, @fenson1994variability], and sufficient frequency of occurrence in CHILDES (at least 100 child-produced tokens and 100 other-produced tokens per form). Pairs were also selected based on researcher intuition to ensure that the same object, animal, routine, or body part could be reasonably labeled with either form by young children.
 
 ```{r freq_table, results = "asis"}
 cdl_freq <- freq %>%
@@ -215,7 +215,7 @@ grid::grid.raster(img)
 # Method
 
 ## Corpora
-We analyzed other-produced utterances (i.e., utterances not produced by the target child) in the same CHILDES transcripts from Study 1. <!--kc: might add percentage of utterances from MOT/FAT just so it's clear that this is primarily adult-produced speech, not speech from other children.-->
+We analyzed XXXX other-produced utterances (i.e., utterances not produced by the target child) in the same CHILDES transcripts from Study 1. The majority were utterances from primary caregivers (XX%).
 
 ## Linguistic input predictors
 All input analyses were conducted over individual utterances containing one of the 30 target words from Study 1. We quantified prosodic, lexical, and syntactic information to describe each utterance.
@@ -238,6 +238,8 @@ At the prosodic level, we found significant effects for two of three input predi
 At the lexical level, we found significant effects for both input predictors tested. Utterances with higher levels of __lexical complexity__ ($\beta$ = `r round(subset(input.models, Predictor == "Complexity")$Estimate, 2)`, _SE_ = `r round(subset(input.models, Predictor == "Complexity")$SE, 2)`, _t_ = `r round(subset(input.models, Predictor == "Complexity")$statistic, 2)`, _p_ `r ifelse(subset(input.models, Predictor == "Complexity")$p.value < .001, paste("< 0.001"), paste("=", round(subset(input.models, Predictor == "Complexity")$p.value, 3)))`) and __lexical rarity__ ($\beta$ = `r round(subset(input.models, Predictor == "Rarity")$Estimate, 2)`, _SE_ = `r round(subset(input.models, Predictor == "Rarity")$SE, 2)`, _t_ = `r round(subset(input.models, Predictor == "Rarity")$statistic, 2)`, _p_ `r ifelse(subset(input.models, Predictor == "Rarity")$p.value < .001, paste("< 0.001"), paste("=", round(subset(input.models, Predictor == "Rarity")$p.value, 3)))`) were more likely to contain ADL forms. Lexical complexity did not interact with age ($\beta$ = `r round(subset(input.models, Predictor == "Complexity:age")$Estimate, 2)`, _SE_ = `r round(subset(input.models, Predictor == "Complexity:age")$SE, 2)`, _t_ = `r round(subset(input.models, Predictor == "Complexity:age")$statistic, 2)`, _p_ `r ifelse(subset(input.models, Predictor == "Complexity:age")$p.value < .001, paste("< 0.001"), paste("=", round(subset(input.models, Predictor == "Complexity:age")$p.value, 3)))`); whereas, lexical rarity negatively interacted with age such that there was a decreasing effect of this predictor with age ($\beta$ = `r round(subset(input.models, Predictor == "Rarity:age")$Estimate, 2)`, _SE_ = `r round(subset(input.models, Predictor == "Rarity:age")$SE, 2)`, _t_ = `r round(subset(input.models, Predictor == "Rarity:age")$statistic, 2)`, _p_ `r ifelse(subset(input.models, Predictor == "Rarity:age")$p.value < .001, paste("< 0.001"), paste("=", round(subset(input.models, Predictor == "Rarity:age")$p.value, 3)))`).
 
 At the syntactic level, we found significant effects of __utterance length__ and __number of verb phrases__. Utterances with more words ($\beta$ = `r round(subset(input.models, Predictor == "Length")$Estimate, 2)`, _SE_ = `r round(subset(input.models, Predictor == "Length")$SE, 2)`, _t_ = `r round(subset(input.models, Predictor == "Length")$statistic, 2)`, _p_ `r ifelse(subset(input.models, Predictor == "Length")$p.value < .001, paste("< 0.001"), paste("=", round(subset(input.models, Predictor == "Length")$p.value, 3)))`) and more verb phrases ($\beta$ = `r round(subset(input.models, Predictor == "Verbs")$Estimate, 2)`, _SE_ = `r round(subset(input.models, Predictor == "Verbs")$SE, 2)`, _t_ = `r round(subset(input.models, Predictor == "Verbs")$statistic, 2)`, _p_ `r ifelse(subset(input.models, Predictor == "Verbs")$p.value < .001, paste("< 0.001"), paste("=", round(subset(input.models, Predictor == "Verbs")$p.value, 3)))`) were more likely to contain ADL forms. Moreover, both linguistic predictors negatively interacted with age (Length: $\beta$ = `r round(subset(input.models, Predictor == "Length:age")$Estimate, 2)`, _SE_ = `r round(subset(input.models, Predictor == "Length:age")$SE, 2)`, _t_ = `r round(subset(input.models, Predictor == "Length:age")$statistic, 2)`, _p_ `r ifelse(subset(input.models, Predictor == "Length:age")$p.value < .001, paste("< 0.001"), paste("=", round(subset(input.models, Predictor == "Length:age")$p.value, 3)))`; Verbs: $\beta$ = `r round(subset(input.models, Predictor == "Verbs:age")$Estimate, 2)`, _SE_ = `r round(subset(input.models, Predictor == "Verbs:age")$SE, 2)`, _t_ = `r round(subset(input.models, Predictor == "Verbs:age")$statistic, 2)`, _p_ `r ifelse(subset(input.models, Predictor == "Verbs:age")$p.value < .001, paste("< 0.001"), paste("=", round(subset(input.models, Predictor == "Verbs:age")$p.value, 3)))`), suggesting that the strength of these predictors decreases across developmental time.
+
+## Possible section talking about how some of these patterns are mirrored in children's own speech
 
 # Discussion
 
