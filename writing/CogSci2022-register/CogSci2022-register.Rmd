@@ -1,5 +1,5 @@
 ---
-title: "When _doggy_ becomes _dog_: Developmental shifts in children's use of register-specific words"
+title: "Developmental shifts in children's use of register-specific words"
 bibliography: CogSci2022-register.bib
 csl: apa6.csl
 document-params: "10pt, letterpaper"
@@ -74,19 +74,14 @@ Learners encounter many forms of socially meaningful variation in their linguist
 Children's word knowledge builds around and together with their social knowledge. Recognizable varieties within a language community are likely to contain lexical variants (e.g., regional-level variation: _soda_ vs. _pop_ vs. _coke_; register-level variation: _doggy_ vs. _dog_).
 -->
 
-We hypothesize that one way that children may be able to make sense of this otherwise redundant appearance of CDL-specific words with straightforward ADL equivalents is to already begin associating them with different modes of use (i.e., incipient representations of register). [Also missing a transition here]. In this way, we should view children’s vocabulary development not as a simple accumulation of words but rather a deepening and restructuring of the lexicon with growing linguistic and social maturity. The word _dog_ does not entirely replace _doggy_---rather, the two forms become reserved for use with different addressees.<!--kc: maybe this is actually the last sentence of the intro--> To test this idea, we first need to establish (a) when children begin to shift away from producing CDL-specific words, and (b) how children may be able to use bottom-up linguistic input cues to associate lexical variants with their appropriate registers (i.e., CDL vs. ADL).
+We hypothesize that one way that children may be able to make sense of this otherwise redundant appearance of CDL-specific words with straightforward ADL equivalents is to already begin associating them with different modes of use (i.e., incipient representations of register). To test this idea, we first need to establish (a) when children begin to shift away from producing CDL-specific words, and (b) how children may be able to use bottom-up linguistic input cues to associate lexical variants with their appropriate registers (i.e., CDL vs. ADL).
 
 ## Current investigation
-In the present work, we examine a core subset of 15 CDL-specific words in English (e.g., _doggy_, _night-night_, _tummy_) that are prevalent in children’s early vocabularies but are eventually ‘replaced’ by ADL words---_dog_, _goodnight_, _stomach_. In Study 1, we analyze over XXXX utterances of spontaneous speech from children up to 7 years of age to establish when ADL forms become more dominant in children’s own productions. That is, when do children 'switch' from using CDL-associated to ADL-associated forms? 
+We examine a core subset of 15 CDL-specific words in English (e.g., _doggy_, _night-night_, _tummy_) that are prevalent in children’s early vocabularies but are eventually ‘replaced’ by ADL words---_dog_, _goodnight_, _stomach_. In Study 1, we analyze over XXXX utterances of spontaneous speech from children up to 7 years of age to establish when ADL forms become more dominant in children’s own productions. That is, when do children 'switch' from using CDL-associated to ADL-associated forms? 
 
-After establishing that the average age of ‘switchover’ occurs around 2.5 years, we next explored children's input. We investigated the extent to which CDL and ADL words are used in distinct linguistic contexts. Further processing of XXXX adult utterances reveal that CDL and ADL variants co-occur with reliably different patterns of prosodic, lexical, and syntactic information---cues that likely help learners associate them with different modes of use, or emerging representations of register.
+After establishing that the average age of ‘switchover’ occurs around 2.5 years <!--kc: i wonder if we shouldn't make the 50/50 point so marked-->, we next explored the features children's input that could support this developmental shift. We investigated the extent to which CDL and ADL words are used in distinct linguistic contexts. Further processing of XXXX adult utterances revealed that CDL and ADL variants co-occur with reliably different patterns of prosodic, lexical, and syntactic information---cues that likely help learners associate them with different modes of use, or emerging representations of register.
 
-<!--
-removed some of this detail for now
-We that find that the typical age of ‘switchover’ occurs around 2.5 years but that the trajectory of this CDL-to-ADL shift varies significantly across pairs. 
-
-also i wonder if it’s better to not make the 50/50 point so marked and instead focus on the more gradual learning story
---> 
+Together, these studies push us to view children’s vocabulary development not as a simple accumulation of words but rather a deepening and restructuring of the lexicon with growing linguistic and social maturity. The word _dog_ does not entirely replace _doggy_---rather, the two forms become reserved for use with different addressees.
 
 # Study 1: When do children shift from CDL to ADL forms?
 We tracked children's use of 15 CDL/ADL word pairs (Table \ref{tab:tab1}) from early infancy up to age seven. Since CDL forms rarely appear in ADL, we predicted that children would shift away from production of these register-specific forms with increasing age. That is, we expected to see 'replacement' of CDL forms with ADL forms in children's own speech across time. 
