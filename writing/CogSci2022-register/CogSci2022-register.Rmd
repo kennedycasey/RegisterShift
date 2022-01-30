@@ -57,7 +57,13 @@ input_colors <- c("Prosodic" = "#1C9E78",
 # get counts of child-produced and other-produced utterances
 child.utts <- 64852 #calculated in "shift-timing.R"
 
-other.utts <- read_csv("../../data/full-input.csv") %>%
+other.utts <- read_csv("../../data/childes-input.csv") %>%
+  select(id) %>%
+  distinct() %>%
+  nrow()
+
+caregiver.utts <- read_csv("../../data/childes-input.csv") %>%
+  filter(speaker_code %in% c("MOT", "FAT")) %>%
   select(id) %>%
   distinct() %>%
   nrow()
@@ -96,7 +102,7 @@ We tracked children's use of 15 CDL/ADL word pairs (Table 1) from early infancy 
 
 ## Corpora
 
-We analyzed `r metadata$n_transcripts` transcripts in the North American English collection of the Child Language Data Exchange System (CHILDES) database [@macwhinney2000childes] for children up to 7 years of age. The included transcripts were drawn from `r metadata$n_corpora` individual corpora and featured `r metadata$n_kids` children (age range = `r metadata$min_age`--`r metadata$max_age` months, _M_ = `r metadata$mean_age` months). Child production data from the Language Development Project longitudinal corpus were also analyzed [see @huttenlocher2010sources; @rowe2008child, for further details regarding participating families, recording procedures, and transcription]. These included 622 transcripts from 59 English-learning children recorded every 4 months for approximately 90 minutes from age 14 to 58 months.
+We analyzed `r metadata$n_transcripts` transcripts in the North American English collection of the Child Language Data Exchange System (CHILDES) database [@macwhinney2000childes] for children up to 7 years of age. The included transcripts were drawn from `r metadata$n_corpora` individual corpora and featured `r metadata$n_kids` children (age range = `r metadata$min_age`--`r metadata$max_age` months, _M_ = `r metadata$mean_age` months). Child production data from the Language Development Project longitudinal corpus were also analyzed [see @huttenlocher2010sources; @rowe2008child, for further details regarding participating families, recording procedures, and transcription]. These included 622 transcripts from 59 English-learning children recorded every 4 months for approximately 90 minutes from age 14 to 58 months. Across all transcripts, `r format(child.utts, big.mark = ",", trim = TRUE)` child-produced utterances contained one or more target words and were included in our analysis.
 
 ```{r freq_table, results = "asis"}
 cdl_freq <- freq %>%
@@ -221,7 +227,7 @@ grid::grid.raster(img)
 # Method
 
 ## Corpora
-We analyzed XXXX other-produced utterances (i.e., utterances not produced by the target child) in the same CHILDES transcripts from Study 1. The majority were utterances from primary caregivers (XX%).
+We analyzed `r format(other.utts, big.mark = ",", trim = TRUE)` other-produced utterances (i.e., utterances not produced by the target child) in the same CHILDES transcripts from Study 1. The majority were utterances from primary caregivers (_n_ = `r format(caregiver.utts, big.mark = ",", trim = TRUE)`, or `r format(round(caregiver.utts/other.utts, 3)*100, nsmall = 1)`%).
 
 ## Linguistic input predictors
 
