@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2022.1.22)  25 JAN 2022 11:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2022.1.27)  30 JAN 2022 12:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -695,72 +695,86 @@ dftex.map}
 
 
 ]
-LaTeX Font Info:    Trying to load font information for OML+ptm on input line 2
-63.
+LaTeX Font Info:    Trying to load font information for OML+ptm on input line 3
+24.
 
 (/Users/chatterlabmanager/Library/TinyTeX/texmf-dist/tex/latex/psnfss/omlptm.fd
 File: omlptm.fd 
 )
 LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 263.
-<figs/shift-timing-fig-1.pdf, id=88, 209.78375pt x 179.67125pt>
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 324.
+[2]
+<figs/shift-timing-fig-1.pdf, id=105, 209.78375pt x 179.67125pt>
 File: figs/shift-timing-fig-1.pdf Graphic file (type pdf)
 <use figs/shift-timing-fig-1.pdf>
-Package pdftex.def Info: figs/shift-timing-fig-1.pdf  used on input line 272.
+Package pdftex.def Info: figs/shift-timing-fig-1.pdf  used on input line 333.
 (pdftex.def)             Requested size: 209.78322pt x 179.67079pt.
-<figs/shift-timing-bypair-fig-1.pdf, id=89, 434.62375pt x 289.08pt>
+<figs/shift-timing-bypair-fig-1.pdf, id=106, 434.62375pt x 289.08pt>
 File: figs/shift-timing-bypair-fig-1.pdf Graphic file (type pdf)
 <use figs/shift-timing-bypair-fig-1.pdf>
 Package pdftex.def Info: figs/shift-timing-bypair-fig-1.pdf  used on input line
- 283.
+ 344.
 (pdftex.def)             Requested size: 434.62268pt x 289.07928pt.
-<figs/ling-predictors-fig-1.pdf, id=90, 362.35374pt x 216.81pt>
+
+Underfull \hbox (badness 1888) in paragraph at lines 360--365
+\OT1/ptm/m/n/10 We next ex-plored chil-dren's in-put (i.e., other-produced
+ []
+
+<figs/ling-predictors-fig-1.pdf, id=107, 362.35374pt x 216.81pt>
 File: figs/ling-predictors-fig-1.pdf Graphic file (type pdf)
 <use figs/ling-predictors-fig-1.pdf>
-Package pdftex.def Info: figs/ling-predictors-fig-1.pdf  used on input line 299
+Package pdftex.def Info: figs/ling-predictors-fig-1.pdf  used on input line 369
 .
 (pdftex.def)             Requested size: 362.35286pt x 216.80946pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-Underfull \hbox (badness 1888) in paragraph at lines 307--312
-\OT1/ptm/m/n/10 We next ex-plored chil-dren's in-put (i.e., other-produced
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 424.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 424.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 424.
+[3 <./figs/shift-timing-fig-1.pdf>]
+Underfull \hbox (badness 1728) in paragraph at lines 505--511
+\OT1/ptm/m/n/10 Para about how we don't yet know which (if any of
  []
 
-[2 <./figs/shift-timing-fig-1.pdf>]
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 359.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 359.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 359.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \hbox (badness 1337) in paragraph at lines 505--511
+\OT1/ptm/m/n/10 these) lin-guis-tic cues are ac-tu-ally ex-ploited by learn-ers
 
-[3 <./figs/shift-timing-bypair-fig-1.pdf>]
-Underfull \hbox (badness 1946) in paragraph at lines 453--457
+ []
+
+[4 <./figs/shift-timing-bypair-fig-1.pdf>]
+Underfull \hbox (badness 1946) in paragraph at lines 540--544
  [][]\OT1/ptm/m/n/10 Braginsky, M., Sanchez, A., & Yurovsky, D. (2021).
  []
 
 
-Underfull \hbox (badness 1616) in paragraph at lines 453--457
+Underfull \hbox (badness 1616) in paragraph at lines 540--544
  \OT1/ptm/m/it/10 Childesr: Ac-cess-ing the 'CHILDES' database\OT1/ptm/m/n/10 .
  Re-
  []
 
-[4 <./figs/ling-predictors-fig-1.pdf>] [5] (./CogSci2022-register.aux)
+[5 <./figs/ling-predictors-fig-1.pdf>]
+Underfull \hbox (badness 2269) in paragraph at lines 660--664
+ \OT1/ptm/m/n/10 Pre-ver-bal in-fants in-fer third-party so-cial re-la-tion-shi
+ps
+ []
+
+[6] (./CogSci2022-register.aux)
 Package rerunfilecheck Info: File `CogSci2022-register.out' has not changed.
-(rerunfilecheck)             Checksum: EF09AEB1BD86E9CE57C1190DB616F83C;2987.
+(rerunfilecheck)             Checksum: 5C1549FA860377106B499CAB3BDA4923;3665.
  ) 
 Here is how much of TeX's memory you used:
- 13828 strings out of 480247
- 224934 string characters out of 5894309
- 523137 words of memory out of 5000000
- 31455 multiletter control sequences out of 15000+600000
+ 13856 strings out of 480247
+ 225630 string characters out of 5894309
+ 525137 words of memory out of 5000000
+ 31460 multiletter control sequences out of 15000+600000
  507607 words of font info for 103 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 60i,12n,63p,647b,369s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,12n,63p,647b,370s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/Users/chatterlabmanager/Library/TinyTeX/texmf-dist/fonts/enc/dvips/base/8r.
 enc}</Users/chatterlabmanager/Library/TinyTeX/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmmi10.pfb></Users/chatterlabmanager/Library/TinyTeX/texmf-dist/fonts/
@@ -770,10 +784,10 @@ xmf-dist/fonts/type1/urw/times/utmb8a.pfb></Users/chatterlabmanager/Library/Tin
 yTeX/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></Users/chatterlabmanager/Lib
 rary/TinyTeX/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></Users/chatterlabmana
 ger/Library/TinyTeX/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on CogSci2022-register.pdf (5 pages, 1503579 bytes).
+Output written on CogSci2022-register.pdf (6 pages, 1513559 bytes).
 PDF statistics:
- 244 PDF objects out of 1000 (max. 8388607)
- 206 compressed objects within 3 object streams
- 79 named destinations out of 1000 (max. 500000)
- 152 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 279 PDF objects out of 1000 (max. 8388607)
+ 240 compressed objects within 3 object streams
+ 102 named destinations out of 1000 (max. 500000)
+ 168 words of extra memory for PDF output out of 10000 (max. 10000000)
 
