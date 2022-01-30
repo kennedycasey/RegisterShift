@@ -151,7 +151,6 @@ grid::grid.raster(bypair.shift.timing)
 
 # Discussion
 
-
 # Study 2: What linguisitc information in children's input supports their shift from CDL to ADL forms?
 We next explored children's input (i.e., other-produced speech), asking whether the linguistic features that differentiate CDL vs. ADL at the register level also differentiate the local speech contexts surrounding CDL vs. ADL forms. In other words, can form be predicted on the basis of individual utterance-level prosodic, lexical, or syntactic cues?
 
@@ -252,10 +251,19 @@ At the syntactic level, we found significant effects of __utterance length__ and
 
 # General Discussion
 
+## Distinguishing CDL vs. ADL registers and words: Which cues matter?
 Para about how we don't yet know which (if any of these) linguistic cues are actually exploited by learners [@potter2019infants as a good ref]. However, the current work sets us up to be able to test some of these ideas experimentally. Additional point that CDL and ADL registers are differentiated by more than just linguistic cues, so we can think about whether the same happens for CDL vs. ADL forms.
+
+## Developing linguistic and social knowledge in parallel
+Children's linguistic knowledge builds around and together with their social knowledge.
+
+Lexical variants of CDL vs. ADL registers as one example of socially meaningful linguistic variation
 
 Para on ties to other sociolinguistic phenomena, like dialects, accents, and other types of register (e.g., pedagogical, narrative, etc.). Learning happening at multiple levels -- not just words but associations between words and surrounding context (linguistic, social, etc.).
 
+Word learning is clearly not a process of one-to-one mapping. Here, we focus on the multiple labels for the same referent, but there's also the opposite problem: one label for many different referents [@meylan2021quantifying; @caseyURmoving].
+
+## More than vocabulary size: Understanding words _and_ using them in contextually-appropriate ways
 Maybe some critique of typical caregiver-report measures, like CDIs, that gloss over lexical variation. Standardization makes sense for some things, but we lose the opportunity to capture deepening linguistic knowledge 
 
 <!--
