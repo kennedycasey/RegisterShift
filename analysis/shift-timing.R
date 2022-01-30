@@ -227,12 +227,12 @@ ggplot() +
   geom_line(data = overall_trend, 
             aes(x = x, y = predicted), color = "#235789", size = 2) +
   scale_x_continuous(limits = c(0, 84), breaks = seq(0, 84, by = 12)) +
-  labs(x = "Age (months)", y = "Proportion of ADS forms") +
+  labs(x = "Age (months)", y = "Proportion of ADL forms") +
   geom_hline(yintercept = 0.5, linetype = "dotted", size = 1) +
   theme_test(base_size = 20) +
   theme(axis.title = element_text(face = "bold")) +
   coord_cartesian(ylim = c(0, 1))
-ggsave("writing/figs/shift-timing.png", dpi = 300)
+ggsave("writing/figs/shift-timing.png", height = 5, width = 6, dpi = 300)
 
 model_outputs_list = list()
 for (i in pairs) {

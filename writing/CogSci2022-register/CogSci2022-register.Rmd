@@ -132,7 +132,7 @@ We first asked when CDL forms are 'replaced' by ADL forms in children's own spee
 
 Children's production of ADL forms increased with age ($\beta$ = `r format(round(overall.shift$estimate, 2), nsmall = 2)`, _SE_ = `r format(round(overall.shift$std.error, 2), nsmall = 2)`, _t_ = `r format(round(overall.shift$statistic, 2), nsmall = 2)`, _p_ `r ifelse(overall.shift$p.value < .001, paste("< 0.001"), paste("=", format(round(overall.shift$p.value, 3), 3)))`). This trend of increasing ADL form production was significant for `r bypair.shift` of 15 pairs. The average CDL-to-ADL transition point (i.e., the point at which ADL forms were produced >50% of the time) was between 24 and 36 months of age (Figure 1).
 
-```{r shift-timing-fig, fig.env = "figure", fig.pos = "h", fig.align = "center", fig.width = 2.9, fig.height = 3.4, fig.cap = "Model-predicted increase in production of ADL forms with age. Gray lines depict individual word-pair trajectories."}
+```{r shift-timing-fig, fig.env = "figure", fig.pos = "h", fig.align = "left", fig.width = 3.4, fig.height = 3.4, fig.cap = "Model-predicted increase in production of ADL forms across age, with shaded standard error region. Gray lines depict individual word-pair trajectories."}
 
 shift.timing <- png::readPNG("../figs/shift-timing.png")
 grid::grid.raster(shift.timing)
