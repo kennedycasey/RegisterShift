@@ -112,8 +112,13 @@ adl_freq <- freq %>%
     filter(word %in% adl_forms)
 
 freq <- bind_cols(cdl_freq, adl_freq) %>%
-    mutate(pair = paste0(word...1, '/', word...4)) %>%
-    select(pair, child...2, other...3, child...5, other...6) 
+  mutate(pair = paste0(word...1, '/', word...4)) %>%
+  select(pair, child...2, other...3, child...5, other...6) %>%
+  mutate(child...2 = paste0(format(child...2, big.mark = ",", trim = TRUE)), 
+         child...5 = paste0(format(child...5, big.mark = ",", trim = TRUE)), 
+         other...3 = paste0(format(other...3, big.mark = ",", trim = TRUE)), 
+         other...6 = paste0(format(other...6, big.mark = ",", trim = TRUE)))
+  
 colnames(freq) <- c("Pair", "Child", "Other", "Child", "Other")
 
 kable(freq, format = "latex", 
@@ -122,10 +127,13 @@ kable(freq, format = "latex",
       label = "tab:tab1",
       booktabs = TRUE,
       position = "h",
+      align = "lcccc",
+      linesep = "",
       caption = "CHILDES frequency for 15 CDL/ADL word pairs. Child-produced counts include tokens produced only by the target child.") %>%
   kable_styling(latex_options = "scale_down") %>%
   add_header_above(c(" " = 1, "CDL tokens by speaker" = 2, "ADL tokens by speaker" = 2), bold = TRUE) %>%
-  row_spec(0, bold = TRUE)
+  row_spec(0, bold = TRUE) %>%
+  column_spec(1, italic = TRUE)
 ```
 
 ## Target words
