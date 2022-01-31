@@ -166,6 +166,8 @@ Children significantly increased their production of ADL forms over age ($\beta$
 
 The trend of increasing ADL form production was significant for `r bypair.shift` of 15 word pairs, but the exact trajectory of shift varied greatly across items (Figure 2). In some cases, CDL forms were 'replaced' by ADL forms early on (e.g., _doggy/dog_ and _kitty/cat_ around 2 years). For other pairs, the age switchover was much later (e.g., _tummy/stomach_ and _potty/bathroom_ around 5 years). Finally, a clear point of switchover was not observed for some pairs because ADL forms were actually produced >50% of the time from the earliest ages sampled (e.g., _duckie/duck_ and _blankie/blanket_).
 
+<!--mc2kc: it might be worth mentioning when the overall effects replicate both in our (primarily) cross-sectional megacorpus and our longitudinal LDP data-->
+
 ```{r shift-timing-fig, fig.env = "figure", fig.pos = "h", fig.align = "left", fig.width = 3.4, fig.height = 3.4, fig.cap = "Model-predicted increase in production of ADL forms across age, with shaded standard error region. Gray lines depict individual word-pair trajectories."}
 
 shift.timing <- png::readPNG("../figs/shift-timing.png")
@@ -180,7 +182,7 @@ grid::grid.raster(bypair.shift.timing)
 <!--mc2kc: you took out the shift type labels! i kinda liked them. i know i suggested we not focus too much on the types in the discussion but i do think it's probably worth raising them as a candidate concept to think about further. do you feel strongly about having them in/out? if we do have them in, it'd be nice to add a vertical line at 30 months in each plot to make more apparent the difference between early and late.-->
 
 # Discussion
-Analysis of children's own spontaneous speech revealed development shifts in their production of CDL vs. ADL forms, with the latter becoming increasingly more prominent over age. While we found substantial variation in the exact trajectories of CDL-to-ADL vocabulary shift for the 15 word pairs, the overall trend towards ADL production was clear. We take children's shifts away from CDL forms and towards ADL forms as indirect evidence of their early formation of CDL and ADL as distinct registers. <!--kc: tried to keep this really short but can definitely expand if space allows-->
+Analysis of children's own spontaneous speech revealed development shifts in their production of CDL vs. ADL forms, with the latter becoming increasingly more prominent over age. While we found substantial variation in the exact trajectories of CDL-to-ADL vocabulary shift for the 15 word pairs, the overall trend towards ADL production was clear. We take children's shifts away from CDL forms and towards ADL forms as indirect evidence of their early formation of CDL and ADL as distinct registers. <!--kc: tried to keep this really short but can definitely expand if space allows; mc2kc: i think this works for now! the prediction and outcomes are pretty clear minus the pair-level variation. if you do end up adding when the effects replicate across the CHILDES vs. LDP corpora you could mention this as a strengthening factor in interpreting the results-->
 
 # Study 2: What linguisitc information in children's input supports their shift from CDL to ADL forms?
 We next explored children's input (i.e., other-produced speech), asking what linguistic information could support their shift from CDL to ADL forms. We conceptualize our second study as an investigation of the cues that could help learners associate CDL and ADL words with their appropriate registers.
