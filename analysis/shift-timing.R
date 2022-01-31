@@ -93,6 +93,8 @@ child.utts <- child.utts %>%
   filter(sum >= 1) %>%
   nrow()
 
+
+
 # generate prop plots
 # (for each time pt, what is the probability of producing CDS vs. ADS form?)
 
