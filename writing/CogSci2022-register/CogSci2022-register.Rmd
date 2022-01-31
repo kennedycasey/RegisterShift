@@ -170,8 +170,7 @@ grid::grid.raster(bypair.shift.timing)
 ```
 
 # Discussion
-
-
+Analysis of children's own spontaneous speech revealed development shifts in their production of CDL vs. ADL forms, with the latter becoming increasingly more prominent over age. While we found substantial variation in the exact trajectories of CDL-to-ADL vocabulary shift for the 15 word pairs, the overall trend towards ADL production was clear. We take children's shifts away from CDL forms and towards ADL forms as indirect evidence of their early formation of CDL and ADL as distinct registers. <!--kc: tried to keep this really short but can definitely expand if space allows-->
 
 # Study 2: What linguisitc information in children's input supports their shift from CDL to ADL forms?
 We next explored children's input (i.e., other-produced speech), asking what linguistic cues could support their shift from CDL to ADL forms. We conceptualize our second study as an investigation of the association between CDL-specific words and the CDL register.
