@@ -9,7 +9,7 @@ author-information: >
     \And {\large \bf Marisa Casillas} \\ University of Chicago \\ \texttt{mcasillas@uchicago.edu}}
 
 abstract: >
-  Child-directed language (CDL) features words such as _doggy_, _night-night_, and _tummy_ that are rarely used in adult-directed language (ADL). Characterisitcs of CDL word forms, such as diminutivization and reduplication, explain why they may be learned and produced earlier by children. However, it is not yet clear how or when children switch to using ADL equivalents---_dog_, _goodnight_, _stomach_. Through analysis of speech transcripts from CHILDES and the Language Development Project corpus, we show that children significantly increase their production of ADL word forms across age, with the average CDL-to-ADL transition point at 2.5 years. Many of the linguistic features that distinguish CDL vs. ADL registers (e.g., lexical and syntactic complexity) similarly differentiated the local speech contexts surrounding CDL vs. ADL word forms. Learners may therefore be able to capitalize on these cues to support their discovery of register along with context-appropriate CDL/ADL pair use.
+  Child-directed language (CDL) features words such as _doggy_, _night-night_, and _tummy_ that are rarely used in adult-directed language (ADL). Characterisitcs of CDL word forms, such as diminutivization and reduplication, explain why they may be learned and produced earlier by children. However, it is not yet clear how or when children switch to using ADL equivalents---_dog_, _goodnight_, _stomach_. Through analysis of speech transcripts from CHILDES and the Language Development Project corpus, we show that children significantly increase their production of ADL word forms across age, with the average CDL-to-ADL transition point at 2.5 years. Many of the linguistic features that distinguish CDL vs. ADL registers (e.g., lexical and syntactic complexity) similarly differentiated the local speech contexts surrounding CDL vs. ADL word forms in children's input. Learners may therefore be able to capitalize on these cues to support their discovery of register along with context-appropriate CDL/ADL pair use.
   
 keywords: >
     child-directed language; word production; linguistic input; social register; corpus analysis; developmental change
@@ -68,7 +68,8 @@ caregiver.utts <- read_csv("../../data/childes-input.csv") %>%
   distinct() %>%
   nrow()
 ```
-
+<!--kc2mc: writing here definitely still needs work. i struggled most with figuring out what should go in the different mini discussion study-specific sections vs. general discussion sections
+-->
 # Introduction
 Across their first few years of life, children's expressive vocabulary grows to include hundreds if not thousands of words [@fenson1994variability; @mayor2011statistical]. Word production typically begins around age one, followed by a vocabulary 'explosion' or 'spurt' during toddlerhood [@ganger2004reexamining; see also @mcmurray2007defusing] and continued, measurable increases in vocabulary size thereafter [@rice2015predicting].
 
@@ -271,10 +272,10 @@ At the syntactic level, we found significant effects of __utterance length__ and
 Para about how we don't yet know which (if any of these) linguistic cues are actually exploited by learners [@potter2019infants as a good ref]. However, the current work sets us up to be able to test some of these ideas experimentally. Additional point that CDL and ADL registers are differentiated by more than just linguistic cues, so we can think about whether the same happens for CDL vs. ADL forms.
 
 # General Discussion
-In the current work, we establish that children shift away from production of CDL words over age. As predicted, these register-specific words are 'replaced' by ADL equivalents---at least until they again become relevant when talking to younger children. Further, we identify patterns in children's linguistic input that could support their discovery of associations between CDL/ADL words and their typical modes of use (i.e., incipient representations of register).
+In the current work, we establish that children shift away from production of CDL-specific words over age. As predicted, these child-centric words are 'replaced' by ADL equivalents---at least until they again become relevant when talking to younger children. Further, we identify patterns in children's linguistic input that could support their discovery of associations between CDL/ADL words and their typical modes of use (i.e., incipient representations of register).
 
-## Developing linguistic and social knowledge in parallel
-Children's linguistic knowledge builds around and together with their social knowledge. The lexical variants of CDL vs. ADL registers are just one example of socially meaningful linguistic variation that also appears across languages and within languages but across dialects, accents, and other types of register (e.g., pedagogical, narrative, etc.). 
+## Developing linguistic and social knowledge in tandem
+Children's linguistic knowledge builds around and together with their social knowledge. The lexical variants of CDL vs. ADL registers are just one example of socially meaningful linguistic variation. Variation also appears across languages, dialects, accents, and other types of register (e.g., pedagogical, narrative, etc.). 
 
 Learning happening at multiple levels -- not just words but associations between words and surrounding context (linguistic, social, etc.)..
 
