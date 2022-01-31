@@ -70,7 +70,7 @@ caregiver.utts <- read_csv("../../data/childes-input.csv") %>%
 ```
 
 # Introduction
-Across their first few years of life, children amass an expressive vocabulary that includes hundreds if not thousands of words [@fenson1994variability; @mayor2011statistical]. Word production typically begins around age one, followed by a vocabulary 'explosion' or 'spurt' during toddlerhood [@ganger2004reexamining; see also @mcmurray2007defusing] and continued, measurable growth in vocabulary size thereafter [@rice2015predicting].
+Across their first few years of life, children's expressive vocabulary grows to include hundreds if not thousands of words [@fenson1994variability; @mayor2011statistical]. Word production typically begins around age one, followed by a vocabulary 'explosion' or 'spurt' during toddlerhood [@ganger2004reexamining; see also @mcmurray2007defusing] and continued, measurable increases in vocabulary size thereafter [@rice2015predicting].
 
 ## Predictors of early word comprehension and production
 Which words do children understand and say first? Cross-linguistic predictors of early age of acquisition include overall frequency, frequency of occurrence in short or isolated utterances, and concreteness [@braginsky2019consistency]. Words that adults rate as more associated with infancy (e.g., _bottle_ and _bib_) are typically understood earlier [@perry2015iconicity], and shorter words with fewer phonemes are also produced earlier [@braginsky2019consistency].
@@ -126,7 +126,7 @@ kable(freq, format = "latex",
       row.names = FALSE, 
       label = "tab:tab1",
       booktabs = TRUE,
-      position = "h",
+      position = "!h",
       align = "lcccc",
       linesep = "",
       caption = "CHILDES frequency for 15 CDL/ADL word pairs. Child-produced counts include tokens produced only by the target child.") %>%
