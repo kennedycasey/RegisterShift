@@ -127,10 +127,10 @@ kable(freq, format = "latex",
       align = "lcccc",
       linesep = "",
       caption = "CHILDES frequency for 15 CDL/ADL word pairs. Child-produced counts include tokens produced only by the target child.") %>%
-  kable_styling(latex_options = "scale_down") %>%
-  add_header_above(c(" " = 1, "CDL tokens" = 2, "ADL tokens" = 2), bold = TRUE) %>%
-  # mc2kc: i thought it was clear enough that the "by speaker" part actually tripped me up a little
-  # add_header_above(c(" " = 1, "CDL tokens by speaker" = 2, "ADL tokens by speaker" = 2), bold = TRUE) %>%
+  kable_styling(font_size = 7, 
+                full_width = TRUE) %>%
+  add_header_above(c(" " = 1, "CDL tokens" = 2, 
+                     "ADL tokens" = 2), bold = TRUE) %>%
   row_spec(0, bold = TRUE) %>%
   column_spec(1, italic = TRUE)
 ```
