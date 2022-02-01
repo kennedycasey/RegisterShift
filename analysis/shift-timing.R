@@ -477,3 +477,106 @@ xintercept <- overall_trend %>%
   filter(predicted >= 0.5) %>%
   slice_head() %>%
   pull(x)
+
+# CHILDES subset -----------------------------------------------------------
+utterances <- childes_utterances %>%
+  filter(target_child_age < 84 & speaker_role == "Target_Child") %>% 
+  mutate(gloss = paste0(' ', tolower(gloss), ' '), 
+         age = round(target_child_age, digits = 0)) %>%
+  select(gloss, age)
+
+# get overall token counts
+for (i in items) {
+  
+  if (str_detect(i, "ey")) {
+    root <- paste(gsub("ey", "", i))
+    utterances[str_detect(gloss, regex(paste0(" ", root, "ey | ", root, "ie | ",
+                                              root, "eys | ", root, "ies | ",
+                                              root, "ey's | ", root, "ie's "))), 
+               paste0(i) := str_count(gloss, regex(paste0(" ", root, "ey | ", root, "ie | ",
+                                                          root, "eys | ", root, "ies | ",
+                                                          root, "ey's | ", root, "ie's ")))]
+  }
+  
+  else if (str_detect(i, "y") & !str_detect(i, "ey")) {
+    root <- paste(gsub("y", "", i))
+    utterances[str_detect(gloss, regex(paste0(" ", root, "y | ", root, "ie | ",
+                                              root, "ys | ", root, "ies | ",
+                                              root, "y's | ", root, "ie's "))), 
+               paste0(i) := str_count(gloss, regex(paste0(" ", root, "y | ", root, "ie | ",
+                                                          root, "ys | ", root, "ies | ",
+                                                          root, "y's | ", root, "ie's ")))]
+  }
+  
+  else if (str_detect(i, "ie")) {
+    root <- paste(gsub("ie", "", i))
+    utterances[str_detect(gloss, regex(paste0(" ", root, "y | ", root, "ie | ",
+                                              root, "ys | ", root, "ies | ",
+                                              root, "y's | ", root, "ie's "))), 
+               paste0(i) := str_count(gloss, regex(paste0(" ", root, "y | ", root, "ie | ",
+                                                          root, "ys | ", root, "ies | ",
+                                                          root, "y's | ", root, "ie's ")))]
+  }
+  
+  else if (i == "night night") {
+    utterances[str_detect(gloss, regex(paste0(" night night | night-night | night nights | night-nights "))), 
+               paste0(i) := str_count(gloss, regex(paste0(" night night | night-night | night nights | night-nights ")))]
+  }
+  
+  else if (i == "goodnight") {
+    utterances[str_detect(gloss, regex(paste0(" goodnight | good night | good-night "))), 
+               paste0(i) := str_count(gloss, regex(paste0(" goodnight | good night | good-night ")))]
+  }
+  
+  else utterances[str_detect(gloss, regex(paste0(" ", i, " | ", i, "s | ", i, "'s "))), 
+                  paste0(i) := str_count(gloss, regex(paste0(" ", i, " | ", i, "s | ", i, "'s ")))]
+}
+
+model_data_list = list()
+for (i in pairs) {
+  CDS <- paste(gsub("_.*", "", i))
+  ADS <- paste(gsub(".*_", "", i))
+  
+  model_data <- utterances %>%
+    filter(!is.na(eval(as.symbol(CDS))) | !is.na(eval(as.symbol(ADS)))) %>%
+    select(age, CDS, ADS) %>%
+    group_by(age) %>%
+    summarize(CDS = sum(eval(as.symbol(CDS)), na.rm = TRUE),
+              ADS = sum(eval(as.symbol(ADS)), na.rm = TRUE), 
+              total_tokens = CDS + ADS) %>%
+    pivot_longer(c(CDS, ADS), names_to = "form", values_to = "count") %>%
+    mutate(word = case_when(
+      form == "CDS" ~ paste(gsub("_.*", "", i)), 
+      form == "ADS" ~ paste(gsub(".*_", "", i))), 
+      pair = paste(i)) %>%
+    distinct() %>%
+    mutate(form_numeric = case_when(
+      form == "CDS" ~ 0, 
+      form == "ADS" ~ 1))
+  
+  model_data_list[[i]] <- model_data
+}
+
+model_data_merged <- do.call(rbind, model_data_list)
+rownames(model_data_merged) <- 1:nrow(model_data_merged)
+
+model_data_long <- model_data_merged[rep(seq(nrow(model_data_merged)), model_data_merged$count), 1:7]
+
+m <- glmer(form_numeric ~ scale(age) + (1 + scale(age)|pair),
+           family = "binomial",
+           control = glmerControl(optimizer = "bobyqa"),
+           data = model_data_long)
+summary(m)
+
+tidy(m) %>%
+  mutate(term = str_remove_all(term, "scale")) %>%
+  filter(effect == "fixed" & term == "(age)") %>%
+  write_csv("analysis/model-outputs/shift-timing-Providence.csv") 
+
+overall_trend <- ggpredict(m, c("age [all]"), type = "random") 
+
+# compute the age at which ADL forms are produced >50% of the time 
+xintercept <- overall_trend %>%
+  filter(predicted >= 0.5) %>%
+  slice_head() %>%
+  pull(x)
