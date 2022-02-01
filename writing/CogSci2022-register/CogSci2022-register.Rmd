@@ -9,10 +9,10 @@ author-information: >
     \And {\large \bf Marisa Casillas} \\ University of Chicago \\ \texttt{mcasillas@uchicago.edu}}
 
 abstract: >
-  Child-directed language (CDL) features words such as _doggy_, _night-night_, and _tummy_ that are rarely used in adult-directed language (ADL). Characterisitcs of CDL word forms, such as diminutivization and reduplication, explain why they may be learned and produced earlier by children. However, it is not yet clear how or when children switch to using ADL equivalents---_dog_, _goodnight_, _stomach_. Through analysis of speech transcripts from CHILDES and the Language Development Project corpus, we show that children significantly increase their production of ADL word forms across age, with the average CDL-to-ADL transition point at 2.5 years. Many of the linguistic features that distinguish CDL vs. ADL registers (e.g., lexical and syntactic complexity) similarly differentiated the local speech contexts surrounding CDL vs. ADL word forms in children's input. Learners may therefore be able to capitalize on these cues to support their discovery of register along with context-appropriate CDL/ADL pair use.
+  Child-directed language (CDL) features words such as _doggy_, _night-night_, and _tummy_ that are rarely used in adult-directed language (ADL). Characteristics of CDL word forms, such as diminutivization and reduplication, explain why they may be learned and produced earlier by children. However, it is not yet clear how or when children 'switch' to using ADL equivalents---_dog_, _goodnight_, _stomach_. Through analysis of speech transcripts from CHILDES and the Language Development Project corpus, we show that children significantly increase their production of ADL word forms across age, with the average CDL-to-ADL transition point at 2.5 years. Many of the linguistic features that distinguish CDL vs. ADL registers (e.g., lexical and syntactic complexity) similarly differentiated the local speech contexts surrounding CDL vs. ADL word forms in children's input, which is primarily CDL in these corpora. Learners may therefore be able to capitalize on these linguistic cues to support their discovery of register along with context-appropriate CDL/ADL pair use.
   
 keywords: >
-    child-directed language; word production; linguistic input; social register; corpus analysis; developmental change
+    child-directed language; word production; linguistic input; speech register; corpus analysis
     
 output: cogsci2016::cogsci_paper
 #final-submission: \cogscifinalcopy
