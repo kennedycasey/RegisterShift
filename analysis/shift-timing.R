@@ -134,6 +134,7 @@ for (i in pairs) {
               ADS = ADS_count/(CDS_count + ADS_count)) %>%
     pivot_longer(c(CDS, ADS), names_to = "form", values_to = "prop") %>%
     ggplot(aes(x = age, y = prop, color = form, fill = form)) + 
+    geom_vline(xintercept = xintercept, color = "gray", size = 1.5) + 
     geom_point() +
     geom_smooth(data = model_data_long, 
                 aes(x = age, y = form_numeric), 
@@ -169,18 +170,19 @@ for (i in unique(pairs)) {
     filter(pair == i)
 }
 
-prop <- ggarrange(doggy_dog, kitty_cat, tummy_stomach, 
-                  daddy_dad, mommy_mom, bunny_rabbit,
-                  duckie_duck, blankie_blanket, froggy_frog,
-                  potty_bathroom, `night night_goodnight`, dolly_doll,
-                  horsey_horse, piggy_pig, birdie_bird,
-                  ncol = 5, nrow = 3)
+prop <- ggarrange(birdie_bird, doggy_dog, bunny_rabbit,
+                  blankie_blanket, dolly_doll, daddy_dad, 
+                  duckie_duck, horsey_horse, mommy_mom, 
+                  froggy_frog, kitty_cat, potty_bathroom, 
+                  piggy_pig, `night night_goodnight`, tummy_stomach,
+                  ncol = 3, nrow = 5)
 
 annotate_figure(prop,
+                top = text_grob("      No Shift                  Early Shift                Late Shift", size = 25, face = "bold"),
                 left = text_grob("Proportion of tokens per form", rot = 90, size = 25, face = "bold"), 
                 bottom = text_grob("Age (months)", size = 25, face = "bold"))
 
-ggsave("writing/figs/bypair-shift-timing.png", height = 10, width = 15, dpi = 300)
+ggsave("writing/figs/bypair-shift-timing.png", height = 15, width = 10, dpi = 300)
 
 # generate summary prop plot
 model_data_list = list()
@@ -224,8 +226,13 @@ tidy(m) %>%
   filter(effect == "fixed" & term == "(age)") %>%
   write_csv("analysis/model-outputs/shift-timing.csv")
 
-overall_trend <- ggpredict(m, c("age [all]"), type = "random")
+overall_trend <- ggpredict(m, c("age [all]"), type = "random") 
 
+# compute the age at which ADL forms are produced >50% of the time 
+xintercept <- overall_trend %>%
+  filter(predicted >= 0.5) %>%
+  slice_head() %>%
+  pull(x)
 
 ggplot() + 
   geom_smooth(data = model_data_long, 
@@ -238,7 +245,7 @@ ggplot() +
   geom_line(data = overall_trend, 
             aes(x = x, y = predicted), color = "#235789", size = 2) +
   scale_x_continuous(limits = c(0, 84), breaks = seq(0, 84, by = 12)) +
-  labs(x = "Age (months)", y = "Proportion of ADL forms") +
+  labs(x = "Age (months)", y = "Probability of producing ADL form") +
   geom_hline(yintercept = 0.5, linetype = "dotted", size = 1) +
   theme_test(base_size = 20) +
   theme(axis.title = element_text(face = "bold")) +

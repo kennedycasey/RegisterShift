@@ -169,12 +169,11 @@ shift.timing <- png::readPNG("../figs/shift-timing.png")
 grid::grid.raster(shift.timing)
 ```
 
-```{r shift-timing-bypair-fig, fig.env = "figure*", fig.pos = "!ht", fig.align = "center", fig.width = 11, fig.height = 4, fig.cap = "Individual word-pair trajectories for increasing production of ADL forms (blue) and decreasing production of CDL forms (red) with age. Points indicate proportions for each 1-month age bin."}
+```{r shift-timing-bypair-fig, fig.env = "figure", fig.pos = "!ht", fig.align = "center", fig.width = 3.4, fig.height = 5, fig.cap = "Individual word-pair trajectories for increasing production of ADL forms (blue) and decreasing production of CDL forms (red) with age. Points indicate proportions for each 1-month age bin. Vertical gray lines at 28 months indicate the overall model-predicted CDL-to-ADL transition point across all words."}
 
 bypair.shift.timing <- png::readPNG("../figs/bypair-shift-timing.png")
 grid::grid.raster(bypair.shift.timing)
 ```
-<!--mc2kc: you took out the shift type labels! i kinda liked them. i know i suggested we not focus too much on the types in the discussion but i do think it's probably worth raising them as a candidate concept to think about further. do you feel strongly about having them in/out? if we do have them in, it'd be nice to add a vertical line at 30 months in each plot to make more apparent the difference between early and late.-->
 
 # Discussion
 Analysis of children's own spontaneous speech revealed development shifts in their production of CDL vs. ADL forms, with the latter becoming increasingly more prominent over age. While we found substantial variation in the exact trajectories of CDL-to-ADL vocabulary shift for the 15 word pairs, the overall trend towards ADL production was clear. We take children's shifts away from CDL forms and towards ADL forms as indirect evidence of their early formation of CDL and ADL as distinct registers. <!--kc: tried to keep this really short but can definitely expand if space allows; mc2kc: i think this works for now! the prediction and outcomes are pretty clear minus the pair-level variation. if you do end up adding when the effects replicate across the CHILDES vs. LDP corpora you could mention this as a strengthening factor in interpreting the results-->
