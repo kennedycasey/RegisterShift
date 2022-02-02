@@ -178,7 +178,7 @@ prop <- ggarrange(birdie_bird, doggy_dog, bunny_rabbit,
                   ncol = 3, nrow = 5)
 
 annotate_figure(prop,
-                top = text_grob("      No Shift                  Early Shift                Late Shift", size = 25, face = "bold"),
+                top = text_grob("     No Switch              Early Switch            Late Switch", size = 25, face = "bold"),
                 left = text_grob("Proportion of tokens per form", rot = 90, size = 25, face = "bold"), 
                 bottom = text_grob("Age (months)", size = 25, face = "bold"))
 
