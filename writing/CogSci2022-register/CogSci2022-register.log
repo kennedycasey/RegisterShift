@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2022.1.27)  2 FEB 2022 03:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2022.1.27)  2 FEB 2022 04:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -690,7 +690,7 @@ Underfull \vbox (badness 10000) detected at line 84
  []
 
 
-Underfull \hbox (badness 2707) in paragraph at lines 134--151
+Underfull \hbox (badness 2707) in paragraph at lines 134--150
 []\OT1/ptm/m/n/10 While CDL-specific words (e.g., \OT1/ptm/m/it/10 doggy\OT1/pt
 m/m/n/10 , \OT1/ptm/m/it/10 night-night\OT1/ptm/m/n/10 ,
  []
@@ -704,48 +704,48 @@ dftex.map}
 Underfull \vbox (badness 1406) has occurred while \output is active []
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 269.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 268.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 269.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 268.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 269.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 268.
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <9> not available
-(Font)              Font shape `OMS/pzccm/m/n' tried instead on input line 312.
+(Font)              Font shape `OMS/pzccm/m/n' tried instead on input line 311.
 
 [2]
 LaTeX Font Info:    Trying to load font information for OML+ptm on input line 3
-19.
+18.
 
 (/Users/chatterlabmanager/Library/TinyTeX/texmf-dist/tex/latex/psnfss/omlptm.fd
 File: omlptm.fd 
 )
 LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 319.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 318.
 <figs/shift-timing-fig-1.pdf, id=100, 216.81pt x 181.67876pt>
 File: figs/shift-timing-fig-1.pdf Graphic file (type pdf)
 <use figs/shift-timing-fig-1.pdf>
-Package pdftex.def Info: figs/shift-timing-fig-1.pdf  used on input line 326.
+Package pdftex.def Info: figs/shift-timing-fig-1.pdf  used on input line 325.
 (pdftex.def)             Requested size: 216.80946pt x 181.6783pt.
 <figs/shift-timing-bypair-fig-1.pdf, id=101, 245.91875pt x 369.38pt>
 File: figs/shift-timing-bypair-fig-1.pdf Graphic file (type pdf)
 <use figs/shift-timing-bypair-fig-1.pdf>
 Package pdftex.def Info: figs/shift-timing-bypair-fig-1.pdf  used on input line
- 365.
+ 364.
 (pdftex.def)             Requested size: 245.91814pt x 369.37909pt.
 
-Overfull \hbox (2.00688pt too wide) in paragraph at lines 365--366
+Overfull \hbox (2.00688pt too wide) in paragraph at lines 364--365
  [][] 
  []
 
 [3 <./figs/shift-timing-fig-1.pdf> <./figs/shift-timing-bypair-fig-1.pdf>]
-Underfull \hbox (badness 1888) in paragraph at lines 393--398
+Underfull \hbox (badness 1888) in paragraph at lines 392--397
 \OT1/ptm/m/n/10 We next ex-plored chil-dren's in-put (i.e., other-produced
  []
 
 <figs/ling-predictors-fig-1.pdf, id=127, 457.71pt x 187.70125pt>
 File: figs/ling-predictors-fig-1.pdf Graphic file (type pdf)
 <use figs/ling-predictors-fig-1.pdf>
-Package pdftex.def Info: figs/ling-predictors-fig-1.pdf  used on input line 434
+Package pdftex.def Info: figs/ling-predictors-fig-1.pdf  used on input line 433
 .
 (pdftex.def)             Requested size: 457.7089pt x 187.70079pt.
 
@@ -772,28 +772,26 @@ Package rerunfilecheck Info: File `CogSci2022-register.out' has not changed.
 (rerunfilecheck)             Checksum: 7BBA16E76B25612222BA0DAFDDCE07A3;3214.
  ) 
 Here is how much of TeX's memory you used:
- 13908 strings out of 480247
- 226062 string characters out of 5894309
+ 13904 strings out of 480247
+ 226025 string characters out of 5894309
  530132 words of memory out of 5000000
- 31497 multiletter control sequences out of 15000+600000
- 511293 words of font info for 108 fonts, out of 8000000 for 9000
+ 31495 multiletter control sequences out of 15000+600000
+ 510770 words of font info for 106 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  60i,15n,63p,646b,533s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/Users/chatterlabmanager/Library/TinyTeX/texmf-dist/fonts/enc/dvips/base/8r.
 enc}</Users/chatterlabmanager/Library/TinyTeX/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmmi10.pfb></Users/chatterlabmanager/Library/TinyTeX/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmsy10.pfb></Users/chatterlabmanager/Library/TinyTeX/t
-exmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></Users/chatterlabmanager/Library/
-TinyTeX/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></Users/chatterlabmanager/Li
-brary/TinyTeX/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></Users/chatterlabman
-ager/Library/TinyTeX/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></Users/chatt
-erlabmanager/Library/TinyTeX/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></User
-s/chatterlabmanager/Library/TinyTeX/texmf-dist/fonts/type1/urw/times/utmri8a.pf
-b>
-Output written on CogSci2022-register.pdf (8 pages, 1463732 bytes).
+exmf-dist/fonts/type1/urw/symbol/usyr.pfb></Users/chatterlabmanager/Library/Tin
+yTeX/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></Users/chatterlabmanager/Libr
+ary/TinyTeX/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></Users/chatterlabmana
+ger/Library/TinyTeX/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></Users/chatter
+labmanager/Library/TinyTeX/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on CogSci2022-register.pdf (8 pages, 1455242 bytes).
 PDF statistics:
- 302 PDF objects out of 1000 (max. 8388607)
- 261 compressed objects within 3 object streams
+ 295 PDF objects out of 1000 (max. 8388607)
+ 256 compressed objects within 3 object streams
  112 named destinations out of 1000 (max. 500000)
  160 words of extra memory for PDF output out of 10000 (max. 10000000)
 
