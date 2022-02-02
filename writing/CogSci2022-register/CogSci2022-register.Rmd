@@ -152,7 +152,7 @@ The trend of increasing ADL form production was significant for `r bypair.shift`
 
 <!--mc2kc: it might be worth mentioning when the overall effects replicate both in our (primarily) cross-sectional megacorpus and our longitudinal LDP data-->
 
-```{r shift-timing-fig, fig.env = "figure", fig.pos = "h", fig.align = "left", fig.width = 3.4, fig.height = 3.4, fig.cap = "Model-predicted increase in production of ADL forms across age, with shaded standard error region. Gray lines depict individual word-pair trajectories."}
+```{r shift-timing-fig, fig.env = "figure", fig.pos = "h", fig.align = "left", fig.width = 3, fig.height = 3, fig.cap = "Model-predicted increase in production of ADL forms across age, with shaded standard error region. Gray lines depict individual word-pair trajectories."}
 
 shift.timing <- png::readPNG("../figs/shift-timing.png")
 grid::grid.raster(shift.timing)
