@@ -157,13 +157,13 @@ The trend of increasing ADL form production was significant for `r bypair.shift`
 
 To further examine the robustness of the overall effect of increasing ADL form production over age, we ran subset analyses on all CHILDES transcripts (primarily cross-sectional, with hundreds of children), all LDP transcripts (longitudinal, _n_ = 59, age range = 14--58 months), and all transcripts from the Providence corpus, a small, longitudinal subset of CHILDES [_n_ = 6, age range = 11--48 months: @demuth2006word]. The main finding was replicated in all three subsets. Children significantly increased their production of ADL forms over age collectively across all CHILDES corpora ($\beta$ = `r format(round(childes.shift$estimate, 2), nsmall = 2)`, _SE_ = `r format(round(childes.shift$std.error, 2), nsmall = 2)`, _t_ = `r format(round(childes.shift$statistic, 2), nsmall = 2)`, _p_ `r ifelse(childes.shift$p.value < .001, paste("< 0.001"), paste("=", format(round(childes.shift$p.value, 3), 3)))`), as well as in LDP corpus ($\beta$ = `r format(round(ldp.shift$estimate, 2), nsmall = 2)`, _SE_ = `r format(round(ldp.shift$std.error, 2), nsmall = 2)`, _t_ = `r format(round(ldp.shift$statistic, 2), nsmall = 2)`, _p_ `r ifelse(ldp.shift$p.value < .001, paste("< 0.001"), paste("=", format(round(ldp.shift$p.value, 3), 3)))`) and Providence corpus ($\beta$ = `r format(round(providence.shift$estimate, 2), nsmall = 2)`, _SE_ = `r format(round(providence.shift$std.error, 2), nsmall = 2)`, _t_ = `r format(round(providence.shift$statistic, 2), nsmall = 2)`, _p_ `r ifelse(providence.shift$p.value < .001, paste("< 0.001"), paste("=", format(round(providence.shift$p.value, 3), 3)))`).
 
-```{r shift-timing-fig, fig.env = "figure", fig.pos = "h", fig.align = "left", fig.width = 3, fig.height = 3, fig.cap = "Model-predicted increase in production of ADL forms across age, with shaded standard error region. Gray lines depict individual word-pair trajectories."}
+```{r shift-timing-fig, fig.env = "figure", fig.pos = "h", fig.align = "center", fig.width = 3, fig.height = 3, fig.cap = "Model-predicted increase in production of ADL forms across age, with shaded standard error region. Gray lines depict individual word-pair trajectories."}
 
 shift.timing <- png::readPNG("../figs/shift-timing.png")
 grid::grid.raster(shift.timing)
 ```
 
-```{r shift-timing-bypair-fig, fig.env = "figure", fig.pos = "!ht", fig.align = "center", fig.width = 3.4, fig.height = 5, fig.cap = "Individual word-pair trajectories for increasing production of ADL forms (blue) and decreasing production of CDL forms (red) with age. Points indicate proportions for each 1-month age bin. Vertical gray lines at 28 months indicate the overall model-predicted CDL-to-ADL transition point across all words."}
+```{r shift-timing-bypair-fig, fig.env = "figure", fig.pos = "!ht", fig.align = "center", fig.width = 3.4, fig.height = 5.4, fig.cap = "Individual word-pair trajectories for increasing production of ADL forms (blue) and decreasing production of CDL forms (red) with age. Points indicate proportions for each 1-month age bin. Vertical gray lines at 28 months indicate the overall model-predicted CDL-to-ADL transition point across all words."}
 
 bypair.shift.timing <- png::readPNG("../figs/bypair-shift-timing.png")
 grid::grid.raster(bypair.shift.timing)
@@ -239,8 +239,8 @@ interactions <- ggplot(filter(input.models, type == "interaction"),
 
 model.fig <- ggarrange(main.effects, interactions, widths = c(2.9, 3.2))
 
-annotate_figure(model.fig, bottom = textGrob("Coefficient Estimate", gp = gpar(cex = 1.3)), 
-                left = textGrob("Predictor", rot = 90, vjust = 1, gp = gpar(cex = 1.3)))
+annotate_figure(model.fig, bottom = textGrob("Coefficient Estimate"),
+                left = textGrob("Predictor", rot = 90, vjust = 1))
 ```
 
 # Method
