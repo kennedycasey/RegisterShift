@@ -176,7 +176,7 @@ Here, we tested whether the linguistic features that differentiate CDL vs. ADL a
 
 We hypothesized that utterances with CDL forms, relative to utterances with ADL forms, would be associated with (1) higher mean pitch, (2) greater pitch variability, (3) slower speaking rates, and (4) less lexical complexity. We also predicted that CDL utterances would contain (5) fewer rare words, (6) fewer words overall, and (7) fewer verb phrases. If these linguistic cues reliably differentiate CDL vs. ADL word usage contexts, then they could provide a viable source of information to support children's association between these words and their corresponding registers.
 
-```{r ling-predictors-fig, fig.env = "figure*", fig.pos = "h", fig.align = "center", fig.width = 7,  set.cap.width = TRUE, num.cols.cap = 2, fig.cap = "Coefficient estimates for linguistic predictors of form. Positive main effects indicate that utterances are more likely to contain ADL forms when they have higher values for that predictor (e.g., faster speech rates). Positive age interactions indicate an increasing effect of the predictor with age. Error bars depict standard errors of the coefficient estimates, and filled circles represent significant effects (\\textit{p} $<$ 0.05)."}
+```{r ling-predictors-fig, fig.env = "figure*", fig.pos = "h", fig.align = "center", fig.width = 6.5, fig.height = 2.7, set.cap.width = TRUE, num.cols.cap = 2, fig.cap = "Coefficient estimates for linguistic predictors of form. Positive main effects indicate that utterances are more likely to contain ADL forms when they have higher values for that predictor (e.g., more verbs). Positive age interactions indicate an increasing effect of the predictor with age. Error bars depict standard errors of the coefficient estimates, and filled circles represent significant effects (\\textit{p} $<$ 0.05)."}
 
 path <- "../../analysis/model-outputs/input/"
 filenames <- list.files(path, "*.csv")
@@ -210,7 +210,9 @@ main.effects <- ggplot(filter(input.models, type == "main_effect"),
   scale_x_continuous(limits = c(-0.5, 0.5)) +
   labs(title = "Main Effect", x = "Coefficient Estimate") +
   theme_test(base_size = 10) +
-  theme(legend.position = "none", plot.title = element_text(hjust = 0.5))
+  theme(legend.position = "none", 
+        plot.title = element_text(hjust = 0.5), 
+        axis.title = element_blank())
   
 interactions <- ggplot(filter(input.models, type == "interaction"), 
        aes(x = Estimate, y = Predictor, color = level)) +
@@ -227,15 +229,13 @@ interactions <- ggplot(filter(input.models, type == "interaction"),
   theme(legend.position = "right", legend.title = element_blank(), 
         plot.title = element_text(hjust = 0.5), 
         axis.text.y = element_blank(), axis.title.y = element_blank(), 
-        axis.ticks.y = element_blank())
+        axis.ticks.y = element_blank(), 
+        axis.title = element_blank())
 
-model.fig <- ggarrange(main.effects, interactions, widths = c(3, 3.2))
-ggsave("../figs/model-outputs.png", model.fig, height = 3, width = 5, dpi = 300)
+model.fig <- ggarrange(main.effects, interactions, widths = c(2.9, 3.2))
 
-img <- png::readPNG("../figs/model-outputs.png")
-grid::grid.raster(img)
-
-# mc2kc: **extremely** minor and the very last thing to pay attention to (except that pesky 10 in the refs) is to maybe only have the xlab once at the bottom instead of below each panel
+annotate_figure(model.fig, bottom = textGrob("Coefficient Estimate", gp = gpar(cex = 1.3)), 
+                left = textGrob("Predictor", rot = 90, vjust = 1, gp = gpar(cex = 1.3)))
 ```
 
 # Method
