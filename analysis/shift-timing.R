@@ -368,7 +368,7 @@ tidy(m) %>%
 overall_trend <- ggpredict(m, c("age [all]"), type = "random") 
 
 # compute the age at which ADL forms are produced >50% of the time 
-xintercept <- overall_trend %>%
+xintercept.LDP <- overall_trend %>%
   filter(predicted >= 0.5) %>%
   slice_head() %>%
   pull(x)
@@ -473,12 +473,12 @@ tidy(m) %>%
 overall_trend <- ggpredict(m, c("age [all]"), type = "random") 
 
 # compute the age at which ADL forms are produced >50% of the time 
-xintercept <- overall_trend %>%
+xintercept.Providence <- overall_trend %>%
   filter(predicted >= 0.5) %>%
   slice_head() %>%
   pull(x)
 
-# CHILDES subset -----------------------------------------------------------
+# Providence subset -----------------------------------------------------------
 utterances <- childes_utterances %>%
   filter(target_child_age < 84 & 
            speaker_role == "Target_Child" & 
@@ -578,7 +578,7 @@ tidy(m) %>%
 overall_trend <- ggpredict(m, c("age [all]"), type = "random") 
 
 # compute the age at which ADL forms are produced >50% of the time 
-xintercept <- overall_trend %>%
+xintercept.providence <- overall_trend %>%
   filter(predicted >= 0.5) %>%
   slice_head() %>%
   pull(x)

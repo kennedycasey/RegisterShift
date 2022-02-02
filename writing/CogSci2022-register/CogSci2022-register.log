@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2022.1.27)  2 FEB 2022 01:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2022.1.27)  2 FEB 2022 02:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -724,67 +724,65 @@ LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <10> not available
 <figs/shift-timing-fig-1.pdf, id=100, 216.81pt x 181.67876pt>
 File: figs/shift-timing-fig-1.pdf Graphic file (type pdf)
 <use figs/shift-timing-fig-1.pdf>
-Package pdftex.def Info: figs/shift-timing-fig-1.pdf  used on input line 351.
+Package pdftex.def Info: figs/shift-timing-fig-1.pdf  used on input line 326.
 (pdftex.def)             Requested size: 216.80946pt x 181.6783pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 <figs/shift-timing-bypair-fig-1.pdf, id=101, 245.91875pt x 369.38pt>
 File: figs/shift-timing-bypair-fig-1.pdf Graphic file (type pdf)
 <use figs/shift-timing-bypair-fig-1.pdf>
 Package pdftex.def Info: figs/shift-timing-bypair-fig-1.pdf  used on input line
- 362.
+ 365.
 (pdftex.def)             Requested size: 245.91814pt x 369.37909pt.
 
-Overfull \hbox (2.00688pt too wide) in paragraph at lines 362--363
+Overfull \hbox (2.00688pt too wide) in paragraph at lines 365--366
  [][] 
  []
 
-
-Underfull \hbox (badness 1888) in paragraph at lines 387--392
+[3 <./figs/shift-timing-fig-1.pdf> <./figs/shift-timing-bypair-fig-1.pdf>]
+Underfull \hbox (badness 1888) in paragraph at lines 393--398
 \OT1/ptm/m/n/10 We next ex-plored chil-dren's in-put (i.e., other-produced
  []
 
-[3 <./figs/shift-timing-fig-1.pdf>]
-<figs/ling-predictors-fig-1.pdf, id=119, 457.71pt x 187.70125pt>
+<figs/ling-predictors-fig-1.pdf, id=127, 457.71pt x 187.70125pt>
 File: figs/ling-predictors-fig-1.pdf Graphic file (type pdf)
 <use figs/ling-predictors-fig-1.pdf>
-Package pdftex.def Info: figs/ling-predictors-fig-1.pdf  used on input line 428
+Package pdftex.def Info: figs/ling-predictors-fig-1.pdf  used on input line 434
 .
 (pdftex.def)             Requested size: 457.7089pt x 187.70079pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[4 <./figs/shift-timing-bypair-fig-1.pdf>] [5 <./figs/ling-predictors-fig-1.pdf
->]
-Underfull \hbox (badness 3482) in paragraph at lines 661--667
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[4] [5 <./figs/ling-predictors-fig-1.pdf>]
+Underfull \hbox (badness 3482) in paragraph at lines 671--677
  []\OT1/ptm/m/n/10 10 []  Bates, D., M[]achler, M., Bolker, B., & Walker,
  []
 
 
-Underfull \hbox (badness 1194) in paragraph at lines 661--667
+Underfull \hbox (badness 1194) in paragraph at lines 671--677
  \OT1/ptm/m/n/10 S. (2015). Fit-ting lin-ear mixed-effects mod-els us-ing
  []
 
 
-Underfull \hbox (badness 1796) in paragraph at lines 661--667
+Underfull \hbox (badness 1796) in paragraph at lines 671--677
  \OT1/ptm/m/n/10 lme4. \OT1/ptm/m/it/10 Jour-nal of Sta-tis-ti-cal Soft-ware\OT
 1/ptm/m/n/10 , \OT1/ptm/m/it/10 67\OT1/ptm/m/n/10 (1), 1--48.
  []
 
 
-Underfull \hbox (badness 1946) in paragraph at lines 678--682
+Underfull \hbox (badness 1946) in paragraph at lines 688--692
  [][]\OT1/ptm/m/n/10 Braginsky, M., Sanchez, A., & Yurovsky, D. (2021).
  []
 
 
-Underfull \hbox (badness 1616) in paragraph at lines 678--682
+Underfull \hbox (badness 1616) in paragraph at lines 688--692
  \OT1/ptm/m/it/10 Childesr: Ac-cess-ing the 'CHILDES' database\OT1/ptm/m/n/10 .
  Re-
  []
 
 [6]
-Underfull \hbox (badness 2269) in paragraph at lines 817--821
+Underfull \hbox (badness 2269) in paragraph at lines 827--831
  \OT1/ptm/m/n/10 Pre-ver-bal in-fants in-fer third-party so-cial re-la-tion-shi
 ps
  []
@@ -793,13 +791,13 @@ ps
 
 ] (./CogSci2022-register.aux)
 Package rerunfilecheck Info: File `CogSci2022-register.out' has not changed.
-(rerunfilecheck)             Checksum: 6463412CF1F11F518D1C4CEF6BB0EF9F;3214.
+(rerunfilecheck)             Checksum: 7BBA16E76B25612222BA0DAFDDCE07A3;3214.
  ) 
 Here is how much of TeX's memory you used:
  13909 strings out of 480247
- 226083 string characters out of 5894309
+ 226080 string characters out of 5894309
  530132 words of memory out of 5000000
- 31499 multiletter control sequences out of 15000+600000
+ 31498 multiletter control sequences out of 15000+600000
  511293 words of font info for 108 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  60i,15n,63p,646b,533s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -814,10 +812,10 @@ ager/Library/TinyTeX/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></Users/chatt
 erlabmanager/Library/TinyTeX/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></User
 s/chatterlabmanager/Library/TinyTeX/texmf-dist/fonts/type1/urw/times/utmri8a.pf
 b>
-Output written on CogSci2022-register.pdf (8 pages, 1464961 bytes).
+Output written on CogSci2022-register.pdf (8 pages, 1464634 bytes).
 PDF statistics:
- 304 PDF objects out of 1000 (max. 8388607)
- 263 compressed objects within 3 object streams
- 111 named destinations out of 1000 (max. 500000)
+ 306 PDF objects out of 1000 (max. 8388607)
+ 265 compressed objects within 3 object streams
+ 112 named destinations out of 1000 (max. 500000)
  160 words of extra memory for PDF output out of 10000 (max. 10000000)
 
