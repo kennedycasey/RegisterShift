@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2022.1.27)  2 FEB 2022 02:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2022.1.27)  2 FEB 2022 03:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -755,34 +755,34 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [4] [5 <./figs/ling-predictors-fig-1.pdf>]
-Underfull \hbox (badness 3482) in paragraph at lines 671--677
+Underfull \hbox (badness 3482) in paragraph at lines 687--693
  []\OT1/ptm/m/n/10 10 []  Bates, D., M[]achler, M., Bolker, B., & Walker,
  []
 
 
-Underfull \hbox (badness 1194) in paragraph at lines 671--677
+Underfull \hbox (badness 1194) in paragraph at lines 687--693
  \OT1/ptm/m/n/10 S. (2015). Fit-ting lin-ear mixed-effects mod-els us-ing
  []
 
 
-Underfull \hbox (badness 1796) in paragraph at lines 671--677
+Underfull \hbox (badness 1796) in paragraph at lines 687--693
  \OT1/ptm/m/n/10 lme4. \OT1/ptm/m/it/10 Jour-nal of Sta-tis-ti-cal Soft-ware\OT
 1/ptm/m/n/10 , \OT1/ptm/m/it/10 67\OT1/ptm/m/n/10 (1), 1--48.
  []
 
 
-Underfull \hbox (badness 1946) in paragraph at lines 688--692
+Underfull \hbox (badness 1946) in paragraph at lines 704--708
  [][]\OT1/ptm/m/n/10 Braginsky, M., Sanchez, A., & Yurovsky, D. (2021).
  []
 
 
-Underfull \hbox (badness 1616) in paragraph at lines 688--692
+Underfull \hbox (badness 1616) in paragraph at lines 704--708
  \OT1/ptm/m/it/10 Childesr: Ac-cess-ing the 'CHILDES' database\OT1/ptm/m/n/10 .
  Re-
  []
 
 [6]
-Underfull \hbox (badness 2269) in paragraph at lines 827--831
+Underfull \hbox (badness 2269) in paragraph at lines 843--847
  \OT1/ptm/m/n/10 Pre-ver-bal in-fants in-fer third-party so-cial re-la-tion-shi
 ps
  []
@@ -812,7 +812,7 @@ ager/Library/TinyTeX/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></Users/chatt
 erlabmanager/Library/TinyTeX/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></User
 s/chatterlabmanager/Library/TinyTeX/texmf-dist/fonts/type1/urw/times/utmri8a.pf
 b>
-Output written on CogSci2022-register.pdf (8 pages, 1464634 bytes).
+Output written on CogSci2022-register.pdf (8 pages, 1465498 bytes).
 PDF statistics:
  306 PDF objects out of 1000 (max. 8388607)
  265 compressed objects within 3 object streams
