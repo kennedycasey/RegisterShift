@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2022.1.27)  2 FEB 2022 03:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2022.1.27)  2 FEB 2022 03:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -755,34 +755,12 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [4] [5 <./figs/ling-predictors-fig-1.pdf>]
-Underfull \hbox (badness 3482) in paragraph at lines 687--693
- []\OT1/ptm/m/n/10 10 []  Bates, D., M[]achler, M., Bolker, B., & Walker,
- []
-
-
-Underfull \hbox (badness 1194) in paragraph at lines 687--693
- \OT1/ptm/m/n/10 S. (2015). Fit-ting lin-ear mixed-effects mod-els us-ing
- []
-
-
-Underfull \hbox (badness 1796) in paragraph at lines 687--693
- \OT1/ptm/m/n/10 lme4. \OT1/ptm/m/it/10 Jour-nal of Sta-tis-ti-cal Soft-ware\OT
-1/ptm/m/n/10 , \OT1/ptm/m/it/10 67\OT1/ptm/m/n/10 (1), 1--48.
- []
-
-
-Underfull \hbox (badness 1946) in paragraph at lines 704--708
+Underfull \hbox (badness 1946) in paragraph at lines 703--706
  [][]\OT1/ptm/m/n/10 Braginsky, M., Sanchez, A., & Yurovsky, D. (2021).
  []
 
-
-Underfull \hbox (badness 1616) in paragraph at lines 704--708
- \OT1/ptm/m/it/10 Childesr: Ac-cess-ing the 'CHILDES' database\OT1/ptm/m/n/10 .
- Re-
- []
-
 [6]
-Underfull \hbox (badness 2269) in paragraph at lines 843--847
+Underfull \hbox (badness 2269) in paragraph at lines 840--844
  \OT1/ptm/m/n/10 Pre-ver-bal in-fants in-fer third-party so-cial re-la-tion-shi
 ps
  []
@@ -794,10 +772,10 @@ Package rerunfilecheck Info: File `CogSci2022-register.out' has not changed.
 (rerunfilecheck)             Checksum: 7BBA16E76B25612222BA0DAFDDCE07A3;3214.
  ) 
 Here is how much of TeX's memory you used:
- 13909 strings out of 480247
- 226080 string characters out of 5894309
+ 13908 strings out of 480247
+ 226062 string characters out of 5894309
  530132 words of memory out of 5000000
- 31498 multiletter control sequences out of 15000+600000
+ 31497 multiletter control sequences out of 15000+600000
  511293 words of font info for 108 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  60i,15n,63p,646b,533s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -812,10 +790,10 @@ ager/Library/TinyTeX/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></Users/chatt
 erlabmanager/Library/TinyTeX/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></User
 s/chatterlabmanager/Library/TinyTeX/texmf-dist/fonts/type1/urw/times/utmri8a.pf
 b>
-Output written on CogSci2022-register.pdf (8 pages, 1465498 bytes).
+Output written on CogSci2022-register.pdf (8 pages, 1463732 bytes).
 PDF statistics:
- 306 PDF objects out of 1000 (max. 8388607)
- 265 compressed objects within 3 object streams
+ 302 PDF objects out of 1000 (max. 8388607)
+ 261 compressed objects within 3 object streams
  112 named destinations out of 1000 (max. 500000)
  160 words of extra memory for PDF output out of 10000 (max. 10000000)
 
