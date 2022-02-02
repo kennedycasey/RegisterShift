@@ -241,7 +241,7 @@ annotate_figure(model.fig, bottom = textGrob("Coefficient Estimate", gp = gpar(c
 # Method
 
 ## Corpora
-We analyzed `r format(other.utts, big.mark = ",", trim = TRUE)` other-produced utterances (i.e., utterances not produced by the target child) in the CHILDES transcripts from Study 1. The majority of utterances were produced by children's primary caregivers (_n_ = `r format(caregiver.utts, big.mark = ",", trim = TRUE)`, or `r format(round(caregiver.utts/other.utts, 3)*100, nsmall = 1)`%). While, by and large, the utterances are not annotated for addressee, our manual scanning of the CHILDES corpora suggested that the vast majority of this speech is addressed to the target child. Study 2 analyses exclude the LDP corpus because it is not comprehensively timestamped.
+We analyzed `r format(other.utts, big.mark = ",", trim = TRUE)` other-produced utterances (i.e., utterances not produced by the target child) in the same CHILDES transcripts from Study 1. The majority of utterances were produced by children's primary caregivers (_n_ = `r format(caregiver.utts, big.mark = ",", trim = TRUE)`, or `r format(round(caregiver.utts/other.utts, 3)*100, nsmall = 1)`%). While, by and large, the utterances are not annotated for addressee, our manual scanning of the CHILDES corpora suggested that the vast majority of this speech is addressed to the target child. Study 2 analyses exclude the LDP corpus because it is not comprehensively timestamped.
 
 ## Linguistic input predictors
 
