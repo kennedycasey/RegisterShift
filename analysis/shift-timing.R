@@ -247,7 +247,7 @@ ggplot() +
   scale_x_continuous(limits = c(0, 84), breaks = seq(0, 84, by = 12)) +
   labs(x = "Age (months)", y = "Probability of producing ADL form") +
   geom_hline(yintercept = 0.5, linetype = "dotted", size = 1) +
-  theme_test(base_size = 20) +
+  theme_test(base_size = 18) +
   theme(axis.title = element_text(face = "bold")) +
   coord_cartesian(ylim = c(0, 1))
 ggsave("writing/figs/shift-timing.png", height = 5, width = 6, dpi = 300)
@@ -480,7 +480,9 @@ xintercept <- overall_trend %>%
 
 # CHILDES subset -----------------------------------------------------------
 utterances <- childes_utterances %>%
-  filter(target_child_age < 84 & speaker_role == "Target_Child") %>% 
+  filter(target_child_age < 84 & 
+           speaker_role == "Target_Child" & 
+           corpus_name == "Providence") %>% 
   mutate(gloss = paste0(' ', tolower(gloss), ' '), 
          age = round(target_child_age, digits = 0)) %>%
   select(gloss, age)

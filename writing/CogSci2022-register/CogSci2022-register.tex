@@ -85,10 +85,10 @@ words}
 \begin{abstract}
 Child-directed language (CDL) features words such as \emph{doggy},
 \emph{night-night}, and \emph{tummy} that are rarely used in
-adult-directed language (ADL). Characterisitcs of CDL word forms, such
+adult-directed language (ADL). Characteristics of CDL word forms, such
 as diminutivization and reduplication, explain why they may be learned
 and produced earlier by children. However, it is not yet clear how or
-when children switch to using ADL equivalents---\emph{dog},
+when children `switch' to using ADL equivalents---\emph{dog},
 \emph{goodnight}, \emph{stomach}. Through analysis of speech transcripts
 from CHILDES and the Language Development Project corpus, we show that
 children significantly increase their production of ADL word forms
@@ -96,13 +96,13 @@ across age, with the average CDL-to-ADL transition point at 2.5 years.
 Many of the linguistic features that distinguish CDL vs.~ADL registers
 (e.g., lexical and syntactic complexity) similarly differentiated the
 local speech contexts surrounding CDL vs.~ADL word forms in children's
-input. Learners may therefore be able to capitalize on these cues to
-support their discovery of register along with context-appropriate
-CDL/ADL pair use.
+input, which is primarily CDL in these corpora. Learners may therefore
+be able to capitalize on these linguistic cues to support their
+discovery of register along with context-appropriate CDL/ADL pair use.
 
 \textbf{Keywords:}
-child-directed language; word production; linguistic input; social
-register; corpus analysis; developmental change
+child-directed language; word production; linguistic input; speech
+register; corpus analysis
 \end{abstract}
 
 \hypertarget{introduction}{%
@@ -354,7 +354,7 @@ earliest ages sampled (e.g., \emph{duckie/duck} and
 \hypertarget{discussion}{%
 \section{Discussion}\label{discussion}}
 
-Analysis of children's own spontaneous speech revealed development
+Analysis of children's own spontaneous speech revealed developmental
 shifts in their production of CDL vs.~ADL forms, with the latter
 becoming increasingly more prominent over age. While we found
 substantial variation in the exact trajectories of CDL-to-ADL vocabulary
@@ -391,7 +391,7 @@ Igarashi, Jincho, \& Mazuka, 2016) and feature simpler constructions
 Here, we tested whether the linguistic features that differentiate CDL
 vs.~ADL at the register level also differentiate the local speech
 contexts surrounding CDL vs.~ADL forms---even in speech that is
-primarily addressed to children from their primary caregivers (i.e.,
+primarily addressed to children from their adult caregivers (i.e.,
 language from a single register). In other words, can form be predicted
 on the basis of individual utterance-level prosodic, lexical, or
 syntactic cues?
@@ -424,9 +424,13 @@ their corresponding registers.
 \subsection{Corpora}\label{corpora-1}}
 
 We analyzed 69,709 other-produced utterances (i.e., utterances not
-produced by the target child) in the same CHILDES transcripts from Study
-1. The majority of utterances were produced by children's primary
-caregivers (\emph{n} = 58,071, or 83.3\%).
+produced by the target child) in the CHILDES transcripts from Study 1.
+The majority of utterances were produced by children's primary
+caregivers (\emph{n} = 58,071, or 83.3\%). While, by and large, the
+utterances are not annotated for addressee, our manual scanning of the
+CHILDES corpora suggested that the vast majority of this speech is
+addressed to the target child. Study 2 analyses exclude the LDP corpus
+because it is not comprehensively timestamped.
 
 \hypertarget{linguistic-input-predictors}{%
 \subsection{Linguistic input
@@ -468,8 +472,8 @@ tokens\footnote{Manual checks revealed that many of the lowest-frequency
   so we excluded words with fewer than 10 tokens from our estimates of
   lexical rarity to reduce noise in this measure.}, we calculated a
 rarity score as the negative log proportion of other-produced tokens in
-CHILDES (i.e., number of tokens for a given word divided sum of all
-tokens of all words in the full corpus). We then averaged the rarity
+CHILDES (i.e., number of tokens for a given word divided by the sum of
+all tokens of all words in the full corpus). We then averaged the rarity
 scores for all individual words in a given target utterance. Utterances
 with more low-frequency words are considered more lexically rare.
 
@@ -490,14 +494,13 @@ We ran individual mixed-effects binomial logistic regression models of
 ADL or CDL word form use for each of seven linguistic input predictors.
 Models included fixed effects of linguistic predictor (scaled), target
 child age (in months, scaled), and their interaction as well as random
-intercepts for individual word pairs and speakers\footnote{Model
-  strucutre: glmer(form \textasciitilde{} linguistic predictor (numeric,
-  scaled) * age (months, scaled) + (1 \textbar{} word pair) + (1
-  \textbar{} speaker)}. For each target word token, the form was coded
-as CDL (0) or ADL (1), so coefficient estimates provide a measure of the
-strength of association between a predictor and ADL form. All main
-effects of linguistic predictors and interactions with age are shown in
-Figure 3.
+intercepts for individual word pairs and speakers\footnote{glmer(form
+  \(\sim\) linguistic predictor (numeric, scaled) * age (months, scaled)
+  + (1 \textbar{} word pair) + (1 \textbar{} speaker), family =
+  binomial)}. For each target word token, the form was coded as CDL (0)
+or ADL (1), so coefficient estimates provide a measure of the strength
+of association between a predictor and ADL form. All main effects of
+linguistic predictors and interactions with age are shown in Figure 3.
 
 At the prosodic level, we found significant effects for two of the three
 input predictors tested. Utterance-level \textbf{pitch range} was not
@@ -551,7 +554,11 @@ differentiate CDL vs.~ADL registers similarly partitioned utterances
 containing CDL vs.~ADL forms. Notably, these differences in local speech
 context emerged even in language that was primarily addressed to
 children from their primary caregivers (i.e., language likely from a
-single register---CDL).
+single register---CDL). This finding underscores the idea that register
+production reflects stylistic linguistic choices by the person producing
+the utterance and does not require the prototypically associated context
+(e.g., a caregiver can use ADL-like utterances when talking to a young
+child).
 
 While we do not yet know if these linguistic cues are actually exploited
 by learners, this study identifies which patterns appear learnable in
@@ -603,12 +610,17 @@ Children's linguistic knowledge builds around and together with their
 social knowledge. The lexical variants of CDL vs.~ADL registers are just
 one example of socially meaningful linguistic variation. Variation also
 appears across languages, dialects, accents, and other types of
-registers (e.g., pedagogical, narrative, etc.). We focus here on
-multiple labels for the same referent, but learners also face the
-inverse problem: one label for different referents (e.g., Casey, Potter,
-Lew-Williams, \& Wojcik, 2021; Meylan, Mankewitz, Floyd, Rabagliati, \&
-Srinivasan, 2021). We see these puzzles of word learning as
-interrelated; learning is happening at multiple levels---not just the
+registers (e.g., pedagogical, narrative, etc.). Over time, children
+become increasingly aware of the fact that language style is modulated
+by a variety of social factors, including the identities of speakers
+(e.g., from different social groups: Liberman, Woodward, \& Kinzler,
+2017) along with their addressees (e.g., young children vs.~adults:
+Ikeda, Kobayashi, \& Itakura, 2018; Soley \& Sebastian-Galles, 2020). We
+focus here on multiple labels for the same referent, but learners also
+face the inverse problem: one label for different referents (e.g.,
+Casey, Potter, Lew-Williams, \& Wojcik, 2021; Meylan, Mankewitz, Floyd,
+Rabagliati, \& Srinivasan, 2021). We see these puzzles of word learning
+as interrelated; learning is happening at multiple levels---not just the
 words themselves, but strong associations between words and their
 surrounding contexts (linguistic, social, etc.). Considering the
 interaction between these different factors can help us reason about
