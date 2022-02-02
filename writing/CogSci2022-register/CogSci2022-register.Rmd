@@ -1,5 +1,5 @@
 ---
-title: "Developmental shifts in children's use of register-specific words"
+title: "From _doggy_ to _dog_: Developmental shifts in children's use of register-specific words"
 bibliography: CogSci2022-register.bib
 csl: apa6.csl
 document-params: "10pt, letterpaper"
