@@ -5,10 +5,6 @@ library(wordbankr)
 library(lme4)
 library(lmerTest)
 
-utterances <- read_csv("data/childes-input.csv") %>%
-  select(corpus_name, id, speaker_id, target_child_id, age, 
-         pair, item, form, form_numeric, stem)
-
 function_words <- get_item_data(language = "English (American)", form = "WS") %>%
   filter(lexical_category == "function_words") %>%
   mutate(word = str_remove_all(uni_lemma, "(\\s*\\(\\w+\\))")) %>%
@@ -16,30 +12,42 @@ function_words <- get_item_data(language = "English (American)", form = "WS") %>
 
 `%notin%` <- Negate(`%in%`)
 
-words <- utterances %>%
-  mutate(word = tolower(stem)) %>%
-  separate_rows(word, sep = " ") %>%
-  #filter(word %notin% function_words) %>%
-  group_by(word) %>%
-  summarize(raw_freq = n()) %>%
-  mutate(row_number = row_number()) %>%
-  filter(row_number != 1 & raw_freq >= 10)
+for (i in c("other", "child")) {
+  utterances <- read_csv("data/childes-input.csv") %>%
+    filter(speaker_type == i) %>%
+    select(corpus_name, id, speaker_id, target_child_id, age, 
+         pair, item, form, form_numeric, stem)
+  
+  if (i == "other") {
+    words <- utterances %>%
+      mutate(word = tolower(stem)) %>%
+      separate_rows(word, sep = " ") %>%
+      #filter(word %notin% function_words) %>%
+      group_by(word) %>%
+      summarize(raw_freq = n()) %>%
+      mutate(row_number = row_number()) %>%
+      filter(row_number != 1 & raw_freq >= 10)
+  
+    #write_csv(words, "data-prep/lexical-input/raw-freq.csv")
+  }
+    
+  total <- sum(words$raw_freq)
 
-#write_csv(words, "data-prep/lexical-input/raw-freq.csv")
+  relative_freq <- words %>%
+    select(word, raw_freq) %>%
+    mutate(freq = raw_freq/total, 
+          freq = -log(freq))
 
-total <- sum(words$raw_freq)
+  rarity <- utterances %>%
+    mutate(word = tolower(stem)) %>%
+    separate_rows(word, sep = " ") %>%
+    filter(!str_detect(word, " |dog|cat|pig|stomach|mommy|daddy|mom|dad|frog|blanket|duck|rabbit|bunny|potty|bathroom|doll|horse|bird")) %>%
+    left_join(relative_freq, by = "word") %>%
+    group_by(id) %>%
+    summarize(rarity = mean(freq, na.rm = TRUE))
+  
+  filename <- ifelse(i == "child", "data/input/rarity-child.csv", 
+                     "data/input/rarity.csv")
 
-relative_freq <- words %>%
-  select(word, raw_freq) %>%
-  mutate(freq = raw_freq/total, 
-         freq = -log(freq))
-
-rarity <- utterances %>%
-  mutate(word = tolower(stem)) %>%
-  separate_rows(word, sep = " ") %>%
-  filter(!str_detect(word, " |dog|cat|pig|stomach|mommy|daddy|mom|dad|frog|blanket|duck|rabbit|bunny|potty|bathroom|doll|horse|bird")) %>%
-  left_join(relative_freq, by = "word") %>%
-  group_by(id) %>%
-  summarize(rarity = mean(freq, na.rm = TRUE))
-
-write_csv(rarity, "data/input/rarity.csv")
+  write_csv(rarity, filename)
+}
