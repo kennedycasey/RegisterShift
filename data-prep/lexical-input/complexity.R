@@ -9,6 +9,7 @@ library(lmerTest)
 library(performance)
 source("data-prep/overall/functions.R")
 
+nas <- list()
 for (type in c("wordbank", "ratings")) {
   aoa <- read_csv(paste0("data-prep/lexical-input/aoa-", type, ".csv"))
   
@@ -56,7 +57,11 @@ for (type in c("wordbank", "ratings")) {
              not_na = ifelse(is.na(not_na), 0, not_na)) %>%
       group_by(id) %>%
       summarize(na_prop = na/(na + not_na))
-  
-    mean(complexity_nas$na_prop)
+    
+      nas[[paste0(type, "-", i)]] <- mean(complexity_nas$na_prop)
   }
 }
+
+data.frame(nas) %>%
+  mutate(across(everything(), ~ round(.*100, 1))) %>%
+  write_csv("data-prep/lexical-input/complexity-nas.csv")
