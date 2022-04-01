@@ -43,6 +43,7 @@ for t in target_words:
     utts_df.to_csv("parsed/" + t + "-parsed.csv")
 
 # LDP
+'''
 for t in target_words:
     utts_df = pd.read_csv("~/Desktop/secure/ldp-byword/" + t + ".csv", 
     low_memory = False, encoding='latin-1')
@@ -57,3 +58,4 @@ for t in target_words:
     
     utts_df["parsed_gloss"] = pos_tags
     utts_df.to_csv("~/Desktop/secure/ldp-parsed/" + t + "-parsed.csv")
+'''
