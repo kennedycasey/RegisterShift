@@ -14,9 +14,7 @@ function_words <- get_item_data(language = "English (American)", form = "WS") %>
 
 for (i in c("other", "child")) {
   utterances <- read_csv("data/childes-input.csv") %>%
-    filter(speaker_type == i) %>%
-    select(corpus_name, id, speaker_id, target_child_id, age, 
-         pair, item, form, form_numeric, stem)
+    filter(speaker_type == i)
   
   if (i == "other") {
     words <- utterances %>%
@@ -28,7 +26,9 @@ for (i in c("other", "child")) {
       mutate(row_number = row_number()) %>%
       filter(row_number != 1 & raw_freq >= 10)
   
-    #write_csv(words, "data-prep/lexical-input/raw-freq.csv")
+    if (!file.exists("data-prep/lexical-input/raw-freq.csv")) {
+      write_csv(words, "data-prep/lexical-input/raw-freq.csv")
+    }
   }
     
   total <- sum(words$raw_freq)
@@ -41,7 +41,7 @@ for (i in c("other", "child")) {
   rarity <- utterances %>%
     mutate(word = tolower(stem)) %>%
     separate_rows(word, sep = " ") %>%
-    filter(!str_detect(word, " |dog|cat|pig|stomach|mommy|daddy|mom|dad|frog|blanket|duck|rabbit|bunny|potty|bathroom|doll|horse|bird")) %>%
+    #filter(!str_detect(word, " |dog|cat|pig|stomach|mommy|daddy|mom|dad|frog|blanket|duck|rabbit|bunny|potty|bathroom|doll|horse|bird")) %>%
     left_join(relative_freq, by = "word") %>%
     group_by(id) %>%
     summarize(rarity = mean(freq, na.rm = TRUE))
