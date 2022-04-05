@@ -9,13 +9,13 @@ path_to_pitch_info = "data-prep/prosodic-input/processed/"
 pitch_filenames <- list.files(path = path_to_pitch_info, pattern = ".csv")
 pitch_files <- lapply(paste0(path_to_pitch_info, pitch_filenames), read_csv)
 
+i = "child"
 for (i in c("other", "child")) {
   pitch_info <- do.call(rbind, pitch_files) %>%
     filter(speaker_type == i) %>%
     mutate(form = case_when(
         item %in% CDS_forms ~ "CDS", 
         item %in% ADS_forms ~ "ADS")) %>%
-    left_join(pairs %>% rename(item = word), by = "item") %>%
     filter(across(starts_with("pitch"), ~ . != "audio file missing" &
                     . != "relevant audio clip missing" &
                     . != "utterance too short to analyze" &
