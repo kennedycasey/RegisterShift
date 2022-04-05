@@ -48,6 +48,8 @@ for (i in c("child", "other")) {
     left_join(pitch) %>%
     left_join(verbs)
   
+  write_csv(data, paste0("data/input/combined-", i, ".csv"))
+  
   for (j in input_predictors) {
     model <- glmer(form_numeric ~ scale(eval(as.symbol(j))) * scale(age) + 
                      (1|pair) + 
