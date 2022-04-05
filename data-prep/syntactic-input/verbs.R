@@ -10,6 +10,7 @@ verb_files <- lapply(paste0(path_to_verb_info, parsed_filenames), read_csv)
 
 for (i in c("other", "child")) {
   verb_info <- do.call(rbind, verb_files) %>%
+    filter(speaker_type == i) %>%
     mutate(verbs = str_count(parsed_gloss, fixed("(VP ")) +
              str_count(parsed_gloss, fixed("(VBP ")) -
              str_count(parsed_gloss, fixed("(VP (VBP "))) %>%
