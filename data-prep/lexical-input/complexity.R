@@ -17,7 +17,8 @@ for (type in c("wordbank", "ratings")) {
     utterances <- read_csv("data/childes-input.csv") %>%
       filter(speaker_type == i)
     
-    known_words <- utterances %>%
+    if (type == "wordbank") {
+      known_words <- utterances %>%
       mutate(word = tolower(stem)) %>%
       separate_rows(word, sep = " ") %>%
       #filter(!str_detect(word, " |dog|cat|pig|stomach|mommy|daddy|mom|dad|frog|blanket|duck|rabbit|bunny|potty|bathroom|doll|horse|bird")) %>%
@@ -36,6 +37,18 @@ for (type in c("wordbank", "ratings")) {
     known_props <- utterances %>%
       left_join(known_words, by = c("id")) %>%
       mutate(complexity = -log(known_prop))
+    }
+    
+    if (type == "ratings") {
+      known_props <- utterances %>%
+        mutate(word = tolower(stem)) %>%
+        separate_rows(word, sep = " ") %>%
+        #filter(!str_detect(word, " |dog|cat|pig|stomach|mommy|daddy|mom|dad|frog|blanket|duck|rabbit|bunny|potty|bathroom|doll|horse|bird")) %>%
+        left_join(aoa, by = "word") %>%
+        filter(!is.na(aoa)) %>%
+        group_by(id) %>%
+        summarize(complexity = mean(aoa))
+    }
   
     filename <- ifelse(i == "child", paste0("data/input/complexity-", type, "-child.csv"), 
                        paste0("data/input/complexity-", type, ".csv"))

@@ -59,4 +59,7 @@ write_csv(production_percentile, "data-prep/lexical-input/production-norms-wordb
 aoa2 <- read_xlsx("data-prep/lexical-input/13428_2013_348_MOESM1_ESM.xlsx") %>%
   rename(word = Word) %>%
   mutate(aoa = as.numeric(as.character(Rating.Mean))) %>%
-  filter(!is.na(aoa))
+  filter(!is.na(aoa)) %>%
+  select(word, aoa)
+
+write_csv(aoa2, "data-prep/lexical-input/aoa-ratings.csv")
