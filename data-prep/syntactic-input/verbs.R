@@ -11,9 +11,6 @@ verb_info <- do.call(rbind, verb_files) %>%
   mutate(verbs = str_count(parsed_gloss, fixed("(VP ")) +
            str_count(parsed_gloss, fixed("(VBP ")) -
            str_count(parsed_gloss, fixed("(VP (VBP "))) %>%
-  distinct() %>%
-  filter(speaker_type == "other") %>%
-  select(corpus_name, id, speaker_id, target_child_id, age, 
-         pair, item, form, form_numeric, verbs)
+  distinct()
 
 write_csv(verb_info, "data/input/verbs.csv")
