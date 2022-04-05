@@ -44,7 +44,9 @@ for (i in c("other", "child")) {
     #filter(!str_detect(word, " |dog|cat|pig|stomach|mommy|daddy|mom|dad|frog|blanket|duck|rabbit|bunny|potty|bathroom|doll|horse|bird")) %>%
     left_join(relative_freq, by = "word") %>%
     group_by(id) %>%
-    summarize(rarity = mean(freq, na.rm = TRUE))
+    mutate(rarity = mean(freq, na.rm = TRUE)) %>%
+    select(-word, -raw_freq, -freq) %>%
+    distinct()
   
   filename <- ifelse(i == "child", "data/input/rarity-child.csv", 
                      "data/input/rarity.csv")
