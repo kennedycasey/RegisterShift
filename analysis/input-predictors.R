@@ -64,17 +64,21 @@ for (i in c("child", "other")) {
                        str_replace(j, "_", "-"), "-", i, ".csv"))
   }
   
-  # m.combined <- glmer(form_numeric ~ scale(complexity_wordbank) * scale(age) +
-  #                       scale(rarity) * scale(age) + 
-  #                       scale(num_tokens) * scale(age) +
-  #                       (1|pair) + 
-  #                       (1|speaker_id),
-  #                     data = data, 
-  #                     family = binomial, 
-  #                     control = glmerControl(optimizer = "bobyqa"))
-  # summary(m.combined)
-  # 
-  # tidy(m.combined) %>%
-  #   filter(effect == "fixed") %>%
-  #   write_csv(paste0("analysis/model-outputs/all-predictors-", i, ".csv"))
+  m.combined <- glmer(form_numeric ~ scale(complexity_wordbank) * scale(age) +
+                        scale(rarity) * scale(age) +
+                        scale(rate) * scale(age) +
+                        scale(pitch_mean) * scale(age) +
+                        scale(pitch_range) * scale(age) +
+                        scale(verbs) * scale(age) +
+                        scale(num_tokens) * scale(age) +
+                        (1|pair) +
+                        (1|speaker_id),
+                      data = data,
+                      family = binomial,
+                      control = glmerControl(optimizer = "bobyqa"))
+  summary(m.combined)
+
+  tidy(m.combined) %>%
+    filter(effect == "fixed") %>%
+    write_csv(paste0("analysis/model-outputs/all-predictors-", i, ".csv"))
 }
