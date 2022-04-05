@@ -3,126 +3,78 @@ library(lme4)
 library(broom.mixed)
 library(ggeffects)
 
-pitch <- read_csv("data/input/pitch.csv") %>%
-  mutate(age_scaled = scale(age), 
-         pitch_mean_scaled = scale(pitch_mean), 
-         pitch_range_scaled = scale(pitch_range))
+utterances <- read_csv("data/childes-input.csv")
 
-verbs <- read_csv("data/input/verbs.csv") %>%
-  mutate(age_scaled = scale(age), 
-         verbs_scaled = scale(verbs))
+#TO DO: fix NAs and add back "complexity_ratings"
+input_predictors <- c("pitch_mean", "pitch_range", "rate", "rarity", 
+                      "complexity_wordbank",
+                      "verbs", "num_tokens")
 
-rate <- read_csv("data/input/rate.csv") %>%
-  mutate(age_scaled = scale(age), 
-         rate_scaled = scale(rate))
-
-input <- read_csv("data/full-input.csv") %>%
-  mutate(age_scaled = scale(age),
-         complexity_scaled = scale(complexity), 
-         rarity_scaled = scale(rarity), 
-         length_scaled = scale(length))
-
-# no effect of mean pitch on form
-m.pitch.mean <- glmer(form_numeric ~ pitch_mean_scaled * age_scaled + 
-                        (1|pair) + 
-                        (1|speaker_id), 
-                      data = pitch, 
-                      family = binomial, 
-                      control = glmerControl(optimizer = "bobyqa"))
-summary(m.pitch.mean)
-
-tidy(m.pitch.mean) %>%
-  filter(effect == "fixed") %>%
-  write_csv("analysis/model-outputs/input/mean-pitch.csv")
+path <- "data/input/"
+for (i in c("child", "other")) {
+  data <- utterances %>%
+    filter(speaker_type == i)
   
-# marginal effect of pitch range on form
-m.pitch.range <- glmer(form_numeric ~ pitch_range_scaled * age_scaled + 
-                         (1|pair) + 
-                         (1|speaker_id), 
-                       data = pitch, 
-                       family = binomial, 
-                       control = glmerControl(optimizer = "bobyqa"))
-summary(m.pitch.range)
-
-tidy(m.pitch.range) %>%
-  filter(effect == "fixed") %>%
-  write_csv("analysis/model-outputs/input/pitch-range.csv")
-
-# sig effect of lexical complexity on form
-m.rate <- glmer(form_numeric ~ rate_scaled * age_scaled + 
-                        (1|pair) + 
-                        (1|speaker_id), 
-                        data = rate, 
-                      family = binomial, 
-                      control = glmerControl(optimizer = "bobyqa"))
-summary(m.rate)
-
-tidy(m.rate) %>%
-  filter(effect == "fixed") %>%
-  write_csv("analysis/model-outputs/input/rate.csv")
-
-# sig effect of lexical complexity on form
-m.complexity <- glmer(form_numeric ~ complexity_scaled * age_scaled + 
-                        (1|pair) + 
-                        (1|speaker_id),
-                        data = input, 
-                      family = binomial, 
-                      control = glmerControl(optimizer = "bobyqa"))
-summary(m.complexity)
-
-tidy(m.complexity) %>%
-  filter(effect == "fixed") %>%
-  write_csv("analysis/model-outputs/input/complexity.csv")
-
-# sig effect of lexical rarity on form
-m.rarity <- glmer(form_numeric ~ rarity_scaled * age_scaled + 
-                        (1|pair) + 
-                        (1|speaker_id),
-                      data = input, 
-                      family = binomial, 
-                      control = glmerControl(optimizer = "bobyqa"))
-summary(m.rarity)
-
-tidy(m.rarity) %>%
-  filter(effect == "fixed") %>%
-  write_csv("analysis/model-outputs/input/rarity.csv")
-
-# sig effect of utterance length on form
-m.length <- glmer(form_numeric ~ length_scaled * age_scaled + 
-                    (1|pair) + 
-                    (1|speaker_id),
-                  data = input, 
-                  family = binomial, 
-                  control = glmerControl(optimizer = "bobyqa"))
-summary(m.length)
-
-tidy(m.length) %>%
-  filter(effect == "fixed") %>%
-  write_csv("analysis/model-outputs/input/length.csv")
-
-# sig effect of verbs on form
-m.verbs <- glmer(form_numeric ~ verbs_scaled * age_scaled + 
-                    (1|pair) + 
-                    (1|speaker_id),
-                 data = verbs, 
-                 family = binomial, 
-                 control = glmerControl(optimizer = "bobyqa"))
-summary(m.verbs)
-
-tidy(m.verbs) %>%
-  filter(effect == "fixed") %>%
-  write_csv("analysis/model-outputs/input/verbs.csv")
-
-m.combined <- glmer(form_numeric ~ complexity_scaled * age_scaled +
-                      rarity_scaled * age_scaled + 
-                      length_scaled * age_scaled +
-                      (1|pair) + 
-                      (1|speaker_id),
-                    data = input, 
-                    family = binomial, 
-                    control = glmerControl(optimizer = "bobyqa"))
-summary(m.combined)
-
-tidy(m.combined) %>%
-  filter(effect == "fixed") %>%
-  write_csv("analysis/model-outputs/all-predictors.csv")
+  rarity <- read_csv(paste0(path, ifelse(i == "child", "rarity-child", 
+                                         "rarity"), ".csv")) %>%
+    select(id, item, rarity)
+  
+  complexity_wordbank <- read_csv(paste0(path, ifelse(i == "child", "complexity-wordbank-child", 
+                                         "complexity-wordbank"), ".csv")) %>%
+    rename(complexity_wordbank = complexity) %>%
+    select(id, item, complexity_wordbank)
+  
+  complexity_ratings <- read_csv(paste0(path, ifelse(i == "child", "complexity-ratings-child", 
+                                                      "complexity-ratings"), ".csv")) %>%
+    rename(complexity_ratings = complexity) %>%
+    select(id, item, complexity_ratings)
+  
+  rate <- read_csv(paste0(path, ifelse(i == "child", "rate-child", 
+                                         "rate"), ".csv")) %>%
+    select(id, item, rate)
+  
+  pitch <- read_csv(paste0(path, ifelse(i == "child", "pitch-child", 
+                                       "pitch"), ".csv")) %>%
+    select(id, item, pitch_mean, pitch_range)
+  
+  verbs <- read_csv(paste0(path, ifelse(i == "child", "verbs-child", 
+                                       "verbs"), ".csv")) %>%
+    select(id, item, verbs)
+  
+  data <- data %>%
+    left_join(rarity) %>%
+    left_join(complexity_wordbank) %>%
+    left_join(complexity_ratings) %>%
+    left_join(rate) %>%
+    left_join(pitch) %>%
+    left_join(verbs)
+  
+  for (j in input_predictors) {
+    model <- glmer(form_numeric ~ scale(eval(as.symbol(j))) * scale(age) + 
+                     (1|pair) + 
+                     (1|speaker_id), 
+                   data = filter(data, !is.na(eval(as.symbol(j)))), 
+                   family = binomial, 
+                   control = glmerControl(optimizer = "bobyqa"))
+    summary(model)
+    
+    tidy(model) %>%
+      filter(effect == "fixed") %>%
+      write_csv(paste0("analysis/model-outputs/input-predictors/", 
+                       str_replace(j, "_", "-"), "-", i, ".csv"))
+  }
+  
+  # m.combined <- glmer(form_numeric ~ scale(complexity_wordbank) * scale(age) +
+  #                       scale(rarity) * scale(age) + 
+  #                       scale(num_tokens) * scale(age) +
+  #                       (1|pair) + 
+  #                       (1|speaker_id),
+  #                     data = data, 
+  #                     family = binomial, 
+  #                     control = glmerControl(optimizer = "bobyqa"))
+  # summary(m.combined)
+  # 
+  # tidy(m.combined) %>%
+  #   filter(effect == "fixed") %>%
+  #   write_csv(paste0("analysis/model-outputs/all-predictors-", i, ".csv"))
+}
