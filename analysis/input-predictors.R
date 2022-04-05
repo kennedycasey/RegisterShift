@@ -5,9 +5,8 @@ library(ggeffects)
 
 utterances <- read_csv("data/childes-input.csv")
 
-#TO DO: fix NAs and add back "complexity_ratings"
 input_predictors <- c("pitch_mean", "pitch_range", "rate", "rarity", 
-                      "complexity_wordbank",
+                      "complexity_wordbank", "complexity_ratings",
                       "verbs", "num_tokens")
 
 path <- "data/input/"

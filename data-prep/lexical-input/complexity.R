@@ -47,7 +47,9 @@ for (type in c("wordbank", "ratings")) {
         left_join(aoa, by = "word") %>%
         filter(!is.na(aoa)) %>%
         group_by(id) %>%
-        summarize(complexity = mean(aoa))
+        summarize(complexity = mean(aoa), 
+                  item = item) %>%
+        distinct()
     }
   
     filename <- ifelse(i == "child", paste0("data/input/complexity-", type, "-child.csv"), 
