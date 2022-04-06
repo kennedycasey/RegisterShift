@@ -61,6 +61,8 @@ for (i in c("child", "other")) {
     
     tidy(model) %>%
       filter(effect == "fixed") %>%
+      mutate(term = str_remove_all(term, "scale|eval|as.symbol|[()]"), 
+             term = str_replace_all(term, "j", j)) %>%
       write_csv(paste0("analysis/model-outputs/input-predictors/", 
                        str_replace(j, "_", "-"), "-", i, ".csv"))
   }
