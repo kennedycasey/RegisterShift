@@ -2,12 +2,16 @@ library(e1071)
 library(caTools)
 library(caret)
 library(tidyverse)
+library(tidymodels)
+library(kernlab)
 
 data <- read_csv("data/input/combined-other.csv") %>%
   select(form, rarity, complexity_wordbank, num_tokens, verbs, 
          pitch_mean, pitch_range, rate) %>%
   filter(across(c(rarity, complexity_wordbank, num_tokens, verbs, 
                   pitch_mean, pitch_range, rate), ~ !is.na(.)))
+
+write_csv(data, "data/input/combined-other-no-na.csv")
 
 set.seed(123)
 split = sample.split(data$form, SplitRatio = 0.75)
@@ -48,4 +52,26 @@ test_pred_grid <- predict(svm_Linear_Grid, newdata = test_set)
 test_pred_grid
 
 confusionMatrix(table(test_pred_grid, test_set$form))
+
+# nested cross-validation --> good for small sample
+set.seed(25)
+split <- initial_split(data, prop = 0.8)
+train_data <- training(split)
+train_data %>% dim()
+## [1] 3090    8
+
+test_data <- testing(split)
+test_data %>% dim()
+## [1] 733   8
+
+train_cv <- vfold_cv(train_data, v = 10)
+
+train_cv_caret <- rsample2caret(train_cv)
+ctrl_caret <- trainControl(
+  method = "cv",
+  index = train_cv_caret$index,
+  indexOut = train_cv_caret$indexOut
+)
+
+
 
