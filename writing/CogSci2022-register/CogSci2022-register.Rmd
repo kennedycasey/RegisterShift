@@ -15,7 +15,7 @@ keywords: >
     child-directed language; word production; linguistic input; speech register; corpus analysis
     
 output: cogsci2016::cogsci_paper
-#final-submission: \cogscifinalcopy
+final-submission: \cogscifinalcopy
 ---
 
 ```{r global_options, include = FALSE}
@@ -183,13 +183,14 @@ We hypothesized that utterances with CDL forms, relative to utterances with ADL 
 
 ```{r ling-predictors-fig, fig.env = "figure*", fig.pos = "h", fig.align = "center", fig.width = 6.5, fig.height = 2.7, set.cap.width = TRUE, num.cols.cap = 2, fig.cap = "Coefficient estimates for linguistic predictors of form. Positive main effects indicate that utterances are more likely to contain ADL forms when they have higher values for that predictor (e.g., more verbs). Positive age interactions indicate an increasing effect of the predictor with age. Error bars depict standard errors of the coefficient estimates, and filled circles represent significant effects (\\textit{p} $<$ 0.05)."}
 
-path <- "../../analysis/model-outputs/input/"
+path <- "../../analysis/model-outputs/input-predictors/"
 filenames <- list.files(path, "*.csv")
-files <- lapply(paste0(path, filenames), read_csv)
+files <- lapply(paste0(path, filenames[!str_detect(filenames, "-child|ratings")]), read_csv)
 input.models <- bind_rows(files, .id = "source") %>%
   rename(Predictor = term, 
          Estimate = estimate, 
          SE = std.error) %>%
+  mutate(Predictor = str_remove(str_replace(Predictor, "num_tokens", "length"), "_wordbank|_ratings")) %>%
   group_by(source) %>%
   mutate(order = row_number(), 
          type = case_when(
@@ -198,7 +199,7 @@ input.models <- bind_rows(files, .id = "source") %>%
            order == 3 ~ "age", 
            order == 4 ~ "interaction"), 
          Sig = ifelse(p.value < .05, "sig", "not_sig"), 
-         Predictor = str_to_sentence(str_replace(str_remove_all(Predictor, "_scaled"), "_", " "), "first"), 
+         Predictor = trimws(str_to_sentence(str_replace(Predictor, "_", " "), "first")), 
          level = ifelse(str_detect(Predictor, "Length|Verbs"), "Syntactic", 
                         ifelse(str_detect(Predictor, "Complexity|Rarity"), "Lexical", "Prosodic"))) %>%
   mutate(Predictor = factor(Predictor, levels = c("Verbs", "Verbs:age", "Length", "Length:age", "Rarity", "Rarity:age", "Complexity", "Complexity:age", "Rate", "Rate:age", "Pitch range", "Pitch range:age", "Pitch mean", "Pitch mean:age")))
@@ -292,10 +293,8 @@ We focus in the present study on the issue of encountering multiple labels for t
 
 Rather than conceptualizing vocabulary development as the simple tallying up of new 'known' words in a relatively low-dimensional semantic space, there is richness to be found in interactions with other types of information (linguistic, social, etc.) and in analyses of change over time. Exploring children's _use_ words in varying forms and contexts can provide insight into the patterns of information that supported their learning in the first place.
 
-<!--
 # Acknowledgements
 We are grateful to the members of the University of Chicago Chatter Lab and Northwestern University Child Language Lab for valuable discussion and feedback on this work. Research reported in this publication was supported by the Eunice Kennedy Shriver National Institute of Child Health & Human Development of the National Institutes of Health under Award Number P01HD040605; by a grant from the Successful Pathways from School to Work initiative of the University of Chicago, funded by the Hymen Milgrom Supporting Organization; by a grant from the Institute of Education Sciences, U.S. Department of Education, through grant R305A190467 to the University of Chicago; and by a grant from the Spencer Foundation. The content is solely the responsibility of the authors and does not necessarily represent the official views of the National Institutes of Health, the Institute of Education Sciences, or the U.S. Department of Education.
--->
 
 # References
 
