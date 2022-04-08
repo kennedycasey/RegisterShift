@@ -22,7 +22,7 @@ pairs <- read_csv("data-prep/overall/item-info.csv") %>%
 aoa <- read_csv("data-prep/overall/item-info.csv") %>%
   select(word, aoa, pair, form)
 
-colors <- c("CDS" = "#C1292E", "ADS" = "#235789")
+colors <- c("CDL" = "#C1292E", "ADL" = "#235789")
 
 # CHILDES -----------------------------------------------------------------
 utterances <- childes_utterances %>%
@@ -96,27 +96,27 @@ child.utts <- child.utts %>%
 
 
 # generate prop plots
-# (for each time pt, what is the probability of producing CDS vs. ADS form?)
+# (for each time pt, what is the probability of producing CDL vs. ADL form?)
 
 get_model_data <- list() 
 for (i in pairs) {
-  CDS <- paste(gsub("_.*", "", i))
-  ADS <- paste(gsub(".*_", "", i))
+  CDL <- paste(gsub("_.*", "", i))
+  ADL <- paste(gsub(".*_", "", i))
   
   model_data <- utterances %>%
-    filter(!is.na(eval(as.symbol(CDS))) | !is.na(eval(as.symbol(ADS)))) %>%
-    select(age, CDS, ADS) %>%
+    filter(!is.na(eval(as.symbol(CDL))) | !is.na(eval(as.symbol(ADL)))) %>%
+    select(age, CDL, ADL) %>%
     group_by(age) %>%
-    summarize(CDS = sum(eval(as.symbol(CDS)), na.rm = TRUE),
-              ADS = sum(eval(as.symbol(ADS)), na.rm = TRUE)) %>%
-    pivot_longer(c(CDS, ADS), names_to = "form", values_to = "count") %>%
+    summarize(CDL = sum(eval(as.symbol(CDL)), na.rm = TRUE),
+              ADL = sum(eval(as.symbol(ADL)), na.rm = TRUE)) %>%
+    pivot_longer(c(CDL, ADL), names_to = "form", values_to = "count") %>%
     mutate(word = case_when(
-      form == "CDS" ~ paste(gsub("_.*", "", i)), 
-      form == "ADS" ~ paste(gsub(".*_", "", i)))) %>%
+      form == "CDL" ~ paste(gsub("_.*", "", i)), 
+      form == "ADL" ~ paste(gsub(".*_", "", i)))) %>%
     distinct() %>%
     mutate(form_numeric = case_when(
-      form == "CDS" ~ 0, 
-      form == "ADS" ~ 1), 
+      form == "CDL" ~ 0, 
+      form == "ADL" ~ 1), 
       pair = paste0(i)) 
   
   model_data_long <- model_data[rep(seq(nrow(model_data)), model_data$count), ]
@@ -128,11 +128,11 @@ for (i in pairs) {
   
   plot <- model_data_long %>%
     group_by(age) %>%
-    summarize(CDS_count = length(form[form == "CDS"]),
-              ADS_count = length(form[form == "ADS"]), 
-              CDS = CDS_count/(CDS_count + ADS_count),
-              ADS = ADS_count/(CDS_count + ADS_count)) %>%
-    pivot_longer(c(CDS, ADS), names_to = "form", values_to = "prop") %>%
+    summarize(CDL_count = length(form[form == "CDL"]),
+              ADL_count = length(form[form == "ADL"]), 
+              CDL = CDL_count/(CDL_count + ADL_count),
+              ADL = ADL_count/(CDL_count + ADL_count)) %>%
+    pivot_longer(c(CDL, ADL), names_to = "form", values_to = "prop") %>%
     ggplot(aes(x = age, y = prop, color = form, fill = form)) + 
     geom_vline(xintercept = xintercept, color = "gray", size = 1.5) + 
     geom_point() +
@@ -187,25 +187,25 @@ ggsave("writing/figs/bypair-shift-timing.png", height = 15, width = 10, dpi = 30
 # generate summary prop plot
 model_data_list = list()
 for (i in pairs) {
-  CDS <- paste(gsub("_.*", "", i))
-  ADS <- paste(gsub(".*_", "", i))
+  CDL <- paste(gsub("_.*", "", i))
+  ADL <- paste(gsub(".*_", "", i))
   
   model_data <- utterances %>%
-    filter(!is.na(eval(as.symbol(CDS))) | !is.na(eval(as.symbol(ADS)))) %>%
-    select(age, CDS, ADS) %>%
+    filter(!is.na(eval(as.symbol(CDL))) | !is.na(eval(as.symbol(ADL)))) %>%
+    select(age, CDL, ADL) %>%
     group_by(age) %>%
-    summarize(CDS = sum(eval(as.symbol(CDS)), na.rm = TRUE),
-              ADS = sum(eval(as.symbol(ADS)), na.rm = TRUE), 
-              total_tokens = CDS + ADS) %>%
-    pivot_longer(c(CDS, ADS), names_to = "form", values_to = "count") %>%
+    summarize(CDL = sum(eval(as.symbol(CDL)), na.rm = TRUE),
+              ADL = sum(eval(as.symbol(ADL)), na.rm = TRUE), 
+              total_tokens = CDL + ADL) %>%
+    pivot_longer(c(CDL, ADL), names_to = "form", values_to = "count") %>%
     mutate(word = case_when(
-      form == "CDS" ~ paste(gsub("_.*", "", i)), 
-      form == "ADS" ~ paste(gsub(".*_", "", i))), 
+      form == "CDL" ~ paste(gsub("_.*", "", i)), 
+      form == "ADL" ~ paste(gsub(".*_", "", i))), 
       pair = paste(i)) %>%
     distinct() %>%
     mutate(form_numeric = case_when(
-      form == "CDS" ~ 0, 
-      form == "ADS" ~ 1))
+      form == "CDL" ~ 0, 
+      form == "ADL" ~ 1))
   
   model_data_list[[i]] <- model_data
 }
@@ -326,25 +326,25 @@ for (i in items) {
 
 model_data_list = list()
 for (i in pairs) {
-  CDS <- paste(gsub("_.*", "", i))
-  ADS <- paste(gsub(".*_", "", i))
+  CDL <- paste(gsub("_.*", "", i))
+  ADL <- paste(gsub(".*_", "", i))
   
   model_data <- utterances %>%
-    filter(!is.na(eval(as.symbol(CDS))) | !is.na(eval(as.symbol(ADS)))) %>%
-    select(age, CDS, ADS) %>%
+    filter(!is.na(eval(as.symbol(CDL))) | !is.na(eval(as.symbol(ADL)))) %>%
+    select(age, CDL, ADL) %>%
     group_by(age) %>%
-    summarize(CDS = sum(eval(as.symbol(CDS)), na.rm = TRUE),
-              ADS = sum(eval(as.symbol(ADS)), na.rm = TRUE), 
-              total_tokens = CDS + ADS) %>%
-    pivot_longer(c(CDS, ADS), names_to = "form", values_to = "count") %>%
+    summarize(CDL = sum(eval(as.symbol(CDL)), na.rm = TRUE),
+              ADL = sum(eval(as.symbol(ADL)), na.rm = TRUE), 
+              total_tokens = CDL + ADL) %>%
+    pivot_longer(c(CDL, ADL), names_to = "form", values_to = "count") %>%
     mutate(word = case_when(
-      form == "CDS" ~ paste(gsub("_.*", "", i)), 
-      form == "ADS" ~ paste(gsub(".*_", "", i))), 
+      form == "CDL" ~ paste(gsub("_.*", "", i)), 
+      form == "ADL" ~ paste(gsub(".*_", "", i))), 
       pair = paste(i)) %>%
     distinct() %>%
     mutate(form_numeric = case_when(
-      form == "CDS" ~ 0, 
-      form == "ADS" ~ 1))
+      form == "CDL" ~ 0, 
+      form == "ADL" ~ 1))
   
   model_data_list[[i]] <- model_data
 }
@@ -431,25 +431,25 @@ for (i in items) {
 
 model_data_list = list()
 for (i in pairs) {
-  CDS <- paste(gsub("_.*", "", i))
-  ADS <- paste(gsub(".*_", "", i))
+  CDL <- paste(gsub("_.*", "", i))
+  ADL <- paste(gsub(".*_", "", i))
   
   model_data <- utterances %>%
-    filter(!is.na(eval(as.symbol(CDS))) | !is.na(eval(as.symbol(ADS)))) %>%
-    select(age, CDS, ADS) %>%
+    filter(!is.na(eval(as.symbol(CDL))) | !is.na(eval(as.symbol(ADL)))) %>%
+    select(age, CDL, ADL) %>%
     group_by(age) %>%
-    summarize(CDS = sum(eval(as.symbol(CDS)), na.rm = TRUE),
-              ADS = sum(eval(as.symbol(ADS)), na.rm = TRUE), 
-              total_tokens = CDS + ADS) %>%
-    pivot_longer(c(CDS, ADS), names_to = "form", values_to = "count") %>%
+    summarize(CDL = sum(eval(as.symbol(CDL)), na.rm = TRUE),
+              ADL = sum(eval(as.symbol(ADL)), na.rm = TRUE), 
+              total_tokens = CDL + ADL) %>%
+    pivot_longer(c(CDL, ADL), names_to = "form", values_to = "count") %>%
     mutate(word = case_when(
-      form == "CDS" ~ paste(gsub("_.*", "", i)), 
-      form == "ADS" ~ paste(gsub(".*_", "", i))), 
+      form == "CDL" ~ paste(gsub("_.*", "", i)), 
+      form == "ADL" ~ paste(gsub(".*_", "", i))), 
       pair = paste(i)) %>%
     distinct() %>%
     mutate(form_numeric = case_when(
-      form == "CDS" ~ 0, 
-      form == "ADS" ~ 1))
+      form == "CDL" ~ 0, 
+      form == "ADL" ~ 1))
   
   model_data_list[[i]] <- model_data
 }
@@ -536,25 +536,25 @@ for (i in items) {
 
 model_data_list = list()
 for (i in pairs) {
-  CDS <- paste(gsub("_.*", "", i))
-  ADS <- paste(gsub(".*_", "", i))
+  CDL <- paste(gsub("_.*", "", i))
+  ADL <- paste(gsub(".*_", "", i))
   
   model_data <- utterances %>%
-    filter(!is.na(eval(as.symbol(CDS))) | !is.na(eval(as.symbol(ADS)))) %>%
-    select(age, CDS, ADS) %>%
+    filter(!is.na(eval(as.symbol(CDL))) | !is.na(eval(as.symbol(ADL)))) %>%
+    select(age, CDL, ADL) %>%
     group_by(age) %>%
-    summarize(CDS = sum(eval(as.symbol(CDS)), na.rm = TRUE),
-              ADS = sum(eval(as.symbol(ADS)), na.rm = TRUE), 
-              total_tokens = CDS + ADS) %>%
-    pivot_longer(c(CDS, ADS), names_to = "form", values_to = "count") %>%
+    summarize(CDL = sum(eval(as.symbol(CDL)), na.rm = TRUE),
+              ADL = sum(eval(as.symbol(ADL)), na.rm = TRUE), 
+              total_tokens = CDL + ADL) %>%
+    pivot_longer(c(CDL, ADL), names_to = "form", values_to = "count") %>%
     mutate(word = case_when(
-      form == "CDS" ~ paste(gsub("_.*", "", i)), 
-      form == "ADS" ~ paste(gsub(".*_", "", i))), 
+      form == "CDL" ~ paste(gsub("_.*", "", i)), 
+      form == "ADL" ~ paste(gsub(".*_", "", i))), 
       pair = paste(i)) %>%
     distinct() %>%
     mutate(form_numeric = case_when(
-      form == "CDS" ~ 0, 
-      form == "ADS" ~ 1))
+      form == "CDL" ~ 0, 
+      form == "ADL" ~ 1))
   
   model_data_list[[i]] <- model_data
 }

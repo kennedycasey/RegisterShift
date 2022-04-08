@@ -42,11 +42,11 @@ metadata <- read_csv("../../data-prep/overall/metadata.csv")
 freq <- read_csv("../../data-prep/overall/freq.csv")
 
 cdl_forms <- read_csv("../../data-prep/overall/item-info.csv") %>%
-    filter(form == "CDS") %>%
+    filter(form == "CDL") %>%
     pull(word)
 
 adl_forms <- read_csv("../../data-prep/overall/item-info.csv") %>%
-    filter(form == "ADS") %>%
+    filter(form == "ADL") %>%
     pull(word)
 
 # preset colors for linguistic predictors

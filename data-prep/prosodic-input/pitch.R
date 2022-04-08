@@ -14,8 +14,8 @@ for (i in c("other", "child")) {
   pitch_info <- do.call(rbind, pitch_files) %>%
     filter(speaker_type == i) %>%
     mutate(form = case_when(
-        item %in% CDS_forms ~ "CDS", 
-        item %in% ADS_forms ~ "ADS")) %>%
+        item %in% CDL_forms ~ "CDL", 
+        item %in% ADL_forms ~ "ADL")) %>%
     filter(across(starts_with("pitch"), ~ . != "audio file missing" &
                     . != "relevant audio clip missing" &
                     . != "utterance too short to analyze" &
@@ -24,10 +24,10 @@ for (i in c("other", "child")) {
     mutate(across(starts_with("pitch"), ~ as.numeric(as.character(.)))) %>%
     group_by(item) %>%
     filter(media_end - media_start > 0.5) %>%
-    mutate(form = factor(form, levels = c("CDS", "ADS")), 
+    mutate(form = factor(form, levels = c("CDL", "ADL")), 
            form_numeric = case_when(
-             form == "CDS" ~ 0, 
-             form == "ADS" ~ 1), 
+             form == "CDL" ~ 0, 
+             form == "ADL" ~ 1), 
            pitch_range = abs(pitch_range))
   
   filename <- ifelse(i == "child", "data/input/pitch-child.csv", 
