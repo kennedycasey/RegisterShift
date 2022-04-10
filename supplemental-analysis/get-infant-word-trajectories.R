@@ -48,9 +48,6 @@ utterances <- do.call(rbind, utts_list) %>%
            speaker_role != "Target_Child" ~ "other"))
 
 utterances %>%
-  write_csv("supplemental-analysis/other-early-words.csv")
-
-utterances %>%
   group_by(item, age) %>%
   summarize(n = n()) %>%
   ggplot(aes(x = age, y = n, group = item)) + 
