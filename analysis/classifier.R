@@ -2,6 +2,7 @@ library(caret)
 library(tidyverse)
 library(tidymodels)
 library(xgboost)
+library(vip)
 
 data <- read_csv("data/input/combined-other.csv") %>%
   select(form, rarity, complexity_wordbank, num_tokens, verbs, 
@@ -66,17 +67,39 @@ xgb_pred %>%
   labs(y = "AUC") +
   facet_wrap(.~parameter, scales = "free_x")
 
-
 show_best(xgb_pred, "roc_auc")
 best_auc <- select_best(xgb_pred, "roc_auc")
 final_xgb <- finalize_workflow(xgb_wf, best_auc)
 
-library(vip)
-
 final_xgb %>%
   fit(data = train) %>%
   pull_workflow_fit() %>%
-  vip(geom = "point")
+  vip(geom = "col",
+      mapping = aes_string(color = "Variable", fill = "Variable"), 
+      aesthetics = list(alpha = 0.7)) + 
+  scale_x_discrete(breaks = c("pitch_range", "complexity_wordbank", 
+                              "num_tokens", "rate", "pitch_mean", 
+                              "rarity", "verbs"), 
+                   labels = c("Pitch range", "Complexity", "Length", "Rate", 
+                              "Pitch mean", "Rarity", "Verbs")) +
+  scale_color_manual(values = c("pitch_range" = "#1C9E78", 
+                                "complexity_wordbank" = "#D95F06", 
+                                "num_tokens" = "#7570B4", 
+                                "rate" = "#1C9E78", 
+                                "pitch_mean" = "#1C9E78", 
+                                "rarity" = "#D95F06", 
+                                "verbs" = "#7570B4")) +
+  scale_fill_manual(values = c("pitch_range" = "#1C9E78", 
+                                "complexity_wordbank" = "#D95F06", 
+                                "num_tokens" = "#7570B4", 
+                                "rate" = "#1C9E78", 
+                                "pitch_mean" = "#1C9E78", 
+                                "rarity" = "#D95F06", 
+                                "verbs" = "#7570B4")) +
+  labs(y = "Variable Importance") +
+  theme_classic(base_size = 10) + 
+  theme(legend.position = "none")
+ggsave("figs/xgboost-vi.jpg", dpi = 300, width = 4, height = 3)
 
 final <- last_fit(final_xgb, split)
 final %>%
