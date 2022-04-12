@@ -107,3 +107,42 @@ for (i in speaker_types) {
   ggsave(paste0("presentations/CDS/figs/mean-pitch-not-isolated-", i, ".png"),
          dpi = 300, width = 7, height = 5)
 }
+
+# FORM CO-OCCURRENCE OVER AGE ---------------------------------------------
+bytranscript_type <- read_csv("data/full-input.csv") %>%
+  mutate(speaker_type = paste0(str_to_sentence(speaker_type), "-Produced Utterances")) %>%
+  group_by(corpus_name, transcript_id, age, speaker_type) %>%
+  mutate(total_utts = n()) %>%
+  group_by(corpus_name, transcript_id, age, speaker_type, total_utts, form) %>%
+  summarize(utts_w_form = n()) %>%
+  pivot_wider(names_from = "form", values_from = "utts_w_form") %>%
+  mutate(across(c("CDL", "ADL"), ~ ifelse(is.na(.), 0, ./total_utts)), 
+         type = ifelse(CDL == 1, "CDL only", 
+                       ifelse(ADL == 1, "ADL only", "Both"))) 
+
+type <- bytranscript_type %>%
+  ungroup() %>%
+  group_by(age, speaker_type) %>%
+  mutate(n_transcripts = n()) %>%
+  group_by(age, speaker_type, n_transcripts, type) %>%
+  summarize(prop = n()/n_transcripts) %>%
+  distinct() 
+
+colors3 <- c("CDL only" = "#C1292E", 
+             "ADL only" = "#235789", 
+             "Both" = "black")
+
+ggplot(type, aes(x = age, y = prop*100, color = type, fill = type)) +
+  facet_wrap(.~speaker_type) + 
+  geom_jitter(bytranscript_type, mapping = aes(x = age, y = ADL*100), 
+             color = "#235789", fill = "#235789", alpha = 0.02) + 
+  geom_jitter(bytranscript_type, mapping = aes(x = age, y = CDL*100), 
+             color = "#C1292E", fill = "#C1292E", alpha = 0.02) + 
+  geom_smooth(size = 1.5) + 
+  geom_point(size = 2) +
+  scale_color_manual(values = colors3) +
+  scale_fill_manual(values = colors3) +
+  labs(x = "Age (months)", y = "% Transcripts", 
+       color = "Forms Detected", fill = "Forms Detected") +
+  theme_test(base_size = 15)
+ggsave("figs/transcript-level-cooccurrence.jpg", dpi = 300, width = 8, height = 5)
