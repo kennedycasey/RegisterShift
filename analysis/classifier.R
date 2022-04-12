@@ -1,72 +1,109 @@
 library(caret)
 library(tidyverse)
+library(tidymodels)
 library(xgboost)
 
 data <- read_csv("data/input/combined-other.csv") %>%
   select(form, rarity, complexity_wordbank, num_tokens, verbs, 
          pitch_mean, pitch_range, rate) %>%
-  #filter(across(c(rarity, complexity_wordbank, num_tokens, verbs, 
-                  #pitch_mean, pitch_range, rate), ~ !is.na(.))) %>%
-  mutate(form = case_when(
-    form == "CDS" ~ 0, 
-    form == "ADS" ~ 1))
-
-#write_csv(data, "data/input/combined-other-no-na.csv")
-
-data <- data %>%
-  mutate(across(c(rarity, complexity_wordbank, num_tokens, verbs, 
-                  pitch_mean, pitch_range, rate), ~ scale(.)))
+  mutate(form = as.factor(form)) %>%
+  na.omit()
 
 set.seed(123)
+split <- initial_split(data, strata = form, prop = 0.9)
+train <- training(split)
+test <- testing(split)
 
-ind <- sample(2, nrow(data), replace = TRUE, prob = c(0.8, 0.2))
-train <- data[ind == 1,]
-test <- data[ind == 2,]
+xgb_spec <- boost_tree(
+  trees = 1000, 
+  tree_depth = tune(), 
+  min_n = tune(), 
+  loss_reduction = tune(), 
+  sample_size = tune(), 
+  mtry = tune(), 
+  learn_rate = tune()
+) %>%
+  set_engine("xgboost") %>%
+  set_mode("classification")
 
-training_data <- as.matrix(train[,-1])
-training_labels <- as.matrix(train[,1])
+# set up different combinations of hyperparameters
+xgb_grid <- grid_latin_hypercube(
+  tree_depth(), 
+  min_n(), 
+  loss_reduction(), 
+  sample_size = sample_prop(), 
+  finalize(mtry(), train),  
+  learn_rate(), 
+  size = 50
+)
 
-testing_data <- as.matrix(test[,-1])
-testing_labels <- as.matrix(test[,1])
+# add workflow
+xgb_wf <- workflow() %>%
+  add_formula(form ~ .) %>%
+  add_model(xgb_spec)
 
-dtrain <- xgb.DMatrix(data = training_data, label = training_labels)
-dtest <- xgb.DMatrix(data = testing_data, label = testing_labels)
+set.seed(123)
+folds <- vfold_cv(train, strata = form)
 
-# account for imbalanced sample
-negative_cases <- sum(training_labels == FALSE)
-postive_cases <- sum(training_labels == TRUE)
+set.seed(234)
+xgb_pred <- tune_grid(
+  xgb_wf, 
+  resamples = folds, 
+  grid = xgb_grid,
+  control = control_grid(save_pred = TRUE)
+)
 
-model <- xgboost(data = dtrain, 
-                 max.depth = 6,
-                 nround = 50, 
-                 eta = 0.3, # learning rate
-                 gamma = 10, # regularization control
-                 objective = "binary:logistic", 
-                 scale_pos_weight = negative_cases/postive_cases, 
-                 eval_metric = "error")
 
-pred_heldout <- predict(model, dtest)
+xgb_pred %>%
+  collect_metrics() %>%
+  filter(.metric == "roc_auc") %>%
+  select(mean, mtry:sample_size) %>%
+  pivot_longer(mtry:sample_size, 
+               names_to = "parameter", 
+               values_to = "value") %>%
+  ggplot(aes(value, mean, color = parameter)) + 
+  geom_point(show.legend = FALSE) + 
+  labs(y = "AUC") +
+  facet_wrap(.~parameter, scales = "free_x")
 
-err <- mean(as.numeric(pred_heldout > 0.5) != testing_labels)
-print(paste("test-error=", err))
 
-pred <- predict(model, dtrain)
+show_best(xgb_pred, "roc_auc")
+best_auc <- select_best(xgb_pred, "roc_auc")
+final_xgb <- finalize_workflow(xgb_wf, best_auc)
 
-# combined decision tree
-xgb.plot.multi.trees(feature_names = names(training_data), 
-                     model = model)
+library(vip)
 
-# feature importance (average gain in predictive ability)
-importance_matrix <- xgb.importance(names(training_data), model = model)
-xgb.plot.importance(importance_matrix)
+final_xgb %>%
+  fit(data = train) %>%
+  pull_workflow_fit() %>%
+  vip(geom = "point")
 
-# AUC for held-out set
-plot.roc(test$form, pred_heldout, 
-         print.auc = TRUE, print.auc.y = 0.5) 
+final <- last_fit(final_xgb, split)
+final %>%
+  collect_metrics()
 
-# confusion matrix
-table(test$form, as.numeric(pred_heldout > 0.5))
+auc <- final %>%
+  collect_metrics() %>%
+  filter(.metric == "roc_auc") %>%
+  pull(.estimate) %>%
+  round(., 3)
 
-# AUC for training set
-plot.roc(train$form, pred, 
-         print.auc = TRUE, print.auc.y = 0.5) 
+final %>%
+  collect_predictions() %>%
+  conf_mat(form, .pred_class)
+#            Truth
+# Prediction ADS CDS
+#       ADS  129  90
+#       CDS  148 269
+
+final %>%
+  collect_predictions() %>%
+  roc_curve(form, .pred_ADS) %>%
+  ggplot(aes(x = specificity, y = sensitivity)) + 
+  scale_x_reverse() +
+  geom_point(size = 0.5, color = "#235789") + 
+  geom_abline(intercept = 1, linetype = "dotted") + 
+  geom_label(aes(0.25, 0.5, label = paste0("AUC: ", auc)), color = "#235789") +
+  labs(x = "Specificity", y = "Sensitivity", slope = 1) + 
+  theme_test(base_size = 20)
+ggsave("figs/xgboost-auc.jpg", dpi = 300, width = 5, height = 5)
