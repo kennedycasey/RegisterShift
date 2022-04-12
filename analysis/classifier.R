@@ -37,7 +37,7 @@ xgb_grid <- grid_latin_hypercube(
   sample_size = sample_prop(), 
   finalize(mtry(), train),  
   learn_rate(), 
-  size = 50
+  size = 20
 )
 
 # add workflow
