@@ -5,7 +5,7 @@ library(xgboost)
 library(vip)
 
 data <- read_csv("data/input/combined-other.csv") %>%
-  select(form, rarity, complexity_wordbank, num_tokens, verbs, 
+  select(form, rarity, complexity_ratings, num_tokens, verbs, 
          pitch_mean, pitch_range, rate, age) %>%
   mutate(form = as.factor(form)) %>%
   na.omit()
@@ -83,13 +83,13 @@ final_xgb %>%
   vip(geom = "col",
       mapping = aes_string(color = "Variable", fill = "Variable"), 
       aesthetics = list(alpha = 0.7)) + 
-  scale_x_discrete(breaks = c("pitch_range", "complexity_wordbank", 
+  scale_x_discrete(breaks = c("pitch_range", "complexity_ratings", 
                               "num_tokens", "rate", "pitch_mean", 
                               "rarity", "verbs", "age"), 
                    labels = c("Pitch range", "Complexity", "Length", "Rate", 
                               "Pitch mean", "Rarity", "Verbs", "Age")) +
   scale_color_manual(values = c("pitch_range" = "#1C9E78", 
-                                "complexity_wordbank" = "#D95F06", 
+                                "complexity_ratings" = "#D95F06", 
                                 "num_tokens" = "#7570B4", 
                                 "rate" = "#1C9E78", 
                                 "pitch_mean" = "#1C9E78", 
@@ -97,7 +97,7 @@ final_xgb %>%
                                 "verbs" = "#7570B4", 
                                 "age" = "gray")) +
   scale_fill_manual(values = c("pitch_range" = "#1C9E78", 
-                                "complexity_wordbank" = "#D95F06", 
+                                "complexity_ratings" = "#D95F06", 
                                 "num_tokens" = "#7570B4", 
                                 "rate" = "#1C9E78", 
                                 "pitch_mean" = "#1C9E78", 
