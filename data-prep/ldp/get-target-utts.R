@@ -9,14 +9,14 @@ items <- read_csv("data-prep/overall/item-info.csv") %>%
 pairs <- read_csv("data-prep/overall/item-info.csv") %>%
   select(word, pair)
 
-colors <- c("CDS" = "#C1292E", "ADS" = "#235789")
+colors <- c("CDL" = "#C1292E", "ADL" = "#235789")
 
-CDS_forms <- read_csv("data-prep/overall/item-info.csv") %>%
-  filter(form == "CDS") %>%
+CDL_forms <- read_csv("data-prep/overall/item-info.csv") %>%
+  filter(form == "CDL") %>%
   pull(word)
 
-ADS_forms <- read_csv("data-prep/overall/item-info.csv") %>%
-  filter(form == "ADS") %>%
+ADL_forms <- read_csv("data-prep/overall/item-info.csv") %>%
+  filter(form == "ADL") %>%
   pull(word)
 
 utts_list <- list()
@@ -78,16 +78,16 @@ for (i in items) {
   utts_list[[i]] <- utts_w_target %>%
     mutate(item = paste0(i),
            form = case_when(
-             i %in% CDS_forms ~ "CDS", 
-             i %in% ADS_forms ~ "ADS"), 
+             i %in% CDL_forms ~ "CDL", 
+             i %in% ADL_forms ~ "ADL"), 
            pair = paste0((filter(pairs, word == i))$pair))
 }
   
 utterances <- do.call(rbind, utts_list) %>%
-  mutate(form = factor(form, levels = c("CDS", "ADS")), 
+  mutate(form = factor(form, levels = c("CDL", "ADL")), 
          form_numeric = case_when(
-           form == "CDS" ~ 0, 
-           form == "ADS" ~ 1), 
+           form == "CDL" ~ 0, 
+           form == "ADL" ~ 1), 
          speaker_type = case_when(
            speaker == "target_child" ~ "child", 
            speaker != "target_child" ~ "other"))
