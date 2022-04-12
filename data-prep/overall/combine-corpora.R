@@ -2,30 +2,17 @@ library(tidyverse)
 
 # read in CHILDES data
 childes <- read_csv("data/childes-input.csv") %>%
-  rename(length = num_tokens) %>%
-  mutate(rate = length/(media_end - media_start)) %>%
-  select(corpus_name, id, speaker_id, target_child_id, age, 
-         pair, item, form, form_numeric, length, rate)
+  mutate(id = paste0(id), 
+         speaker_id = paste0(speaker_id), 
+         target_child_id = paste0(target_child_id))
 
 # read in LDP data and update to match CHILDES cols
 ldp <- read_csv("~/Desktop/secure/ldp-input.csv") %>%
   mutate(corpus_name = "LDP", 
          target_child_id = paste0("LDP", target_child_id), 
          speaker_id = paste0(target_child_id, "_", speaker_type), 
-         id = paste0(target_child_id, "_", line)) %>%
-  rename(length = num_tokens) %>%
-  select(corpus_name, id, speaker_id, target_child_id, age, 
-         pair, item, form, form_numeric, length)
+         id = paste0(target_child_id, "_", line))
 
 # read in input predictor data
-complexity <- read_csv("data/input/complexity.csv")
-rarity <- read_csv("data/input/rarity.csv")
-verbs <- read_csv("data/input/verbs.csv")
-
-input <- childes %>%
-  left_join(complexity, by = c("corpus_name", "id",
-                               "speaker_id", "target_child_id", 
-                               "age", "pair", "item", 
-                               "form", "form_numeric")) %>%
-  left_join(rarity, by = "id")
+input <- bind_rows(childes, ldp)
 write_csv(input, "data/full-input.csv")
