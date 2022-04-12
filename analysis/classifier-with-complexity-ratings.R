@@ -5,9 +5,10 @@ library(xgboost)
 library(vip)
 
 data <- read_csv("data/input/combined-other.csv") %>%
-  select(form, rarity, complexity_wordbank, num_tokens, verbs, 
-         pitch_mean, pitch_range, rate, age) %>%
-  mutate(form = as.factor(form))
+  select(form, rarity, complexity_ratings, num_tokens, verbs, 
+         pitch_mean, pitch_range, rate) %>%
+  mutate(form = as.factor(form)) %>%
+  na.omit()
 
 # create data split
 set.seed(123)
@@ -82,31 +83,29 @@ final_xgb %>%
   vip(geom = "col",
       mapping = aes_string(color = "Variable", fill = "Variable"), 
       aesthetics = list(alpha = 0.7)) + 
-  scale_x_discrete(breaks = c("pitch_range", "complexity_wordbank", 
+  scale_x_discrete(breaks = c("pitch_range", "complexity_ratings", 
                               "num_tokens", "rate", "pitch_mean", 
-                              "rarity", "verbs", "age"), 
+                              "rarity", "verbs"), 
                    labels = c("Pitch range", "Complexity", "Length", "Rate", 
-                              "Pitch mean", "Rarity", "Verbs", "Age")) +
+                              "Pitch mean", "Rarity", "Verbs")) +
   scale_color_manual(values = c("pitch_range" = "#1C9E78", 
-                                "complexity_wordbank" = "#D95F06", 
+                                "complexity_ratings" = "#D95F06", 
                                 "num_tokens" = "#7570B4", 
                                 "rate" = "#1C9E78", 
                                 "pitch_mean" = "#1C9E78", 
                                 "rarity" = "#D95F06", 
-                                "verbs" = "#7570B4", 
-                                "age" = "gray")) +
+                                "verbs" = "#7570B4")) +
   scale_fill_manual(values = c("pitch_range" = "#1C9E78", 
-                                "complexity_wordbank" = "#D95F06", 
+                                "complexity_ratings" = "#D95F06", 
                                 "num_tokens" = "#7570B4", 
                                 "rate" = "#1C9E78", 
                                 "pitch_mean" = "#1C9E78", 
                                 "rarity" = "#D95F06", 
-                                "verbs" = "#7570B4", 
-                               "age" = "gray")) +
+                                "verbs" = "#7570B4")) +
   labs(y = "Variable Importance") +
   theme_classic(base_size = 10) + 
   theme(legend.position = "none")
-ggsave("figs/xgboost-vi-with-NAs.jpg", dpi = 300, width = 4, height = 3)
+ggsave("figs/xgboost-vi-complexity-ratings.jpg", dpi = 300, width = 4, height = 3)
 
 # store AUC
 final <- last_fit(final_xgb, split)
@@ -125,8 +124,8 @@ final %>%
   conf_mat(form, .pred_class)
 #            Truth
 # Prediction ADS CDS
-#       ADS  156  88
-#       CDS  121 271
+#       ADS  129  90
+#       CDS  148 269
 
 # plot ROC curve
 final %>%
@@ -139,4 +138,23 @@ final %>%
   geom_label(aes(0.25, 0.5, label = paste0("AUC: ", auc)), color = "#235789") +
   labs(x = "Specificity", y = "Sensitivity", slope = 1) + 
   theme_test(base_size = 20)
-ggsave("figs/xgboost-auc-with-NAs.jpg", dpi = 300, width = 5, height = 5)
+ggsave("figs/xgboost-auc-complexity-ratings.jpg", dpi = 300, width = 5, height = 5)
+
+
+colors <- c("CDL" = "#C1292E", "ADL" = "#235789")
+# plot probability distribution
+final %>%
+  collect_predictions() %>%
+  mutate(form = str_replace(form, "S", "L")) %>%
+  ggplot(aes(x = .pred_ADS, fill = form, color = form)) + 
+  geom_histogram(alpha = 0.3) + 
+  geom_vline(xintercept = 0.5, linetype = "dotted", size = 1) +
+  scale_fill_manual(values = colors) +
+  scale_color_manual(values = colors) +
+  scale_x_continuous(limits = c(0, 1), 
+                     breaks = c(0, 0.25, 0.5, 0.75, 1)) +
+  labs(x = "Predicted Probability of ADL Form", 
+       y = "Number of Utterances", fill = "Actual Form", 
+       color = "Actual Form") +
+  theme_test(base_size = 10)
+ggsave("figs/xgboost-prob-complexity-ratings.jpg", dpi = 300, width = 5, height = 5)
