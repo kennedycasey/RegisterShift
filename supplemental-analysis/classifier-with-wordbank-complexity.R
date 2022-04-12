@@ -5,7 +5,7 @@ library(xgboost)
 library(vip)
 
 data <- read_csv("data/input/combined-other.csv") %>%
-  select(form, rarity, complexity_ratings, num_tokens, verbs, 
+  select(form, rarity, complexity_wordbank, num_tokens, verbs, 
          pitch_mean, pitch_range, rate) %>%
   mutate(form = as.factor(form)) %>%
   na.omit()
@@ -83,20 +83,20 @@ final_xgb %>%
   vip(geom = "col",
       mapping = aes_string(color = "Variable", fill = "Variable"), 
       aesthetics = list(alpha = 0.7)) + 
-  scale_x_discrete(breaks = c("pitch_range", "complexity_ratings", 
+  scale_x_discrete(breaks = c("pitch_range", "complexity_wordbank", 
                               "num_tokens", "rate", "pitch_mean", 
                               "rarity", "verbs"), 
                    labels = c("Pitch range", "Complexity", "Length", "Rate", 
                               "Pitch mean", "Rarity", "Verbs")) +
   scale_color_manual(values = c("pitch_range" = "#1C9E78", 
-                                "complexity_ratings" = "#D95F06", 
+                                "complexity_wordbank" = "#D95F06", 
                                 "num_tokens" = "#7570B4", 
                                 "rate" = "#1C9E78", 
                                 "pitch_mean" = "#1C9E78", 
                                 "rarity" = "#D95F06", 
                                 "verbs" = "#7570B4")) +
   scale_fill_manual(values = c("pitch_range" = "#1C9E78", 
-                                "complexity_ratings" = "#D95F06", 
+                                "complexity_wordbank" = "#D95F06", 
                                 "num_tokens" = "#7570B4", 
                                 "rate" = "#1C9E78", 
                                 "pitch_mean" = "#1C9E78", 
@@ -105,7 +105,7 @@ final_xgb %>%
   labs(y = "Variable Importance") +
   theme_classic(base_size = 10) + 
   theme(legend.position = "none")
-ggsave("figs/xgboost-vi-complexity-ratings.jpg", dpi = 300, width = 4, height = 3)
+ggsave("figs/xgboost-vi.jpg", dpi = 300, width = 4, height = 3)
 
 # store AUC
 final <- last_fit(final_xgb, split)
@@ -138,7 +138,7 @@ final %>%
   geom_label(aes(0.25, 0.5, label = paste0("AUC: ", auc)), color = "#235789") +
   labs(x = "Specificity", y = "Sensitivity", slope = 1) + 
   theme_test(base_size = 20)
-ggsave("figs/xgboost-auc-complexity-ratings.jpg", dpi = 300, width = 5, height = 5)
+ggsave("figs/xgboost-auc.jpg", dpi = 300, width = 5, height = 5)
 
 
 colors <- c("CDL" = "#C1292E", "ADL" = "#235789")
@@ -156,5 +156,5 @@ final %>%
   labs(x = "Predicted Probability of ADL Form", 
        y = "Number of Utterances", fill = "Actual Form", 
        color = "Actual Form") +
-  theme_test(base_size = 10)
-ggsave("figs/xgboost-prob-complexity-ratings.jpg", dpi = 300, width = 5, height = 5)
+  theme_test(base_size = 20)
+ggsave("figs/xgboost-prob.jpg", dpi = 300, width = 5, height = 5)

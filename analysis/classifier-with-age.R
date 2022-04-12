@@ -126,8 +126,8 @@ final %>%
   conf_mat(form, .pred_class)
 #            Truth
 # Prediction ADS CDS
-#       ADS  156  88
-#       CDS  121 271
+#       ADS  487  356
+#       CDS  609 1815
 
 # plot ROC curve
 final %>%
