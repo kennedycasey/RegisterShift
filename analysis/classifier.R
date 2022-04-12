@@ -10,11 +10,13 @@ data <- read_csv("data/input/combined-other.csv") %>%
   mutate(form = as.factor(form)) %>%
   na.omit()
 
+# create data split
 set.seed(123)
 split <- initial_split(data, strata = form, prop = 0.9)
 train <- training(split)
 test <- testing(split)
 
+# set up default model with hyperparameters to be tuned
 xgb_spec <- boost_tree(
   trees = 1000, 
   tree_depth = tune(), 
@@ -43,6 +45,7 @@ xgb_wf <- workflow() %>%
   add_formula(form ~ .) %>%
   add_model(xgb_spec)
 
+# create training folds
 set.seed(123)
 folds <- vfold_cv(train, strata = form)
 
@@ -54,7 +57,7 @@ xgb_pred <- tune_grid(
   control = control_grid(save_pred = TRUE)
 )
 
-
+# visualize hyperparameter space
 xgb_pred %>%
   collect_metrics() %>%
   filter(.metric == "roc_auc") %>%
@@ -68,9 +71,12 @@ xgb_pred %>%
   facet_wrap(.~parameter, scales = "free_x")
 
 show_best(xgb_pred, "roc_auc")
+
+# save best combination of hyperparameters
 best_auc <- select_best(xgb_pred, "roc_auc")
 final_xgb <- finalize_workflow(xgb_wf, best_auc)
 
+# visualize variable importance
 final_xgb %>%
   fit(data = train) %>%
   pull_workflow_fit() %>%
@@ -101,6 +107,7 @@ final_xgb %>%
   theme(legend.position = "none")
 ggsave("figs/xgboost-vi.jpg", dpi = 300, width = 4, height = 3)
 
+# store AUC
 final <- last_fit(final_xgb, split)
 final %>%
   collect_metrics()
@@ -111,6 +118,7 @@ auc <- final %>%
   pull(.estimate) %>%
   round(., 3)
 
+# create confusion matrix
 final %>%
   collect_predictions() %>%
   conf_mat(form, .pred_class)
@@ -119,6 +127,7 @@ final %>%
 #       ADS  129  90
 #       CDS  148 269
 
+# plot ROC curve
 final %>%
   collect_predictions() %>%
   roc_curve(form, .pred_ADS) %>%
