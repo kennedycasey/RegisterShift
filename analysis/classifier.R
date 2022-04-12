@@ -139,3 +139,22 @@ final %>%
   labs(x = "Specificity", y = "Sensitivity", slope = 1) + 
   theme_test(base_size = 20)
 ggsave("figs/xgboost-auc.jpg", dpi = 300, width = 5, height = 5)
+
+
+colors <- c("CDL" = "#C1292E", "ADL" = "#235789")
+# plot probability distribution
+final %>%
+  collect_predictions() %>%
+  mutate(form = str_replace(form, "S", "L")) %>%
+  ggplot(aes(x = .pred_ADS, fill = form, color = form)) + 
+  geom_histogram(alpha = 0.3) + 
+  geom_vline(xintercept = 0.5, linetype = "dotted", size = 1) +
+  scale_fill_manual(values = colors) +
+  scale_color_manual(values = colors) +
+  scale_x_continuous(limits = c(0, 1), 
+                     breaks = c(0, 0.25, 0.5, 0.75, 1)) +
+  labs(x = "Predicted Probability of ADL Form", 
+       y = "Number of Utterances", fill = "Actual Form", 
+       color = "Actual Form") +
+  theme_test(base_size = 20)
+ggsave("figs/xgboost-prob.jpg", dpi = 300, width = 5, height = 5)
