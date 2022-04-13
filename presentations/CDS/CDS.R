@@ -146,3 +146,55 @@ ggplot(type, aes(x = age, y = prop*100, color = type, fill = type)) +
        color = "Forms Detected", fill = "Forms Detected") +
   theme_test(base_size = 15)
 ggsave("figs/transcript-level-cooccurrence.jpg", dpi = 300, width = 8, height = 5)
+
+
+
+# SPEAKER CONTRIBUTION ----------------------------------------------------
+byspeaker_tokens <- read_csv("data/full-input.csv") %>% 
+  select(speaker_type, speaker_id) %>%
+  distinct() %>%
+  mutate(both = NA, 
+         one = NA, 
+         none = NA)
+
+raw_data <- read_csv("data/full-input.csv")
+for (i in 1:nrow(byspeaker_tokens)) {
+  data <- raw_data %>%
+    filter(speaker_id == byspeaker_tokens[i,]$speaker_id) %>%
+    count(pair, form) %>%
+    group_by(pair) %>%
+    count()
+  
+  both_forms <- data %>%
+    filter(n == 2) %>%
+    nrow()
+  
+  one_form <- data %>%
+    filter(n == 1) %>%
+    nrow()
+  
+  neither_form <- 15 - both_forms - one_form
+  
+  byspeaker_tokens[i,"both"] <- both_forms
+  
+  byspeaker_tokens[i,"one"] <- one_form
+  
+  byspeaker_tokens[i,"none"] <- neither_form
+}
+
+byspeaker_tokens %>%
+  mutate(speaker_type = paste0(str_to_sentence(speaker_type), "-Produced Utterances")) %>%
+  pivot_longer(c(both, one, none), names_to = "form_count", values_to = "n_pairs") %>%
+  mutate(form_count = case_when(
+    form_count == "both" ~ 2, 
+    form_count == "one" ~ 1, 
+    form_count == "none" ~ 0)) %>%
+  ggplot(aes(x = as.factor(form_count), n_pairs)) + 
+  facet_wrap(.~speaker_type) +
+  geom_jitter(alpha = 0.05) + 
+  geom_violin() + 
+  labs(x = "Number of Forms", y = "Number of Word Pairs") + 
+  theme_test(base_size = 15)
+ggsave("figs/tokens-by-speaker.jpg", dpi = 300, width = 6, height = 5)
+
+
