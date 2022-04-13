@@ -158,3 +158,21 @@ final %>%
        color = "Actual Form") +
   theme_test(base_size = 10)
 ggsave("figs/xgboost-prob-complexity-ratings.jpg", dpi = 300, width = 5, height = 5)
+
+library(SHAPforxgboost)
+
+# get shapley values
+xgb_fit <- extract_fit_parsnip(final)
+
+shap <- shap.prep(
+  xgb_model = extract_fit_engine(xgb_fit), 
+  X_train = as.matrix(train[,-1]))
+
+
+shap.plot.summary(shap)
+
+shap.plot.dependence(shap, 
+                     x = "pitch_mean",
+                     color_feature = "pitch_range", 
+                     smooth = FALSE, 
+                     add_hist = TRUE)

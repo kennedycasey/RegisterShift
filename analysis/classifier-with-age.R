@@ -141,3 +141,57 @@ final %>%
   labs(x = "Specificity", y = "Sensitivity", slope = 1) + 
   theme_test(base_size = 20)
 ggsave("figs/xgboost-auc-with-age.jpg", dpi = 300, width = 5, height = 5)
+
+library(SHAPforxgboost)
+
+# get shapley values
+xgb_fit <- extract_fit_parsnip(final)
+
+shap <- shap.prep(
+  xgb_model = extract_fit_engine(xgb_fit), 
+  X_train = as.matrix(train[,-1]))
+
+
+shap.plot.summary(shap)
+
+shap.plot.dependence(shap, 
+                     x = "pitch_mean",
+                     color_feature = "age", 
+                     smooth = FALSE, 
+                     add_hist = TRUE)
+
+shap.plot.dependence(shap, 
+                     x = "pitch_range",
+                     color_feature = "age", 
+                     smooth = FALSE, 
+                     add_hist = TRUE)
+
+shap.plot.dependence(shap, 
+                     x = "rate",
+                     color_feature = "age", 
+                     smooth = FALSE, 
+                     add_hist = TRUE)
+
+shap.plot.dependence(shap, 
+                     x = "complexity_ratings",
+                     color_feature = "age", 
+                     smooth = FALSE, 
+                     add_hist = TRUE)
+
+shap.plot.dependence(shap, 
+                     x = "rarity",
+                     color_feature = "age", 
+                     smooth = FALSE, 
+                     add_hist = TRUE)
+
+shap.plot.dependence(shap, 
+                     x = "num_tokens",
+                     color_feature = "age", 
+                     smooth = FALSE, 
+                     add_hist = TRUE)
+
+shap.plot.dependence(shap, 
+                     x = "verbs",
+                     color_feature = "age", 
+                     smooth = FALSE, 
+                     add_hist = TRUE)
