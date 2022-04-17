@@ -4,6 +4,9 @@ library(broom.mixed)
 
 speaker_types <- c("child", "other")
 colors <- c("CDL" = "#C1292E", "ADL" = "#235789")
+input_colors <- c("Prosodic" = "#1C9E78", 
+                  "Lexical" = "#D95F06", 
+                  "Syntactic" = "#7570B4")
 
 # INPUT PREDICTORS --------------------------------------------------------
 path <- "analysis/model-outputs/input-predictors/"
@@ -36,22 +39,25 @@ for (i in speaker_types) {
     mutate(Predictor = factor(Predictor, levels = c("Pitch mean", "Pitch range", "Rate", "Complexity",  "Rarity", "Length", "Verbs")))
     
   ggplot(input.models,
-         aes(x = Predictor, y = Estimate, color = level)) +
-    geom_bar(aes(x = Predictor, y = Estimate, alpha = Sig, 
-                 color = level, fill = level), 
-             stat = "identity") + 
-    geom_errorbar(aes(ymin = Estimate - SE, ymax = Estimate + SE), 
-                  width = 0.15, color = "black") + 
-    geom_hline(yintercept = 0, size = 0.75, linetype = "dotted", 
+         aes(y = Predictor, x = Estimate, color = level)) +
+    # geom_bar(aes(y = Predictor, x = Estimate, alpha = Sig, 
+    #              color = level, fill = level), 
+    #          stat = "identity") + 
+    # geom_errorbar(aes(xmin = Estimate - SE, xmax = Estimate + SE), 
+    #               width = 0.15, color = "black") + 
+    geom_vline(xintercept = 0, size = 0.75, linetype = "dotted", 
                color = "black", alpha = 0.5) +
     scale_alpha_manual(values = c("not_sig" = 0.2, "sig" = 0.8)) + 
     scale_color_manual(values = input_colors) +
     scale_fill_manual(values = input_colors) +
-    scale_y_continuous(limits = c(-0.65, 0.65), 
+    scale_x_continuous(limits = c(-0.65, 0.65), 
                        breaks = c(-0.6, -0.4, -0.2, 0, 0.2, 0.4, 0.6)) +
-    labs(x = "Linguistic Predictor", y = "Coefficient Estimate") +
-    theme_test(base_size = 10) +
+    labs(y = "Linguistic Predictor", x = "Coefficient Estimate") +
+    theme_test(base_size = 15) +
     theme(legend.position = "none")
+  ggsave(paste0("presentations/CDS/figs/input-predictors-empty.png"), 
+         dpi = 300, width = 5, height = 5)
+  
   
   ggsave(paste0("presentations/CDS/figs/input-predictors-", i, ".png"), 
          dpi = 300, width = 5, height = 5)
@@ -198,3 +204,12 @@ byspeaker_tokens %>%
 ggsave("figs/tokens-by-speaker.jpg", dpi = 300, width = 6, height = 5)
 
 
+# COMPLEXITY --------------------------------------------------------------
+# complexity measures significantly correlated for others but not kids
+other <- read_csv("data/input/combined-other.csv") %>%
+  select(starts_with("complexity"))
+cor.test(other$complexity_ratings, other$complexity_wordbank)
+
+child <- read_csv("data/input/combined-child.csv") %>%
+  select(starts_with("complexity"))
+cor.test(child$complexity_ratings, child$complexity_wordbank)
