@@ -293,6 +293,10 @@ We focus in the present study on the issue of encountering multiple labels for t
 
 Rather than conceptualizing vocabulary development as the simple tallying up of new 'known' words in a relatively low-dimensional semantic space, there is richness to be found in interactions with other types of information (linguistic, social, etc.) and in analyses of change over time. Exploring children's _use_ words in varying forms and contexts can provide insight into the patterns of information that supported their learning in the first place.
 
+\vspace{1em}\fbox{\parbox[b][][c]{7.5cm}{\centering \textbf{Data Availability}\\
+All analysis scripts and anonymized data can be found at the following link: \href{https://github.com/kennedycasey/RegisterShift}{https://github.com/kennedycasey/RegisterShift}.
+}}
+
 # Acknowledgements
 We are grateful to the members of the University of Chicago Chatter Lab and Northwestern University Child Language Lab for valuable discussion and feedback on this work. Research reported in this publication was supported by the Eunice Kennedy Shriver National Institute of Child Health & Human Development of the National Institutes of Health under Award Number P01HD040605; by a grant from the Successful Pathways from School to Work initiative of the University of Chicago, funded by the Hymen Milgrom Supporting Organization; by a grant from the Institute of Education Sciences, U.S. Department of Education, through grant R305A190467 to the University of Chicago; and by a grant from the Spencer Foundation. The content is solely the responsibility of the authors and does not necessarily represent the official views of the National Institutes of Health, the Institute of Education Sciences, or the U.S. Department of Education.
 
