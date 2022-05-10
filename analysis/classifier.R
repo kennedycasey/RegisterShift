@@ -168,7 +168,6 @@ shap <- shap.prep(
   xgb_model = extract_fit_engine(xgb_fit), 
   X_train = as.matrix(train[,-1]))
 
-
 shap.plot.summary(shap)
 
 shap.plot.dependence(shap, 
