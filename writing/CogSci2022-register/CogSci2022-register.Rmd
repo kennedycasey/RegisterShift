@@ -151,7 +151,7 @@ providence.shift <- read_csv("../../analysis/model-outputs/shift-timing-Providen
 ```
 We asked when CDL forms are replaced by ADL forms in children's own speech. Using the _lme4_ package in R [@bates2015fitting; @r2021], we fit a mixed-effects binomial logistic regression model predicting children's production of CDL vs. ADL forms, with target child age (in months, scaled) as a single fixed effect. Random slopes and intercepts for word pairs were also included^[glmer(form $\sim$ age (months, scaled) + (1 + age | word pair), family = binomial)]. For each target word token, the form was coded as either 0 (CDL) or 1 (ADL). Thus, the model captures, for each age, the probability of using ADL forms over CDL forms.
 
-Children significantly increased their production of ADL forms over age ($\beta$ = `r format(round(overall.shift$estimate, 2), nsmall = 2)`, _SE_ = `r format(round(overall.shift$std.error, 2), nsmall = 2)`, _t_ = `r format(round(overall.shift$statistic, 2), nsmall = 2)`, _p_ `r ifelse(overall.shift$p.value < .001, paste("< 0.001"), paste("=", format(round(overall.shift$p.value, 3), 3)))`; Figure 1). The average CDL-to-ADL transition point (i.e., the point at which ADL forms were produced >50% of the time) was at approximately 28 months, or 2.5 years. 
+Children significantly increased their production of ADL forms over age ($\beta$ = `r format(round(overall.shift$estimate, 2), nsmall = 2)`, _SE_ = `r format(round(overall.shift$std.error, 2), nsmall = 2)`, _t_ = `r format(round(overall.shift$statistic, 2), nsmall = 2)`, _p_ `r ifelse(overall.shift$p.value < .001, paste("< 0.001"), paste("=", format(round(overall.shift$p.value, 3), 3)))` (Figure 1). The average CDL-to-ADL transition point (i.e., the point at which ADL forms were produced >50% of the time) was at approximately 28 months, or 2.5 years. 
 
 ```{r shift-timing-fig, fig.env = "figure", fig.pos = "h", fig.align = "center", fig.width = 3, fig.height = 3, fig.cap = "Model-predicted increase in production of ADL forms across age, with shaded standard error region. Gray lines depict individual word-pair trajectories."}
 
@@ -175,7 +175,7 @@ Analysis of children's own spontaneous speech revealed developmental shifts in t
 # Study 2: What linguistic information in children's input supports their shift from CDL to ADL words?
 We next explored children's input (i.e., other-produced speech), asking what linguistic information could support their shift from CDL to ADL vocabulary. We conceptualize our second study as an investigation of the cues that could help learners associate CDL and ADL words with their appropriate registers.
 
-CDL, as a register, is differentiated from ADL at multiple linguistic levels, including prosodic, lexical, and syntactic differentiations [e.g., @soderstrom2007beyond]. In English, CDL is associated with higher overall pitch as well as greater variability in pitch contours [@fernald1989intonation; @vosoughi2012longitudinal]. CDL utterances are often produced more slowly [e.g., @ko2013additive; @vigliocco2020child; but see @martin2016utterances]. CDL also typically includes less lexical diversity [@hills2013company] and more words that children already know [@foushee2016lexical]. Syntactically, CDL is characterized as less complex than ADL. CDL utterances are typically shorter [@brent2001role; @martin2016utterances] and feature simpler constructions [@cameron2003construction].
+CDL, as a register, is differentiated from ADL at multiple linguistic levels, including prosodic, lexical, and syntactic differentiation [e.g., @soderstrom2007beyond]. In English, CDL is associated with higher overall pitch as well as greater variability in pitch contours [@fernald1989intonation; @vosoughi2012longitudinal]. CDL utterances are often produced more slowly [e.g., @ko2013additive; @vigliocco2020child; but see @martin2016utterances]. CDL also typically includes less lexical diversity [@hills2013company] and more words that children already know [@foushee2016lexical]. Syntactically, CDL is characterized as less complex than ADL. CDL utterances are typically shorter [@brent2001role; @martin2016utterances] and feature simpler constructions [@cameron2003construction].
 
 Here, we tested whether the linguistic features that differentiate CDL vs. ADL at the register level also differentiate the local speech contexts surrounding CDL vs. ADL forms---even in speech that is primarily addressed to children from their adult caregivers (i.e., language from a single register). In other words, can form be predicted on the basis of individual utterance-level prosodic, lexical, or syntactic cues? 
 
@@ -202,10 +202,33 @@ input.models <- bind_rows(files, .id = "source") %>%
          Predictor = trimws(str_to_sentence(str_replace(Predictor, "_", " "), "first")), 
          level = ifelse(str_detect(Predictor, "Length|Verbs"), "Syntactic", 
                         ifelse(str_detect(Predictor, "Complexity|Rarity"), "Lexical", "Prosodic"))) %>%
-  mutate(Predictor = factor(Predictor, levels = c("Verbs", "Verbs:age", "Length", "Length:age", "Rarity", "Rarity:age", "Complexity", "Complexity:age", "Rate", "Rate:age", "Pitch range", "Pitch range:age", "Pitch mean", "Pitch mean:age")))
+  mutate(Predictor = factor(Predictor, levels = c("Verbs", "Verbs:age", "Length", "Length:age", "Rarity", "Rarity:age", "Complexity", "Complexity:age", "Rate", "Rate:age", "Pitch range", "Pitch range:age", "Pitch mean", "Pitch mean:age")), 
+         speaker = "Other")
 
-main.effects <- ggplot(filter(input.models, type == "main_effect"), 
-       aes(x = Estimate, y = Predictor, color = level)) +
+files.child <- lapply(paste0(path, filenames[!str_detect(filenames, "-other|ratings")]), read_csv)
+input.models.child <- bind_rows(files.child, .id = "source") %>%
+  rename(Predictor = term, 
+         Estimate = estimate, 
+         SE = std.error) %>%
+  mutate(Predictor = str_remove(str_replace(Predictor, "num_tokens", "length"), "_wordbank|_ratings")) %>%
+  group_by(source) %>%
+  mutate(order = row_number(), 
+         type = case_when(
+           order == 1 ~ "intercept", 
+           order == 2 ~ "main_effect", 
+           order == 3 ~ "age", 
+           order == 4 ~ "interaction"), 
+         Sig = ifelse(p.value < .05, "sig", "not_sig"), 
+         Predictor = trimws(str_to_sentence(str_replace(Predictor, "_", " "), "first")), 
+         level = ifelse(str_detect(Predictor, "Length|Verbs"), "Syntactic", 
+                        ifelse(str_detect(Predictor, "Complexity|Rarity"), "Lexical", "Prosodic"))) %>%
+  mutate(Predictor = factor(Predictor, levels = c("Verbs", "Verbs:age", "Length", "Length:age", "Rarity", "Rarity:age", "Complexity", "Complexity:age", "Rate", "Rate:age", "Pitch range", "Pitch range:age", "Pitch mean", "Pitch mean:age")), 
+         speaker = "Child")
+
+input.models.combined <- input.models %>% bind_rows(input.models.child)
+
+main.effects <- ggplot(filter(input.models.combined, type == "main_effect"), 
+       aes(x = Estimate, y = Predictor, color = level, alpha = speaker)) +
   geom_vline(xintercept = 0, size = 0.75, linetype = "dotted", 
              color = "gray", alpha = 0.5) +
   geom_errorbar(aes(xmin = Estimate - SE, xmax = Estimate + SE), 
@@ -214,14 +237,15 @@ main.effects <- ggplot(filter(input.models, type == "main_effect"),
   scale_shape_manual(values = c(21, 19)) +
   scale_color_manual(values = input_colors) +
   scale_x_continuous(limits = c(-0.5, 0.5)) +
+  scale_alpha_manual(values = c(0.4, 1)) + 
   labs(title = "Main Effect", x = "Coefficient Estimate") +
   theme_test(base_size = 10) +
   theme(legend.position = "none", 
         plot.title = element_text(hjust = 0.5), 
         axis.title = element_blank())
   
-interactions <- ggplot(filter(input.models, type == "interaction"), 
-       aes(x = Estimate, y = Predictor, color = level)) +
+interactions <- ggplot(filter(input.models.combined, type == "interaction"), 
+       aes(x = Estimate, y = Predictor, color = level, alpha = speaker)) +
   geom_vline(xintercept = 0, size = 0.5, linetype = "dotted", 
              color = "gray", alpha = 0.75) +
   geom_errorbar(aes(xmin = Estimate - SE, xmax = Estimate + SE), 
@@ -230,9 +254,11 @@ interactions <- ggplot(filter(input.models, type == "interaction"),
   scale_shape_manual(values = c(21, 19), guide = "none") +
   scale_color_manual(values = input_colors) +
   scale_x_continuous(limits = c(-0.5, 0.5)) +
-  labs(title = "Interaction with Age", x = "Coefficient Estimate") +
+  scale_alpha_manual(values = c(0.4, 1)) + 
+  labs(title = "Interaction with Age", x = "Coefficient Estimate", 
+       alpha = "Speaker Type", color = "Linguistic Level") +
   theme_test(base_size = 10) +
-  theme(legend.position = "right", legend.title = element_blank(), 
+  theme(legend.position = "right",
         plot.title = element_text(hjust = 0.5), 
         axis.text.y = element_blank(), axis.title.y = element_blank(), 
         axis.ticks.y = element_blank(), 
@@ -247,7 +273,7 @@ annotate_figure(model.fig, bottom = textGrob("Coefficient Estimate"),
 # Method
 
 ## Corpora
-We analyzed `r format(other.utts, big.mark = ",", trim = TRUE)` other-produced utterances (i.e., utterances not produced by the target child) in the same CHILDES transcripts from Study 1. The majority of utterances were produced by children's primary caregivers (_n_ = `r format(caregiver.utts, big.mark = ",", trim = TRUE)`, or `r format(round(caregiver.utts/other.utts, 3)*100, nsmall = 1)`%). While, by and large, the utterances are not annotated for addressee, our manual scanning of the CHILDES corpora suggested that the vast majority of this speech is addressed to the target child. Study 2 analyses exclude the LDP corpus because it has not been comprehensively timestamped.
+We first analyzed `r format(other.utts, big.mark = ",", trim = TRUE)` other-produced utterances (i.e., utterances not produced by the target child) in the same CHILDES transcripts from Study 1. The majority of utterances were produced by children's primary caregivers (_n_ = `r format(caregiver.utts, big.mark = ",", trim = TRUE)`, or `r format(round(caregiver.utts/other.utts, 3)*100, nsmall = 1)`%). While, by and large, the utterances are not annotated for addressee, our manual scanning of the CHILDES corpora suggested that the vast majority of this speech is addressed to the target child. We followed up by examining children's own productions from Study 1. However, Study 2 analyses exclude the LDP corpus because it has not been comprehensively timestamped.
 
 ## Linguistic input predictors
 
@@ -275,6 +301,8 @@ At the lexical level, we found significant effects for both input predictors tes
 
 At the syntactic level, we found significant effects of __utterance length__ and __number of verb phrases__. Utterances with more words ($\beta$ = `r round(subset(input.models, Predictor == "Length")$Estimate, 2)`, _SE_ = `r round(subset(input.models, Predictor == "Length")$SE, 2)`, _t_ = `r format(round(subset(input.models, Predictor == "Length")$statistic, 2), nsmall = 2)`, _p_ `r ifelse(subset(input.models, Predictor == "Length")$p.value < .001, paste("< 0.001"), paste("=", round(subset(input.models, Predictor == "Length")$p.value, 3)))`) and more verb phrases ($\beta$ = `r round(subset(input.models, Predictor == "Verbs")$Estimate, 2)`, _SE_ = `r round(subset(input.models, Predictor == "Verbs")$SE, 2)`, _t_ = `r round(subset(input.models, Predictor == "Verbs")$statistic, 2)`, _p_ `r ifelse(subset(input.models, Predictor == "Verbs")$p.value < .001, paste("< 0.001"), paste("=", round(subset(input.models, Predictor == "Verbs")$p.value, 3)))`) were more likely to contain ADL forms. Moreover, both linguistic predictors negatively interacted with age (Length: $\beta$ = `r round(subset(input.models, Predictor == "Length:age")$Estimate, 2)`, _SE_ = `r round(subset(input.models, Predictor == "Length:age")$SE, 2)`, _t_ = `r round(subset(input.models, Predictor == "Length:age")$statistic, 2)`, _p_ `r ifelse(subset(input.models, Predictor == "Length:age")$p.value < .001, paste("< 0.001"), paste("=", round(subset(input.models, Predictor == "Length:age")$p.value, 3)))`; Verbs: $\beta$ = `r round(subset(input.models, Predictor == "Verbs:age")$Estimate, 2)`, _SE_ = `r round(subset(input.models, Predictor == "Verbs:age")$SE, 2)`, _t_ = `r format(round(subset(input.models, Predictor == "Verbs:age")$statistic, 2), nsmall = 2)`, _p_ `r ifelse(subset(input.models, Predictor == "Verbs:age")$p.value < .001, paste("< 0.001"), paste("=", round(subset(input.models, Predictor == "Verbs:age")$p.value, 3)))`), suggesting that the strength of these predictors decreases across developmental time.
 
+Across all levels of linguistic representation---prosodic, lexical, and syntactic, children's productions largely mirrored others' (Figure 3). That is, children's own utterances showed different patterns of linguistic information for those containing CDL vs. ADL variants, where the latter were associated with wider pitch ranges ($\beta$ = `r round(subset(input.models.child, Predictor == "Pitch range")$Estimate, 2)`, _SE_ = `r round(subset(input.models.child, Predictor == "Pitch range")$SE, 2)`, _t_ = `r format(round(subset(input.models.child, Predictor == "Pitch range")$statistic, 2), nsmall = 2)`, _p_ `r ifelse(subset(input.models.child, Predictor == "Pitch range")$p.value < .001, paste("< 0.001"), paste("=", round(subset(input.models.child, Predictor == "Pitch range")$p.value, 3)))`), faster speaking rates ($\beta$ = `r round(subset(input.models.child, Predictor == "Rate")$Estimate, 2)`, _SE_ = `r round(subset(input.models.child, Predictor == "Rate")$SE, 2)`, _t_ = `r format(round(subset(input.models.child, Predictor == "Rate")$statistic, 2), nsmall = 2)`, _p_ `r ifelse(subset(input.models.child, Predictor == "Rate")$p.value < .001, paste("< 0.001"), paste("=", round(subset(input.models.child, Predictor == "Rate")$p.value, 3)))`), greater lexical complexity ($\beta$ = `r round(subset(input.models.child, Predictor == "Complexity")$Estimate, 2)`, _SE_ = `r round(subset(input.models.child, Predictor == "Complexity")$SE, 2)`, _t_ = `r format(round(subset(input.models.child, Predictor == "Complexity")$statistic, 2), nsmall = 2)`, _p_ `r ifelse(subset(input.models.child, Predictor == "Complexity")$p.value < .001, paste("< 0.001"), paste("=", round(subset(input.models.child, Predictor == "Complexity")$p.value, 3)))`), more rare words ($\beta$ = `r round(subset(input.models.child, Predictor == "Rarity")$Estimate, 2)`, _SE_ = `r round(subset(input.models.child, Predictor == "Rarity")$SE, 2)`, _t_ = `r format(round(subset(input.models.child, Predictor == "Rarity")$statistic, 2), nsmall = 2)`, _p_ `r ifelse(subset(input.models.child, Predictor == "Rarity")$p.value < .001, paste("< 0.001"), paste("=", round(subset(input.models.child, Predictor == "Rarity")$p.value, 3)))`), more words overall ($\beta$ = `r round(subset(input.models.child, Predictor == "Length")$Estimate, 2)`, _SE_ = `r round(subset(input.models.child, Predictor == "Length")$SE, 2)`, _t_ = `r format(round(subset(input.models.child, Predictor == "Length")$statistic, 2), nsmall = 2)`, _p_ `r ifelse(subset(input.models.child, Predictor == "Length")$p.value < .001, paste("< 0.001"), paste("=", round(subset(input.models.child, Predictor == "Length")$p.value, 3)))`), and more verbs ($\beta$ = `r round(subset(input.models.child, Predictor == "Verbs")$Estimate, 2)`, _SE_ = `r round(subset(input.models.child, Predictor == "Verbs")$SE, 2)`, _t_ = `r format(round(subset(input.models.child, Predictor == "Verbs")$statistic, 2), nsmall = 2)`, _p_ `r ifelse(subset(input.models.child, Predictor == "Verbs")$p.value < .001, paste("< 0.001"), paste("=", round(subset(input.models.child, Predictor == "Verbs")$p.value, 3)))`), but not significantly with lower mean pitch ($\beta$ = `r round(subset(input.models.child, Predictor == "Pitch mean")$Estimate, 2)`, _SE_ = `r round(subset(input.models.child, Predictor == "Pitch mean")$SE, 2)`, _t_ = `r format(round(subset(input.models.child, Predictor == "Pitch mean")$statistic, 2), nsmall = 2)`, _p_ `r ifelse(subset(input.models.child, Predictor == "Pitch mean")$p.value < .001, paste("< 0.001"), paste("=", round(subset(input.models.child, Predictor == "Pitch mean")$p.value, 3)))`).
+
 # Discussion
 Analyses of children's input revealed reliable differences in the patterns of linguistic information surrounding CDL vs. ADL forms. Many of the prosodic, lexical, and syntactic features that broadly differentiate CDL vs. ADL registers similarly partitioned utterances containing CDL vs. ADL forms. Notably, these differences in local speech context emerged even in language that was primarily addressed to children from their primary caregivers (i.e., language likely from a single register---CDL). This finding underscores the idea that register production reflects stylistic linguistic choices by the person producing the utterance and does not necessarily require the prototypical communicative context (e.g., a caregiver can use ADL-like utterances when talking to a young child).
 
@@ -294,7 +322,7 @@ We focus in the present study on the issue of encountering multiple labels for t
 Rather than conceptualizing vocabulary development as the simple tallying up of new 'known' words in a relatively low-dimensional semantic space, there is richness to be found in interactions with other types of information (linguistic, social, etc.) and in analyses of change over time. Exploring children's _use_ words in varying forms and contexts can provide insight into the patterns of information that supported their learning in the first place.
 
 \vspace{1em}\fbox{\parbox[b][][c]{7.5cm}{\centering \textbf{Data Availability}\\
-All analysis scripts and anonymized data can be found at the following link: \href{https://github.com/kennedycasey/RegisterShift}{https://github.com/kennedycasey/RegisterShift}.
+All anonymized data and analysis scripts can be found at the following link: \href{https://github.com/kennedycasey/RegisterShift}{https://github.com/kennedycasey/RegisterShift}.
 }}
 
 # Acknowledgements
