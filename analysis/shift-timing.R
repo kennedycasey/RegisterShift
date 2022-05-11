@@ -179,10 +179,25 @@ prop <- ggarrange(birdie_bird, doggy_dog, bunny_rabbit,
 
 annotate_figure(prop,
                 top = text_grob("     No Switch              Early Switch            Late Switch", size = 25, face = "bold"),
-                left = text_grob("Proportion of tokens per form", rot = 90, size = 25, face = "bold"), 
+                left = text_grob("Proportion of tokens per variant", rot = 90, size = 25, face = "bold"), 
                 bottom = text_grob("Age (months)", size = 25, face = "bold"))
 
 ggsave("writing/figs/bypair-shift-timing.png", height = 15, width = 10, dpi = 300)
+
+
+prop <- ggarrange(birdie_bird, doggy_dog, bunny_rabbit,
+                  blankie_blanket, dolly_doll, daddy_dad, 
+                  duckie_duck, horsey_horse, mommy_mom, 
+                  froggy_frog, kitty_cat, potty_bathroom, 
+                  piggy_pig, `night night_goodnight`, tummy_stomach,
+                  ncol = 5, nrow = 3)
+
+annotate_figure(prop,
+                left = text_grob("Proportion of tokens per variant", rot = 90, size = 25, face = "bold"), 
+                bottom = text_grob("Age (months)", size = 25, face = "bold"))
+
+ggsave("figs/bypair-shift-timing.png", height = 10, width = 15, dpi = 300)
+
 
 # generate summary prop plot
 model_data_list = list()
@@ -234,23 +249,51 @@ xintercept <- overall_trend %>%
   slice_head() %>%
   pull(x)
 
+indiv <- model_data_long %>%
+  filter(form == "ADL") %>%
+  mutate(prop = count/total_tokens) %>%
+  select(age, pair, prop) %>%
+  distinct()
+
 ggplot() + 
-  geom_smooth(data = model_data_long, 
-              aes(x = age, y = form_numeric, group = pair), 
-              method = "glm", method.args = list(family = "binomial"), 
+  # geom_jitter(data = indiv, 
+  #            aes(x = age, y = prop), 
+  #            color = "#235789", alpha = 0.3) + 
+  geom_smooth(data = model_data_long,
+              aes(x = age, y = form_numeric, group = pair),
+              method = "glm", method.args = list(family = "binomial"),
               color = "#F5F5F5", se = FALSE) +
-  geom_ribbon(data = overall_trend, 
-              aes(x = x, ymin = predicted - conf.low, ymax = predicted + conf.low), 
+  geom_ribbon(data = overall_trend,
+              aes(x = x, ymin = conf.low, ymax = conf.high),
               fill = "#235789", alpha = 0.25) +
-  geom_line(data = overall_trend, 
+  geom_line(data = overall_trend,
             aes(x = x, y = predicted), color = "#235789", size = 2) +
   scale_x_continuous(limits = c(0, 84), breaks = seq(0, 84, by = 12)) +
-  labs(x = "Age (months)", y = "Probability of producing ADL form") +
+  labs(x = "Age (months)", y = "Probability of producing ADL variant") +
   geom_hline(yintercept = 0.5, linetype = "dotted", size = 1) +
-  theme_test(base_size = 18) +
+  theme_test(base_size = 15) +
   theme(axis.title = element_text(face = "bold")) +
   coord_cartesian(ylim = c(0, 1))
 ggsave("writing/figs/shift-timing.png", height = 5, width = 6, dpi = 300)
+
+ggplot() + 
+  geom_ribbon(data = overall_trend, 
+              mapping = aes(x = x, ymin = conf.low, ymax = conf.high), 
+              fill = "#235789", alpha = 0.25) +
+  geom_ribbon(data = overall_trend_adults, 
+              mapping = aes(x = x, ymin = conf.low, ymax = conf.high), 
+              fill = "#0288d1", alpha = 0.25) +
+  geom_line(data = overall_trend, 
+            mapping = aes(x = x, y = predicted), color = "#235789", size = 2) +
+  geom_line(data = overall_trend_adults, 
+            mapping = aes(x = x, y = predicted), color = "#0288d1", linetype = "dashed", size = 2) +
+  scale_x_continuous(limits = c(0, 84), breaks = seq(0, 84, by = 12)) +
+  labs(x = "Age (months)", y = "Probability of producing ADL variant") +
+  geom_hline(yintercept = 0.5, linetype = "dotted", size = 1) +
+  theme_test(base_size = 15) +
+  theme(axis.title = element_text(face = "bold")) +
+  coord_cartesian(ylim = c(0, 1))
+ggsave("figs/shift-timing-combined.png", height = 5, width = 6, dpi = 300)
 
 model_outputs_list = list()
 for (i in pairs) {
@@ -372,8 +415,6 @@ xintercept.LDP <- overall_trend %>%
   filter(predicted >= 0.5) %>%
   slice_head() %>%
   pull(x)
-
-
 
 # CHILDES subset -----------------------------------------------------------
 utterances <- childes_utterances %>%
@@ -579,6 +620,7 @@ overall_trend <- ggpredict(m, c("age [all]"), type = "random")
 
 # compute the age at which ADL forms are produced >50% of the time 
 xintercept.providence <- overall_trend %>%
+  mutate(predicted = exp(predicted) / (1 + exp(predicted))) %>%
   filter(predicted >= 0.5) %>%
   slice_head() %>%
   pull(x)

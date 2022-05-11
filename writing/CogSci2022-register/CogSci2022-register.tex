@@ -95,7 +95,7 @@ children significantly increase their production of ADL word forms
 across age, with the average CDL-to-ADL transition point at 2.5 years.
 Many of the linguistic features that distinguish CDL vs.~ADL registers
 (e.g., lexical and syntactic complexity) similarly differentiated the
-local speech contexts surrounding CDL vs.~ADL word forms in children's
+local speech contexts surrounding CDL vs.~ADL variants in children's
 input. Notably, these differences emerged even in speech that was
 primarily child-directed. Learners may therefore be able to capitalize
 on these linguistic cues to support their discovery of register along
@@ -161,8 +161,8 @@ children seem to learn multiple CDL/ADL variants without issue.
 One potential way to explain children's learning of both labels is to
 consider the social context of CDL vs.~ADL use. While labeling an animal
 as \emph{doggy} vs.~\emph{dog} may not communicate anything distinct
-about the referent itself, the production of one form vs.~the other may
-indicate something meaningful about \emph{who} is being addressed or
+about the referent itself, the production of one variant vs.~the other
+may indicate something meaningful about \emph{who} is being addressed or
 producing the label. That is, differences in register could serve to
 `explain away' the otherwise problematic redundancy of multiple labels
 in these pairs (Clark, 1990). Indirect evidence for this idea comes from
@@ -181,11 +181,11 @@ language use from relatively early in development.
 
 We hypothesize that children may contend with CDL/ADL word pairs by
 associating the contrasting forms with different modes of use (i.e., by
-classifying each form as belonging to a distinct register). To test this
-idea, we first need to establish (a) when children begin to shift away
-from producing CDL-specific words, and (b) how children may be able to
-use bottom-up linguistic input cues to associate lexical variants with
-their associated registers (i.e., CDL vs.~ADL).
+classifying each variant as belonging to a distinct register). To test
+this idea, we first need to establish (a) when children begin to shift
+away from producing CDL-specific words, and (b) how children may be able
+to use bottom-up linguistic input cues to associate lexical variants
+with their associated registers (i.e., CDL vs.~ADL).
 
 \hypertarget{current-investigation}{%
 \subsection{Current investigation}\label{current-investigation}}
@@ -195,10 +195,10 @@ We examine a small but core subset of 15 CDL-specific words in English
 prevalent in children's early vocabularies but are eventually replaced
 by ADL words (\emph{dog}, \emph{goodnight}, \emph{stomach}). In Study 1,
 we analyze over 60,000 utterances of spontaneous speech from children up
-to seven years of age to establish when ADL forms become more dominant
-in children's own productions. That is, when do children switch from
-using CDL forms to using ADL forms? Our data suggest that the average
-age of CDL-to-ADL switch occurs around 2.5 years.
+to seven years of age to establish when ADL variants become more
+dominant in children's own productions. That is, when do children switch
+from using CDL variants to using ADL variants? Our data suggest that the
+average age of CDL-to-ADL switch occurs around 2.5 years.
 
 We then explore the features of children's input that could support this
 switch by examining the extent to which CDL and ADL words are used in
@@ -222,11 +222,11 @@ with different addressees.
 words?}\label{study-1-when-do-children-shift-from-cdl-to-adl-words}}
 
 We tracked children's use of 15 CDL/ADL word pairs (Table 1) from early
-infancy up to age seven. Since CDL forms rarely appear in ADL, we
+infancy up to age seven. Since CDL variants rarely appear in ADL, we
 predicted that children would shift away from production of these
-CDL-specific forms with increasing age. That is, we expected to see
-replacement of CDL forms with ADL forms in children's own speech across
-time.
+CDL-specific words with increasing age. That is, we expected to see
+replacement of CDL variants with ADL variants in children's own speech
+across time.
 
 \hypertarget{method}{%
 \section{Method}\label{method}}
@@ -251,22 +251,23 @@ months for approximately 90 minutes from age 14 to 58 months.
 \subsection{Target words}\label{target-words}}
 
 Fifteen CDL/ADL word pairs (30 total target words) were selected based
-on two criteria: the appearance of at least one form on the
+on two criteria: the appearance of at least one variant on the
 MacArthur-Bates Communicative Development Inventory (CDI, Fenson et al.,
 1994), and sufficient frequency of occurrence in CHILDES (at least 100
-child-produced tokens and 100 other-produced tokens per form). Pairs
+child-produced tokens and 100 other-produced tokens per variant). Pairs
 were also selected based on our own subjective judgment that the same
 object, animal, routine, or body part could be reasonably labeled with
-either form by young children.\footnote{While onomatopoeic words can be
-  used in a similar manner to the CDL-specific words in our test set
+either variant by young children.\footnote{While onomatopoeic words can
+  be used in a similar manner to the CDL-specific words in our test set
   (e.g., \emph{choo-choo} serving as a CDL-specific label for
   \emph{train}, or \emph{quack-quack} for \emph{duck}), these iconic
   items were not included because they are primarily used as sound
   effects rather than labels for objects or animals (Skarabela, Pool, \&
   Ota, 2018). The polysemous nature of iconic word usage does not
-  provide as clear of a test of replacement of CDL forms with ADL forms
-  over time.} Across all transcripts, 64,852 child-produced utterances
-contained at least one target word and were included in our analysis.
+  provide as clear of a test of replacement of CDL variants with ADL
+  variants over time.} Across all transcripts, 64,852 child-produced
+utterances contained at least one target word and were included in our
+analysis.
 
 \begin{table}[!h]
 
@@ -301,22 +302,22 @@ contained at least one target word and were included in our analysis.
 \hypertarget{results}{%
 \section{Results}\label{results}}
 
-We asked when CDL forms are replaced by ADL forms in children's own
-speech. Using the \emph{lme4} package in R (Bates, Mächler, Bolker, \&
-Walker, 2015; R Core Team, 2021), we fit a mixed-effects binomial
+We asked when CDL variants are replaced by ADL variants in children's
+own speech. Using the \emph{lme4} package in R (Bates, Mächler, Bolker,
+\& Walker, 2015; R Core Team, 2021), we fit a mixed-effects binomial
 logistic regression model predicting children's production of CDL
-vs.~ADL forms, with target child age (in months, scaled) as a single
+vs.~ADL variants, with target child age (in months, scaled) as a single
 fixed effect. Random slopes and intercepts for word pairs were also
 included\footnote{glmer(form \(\sim\) age (months, scaled) + (1 + age
   \textbar{} word pair), family = binomial)}. For each target word
 token, the form was coded as either 0 (CDL) or 1 (ADL). Thus, the model
-captures, for each age, the probability of using ADL forms over CDL
-forms.
+captures, for each age, the probability of using ADL variants over CDL
+variants.
 
-Children significantly increased their production of ADL forms over age
-(\(\beta\) = 0.54, \emph{SE} = 0.11, \emph{t} = 4.92, \emph{p}
-\textless{} 0.001; Figure 1). The average CDL-to-ADL transition point
-(i.e., the point at which ADL forms were produced \textgreater50\% of
+Children significantly increased their production of ADL variants over
+age (\(\beta\) = 0.54, \emph{SE} = 0.11, \emph{t} = 4.92, \emph{p}
+\textless{} 0.001 (Figure 1). The average CDL-to-ADL transition point
+(i.e., the point at which ADL variants were produced \textgreater50\% of
 the time) was at approximately 28 months, or 2.5 years.
 
 \begin{CodeChunk}
@@ -326,19 +327,19 @@ the time) was at approximately 28 months, or 2.5 years.
 
 }
 
-\caption[Model-predicted increase in production of ADL forms across age, with shaded standard error region]{Model-predicted increase in production of ADL forms across age, with shaded standard error region. Gray lines depict individual word-pair trajectories.}\label{fig:shift-timing-fig}
+\caption[Model-predicted increase in production of ADL variants across age, with shaded standard error region]{Model-predicted increase in production of ADL variants across age, with shaded standard error region. Gray lines depict individual word-pair trajectories.}\label{fig:shift-timing-fig}
 \end{figure}
 \end{CodeChunk}
 
-The trend of increasing ADL form production was significant for 13 of 15
-word pairs, but the exact trajectory of shift varied greatly across
-items (Figure 2). In some cases, CDL forms were replaced by ADL forms
-early on (e.g., \emph{doggy/dog} and \emph{kitty/cat} around 2 years).
-For other pairs, the CDL-to-ADL transition point was much later (e.g.,
-\emph{tummy/stomach} and \emph{potty/bathroom} around 5 years). Finally,
-a clear transition point was not observed for some pairs because ADL
-forms were already produced \textgreater50\% of the time from the
-earliest ages sampled (e.g., \emph{duckie/duck} and
+The trend of increasing ADL variant production was significant for 13 of
+15 word pairs, but the exact trajectory of shift varied greatly across
+items (Figure 2). In some cases, CDL variants were replaced by ADL
+variants early on (e.g., \emph{doggy/dog} and \emph{kitty/cat} around 2
+years). For other pairs, the CDL-to-ADL transition point was much later
+(e.g., \emph{tummy/stomach} and \emph{potty/bathroom} around 5 years).
+Finally, a clear transition point was not observed for some pairs
+because ADL variants were already produced \textgreater50\% of the time
+from the earliest ages sampled (e.g., \emph{duckie/duck} and
 \emph{blankie/blanket}).
 
 To further examine the robustness of the overall effect of increasing
@@ -349,7 +350,7 @@ months), and all transcripts from the Providence corpus, a small,
 longitudinal subset of CHILDES (\emph{n} = 6, age range = 11--48 months:
 Demuth, Culbertson, \& Alter, 2006). The main finding was replicated in
 all three individual corpora. Children significantly increased their
-production of ADL forms over age, collectively across all CHILDES
+production of ADL variants over age, collectively across all CHILDES
 corpora (\(\beta\) = 0.55, \emph{SE} = 0.11, \emph{t} = 4.95, \emph{p}
 \textless{} 0.001), as well as in the LDP corpus (\(\beta\) = 0.38,
 \emph{SE} = 0.04, \emph{t} = 8.61, \emph{p} \textless{} 0.001) and
@@ -365,7 +366,7 @@ LDP: 30 months, Providence: 27 months).
 
 }
 
-\caption[Individual word-pair trajectories for increasing production of ADL forms (blue) and decreasing production of CDL forms (red) with age]{Individual word-pair trajectories for increasing production of ADL forms (blue) and decreasing production of CDL forms (red) with age. Points indicate proportions for each 1-month age bin. Vertical gray lines at 28 months indicate the overall model-predicted CDL-to-ADL transition point across all words.}\label{fig:shift-timing-bypair-fig}
+\caption[Individual word-pair trajectories for increasing production of ADL variants (blue) and decreasing production of CDL variants (red) with age]{Individual word-pair trajectories for increasing production of ADL variants (blue) and decreasing production of CDL variants (red) with age. Points indicate proportions for each 1-month age bin. Vertical gray lines at 28 months indicate the overall model-predicted CDL-to-ADL transition point across all words.}\label{fig:shift-timing-bypair-fig}
 \end{figure}
 \end{CodeChunk}
 
@@ -373,21 +374,21 @@ LDP: 30 months, Providence: 27 months).
 \section{Discussion}\label{discussion}}
 
 Analysis of children's own spontaneous speech revealed developmental
-shifts in their production of CDL vs.~ADL forms, with the latter
+shifts in their production of CDL vs.~ADL variants, with the latter
 becoming increasingly more prominent over age. While we found
 substantial variation in the exact trajectories of CDL-to-ADL vocabulary
 shift for the 15 word pairs, the overall trend towards ADL production
 was clear. As an indicator of robustness, this effect emerged in three
 different corpora with vastly different sample sizes and distinct
 sampling strategies (i.e., cross-sectional vs.~longitudinal). We take
-children's shifts away from CDL forms and toward ADL forms over time as
-indirect evidence of their early formation of CDL and ADL as distinct
-registers.
+children's shifts away from CDL variants and toward ADL variants over
+time as indirect evidence of their early formation of CDL and ADL as
+distinct registers.
 
-\hypertarget{study-2-what-linguistic-information-in-childrens-input-supports-their-shift-from-cdl-to-adl-words}{%
+\hypertarget{study-2-what-linguistic-information-in-childrens-input-supports-their-shift-from-cdl-to-adl-variants}{%
 \section{Study 2: What linguistic information in children's input
 supports their shift from CDL to ADL
-words?}\label{study-2-what-linguistic-information-in-childrens-input-supports-their-shift-from-cdl-to-adl-words}}
+variants?}\label{study-2-what-linguistic-information-in-childrens-input-supports-their-shift-from-cdl-to-adl-variants}}
 
 We next explored children's input (i.e., other-produced speech), asking
 what linguistic information could support their shift from CDL to ADL
@@ -396,7 +397,7 @@ cues that could help learners associate CDL and ADL words with their
 appropriate registers.
 
 CDL, as a register, is differentiated from ADL at multiple linguistic
-levels, including prosodic, lexical, and syntactic differentiations
+levels, including prosodic, lexical, and syntactic differentiation
 (e.g., Soderstrom, 2007). In English, CDL is associated with higher
 overall pitch as well as greater variability in pitch contours (Fernald,
 1989; Vosoughi \& Roy, 2012). CDL utterances are often produced more
@@ -411,19 +412,19 @@ Igarashi, Jincho, \& Mazuka, 2016) and feature simpler constructions
 
 Here, we tested whether the linguistic features that differentiate CDL
 vs.~ADL at the register level also differentiate the local speech
-contexts surrounding CDL vs.~ADL forms---even in speech that is
+contexts surrounding CDL vs.~ADL variants---even in speech that is
 primarily addressed to children from their adult caregivers (i.e.,
-language from a single register). In other words, can form be predicted
-on the basis of individual utterance-level prosodic, lexical, or
-syntactic cues?
+language from a single register). In other words, can the appearance of
+one variant vs.~the other be predicted on the basis of individual
+utterance-level prosodic, lexical, or syntactic cues?
 
-We hypothesized that utterances with CDL forms, relative to utterances
-with ADL forms, would be associated with (1) higher mean pitch, (2)
-greater pitch variability, (3) slower speaking rates, and (4) less
-lexical complexity. We also predicted that CDL utterances would contain
-(5) fewer rare words, (6) fewer words overall, and (7) fewer verb
-phrases. If these linguistic cues reliably differentiate CDL vs.~ADL
-word usage contexts, then they could provide a viable source of
+We hypothesized that utterances with CDL variants, relative to
+utterances with ADL variants, would be associated with (1) higher mean
+pitch, (2) greater pitch variability, (3) slower speaking rates, and (4)
+less lexical complexity. We also predicted that CDL utterances would
+contain (5) fewer rare words, (6) fewer words overall, and (7) fewer
+verb phrases. If these linguistic cues reliably differentiate CDL
+vs.~ADL word usage contexts, then they could provide a viable source of
 information to support children's association between these words and
 their corresponding registers.
 
@@ -434,7 +435,7 @@ their corresponding registers.
 
 }
 
-\caption[Coefficient estimates for linguistic predictors of form]{Coefficient estimates for linguistic predictors of form. Positive main effects indicate that utterances are more likely to contain ADL forms when they have higher values for that predictor (e.g., more verbs). Positive age interactions indicate an increasing effect of the predictor with age. Error bars depict standard errors of the coefficient estimates, and filled circles represent significant effects (\textit{p} $<$ 0.05).}\label{fig:ling-predictors-fig}
+\caption[Coefficient estimates for linguistic predictors of variant in both others' and children's own utterances]{Coefficient estimates for linguistic predictors of variant in both others' and children's own utterances. Positive main effects indicate that utterances are more likely to contain ADL variants when they have higher values for that predictor (e.g., more verbs). Positive age interactions indicate an increasing effect of the predictor with age. Error bars depict standard errors of the coefficient estimates, and filled circles represent significant effects (\textit{p} $<$ 0.05).}\label{fig:ling-predictors-fig}
 \end{figure*}
 \end{CodeChunk}
 
@@ -444,14 +445,15 @@ their corresponding registers.
 \hypertarget{corpora-1}{%
 \subsection{Corpora}\label{corpora-1}}
 
-We analyzed 131,847 other-produced utterances (i.e., utterances not
-produced by the target child) in the same CHILDES transcripts from Study
-1. The majority of utterances were produced by children's primary
+We first analyzed 131,847 other-produced utterances (i.e., utterances
+not produced by the target child) in the same CHILDES transcripts from
+Study 1. The majority of utterances were produced by children's primary
 caregivers (\emph{n} = 58,071, or 44.0\%). While, by and large, the
 utterances are not annotated for addressee, our manual scanning of the
 CHILDES corpora suggested that the vast majority of this speech is
-addressed to the target child. Study 2 analyses exclude the LDP corpus
-because it has not been comprehensively timestamped.
+addressed to the target child. We followed up by examining children's
+own productions from Study 1. However, Study 2 analyses exclude the LDP
+corpus because it has not been comprehensively timestamped.
 
 \hypertarget{linguistic-input-predictors}{%
 \subsection{Linguistic input
@@ -512,35 +514,35 @@ parser (Honnibal, Montani, Van Landeghem, \& Boyd, 2020).
 \section{Results}\label{results-1}}
 
 We ran individual mixed-effects binomial logistic regression models of
-CDL vs.~ADL word form use for each of seven linguistic input predictors.
+CDL vs.~ADL variant use for each of seven linguistic input predictors.
 Models included fixed effects of linguistic predictor (scaled), target
 child age (in months, scaled), and their interaction as well as random
-intercepts for individual word pairs and speakers\footnote{glmer(form
+intercepts for individual word pairs and speakers\footnote{glmer(variant
   \(\sim\) linguistic predictor (numeric, scaled) * age (months, scaled)
   + (1 \textbar{} word pair) + (1 \textbar{} speaker), family =
-  binomial)}. For each target word token, the form was coded as CDL (0)
-or ADL (1), so coefficient estimates provide a measure of the strength
-of association between a predictor and ADL form. All main effects of
-linguistic predictors and interactions with age are shown in Figure 3.
-All models also revealed a positive main effect of target child age (all
-\emph{p}s \textless{} 0.001), confirming that adults, like children in
-Study 1, increase ADL form production as their child addressees get
-older.
+  binomial)}. For each target word token, the variant was coded as CDL
+(0) or ADL (1), so coefficient estimates provide a measure of the
+strength of association between a predictor and ADL variants. All main
+effects of linguistic predictors and interactions with age are shown in
+Figure 3. All models also revealed a positive main effect of target
+child age (all \emph{p}s \textless{} 0.001), confirming that adults,
+like children in Study 1, increase ADL variant production as their child
+addressees get older.
 
 At the prosodic level, we found significant effects for two of the three
 input predictors tested. Utterance-level \textbf{pitch range} was not
-predictive of form (\(\beta\) = 0.003, \emph{SE} = 0.02, \emph{t} =
+predictive of variant (\(\beta\) = 0.003, \emph{SE} = 0.02, \emph{t} =
 0.18, \emph{p} = 0.858) and did not significantly interact with age
 (\(\beta\) = 0.02, \emph{SE} = 0.02, \emph{t} = 1.16, \emph{p} = 0.245).
 However, utterance-level \textbf{mean pitch} was a negative predictor of
-ADL form (\(\beta\) = -0.063, \emph{SE} = 0.02, \emph{t} = -3.25,
+ADL variant (\(\beta\) = -0.063, \emph{SE} = 0.02, \emph{t} = -3.25,
 \emph{p} = 0.001). That is, utterances with higher overall mean pitch
-were more likely to contain CDL forms, with no significant interaction
-with age (\(\beta\) = -0.01, \emph{SE} = 0.02, \emph{t} = -0.77,
-\emph{p} = 0.444). \textbf{Speech rate} (i.e., words produced per
-second) was a positive predictor of ADL form (\(\beta\) = 0.09,
+were more likely to contain CDL variants, with no significant
+interaction with age (\(\beta\) = -0.01, \emph{SE} = 0.02, \emph{t} =
+-0.77, \emph{p} = 0.444). \textbf{Speech rate} (i.e., words produced per
+second) was a positive predictor of ADL variant (\(\beta\) = 0.09,
 \emph{SE} = 0.02, \emph{t} = 4.86, \emph{p} \textless{} 0.001).
-Utterances spoken more quickly were more likely to contain ADL forms.
+Utterances spoken more quickly were more likely to contain ADL variants.
 This input predictor also negatively interacted with age (\(\beta\) =
 -0.07, \emph{SE} = 0.02, \emph{t} = -3.96, \emph{p} \textless{} 0.001),
 indicating a decreasing strength in predictive power across
@@ -551,7 +553,7 @@ predictors tested. Utterances with higher levels of \textbf{lexical
 complexity} (\(\beta\) = 0.27, \emph{SE} = 0.04, \emph{t} = 7.05,
 \emph{p} \textless{} 0.001) and \textbf{lexical rarity} (\(\beta\) =
 0.26, \emph{SE} = 0.01, \emph{t} = 22.54, \emph{p} \textless{} 0.001)
-were more likely to contain ADL forms. Lexical complexity did not
+were more likely to contain ADL variants. Lexical complexity did not
 interact with age (\(\beta\) = -0.01, \emph{SE} = 0.03, \emph{t} =
 -0.22, \emph{p} = 0.827); whereas, lexical rarity negatively interacted
 with age such that there was a decreasing effect of this predictor over
@@ -563,22 +565,39 @@ At the syntactic level, we found significant effects of
 Utterances with more words (\(\beta\) = 0.19, \emph{SE} = 0.01, \emph{t}
 = 16.30, \emph{p} \textless{} 0.001) and more verb phrases (\(\beta\) =
 0.05, \emph{SE} = 0.01, \emph{t} = 4.61, \emph{p} \textless{} 0.001)
-were more likely to contain ADL forms. Moreover, both linguistic
+were more likely to contain ADL variants. Moreover, both linguistic
 predictors negatively interacted with age (Length: \(\beta\) = -0.16,
 \emph{SE} = 0.01, \emph{t} = -14.61, \emph{p} \textless{} 0.001; Verbs:
 \(\beta\) = -0.08, \emph{SE} = 0.01, \emph{t} = -7.51, \emph{p}
 \textless{} 0.001), suggesting that the strength of these predictors
 decreases across developmental time.
 
+Across all levels of linguistic representation---prosodic, lexical, and
+syntactic, children's productions largely mirrored others' (Figure 3).
+That is, children's own utterances showed different patterns of
+linguistic information for those containing CDL vs.~ADL variants, where
+the latter were associated with wider pitch ranges (\(\beta\) = -0.04,
+\emph{SE} = 0.02, \emph{t} = -2.28, \emph{p} = 0.023), faster speaking
+rates (\(\beta\) = 0.13, \emph{SE} = 0.02, \emph{t} = 6.70, \emph{p}
+\textless{} 0.001), greater lexical complexity (\(\beta\) = 0.16,
+\emph{SE} = 0.05, \emph{t} = 3.07, \emph{p} = 0.002), more rare words
+(\(\beta\) = 0.63, \emph{SE} = 0.01, \emph{t} = 51.63, \emph{p}
+\textless{} 0.001), more words overall (\(\beta\) = 0.1, \emph{SE} =
+0.01, \emph{t} = 7.75, \emph{p} \textless{} 0.001), and more verbs
+(\(\beta\) = 0.05, \emph{SE} = 0.01, \emph{t} = 4.44, \emph{p}
+\textless{} 0.001), but not significantly with lower mean pitch
+(\(\beta\) = -0.02, \emph{SE} = 0.02, \emph{t} = -1.22, \emph{p} =
+0.221).
+
 \hypertarget{discussion-1}{%
 \section{Discussion}\label{discussion-1}}
 
 Analyses of children's input revealed reliable differences in the
-patterns of linguistic information surrounding CDL vs.~ADL forms. Many
-of the prosodic, lexical, and syntactic features that broadly
+patterns of linguistic information surrounding CDL vs.~ADL variants.
+Many of the prosodic, lexical, and syntactic features that broadly
 differentiate CDL vs.~ADL registers similarly partitioned utterances
-containing CDL vs.~ADL forms. Notably, these differences in local speech
-context emerged even in language that was primarily addressed to
+containing CDL vs.~ADL variants. Notably, these differences in local
+speech context emerged even in language that was primarily addressed to
 children from their primary caregivers (i.e., language likely from a
 single register---CDL). This finding underscores the idea that register
 production reflects stylistic linguistic choices by the person producing
@@ -590,12 +609,12 @@ While we do not yet know if these linguistic cues are actually exploited
 by learners, this study identifies which patterns appear learnable in
 principle. More broadly, this work provides support for the possibility
 that associations with CDL vs.~ADL registers are helping learners grasp
-the differences in the contexts of CDL vs.~ADL form use and thereby
+the differences in the contexts of CDL vs.~ADL variant use and thereby
 supporting their gradual transition away from production of more
 contextually-constrained CDL-specific words. A next step is to
 experimentally test how well children across this age range perceive
 words as CDL- or ADL-relevant given the surrounding linguistic context,
-or how their expectations for hearing one form vs.~the other may be
+or how their expectations for hearing one variant vs.~the other may be
 modulated by linguistic cues such as mean pitch, lexical complexity, and
 utterance length.
 
@@ -627,9 +646,9 @@ surveys and tests often gloss over variations in form. This
 standardization helps with generalizing over many idiosyncracies, which
 allows for large-scale, even cross-linguistic comparisons (e.g., Frank,
 Braginsky, Yurovsky, \& Marchman, 2017, 2021). At the same time,
-glossing over variations in form may present a missed opportunity to
+glossing over this lexical variation may present a missed opportunity to
 investigate more nuanced aspects of vocabulary development. The present
-findings on the transition between CDL and ADL forms help demonstrate
+findings on the transition between CDL and ADL variants help demonstrate
 that vocabulary development taps into other major aspects of children's
 language learning, including their recognition of multiple levels of
 linguistic information (e.g., prosodic, lexical, and syntactic) and
@@ -677,7 +696,7 @@ and contexts can provide insight into the patterns of information that
 supported their learning in the first place.
 
 \vspace{1em}\fbox{\parbox[b][][c]{7.5cm}{\centering \textbf{Data Availability}\\
-All analysis scripts and anonymized data can be found at the following link: \href{https://github.com/kennedycasey/RegisterShift}{https://github.com/kennedycasey/RegisterShift}.
+All anonymized data and analysis scripts can be found at the following link: \href{https://github.com/kennedycasey/RegisterShift}{https://github.com/kennedycasey/RegisterShift}.
 }}
 
 \hypertarget{acknowledgements}{%

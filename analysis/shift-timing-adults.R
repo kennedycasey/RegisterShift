@@ -93,8 +93,6 @@ child.utts <- child.utts %>%
   filter(sum >= 1) %>%
   nrow()
 
-
-
 # generate prop plots
 # (for each time pt, what is the probability of producing CDL vs. ADL form?)
 
@@ -213,9 +211,9 @@ for (i in pairs) {
 model_data_merged <- do.call(rbind, model_data_list)
 rownames(model_data_merged) <- 1:nrow(model_data_merged)
 
-model_data_long <- model_data_merged[rep(seq(nrow(model_data_merged)), model_data_merged$count), 1:7]
+model_data_long_adults <- model_data_merged[rep(seq(nrow(model_data_merged)), model_data_merged$count), 1:7]
 
-m <- glmer(form_numeric ~ scale(age) + (1 + scale(age)|pair),
+m_adults <- glmer(form_numeric ~ scale(age) + (1 + scale(age)|pair),
          family = "binomial",
          control = glmerControl(optimizer = "bobyqa"),
          data = model_data_long)
@@ -226,7 +224,7 @@ tidy(m) %>%
   filter(effect == "fixed" & term == "(age)") %>%
   write_csv("analysis/model-outputs/shift-timing-adults.csv")
 
-overall_trend <- ggpredict(m, c("age [all]"), type = "random") 
+overall_trend_adults <- ggpredict(m, c("age [all]"), type = "random") 
 
 # compute the age at which ADL forms are produced >50% of the time 
 xintercept <- overall_trend %>%
@@ -245,11 +243,12 @@ ggplot() +
   geom_line(data = overall_trend, 
             aes(x = x, y = predicted), color = "#235789", size = 2) +
   scale_x_continuous(limits = c(0, 84), breaks = seq(0, 84, by = 12)) +
-  labs(x = "Age (months)", y = "Probability of producing ADL form") +
+  labs(x = "Age (months)", y = "Probability of producing ADL variant") +
   geom_hline(yintercept = 0.5, linetype = "dotted", size = 1) +
   theme_test(base_size = 18) +
   theme(axis.title = element_text(face = "bold")) +
   coord_cartesian(ylim = c(0, 1))
+ggsave("figs/shift-timing-adults.png", height = 5, width = 6, dpi = 300)
 #ggsave("writing/figs/shift-timing.png", height = 5, width = 6, dpi = 300)
 
 model_outputs_list = list()
