@@ -119,7 +119,8 @@ pairs <- read_csv("data-prep/overall/item-info.csv") %>%
 
 
 # RUN OVERALL XGBOOST MODEL -----------------------------------------------
-dat <- raw_data
+dat <- raw_data %>%
+  select(-age_range, -pair)
 
 split <- initial_split(dat, strata = form, prop = 0.9)
 train <- training(split)
