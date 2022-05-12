@@ -182,7 +182,8 @@ annotate_figure(prop,
                 left = text_grob("Proportion of tokens per variant", rot = 90, size = 25, face = "bold"), 
                 bottom = text_grob("Age (months)", size = 25, face = "bold"))
 
-ggsave("writing/figs/bypair-shift-timing.png", height = 15, width = 10, dpi = 300)
+ggsave("writing/figs/bypair-shift-timing.png", 
+       height = 15, width = 10, dpi = 300, bg = "white")
 
 
 prop <- ggarrange(birdie_bird, doggy_dog, bunny_rabbit,

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.8.4)  11 MAY 2022 14:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.8.4)  11 MAY 2022 21:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -646,93 +646,87 @@ m/m/n/10 , \OT1/ptm/m/it/10 night-night\OT1/ptm/m/n/10 ,
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 225--231
-
- []
-
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 256.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 259.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 256.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 259.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 299.
-LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <9> not available
-(Font)              Font shape `OMS/pzccm/m/n' tried instead on input line 313.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 302.
 
 [2]
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <9> not available
+(Font)              Font shape `OMS/pzccm/m/n' tried instead on input line 316.
+
 LaTeX Font Info:    Trying to load font information for OML+ptm on input line 3
-19.
+22.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/omlptm.fd
 File: omlptm.fd 
 )
 LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 319.
-<figs/shift-timing-fig-1.pdf, id=105, 216.81pt x 181.67876pt>
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 322.
+<figs/shift-timing-fig-1.pdf, id=104, 216.81pt x 181.67876pt>
 File: figs/shift-timing-fig-1.pdf Graphic file (type pdf)
 <use figs/shift-timing-fig-1.pdf>
-Package pdftex.def Info: figs/shift-timing-fig-1.pdf  used on input line 326.
+Package pdftex.def Info: figs/shift-timing-fig-1.pdf  used on input line 329.
 (pdftex.def)             Requested size: 216.80946pt x 181.6783pt.
-<figs/shift-timing-bypair-fig-1.pdf, id=106, 245.91875pt x 369.38pt>
+<figs/shift-timing-bypair-fig-1.pdf, id=105, 245.91875pt x 369.38pt>
 File: figs/shift-timing-bypair-fig-1.pdf Graphic file (type pdf)
 <use figs/shift-timing-bypair-fig-1.pdf>
 Package pdftex.def Info: figs/shift-timing-bypair-fig-1.pdf  used on input line
- 365.
+ 368.
 (pdftex.def)             Requested size: 245.91814pt x 369.37909pt.
 
-Overfull \hbox (2.00688pt too wide) in paragraph at lines 365--366
+Overfull \hbox (2.00688pt too wide) in paragraph at lines 368--369
  [][] 
  []
 
-[3 <./figs/shift-timing-fig-1.pdf> <./figs/shift-timing-bypair-fig-1.pdf>]
-Underfull \hbox (badness 1888) in paragraph at lines 392--397
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [3 <./figs/shift-timing-fig-1.pdf> <./figs/shift-timing-bypair-fig-1.pdf>]
+Underfull \hbox (badness 1888) in paragraph at lines 395--400
 \OT1/ptm/m/n/10 We next ex-plored chil-dren's in-put (i.e., other-produced
  []
 
 
-Underfull \hbox (badness 3128) in paragraph at lines 419--428
+Underfull \hbox (badness 3128) in paragraph at lines 422--431
 []\OT1/ptm/m/n/10 We hy-poth-e-sized that ut-ter-ances with CDL vari-ants
  []
 
-<figs/ling-predictors-fig-1.pdf, id=132, 457.71pt x 187.70125pt>
+<figs/ling-predictors-fig-1.pdf, id=130, 457.71pt x 187.70125pt>
 File: figs/ling-predictors-fig-1.pdf Graphic file (type pdf)
 <use figs/ling-predictors-fig-1.pdf>
-Package pdftex.def Info: figs/ling-predictors-fig-1.pdf  used on input line 432
+Package pdftex.def Info: figs/ling-predictors-fig-1.pdf  used on input line 435
 .
 (pdftex.def)             Requested size: 457.7089pt x 187.70079pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-Underfull \vbox (badness 1048) has occurred while \output is active []
-
- [4]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+[4]
+Underfull \vbox (badness 2512) has occurred while \output is active []
 
  [5 <./figs/ling-predictors-fig-1.pdf>]
 Underfull \vbox (badness 1755) has occurred while \output is active []
 
  [6]
-Underfull \hbox (badness 1946) in paragraph at lines 732--735
+Underfull \hbox (badness 1946) in paragraph at lines 738--741
  [][]\OT1/ptm/m/n/10 Braginsky, M., Sanchez, A., & Yurovsky, D. (2021).
  []
 
 [7]
-Underfull \hbox (badness 2269) in paragraph at lines 872--876
+Underfull \hbox (badness 2269) in paragraph at lines 878--882
  \OT1/ptm/m/n/10 Pre-ver-bal in-fants in-fer third-party so-cial re-la-tion-shi
 ps
  []
 
 [8] (./CogSci2022-register.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `CogSci2022-register.out' has not changed.
 (rerunfilecheck)             Checksum: C57175C92913B20B88DD9E5CD96A8F21;3390.
  ) 
 Here is how much of TeX's memory you used:
  13419 strings out of 478994
  199215 string characters out of 5858185
- 527314 words of memory out of 5000000
+ 525314 words of memory out of 5000000
  30545 multiletter control sequences out of 15000+600000
  445464 words of font info for 107 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -746,10 +740,10 @@ t/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/ty
 pe1/urw/times/utmbi8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/t
 imes/utmr8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmri
 8a.pfb>
-Output written on CogSci2022-register.pdf (8 pages, 1456778 bytes).
+Output written on CogSci2022-register.pdf (8 pages, 1416028 bytes).
 PDF statistics:
- 300 PDF objects out of 1000 (max. 8388607)
- 267 compressed objects within 3 object streams
+ 298 PDF objects out of 1000 (max. 8388607)
+ 266 compressed objects within 3 object streams
  114 named destinations out of 1000 (max. 500000)
  168 words of extra memory for PDF output out of 10000 (max. 10000000)
 
