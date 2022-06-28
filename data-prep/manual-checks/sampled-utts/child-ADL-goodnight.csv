@@ -1,6 +1,6 @@
-filename,transcription,word
-child-goodnight1,good night pumpkin i love you,goodnight
-child-goodnight2,and i did xxx said good night good night good night good night,goodnight
-child-goodnight3,good night room,goodnight
-child-goodnight4,good night,goodnight
-child-goodnight5,good night you lie down and mommy's gonna turn the light off,goodnight
+filename,transcription,word,speaker
+child-goodnight1,good night pumpkin i love you,goodnight,child
+child-goodnight2,and i did xxx said good night good night good night good night,goodnight,child
+child-goodnight3,good night room,goodnight,child
+child-goodnight4,good night,goodnight,child
+child-goodnight5,good night you lie down and mommy's gonna turn the light off,goodnight,child

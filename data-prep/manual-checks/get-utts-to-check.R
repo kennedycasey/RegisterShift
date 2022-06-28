@@ -14,6 +14,12 @@ data <- raw.data %>%
   # remove rows that are already not included in analysis
   mutate(across(starts_with("pitch"), ~as.numeric(as.character(.))), 
          # correct for missing leading zeroes
+         audio_file = ifelse(corpus_name %in% c("Brent", "Soderstrom") & nchar(audio_file) == 4, 
+                             paste0("00", audio_file), 
+                             ifelse(corpus_name %in% c("Brent", "Soderstrom") & nchar(audio_file) == 3, 
+                                    paste0("000", audio_file), 
+                                    ifelse(corpus_name %in% c("Brent", "Soderstrom") & nchar(audio_file) == 5, 
+                                           paste0("0", audio_file), audio_file))),
          audio_file = ifelse(!is.na(as.numeric(as.character(substr(audio_file, 1, 1)))) & 
                                as.numeric(as.character(substr(audio_file, 1, 1))) != 0 & 
                                corpus_name != "NewmanRatner", 
@@ -25,6 +31,7 @@ data <- raw.data %>%
  
 ffmpeg_list <- list()
 mappings_list <- list()
+counts_list <- list()
 for (i in unique(data$subset)) {
   for (word in unique(data$item)) {
     
@@ -38,6 +45,10 @@ for (i in unique(data$subset)) {
     mutate(filename = paste0(speaker_type, "-", str_remove(word, " "), row_number()))
   
   mappings_list[[word]] <- sample
+  counts_list[[word]] <- sample %>%
+    mutate(count = n()) %>%
+    select(item, count) %>%
+    distinct()
   
   sample_ffmpeg <- sample %>%
     mutate(input = paste0("ffmpeg -i ", corpus_name, "/", target_child_name, 
@@ -49,8 +60,9 @@ for (i in unique(data$subset)) {
 
   sample_anotar <- sample %>%
     rename(transcription = gloss, 
-           word = item) %>%
-    select(filename, transcription, word)
+           word = item,
+           speaker = speaker_type) %>%
+    select(filename, transcription, word, speaker)
   
   filename <- paste0("data-prep/manual-checks/sampled-utts/", 
                             i, "-", str_remove(word, " "), ".csv")
@@ -65,8 +77,11 @@ for (i in unique(data$subset)) {
 
   mappings <- do.call(rbind, mappings_list)
   write_csv(mappings, paste0("data-prep/manual-checks/full-mappings-", i, ".csv"))
+  counts <- do.call(rbind, counts_list)
+  write_csv(counts, paste0("data-prep/manual-checks/counts-", i, ".csv"))
   
   # re-initialize empty lists
   ffmpeg_list <- list()
   mappings_list <- list()
+  counts_list <- list()
 }

@@ -207,7 +207,11 @@ input.models <- bind_rows(files, .id = "source") %>%
          Predictor = trimws(str_to_sentence(str_replace(Predictor, "_", " "), "first")), 
          level = ifelse(str_detect(Predictor, "Length|Verbs"), "Syntactic", 
                         ifelse(str_detect(Predictor, "Complexity|Rarity"), "Lexical", "Prosodic"))) %>%
-  mutate(Predictor = factor(Predictor, levels = c("Verbs", "Verbs:age", "Length", "Length:age", "Rarity", "Rarity:age", "Complexity", "Complexity:age", "Rate", "Rate:age", "Pitch range", "Pitch range:age", "Pitch mean", "Pitch mean:age")), 
+  mutate(Predictor = factor(Predictor, levels = c("Verbs", "Verbs:age", "Length", "Length:age", "Rarity", "Rarity:age", "Complexity", "Complexity:age", "Rate", "Rate:age", "Pitch range", "Pitch range:age", "Pitch mean", "Pitch mean:age"), 
+labels = c("# Verbs", "# Verb phrases x Age", "Utterance\nlength", 
+"Utterance length x Age", "Lexical rarity", "Lexical rarity x Age", 
+"Lexical\ncomplexity", "Lexical complexity x Age", "Speech rate", 
+"Speech rate x Age", "Pitch range", "Pitch range x Age", "Mean pitch", "Mean pitch x Age")), 
          speaker = "Other")
 
 files.child <- lapply(paste0(path, filenames[!str_detect(filenames, "-other|ratings")]), read_csv)
@@ -227,7 +231,11 @@ input.models.child <- bind_rows(files.child, .id = "source") %>%
          Predictor = trimws(str_to_sentence(str_replace(Predictor, "_", " "), "first")), 
          level = ifelse(str_detect(Predictor, "Length|Verbs"), "Syntactic", 
                         ifelse(str_detect(Predictor, "Complexity|Rarity"), "Lexical", "Prosodic"))) %>%
-  mutate(Predictor = factor(Predictor, levels = c("Verbs", "Verbs:age", "Length", "Length:age", "Rarity", "Rarity:age", "Complexity", "Complexity:age", "Rate", "Rate:age", "Pitch range", "Pitch range:age", "Pitch mean", "Pitch mean:age")), 
+  mutate(Predictor = factor(Predictor, levels = c("Verbs", "Verbs:age", "Length", "Length:age", "Rarity", "Rarity:age", "Complexity", "Complexity:age", "Rate", "Rate:age", "Pitch range", "Pitch range:age", "Pitch mean", "Pitch mean:age"), 
+labels = c("# Verbs", "# Verb phrases x Age", "Utterance\nlength", 
+"Utterance length x Age", "Lexical rarity", "Lexical rarity x Age", 
+"Lexical\ncomplexity", "Lexical complexity x Age", "Speech rate", 
+"Speech rate x Age", "Pitch range", "Pitch range x Age", "Mean pitch", "Mean pitch x Age")), 
          speaker = "Child")
 
 input.models.combined <- input.models %>% bind_rows(input.models.child)
@@ -247,7 +255,8 @@ main.effects <- ggplot(filter(input.models.combined, type == "main_effect"),
   theme_test(base_size = 10) +
   theme(legend.position = "none", 
         plot.title = element_text(hjust = 0.5), 
-        axis.title = element_blank())
+        axis.title = element_blank(), 
+        axis.text.y = element_text(hjust = 0.5))
   
 interactions <- ggplot(filter(input.models.combined, type == "interaction"), 
        aes(x = Estimate, y = Predictor, color = level, alpha = speaker)) +
