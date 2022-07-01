@@ -2,17 +2,6 @@ library(tidyverse)
 library(vroom)
 library(here)
 
-path <- "sampled-utts/"
-files <- list.files(path, ".csv")
-
-for (i in files) {
-  read_csv(paste0(path, i)) %>%
-    mutate(filename = paste0(filename, ".wav")) %>%
-    write_csv(paste0("sampled-utts-new/", i))
-}
-
-
-
 path <- "data-prep/prosodic-input/processed/"
 files <- list.files(path, ".csv")
 files <- lapply(paste0(path, files), vroom)
