@@ -1,5 +1,18 @@
 library(tidyverse)
 library(vroom)
+library(here)
+
+path <- "sampled-utts/"
+files <- list.files(path, ".csv")
+
+for (i in files) {
+  read_csv(paste0(path, i)) %>%
+    mutate(filename = paste0(filename, ".wav")) %>%
+    write_csv(paste0("sampled-utts-new/", i))
+}
+
+
+
 path <- "data-prep/prosodic-input/processed/"
 files <- list.files(path, ".csv")
 files <- lapply(paste0(path, files), vroom)
@@ -42,7 +55,7 @@ for (i in unique(data$subset)) {
   
   if (n > 0) {
   sample <- slice_sample(d, n = n) %>%
-    mutate(filename = paste0(speaker_type, "-", str_remove(word, " "), row_number()))
+    mutate(filename = paste0(speaker_type, "-", str_remove(word, " "), row_number(), ".wav"))
   
   mappings_list[[word]] <- sample
   counts_list[[word]] <- sample %>%
@@ -53,7 +66,7 @@ for (i in unique(data$subset)) {
   sample_ffmpeg <- sample %>%
     mutate(input = paste0("ffmpeg -i ", corpus_name, "/", target_child_name, 
                           "/", audio_file, ".wav -ss ", media_start, 
-                          " -to ", media_end, " _ready_for_annotation/", filename, ".wav")) %>%
+                          " -to ", media_end, " _ready_for_annotation/", filename)) %>%
     select(input)
   
   ffmpeg_list[[word]] <- sample_ffmpeg
